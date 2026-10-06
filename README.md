@@ -22,6 +22,12 @@ authentication, and a safety layer.
 * **Safety**: guardrails for emergencies, eating disorders, starvation, dehydration, PEDs, medication and
   injury diagnosis; referral + disclaimer for medical topics; output screening.
 * Accounts (bcrypt + JWT with server-side logout), private chat history, conversation management.
+* **My workouts**: save plans from chat, log a plan day in one click or any exercise manually, weekly
+  active-day chart, streak and most-logged exercises (with best weight).
+* 👍/👎 **feedback** on every answer (`scripts/export_feedback.py` exports ratings for review),
+  **read aloud** and **voice input** (browser Web Speech API; the mic button appears only where supported).
+* **Installable app (PWA)**: manifest + icons; the production build adds an offline app shell (service worker,
+  `/api` is never cached).
 
 ## Project structure
 
@@ -109,6 +115,7 @@ cd frontend && npm run dev
 cd backend && ../.venv/bin/python -m pytest            # API, auth, chat pipeline, safety, NLU, planner
 cd backend && ../.venv/bin/python -m pytest -m slm     # end-to-end with the real fine-tuned model
 cd frontend && npx vitest run                          # React component tests
+.venv/bin/python -m pytest e2e -q                      # browser tests (Playwright) - needs both servers running
 .venv/bin/python evaluation/evaluate.py                # base vs fine-tuned on the held-out test set
 .venv/bin/python evaluation/run_test_suites.py         # 140 questions / 20 conversations, real model
 ```
@@ -122,7 +129,7 @@ cd frontend && npx vitest run                          # React component tests
 | Mean latency per answer (Apple M5, MPS) | 1.87 s | **0.97 s** |
 
 Full pipeline with the real model: **92 % of 163 checked turns pass** (nutrition, exercise, safety and
-out-of-domain suites 100 %). All automated tests pass (73 backend, 2 real-model, 4 frontend, 3 end-to-end browser).
+out-of-domain suites 100 %). All automated tests pass (78 backend, 2 real-model, 6 frontend, 4 end-to-end browser).
 Details and limitations: [docs/EVALUATION.md](docs/EVALUATION.md),
 [evaluation/evaluation_report.md](evaluation/evaluation_report.md).
 

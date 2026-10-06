@@ -92,6 +92,9 @@ Why this design:
 | `exercise_metadata` | name, slug, muscle_group, description, target/secondary muscles, equipment, difficulty, instructions, safety_tips, image_url(s), image_license |
 | `food_metadata` | name, fdc_id, usda_description, group, tags, aliases, per_100g (JSON), portion (JSON), highlights, source, source_url |
 | `revoked_tokens` | jti, expires_at (server-side logout) |
+| `saved_plans` | id, user_id (FK, cascade), title, plan (JSON, as returned by `/chat`), created_at |
+| `workout_logs` | id, user_id (FK, cascade), day, exercise, sets, reps, weight_kg, minutes, notes, created_at |
+| `message_feedback` | id, user_id, message_id (FK, cascade; unique per user), rating (+1 / -1), created_at |
 
 Metadata tables are re-synced from `data/` at every startup. SQLite foreign keys are enabled so
 deleting a user/conversation cascades to its messages.
@@ -102,8 +105,8 @@ deleting a user/conversation cascades to its messages.
 * **JWT** (HS256, `JWT_SECRET` from `.env`) with `sub`, `jti`, `iat`, `exp` (24 h default).
 * `/auth/logout` stores the token's `jti` in `revoked_tokens`; every authenticated request checks it,
   so a logged-out token is rejected immediately.
-* Conversation endpoints filter by `user_id`; another user's conversation id returns **404** (no
-  information leak).
+* Conversation, plan, workout-log and feedback endpoints filter by `user_id`; another user's id returns
+  **404** (no information leak).
 
 ## 6. API
 
@@ -123,6 +126,13 @@ deleting a user/conversation cascades to its messages.
 | GET | `/exercises/{name}` | – | by name, slug or alias |
 | GET | `/foods` | – | filters: `group`, `tag`, `q` |
 | GET | `/foods/{name}` | – | by name or alias; 404 instead of estimating unknown foods |
+| POST / GET | `/plans` | ✓ | save a workout plan from a chat answer / list own saved plans |
+| DELETE | `/plans/{id}` | ✓ | remove a saved plan |
+| POST | `/workouts` | ✓ | log 1–30 entries (`day`, `exercise`, optional sets/reps/weight_kg/minutes/notes) |
+| GET | `/workouts` | ✓ | own log, newest first (`limit`) |
+| DELETE | `/workouts/{id}` | ✓ | delete an entry |
+| GET | `/workouts/stats` | ✓ | active days per week (`weeks`), current streak, totals, most-logged exercises; `today` = browser's local date |
+| PUT | `/messages/{id}/feedback` | ✓ | `{rating: 1 / -1 / 0}` on an assistant answer (0 clears); returned as `feedback` in `/conversations/{id}` |
 | GET | `/health` | – | status, DB counts, loaded model info (`fine_tuned` flag) |
 
 Interactive docs: `http://localhost:8000/docs`.
@@ -152,6 +162,7 @@ Example `/chat` response (abridged):
 | Routing / auth guard | `App.jsx`, `context/AuthContext.jsx` (token in localStorage, auto-logout on 401) |
 | API | `api/client.js` |
 | Layout | `components/AppLayout.jsx` – sidebar: New chat, nav, previous conversations (delete), user, logout; mobile drawer |
-| Pages | `Login`, `Register`, `Dashboard` (quick-start prompts, stats, exercise explorer, recent chats), `Chat`, `Profile` |
-| Structured rendering | `Message.jsx`, `ExerciseCard.jsx` (image, target, equipment, difficulty, View instructions, safety tip), `FoodCard.jsx` (kcal, macro bar, fiber/sugar/sodium, USDA link), `WorkoutPlan.jsx` (day tabs, sets × reps, rest, difficulty, image) |
+| Pages | `Login`, `Register`, `Dashboard` (quick-start prompts, stats, exercise explorer, recent chats), `Chat` (voice input), `Workouts` (log form, weekly chart, streak, saved plans, recent activity), `Profile` |
+| Structured rendering | `Message.jsx`, `ExerciseCard.jsx` (image, target, equipment, difficulty, View instructions, safety tip), `FoodCard.jsx` (kcal, macro bar, fiber/sugar/sodium, USDA link), `WorkoutPlan.jsx` (day tabs, sets × reps, rest, difficulty, image, Save plan / Log day), answer actions (read aloud, 👍/👎) |
+| Branding / PWA | `PartnerBadge.jsx` (client logo on login and sidebar), `public/manifest.json`, icons, `public/sw.js` (registered in production builds only) |
 | Styling | `styles.css` – design tokens, light/dark, responsive (sidebar becomes a drawer < 820 px) |
