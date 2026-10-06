@@ -103,11 +103,19 @@ img { max-width: 100%; }
 /* ===================== My workouts ===================== */
 .wk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; align-items: start; }
 .panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.2rem 1.25rem; }
-.log-form { gap: .75rem; margin-top: 0; }
+.log-form { gap: .75rem; margin-top: 0; container-type: inline-size; min-width: 0; }
 .log-date { max-width: 220px; }
 .log-rows { display: grid; gap: .5rem; }
 .form .log-row-input { display: grid; grid-template-columns: minmax(0, 1fr) repeat(4, 62px) 32px; gap: .45rem; align-items: end;
-  border: 1px solid var(--border); border-radius: 12px; padding: .55rem .6rem .6rem; background: var(--surface-2); }
+  border: 1px solid var(--border); border-radius: 12px; padding: .55rem .6rem .6rem; background: var(--surface-2);
+  min-width: 0; min-inline-size: 0; }   /* fieldsets default to min-content width (Safari overflow) */
+.log-row-input label, .log-row-input input { min-width: 0; }
+/* narrow form (depends on the panel's width, not the window's): name + remove on top, numbers below */
+@container (max-width: 520px) {
+  .form .log-row-input { grid-template-columns: repeat(4, minmax(0, 1fr)) 32px; }
+  .log-row-input .lr-name { grid-column: 1 / 5; grid-row: 1; }
+  .lr-del { grid-column: 5; grid-row: 1; }
+}
 .log-row-input legend { font-size: .7rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; padding: 0 .3rem; }
 .log-row-input label { font-size: .72rem; gap: .2rem; }
 .form .log-row-input input { padding: .5rem .55rem; }
@@ -143,9 +151,6 @@ img { max-width: 100%; }
 .log-row div { display: grid; gap: .1rem; min-width: 0; }
 .log-row span { font-size: .8rem; }
 @media (max-width: 520px) {
-  .form .log-row-input { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .log-row-input .lr-name { grid-column: 1 / 4; grid-row: 1; }
-  .lr-del { grid-column: 4; grid-row: 1; justify-self: end; }
   .week-lbl { font-size: .6rem; }
 }
 

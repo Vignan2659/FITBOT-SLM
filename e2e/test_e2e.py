@@ -185,3 +185,29 @@ def test_dashboard_quick_start_sends_once(page):
     expect(page.locator(".msg-user")).to_have_count(1)
     expect(page.locator(".conv-item")).to_have_count(1)
     assert len(chats) == 1
+
+
+@pytest.mark.parametrize("width", [1440, 1100, 390])
+def test_log_form_layout_fits_panel(browser, width):
+    """Exercise rows must never squeeze the name field or spill out of the panel (bug seen at ~1100 px)."""
+    ctx = browser.new_context(viewport={"width": width, "height": 900})
+    page = ctx.new_page()
+    email, pwd = f"e2e.{secrets.token_hex(4)}@example.com", "E2e-" + secrets.token_urlsafe(10)
+    page.goto(f"{BASE}/register")
+    inputs = page.locator(".auth-card input")
+    for i, v in enumerate(["Layout Tester", email, pwd, pwd]):
+        inputs.nth(i).fill(v)
+    page.get_by_role("button", name="Create account").click()
+    expect(page.locator(".profile-form")).to_be_visible()
+    page.goto(f"{BASE}/workouts")
+    page.get_by_role("button", name="Add another exercise").click()
+    m = page.evaluate("""(() => {
+        const panel = document.querySelector('.log-form').closest('.panel').getBoundingClientRect();
+        const name = document.querySelector('.lr-name input').getBoundingClientRect();
+        const sets = document.querySelectorAll('.log-row-input input')[1].getBoundingClientRect();
+        const spill = [...document.querySelectorAll('.log-form input, .log-form fieldset')]
+            .filter(e => e.getBoundingClientRect().right > panel.right + 0.5).length;
+        return {name: name.width, spill, overlap: !(sets.left >= name.right - 0.5 || sets.top >= name.bottom - 0.5)};
+    })()""")
+    ctx.close()
+    assert m["name"] >= 150 and m["spill"] == 0 and not m["overlap"], m
