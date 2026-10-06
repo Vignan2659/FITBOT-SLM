@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useAuth } from "../context/AuthContext.jsx";
+import PartnerBadge from "./PartnerBadge.jsx";
 import { IconChat, IconDumbbell, IconHome, IconLogout, IconMenu, IconPlus, IconTrash, IconUser, IconX } from "./Icons.jsx";
 
 export default function AppLayout() {
@@ -82,6 +83,7 @@ export default function AppLayout() {
           ))}
         </ul>
         <div className="sidebar-foot">
+          <PartnerBadge compact />
           <div className="user-chip">
             <span className="avatar">{user?.name?.[0]?.toUpperCase() || "?"}</span>
             <div className="user-meta"><strong>{user?.name}</strong><span>{user?.email}</span></div>

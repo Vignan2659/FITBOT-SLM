@@ -1,4 +1,5 @@
 import { IconDumbbell, IconLeaf, IconMoon, IconShield } from "../components/Icons.jsx";
+import PartnerBadge from "../components/PartnerBadge.jsx";
 
 export default function AuthShell({ title, subtitle, children }) {
   return (
@@ -13,6 +14,7 @@ export default function AuthShell({ title, subtitle, children }) {
           <li><IconMoon /> Sleep, hydration &amp; recovery guidance</li>
           <li><IconShield /> Safety-first answers</li>
         </ul>
+        <PartnerBadge />
       </section>
       <section className="auth-panel">
         <div className="auth-card">

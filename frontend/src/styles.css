@@ -91,6 +91,15 @@ img { max-width: 100%; }
 .switch { text-align: center; margin: 1.25rem 0 0; color: var(--muted); }
 .disclaimer { font-size: .75rem; color: var(--muted); text-align: center; margin: .5rem auto 0; max-width: 60ch; }
 
+.partner-badge { margin-top: 1.75rem; align-self: flex-start; display: inline-flex; flex-direction: column; gap: .45rem;
+  background: #fff; border-radius: 14px; padding: .8rem 1.1rem .9rem; box-shadow: 0 6px 24px rgba(0, 0, 0, .18); }
+.partner-badge img { height: 46px; width: auto; display: block; }
+.partner-label { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #3b5b7c; }
+.partner-compact { margin: 0 0 .25rem; align-self: stretch; flex-direction: row; align-items: center; justify-content: center;
+  gap: .6rem; padding: .5rem .7rem; border-radius: 10px; box-shadow: none; }
+.partner-compact img { height: 24px; }
+.partner-compact .partner-label { font-size: .6rem; }
+
 /* ===================== Forms ===================== */
 .form { display: grid; gap: 1rem; margin-top: 1.25rem; }
 .form label { display: grid; gap: .35rem; font-size: .875rem; font-weight: 600; }
