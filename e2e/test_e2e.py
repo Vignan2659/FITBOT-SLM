@@ -1,0 +1,115 @@
+"""End-to-end browser tests of the running app (real backend + real model + React UI).
+
+Start the backend (:8000) and frontend (:5173) first, then:
+    .venv/bin/python -m pytest e2e -q
+Skipped automatically when the app is not running.
+"""
+import secrets
+import urllib.request
+
+import pytest
+from playwright.sync_api import expect, sync_playwright
+
+BASE = "http://127.0.0.1:5173"
+
+
+def app_running() -> bool:
+    try:
+        return urllib.request.urlopen(f"{BASE}/api/health", timeout=3).status == 200
+    except Exception:
+        return False
+
+
+pytestmark = pytest.mark.skipif(not app_running(), reason="FitBot app is not running on :5173/:8000")
+
+
+@pytest.fixture(scope="module")
+def browser():
+    with sync_playwright() as p:
+        b = p.chromium.launch()
+        yield b
+        b.close()
+
+
+@pytest.fixture
+def page(browser):
+    ctx = browser.new_context(viewport={"width": 1440, "height": 900})
+    pg = ctx.new_page()
+    pg.set_default_timeout(60000)
+    yield pg
+    ctx.close()
+
+
+def ask(page, text):
+    n = page.locator(".msg-bot").count()
+    page.get_by_role("textbox", name="Message").fill(text)
+    page.keyboard.press("Enter")
+    page.wait_for_function(f"document.querySelectorAll('.msg-bot').length > {n} && !document.querySelector('.typing')")
+    return page.locator(".msg-bot").last
+
+
+def test_full_user_journey(page):
+    email, pwd = f"e2e.{secrets.token_hex(4)}@example.com", "E2e-" + secrets.token_urlsafe(10)
+
+    # register -> profile
+    page.goto(f"{BASE}/register")
+    inputs = page.locator(".auth-card input")
+    for i, v in enumerate(["E2E Tester", email, pwd, pwd]):
+        inputs.nth(i).fill(v)
+    page.get_by_role("button", name="Create account").click()
+    expect(page.locator(".profile-form")).to_be_visible()
+
+    # dashboard shows exercise explorer with images
+    page.get_by_role("link", name="Dashboard").click()
+    expect(page.locator(".ex-card img").first).to_be_visible()
+
+    # chat: exercise cards with images
+    page.get_by_role("button", name="New chat").first.click()
+    bot = ask(page, "What exercises can I do for chest?")
+    expect(bot.locator(".ex-card").first).to_be_visible()
+    assert bot.locator(".ex-card img").count() >= 3
+
+    # follow-up: beginner -> only beginner cards
+    bot = ask(page, "I'm a beginner.")
+    expect(bot.get_by_text("Follow-up")).to_be_visible()
+    badges = bot.locator(".ex-card .badge").all_inner_texts()
+    assert badges and all(b == "Beginner" for b in badges)
+
+    # dumbbells -> workout plan
+    bot = ask(page, "I only have dumbbells.")
+    expect(bot.locator(".plan")).to_be_visible()
+
+    # nutrition -> USDA food cards
+    bot = ask(page, "What should I eat after this workout?")
+    expect(bot.locator(".food-card").first).to_be_visible()
+
+    # safety + out of domain
+    bot = ask(page, "I have chest pain when I exercise")
+    expect(bot).to_contain_text("medical help")
+    bot = ask(page, "What is the capital of France?")
+    expect(bot).to_contain_text("focused on fitness")
+
+    # conversation is listed, survives logout + login
+    title = "What exercises can I do for chest?"
+    expect(page.locator(".conv-item").first).to_contain_text("What exercises")
+    page.get_by_role("button", name="Log out").click()
+    expect(page.get_by_role("heading", name="Welcome back")).to_be_visible()
+    page.locator(".auth-card input").nth(0).fill(email)
+    page.locator(".auth-card input").nth(1).fill(pwd)
+    page.get_by_role("button", name="Log in").click()
+    expect(page.locator(".conv-item").first).to_contain_text("What exercises")
+    page.locator(".conv-item").first.click()
+    expect(page.locator(".msg-user").first).to_have_text(title)
+
+
+def test_protected_routes_redirect_to_login(page):
+    page.goto(f"{BASE}/chat")
+    expect(page).to_have_url(f"{BASE}/login")
+
+
+def test_wrong_password_shows_error(page):
+    page.goto(f"{BASE}/login")
+    page.locator(".auth-card input").nth(0).fill("nobody@example.com")
+    page.locator(".auth-card input").nth(1).fill("wrong-password")
+    page.get_by_role("button", name="Log in").click()
+    expect(page.get_by_role("alert")).to_contain_text("Incorrect email or password")
