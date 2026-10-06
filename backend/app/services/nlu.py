@@ -1,6 +1,7 @@
 """Natural-language understanding: intent detection, domain check and slot extraction.
 
-Intent = trained TF-IDF + logistic-regression classifier (scripts/train_intent_classifier.py)
+Intent = trained classifier (scripts/train_intent_classifier.py): TF-IDF + sentence-embedding features ->
+logistic regression (app/ml/intent.py; TF-IDF-only fallback when no encoder is available),
 combined with a fitness-domain lexicon guardrail, so that:
   * questions with no fitness vocabulary are treated as out-of-domain, and
   * questions containing clear fitness vocabulary are never refused as out-of-domain.
@@ -92,8 +93,10 @@ def _has(text: str, phrases: list[str]) -> bool:
 
 
 class NLU:
-    def __init__(self, model_path: Path, exercises: list[dict], foods: list[dict]):
+    def __init__(self, model_path: Path, exercises: list[dict], foods: list[dict], encode=None):
         self.clf = joblib.load(model_path) if model_path.exists() else None
+        if encode is not None and hasattr(self.clf, "set_encoder"):
+            self.clf.set_encoder(encode)
         self.exercises, self.foods = exercises, foods
         self.ex_names = sorted(((n.lower(), e) for e in exercises for n in [e["name"]] + e["aliases"]),
                                key=lambda x: -len(x[0]))

@@ -6,7 +6,9 @@ Data
     and varied phrasing)
   * EXTRA: short hand-written examples for intents that are rare in the main dataset
 
-Model: TF-IDF (word 1-2 grams + char 2-5 grams) -> multinomial logistic regression.
+Model: TF-IDF (word 1-2 grams + char 2-5 grams) + all-MiniLM-L6-v2 sentence embeddings -> multinomial logistic
+regression (app.ml.intent.HybridIntentClassifier). A TF-IDF-only model is bundled as an offline fallback and is
+also reported for comparison (embedding weight and C were chosen on the validation split).
 Outputs: models/intent_classifier.joblib, evaluation/intent_classifier_report.json
 """
 from __future__ import annotations
@@ -15,13 +17,22 @@ import json
 from collections import Counter
 from pathlib import Path
 
+import sys
+
 import joblib
+import numpy as np
+from scipy.sparse import csr_matrix, hstack
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, f1_score
 from sklearn.pipeline import FeatureUnion, Pipeline
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "backend"))
+from app.ml.intent import HybridIntentClassifier  # noqa: E402
+
+EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+EMBED_WEIGHT, HYBRID_C = 1.0, 8.0
 RAW = ROOT / "data" / "raw" / "fitness_intent"
 
 MAP = {"find_exercise": "exercise_search", "out_of_scope": "out_of_domain", "get_nutrition_info": "nutrition_question",
@@ -122,35 +133,61 @@ def build_model() -> Pipeline:
                      ("clf", LogisticRegression(C=8.0, max_iter=3000, class_weight="balanced"))])
 
 
+def fit_hybrid(data: list[tuple[str, str]], encode) -> HybridIntentClassifier:
+    X, y = [t for t, _ in data], [l for _, l in data]
+    fallback = build_model().fit(X, y)
+    feats = fallback.named_steps["features"]
+    emb = np.asarray(encode(X), dtype=np.float64) * EMBED_WEIGHT
+    clf = LogisticRegression(C=HYBRID_C, max_iter=4000, class_weight="balanced")
+    clf.fit(hstack([feats.transform(X), csr_matrix(emb)]).tocsr(), y)
+    model = HybridIntentClassifier(feats, clf, fallback, EMBED_MODEL, EMBED_WEIGHT)
+    model.set_encoder(encode)
+    return model
+
+
+def scores(model, data: list[tuple[str, str]]) -> dict:
+    X, y = [t for t, _ in data], [l for _, l in data]
+    pred = model.predict(X)
+    out = {"accuracy": round(accuracy_score(y, pred), 4), "macro_f1": round(f1_score(y, pred, average="macro"), 4),
+           "per_class": classification_report(y, pred, output_dict=True, zero_division=0)}
+    # out-of-domain detection as a binary task
+    yb = [l == "out_of_domain" for l in y]
+    pb = [p == "out_of_domain" for p in pred]
+    tp = sum(a and b for a, b in zip(yb, pb)); fp = sum(b and not a for a, b in zip(yb, pb))
+    fn = sum(a and not b for a, b in zip(yb, pb))
+    out["ood_precision"] = round(tp / max(tp + fp, 1), 4)
+    out["ood_recall"] = round(tp / max(tp + fn, 1), 4)
+    return out
+
+
 def main() -> None:
+    from sentence_transformers import SentenceTransformer
+    st = SentenceTransformer(EMBED_MODEL, device="cpu")
+    encode = lambda texts: st.encode(texts, normalize_embeddings=True, batch_size=64, show_progress_bar=False)
+
     hf = load_hf_intent()
     train = load_split("training") + hf["train"] + [(t, k) for k, ts in EXTRA.items() for t in ts]
     val = load_split("validation") + hf["validation"]
     test = load_split("test") + hf["test"]
-    model = build_model()
-    model.fit([t for t, _ in train], [y for _, y in train])
+    fb = load_split("test")
+    model = fit_hybrid(train, encode)
 
-    report = {"train_size": len(train), "validation_size": len(val), "test_size": len(test),
+    report = {"model": f"TF-IDF + {EMBED_MODEL} embeddings -> logistic regression (C={HYBRID_C})",
+              "train_size": len(train), "validation_size": len(val), "test_size": len(test),
               "train_label_counts": dict(Counter(y for _, y in train).most_common())}
     for name, data in (("validation", val), ("test", test)):
-        X, y = [t for t, _ in data], [y for _, y in data]
-        pred = model.predict(X)
-        report[name] = {"accuracy": round(accuracy_score(y, pred), 4),
-                        "macro_f1": round(f1_score(y, pred, average="macro"), 4),
-                        "per_class": classification_report(y, pred, output_dict=True, zero_division=0)}
-        # out-of-domain detection as a binary task
-        yb = [l == "out_of_domain" for l in y]
-        pb = [p == "out_of_domain" for p in pred]
-        tp = sum(a and b for a, b in zip(yb, pb)); fp = sum(b and not a for a, b in zip(yb, pb))
-        fn = sum(a and not b for a, b in zip(yb, pb))
-        report[name]["ood_precision"] = round(tp / max(tp + fp, 1), 4)
-        report[name]["ood_recall"] = round(tp / max(tp + fn, 1), 4)
+        report[name] = scores(model, data)
     # FitBot-only test subset (excluding the external dataset)
-    fb = load_split("test")
     report["test_fitbot_only_accuracy"] = round(accuracy_score([y for _, y in fb], model.predict([t for t, _ in fb])), 4)
+    # previous TF-IDF-only model on the same splits, for comparison
+    tfidf_only = model.fallback
+    report["tfidf_only_baseline"] = {
+        **{name: {k: v for k, v in scores(tfidf_only, data).items() if k != "per_class"}
+           for name, data in (("validation", val), ("test", test))},
+        "test_fitbot_only_accuracy": round(accuracy_score([y for _, y in fb], tfidf_only.predict([t for t, _ in fb])), 4)}
 
     # final model trained on train+validation for deployment (test stays untouched)
-    final = build_model().fit([t for t, _ in train + val], [y for _, y in train + val])
+    final = fit_hybrid(train + val, encode)
     (ROOT / "models").mkdir(exist_ok=True)
     joblib.dump(final, ROOT / "models" / "intent_classifier.joblib")
     (ROOT / "evaluation" / "intent_classifier_report.json").write_text(json.dumps(report, indent=2))

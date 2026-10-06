@@ -18,7 +18,7 @@
                 │ loaded once at startup (FastAPI lifespan)
 ┌───────────────▼────────────────────────────────────────────────┐
 │ Fine-tuned SmolLM2-360M (merged LoRA)  · all-MiniLM-L6-v2       │
-│ intent classifier (TF-IDF + LR)        · SQLite (fitbot.db)     │
+│ intent classifier (TF-IDF+MiniLM → LR) · SQLite (fitbot.db)     │
 └────────────────────────────────────────────────────────────────┘
 ```
 
@@ -36,7 +36,7 @@ user message
  │     soft risk (pregnancy, chronic condition) ──► flagged, continue
  │
  ├─2 Intent detection (services/nlu.py)
- │     TF-IDF(word+char) + logistic regression  ⊕  fitness-domain lexicon guardrail
+ │     TF-IDF(word+char) ⊕ MiniLM embedding → logistic regression  ⊕  fitness-domain lexicon guardrail
  │     out_of_domain ──► fixed scope message ──► done
  │
  ├─3 Slots + dialogue state  (muscle group, level, equipment, location, goal, days, diet, foods, exercises)

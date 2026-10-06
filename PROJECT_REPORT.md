@@ -95,8 +95,9 @@ almost identical results (test loss 0.896 vs 0.897).
   movement role, level and equipment; sets/reps/rest from standard guidance; every exercise links to
   a real database entry with an image.
 * **Semantic retrieval:** all-MiniLM-L6-v2 embeddings over 76 guidance passages (TF-IDF fallback).
-* **Intent detection:** TF-IDF + logistic regression over 19 intents, combined with a fitness-
-  domain lexicon guardrail for out-of-domain detection.
+* **Intent detection:** TF-IDF + MiniLM sentence embeddings -> logistic regression over 19 intents
+  (test accuracy 0.876 vs 0.830 for TF-IDF alone; TF-IDF-only fallback offline), combined with a
+  fitness-domain lexicon guardrail for out-of-domain detection.
 
 ## 8. Backend, database and frontend
 
@@ -140,8 +141,8 @@ these with deterministic guardrails and supplies facts through retrieval.
 
 **Full application (Colab model, full pipeline):** 163 checked turns across 7 suites (50 fitness, 20
 nutrition, 20 exercise, 10 sleep/recovery, 10 safety, 10 out-of-domain questions, 20 follow-up
-conversations / 43 turns): **91 % pass (149/163)** — nutrition, exercise, safety and out-of-domain 100 %,
-follow-ups 98 %, sleep/recovery 90 %, general fitness 76 % (failures are mostly intent-label disagreements);
+conversations / 43 turns): **92 % pass (150/163)** — nutrition, exercise, safety, sleep/recovery and out-of-domain 100 %,
+follow-ups 98 %, general fitness 76 % (failures are mostly intent-label disagreements);
 0 false refusals over 141 in-domain turns.
 
 **Automated tests:** 70 backend tests, 2 real-model integration tests, 4 frontend component tests – all

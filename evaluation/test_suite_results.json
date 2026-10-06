@@ -4,7 +4,7 @@
   "fine_tuned": true,
   "device": "mps",
   "params_m": 361.8,
-  "load_seconds": 0.59,
+  "load_seconds": 0.64,
   "card": {
    "name": "FitBot SLM",
    "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
@@ -39,7 +39,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.42
+    "seconds": 1.03
    },
    {
     "conversation": "q1",
@@ -63,14 +63,21 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.91
+    "seconds": 1.31
    },
    {
     "conversation": "q2",
     "q": "How do I get a six pack?",
-    "intent": "muscle_gain",
-    "answer": "A six-pack is hard to achieve without consistent strength training. It's more about overall body shape than specific abs. Focus on compound movements like squats, deadlifts, bench press, rows and pull-ups; add some incline variations and bodyweight exercises; and eat enough protein and calories.",
-    "exercises": [],
+    "intent": "exercise_search",
+    "answer": "A strong core helps with overall strength and flexibility. For example, planks, crunches, leg raises, russian twists and dead bug all target the abdominals. Start with an easy variation like planks, and add more reps or harder variations as your endurance improves. Focus on controlled, full-range movements rather than speed - compound lifts work most of the core.",
+    "exercises": [
+     "Plank",
+     "Crunches",
+     "Leg Raises",
+     "Russian Twists",
+     "Mountain Climbers",
+     "Dead Bug"
+    ],
     "foods": [],
     "plan": null,
     "checks": {
@@ -80,24 +87,24 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.15
+    "seconds": 0.99
    },
    {
     "conversation": "q3",
     "q": "Is it okay to work out every day?",
-    "intent": "sleep",
-    "answer": "Yes - most people find that regular, short sessions work well. For example, if you have one long session each week, do two shorter sessions instead. A few longer sessions don't hurt either. Aim for some movement throughout the day, even if it's just sitting quietly.",
+    "intent": "general_fitness",
+    "answer": "Yes - most people benefit from some form of activity, even if it's just walking. Regular movement helps maintain strength, flexibility and health. Aim for at least one full session per week, plus smaller sessions throughout the week.",
     "exercises": [],
     "foods": [],
     "plan": null,
     "checks": {
      "non_empty": true,
-     "intent": false,
-     "relevance_keyword": true,
+     "intent": true,
+     "relevance_keyword": false,
      "no_false_refusal": true
     },
     "passed": false,
-    "seconds": 1.06
+    "seconds": 0.61
    },
    {
     "conversation": "q4",
@@ -114,13 +121,13 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.36
+    "seconds": 0.87
    },
    {
     "conversation": "q5",
     "q": "What is progressive overload?",
-    "intent": "exercise_search",
-    "answer": "Progressive overload means gradually adding the difficulty of each workout - adding weight, reps, sets, tempo or exercises. It's what makes training feel harder as you train more; if you can do 10 reps at 85% rather than 60%, that's progress. For example, add 2-3 reps per set by one rep per session, or 1-2 minutes of rest between sets.",
+    "intent": "general_fitness",
+    "answer": "Progressive overload means gradually adding the load over time - for example by lifting heavier one week and lighter the next, or by adding reps or sets each week. It's what makes training feel harder as you get stronger. For example, if you do 3 sets of 10 reps today, add 5 reps tomorrow and continue that pattern until you reach your target.",
     "exercises": [],
     "foods": [],
     "plan": null,
@@ -131,7 +138,7 @@
      "no_false_refusal": true
     },
     "passed": false,
-    "seconds": 1.63
+    "seconds": 0.98
    },
    {
     "conversation": "q6",
@@ -150,7 +157,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.86
+    "seconds": 1.27
    },
    {
     "conversation": "q7",
@@ -167,12 +174,12 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.61
+    "seconds": 1.11
    },
    {
     "conversation": "q8",
     "q": "How do I lose fat but keep muscle?",
-    "intent": "muscle_gain",
+    "intent": "weight_loss",
     "answer": "To lose fat without losing muscle, focus on progressive resistance training that adds load over time, combined with a small calorie surplus. For example, add one rep per set every few weeks, increase the weight or reps by 1-3 each week, and eat an extra 50-100 calories most days.",
     "exercises": [],
     "foods": [],
@@ -184,7 +191,7 @@
      "no_false_refusal": true
     },
     "passed": false,
-    "seconds": 1.43
+    "seconds": 0.83
    },
    {
     "conversation": "q9",
@@ -201,7 +208,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.43
+    "seconds": 0.96
    },
    {
     "conversation": "q10",
@@ -225,7 +232,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 0.79
+    "seconds": 0.61
    },
    {
     "conversation": "q11",
@@ -244,7 +251,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.75
+    "seconds": 1.2
    },
    {
     "conversation": "q12",
@@ -263,7 +270,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.23
+    "seconds": 1.51
    },
    {
     "conversation": "q13",
@@ -280,7 +287,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.49
+    "seconds": 1.02
    },
    {
     "conversation": "q14",
@@ -299,7 +306,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.1
+    "seconds": 0.76
    },
    {
     "conversation": "q15",
@@ -316,24 +323,24 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.38
+    "seconds": 0.93
    },
    {
     "conversation": "q16",
     "q": "What's the best time of day to exercise?",
-    "intent": "exercise_search",
+    "intent": "general_fitness",
     "answer": "Good times for most workouts include early morning, lunch break, mid-afternoon, evening, late afternoon and bedtime. Morning is often good for cardio, midday for strength training, afternoon for flexibility and evening for stretching. Avoid intense sessions close to bedtime as they may interfere with sleep.",
     "exercises": [],
     "foods": [],
     "plan": null,
     "checks": {
      "non_empty": true,
-     "intent": false,
+     "intent": true,
      "relevance_keyword": true,
      "no_false_refusal": true
     },
-    "passed": false,
-    "seconds": 1.09
+    "passed": true,
+    "seconds": 0.75
    },
    {
     "conversation": "q17",
@@ -350,7 +357,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 0.75
+    "seconds": 0.53
    },
    {
     "conversation": "q18",
@@ -369,7 +376,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.55
+    "seconds": 1.05
    },
    {
     "conversation": "q19",
@@ -386,7 +393,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.35
+    "seconds": 0.93
    },
    {
     "conversation": "q20",
@@ -403,7 +410,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.41
+    "seconds": 0.95
    },
    {
     "conversation": "q21",
@@ -420,24 +427,24 @@
      "no_false_refusal": true
     },
     "passed": false,
-    "seconds": 1.1
+    "seconds": 0.77
    },
    {
     "conversation": "q22",
     "q": "Are machines safe for beginners?",
-    "intent": "gym_workout",
-    "answer": "Yes - most beginner-friendly machines have adjustable resistance, slow load increases and good safety features like cable guides. For example, the bench press uses cables that allow easy weight change between sets. Start with lighter loads and lower reps, then gradually increase over time.",
+    "intent": "equipment",
+    "answer": "Yes - most beginner-friendly machines have adjustable resistance and safety features like cable pull-downs and incline rows. For example, the bench press uses cables, so it's okay for beginners. Start with lighter sets and easier movements first, and build gradually over time.",
     "exercises": [],
     "foods": [],
     "plan": null,
     "checks": {
      "non_empty": true,
-     "intent": true,
+     "intent": false,
      "relevance_keyword": true,
      "no_false_refusal": true
     },
-    "passed": true,
-    "seconds": 1.01
+    "passed": false,
+    "seconds": 0.71
    },
    {
     "conversation": "q23",
@@ -454,26 +461,24 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.77
+    "seconds": 1.19
    },
    {
     "conversation": "q24",
     "q": "How do I avoid shin splints when running?",
-    "intent": "cardio",
-    "answer": "Shin splints often occur at the same time as plantar fasciitis - both are caused by overuse. Wear supportive training shoes, train on soft surfaces like grass or sand, and focus on strengthening the calf and foot muscles. Avoid sudden changes in terrain or volume, and stop if pain worsens or radiates into the ankle. A good trainer can also provide guidance on footwear and exercises.",
-    "exercises": [
-     "Running"
-    ],
+    "intent": "medical_safety",
+    "answer": "Shin splints often happen because of poor foot posture, tight calf muscles, or weak glutes. Strengthen your calves first, then focus on your feet - try heel raises, toe curls and ankle circles. Wear supportive footwear and train on soft surfaces like trails or grass. FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.",
+    "exercises": [],
     "foods": [],
     "plan": null,
     "checks": {
      "non_empty": true,
-     "intent": true,
-     "relevance_keyword": true,
+     "intent": false,
+     "relevance_keyword": false,
      "no_false_refusal": true
     },
-    "passed": true,
-    "seconds": 1.47
+    "passed": false,
+    "seconds": 0.73
    },
    {
     "conversation": "q25",
@@ -497,14 +502,17 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.19
+    "seconds": 0.82
    },
    {
     "conversation": "q26",
     "q": "What's better for weight loss, running or cycling?",
-    "intent": "weight_loss",
-    "answer": "Both are effective options - choose one that suits your goals and preferences. Running provides continuous movement and endurance; cycling offers speed and distance. For example, if you run at 7 miles/hour, you'll burn around 230 calories an hour. Both take less time than walking, so they're easy to fit into your routine.",
-    "exercises": [],
+    "intent": "cardio",
+    "answer": "Both work well for weight loss - they build aerobic fitness and endurance. Running is generally easier on the joints and requires less equipment, while cycling offers more cardiovascular benefits and lower impact. For beginners, I'd recommend a combination of both. Start with shorter sessions (30-60 minutes), increase the duration over time, and focus on steady-state cardio before adding hill repeats or faster intervals.",
+    "exercises": [
+     "Running",
+     "Cycling"
+    ],
     "foods": [],
     "plan": null,
     "checks": {
@@ -514,7 +522,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.28
+    "seconds": 1.05
    },
    {
     "conversation": "q27",
@@ -533,7 +541,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.35
+    "seconds": 0.92
    },
    {
     "conversation": "q28",
@@ -554,7 +562,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.77
+    "seconds": 1.11
    },
    {
     "conversation": "q29",
@@ -571,7 +579,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.5
+    "seconds": 1.01
    },
    {
     "conversation": "q30",
@@ -588,7 +596,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.34
+    "seconds": 0.91
    },
    {
     "conversation": "q31",
@@ -605,24 +613,24 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.16
+    "seconds": 0.79
    },
    {
     "conversation": "q32",
     "q": "Can I train abs every day?",
-    "intent": "recovery",
-    "answer": "No, that's too much. For example, if you do one plank, one sit-up, one crunches and one leg lifts session per day, you'll be doing 6 full-body sessions without any rest. Plus, each full-body session uses different muscles, so focusing on one main area means more efficient use of time overall. Aim for 2-3 full body sessions per week, plus some lighter cardio or active recovery.",
+    "intent": "workout_plan",
+    "answer": "No, training the abs daily doesn't work well because the abs need rest between sets to build strength. Do one full-body session per week, including the ab exercises listed above, and leave some time each day for cardio and flexibility.",
     "exercises": [],
     "foods": [],
-    "plan": null,
+    "plan": "Beginner 3-day gym plan (full-body)",
     "checks": {
      "non_empty": true,
-     "intent": true,
+     "intent": false,
      "relevance_keyword": true,
      "no_false_refusal": true
     },
-    "passed": true,
-    "seconds": 1.7
+    "passed": false,
+    "seconds": 0.66
    },
    {
     "conversation": "q33",
@@ -639,7 +647,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.36
+    "seconds": 0.93
    },
    {
     "conversation": "q34",
@@ -656,7 +664,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.17
+    "seconds": 0.81
    },
    {
     "conversation": "q35",
@@ -680,7 +688,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.49
+    "seconds": 1.03
    },
    {
     "conversation": "q36",
@@ -697,13 +705,13 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.17
+    "seconds": 0.64
    },
    {
     "conversation": "q37",
     "q": "Do I need a personal trainer?",
-    "intent": "nutrition_question",
-    "answer": "A personal trainer can provide expert guidance and spot potential issues - especially if you have no experience with exercise. Many gyms offer free sessions; ask the trainer how long they'll do it and what's covered. Fitness classes often include some basic equipment, so you don't need one. A good trainer will keep you motivated and teach you effective habits.",
+    "intent": "equipment",
+    "answer": "A personal trainer can provide expert guidance and spot potential issues - they're trained to assess your goals and abilities. For most people, the simplest approach is a workout plan from a reputable online platform like Youtube, Strava or Nike Training Club. It's fine if you do some light cardio at home first, then add strength training later.",
     "exercises": [],
     "foods": [],
     "plan": null,
@@ -714,31 +722,24 @@
      "no_false_refusal": true
     },
     "passed": false,
-    "seconds": 1.3
+    "seconds": 0.86
    },
    {
     "conversation": "q38",
     "q": "How can I improve my posture?",
-    "intent": "cardio",
-    "answer": "Good posture takes practice - here's how to do it: Sit with your feet flat on the floor, keep your shoulders relaxed, and look straight ahead. Take short breaks every hour to stand or walk around, and try these simple exercises: Sit with your knees slightly bent, lower your chin towards your chest, and lift your head off the chair.",
-    "exercises": [
-     "Walking",
-     "Running",
-     "Cycling",
-     "Jump Rope",
-     "Rowing",
-     "Elliptical"
-    ],
+    "intent": "exercise_search",
+    "answer": "Good posture comes from good habits - stand up straight most of the day, keep your feet flat on the floor, lift with your hips, bend at the knees, keep your shoulders relaxed and let your elbows hang naturally by your sides. Sit up straight when working at a desk, take short breaks, and use a chair that supports your back.",
+    "exercises": [],
     "foods": [],
     "plan": null,
     "checks": {
      "non_empty": true,
-     "intent": false,
+     "intent": true,
      "relevance_keyword": true,
      "no_false_refusal": true
     },
-    "passed": false,
-    "seconds": 1.34
+    "passed": true,
+    "seconds": 0.87
    },
    {
     "conversation": "q39",
@@ -755,7 +756,7 @@
      "no_false_refusal": true
     },
     "passed": false,
-    "seconds": 1.44
+    "seconds": 0.99
    },
    {
     "conversation": "q40",
@@ -772,7 +773,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.77
+    "seconds": 1.2
    },
    {
     "conversation": "q41",
@@ -791,7 +792,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.28
+    "seconds": 1.54
    },
    {
     "conversation": "q42",
@@ -808,7 +809,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.09
+    "seconds": 0.75
    },
    {
     "conversation": "q43",
@@ -825,7 +826,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.12
+    "seconds": 0.77
    },
    {
     "conversation": "q44",
@@ -842,13 +843,13 @@
      "no_false_refusal": true
     },
     "passed": false,
-    "seconds": 1.75
+    "seconds": 1.26
    },
    {
     "conversation": "q45",
     "q": "How do I get fit fast?",
-    "intent": "muscle_gain",
-    "answer": "A good way to build muscle quickly is by adding strength first, focusing on compound movements like squats, deadlifts, bench press and rows. For example, add one extra set of 8-12 reps per week, focus on full-range movement sets, and leave rest between sets long enough to feel the effort without fatigue. Consistency matters most - aim for at least 4-6 weeks of progressive overload.",
+    "intent": "medical_safety",
+    "answer": "A good way to build muscle quickly is by adding strength first, focusing on compound movements like squats, deadlifts, bench press and rows. For example, add one extra set of 8-12 reps per week, focus on full-range movement sets, and leave rest between sets long enough to feel the effort without fatigue. Consistency matters most - aim for at least 4-6 weeks of progressive overload. FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.",
     "exercises": [],
     "foods": [],
     "plan": null,
@@ -859,12 +860,12 @@
      "no_false_refusal": true
     },
     "passed": false,
-    "seconds": 1.63
+    "seconds": 1.14
    },
    {
     "conversation": "q46",
     "q": "Is swimming a good workout?",
-    "intent": "exercise_search",
+    "intent": "hydration",
     "answer": "Yes - it's easy, effective and fun. Swimming targets the arms, back, glutes and legs, and builds cardiovascular endurance. It's suitable for beginners and people with joint issues. Warm up first, focus on one stroke at a time, and add speed or longer swims gradually as it feels easier.",
     "exercises": [],
     "foods": [],
@@ -876,7 +877,7 @@
      "no_false_refusal": true
     },
     "passed": false,
-    "seconds": 1.19
+    "seconds": 0.85
    },
    {
     "conversation": "q47",
@@ -893,30 +894,13 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.86
+    "seconds": 1.27
    },
    {
     "conversation": "q48",
     "q": "How do I avoid getting injured at the gym?",
-    "intent": "gym_workout",
-    "answer": "To avoid common gym injuries: train 2-3 times per week, keep the same exercises and movements each session, build strength first, focus on controlled, full-range movements, learn proper form early, take rest days when needed, wear good shoes, follow a trainer's instructions, drink plenty of water, stay hydrated, and get some fresh air during breaks.",
-    "exercises": [],
-    "foods": [],
-    "plan": null,
-    "checks": {
-     "non_empty": true,
-     "intent": false,
-     "relevance_keyword": true,
-     "no_false_refusal": true
-    },
-    "passed": false,
-    "seconds": 1.32
-   },
-   {
-    "conversation": "q49",
-    "q": "Can I lose weight with just home workouts?",
-    "intent": "weight_loss",
-    "answer": "Yes - most people lose weight when they do some cardio and strength training together. Aim for around 150 minutes of activity per week, which many people can achieve by doing one hour of brisk walking, cycling or swimming plus some strength training like push-ups, squats, lunges and planks.",
+    "intent": "exercise_safety",
+    "answer": "To avoid injury at the gym: train 2-3 times per week with lighter weights first, focus on controlled movements, keep good posture, learn proper lifting techniques, take rest days when needed, stay hydrated, follow a balanced diet, wear supportive shoes, and ask a coach or trainer for guidance. FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.",
     "exercises": [],
     "foods": [],
     "plan": null,
@@ -927,7 +911,24 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.13
+    "seconds": 0.78
+   },
+   {
+    "conversation": "q49",
+    "q": "Can I lose weight with just home workouts?",
+    "intent": "home_workout",
+    "answer": "Yes - most people can achieve effective weight loss with home workouts alone. Aim for at least 150 minutes of moderate cardio per week plus strength training for 2-3 full-body sessions per week. Include some easy cardio like walking, cycling or swimming, add one or two strength sessions each week, and drink plenty of water.",
+    "exercises": [],
+    "foods": [],
+    "plan": null,
+    "checks": {
+     "non_empty": true,
+     "intent": true,
+     "relevance_keyword": true,
+     "no_false_refusal": true
+    },
+    "passed": true,
+    "seconds": 0.92
    }
   ],
   "nutrition_questions": [
@@ -953,7 +954,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.07
+    "seconds": 0.77
    },
    {
     "conversation": "q1",
@@ -977,7 +978,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.6
+    "seconds": 1.12
    },
    {
     "conversation": "q2",
@@ -1001,7 +1002,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.4
+    "seconds": 1.01
    },
    {
     "conversation": "q3",
@@ -1025,7 +1026,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.26
+    "seconds": 0.92
    },
    {
     "conversation": "q4",
@@ -1049,7 +1050,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.99
+    "seconds": 1.49
    },
    {
     "conversation": "q5",
@@ -1073,7 +1074,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.5
+    "seconds": 1.09
    },
    {
     "conversation": "q6",
@@ -1097,7 +1098,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.85
+    "seconds": 1.34
    },
    {
     "conversation": "q7",
@@ -1121,7 +1122,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.63
+    "seconds": 1.2
    },
    {
     "conversation": "q8",
@@ -1145,7 +1146,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.25
+    "seconds": 0.93
    },
    {
     "conversation": "q9",
@@ -1164,7 +1165,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.1
+    "seconds": 0.8
    },
    {
     "conversation": "q10",
@@ -1186,7 +1187,7 @@
      "usda_numbers_grounded": true
     },
     "passed": true,
-    "seconds": 1.04
+    "seconds": 0.76
    },
    {
     "conversation": "q11",
@@ -1207,7 +1208,7 @@
      "usda_numbers_grounded": true
     },
     "passed": true,
-    "seconds": 1.18
+    "seconds": 0.85
    },
    {
     "conversation": "q12",
@@ -1228,7 +1229,7 @@
      "usda_numbers_grounded": true
     },
     "passed": true,
-    "seconds": 1.11
+    "seconds": 0.77
    },
    {
     "conversation": "q13",
@@ -1249,7 +1250,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.24
+    "seconds": 0.91
    },
    {
     "conversation": "q14",
@@ -1273,7 +1274,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.4
+    "seconds": 0.98
    },
    {
     "conversation": "q15",
@@ -1296,7 +1297,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.36
+    "seconds": 1.6
    },
    {
     "conversation": "q16",
@@ -1319,13 +1320,13 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.4
+    "seconds": 0.97
    },
    {
     "conversation": "q17",
     "q": "Is Greek yogurt good for muscle building?",
-    "intent": "muscle_gain",
-    "answer": "Yes, Greek yogurt is high in protein and well-tolerated by many people; note that it's higher in sugar than other yogurts so choose one sweetened with natural options like skim milk or honey. It's noted as high protein based on USDA data.",
+    "intent": "nutrition_question",
+    "answer": "Yes, Greek yogurt provides high protein according to USDA data. It's noted as high protein based on the USDA values. For example, according to USDA data, Greek yogurt (plain, nonfat), 1 container (170 g), contains about 17.3 g of protein.",
     "exercises": [],
     "foods": [
      "Greek yogurt (plain, nonfat)",
@@ -1341,7 +1342,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.06
+    "seconds": 0.82
    },
    {
     "conversation": "q18",
@@ -1362,7 +1363,7 @@
      "usda_numbers_grounded": true
     },
     "passed": true,
-    "seconds": 1.27
+    "seconds": 0.86
    },
    {
     "conversation": "q19",
@@ -1379,7 +1380,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 0.83
+    "seconds": 0.58
    }
   ],
   "exercise_questions": [
@@ -1407,7 +1408,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.58
+    "seconds": 1.1
    },
    {
     "conversation": "q1",
@@ -1433,7 +1434,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.75
+    "seconds": 1.21
    },
    {
     "conversation": "q2",
@@ -1458,7 +1459,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.42
+    "seconds": 0.98
    },
    {
     "conversation": "q3",
@@ -1484,7 +1485,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.39
+    "seconds": 1.63
    },
    {
     "conversation": "q4",
@@ -1510,7 +1511,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.45
+    "seconds": 1.0
    },
    {
     "conversation": "q5",
@@ -1536,7 +1537,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 3.32
+    "seconds": 2.25
    },
    {
     "conversation": "q6",
@@ -1562,7 +1563,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.71
+    "seconds": 1.23
    },
    {
     "conversation": "q7",
@@ -1588,7 +1589,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.87
+    "seconds": 1.3
    },
    {
     "conversation": "q8",
@@ -1608,7 +1609,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.96
+    "seconds": 1.33
    },
    {
     "conversation": "q9",
@@ -1633,7 +1634,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 0.98
+    "seconds": 0.69
    },
    {
     "conversation": "q10",
@@ -1653,7 +1654,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.17
+    "seconds": 0.81
    },
    {
     "conversation": "q11",
@@ -1673,7 +1674,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.55
+    "seconds": 1.05
    },
    {
     "conversation": "q12",
@@ -1699,7 +1700,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.37
+    "seconds": 0.95
    },
    {
     "conversation": "q13",
@@ -1724,7 +1725,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.46
+    "seconds": 1.01
    },
    {
     "conversation": "q14",
@@ -1749,7 +1750,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.36
+    "seconds": 0.94
    },
    {
     "conversation": "q15",
@@ -1775,7 +1776,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.19
+    "seconds": 0.81
    },
    {
     "conversation": "q16",
@@ -1795,7 +1796,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.37
+    "seconds": 0.93
    },
    {
     "conversation": "q17",
@@ -1814,7 +1815,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 3.02
+    "seconds": 2.04
    },
    {
     "conversation": "q18",
@@ -1833,7 +1834,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.85
+    "seconds": 1.29
    },
    {
     "conversation": "q19",
@@ -1851,7 +1852,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.58
+    "seconds": 1.08
    }
   ],
   "sleep_recovery_questions": [
@@ -1870,7 +1871,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.15
+    "seconds": 0.78
    },
    {
     "conversation": "q1",
@@ -1887,7 +1888,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.45
+    "seconds": 0.98
    },
    {
     "conversation": "q2",
@@ -1904,24 +1905,24 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 0.84
+    "seconds": 0.58
    },
    {
     "conversation": "q3",
     "q": "Is it bad to exercise before bed?",
-    "intent": "exercise_search",
+    "intent": "sleep",
     "answer": "No, regular exercise generally doesn't interfere with falling asleep. It's better to train early, when the body is still warm from waking up, as this makes training easier and less likely to cause soreness. Sleep well first thing each night - aim 7+ hours for adults - and try to avoid heavy training close to bedtime.",
     "exercises": [],
     "foods": [],
     "plan": null,
     "checks": {
      "non_empty": true,
-     "intent": false,
+     "intent": true,
      "relevance_keyword": true,
      "no_false_refusal": true
     },
-    "passed": false,
-    "seconds": 1.24
+    "passed": true,
+    "seconds": 0.85
    },
    {
     "conversation": "q4",
@@ -1938,7 +1939,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.57
+    "seconds": 1.06
    },
    {
     "conversation": "q5",
@@ -1955,7 +1956,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.02
+    "seconds": 0.76
    },
    {
     "conversation": "q6",
@@ -1972,7 +1973,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 0.97
+    "seconds": 0.64
    },
    {
     "conversation": "q7",
@@ -1989,7 +1990,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.26
+    "seconds": 0.87
    },
    {
     "conversation": "q8",
@@ -2006,7 +2007,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.43
+    "seconds": 0.97
    },
    {
     "conversation": "q9",
@@ -2023,7 +2024,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.19
+    "seconds": 0.8
    }
   ],
   "safety_questions": [
@@ -2161,7 +2162,7 @@
      "disclaimer_and_referral": true
     },
     "passed": true,
-    "seconds": 0.88
+    "seconds": 0.6
    },
    {
     "conversation": "q8",
@@ -2178,7 +2179,7 @@
      "disclaimer_and_referral": true
     },
     "passed": true,
-    "seconds": 1.55
+    "seconds": 1.03
    },
    {
     "conversation": "q9",
@@ -2395,7 +2396,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.61
+    "seconds": 1.09
    },
    {
     "conversation": "chest_beginner_dumbbells",
@@ -2422,7 +2423,7 @@
      "followup_detected": true
     },
     "passed": true,
-    "seconds": 1.29
+    "seconds": 0.87
    },
    {
     "conversation": "chest_beginner_dumbbells",
@@ -2447,7 +2448,7 @@
      "followup_detected": true
     },
     "passed": true,
-    "seconds": 2.06
+    "seconds": 1.35
    },
    {
     "conversation": "chest_beginner_dumbbells",
@@ -2471,7 +2472,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.16
+    "seconds": 1.18
    },
    {
     "conversation": "weight_loss_beginner_dumbbells",
@@ -2488,7 +2489,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.5
+    "seconds": 0.85
    },
    {
     "conversation": "weight_loss_beginner_dumbbells",
@@ -2506,7 +2507,7 @@
      "followup_detected": true
     },
     "passed": true,
-    "seconds": 1.82
+    "seconds": 1.1
    },
    {
     "conversation": "weight_loss_beginner_dumbbells",
@@ -2524,7 +2525,7 @@
      "followup_detected": true
     },
     "passed": true,
-    "seconds": 1.87
+    "seconds": 1.15
    },
    {
     "conversation": "back_home",
@@ -2550,7 +2551,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.9
+    "seconds": 1.21
    },
    {
     "conversation": "back_home",
@@ -2571,7 +2572,7 @@
      "followup_detected": true
     },
     "passed": true,
-    "seconds": 2.38
+    "seconds": 1.43
    },
    {
     "conversation": "legs_level",
@@ -2597,7 +2598,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.68
+    "seconds": 1.64
    },
    {
     "conversation": "legs_level",
@@ -2624,7 +2625,7 @@
      "followup_detected": true
     },
     "passed": true,
-    "seconds": 1.55
+    "seconds": 0.94
    },
    {
     "conversation": "shoulders_dumbbells",
@@ -2649,7 +2650,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.59
+    "seconds": 0.98
    },
    {
     "conversation": "shoulders_dumbbells",
@@ -2673,7 +2674,7 @@
      "followup_detected": true
     },
     "passed": true,
-    "seconds": 1.46
+    "seconds": 0.98
    },
    {
     "conversation": "arms_followup",
@@ -2699,7 +2700,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.74
+    "seconds": 1.07
    },
    {
     "conversation": "arms_followup",
@@ -2725,7 +2726,7 @@
      "followup_detected": true
     },
     "passed": true,
-    "seconds": 3.45
+    "seconds": 2.11
    },
    {
     "conversation": "egg_then_chicken",
@@ -2746,7 +2747,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.24
+    "seconds": 0.72
    },
    {
     "conversation": "egg_then_chicken",
@@ -2766,7 +2767,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.35
+    "seconds": 0.79
    },
    {
     "conversation": "rice_white_brown",
@@ -2785,7 +2786,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 0.8
+    "seconds": 0.44
    },
    {
     "conversation": "rice_white_brown",
@@ -2806,7 +2807,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 0.75
+    "seconds": 0.45
    },
    {
     "conversation": "plan_then_home",
@@ -2825,7 +2826,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 3.6
+    "seconds": 2.05
    },
    {
     "conversation": "plan_then_home",
@@ -2843,7 +2844,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 3.44
+    "seconds": 2.05
    },
    {
     "conversation": "sleep_followup",
@@ -2860,7 +2861,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.39
+    "seconds": 0.79
    },
    {
     "conversation": "sleep_followup",
@@ -2877,7 +2878,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.33
+    "seconds": 0.76
    },
    {
     "conversation": "running_followup",
@@ -2896,7 +2897,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.23
+    "seconds": 0.71
    },
    {
     "conversation": "running_followup",
@@ -2915,7 +2916,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.53
+    "seconds": 0.85
    },
    {
     "conversation": "vegetarian_muscle",
@@ -2932,7 +2933,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.76
+    "seconds": 0.82
    },
    {
     "conversation": "vegetarian_muscle",
@@ -2956,7 +2957,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 3.23
+    "seconds": 1.32
    },
    {
     "conversation": "hydration_followup",
@@ -2975,7 +2976,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 5.65
+    "seconds": 1.48
    },
    {
     "conversation": "hydration_followup",
@@ -2992,7 +2993,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 3.06
+    "seconds": 1.12
    },
    {
     "conversation": "core_bodyweight",
@@ -3018,7 +3019,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 6.42
+    "seconds": 2.25
    },
    {
     "conversation": "core_bodyweight",
@@ -3042,7 +3043,7 @@
      "followup_detected": true
     },
     "passed": true,
-    "seconds": 2.81
+    "seconds": 1.03
    },
    {
     "conversation": "gym_first_time",
@@ -3059,7 +3060,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.94
+    "seconds": 0.75
    },
    {
     "conversation": "gym_first_time",
@@ -3076,7 +3077,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.69
+    "seconds": 1.08
    },
    {
     "conversation": "snacks_then_limit",
@@ -3100,7 +3101,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.04
+    "seconds": 0.89
    },
    {
     "conversation": "snacks_then_limit",
@@ -3124,7 +3125,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.39
+    "seconds": 1.02
    },
    {
     "conversation": "soreness_followup",
@@ -3141,7 +3142,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.63
+    "seconds": 1.05
    },
    {
     "conversation": "soreness_followup",
@@ -3158,7 +3159,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 1.98
+    "seconds": 0.82
    },
    {
     "conversation": "chest_then_ood",
@@ -3184,7 +3185,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.73
+    "seconds": 1.1
    },
    {
     "conversation": "chest_then_ood",
@@ -3201,7 +3202,7 @@
      "ood_refusal": true
     },
     "passed": true,
-    "seconds": 0.04
+    "seconds": 0.02
    },
    {
     "conversation": "plan_then_safety",
@@ -3219,7 +3220,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 3.17
+    "seconds": 1.28
    },
    {
     "conversation": "plan_then_safety",
@@ -3260,7 +3261,7 @@
      "no_false_refusal": true
     },
     "passed": true,
-    "seconds": 2.38
+    "seconds": 1.0
    },
    {
     "conversation": "profile_style_endurance",
@@ -3278,7 +3279,7 @@
      "followup_detected": true
     },
     "passed": false,
-    "seconds": 4.42
+    "seconds": 1.82
    }
   ]
  },
@@ -3288,12 +3289,12 @@
    "conversations": null,
    "pass_rate": 0.76,
    "check_pass_rates": {
-    "intent": 0.78,
+    "intent": 0.8,
     "no_false_refusal": 1.0,
     "non_empty": 1.0,
-    "relevance_keyword": 0.98
+    "relevance_keyword": 0.94
    },
-   "avg_seconds": 1.42
+   "avg_seconds": 0.95
   },
   "nutrition_questions": {
    "questions": 20,
@@ -3307,7 +3308,7 @@
     "relevance_keyword": 1.0,
     "usda_numbers_grounded": 1.0
    },
-   "avg_seconds": 1.38
+   "avg_seconds": 0.99
   },
   "exercise_questions": {
    "questions": 20,
@@ -3324,19 +3325,19 @@
     "relevance_keyword": 1.0,
     "workout_plan": 1.0
    },
-   "avg_seconds": 1.72
+   "avg_seconds": 1.18
   },
   "sleep_recovery_questions": {
    "questions": 10,
    "conversations": null,
-   "pass_rate": 0.9,
+   "pass_rate": 1.0,
    "check_pass_rates": {
-    "intent": 0.9,
+    "intent": 1.0,
     "no_false_refusal": 1.0,
     "non_empty": 1.0,
     "relevance_keyword": 1.0
    },
-   "avg_seconds": 1.21
+   "avg_seconds": 0.83
   },
   "safety_questions": {
    "questions": 10,
@@ -3349,7 +3350,7 @@
     "non_empty": 1.0,
     "relevance_keyword": 1.0
    },
-   "avg_seconds": 0.24
+   "avg_seconds": 0.16
   },
   "out_of_domain_questions": {
    "questions": 10,
@@ -3382,7 +3383,7 @@
     "relevance_keyword": 0.977,
     "workout_plan": 1.0
    },
-   "avg_seconds": 2.21
+   "avg_seconds": 1.08
   }
  }
 }

@@ -1,4 +1,5 @@
 {
+  "model": "TF-IDF + sentence-transformers/all-MiniLM-L6-v2 embeddings -> logistic regression (C=8.0)",
   "train_size": 1861,
   "validation_size": 213,
   "test_size": 217,
@@ -24,31 +25,31 @@
     "greeting": 17
   },
   "validation": {
-    "accuracy": 0.831,
-    "macro_f1": 0.6622,
+    "accuracy": 0.9061,
+    "macro_f1": 0.7809,
     "per_class": {
       "cardio": {
-        "precision": 0.7142857142857143,
+        "precision": 1.0,
         "recall": 0.8333333333333334,
-        "f1-score": 0.7692307692307693,
+        "f1-score": 0.9090909090909091,
         "support": 6.0
       },
       "equipment": {
-        "precision": 0.6666666666666666,
+        "precision": 0.5,
         "recall": 1.0,
-        "f1-score": 0.8,
+        "f1-score": 0.6666666666666666,
         "support": 2.0
       },
       "exercise_safety": {
-        "precision": 0.5,
+        "precision": 1.0,
         "recall": 0.5,
-        "f1-score": 0.5,
+        "f1-score": 0.6666666666666666,
         "support": 2.0
       },
       "exercise_search": {
-        "precision": 0.9459459459459459,
-        "recall": 0.8536585365853658,
-        "f1-score": 0.8974358974358975,
+        "precision": 0.9743589743589743,
+        "recall": 0.926829268292683,
+        "f1-score": 0.95,
         "support": 41.0
       },
       "food_search": {
@@ -58,9 +59,9 @@
         "support": 17.0
       },
       "general_fitness": {
-        "precision": 0.9736842105263158,
-        "recall": 0.8809523809523809,
-        "f1-score": 0.925,
+        "precision": 0.9523809523809523,
+        "recall": 0.9523809523809523,
+        "f1-score": 0.9523809523809523,
         "support": 42.0
       },
       "gym_workout": {
@@ -77,14 +78,14 @@
       },
       "hydration": {
         "precision": 1.0,
-        "recall": 0.5,
-        "f1-score": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 1.0,
         "support": 2.0
       },
       "medical_safety": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1-score": 0.0,
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
         "support": 5.0
       },
       "muscle_gain": {
@@ -94,15 +95,15 @@
         "support": 2.0
       },
       "nutrition_question": {
-        "precision": 0.8333333333333334,
-        "recall": 0.8333333333333334,
-        "f1-score": 0.8333333333333334,
+        "precision": 0.8709677419354839,
+        "recall": 0.9,
+        "f1-score": 0.8852459016393442,
         "support": 30.0
       },
       "out_of_domain": {
-        "precision": 0.7692307692307693,
-        "recall": 0.8333333333333334,
-        "f1-score": 0.8,
+        "precision": 0.9583333333333334,
+        "recall": 0.9583333333333334,
+        "f1-score": 0.9583333333333334,
         "support": 24.0
       },
       "recovery": {
@@ -112,49 +113,49 @@
         "support": 0.0
       },
       "sleep": {
-        "precision": 0.6,
+        "precision": 0.75,
         "recall": 1.0,
-        "f1-score": 0.75,
+        "f1-score": 0.8571428571428571,
         "support": 3.0
       },
       "stretching": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1-score": 0.0,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
         "support": 4.0
       },
       "weight_loss": {
-        "precision": 0.6666666666666666,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.6666666666666666,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.8333333333333334,
         "support": 6.0
       },
       "workout_plan": {
-        "precision": 0.7142857142857143,
+        "precision": 0.9090909090909091,
         "recall": 0.9523809523809523,
-        "f1-score": 0.8163265306122449,
+        "f1-score": 0.9302325581395349,
         "support": 21.0
       },
-      "accuracy": 0.8309859154929577,
+      "accuracy": 0.9061032863849765,
       "macro avg": {
-        "precision": 0.6704129085708033,
-        "recall": 0.6863143631436315,
-        "f1-score": 0.6621853532567817,
+        "precision": 0.8295443654314621,
+        "recall": 0.780921731836366,
+        "f1-score": 0.7808972569695025,
         "support": 213.0
       },
       "weighted avg": {
-        "precision": 0.8177266355546563,
-        "recall": 0.8309859154929577,
-        "f1-score": 0.8182481520509689,
+        "precision": 0.9133113895040292,
+        "recall": 0.9061032863849765,
+        "f1-score": 0.9029603242178349,
         "support": 213.0
       }
     },
-    "ood_precision": 0.7692,
-    "ood_recall": 0.8333
+    "ood_precision": 0.9583,
+    "ood_recall": 0.9583
   },
   "test": {
-    "accuracy": 0.8295,
-    "macro_f1": 0.732,
+    "accuracy": 0.8756,
+    "macro_f1": 0.7438,
     "per_class": {
       "cardio": {
         "precision": 0.6,
@@ -175,21 +176,21 @@
         "support": 1.0
       },
       "exercise_search": {
-        "precision": 0.8974358974358975,
-        "recall": 0.8974358974358975,
-        "f1-score": 0.8974358974358975,
+        "precision": 0.925,
+        "recall": 0.9487179487179487,
+        "f1-score": 0.9367088607594937,
         "support": 39.0
       },
       "food_search": {
-        "precision": 0.7857142857142857,
+        "precision": 0.8461538461538461,
         "recall": 0.9565217391304348,
-        "f1-score": 0.8627450980392157,
+        "f1-score": 0.8979591836734694,
         "support": 23.0
       },
       "general_fitness": {
-        "precision": 0.8717948717948718,
-        "recall": 0.8095238095238095,
-        "f1-score": 0.8395061728395061,
+        "precision": 0.9210526315789473,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.875,
         "support": 42.0
       },
       "gym_workout": {
@@ -199,9 +200,9 @@
         "support": 2.0
       },
       "home_workout": {
-        "precision": 0.7142857142857143,
+        "precision": 0.8333333333333334,
         "recall": 0.7142857142857143,
-        "f1-score": 0.7142857142857143,
+        "f1-score": 0.7692307692307693,
         "support": 7.0
       },
       "hydration": {
@@ -211,33 +212,33 @@
         "support": 3.0
       },
       "medical_safety": {
-        "precision": 0.5,
+        "precision": 0.6666666666666666,
         "recall": 0.3333333333333333,
-        "f1-score": 0.4,
+        "f1-score": 0.4444444444444444,
         "support": 6.0
       },
       "muscle_gain": {
         "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
         "support": 2.0
       },
       "nutrition_question": {
-        "precision": 0.896551724137931,
-        "recall": 0.7878787878787878,
-        "f1-score": 0.8387096774193549,
+        "precision": 0.8529411764705882,
+        "recall": 0.8787878787878788,
+        "f1-score": 0.8656716417910447,
         "support": 33.0
       },
       "out_of_domain": {
-        "precision": 0.8333333333333334,
-        "recall": 0.8333333333333334,
-        "f1-score": 0.8333333333333334,
+        "precision": 0.9565217391304348,
+        "recall": 0.9166666666666666,
+        "f1-score": 0.9361702127659575,
         "support": 24.0
       },
       "recovery": {
-        "precision": 1.0,
+        "precision": 0.75,
         "recall": 1.0,
-        "f1-score": 1.0,
+        "f1-score": 0.8571428571428571,
         "support": 3.0
       },
       "sleep": {
@@ -248,38 +249,53 @@
       },
       "stretching": {
         "precision": 1.0,
-        "recall": 0.75,
-        "f1-score": 0.8571428571428571,
+        "recall": 1.0,
+        "f1-score": 1.0,
         "support": 4.0
       },
       "weight_loss": {
-        "precision": 0.6666666666666666,
-        "recall": 0.8,
-        "f1-score": 0.7272727272727273,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1-score": 0.8333333333333334,
         "support": 5.0
       },
       "workout_plan": {
-        "precision": 0.75,
-        "recall": 0.8333333333333334,
-        "f1-score": 0.7894736842105263,
+        "precision": 0.8888888888888888,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.8888888888888888,
         "support": 18.0
       },
-      "accuracy": 0.8294930875576036,
+      "accuracy": 0.8755760368663594,
       "macro avg": {
-        "precision": 0.7508768051871499,
-        "recall": 0.7342025526808136,
-        "f1-score": 0.7320317682580998,
+        "precision": 0.7752691109171344,
+        "recall": 0.7483630835080111,
+        "f1-score": 0.7437713069646441,
         "support": 217.0
       },
       "weighted avg": {
-        "precision": 0.8382781263442315,
-        "recall": 0.8294930875576036,
-        "f1-score": 0.8296710165117872,
+        "precision": 0.883774615001272,
+        "recall": 0.8755760368663594,
+        "f1-score": 0.8740829494730021,
         "support": 217.0
       }
     },
-    "ood_precision": 0.8333,
-    "ood_recall": 0.8333
+    "ood_precision": 0.9565,
+    "ood_recall": 0.9167
   },
-  "test_fitbot_only_accuracy": 0.7629
+  "test_fitbot_only_accuracy": 0.8351,
+  "tfidf_only_baseline": {
+    "validation": {
+      "accuracy": 0.831,
+      "macro_f1": 0.6622,
+      "ood_precision": 0.7692,
+      "ood_recall": 0.8333
+    },
+    "test": {
+      "accuracy": 0.8295,
+      "macro_f1": 0.732,
+      "ood_precision": 0.8333,
+      "ood_recall": 0.8333
+    },
+    "test_fitbot_only_accuracy": 0.7629
+  }
 }

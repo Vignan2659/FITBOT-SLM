@@ -1,6 +1,9 @@
 """Exercise/food endpoints, intent detection, slots, safety and planner."""
+from pathlib import Path
+
 import pytest
 
+from app.core.config import get_settings
 from app.services import safety
 
 
@@ -72,6 +75,16 @@ def test_food_list_and_lookup(client):
 def test_intent_detection(engine, text, expected):
     intent, conf, _ = engine.nlu.classify(text)
     assert intent in expected, (text, intent, conf)
+
+
+def test_intent_classifier_uses_embeddings_and_has_offline_fallback(engine):
+    from app.services.nlu import NLU
+    assert engine.nlu.clf.uses_embeddings
+    nlu = engine.nlu
+    offline = NLU(Path(get_settings().models_dir) / "intent_classifier.joblib", nlu.exercises, nlu.foods)
+    assert not offline.clf.uses_embeddings
+    assert offline.classify("How much water should I drink a day?")[0] == "hydration"
+    assert offline.classify("What is the capital of France?")[0] == "out_of_domain"
 
 
 def test_slot_extraction(engine):

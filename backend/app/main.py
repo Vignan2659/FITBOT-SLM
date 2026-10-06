@@ -30,10 +30,12 @@ log = logging.getLogger("fitbot")
 def build_engine(settings, generate=None) -> tuple[ChatEngine, dict]:
     data_dir = Path(settings.data_dir)
     catalog = Catalog(data_dir)
-    nlu = NLU(Path(settings.models_dir) / "intent_classifier.joblib", catalog.exercises, catalog.foods)
     retriever = KnowledgeRetriever(data_dir / "knowledge" / "knowledge_base.json", settings.fitbot_embed_model,
                                    use_embeddings=settings.fitbot_use_embeddings)
-    info = {"retriever": retriever.backend, "intent_classifier": nlu.clf is not None}
+    nlu = NLU(Path(settings.models_dir) / "intent_classifier.joblib", catalog.exercises, catalog.foods,
+              encode=retriever.encode if retriever.backend != "tfidf" else None)
+    info = {"retriever": retriever.backend, "intent_classifier": nlu.clf is not None,
+            "intent_embeddings": bool(getattr(nlu.clf, "uses_embeddings", False))}
     if generate is None:
         from app.ml.slm import FitBotSLM
         slm = FitBotSLM(settings.model_ref(), settings.fitbot_base_model,

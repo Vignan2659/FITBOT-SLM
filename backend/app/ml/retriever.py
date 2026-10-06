@@ -39,6 +39,10 @@ class KnowledgeRetriever:
             self._vec = TfidfVectorizer(ngram_range=(1, 2), stop_words="english", sublinear_tf=True)
             self._tfidf = self._vec.fit_transform(self.texts)
 
+    def encode(self, texts: list[str]) -> np.ndarray:
+        """Normalised sentence embeddings (shared with the intent classifier)."""
+        return self._model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
+
     def scores(self, query: str) -> np.ndarray:
         if self._model is not None:
             q = self._model.encode([query], normalize_embeddings=True, show_progress_bar=False)[0]

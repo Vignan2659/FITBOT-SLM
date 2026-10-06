@@ -121,8 +121,8 @@ cd frontend && npx vitest run                          # React component tests
 | ROUGE-L F1 (test) | 0.176 | **0.488** |
 | Mean latency per answer (Apple M5, MPS) | 1.87 s | **0.97 s** |
 
-Full pipeline with the real model: **91 % of 163 checked turns pass** (nutrition, exercise, safety and
-out-of-domain suites 100 %). All automated tests pass (70 backend, 2 real-model, 4 frontend).
+Full pipeline with the real model: **92 % of 163 checked turns pass** (nutrition, exercise, safety and
+out-of-domain suites 100 %). All automated tests pass (73 backend, 2 real-model, 4 frontend, 3 end-to-end browser).
 Details and limitations: [docs/EVALUATION.md](docs/EVALUATION.md),
 [evaluation/evaluation_report.md](evaluation/evaluation_report.md).
 

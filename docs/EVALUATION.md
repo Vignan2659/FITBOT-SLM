@@ -110,27 +110,32 @@ notebook's own results (`evaluation/training_run/results.json`) agree (test loss
 | Fitness questions | 50 | 76 % |
 | Nutrition questions | 20 | 100 % |
 | Exercise questions | 20 | 100 % |
-| Sleep / recovery | 10 | 90 % |
+| Sleep / recovery | 10 | 100 % |
 | Safety | 10 | 100 % |
 | Out-of-domain | 10 | 100 % |
 | Follow-up conversations | 20 (43 turns) | 98 % |
-| **Total** | **163 turns** | **91 % (149/163)** |
+| **Total** | **163 turns** | **92 % (150/163)** |
 
-0 false refusals over 141 in-domain turns. 12 of the 14 failures are *intent-label* disagreements where the answer
-itself passed all other checks (e.g. "Is swimming a good workout?" routed to `exercise_search` instead of `cardio`);
-two are keyword-relevance misses. The expectations were not relaxed after seeing the results. (The MPS-trained
-verification model scored 150/163 on the same suites.) Full answers: `evaluation/test_suite_results.json`;
+0 false refusals over 141 in-domain turns. 9 of the 13 failures are *intent-label* disagreements where the answer
+itself passed all other checks (e.g. "Is swimming a good workout?" routed to `hydration` instead of `cardio`);
+three are keyword-relevance misses and one fails both. The expectations were not relaxed after seeing the results.
+(With the earlier TF-IDF-only intent classifier the same model scored 149/163; see 3.4.) Full answers: `evaluation/test_suite_results.json`;
 failures: `evaluation/test_suite_summary.md`.
 
 ### 3.4 Intent classifier
 
-| Split | Accuracy | Macro-F1 | OOD precision | OOD recall |
-|---|---:|---:|---:|---:|
-| Validation (213) | 0.831 | 0.662 | – | – |
-| Test (217, FitBot + fitness-intent) | 0.830 | 0.732 | 0.833 | 0.833 |
-| Test, FitBot items only (97) | 0.763 | – | – | – |
+Hybrid model: TF-IDF (word + char n-grams) concatenated with all-MiniLM-L6-v2 sentence embeddings (the encoder
+already loaded for retrieval) -> logistic regression. Embedding weight and C were chosen on the validation split;
+the earlier TF-IDF-only model is kept inside the saved file as an offline fallback.
 
-The classifier alone confuses neighbouring fitness intents; the domain-lexicon guardrail (whole-word short
+| Split | TF-IDF only: accuracy / macro-F1 | **Hybrid: accuracy / macro-F1** | Hybrid OOD precision / recall |
+|---|---:|---:|---:|
+| Validation (213) | 0.831 / 0.662 | **0.906 / 0.781** | 0.958 / 0.958 |
+| Test (217, FitBot + fitness-intent) | 0.830 / 0.732 | **0.876 / 0.744** | 0.957 / 0.917 (was 0.833 / 0.833) |
+| Test, FitBot items only (97) | 0.763 | **0.835** | – |
+
+In the full pipeline the switch fixed 4 turns and changed 3 others to a neighbouring intent (answers of similar
+quality), net 149 -> 150/163. The classifier alone confuses neighbouring fitness intents; the domain-lexicon guardrail (whole-word short
 stems, phrase-level food/exercise names, false-friend list) raises out-of-domain handling in the full pipeline to
 10/10 in the OOD suite and 0 false refusals in the in-domain suites.
 
@@ -138,7 +143,7 @@ stems, phrase-level food/exercise names, false-friend list) raises out-of-domain
 
 | Suite | Result |
 |---|---|
-| Backend pytest (auth, hashing, logout revocation, conversations & privacy, chat pipeline, follow-ups, exercise/food search, planner, intent, slots, safety) | 70 passed |
+| Backend pytest (auth, hashing, logout revocation, conversations & privacy, chat pipeline, follow-ups, exercise/food search, planner, intent incl. offline fallback, slots, safety, rate limit, /api prefix) | 73 passed |
 | Backend pytest `-m slm` (real Colab model: demo conversation, USDA number grounding) | 2 passed |
 | Frontend Vitest (exercise card, food card, workout plan, message rendering) | 4 passed |
 | Notebook executed end-to-end: locally (smoke + full MPS run, 31/31 cells) and on Colab T4 (all cells, after the two Colab fixes above) | passed |
