@@ -1,0 +1,639 @@
+[
+ {
+  "q": "How often should a beginner lift weights?",
+  "intents": [
+   "workout_plan",
+   "general_fitness",
+   "muscle_gain",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "week",
+   "days",
+   "times"
+  ]
+ },
+ {
+  "q": "What's a good warm up before lifting?",
+  "intents": [
+   "stretching",
+   "gym_workout",
+   "exercise_safety"
+  ],
+  "keywords_any": [
+   "warm",
+   "minutes",
+   "light"
+  ]
+ },
+ {
+  "q": "How do I get a six pack?",
+  "intents": [
+   "weight_loss",
+   "exercise_search",
+   "muscle_gain"
+  ],
+  "keywords_any": [
+   "fat",
+   "core",
+   "abs",
+   "diet"
+  ]
+ },
+ {
+  "q": "Is it okay to work out every day?",
+  "intents": [
+   "recovery",
+   "workout_plan",
+   "general_fitness"
+  ],
+  "keywords_any": [
+   "rest",
+   "recover",
+   "day"
+  ]
+ },
+ {
+  "q": "How long does it take to see results from working out?",
+  "intents": [
+   "muscle_gain",
+   "general_fitness",
+   "weight_loss"
+  ],
+  "keywords_any": [
+   "week",
+   "month",
+   "consisten"
+  ]
+ },
+ {
+  "q": "What is progressive overload?",
+  "intents": [
+   "workout_plan",
+   "muscle_gain",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "weight",
+   "rep",
+   "gradual",
+   "increase"
+  ]
+ },
+ {
+  "q": "How many push-ups should a beginner do?",
+  "intents": [
+   "exercise_search",
+   "home_workout",
+   "general_fitness"
+  ],
+  "keywords_any": [
+   "set",
+   "rep",
+   "push"
+  ]
+ },
+ {
+  "q": "Can I build muscle after 40?",
+  "intents": [
+   "muscle_gain",
+   "general_fitness"
+  ],
+  "keywords_any": [
+   "yes",
+   "strength",
+   "protein",
+   "muscle"
+  ]
+ },
+ {
+  "q": "How do I lose fat but keep muscle?",
+  "intents": [
+   "weight_loss",
+   "muscle_gain"
+  ],
+  "keywords_any": [
+   "protein",
+   "strength",
+   "deficit"
+  ]
+ },
+ {
+  "q": "What is a calorie deficit?",
+  "intents": [
+   "weight_loss",
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "calorie",
+   "fewer",
+   "less",
+   "burn"
+  ]
+ },
+ {
+  "q": "Should I do cardio on an empty stomach?",
+  "intents": [
+   "cardio",
+   "nutrition_question",
+   "weight_loss"
+  ],
+  "keywords_any": [
+   "fast",
+   "empty",
+   "eat",
+   "fine"
+  ]
+ },
+ {
+  "q": "How do I improve my running endurance?",
+  "intents": [
+   "cardio"
+  ],
+  "keywords_any": [
+   "run",
+   "pace",
+   "gradual",
+   "easy",
+   "week"
+  ]
+ },
+ {
+  "q": "What is a good beginner running routine?",
+  "intents": [
+   "cardio",
+   "workout_plan"
+  ],
+  "keywords_any": [
+   "walk",
+   "run",
+   "minute"
+  ]
+ },
+ {
+  "q": "How many rest days per week do I need?",
+  "intents": [
+   "recovery"
+  ],
+  "keywords_any": [
+   "rest",
+   "day",
+   "week"
+  ]
+ },
+ {
+  "q": "What muscles do squats work?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "quad",
+   "glute",
+   "hamstring",
+   "leg"
+  ]
+ },
+ {
+  "q": "How should I breathe while lifting?",
+  "intents": [
+   "exercise_safety",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "breathe",
+   "exhale",
+   "inhale",
+   "breath"
+  ]
+ },
+ {
+  "q": "What's the best time of day to exercise?",
+  "intents": [
+   "general_fitness",
+   "workout_plan"
+  ],
+  "keywords_any": [
+   "time",
+   "consisten",
+   "morning",
+   "evening"
+  ]
+ },
+ {
+  "q": "How do I stay motivated to exercise?",
+  "intents": [
+   "general_fitness",
+   "workout_plan"
+  ],
+  "keywords_any": [
+   "goal",
+   "habit",
+   "schedule",
+   "enjoy"
+  ]
+ },
+ {
+  "q": "Is walking good exercise?",
+  "intents": [
+   "cardio",
+   "general_fitness",
+   "weight_loss"
+  ],
+  "keywords_any": [
+   "walk",
+   "moderate",
+   "health"
+  ]
+ },
+ {
+  "q": "How can I get stronger legs?",
+  "intents": [
+   "exercise_search",
+   "muscle_gain"
+  ],
+  "keywords_any": [
+   "squat",
+   "lunge",
+   "leg"
+  ]
+ },
+ {
+  "q": "What exercises help with back pain prevention?",
+  "intents": [
+   "exercise_search",
+   "exercise_safety",
+   "stretching"
+  ],
+  "keywords_any": [
+   "core",
+   "back",
+   "plank",
+   "professional"
+  ]
+ },
+ {
+  "q": "How much exercise do adults need per week?",
+  "intents": [
+   "general_fitness",
+   "cardio"
+  ],
+  "keywords_any": [
+   "150",
+   "minute",
+   "week"
+  ]
+ },
+ {
+  "q": "Are machines safe for beginners?",
+  "intents": [
+   "gym_workout",
+   "exercise_safety"
+  ],
+  "keywords_any": [
+   "machine",
+   "beginner",
+   "safe"
+  ]
+ },
+ {
+  "q": "What is a good gym routine for women?",
+  "intents": [
+   "gym_workout",
+   "workout_plan",
+   "general_fitness"
+  ],
+  "keywords_any": [
+   "strength",
+   "squat",
+   "weight",
+   "full"
+  ]
+ },
+ {
+  "q": "How do I avoid shin splints when running?",
+  "intents": [
+   "exercise_safety",
+   "cardio"
+  ],
+  "keywords_any": [
+   "gradual",
+   "shoe",
+   "rest",
+   "increase"
+  ]
+ },
+ {
+  "q": "Should I stretch every day?",
+  "intents": [
+   "stretching"
+  ],
+  "keywords_any": [
+   "stretch",
+   "flexib",
+   "day"
+  ]
+ },
+ {
+  "q": "What's better for weight loss, running or cycling?",
+  "intents": [
+   "cardio",
+   "weight_loss"
+  ],
+  "keywords_any": [
+   "both",
+   "calorie",
+   "enjoy"
+  ]
+ },
+ {
+  "q": "How do I do a proper plank?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "plank",
+   "straight",
+   "core"
+  ]
+ },
+ {
+  "q": "Is HIIT good for beginners?",
+  "intents": [
+   "cardio"
+  ],
+  "keywords_any": [
+   "interval",
+   "beginner",
+   "intensity"
+  ]
+ },
+ {
+  "q": "How do I build bigger shoulders?",
+  "intents": [
+   "exercise_search",
+   "muscle_gain"
+  ],
+  "keywords_any": [
+   "press",
+   "raise",
+   "shoulder"
+  ]
+ },
+ {
+  "q": "What is a deload week?",
+  "intents": [
+   "recovery",
+   "workout_plan"
+  ],
+  "keywords_any": [
+   "lighter",
+   "reduce",
+   "volume",
+   "recover"
+  ]
+ },
+ {
+  "q": "How many sets per muscle per week for growth?",
+  "intents": [
+   "muscle_gain",
+   "workout_plan"
+  ],
+  "keywords_any": [
+   "set",
+   "week",
+   "10"
+  ]
+ },
+ {
+  "q": "Can I train abs every day?",
+  "intents": [
+   "exercise_search",
+   "recovery"
+  ],
+  "keywords_any": [
+   "rest",
+   "core",
+   "abs"
+  ]
+ },
+ {
+  "q": "What should a 30 minute workout include?",
+  "intents": [
+   "workout_plan",
+   "home_workout",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "warm",
+   "minute",
+   "exercise"
+  ]
+ },
+ {
+  "q": "How do I start exercising if I'm overweight?",
+  "intents": [
+   "general_fitness",
+   "weight_loss",
+   "cardio"
+  ],
+  "keywords_any": [
+   "walk",
+   "start",
+   "gradual",
+   "low"
+  ]
+ },
+ {
+  "q": "Is yoga enough exercise?",
+  "intents": [
+   "stretching",
+   "general_fitness"
+  ],
+  "keywords_any": [
+   "yoga",
+   "strength",
+   "cardio",
+   "flexib"
+  ]
+ },
+ {
+  "q": "What equipment do I need to start working out at home?",
+  "intents": [
+   "equipment",
+   "home_workout"
+  ],
+  "keywords_any": [
+   "dumbbell",
+   "band",
+   "mat"
+  ]
+ },
+ {
+  "q": "Do I need a personal trainer?",
+  "intents": [
+   "general_fitness",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "trainer",
+   "form",
+   "help",
+   "not"
+  ]
+ },
+ {
+  "q": "How can I improve my posture?",
+  "intents": [
+   "exercise_search",
+   "stretching",
+   "general_fitness"
+  ],
+  "keywords_any": [
+   "back",
+   "core",
+   "row",
+   "stretch"
+  ]
+ },
+ {
+  "q": "Is it bad to skip leg day?",
+  "intents": [
+   "workout_plan",
+   "exercise_search",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "leg",
+   "balance",
+   "strength"
+  ]
+ },
+ {
+  "q": "What are compound exercises?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "joint",
+   "muscle",
+   "squat",
+   "deadlift"
+  ]
+ },
+ {
+  "q": "How do I increase my bench press?",
+  "intents": [
+   "exercise_search",
+   "muscle_gain",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "bench",
+   "press",
+   "progress",
+   "weight"
+  ]
+ },
+ {
+  "q": "Should I lift heavy or light weights?",
+  "intents": [
+   "muscle_gain",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "rep",
+   "heavy",
+   "light",
+   "goal"
+  ]
+ },
+ {
+  "q": "How do I make a home workout harder?",
+  "intents": [
+   "home_workout"
+  ],
+  "keywords_any": [
+   "rep",
+   "slow",
+   "harder",
+   "variation"
+  ]
+ },
+ {
+  "q": "What are the benefits of strength training?",
+  "intents": [
+   "muscle_gain",
+   "general_fitness"
+  ],
+  "keywords_any": [
+   "muscle",
+   "bone",
+   "strength"
+  ]
+ },
+ {
+  "q": "How do I get fit fast?",
+  "intents": [
+   "general_fitness",
+   "workout_plan",
+   "cardio"
+  ],
+  "keywords_any": [
+   "consisten",
+   "week",
+   "strength",
+   "cardio"
+  ]
+ },
+ {
+  "q": "Is swimming a good workout?",
+  "intents": [
+   "cardio"
+  ],
+  "keywords_any": [
+   "swim",
+   "low",
+   "impact",
+   "cardio"
+  ]
+ },
+ {
+  "q": "What does a full body workout look like?",
+  "intents": [
+   "workout_plan",
+   "exercise_search",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "squat",
+   "push",
+   "row",
+   "full"
+  ]
+ },
+ {
+  "q": "How do I avoid getting injured at the gym?",
+  "intents": [
+   "exercise_safety"
+  ],
+  "keywords_any": [
+   "warm",
+   "form",
+   "light",
+   "gradual"
+  ]
+ },
+ {
+  "q": "Can I lose weight with just home workouts?",
+  "intents": [
+   "weight_loss",
+   "home_workout"
+  ],
+  "keywords_any": [
+   "diet",
+   "calorie",
+   "yes",
+   "home"
+  ]
+ }
+]

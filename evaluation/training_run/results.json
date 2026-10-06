@@ -1,0 +1,142 @@
+{
+  "run_name": "fitbot-smollm2-360m-lora",
+  "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "config": {
+    "base_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "max_seq_length": 1024,
+    "num_train_epochs": 3,
+    "learning_rate": 0.0002,
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.0,
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lora_target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "early_stopping_patience": 2,
+    "seed": 42,
+    "gen_max_new_tokens": 200,
+    "gen_repetition_penalty": 1.1,
+    "precision": "fp16",
+    "device": "cuda",
+    "gpu_name": "Tesla T4",
+    "trainable_params": 8683520
+  },
+  "train_seconds": 471.3,
+  "train_runtime_metrics": {
+    "train_runtime": 470.8029,
+    "train_samples_per_second": 4.626,
+    "train_steps_per_second": 0.293,
+    "total_flos": 1956176544890880.0,
+    "train_loss": 1.0517809166424517,
+    "epoch": 3.0
+  },
+  "best_checkpoint": "/content/drive/MyDrive/FitBot/outputs/fitbot-smollm2-360m-lora/checkpoints/checkpoint-138",
+  "final_train_loss": 0.7875306606292725,
+  "best_validation_loss": 0.89385986328125,
+  "base": {
+    "validation": {
+      "loss": 1.7131,
+      "perplexity": 5.546,
+      "tokens": 7260
+    },
+    "test": {
+      "loss": 1.6208,
+      "perplexity": 5.057,
+      "tokens": 7210
+    },
+    "test_generation": {
+      "n": 97,
+      "rougeL_f": 0.1762,
+      "token_f1": 0.2459,
+      "ood_refusal_rate": 0.0,
+      "in_domain_false_refusal_rate": 0.0,
+      "safety_referral_rate": 0.6667,
+      "number_grounding_rate": 0.9171,
+      "avg_latency_s": 1.5352,
+      "avg_answer_words": 99.268
+    }
+  },
+  "fine_tuned": {
+    "validation": {
+      "loss": 0.8954,
+      "perplexity": 2.448,
+      "tokens": 7260
+    },
+    "test": {
+      "loss": 0.8967,
+      "perplexity": 2.452,
+      "tokens": 7210
+    },
+    "test_generation": {
+      "n": 97,
+      "rougeL_f": 0.4881,
+      "token_f1": 0.5385,
+      "ood_refusal_rate": 0.25,
+      "in_domain_false_refusal_rate": 0.0538,
+      "safety_referral_rate": 0.3333,
+      "number_grounding_rate": 0.9021,
+      "avg_latency_s": 1.5042,
+      "avg_answer_words": 46.3505
+    }
+  },
+  "rougeL_by_category": {
+    "base": {
+      "cardio_endurance": 0.1513,
+      "exercise_safety": 0.0884,
+      "fitness_equipment": 0.1162,
+      "food": 0.2214,
+      "gym_workouts": 0.0917,
+      "healthy_lifestyle": 0.169,
+      "home_workouts": 0.2596,
+      "hydration": 0.1264,
+      "medical_safety": 0.1593,
+      "muscle_building": 0.2655,
+      "nutrition": 0.1638,
+      "out_of_domain": 0.0886,
+      "pre_post_workout": 0.1926,
+      "recovery_sleep": 0.1657,
+      "stretching_flexibility": 0.1634,
+      "weight_loss": 0.1626,
+      "workout_exercises": 0.1592,
+      "workout_planning": 0.14
+    },
+    "fine_tuned": {
+      "cardio_endurance": 0.4871,
+      "exercise_safety": 0.1637,
+      "fitness_equipment": 0.1799,
+      "food": 0.7798,
+      "gym_workouts": 0.1112,
+      "healthy_lifestyle": 0.2721,
+      "home_workouts": 0.4454,
+      "hydration": 0.2507,
+      "medical_safety": 0.1784,
+      "muscle_building": 0.2609,
+      "nutrition": 0.4732,
+      "out_of_domain": 0.2512,
+      "pre_post_workout": 0.2209,
+      "recovery_sleep": 0.2383,
+      "stretching_flexibility": 0.5991,
+      "weight_loss": 0.1592,
+      "workout_exercises": 0.6977,
+      "workout_planning": 0.1647
+    }
+  },
+  "generation_eval_examples": 97,
+  "dataset_sizes": {
+    "training": 726,
+    "validation": 93,
+    "test": 97
+  },
+  "smoke_test": false
+}

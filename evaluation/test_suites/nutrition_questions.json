@@ -1,0 +1,268 @@
+[
+ {
+  "q": "What should I eat for breakfast?",
+  "intents": [
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "oat",
+   "egg",
+   "yogurt",
+   "protein"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What foods are high in protein?",
+  "intents": [
+   "nutrition_question",
+   "food_search"
+  ],
+  "keywords_any": [
+   "chicken",
+   "egg",
+   "yogurt",
+   "protein"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What should I eat after working out?",
+  "intents": [
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "protein",
+   "carb"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What are healthy snacks?",
+  "intents": [
+   "nutrition_question",
+   "food_search"
+  ],
+  "keywords_any": [
+   "yogurt",
+   "fruit",
+   "nut",
+   "snack"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What foods should I limit during weight loss?",
+  "intents": [
+   "weight_loss",
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "sugar",
+   "fried",
+   "limit",
+   "drink"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What drinks should I avoid?",
+  "intents": [
+   "hydration",
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "sugar",
+   "soda",
+   "energy",
+   "water"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What are good vegetarian protein sources?",
+  "intents": [
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "tofu",
+   "lentil",
+   "bean",
+   "yogurt",
+   "egg"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What foods contain healthy fats?",
+  "intents": [
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "nut",
+   "olive",
+   "avocado",
+   "salmon",
+   "seed"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What foods are high in fiber?",
+  "intents": [
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "bean",
+   "lentil",
+   "oat",
+   "fiber"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "Is rice okay for a fitness diet?",
+  "intents": [
+   "food_search",
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "rice",
+   "carb",
+   "yes",
+   "fine"
+  ]
+ },
+ {
+  "q": "How much protein does an egg contain?",
+  "intents": [
+   "food_search",
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "6.3",
+   "protein"
+  ],
+  "foods_min": 1,
+  "numbers_from_usda": true
+ },
+ {
+  "q": "How many calories are in a banana?",
+  "intents": [
+   "food_search",
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "kcal",
+   "calorie"
+  ],
+  "foods_min": 1,
+  "numbers_from_usda": true
+ },
+ {
+  "q": "How much protein is in chicken breast?",
+  "intents": [
+   "food_search",
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "protein",
+   "g"
+  ],
+  "foods_min": 1,
+  "numbers_from_usda": true
+ },
+ {
+  "q": "Is peanut butter healthy?",
+  "intents": [
+   "food_search",
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "fat",
+   "calorie",
+   "portion",
+   "protein"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What should I eat before a workout?",
+  "intents": [
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "carb",
+   "banana",
+   "oat",
+   "hour"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "How much protein do I need per day?",
+  "intents": [
+   "nutrition_question",
+   "muscle_gain"
+  ],
+  "keywords_any": [
+   "0.8",
+   "1.2",
+   "1.6",
+   "kg"
+  ]
+ },
+ {
+  "q": "Are carbs bad for weight loss?",
+  "intents": [
+   "nutrition_question",
+   "weight_loss"
+  ],
+  "keywords_any": [
+   "carb",
+   "calorie",
+   "not",
+   "fuel"
+  ]
+ },
+ {
+  "q": "Is Greek yogurt good for muscle building?",
+  "intents": [
+   "food_search",
+   "nutrition_question",
+   "muscle_gain"
+  ],
+  "keywords_any": [
+   "protein",
+   "yogurt"
+  ],
+  "foods_min": 1
+ },
+ {
+  "q": "What are the macros of oats?",
+  "intents": [
+   "food_search",
+   "nutrition_question"
+  ],
+  "keywords_any": [
+   "protein",
+   "carb",
+   "fat"
+  ],
+  "foods_min": 1,
+  "numbers_from_usda": true
+ },
+ {
+  "q": "Is it okay to eat fruit when losing weight?",
+  "intents": [
+   "nutrition_question",
+   "weight_loss",
+   "food_search"
+  ],
+  "keywords_any": [
+   "fruit",
+   "fiber",
+   "yes"
+  ]
+ }
+]

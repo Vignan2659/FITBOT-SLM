@@ -1,0 +1,5893 @@
+[
+  {
+    "name": "Egg (whole, hard-boiled)",
+    "slug": "egg",
+    "fdc_id": 173424,
+    "usda_description": "Egg, whole, cooked, hard-boiled",
+    "usda_category": "Dairy and Egg Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "breakfast",
+      "vegetarian"
+    ],
+    "aliases": [
+      "egg",
+      "eggs",
+      "boiled egg",
+      "hard boiled egg"
+    ],
+    "per_100g": {
+      "calories_kcal": 155.0,
+      "protein_g": 12.6,
+      "carbs_g": 1.12,
+      "fat_g": 10.6,
+      "fiber_g": 0.0,
+      "sugar_g": 1.12,
+      "sodium_mg": 124.0,
+      "saturated_fat_g": 3.27,
+      "potassium_mg": 126.0,
+      "calcium_mg": 50.0,
+      "iron_mg": 1.19,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 large",
+      "grams": 50.0,
+      "nutrients": {
+        "calories_kcal": 77.5,
+        "protein_g": 6.3,
+        "carbs_g": 0.6,
+        "fat_g": 5.3,
+        "fiber_g": 0.0,
+        "sugar_g": 0.6,
+        "sodium_mg": 62.0,
+        "saturated_fat_g": 1.6,
+        "potassium_mg": 63.0,
+        "calcium_mg": 25.0,
+        "iron_mg": 0.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173424/nutrients"
+  },
+  {
+    "name": "Egg (whole, raw)",
+    "slug": "egg",
+    "fdc_id": 171287,
+    "usda_description": "Egg, whole, raw, fresh",
+    "usda_category": "Dairy and Egg Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "breakfast",
+      "vegetarian"
+    ],
+    "aliases": [
+      "raw egg",
+      "whole egg"
+    ],
+    "per_100g": {
+      "calories_kcal": 143.0,
+      "protein_g": 12.6,
+      "carbs_g": 0.72,
+      "fat_g": 9.51,
+      "fiber_g": 0.0,
+      "sugar_g": 0.37,
+      "sodium_mg": 142.0,
+      "saturated_fat_g": 3.13,
+      "potassium_mg": 138.0,
+      "calcium_mg": 56.0,
+      "iron_mg": 1.75,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 large",
+      "grams": 50.0,
+      "nutrients": {
+        "calories_kcal": 71.5,
+        "protein_g": 6.3,
+        "carbs_g": 0.4,
+        "fat_g": 4.8,
+        "fiber_g": 0.0,
+        "sugar_g": 0.2,
+        "sodium_mg": 71.0,
+        "saturated_fat_g": 1.6,
+        "potassium_mg": 69.0,
+        "calcium_mg": 28.0,
+        "iron_mg": 0.9,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+  },
+  {
+    "name": "Egg white",
+    "slug": "egg-white",
+    "fdc_id": 172183,
+    "usda_description": "Egg, white, raw, fresh",
+    "usda_category": "Dairy and Egg Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "breakfast",
+      "vegetarian",
+      "lean"
+    ],
+    "aliases": [
+      "egg whites"
+    ],
+    "per_100g": {
+      "calories_kcal": 52.0,
+      "protein_g": 10.9,
+      "carbs_g": 0.73,
+      "fat_g": 0.17,
+      "fiber_g": 0.0,
+      "sugar_g": 0.71,
+      "sodium_mg": 166.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 163.0,
+      "calcium_mg": 7.0,
+      "iron_mg": 0.08,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 large",
+      "grams": 33.0,
+      "nutrients": {
+        "calories_kcal": 17.2,
+        "protein_g": 3.6,
+        "carbs_g": 0.2,
+        "fat_g": 0.1,
+        "fiber_g": 0.0,
+        "sugar_g": 0.2,
+        "sodium_mg": 54.8,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 53.8,
+        "calcium_mg": 2.3,
+        "iron_mg": 0.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172183/nutrients"
+  },
+  {
+    "name": "Chicken breast (roasted)",
+    "slug": "chicken-breast",
+    "fdc_id": 171477,
+    "usda_description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "usda_category": "Poultry Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "lean",
+      "post_workout"
+    ],
+    "aliases": [
+      "chicken",
+      "chicken breast",
+      "grilled chicken"
+    ],
+    "per_100g": {
+      "calories_kcal": 165.0,
+      "protein_g": 31.0,
+      "carbs_g": 0.0,
+      "fat_g": 3.57,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 74.0,
+      "saturated_fat_g": 1.01,
+      "potassium_mg": 256.0,
+      "calcium_mg": 15.0,
+      "iron_mg": 1.04,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "0.5 breast, bone and skin removed",
+      "grams": 86.0,
+      "nutrients": {
+        "calories_kcal": 141.9,
+        "protein_g": 26.7,
+        "carbs_g": 0.0,
+        "fat_g": 3.1,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 63.6,
+        "saturated_fat_g": 0.9,
+        "potassium_mg": 220.2,
+        "calcium_mg": 12.9,
+        "iron_mg": 0.9,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171477/nutrients"
+  },
+  {
+    "name": "Chicken thigh (roasted)",
+    "slug": "chicken-thigh",
+    "fdc_id": 172388,
+    "usda_description": "Chicken, broilers or fryers, thigh, meat only, cooked, roasted",
+    "usda_category": "Poultry Products",
+    "group": "protein",
+    "fitbot_tags": [],
+    "aliases": [
+      "chicken thigh"
+    ],
+    "per_100g": {
+      "calories_kcal": 179.0,
+      "protein_g": 24.8,
+      "carbs_g": 0.0,
+      "fat_g": 8.15,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 106.0,
+      "saturated_fat_g": 2.31,
+      "potassium_mg": 269.0,
+      "calcium_mg": 9.0,
+      "iron_mg": 1.13,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 thigh without skin",
+      "grams": 116.0,
+      "nutrients": {
+        "calories_kcal": 207.6,
+        "protein_g": 28.8,
+        "carbs_g": 0.0,
+        "fat_g": 9.5,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 123.0,
+        "saturated_fat_g": 2.7,
+        "potassium_mg": 312.0,
+        "calcium_mg": 10.4,
+        "iron_mg": 1.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172388/nutrients"
+  },
+  {
+    "name": "Ground turkey (cooked)",
+    "slug": "ground-turkey",
+    "fdc_id": 171506,
+    "usda_description": "Turkey, Ground, cooked",
+    "usda_category": "Poultry Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "lean"
+    ],
+    "aliases": [
+      "turkey",
+      "ground turkey"
+    ],
+    "per_100g": {
+      "calories_kcal": 203.0,
+      "protein_g": 27.4,
+      "carbs_g": 0.0,
+      "fat_g": 10.4,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 78.0,
+      "saturated_fat_g": 2.67,
+      "potassium_mg": 294.0,
+      "calcium_mg": 28.0,
+      "iron_mg": 1.52,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "3 oz",
+      "grams": 85.0,
+      "nutrients": {
+        "calories_kcal": 172.6,
+        "protein_g": 23.3,
+        "carbs_g": 0.0,
+        "fat_g": 8.8,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 66.3,
+        "saturated_fat_g": 2.3,
+        "potassium_mg": 249.9,
+        "calcium_mg": 23.8,
+        "iron_mg": 1.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171506/nutrients"
+  },
+  {
+    "name": "Lean ground beef 90% (cooked)",
+    "slug": "lean-ground-beef-90%",
+    "fdc_id": 171794,
+    "usda_description": "Beef, ground, 90% lean meat / 10% fat, crumbles, cooked, pan-browned",
+    "usda_category": "Beef Products",
+    "group": "protein",
+    "fitbot_tags": [],
+    "aliases": [
+      "beef",
+      "ground beef",
+      "mince"
+    ],
+    "per_100g": {
+      "calories_kcal": 230.0,
+      "protein_g": 28.4,
+      "carbs_g": 0.0,
+      "fat_g": 12.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 87.0,
+      "saturated_fat_g": 4.71,
+      "potassium_mg": 433.0,
+      "calcium_mg": 16.0,
+      "iron_mg": 3.08,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "3 oz",
+      "grams": 85.0,
+      "nutrients": {
+        "calories_kcal": 195.5,
+        "protein_g": 24.1,
+        "carbs_g": 0.0,
+        "fat_g": 10.2,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 74.0,
+        "saturated_fat_g": 4.0,
+        "potassium_mg": 368.1,
+        "calcium_mg": 13.6,
+        "iron_mg": 2.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171794/nutrients"
+  },
+  {
+    "name": "Top sirloin steak (lean, cooked)",
+    "slug": "top-sirloin-steak",
+    "fdc_id": 168634,
+    "usda_description": "Beef, top sirloin, steak, separable lean only, trimmed to 0\" fat, all grades, cooked, broiled",
+    "usda_category": "Beef Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "lean"
+    ],
+    "aliases": [
+      "steak",
+      "sirloin",
+      "red meat"
+    ],
+    "per_100g": {
+      "calories_kcal": 183.0,
+      "protein_g": 30.6,
+      "carbs_g": 0.0,
+      "fat_g": 5.79,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 64.0,
+      "saturated_fat_g": 2.2,
+      "potassium_mg": 393.0,
+      "calcium_mg": 20.0,
+      "iron_mg": 1.96,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "3 oz",
+      "grams": 85.0,
+      "nutrients": {
+        "calories_kcal": 155.6,
+        "protein_g": 26.0,
+        "carbs_g": 0.0,
+        "fat_g": 4.9,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 54.4,
+        "saturated_fat_g": 1.9,
+        "potassium_mg": 334.1,
+        "calcium_mg": 17.0,
+        "iron_mg": 1.7,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168634/nutrients"
+  },
+  {
+    "name": "Pork tenderloin (roasted)",
+    "slug": "pork-tenderloin",
+    "fdc_id": 168250,
+    "usda_description": "Pork, fresh, loin, tenderloin, separable lean only, cooked, roasted",
+    "usda_category": "Pork Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "lean"
+    ],
+    "aliases": [
+      "pork"
+    ],
+    "per_100g": {
+      "calories_kcal": 143.0,
+      "protein_g": 26.2,
+      "carbs_g": 0.0,
+      "fat_g": 3.51,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 57.0,
+      "saturated_fat_g": 1.2,
+      "potassium_mg": 421.0,
+      "calcium_mg": 6.0,
+      "iron_mg": 1.15,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "3 oz",
+      "grams": 85.0,
+      "nutrients": {
+        "calories_kcal": 121.5,
+        "protein_g": 22.3,
+        "carbs_g": 0.0,
+        "fat_g": 3.0,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 48.5,
+        "saturated_fat_g": 1.0,
+        "potassium_mg": 357.9,
+        "calcium_mg": 5.1,
+        "iron_mg": 1.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168250/nutrients"
+  },
+  {
+    "name": "Salmon (Atlantic, farmed, cooked)",
+    "slug": "salmon",
+    "fdc_id": 175168,
+    "usda_description": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+    "usda_category": "Finfish and Shellfish Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "healthy_fats",
+      "omega3"
+    ],
+    "aliases": [
+      "salmon",
+      "fish"
+    ],
+    "per_100g": {
+      "calories_kcal": 206.0,
+      "protein_g": 22.1,
+      "carbs_g": 0.0,
+      "fat_g": 12.4,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 61.0,
+      "saturated_fat_g": 2.4,
+      "potassium_mg": 384.0,
+      "calcium_mg": 15.0,
+      "iron_mg": 0.34,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "0.5 fillet",
+      "grams": 178.0,
+      "nutrients": {
+        "calories_kcal": 366.7,
+        "protein_g": 39.3,
+        "carbs_g": 0.0,
+        "fat_g": 22.1,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 108.6,
+        "saturated_fat_g": 4.3,
+        "potassium_mg": 683.5,
+        "calcium_mg": 26.7,
+        "iron_mg": 0.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/175168/nutrients"
+  },
+  {
+    "name": "Tuna (light, canned in water)",
+    "slug": "tuna",
+    "fdc_id": 171986,
+    "usda_description": "Fish, tuna, light, canned in water, without salt, drained solids",
+    "usda_category": "Finfish and Shellfish Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "lean"
+    ],
+    "aliases": [
+      "tuna",
+      "canned tuna"
+    ],
+    "per_100g": {
+      "calories_kcal": 116.0,
+      "protein_g": 25.5,
+      "carbs_g": 0.0,
+      "fat_g": 0.82,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 50.0,
+      "saturated_fat_g": 0.23,
+      "potassium_mg": 237.0,
+      "calcium_mg": 11.0,
+      "iron_mg": 1.53,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 can",
+      "grams": 165.0,
+      "nutrients": {
+        "calories_kcal": 191.4,
+        "protein_g": 42.1,
+        "carbs_g": 0.0,
+        "fat_g": 1.4,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 82.5,
+        "saturated_fat_g": 0.4,
+        "potassium_mg": 391.1,
+        "calcium_mg": 18.1,
+        "iron_mg": 2.5,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171986/nutrients"
+  },
+  {
+    "name": "Cod (Atlantic, cooked)",
+    "slug": "cod",
+    "fdc_id": 171956,
+    "usda_description": "Fish, cod, Atlantic, cooked, dry heat",
+    "usda_category": "Finfish and Shellfish Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "lean"
+    ],
+    "aliases": [
+      "cod",
+      "white fish"
+    ],
+    "per_100g": {
+      "calories_kcal": 105.0,
+      "protein_g": 22.8,
+      "carbs_g": 0.0,
+      "fat_g": 0.86,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 78.0,
+      "saturated_fat_g": 0.17,
+      "potassium_mg": 244.0,
+      "calcium_mg": 14.0,
+      "iron_mg": 0.49,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 fillet",
+      "grams": 180.0,
+      "nutrients": {
+        "calories_kcal": 189.0,
+        "protein_g": 41.0,
+        "carbs_g": 0.0,
+        "fat_g": 1.5,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 140.4,
+        "saturated_fat_g": 0.3,
+        "potassium_mg": 439.2,
+        "calcium_mg": 25.2,
+        "iron_mg": 0.9,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171956/nutrients"
+  },
+  {
+    "name": "Tilapia (cooked)",
+    "slug": "tilapia",
+    "fdc_id": 175177,
+    "usda_description": "Fish, tilapia, cooked, dry heat",
+    "usda_category": "Finfish and Shellfish Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "lean"
+    ],
+    "aliases": [
+      "tilapia"
+    ],
+    "per_100g": {
+      "calories_kcal": 128.0,
+      "protein_g": 26.2,
+      "carbs_g": 0.0,
+      "fat_g": 2.65,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 56.0,
+      "saturated_fat_g": 0.94,
+      "potassium_mg": 380.0,
+      "calcium_mg": 14.0,
+      "iron_mg": 0.69,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 fillet",
+      "grams": 87.0,
+      "nutrients": {
+        "calories_kcal": 111.4,
+        "protein_g": 22.8,
+        "carbs_g": 0.0,
+        "fat_g": 2.3,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 48.7,
+        "saturated_fat_g": 0.8,
+        "potassium_mg": 330.6,
+        "calcium_mg": 12.2,
+        "iron_mg": 0.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/175177/nutrients"
+  },
+  {
+    "name": "Sardines (canned in oil)",
+    "slug": "sardines",
+    "fdc_id": 175139,
+    "usda_description": "Fish, sardine, Atlantic, canned in oil, drained solids with bone",
+    "usda_category": "Finfish and Shellfish Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "omega3"
+    ],
+    "aliases": [
+      "sardines",
+      "sardine"
+    ],
+    "per_100g": {
+      "calories_kcal": 208.0,
+      "protein_g": 24.6,
+      "carbs_g": 0.0,
+      "fat_g": 11.4,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 307.0,
+      "saturated_fat_g": 1.53,
+      "potassium_mg": 397.0,
+      "calcium_mg": 382.0,
+      "iron_mg": 2.92,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 can (3.75 oz)",
+      "grams": 92.0,
+      "nutrients": {
+        "calories_kcal": 191.4,
+        "protein_g": 22.6,
+        "carbs_g": 0.0,
+        "fat_g": 10.5,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 282.4,
+        "saturated_fat_g": 1.4,
+        "potassium_mg": 365.2,
+        "calcium_mg": 351.4,
+        "iron_mg": 2.7,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/175139/nutrients"
+  },
+  {
+    "name": "Shrimp (cooked)",
+    "slug": "shrimp",
+    "fdc_id": 171971,
+    "usda_description": "Crustaceans, shrimp, mixed species, cooked, moist heat (may contain additives to retain moisture)",
+    "usda_category": "Finfish and Shellfish Products",
+    "group": "protein",
+    "fitbot_tags": [
+      "lean"
+    ],
+    "aliases": [
+      "shrimp",
+      "prawns"
+    ],
+    "per_100g": {
+      "calories_kcal": 119.0,
+      "protein_g": 22.8,
+      "carbs_g": 1.52,
+      "fat_g": 1.7,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 947.0,
+      "saturated_fat_g": 0.52,
+      "potassium_mg": 170.0,
+      "calcium_mg": 91.0,
+      "iron_mg": 0.32,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "3 oz",
+      "grams": 85.0,
+      "nutrients": {
+        "calories_kcal": 101.2,
+        "protein_g": 19.4,
+        "carbs_g": 1.3,
+        "fat_g": 1.4,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 805.0,
+        "saturated_fat_g": 0.4,
+        "potassium_mg": 144.5,
+        "calcium_mg": 77.3,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "High sodium"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171971/nutrients"
+  },
+  {
+    "name": "Whey protein powder",
+    "slug": "whey-protein-powder",
+    "fdc_id": 173180,
+    "usda_description": "Beverages, Protein powder whey based",
+    "usda_category": "Beverages",
+    "group": "protein",
+    "fitbot_tags": [
+      "post_workout",
+      "supplement"
+    ],
+    "aliases": [
+      "whey",
+      "protein powder",
+      "protein shake"
+    ],
+    "per_100g": {
+      "calories_kcal": 352.0,
+      "protein_g": 78.1,
+      "carbs_g": 6.25,
+      "fat_g": 1.56,
+      "fiber_g": 3.1,
+      "sugar_g": 0.0,
+      "sodium_mg": 156.0,
+      "saturated_fat_g": 0.78,
+      "potassium_mg": 500.0,
+      "calcium_mg": 469.0,
+      "iron_mg": 1.13,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "0.33 cup",
+      "grams": 32.0,
+      "nutrients": {
+        "calories_kcal": 112.6,
+        "protein_g": 25.0,
+        "carbs_g": 2.0,
+        "fat_g": 0.5,
+        "fiber_g": 1.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 49.9,
+        "saturated_fat_g": 0.2,
+        "potassium_mg": 160.0,
+        "calcium_mg": 150.1,
+        "iron_mg": 0.4,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173180/nutrients"
+  },
+  {
+    "name": "Tofu (firm)",
+    "slug": "tofu",
+    "fdc_id": 172448,
+    "usda_description": "Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)",
+    "usda_category": "Legumes and Legume Products",
+    "group": "plant_protein",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "tofu"
+    ],
+    "per_100g": {
+      "calories_kcal": 78.0,
+      "protein_g": 9.04,
+      "carbs_g": 2.85,
+      "fat_g": 4.17,
+      "fiber_g": 0.9,
+      "sugar_g": 0.6,
+      "sodium_mg": 12.0,
+      "saturated_fat_g": 0.79,
+      "potassium_mg": 148.0,
+      "calcium_mg": 201.0,
+      "iron_mg": 1.61,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "0.5 cup",
+      "grams": 126.0,
+      "nutrients": {
+        "calories_kcal": 98.3,
+        "protein_g": 11.4,
+        "carbs_g": 3.6,
+        "fat_g": 5.3,
+        "fiber_g": 1.1,
+        "sugar_g": 0.8,
+        "sodium_mg": 15.1,
+        "saturated_fat_g": 1.0,
+        "potassium_mg": 186.5,
+        "calcium_mg": 253.3,
+        "iron_mg": 2.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172448/nutrients"
+  },
+  {
+    "name": "Tempeh",
+    "slug": "tempeh",
+    "fdc_id": 174272,
+    "usda_description": "Tempeh",
+    "usda_category": "Legumes and Legume Products",
+    "group": "plant_protein",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "tempeh"
+    ],
+    "per_100g": {
+      "calories_kcal": 192.0,
+      "protein_g": 20.3,
+      "carbs_g": 7.64,
+      "fat_g": 10.8,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": 9.0,
+      "saturated_fat_g": 2.54,
+      "potassium_mg": 412.0,
+      "calcium_mg": 111.0,
+      "iron_mg": 2.7,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 166.0,
+      "nutrients": {
+        "calories_kcal": 318.7,
+        "protein_g": 33.7,
+        "carbs_g": 12.7,
+        "fat_g": 17.9,
+        "fiber_g": null,
+        "sugar_g": null,
+        "sodium_mg": 14.9,
+        "saturated_fat_g": 4.2,
+        "potassium_mg": 683.9,
+        "calcium_mg": 184.3,
+        "iron_mg": 4.5,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/174272/nutrients"
+  },
+  {
+    "name": "Lentils (boiled)",
+    "slug": "lentils",
+    "fdc_id": 172421,
+    "usda_description": "Lentils, mature seeds, cooked, boiled, without salt",
+    "usda_category": "Legumes and Legume Products",
+    "group": "plant_protein",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "lentils",
+      "dal",
+      "daal"
+    ],
+    "per_100g": {
+      "calories_kcal": 116.0,
+      "protein_g": 9.02,
+      "carbs_g": 20.1,
+      "fat_g": 0.38,
+      "fiber_g": 7.9,
+      "sugar_g": 1.8,
+      "sodium_mg": 2.0,
+      "saturated_fat_g": 0.05,
+      "potassium_mg": 369.0,
+      "calcium_mg": 19.0,
+      "iron_mg": 3.33,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 198.0,
+      "nutrients": {
+        "calories_kcal": 229.7,
+        "protein_g": 17.9,
+        "carbs_g": 39.8,
+        "fat_g": 0.8,
+        "fiber_g": 15.6,
+        "sugar_g": 3.6,
+        "sodium_mg": 4.0,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 730.6,
+        "calcium_mg": 37.6,
+        "iron_mg": 6.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "High fiber"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172421/nutrients"
+  },
+  {
+    "name": "Chickpeas (boiled)",
+    "slug": "chickpeas",
+    "fdc_id": 173757,
+    "usda_description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+    "usda_category": "Legumes and Legume Products",
+    "group": "plant_protein",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "chickpeas",
+      "garbanzo beans",
+      "chana"
+    ],
+    "per_100g": {
+      "calories_kcal": 164.0,
+      "protein_g": 8.86,
+      "carbs_g": 27.4,
+      "fat_g": 2.59,
+      "fiber_g": 7.6,
+      "sugar_g": 4.8,
+      "sodium_mg": 7.0,
+      "saturated_fat_g": 0.27,
+      "potassium_mg": 291.0,
+      "calcium_mg": 49.0,
+      "iron_mg": 2.89,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 164.0,
+      "nutrients": {
+        "calories_kcal": 269.0,
+        "protein_g": 14.5,
+        "carbs_g": 44.9,
+        "fat_g": 4.2,
+        "fiber_g": 12.5,
+        "sugar_g": 7.9,
+        "sodium_mg": 11.5,
+        "saturated_fat_g": 0.4,
+        "potassium_mg": 477.2,
+        "calcium_mg": 80.4,
+        "iron_mg": 4.7,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "High fiber"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173757/nutrients"
+  },
+  {
+    "name": "Black beans (boiled)",
+    "slug": "black-beans",
+    "fdc_id": 173735,
+    "usda_description": "Beans, black, mature seeds, cooked, boiled, without salt",
+    "usda_category": "Legumes and Legume Products",
+    "group": "plant_protein",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "black beans",
+      "beans"
+    ],
+    "per_100g": {
+      "calories_kcal": 132.0,
+      "protein_g": 8.86,
+      "carbs_g": 23.7,
+      "fat_g": 0.54,
+      "fiber_g": 8.7,
+      "sugar_g": 0.32,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.14,
+      "potassium_mg": 355.0,
+      "calcium_mg": 27.0,
+      "iron_mg": 2.1,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 172.0,
+      "nutrients": {
+        "calories_kcal": 227.0,
+        "protein_g": 15.2,
+        "carbs_g": 40.8,
+        "fat_g": 0.9,
+        "fiber_g": 15.0,
+        "sugar_g": 0.6,
+        "sodium_mg": 1.7,
+        "saturated_fat_g": 0.2,
+        "potassium_mg": 610.6,
+        "calcium_mg": 46.4,
+        "iron_mg": 3.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "High fiber"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173735/nutrients"
+  },
+  {
+    "name": "Kidney beans (boiled)",
+    "slug": "kidney-beans",
+    "fdc_id": 173740,
+    "usda_description": "Beans, kidney, all types, mature seeds, cooked, boiled, without salt",
+    "usda_category": "Legumes and Legume Products",
+    "group": "plant_protein",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "kidney beans",
+      "rajma"
+    ],
+    "per_100g": {
+      "calories_kcal": 127.0,
+      "protein_g": 8.67,
+      "carbs_g": 22.8,
+      "fat_g": 0.5,
+      "fiber_g": 6.4,
+      "sugar_g": 0.32,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.07,
+      "potassium_mg": 405.0,
+      "calcium_mg": 35.0,
+      "iron_mg": 2.22,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 177.0,
+      "nutrients": {
+        "calories_kcal": 224.8,
+        "protein_g": 15.3,
+        "carbs_g": 40.4,
+        "fat_g": 0.9,
+        "fiber_g": 11.3,
+        "sugar_g": 0.6,
+        "sodium_mg": 1.8,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 716.9,
+        "calcium_mg": 62.0,
+        "iron_mg": 3.9,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "High fiber"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173740/nutrients"
+  },
+  {
+    "name": "Pinto beans (boiled)",
+    "slug": "pinto-beans",
+    "fdc_id": 175200,
+    "usda_description": "Beans, pinto, mature seeds, cooked, boiled, without salt",
+    "usda_category": "Legumes and Legume Products",
+    "group": "plant_protein",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "pinto beans"
+    ],
+    "per_100g": {
+      "calories_kcal": 143.0,
+      "protein_g": 9.01,
+      "carbs_g": 26.2,
+      "fat_g": 0.65,
+      "fiber_g": 9.0,
+      "sugar_g": 0.34,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.14,
+      "potassium_mg": 436.0,
+      "calcium_mg": 46.0,
+      "iron_mg": 2.09,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 171.0,
+      "nutrients": {
+        "calories_kcal": 244.5,
+        "protein_g": 15.4,
+        "carbs_g": 44.8,
+        "fat_g": 1.1,
+        "fiber_g": 15.4,
+        "sugar_g": 0.6,
+        "sodium_mg": 1.7,
+        "saturated_fat_g": 0.2,
+        "potassium_mg": 745.6,
+        "calcium_mg": 78.7,
+        "iron_mg": 3.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "High fiber"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/175200/nutrients"
+  },
+  {
+    "name": "Edamame (prepared)",
+    "slug": "edamame",
+    "fdc_id": 168411,
+    "usda_description": "Edamame, frozen, prepared",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "plant_protein",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "edamame",
+      "soybeans"
+    ],
+    "per_100g": {
+      "calories_kcal": 121.0,
+      "protein_g": 11.9,
+      "carbs_g": 8.91,
+      "fat_g": 5.2,
+      "fiber_g": 5.2,
+      "sugar_g": 2.18,
+      "sodium_mg": 6.0,
+      "saturated_fat_g": 0.62,
+      "potassium_mg": 436.0,
+      "calcium_mg": 63.0,
+      "iron_mg": 2.27,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 155.0,
+      "nutrients": {
+        "calories_kcal": 187.6,
+        "protein_g": 18.4,
+        "carbs_g": 13.8,
+        "fat_g": 8.1,
+        "fiber_g": 8.1,
+        "sugar_g": 3.4,
+        "sodium_mg": 9.3,
+        "saturated_fat_g": 1.0,
+        "potassium_mg": 675.8,
+        "calcium_mg": 97.7,
+        "iron_mg": 3.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168411/nutrients"
+  },
+  {
+    "name": "Hummus",
+    "slug": "hummus",
+    "fdc_id": 174289,
+    "usda_description": "Hummus, commercial",
+    "usda_category": "Legumes and Legume Products",
+    "group": "plant_protein",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "snack"
+    ],
+    "aliases": [
+      "hummus"
+    ],
+    "per_100g": {
+      "calories_kcal": 237.0,
+      "protein_g": 7.78,
+      "carbs_g": 15.0,
+      "fat_g": 17.8,
+      "fiber_g": 5.5,
+      "sugar_g": 0.62,
+      "sodium_mg": 426.0,
+      "saturated_fat_g": 2.56,
+      "potassium_mg": 312.0,
+      "calcium_mg": 47.0,
+      "iron_mg": 2.54,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 tbsp",
+      "grams": 15.0,
+      "nutrients": {
+        "calories_kcal": 35.5,
+        "protein_g": 1.2,
+        "carbs_g": 2.2,
+        "fat_g": 2.7,
+        "fiber_g": 0.8,
+        "sugar_g": 0.1,
+        "sodium_mg": 63.9,
+        "saturated_fat_g": 0.4,
+        "potassium_mg": 46.8,
+        "calcium_mg": 7.0,
+        "iron_mg": 0.4,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/174289/nutrients"
+  },
+  {
+    "name": "Greek yogurt (plain, nonfat)",
+    "slug": "greek-yogurt",
+    "fdc_id": 170894,
+    "usda_description": "Yogurt, Greek, plain, nonfat (Includes foods for USDA's Food Distribution Program)",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian",
+      "breakfast",
+      "snack",
+      "post_workout"
+    ],
+    "aliases": [
+      "greek yogurt",
+      "yogurt",
+      "curd"
+    ],
+    "per_100g": {
+      "calories_kcal": 59.0,
+      "protein_g": 10.2,
+      "carbs_g": 3.6,
+      "fat_g": 0.39,
+      "fiber_g": 0.0,
+      "sugar_g": 3.24,
+      "sodium_mg": 36.0,
+      "saturated_fat_g": 0.12,
+      "potassium_mg": 141.0,
+      "calcium_mg": 110.0,
+      "iron_mg": 0.07,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 container",
+      "grams": 170.0,
+      "nutrients": {
+        "calories_kcal": 100.3,
+        "protein_g": 17.3,
+        "carbs_g": 6.1,
+        "fat_g": 0.7,
+        "fiber_g": 0.0,
+        "sugar_g": 5.5,
+        "sodium_mg": 61.2,
+        "saturated_fat_g": 0.2,
+        "potassium_mg": 239.7,
+        "calcium_mg": 187.0,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170894/nutrients"
+  },
+  {
+    "name": "Greek yogurt (plain, whole milk)",
+    "slug": "greek-yogurt",
+    "fdc_id": 171304,
+    "usda_description": "Yogurt, Greek, plain, whole milk",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian",
+      "breakfast"
+    ],
+    "aliases": [
+      "full fat greek yogurt"
+    ],
+    "per_100g": {
+      "calories_kcal": 97.0,
+      "protein_g": 9.0,
+      "carbs_g": 3.98,
+      "fat_g": 5.0,
+      "fiber_g": 0.0,
+      "sugar_g": 4.0,
+      "sodium_mg": 35.0,
+      "saturated_fat_g": 2.4,
+      "potassium_mg": 141.0,
+      "calcium_mg": 100.0,
+      "iron_mg": 0.0,
+      "caffeine_mg": 0.0
+    },
+    "portion": null,
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171304/nutrients"
+  },
+  {
+    "name": "Yogurt (plain, low fat)",
+    "slug": "yogurt",
+    "fdc_id": 170886,
+    "usda_description": "Yogurt, plain, low fat",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian",
+      "breakfast",
+      "snack"
+    ],
+    "aliases": [
+      "plain yogurt",
+      "low fat yogurt"
+    ],
+    "per_100g": {
+      "calories_kcal": 63.0,
+      "protein_g": 5.25,
+      "carbs_g": 7.04,
+      "fat_g": 1.55,
+      "fiber_g": 0.0,
+      "sugar_g": 7.04,
+      "sodium_mg": 70.0,
+      "saturated_fat_g": 1.0,
+      "potassium_mg": 234.0,
+      "calcium_mg": 183.0,
+      "iron_mg": 0.08,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup (8 fl oz)",
+      "grams": 245.0,
+      "nutrients": {
+        "calories_kcal": 154.3,
+        "protein_g": 12.9,
+        "carbs_g": 17.2,
+        "fat_g": 3.8,
+        "fiber_g": 0.0,
+        "sugar_g": 17.2,
+        "sodium_mg": 171.5,
+        "saturated_fat_g": 2.5,
+        "potassium_mg": 573.3,
+        "calcium_mg": 448.4,
+        "iron_mg": 0.2,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170886/nutrients"
+  },
+  {
+    "name": "Milk (2% reduced fat)",
+    "slug": "milk",
+    "fdc_id": 171267,
+    "usda_description": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian",
+      "breakfast"
+    ],
+    "aliases": [
+      "milk",
+      "2% milk"
+    ],
+    "per_100g": {
+      "calories_kcal": 50.0,
+      "protein_g": 3.3,
+      "carbs_g": 4.8,
+      "fat_g": 1.98,
+      "fiber_g": 0.0,
+      "sugar_g": 5.06,
+      "sodium_mg": 47.0,
+      "saturated_fat_g": 1.26,
+      "potassium_mg": 140.0,
+      "calcium_mg": 120.0,
+      "iron_mg": 0.02,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 244.0,
+      "nutrients": {
+        "calories_kcal": 122.0,
+        "protein_g": 8.1,
+        "carbs_g": 11.7,
+        "fat_g": 4.8,
+        "fiber_g": 0.0,
+        "sugar_g": 12.3,
+        "sodium_mg": 114.7,
+        "saturated_fat_g": 3.1,
+        "potassium_mg": 341.6,
+        "calcium_mg": 292.8,
+        "iron_mg": 0.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171267/nutrients"
+  },
+  {
+    "name": "Milk (whole)",
+    "slug": "milk",
+    "fdc_id": 171265,
+    "usda_description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian"
+    ],
+    "aliases": [
+      "whole milk",
+      "full cream milk"
+    ],
+    "per_100g": {
+      "calories_kcal": 61.0,
+      "protein_g": 3.15,
+      "carbs_g": 4.8,
+      "fat_g": 3.25,
+      "fiber_g": 0.0,
+      "sugar_g": 5.05,
+      "sodium_mg": 43.0,
+      "saturated_fat_g": 1.86,
+      "potassium_mg": 132.0,
+      "calcium_mg": 113.0,
+      "iron_mg": 0.03,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 244.0,
+      "nutrients": {
+        "calories_kcal": 148.8,
+        "protein_g": 7.7,
+        "carbs_g": 11.7,
+        "fat_g": 7.9,
+        "fiber_g": 0.0,
+        "sugar_g": 12.3,
+        "sodium_mg": 104.9,
+        "saturated_fat_g": 4.5,
+        "potassium_mg": 322.1,
+        "calcium_mg": 275.7,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients"
+  },
+  {
+    "name": "Milk (skim / nonfat)",
+    "slug": "milk",
+    "fdc_id": 171269,
+    "usda_description": "Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian",
+      "lean"
+    ],
+    "aliases": [
+      "skim milk",
+      "nonfat milk"
+    ],
+    "per_100g": {
+      "calories_kcal": 34.0,
+      "protein_g": 3.37,
+      "carbs_g": 4.96,
+      "fat_g": 0.08,
+      "fiber_g": 0.0,
+      "sugar_g": 5.09,
+      "sodium_mg": 42.0,
+      "saturated_fat_g": 0.06,
+      "potassium_mg": 156.0,
+      "calcium_mg": 122.0,
+      "iron_mg": 0.03,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 245.0,
+      "nutrients": {
+        "calories_kcal": 83.3,
+        "protein_g": 8.3,
+        "carbs_g": 12.2,
+        "fat_g": 0.2,
+        "fiber_g": 0.0,
+        "sugar_g": 12.5,
+        "sodium_mg": 102.9,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 382.2,
+        "calcium_mg": 298.9,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171269/nutrients"
+  },
+  {
+    "name": "Chocolate milk (low fat)",
+    "slug": "chocolate-milk",
+    "fdc_id": 170881,
+    "usda_description": "Milk, chocolate, lowfat, with added vitamin A and vitamin D",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian",
+      "post_workout"
+    ],
+    "aliases": [
+      "chocolate milk"
+    ],
+    "per_100g": {
+      "calories_kcal": 64.0,
+      "protein_g": 3.46,
+      "carbs_g": 10.2,
+      "fat_g": 1.11,
+      "fiber_g": 0.1,
+      "sugar_g": 9.94,
+      "sodium_mg": 65.0,
+      "saturated_fat_g": 0.62,
+      "potassium_mg": 172.0,
+      "calcium_mg": 129.0,
+      "iron_mg": 0.23,
+      "caffeine_mg": 1.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 250.0,
+      "nutrients": {
+        "calories_kcal": 160.0,
+        "protein_g": 8.7,
+        "carbs_g": 25.5,
+        "fat_g": 2.8,
+        "fiber_g": 0.2,
+        "sugar_g": 24.9,
+        "sodium_mg": 162.5,
+        "saturated_fat_g": 1.6,
+        "potassium_mg": 430.0,
+        "calcium_mg": 322.5,
+        "iron_mg": 0.6,
+        "caffeine_mg": 2.5
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170881/nutrients"
+  },
+  {
+    "name": "Cottage cheese (low fat, 2%)",
+    "slug": "cottage-cheese",
+    "fdc_id": 172182,
+    "usda_description": "Cheese, cottage, lowfat, 2% milkfat",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian",
+      "snack"
+    ],
+    "aliases": [
+      "cottage cheese"
+    ],
+    "per_100g": {
+      "calories_kcal": 81.0,
+      "protein_g": 10.4,
+      "carbs_g": 4.76,
+      "fat_g": 2.27,
+      "fiber_g": 0.0,
+      "sugar_g": 4.0,
+      "sodium_mg": 308.0,
+      "saturated_fat_g": 1.24,
+      "potassium_mg": 125.0,
+      "calcium_mg": 111.0,
+      "iron_mg": 0.13,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup (not packed)",
+      "grams": 226.0,
+      "nutrients": {
+        "calories_kcal": 183.1,
+        "protein_g": 23.5,
+        "carbs_g": 10.8,
+        "fat_g": 5.1,
+        "fiber_g": 0.0,
+        "sugar_g": 9.0,
+        "sodium_mg": 696.1,
+        "saturated_fat_g": 2.8,
+        "potassium_mg": 282.5,
+        "calcium_mg": 250.9,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172182/nutrients"
+  },
+  {
+    "name": "Cheddar cheese",
+    "slug": "cheddar-cheese",
+    "fdc_id": 173414,
+    "usda_description": "Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian"
+    ],
+    "aliases": [
+      "cheese",
+      "cheddar"
+    ],
+    "per_100g": {
+      "calories_kcal": 403.0,
+      "protein_g": 22.9,
+      "carbs_g": 3.37,
+      "fat_g": 33.3,
+      "fiber_g": 0.0,
+      "sugar_g": 0.48,
+      "sodium_mg": 653.0,
+      "saturated_fat_g": 18.9,
+      "potassium_mg": 76.0,
+      "calcium_mg": 710.0,
+      "iron_mg": 0.14,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 slice (1 oz)",
+      "grams": 28.0,
+      "nutrients": {
+        "calories_kcal": 112.8,
+        "protein_g": 6.4,
+        "carbs_g": 0.9,
+        "fat_g": 9.3,
+        "fiber_g": 0.0,
+        "sugar_g": 0.1,
+        "sodium_mg": 182.8,
+        "saturated_fat_g": 5.3,
+        "potassium_mg": 21.3,
+        "calcium_mg": 198.8,
+        "iron_mg": 0.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "High sodium",
+      "High saturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173414/nutrients"
+  },
+  {
+    "name": "Mozzarella (part skim)",
+    "slug": "mozzarella",
+    "fdc_id": 170847,
+    "usda_description": "Cheese, mozzarella, part skim milk",
+    "usda_category": "Dairy and Egg Products",
+    "group": "dairy",
+    "fitbot_tags": [
+      "vegetarian"
+    ],
+    "aliases": [
+      "mozzarella"
+    ],
+    "per_100g": {
+      "calories_kcal": 254.0,
+      "protein_g": 24.3,
+      "carbs_g": 2.77,
+      "fat_g": 15.9,
+      "fiber_g": 0.0,
+      "sugar_g": 1.13,
+      "sodium_mg": 619.0,
+      "saturated_fat_g": 10.1,
+      "potassium_mg": 84.0,
+      "calcium_mg": 782.0,
+      "iron_mg": 0.22,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 oz",
+      "grams": 28.35,
+      "nutrients": {
+        "calories_kcal": 72.0,
+        "protein_g": 6.9,
+        "carbs_g": 0.8,
+        "fat_g": 4.5,
+        "fiber_g": 0.0,
+        "sugar_g": 0.3,
+        "sodium_mg": 175.5,
+        "saturated_fat_g": 2.9,
+        "potassium_mg": 23.8,
+        "calcium_mg": 221.7,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "High sodium",
+      "High saturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170847/nutrients"
+  },
+  {
+    "name": "Soy milk (original, fortified)",
+    "slug": "soy-milk",
+    "fdc_id": 172456,
+    "usda_description": "Soymilk, original and vanilla, with added calcium, vitamins A and D",
+    "usda_category": "Legumes and Legume Products",
+    "group": "dairy_alternative",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "soy milk",
+      "soymilk"
+    ],
+    "per_100g": {
+      "calories_kcal": 43.0,
+      "protein_g": 2.6,
+      "carbs_g": 4.92,
+      "fat_g": 1.47,
+      "fiber_g": 0.2,
+      "sugar_g": 3.65,
+      "sodium_mg": 47.0,
+      "saturated_fat_g": 0.2,
+      "potassium_mg": 122.0,
+      "calcium_mg": 123.0,
+      "iron_mg": 0.42,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 243.0,
+      "nutrients": {
+        "calories_kcal": 104.5,
+        "protein_g": 6.3,
+        "carbs_g": 12.0,
+        "fat_g": 3.6,
+        "fiber_g": 0.5,
+        "sugar_g": 8.9,
+        "sodium_mg": 114.2,
+        "saturated_fat_g": 0.5,
+        "potassium_mg": 296.5,
+        "calcium_mg": 298.9,
+        "iron_mg": 1.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172456/nutrients"
+  },
+  {
+    "name": "Almond milk (unsweetened)",
+    "slug": "almond-milk",
+    "fdc_id": 174832,
+    "usda_description": "Beverages, almond milk, unsweetened, shelf stable",
+    "usda_category": "Beverages",
+    "group": "dairy_alternative",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "almond milk"
+    ],
+    "per_100g": {
+      "calories_kcal": 15.0,
+      "protein_g": 0.4,
+      "carbs_g": 1.31,
+      "fat_g": 0.96,
+      "fiber_g": 0.2,
+      "sugar_g": 0.81,
+      "sodium_mg": 72.0,
+      "saturated_fat_g": 0.08,
+      "potassium_mg": 67.0,
+      "calcium_mg": 184.0,
+      "iron_mg": 0.28,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 262.0,
+      "nutrients": {
+        "calories_kcal": 39.3,
+        "protein_g": 1.0,
+        "carbs_g": 3.4,
+        "fat_g": 2.5,
+        "fiber_g": 0.5,
+        "sugar_g": 2.1,
+        "sodium_mg": 188.6,
+        "saturated_fat_g": 0.2,
+        "potassium_mg": 175.5,
+        "calcium_mg": 482.1,
+        "iron_mg": 0.7,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/174832/nutrients"
+  },
+  {
+    "name": "Oats (dry)",
+    "slug": "oats",
+    "fdc_id": 169705,
+    "usda_description": "Oats (Includes foods for USDA's Food Distribution Program)",
+    "usda_category": "Cereal Grains and Pasta",
+    "group": "grains",
+    "fitbot_tags": [
+      "breakfast",
+      "high_fiber",
+      "vegetarian",
+      "vegan",
+      "pre_workout"
+    ],
+    "aliases": [
+      "oats",
+      "oatmeal",
+      "porridge",
+      "rolled oats"
+    ],
+    "per_100g": {
+      "calories_kcal": 389.0,
+      "protein_g": 16.9,
+      "carbs_g": 66.3,
+      "fat_g": 6.9,
+      "fiber_g": 10.6,
+      "sugar_g": null,
+      "sodium_mg": 2.0,
+      "saturated_fat_g": 1.22,
+      "potassium_mg": 429.0,
+      "calcium_mg": 54.0,
+      "iron_mg": 4.72,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 156.0,
+      "nutrients": {
+        "calories_kcal": 606.8,
+        "protein_g": 26.4,
+        "carbs_g": 103.4,
+        "fat_g": 10.8,
+        "fiber_g": 16.5,
+        "sugar_g": null,
+        "sodium_mg": 3.1,
+        "saturated_fat_g": 1.9,
+        "potassium_mg": 669.2,
+        "calcium_mg": 84.2,
+        "iron_mg": 7.4,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169705/nutrients"
+  },
+  {
+    "name": "White rice (cooked)",
+    "slug": "white-rice",
+    "fdc_id": 168878,
+    "usda_description": "Rice, white, long-grain, regular, enriched, cooked",
+    "usda_category": "Cereal Grains and Pasta",
+    "group": "grains",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "pre_workout",
+      "post_workout"
+    ],
+    "aliases": [
+      "rice",
+      "white rice"
+    ],
+    "per_100g": {
+      "calories_kcal": 130.0,
+      "protein_g": 2.69,
+      "carbs_g": 28.2,
+      "fat_g": 0.28,
+      "fiber_g": 0.4,
+      "sugar_g": 0.05,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.08,
+      "potassium_mg": 35.0,
+      "calcium_mg": 10.0,
+      "iron_mg": 1.2,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 158.0,
+      "nutrients": {
+        "calories_kcal": 205.4,
+        "protein_g": 4.3,
+        "carbs_g": 44.6,
+        "fat_g": 0.4,
+        "fiber_g": 0.6,
+        "sugar_g": 0.1,
+        "sodium_mg": 1.6,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 55.3,
+        "calcium_mg": 15.8,
+        "iron_mg": 1.9,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168878/nutrients"
+  },
+  {
+    "name": "Brown rice (cooked)",
+    "slug": "brown-rice",
+    "fdc_id": 169704,
+    "usda_description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "usda_category": "Cereal Grains and Pasta",
+    "group": "grains",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "brown rice"
+    ],
+    "per_100g": {
+      "calories_kcal": 123.0,
+      "protein_g": 2.74,
+      "carbs_g": 25.6,
+      "fat_g": 0.97,
+      "fiber_g": 1.6,
+      "sugar_g": 0.24,
+      "sodium_mg": 4.0,
+      "saturated_fat_g": 0.26,
+      "potassium_mg": 86.0,
+      "calcium_mg": 3.0,
+      "iron_mg": 0.56,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 202.0,
+      "nutrients": {
+        "calories_kcal": 248.5,
+        "protein_g": 5.5,
+        "carbs_g": 51.7,
+        "fat_g": 2.0,
+        "fiber_g": 3.2,
+        "sugar_g": 0.5,
+        "sodium_mg": 8.1,
+        "saturated_fat_g": 0.5,
+        "potassium_mg": 173.7,
+        "calcium_mg": 6.1,
+        "iron_mg": 1.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169704/nutrients"
+  },
+  {
+    "name": "Quinoa (cooked)",
+    "slug": "quinoa",
+    "fdc_id": 168917,
+    "usda_description": "Quinoa, cooked",
+    "usda_category": "Cereal Grains and Pasta",
+    "group": "grains",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "quinoa"
+    ],
+    "per_100g": {
+      "calories_kcal": 120.0,
+      "protein_g": 4.4,
+      "carbs_g": 21.3,
+      "fat_g": 1.92,
+      "fiber_g": 2.8,
+      "sugar_g": 0.87,
+      "sodium_mg": 7.0,
+      "saturated_fat_g": 0.23,
+      "potassium_mg": 172.0,
+      "calcium_mg": 17.0,
+      "iron_mg": 1.49,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 185.0,
+      "nutrients": {
+        "calories_kcal": 222.0,
+        "protein_g": 8.1,
+        "carbs_g": 39.4,
+        "fat_g": 3.6,
+        "fiber_g": 5.2,
+        "sugar_g": 1.6,
+        "sodium_mg": 12.9,
+        "saturated_fat_g": 0.4,
+        "potassium_mg": 318.2,
+        "calcium_mg": 31.4,
+        "iron_mg": 2.8,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168917/nutrients"
+  },
+  {
+    "name": "Whole-wheat bread",
+    "slug": "whole-wheat-bread",
+    "fdc_id": 172688,
+    "usda_description": "Bread, whole-wheat, commercially prepared",
+    "usda_category": "Baked Products",
+    "group": "grains",
+    "fitbot_tags": [
+      "vegetarian",
+      "breakfast"
+    ],
+    "aliases": [
+      "whole wheat bread",
+      "brown bread",
+      "wholemeal bread"
+    ],
+    "per_100g": {
+      "calories_kcal": 252.0,
+      "protein_g": 12.4,
+      "carbs_g": 42.7,
+      "fat_g": 3.5,
+      "fiber_g": 6.0,
+      "sugar_g": 4.34,
+      "sodium_mg": 455.0,
+      "saturated_fat_g": 0.72,
+      "potassium_mg": 254.0,
+      "calcium_mg": 161.0,
+      "iron_mg": 2.47,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 slice",
+      "grams": 32.0,
+      "nutrients": {
+        "calories_kcal": 80.6,
+        "protein_g": 4.0,
+        "carbs_g": 13.7,
+        "fat_g": 1.1,
+        "fiber_g": 1.9,
+        "sugar_g": 1.4,
+        "sodium_mg": 145.6,
+        "saturated_fat_g": 0.2,
+        "potassium_mg": 81.3,
+        "calcium_mg": 51.5,
+        "iron_mg": 0.8,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172688/nutrients"
+  },
+  {
+    "name": "White bread",
+    "slug": "white-bread",
+    "fdc_id": 174924,
+    "usda_description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+    "usda_category": "Baked Products",
+    "group": "grains",
+    "fitbot_tags": [
+      "vegetarian"
+    ],
+    "aliases": [
+      "white bread",
+      "bread"
+    ],
+    "per_100g": {
+      "calories_kcal": 266.0,
+      "protein_g": 8.85,
+      "carbs_g": 49.4,
+      "fat_g": 3.33,
+      "fiber_g": 2.7,
+      "sugar_g": 5.67,
+      "sodium_mg": 490.0,
+      "saturated_fat_g": 0.7,
+      "potassium_mg": 126.0,
+      "calcium_mg": 144.0,
+      "iron_mg": 3.61,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 slice",
+      "grams": 29.0,
+      "nutrients": {
+        "calories_kcal": 77.1,
+        "protein_g": 2.6,
+        "carbs_g": 14.3,
+        "fat_g": 1.0,
+        "fiber_g": 0.8,
+        "sugar_g": 1.6,
+        "sodium_mg": 142.1,
+        "saturated_fat_g": 0.2,
+        "potassium_mg": 36.5,
+        "calcium_mg": 41.8,
+        "iron_mg": 1.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/174924/nutrients"
+  },
+  {
+    "name": "Pasta (cooked)",
+    "slug": "pasta",
+    "fdc_id": 169737,
+    "usda_description": "Pasta, cooked, enriched, without added salt",
+    "usda_category": "Cereal Grains and Pasta",
+    "group": "grains",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "pasta",
+      "spaghetti",
+      "noodles"
+    ],
+    "per_100g": {
+      "calories_kcal": 158.0,
+      "protein_g": 5.8,
+      "carbs_g": 30.9,
+      "fat_g": 0.93,
+      "fiber_g": 1.8,
+      "sugar_g": 0.56,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.18,
+      "potassium_mg": 44.0,
+      "calcium_mg": 7.0,
+      "iron_mg": 1.28,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup spaghetti not packed",
+      "grams": 124.0,
+      "nutrients": {
+        "calories_kcal": 195.9,
+        "protein_g": 7.2,
+        "carbs_g": 38.3,
+        "fat_g": 1.2,
+        "fiber_g": 2.2,
+        "sugar_g": 0.7,
+        "sodium_mg": 1.2,
+        "saturated_fat_g": 0.2,
+        "potassium_mg": 54.6,
+        "calcium_mg": 8.7,
+        "iron_mg": 1.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169737/nutrients"
+  },
+  {
+    "name": "Couscous (cooked)",
+    "slug": "couscous",
+    "fdc_id": 169700,
+    "usda_description": "Couscous, cooked",
+    "usda_category": "Cereal Grains and Pasta",
+    "group": "grains",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "couscous"
+    ],
+    "per_100g": {
+      "calories_kcal": 112.0,
+      "protein_g": 3.79,
+      "carbs_g": 23.2,
+      "fat_g": 0.16,
+      "fiber_g": 1.4,
+      "sugar_g": 0.1,
+      "sodium_mg": 5.0,
+      "saturated_fat_g": 0.03,
+      "potassium_mg": 58.0,
+      "calcium_mg": 8.0,
+      "iron_mg": 0.38,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup, cooked",
+      "grams": 157.0,
+      "nutrients": {
+        "calories_kcal": 175.8,
+        "protein_g": 6.0,
+        "carbs_g": 36.4,
+        "fat_g": 0.3,
+        "fiber_g": 2.2,
+        "sugar_g": 0.2,
+        "sodium_mg": 7.8,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 91.1,
+        "calcium_mg": 12.6,
+        "iron_mg": 0.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169700/nutrients"
+  },
+  {
+    "name": "Bagel (plain)",
+    "slug": "bagel",
+    "fdc_id": 175049,
+    "usda_description": "Bagels, plain, enriched, without calcium propionate (includes onion, poppy, sesame)",
+    "usda_category": "Baked Products",
+    "group": "grains",
+    "fitbot_tags": [
+      "vegetarian",
+      "breakfast"
+    ],
+    "aliases": [
+      "bagel"
+    ],
+    "per_100g": {
+      "calories_kcal": 275.0,
+      "protein_g": 10.5,
+      "carbs_g": 53.4,
+      "fat_g": 1.6,
+      "fiber_g": 2.3,
+      "sugar_g": null,
+      "sodium_mg": 534.0,
+      "saturated_fat_g": 0.22,
+      "potassium_mg": 101.0,
+      "calcium_mg": 18.0,
+      "iron_mg": 3.56,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 mini bagel (2-1/2\" dia)",
+      "grams": 26.0,
+      "nutrients": {
+        "calories_kcal": 71.5,
+        "protein_g": 2.7,
+        "carbs_g": 13.9,
+        "fat_g": 0.4,
+        "fiber_g": 0.6,
+        "sugar_g": null,
+        "sodium_mg": 138.8,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 26.3,
+        "calcium_mg": 4.7,
+        "iron_mg": 0.9,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/175049/nutrients"
+  },
+  {
+    "name": "Whole-wheat tortilla",
+    "slug": "whole-wheat-tortilla",
+    "fdc_id": 174081,
+    "usda_description": "Tortillas, ready-to-bake or -fry, whole wheat",
+    "usda_category": "Baked Products",
+    "group": "grains",
+    "fitbot_tags": [
+      "vegetarian"
+    ],
+    "aliases": [
+      "tortilla",
+      "wrap",
+      "roti",
+      "chapati"
+    ],
+    "per_100g": {
+      "calories_kcal": 310.0,
+      "protein_g": 9.76,
+      "carbs_g": 45.9,
+      "fat_g": 9.76,
+      "fiber_g": 9.8,
+      "sugar_g": 2.44,
+      "sodium_mg": 617.0,
+      "saturated_fat_g": 4.88,
+      "potassium_mg": 262.0,
+      "calcium_mg": 244.0,
+      "iron_mg": 2.63,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 tortilla 1 serving",
+      "grams": 41.0,
+      "nutrients": {
+        "calories_kcal": 127.1,
+        "protein_g": 4.0,
+        "carbs_g": 18.8,
+        "fat_g": 4.0,
+        "fiber_g": 4.0,
+        "sugar_g": 1.0,
+        "sodium_mg": 253.0,
+        "saturated_fat_g": 2.0,
+        "potassium_mg": 107.4,
+        "calcium_mg": 100.0,
+        "iron_mg": 1.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber",
+      "High sodium"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/174081/nutrients"
+  },
+  {
+    "name": "Potato (baked, with skin)",
+    "slug": "potato",
+    "fdc_id": 170093,
+    "usda_description": "Potatoes, baked, flesh and skin, without salt",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "starchy_vegetable",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "post_workout"
+    ],
+    "aliases": [
+      "potato",
+      "potatoes",
+      "baked potato"
+    ],
+    "per_100g": {
+      "calories_kcal": 93.0,
+      "protein_g": 2.5,
+      "carbs_g": 21.2,
+      "fat_g": 0.13,
+      "fiber_g": 2.2,
+      "sugar_g": 1.18,
+      "sodium_mg": 10.0,
+      "saturated_fat_g": 0.03,
+      "potassium_mg": 535.0,
+      "calcium_mg": 15.0,
+      "iron_mg": 1.08,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 potato medium",
+      "grams": 173.0,
+      "nutrients": {
+        "calories_kcal": 160.9,
+        "protein_g": 4.3,
+        "carbs_g": 36.7,
+        "fat_g": 0.2,
+        "fiber_g": 3.8,
+        "sugar_g": 2.0,
+        "sodium_mg": 17.3,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 925.5,
+        "calcium_mg": 25.9,
+        "iron_mg": 1.9,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170093/nutrients"
+  },
+  {
+    "name": "Sweet potato (baked)",
+    "slug": "sweet-potato",
+    "fdc_id": 168483,
+    "usda_description": "Sweet potato, cooked, baked in skin, flesh, without salt",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "starchy_vegetable",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "sweet potato",
+      "yam"
+    ],
+    "per_100g": {
+      "calories_kcal": 90.0,
+      "protein_g": 2.01,
+      "carbs_g": 20.7,
+      "fat_g": 0.15,
+      "fiber_g": 3.3,
+      "sugar_g": 6.48,
+      "sodium_mg": 36.0,
+      "saturated_fat_g": 0.05,
+      "potassium_mg": 475.0,
+      "calcium_mg": 38.0,
+      "iron_mg": 0.69,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 medium (2\" dia, 5\" long, raw)",
+      "grams": 114.0,
+      "nutrients": {
+        "calories_kcal": 102.6,
+        "protein_g": 2.3,
+        "carbs_g": 23.6,
+        "fat_g": 0.2,
+        "fiber_g": 3.8,
+        "sugar_g": 7.4,
+        "sodium_mg": 41.0,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 541.5,
+        "calcium_mg": 43.3,
+        "iron_mg": 0.8,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168483/nutrients"
+  },
+  {
+    "name": "Sweet corn (boiled)",
+    "slug": "sweet-corn",
+    "fdc_id": 169999,
+    "usda_description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "starchy_vegetable",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "corn",
+      "sweet corn"
+    ],
+    "per_100g": {
+      "calories_kcal": 96.0,
+      "protein_g": 3.41,
+      "carbs_g": 21.0,
+      "fat_g": 1.5,
+      "fiber_g": 2.4,
+      "sugar_g": 4.54,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.2,
+      "potassium_mg": 218.0,
+      "calcium_mg": 3.0,
+      "iron_mg": 0.45,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup cut",
+      "grams": 149.0,
+      "nutrients": {
+        "calories_kcal": 143.0,
+        "protein_g": 5.1,
+        "carbs_g": 31.3,
+        "fat_g": 2.2,
+        "fiber_g": 3.6,
+        "sugar_g": 6.8,
+        "sodium_mg": 1.5,
+        "saturated_fat_g": 0.3,
+        "potassium_mg": 324.8,
+        "calcium_mg": 4.5,
+        "iron_mg": 0.7,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169999/nutrients"
+  },
+  {
+    "name": "Popcorn (air-popped)",
+    "slug": "popcorn",
+    "fdc_id": 167959,
+    "usda_description": "Snacks, popcorn, air-popped",
+    "usda_category": "Snacks",
+    "group": "snacks",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "snack",
+      "high_fiber"
+    ],
+    "aliases": [
+      "popcorn"
+    ],
+    "per_100g": {
+      "calories_kcal": 387.0,
+      "protein_g": 12.9,
+      "carbs_g": 77.8,
+      "fat_g": 4.54,
+      "fiber_g": 14.5,
+      "sugar_g": 0.87,
+      "sodium_mg": 8.0,
+      "saturated_fat_g": 0.64,
+      "potassium_mg": 329.0,
+      "calcium_mg": 7.0,
+      "iron_mg": 3.19,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 8.0,
+      "nutrients": {
+        "calories_kcal": 31.0,
+        "protein_g": 1.0,
+        "carbs_g": 6.2,
+        "fat_g": 0.4,
+        "fiber_g": 1.2,
+        "sugar_g": 0.1,
+        "sodium_mg": 0.6,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 26.3,
+        "calcium_mg": 0.6,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/167959/nutrients"
+  },
+  {
+    "name": "Rice cake (brown rice, multigrain)",
+    "slug": "rice-cake",
+    "fdc_id": 169680,
+    "usda_description": "Snacks, rice cakes, brown rice, multigrain",
+    "usda_category": "Snacks",
+    "group": "snacks",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "snack",
+      "pre_workout"
+    ],
+    "aliases": [
+      "rice cake",
+      "rice cakes"
+    ],
+    "per_100g": {
+      "calories_kcal": 387.0,
+      "protein_g": 8.5,
+      "carbs_g": 80.1,
+      "fat_g": 3.5,
+      "fiber_g": 3.0,
+      "sugar_g": null,
+      "sodium_mg": 252.0,
+      "saturated_fat_g": 0.56,
+      "potassium_mg": 294.0,
+      "calcium_mg": 21.0,
+      "iron_mg": 1.96,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 cake",
+      "grams": 9.0,
+      "nutrients": {
+        "calories_kcal": 34.8,
+        "protein_g": 0.8,
+        "carbs_g": 7.2,
+        "fat_g": 0.3,
+        "fiber_g": 0.3,
+        "sugar_g": null,
+        "sodium_mg": 22.7,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 26.5,
+        "calcium_mg": 1.9,
+        "iron_mg": 0.2,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169680/nutrients"
+  },
+  {
+    "name": "Banana",
+    "slug": "banana",
+    "fdc_id": 173944,
+    "usda_description": "Bananas, raw",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "pre_workout",
+      "snack"
+    ],
+    "aliases": [
+      "banana",
+      "bananas"
+    ],
+    "per_100g": {
+      "calories_kcal": 89.0,
+      "protein_g": 1.09,
+      "carbs_g": 22.8,
+      "fat_g": 0.33,
+      "fiber_g": 2.6,
+      "sugar_g": 12.2,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.11,
+      "potassium_mg": 358.0,
+      "calcium_mg": 5.0,
+      "iron_mg": 0.26,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 medium (7\" to 7-7/8\" long)",
+      "grams": 118.0,
+      "nutrients": {
+        "calories_kcal": 105.0,
+        "protein_g": 1.3,
+        "carbs_g": 26.9,
+        "fat_g": 0.4,
+        "fiber_g": 3.1,
+        "sugar_g": 14.4,
+        "sodium_mg": 1.2,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 422.4,
+        "calcium_mg": 5.9,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173944/nutrients"
+  },
+  {
+    "name": "Apple (with skin)",
+    "slug": "apple",
+    "fdc_id": 171688,
+    "usda_description": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "snack"
+    ],
+    "aliases": [
+      "apple",
+      "apples"
+    ],
+    "per_100g": {
+      "calories_kcal": 52.0,
+      "protein_g": 0.26,
+      "carbs_g": 13.8,
+      "fat_g": 0.17,
+      "fiber_g": 2.4,
+      "sugar_g": 10.4,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.03,
+      "potassium_mg": 107.0,
+      "calcium_mg": 6.0,
+      "iron_mg": 0.12,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 medium (3\" dia)",
+      "grams": 182.0,
+      "nutrients": {
+        "calories_kcal": 94.6,
+        "protein_g": 0.5,
+        "carbs_g": 25.1,
+        "fat_g": 0.3,
+        "fiber_g": 4.4,
+        "sugar_g": 18.9,
+        "sodium_mg": 1.8,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 194.7,
+        "calcium_mg": 10.9,
+        "iron_mg": 0.2,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171688/nutrients"
+  },
+  {
+    "name": "Orange",
+    "slug": "orange",
+    "fdc_id": 169097,
+    "usda_description": "Oranges, raw, all commercial varieties",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "snack"
+    ],
+    "aliases": [
+      "orange",
+      "oranges"
+    ],
+    "per_100g": {
+      "calories_kcal": 47.0,
+      "protein_g": 0.94,
+      "carbs_g": 11.8,
+      "fat_g": 0.12,
+      "fiber_g": 2.4,
+      "sugar_g": 9.35,
+      "sodium_mg": 0.0,
+      "saturated_fat_g": 0.01,
+      "potassium_mg": 181.0,
+      "calcium_mg": 40.0,
+      "iron_mg": 0.1,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 fruit (2-5/8\" dia)",
+      "grams": 131.0,
+      "nutrients": {
+        "calories_kcal": 61.6,
+        "protein_g": 1.2,
+        "carbs_g": 15.5,
+        "fat_g": 0.2,
+        "fiber_g": 3.1,
+        "sugar_g": 12.2,
+        "sodium_mg": 0.0,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 237.1,
+        "calcium_mg": 52.4,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169097/nutrients"
+  },
+  {
+    "name": "Blueberries",
+    "slug": "blueberries",
+    "fdc_id": 171711,
+    "usda_description": "Blueberries, raw",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "breakfast"
+    ],
+    "aliases": [
+      "blueberries",
+      "berries"
+    ],
+    "per_100g": {
+      "calories_kcal": 57.0,
+      "protein_g": 0.74,
+      "carbs_g": 14.5,
+      "fat_g": 0.33,
+      "fiber_g": 2.4,
+      "sugar_g": 9.96,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.03,
+      "potassium_mg": 77.0,
+      "calcium_mg": 6.0,
+      "iron_mg": 0.28,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 148.0,
+      "nutrients": {
+        "calories_kcal": 84.4,
+        "protein_g": 1.1,
+        "carbs_g": 21.5,
+        "fat_g": 0.5,
+        "fiber_g": 3.6,
+        "sugar_g": 14.7,
+        "sodium_mg": 1.5,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 114.0,
+        "calcium_mg": 8.9,
+        "iron_mg": 0.4,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171711/nutrients"
+  },
+  {
+    "name": "Strawberries",
+    "slug": "strawberries",
+    "fdc_id": 167762,
+    "usda_description": "Strawberries, raw",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "breakfast"
+    ],
+    "aliases": [
+      "strawberries"
+    ],
+    "per_100g": {
+      "calories_kcal": 32.0,
+      "protein_g": 0.67,
+      "carbs_g": 7.68,
+      "fat_g": 0.3,
+      "fiber_g": 2.0,
+      "sugar_g": 4.89,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.01,
+      "potassium_mg": 153.0,
+      "calcium_mg": 16.0,
+      "iron_mg": 0.41,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup, halves",
+      "grams": 152.0,
+      "nutrients": {
+        "calories_kcal": 48.6,
+        "protein_g": 1.0,
+        "carbs_g": 11.7,
+        "fat_g": 0.5,
+        "fiber_g": 3.0,
+        "sugar_g": 7.4,
+        "sodium_mg": 1.5,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 232.6,
+        "calcium_mg": 24.3,
+        "iron_mg": 0.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/167762/nutrients"
+  },
+  {
+    "name": "Grapes",
+    "slug": "grapes",
+    "fdc_id": 174683,
+    "usda_description": "Grapes, red or green (European type, such as Thompson seedless), raw",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "snack"
+    ],
+    "aliases": [
+      "grapes"
+    ],
+    "per_100g": {
+      "calories_kcal": 69.0,
+      "protein_g": 0.72,
+      "carbs_g": 18.1,
+      "fat_g": 0.16,
+      "fiber_g": 0.9,
+      "sugar_g": 15.5,
+      "sodium_mg": 2.0,
+      "saturated_fat_g": 0.05,
+      "potassium_mg": 191.0,
+      "calcium_mg": 10.0,
+      "iron_mg": 0.36,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 151.0,
+      "nutrients": {
+        "calories_kcal": 104.2,
+        "protein_g": 1.1,
+        "carbs_g": 27.3,
+        "fat_g": 0.2,
+        "fiber_g": 1.4,
+        "sugar_g": 23.4,
+        "sodium_mg": 3.0,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 288.4,
+        "calcium_mg": 15.1,
+        "iron_mg": 0.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/174683/nutrients"
+  },
+  {
+    "name": "Mango",
+    "slug": "mango",
+    "fdc_id": 169910,
+    "usda_description": "Mangos, raw",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "mango",
+      "mangoes"
+    ],
+    "per_100g": {
+      "calories_kcal": 60.0,
+      "protein_g": 0.82,
+      "carbs_g": 15.0,
+      "fat_g": 0.38,
+      "fiber_g": 1.6,
+      "sugar_g": 13.7,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.09,
+      "potassium_mg": 168.0,
+      "calcium_mg": 11.0,
+      "iron_mg": 0.16,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup pieces",
+      "grams": 165.0,
+      "nutrients": {
+        "calories_kcal": 99.0,
+        "protein_g": 1.4,
+        "carbs_g": 24.8,
+        "fat_g": 0.6,
+        "fiber_g": 2.6,
+        "sugar_g": 22.6,
+        "sodium_mg": 1.6,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 277.2,
+        "calcium_mg": 18.1,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169910/nutrients"
+  },
+  {
+    "name": "Pineapple",
+    "slug": "pineapple",
+    "fdc_id": 169124,
+    "usda_description": "Pineapple, raw, all varieties",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "pineapple"
+    ],
+    "per_100g": {
+      "calories_kcal": 50.0,
+      "protein_g": 0.54,
+      "carbs_g": 13.1,
+      "fat_g": 0.12,
+      "fiber_g": 1.4,
+      "sugar_g": 9.85,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.01,
+      "potassium_mg": 109.0,
+      "calcium_mg": 13.0,
+      "iron_mg": 0.29,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup, chunks",
+      "grams": 165.0,
+      "nutrients": {
+        "calories_kcal": 82.5,
+        "protein_g": 0.9,
+        "carbs_g": 21.6,
+        "fat_g": 0.2,
+        "fiber_g": 2.3,
+        "sugar_g": 16.3,
+        "sodium_mg": 1.6,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 179.8,
+        "calcium_mg": 21.4,
+        "iron_mg": 0.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169124/nutrients"
+  },
+  {
+    "name": "Watermelon",
+    "slug": "watermelon",
+    "fdc_id": 167765,
+    "usda_description": "Watermelon, raw",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "hydrating"
+    ],
+    "aliases": [
+      "watermelon"
+    ],
+    "per_100g": {
+      "calories_kcal": 30.0,
+      "protein_g": 0.61,
+      "carbs_g": 7.55,
+      "fat_g": 0.15,
+      "fiber_g": 0.4,
+      "sugar_g": 6.2,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.02,
+      "potassium_mg": 112.0,
+      "calcium_mg": 7.0,
+      "iron_mg": 0.24,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup, balls",
+      "grams": 154.0,
+      "nutrients": {
+        "calories_kcal": 46.2,
+        "protein_g": 0.9,
+        "carbs_g": 11.6,
+        "fat_g": 0.2,
+        "fiber_g": 0.6,
+        "sugar_g": 9.5,
+        "sodium_mg": 1.5,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 172.5,
+        "calcium_mg": 10.8,
+        "iron_mg": 0.4,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/167765/nutrients"
+  },
+  {
+    "name": "Pear",
+    "slug": "pear",
+    "fdc_id": 167776,
+    "usda_description": "Pears, raw, bartlett (Includes foods for USDA's Food Distribution Program)",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "pear",
+      "pears"
+    ],
+    "per_100g": {
+      "calories_kcal": 63.0,
+      "protein_g": 0.39,
+      "carbs_g": 15.0,
+      "fat_g": 0.16,
+      "fiber_g": 3.1,
+      "sugar_g": 9.69,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": null,
+      "potassium_mg": 101.0,
+      "calcium_mg": 9.0,
+      "iron_mg": 0.19,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 medium",
+      "grams": 177.0,
+      "nutrients": {
+        "calories_kcal": 111.5,
+        "protein_g": 0.7,
+        "carbs_g": 26.6,
+        "fat_g": 0.3,
+        "fiber_g": 5.5,
+        "sugar_g": 17.2,
+        "sodium_mg": 1.8,
+        "saturated_fat_g": null,
+        "potassium_mg": 178.8,
+        "calcium_mg": 15.9,
+        "iron_mg": 0.3,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/167776/nutrients"
+  },
+  {
+    "name": "Kiwifruit",
+    "slug": "kiwifruit",
+    "fdc_id": 168153,
+    "usda_description": "Kiwifruit, green, raw",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "kiwi",
+      "kiwifruit"
+    ],
+    "per_100g": {
+      "calories_kcal": 61.0,
+      "protein_g": 1.14,
+      "carbs_g": 14.7,
+      "fat_g": 0.52,
+      "fiber_g": 3.0,
+      "sugar_g": 8.99,
+      "sodium_mg": 3.0,
+      "saturated_fat_g": 0.03,
+      "potassium_mg": 312.0,
+      "calcium_mg": 34.0,
+      "iron_mg": 0.31,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 fruit (2\" dia)",
+      "grams": 69.0,
+      "nutrients": {
+        "calories_kcal": 42.1,
+        "protein_g": 0.8,
+        "carbs_g": 10.1,
+        "fat_g": 0.4,
+        "fiber_g": 2.1,
+        "sugar_g": 6.2,
+        "sodium_mg": 2.1,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 215.3,
+        "calcium_mg": 23.5,
+        "iron_mg": 0.2,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168153/nutrients"
+  },
+  {
+    "name": "Cherries (sweet)",
+    "slug": "cherries",
+    "fdc_id": 171719,
+    "usda_description": "Cherries, sweet, raw",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "cherries"
+    ],
+    "per_100g": {
+      "calories_kcal": 63.0,
+      "protein_g": 1.06,
+      "carbs_g": 16.0,
+      "fat_g": 0.2,
+      "fiber_g": 2.1,
+      "sugar_g": 12.8,
+      "sodium_mg": 0.0,
+      "saturated_fat_g": 0.04,
+      "potassium_mg": 222.0,
+      "calcium_mg": 13.0,
+      "iron_mg": 0.36,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup, with pits, yields",
+      "grams": 138.0,
+      "nutrients": {
+        "calories_kcal": 86.9,
+        "protein_g": 1.5,
+        "carbs_g": 22.1,
+        "fat_g": 0.3,
+        "fiber_g": 2.9,
+        "sugar_g": 17.7,
+        "sodium_mg": 0.0,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 306.4,
+        "calcium_mg": 17.9,
+        "iron_mg": 0.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171719/nutrients"
+  },
+  {
+    "name": "Medjool dates",
+    "slug": "medjool-dates",
+    "fdc_id": 168191,
+    "usda_description": "Dates, medjool",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "pre_workout"
+    ],
+    "aliases": [
+      "dates",
+      "date"
+    ],
+    "per_100g": {
+      "calories_kcal": 277.0,
+      "protein_g": 1.81,
+      "carbs_g": 75.0,
+      "fat_g": 0.15,
+      "fiber_g": 6.7,
+      "sugar_g": 66.5,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": null,
+      "potassium_mg": 696.0,
+      "calcium_mg": 64.0,
+      "iron_mg": 0.9,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 date, pitted",
+      "grams": 24.0,
+      "nutrients": {
+        "calories_kcal": 66.5,
+        "protein_g": 0.4,
+        "carbs_g": 18.0,
+        "fat_g": 0.0,
+        "fiber_g": 1.6,
+        "sugar_g": 16.0,
+        "sodium_mg": 0.2,
+        "saturated_fat_g": null,
+        "potassium_mg": 167.0,
+        "calcium_mg": 15.4,
+        "iron_mg": 0.2,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber",
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168191/nutrients"
+  },
+  {
+    "name": "Raisins",
+    "slug": "raisins",
+    "fdc_id": 168165,
+    "usda_description": "Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fruit",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "pre_workout"
+    ],
+    "aliases": [
+      "raisins"
+    ],
+    "per_100g": {
+      "calories_kcal": 299.0,
+      "protein_g": 3.3,
+      "carbs_g": 79.3,
+      "fat_g": 0.25,
+      "fiber_g": 4.5,
+      "sugar_g": 65.2,
+      "sodium_mg": 26.0,
+      "saturated_fat_g": 0.09,
+      "potassium_mg": 744.0,
+      "calcium_mg": 62.0,
+      "iron_mg": 1.79,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 miniature box (.5 oz)",
+      "grams": 14.0,
+      "nutrients": {
+        "calories_kcal": 41.9,
+        "protein_g": 0.5,
+        "carbs_g": 11.1,
+        "fat_g": 0.0,
+        "fiber_g": 0.6,
+        "sugar_g": 9.1,
+        "sodium_mg": 3.6,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 104.2,
+        "calcium_mg": 8.7,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168165/nutrients"
+  },
+  {
+    "name": "Broccoli (boiled)",
+    "slug": "broccoli",
+    "fdc_id": 169967,
+    "usda_description": "Broccoli, cooked, boiled, drained, without salt",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "broccoli"
+    ],
+    "per_100g": {
+      "calories_kcal": 35.0,
+      "protein_g": 2.38,
+      "carbs_g": 7.18,
+      "fat_g": 0.41,
+      "fiber_g": 3.3,
+      "sugar_g": 1.39,
+      "sodium_mg": 41.0,
+      "saturated_fat_g": 0.08,
+      "potassium_mg": 293.0,
+      "calcium_mg": 40.0,
+      "iron_mg": 0.67,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "0.5 cup, chopped",
+      "grams": 78.0,
+      "nutrients": {
+        "calories_kcal": 27.3,
+        "protein_g": 1.9,
+        "carbs_g": 5.6,
+        "fat_g": 0.3,
+        "fiber_g": 2.6,
+        "sugar_g": 1.1,
+        "sodium_mg": 32.0,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 228.5,
+        "calcium_mg": 31.2,
+        "iron_mg": 0.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169967/nutrients"
+  },
+  {
+    "name": "Spinach (raw)",
+    "slug": "spinach",
+    "fdc_id": 168462,
+    "usda_description": "Spinach, raw",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "spinach",
+      "palak"
+    ],
+    "per_100g": {
+      "calories_kcal": 23.0,
+      "protein_g": 2.86,
+      "carbs_g": 3.63,
+      "fat_g": 0.39,
+      "fiber_g": 2.2,
+      "sugar_g": 0.42,
+      "sodium_mg": 79.0,
+      "saturated_fat_g": 0.06,
+      "potassium_mg": 558.0,
+      "calcium_mg": 99.0,
+      "iron_mg": 2.71,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 30.0,
+      "nutrients": {
+        "calories_kcal": 6.9,
+        "protein_g": 0.9,
+        "carbs_g": 1.1,
+        "fat_g": 0.1,
+        "fiber_g": 0.7,
+        "sugar_g": 0.1,
+        "sodium_mg": 23.7,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 167.4,
+        "calcium_mg": 29.7,
+        "iron_mg": 0.8,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168462/nutrients"
+  },
+  {
+    "name": "Kale (raw)",
+    "slug": "kale",
+    "fdc_id": 168421,
+    "usda_description": "Kale, raw",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "kale"
+    ],
+    "per_100g": {
+      "calories_kcal": 35.0,
+      "protein_g": 2.92,
+      "carbs_g": 4.42,
+      "fat_g": 1.49,
+      "fiber_g": 4.1,
+      "sugar_g": 0.99,
+      "sodium_mg": 53.0,
+      "saturated_fat_g": 0.18,
+      "potassium_mg": 348.0,
+      "calcium_mg": 254.0,
+      "iron_mg": 1.6,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 21.0,
+      "nutrients": {
+        "calories_kcal": 7.3,
+        "protein_g": 0.6,
+        "carbs_g": 0.9,
+        "fat_g": 0.3,
+        "fiber_g": 0.9,
+        "sugar_g": 0.2,
+        "sodium_mg": 11.1,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 73.1,
+        "calcium_mg": 53.3,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168421/nutrients"
+  },
+  {
+    "name": "Carrots (raw)",
+    "slug": "carrots",
+    "fdc_id": 170393,
+    "usda_description": "Carrots, raw",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "snack"
+    ],
+    "aliases": [
+      "carrot",
+      "carrots"
+    ],
+    "per_100g": {
+      "calories_kcal": 41.0,
+      "protein_g": 0.93,
+      "carbs_g": 9.58,
+      "fat_g": 0.24,
+      "fiber_g": 2.8,
+      "sugar_g": 4.74,
+      "sodium_mg": 69.0,
+      "saturated_fat_g": 0.03,
+      "potassium_mg": 320.0,
+      "calcium_mg": 33.0,
+      "iron_mg": 0.3,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 medium",
+      "grams": 61.0,
+      "nutrients": {
+        "calories_kcal": 25.0,
+        "protein_g": 0.6,
+        "carbs_g": 5.8,
+        "fat_g": 0.1,
+        "fiber_g": 1.7,
+        "sugar_g": 2.9,
+        "sodium_mg": 42.1,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 195.2,
+        "calcium_mg": 20.1,
+        "iron_mg": 0.2,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+  },
+  {
+    "name": "Tomato (raw)",
+    "slug": "tomato",
+    "fdc_id": 170457,
+    "usda_description": "Tomatoes, red, ripe, raw, year round average",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "tomato",
+      "tomatoes"
+    ],
+    "per_100g": {
+      "calories_kcal": 18.0,
+      "protein_g": 0.88,
+      "carbs_g": 3.89,
+      "fat_g": 0.2,
+      "fiber_g": 1.2,
+      "sugar_g": 2.63,
+      "sodium_mg": 5.0,
+      "saturated_fat_g": 0.03,
+      "potassium_mg": 237.0,
+      "calcium_mg": 10.0,
+      "iron_mg": 0.27,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 medium whole (2-3/5\" dia)",
+      "grams": 123.0,
+      "nutrients": {
+        "calories_kcal": 22.1,
+        "protein_g": 1.1,
+        "carbs_g": 4.8,
+        "fat_g": 0.2,
+        "fiber_g": 1.5,
+        "sugar_g": 3.2,
+        "sodium_mg": 6.2,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 291.5,
+        "calcium_mg": 12.3,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+  },
+  {
+    "name": "Cucumber (with peel)",
+    "slug": "cucumber",
+    "fdc_id": 168409,
+    "usda_description": "Cucumber, with peel, raw",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "hydrating"
+    ],
+    "aliases": [
+      "cucumber"
+    ],
+    "per_100g": {
+      "calories_kcal": 15.0,
+      "protein_g": 0.65,
+      "carbs_g": 3.63,
+      "fat_g": 0.11,
+      "fiber_g": 0.5,
+      "sugar_g": 1.67,
+      "sodium_mg": 2.0,
+      "saturated_fat_g": 0.04,
+      "potassium_mg": 147.0,
+      "calcium_mg": 16.0,
+      "iron_mg": 0.28,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "0.5 cup slices",
+      "grams": 52.0,
+      "nutrients": {
+        "calories_kcal": 7.8,
+        "protein_g": 0.3,
+        "carbs_g": 1.9,
+        "fat_g": 0.1,
+        "fiber_g": 0.3,
+        "sugar_g": 0.9,
+        "sodium_mg": 1.0,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 76.4,
+        "calcium_mg": 8.3,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+  },
+  {
+    "name": "Red bell pepper (raw)",
+    "slug": "red-bell-pepper",
+    "fdc_id": 170108,
+    "usda_description": "Peppers, sweet, red, raw",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "bell pepper",
+      "capsicum",
+      "red pepper"
+    ],
+    "per_100g": {
+      "calories_kcal": 26.0,
+      "protein_g": 0.99,
+      "carbs_g": 6.03,
+      "fat_g": 0.3,
+      "fiber_g": 2.1,
+      "sugar_g": 4.2,
+      "sodium_mg": 4.0,
+      "saturated_fat_g": 0.06,
+      "potassium_mg": 211.0,
+      "calcium_mg": 7.0,
+      "iron_mg": 0.43,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 medium (approx 2-3/4\" long, 2-1/2 dia.)",
+      "grams": 119.0,
+      "nutrients": {
+        "calories_kcal": 30.9,
+        "protein_g": 1.2,
+        "carbs_g": 7.2,
+        "fat_g": 0.4,
+        "fiber_g": 2.5,
+        "sugar_g": 5.0,
+        "sodium_mg": 4.8,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 251.1,
+        "calcium_mg": 8.3,
+        "iron_mg": 0.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+  },
+  {
+    "name": "Cauliflower (raw)",
+    "slug": "cauliflower",
+    "fdc_id": 169986,
+    "usda_description": "Cauliflower, raw",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "cauliflower"
+    ],
+    "per_100g": {
+      "calories_kcal": 25.0,
+      "protein_g": 1.92,
+      "carbs_g": 4.97,
+      "fat_g": 0.28,
+      "fiber_g": 2.0,
+      "sugar_g": 1.91,
+      "sodium_mg": 30.0,
+      "saturated_fat_g": 0.13,
+      "potassium_mg": 299.0,
+      "calcium_mg": 22.0,
+      "iron_mg": 0.42,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup chopped (1/2\" pieces)",
+      "grams": 107.0,
+      "nutrients": {
+        "calories_kcal": 26.8,
+        "protein_g": 2.1,
+        "carbs_g": 5.3,
+        "fat_g": 0.3,
+        "fiber_g": 2.1,
+        "sugar_g": 2.0,
+        "sodium_mg": 32.1,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 319.9,
+        "calcium_mg": 23.5,
+        "iron_mg": 0.4,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169986/nutrients"
+  },
+  {
+    "name": "Green peas (boiled)",
+    "slug": "green-peas",
+    "fdc_id": 170420,
+    "usda_description": "Peas, green, cooked, boiled, drained, without salt",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "high_fiber"
+    ],
+    "aliases": [
+      "peas",
+      "green peas"
+    ],
+    "per_100g": {
+      "calories_kcal": 84.0,
+      "protein_g": 5.36,
+      "carbs_g": 15.6,
+      "fat_g": 0.22,
+      "fiber_g": 5.5,
+      "sugar_g": 5.93,
+      "sodium_mg": 3.0,
+      "saturated_fat_g": 0.04,
+      "potassium_mg": 271.0,
+      "calcium_mg": 27.0,
+      "iron_mg": 1.54,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 160.0,
+      "nutrients": {
+        "calories_kcal": 134.4,
+        "protein_g": 8.6,
+        "carbs_g": 25.0,
+        "fat_g": 0.4,
+        "fiber_g": 8.8,
+        "sugar_g": 9.5,
+        "sodium_mg": 4.8,
+        "saturated_fat_g": 0.1,
+        "potassium_mg": 433.6,
+        "calcium_mg": 43.2,
+        "iron_mg": 2.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170420/nutrients"
+  },
+  {
+    "name": "Mushrooms (white, raw)",
+    "slug": "mushrooms",
+    "fdc_id": 169251,
+    "usda_description": "Mushrooms, white, raw",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "mushroom",
+      "mushrooms"
+    ],
+    "per_100g": {
+      "calories_kcal": 22.0,
+      "protein_g": 3.09,
+      "carbs_g": 3.26,
+      "fat_g": 0.34,
+      "fiber_g": 1.0,
+      "sugar_g": 1.98,
+      "sodium_mg": 5.0,
+      "saturated_fat_g": 0.05,
+      "potassium_mg": 318.0,
+      "calcium_mg": 3.0,
+      "iron_mg": 0.5,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup, pieces or slices",
+      "grams": 70.0,
+      "nutrients": {
+        "calories_kcal": 15.4,
+        "protein_g": 2.2,
+        "carbs_g": 2.3,
+        "fat_g": 0.2,
+        "fiber_g": 0.7,
+        "sugar_g": 1.4,
+        "sodium_mg": 3.5,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 222.6,
+        "calcium_mg": 2.1,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169251/nutrients"
+  },
+  {
+    "name": "Romaine lettuce",
+    "slug": "romaine-lettuce",
+    "fdc_id": 169247,
+    "usda_description": "Lettuce, cos or romaine, raw",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "lettuce",
+      "salad greens"
+    ],
+    "per_100g": {
+      "calories_kcal": 17.0,
+      "protein_g": 1.23,
+      "carbs_g": 3.29,
+      "fat_g": 0.3,
+      "fiber_g": 2.1,
+      "sugar_g": 1.19,
+      "sodium_mg": 8.0,
+      "saturated_fat_g": 0.04,
+      "potassium_mg": 247.0,
+      "calcium_mg": 33.0,
+      "iron_mg": 0.97,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup shredded",
+      "grams": 47.0,
+      "nutrients": {
+        "calories_kcal": 8.0,
+        "protein_g": 0.6,
+        "carbs_g": 1.5,
+        "fat_g": 0.1,
+        "fiber_g": 1.0,
+        "sugar_g": 0.6,
+        "sodium_mg": 3.8,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 116.1,
+        "calcium_mg": 15.5,
+        "iron_mg": 0.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169247/nutrients"
+  },
+  {
+    "name": "Onion (raw)",
+    "slug": "onion",
+    "fdc_id": 170000,
+    "usda_description": "Onions, raw",
+    "usda_category": "Vegetables and Vegetable Products",
+    "group": "vegetables",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan"
+    ],
+    "aliases": [
+      "onion",
+      "onions"
+    ],
+    "per_100g": {
+      "calories_kcal": 40.0,
+      "protein_g": 1.1,
+      "carbs_g": 9.34,
+      "fat_g": 0.1,
+      "fiber_g": 1.7,
+      "sugar_g": 4.24,
+      "sodium_mg": 4.0,
+      "saturated_fat_g": 0.04,
+      "potassium_mg": 146.0,
+      "calcium_mg": 23.0,
+      "iron_mg": 0.21,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 medium (2-1/2\" dia)",
+      "grams": 110.0,
+      "nutrients": {
+        "calories_kcal": 44.0,
+        "protein_g": 1.2,
+        "carbs_g": 10.3,
+        "fat_g": 0.1,
+        "fiber_g": 1.9,
+        "sugar_g": 4.7,
+        "sodium_mg": 4.4,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 160.6,
+        "calcium_mg": 25.3,
+        "iron_mg": 0.2,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170000/nutrients"
+  },
+  {
+    "name": "Almonds",
+    "slug": "almonds",
+    "fdc_id": 170567,
+    "usda_description": "Nuts, almonds",
+    "usda_category": "Nut and Seed Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "snack",
+      "healthy_fats"
+    ],
+    "aliases": [
+      "almonds",
+      "almond"
+    ],
+    "per_100g": {
+      "calories_kcal": 579.0,
+      "protein_g": 21.2,
+      "carbs_g": 21.6,
+      "fat_g": 49.9,
+      "fiber_g": 12.5,
+      "sugar_g": 4.35,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 3.8,
+      "potassium_mg": 733.0,
+      "calcium_mg": 269.0,
+      "iron_mg": 3.71,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 oz (23 whole kernels)",
+      "grams": 28.35,
+      "nutrients": {
+        "calories_kcal": 164.1,
+        "protein_g": 6.0,
+        "carbs_g": 6.1,
+        "fat_g": 14.1,
+        "fiber_g": 3.5,
+        "sugar_g": 1.2,
+        "sodium_mg": 0.3,
+        "saturated_fat_g": 1.1,
+        "potassium_mg": 207.8,
+        "calcium_mg": 76.3,
+        "iron_mg": 1.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+  },
+  {
+    "name": "Walnuts",
+    "slug": "walnuts",
+    "fdc_id": 170187,
+    "usda_description": "Nuts, walnuts, english",
+    "usda_category": "Nut and Seed Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "healthy_fats",
+      "omega3"
+    ],
+    "aliases": [
+      "walnuts",
+      "walnut"
+    ],
+    "per_100g": {
+      "calories_kcal": 654.0,
+      "protein_g": 15.2,
+      "carbs_g": 13.7,
+      "fat_g": 65.2,
+      "fiber_g": 6.7,
+      "sugar_g": 2.61,
+      "sodium_mg": 2.0,
+      "saturated_fat_g": 6.13,
+      "potassium_mg": 441.0,
+      "calcium_mg": 98.0,
+      "iron_mg": 2.91,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 oz (14 halves)",
+      "grams": 28.35,
+      "nutrients": {
+        "calories_kcal": 185.4,
+        "protein_g": 4.3,
+        "carbs_g": 3.9,
+        "fat_g": 18.5,
+        "fiber_g": 1.9,
+        "sugar_g": 0.7,
+        "sodium_mg": 0.6,
+        "saturated_fat_g": 1.7,
+        "potassium_mg": 125.0,
+        "calcium_mg": 27.8,
+        "iron_mg": 0.8,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170187/nutrients"
+  },
+  {
+    "name": "Cashews (raw)",
+    "slug": "cashews",
+    "fdc_id": 170162,
+    "usda_description": "Nuts, cashew nuts, raw",
+    "usda_category": "Nut and Seed Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "healthy_fats"
+    ],
+    "aliases": [
+      "cashews",
+      "cashew"
+    ],
+    "per_100g": {
+      "calories_kcal": 553.0,
+      "protein_g": 18.2,
+      "carbs_g": 30.2,
+      "fat_g": 43.8,
+      "fiber_g": 3.3,
+      "sugar_g": 5.91,
+      "sodium_mg": 12.0,
+      "saturated_fat_g": 7.78,
+      "potassium_mg": 660.0,
+      "calcium_mg": 37.0,
+      "iron_mg": 6.68,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 oz",
+      "grams": 28.35,
+      "nutrients": {
+        "calories_kcal": 156.8,
+        "protein_g": 5.2,
+        "carbs_g": 8.6,
+        "fat_g": 12.4,
+        "fiber_g": 0.9,
+        "sugar_g": 1.7,
+        "sodium_mg": 3.4,
+        "saturated_fat_g": 2.2,
+        "potassium_mg": 187.1,
+        "calcium_mg": 10.5,
+        "iron_mg": 1.9,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170162/nutrients"
+  },
+  {
+    "name": "Peanuts (dry-roasted)",
+    "slug": "peanuts",
+    "fdc_id": 173806,
+    "usda_description": "Peanuts, all types, dry-roasted, without salt",
+    "usda_category": "Legumes and Legume Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "healthy_fats"
+    ],
+    "aliases": [
+      "peanuts",
+      "groundnuts"
+    ],
+    "per_100g": {
+      "calories_kcal": 587.0,
+      "protein_g": 24.4,
+      "carbs_g": 21.3,
+      "fat_g": 49.7,
+      "fiber_g": 8.4,
+      "sugar_g": 4.9,
+      "sodium_mg": 6.0,
+      "saturated_fat_g": 7.72,
+      "potassium_mg": 634.0,
+      "calcium_mg": 58.0,
+      "iron_mg": 1.58,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 oz",
+      "grams": 28.35,
+      "nutrients": {
+        "calories_kcal": 166.4,
+        "protein_g": 6.9,
+        "carbs_g": 6.0,
+        "fat_g": 14.1,
+        "fiber_g": 2.4,
+        "sugar_g": 1.4,
+        "sodium_mg": 1.7,
+        "saturated_fat_g": 2.2,
+        "potassium_mg": 179.7,
+        "calcium_mg": 16.4,
+        "iron_mg": 0.4,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173806/nutrients"
+  },
+  {
+    "name": "Peanut butter (smooth)",
+    "slug": "peanut-butter",
+    "fdc_id": 172470,
+    "usda_description": "Peanut butter, smooth style, without salt",
+    "usda_category": "Legumes and Legume Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "healthy_fats"
+    ],
+    "aliases": [
+      "peanut butter"
+    ],
+    "per_100g": {
+      "calories_kcal": 598.0,
+      "protein_g": 22.2,
+      "carbs_g": 22.3,
+      "fat_g": 51.4,
+      "fiber_g": 5.0,
+      "sugar_g": 10.5,
+      "sodium_mg": 17.0,
+      "saturated_fat_g": 10.3,
+      "potassium_mg": 558.0,
+      "calcium_mg": 49.0,
+      "iron_mg": 1.74,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "2 tbsp",
+      "grams": 32.0,
+      "nutrients": {
+        "calories_kcal": 191.4,
+        "protein_g": 7.1,
+        "carbs_g": 7.1,
+        "fat_g": 16.4,
+        "fiber_g": 1.6,
+        "sugar_g": 3.4,
+        "sodium_mg": 5.4,
+        "saturated_fat_g": 3.3,
+        "potassium_mg": 178.6,
+        "calcium_mg": 15.7,
+        "iron_mg": 0.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172470/nutrients"
+  },
+  {
+    "name": "Chia seeds",
+    "slug": "chia-seeds",
+    "fdc_id": 170554,
+    "usda_description": "Seeds, chia seeds, dried",
+    "usda_category": "Nut and Seed Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "healthy_fats",
+      "high_fiber",
+      "omega3"
+    ],
+    "aliases": [
+      "chia",
+      "chia seeds"
+    ],
+    "per_100g": {
+      "calories_kcal": 486.0,
+      "protein_g": 16.5,
+      "carbs_g": 42.1,
+      "fat_g": 30.7,
+      "fiber_g": 34.4,
+      "sugar_g": null,
+      "sodium_mg": 16.0,
+      "saturated_fat_g": 3.33,
+      "potassium_mg": 407.0,
+      "calcium_mg": 631.0,
+      "iron_mg": 7.72,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 oz",
+      "grams": 28.35,
+      "nutrients": {
+        "calories_kcal": 137.8,
+        "protein_g": 4.7,
+        "carbs_g": 11.9,
+        "fat_g": 8.7,
+        "fiber_g": 9.8,
+        "sugar_g": null,
+        "sodium_mg": 4.5,
+        "saturated_fat_g": 0.9,
+        "potassium_mg": 115.4,
+        "calcium_mg": 178.9,
+        "iron_mg": 2.2,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170554/nutrients"
+  },
+  {
+    "name": "Flaxseed",
+    "slug": "flaxseed",
+    "fdc_id": 169414,
+    "usda_description": "Seeds, flaxseed",
+    "usda_category": "Nut and Seed Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "healthy_fats",
+      "high_fiber",
+      "omega3"
+    ],
+    "aliases": [
+      "flaxseed",
+      "flax seeds",
+      "linseed"
+    ],
+    "per_100g": {
+      "calories_kcal": 534.0,
+      "protein_g": 18.3,
+      "carbs_g": 28.9,
+      "fat_g": 42.2,
+      "fiber_g": 27.3,
+      "sugar_g": 1.55,
+      "sodium_mg": 30.0,
+      "saturated_fat_g": 3.66,
+      "potassium_mg": 813.0,
+      "calcium_mg": 255.0,
+      "iron_mg": 5.73,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 tbsp, whole",
+      "grams": 10.3,
+      "nutrients": {
+        "calories_kcal": 55.0,
+        "protein_g": 1.9,
+        "carbs_g": 3.0,
+        "fat_g": 4.3,
+        "fiber_g": 2.8,
+        "sugar_g": 0.2,
+        "sodium_mg": 3.1,
+        "saturated_fat_g": 0.4,
+        "potassium_mg": 83.7,
+        "calcium_mg": 26.3,
+        "iron_mg": 0.6,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169414/nutrients"
+  },
+  {
+    "name": "Pumpkin seeds (kernels)",
+    "slug": "pumpkin-seeds",
+    "fdc_id": 170556,
+    "usda_description": "Seeds, pumpkin and squash seed kernels, dried",
+    "usda_category": "Nut and Seed Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "healthy_fats"
+    ],
+    "aliases": [
+      "pumpkin seeds",
+      "pepitas"
+    ],
+    "per_100g": {
+      "calories_kcal": 559.0,
+      "protein_g": 30.2,
+      "carbs_g": 10.7,
+      "fat_g": 49.0,
+      "fiber_g": 6.0,
+      "sugar_g": 1.4,
+      "sodium_mg": 7.0,
+      "saturated_fat_g": 8.66,
+      "potassium_mg": 809.0,
+      "calcium_mg": 46.0,
+      "iron_mg": 8.82,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 oz",
+      "grams": 28.35,
+      "nutrients": {
+        "calories_kcal": 158.5,
+        "protein_g": 8.6,
+        "carbs_g": 3.0,
+        "fat_g": 13.9,
+        "fiber_g": 1.7,
+        "sugar_g": 0.4,
+        "sodium_mg": 2.0,
+        "saturated_fat_g": 2.5,
+        "potassium_mg": 229.4,
+        "calcium_mg": 13.0,
+        "iron_mg": 2.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High protein",
+      "High fiber",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170556/nutrients"
+  },
+  {
+    "name": "Avocado",
+    "slug": "avocado",
+    "fdc_id": 171706,
+    "usda_description": "Avocados, raw, California",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "healthy_fats"
+    ],
+    "aliases": [
+      "avocado"
+    ],
+    "per_100g": {
+      "calories_kcal": 167.0,
+      "protein_g": 1.96,
+      "carbs_g": 8.64,
+      "fat_g": 15.4,
+      "fiber_g": 6.8,
+      "sugar_g": 0.3,
+      "sodium_mg": 8.0,
+      "saturated_fat_g": 2.13,
+      "potassium_mg": 507.0,
+      "calcium_mg": 13.0,
+      "iron_mg": 0.61,
+      "caffeine_mg": null
+    },
+    "portion": {
+      "description": "1 fruit, without skin and seed",
+      "grams": 136.0,
+      "nutrients": {
+        "calories_kcal": 227.1,
+        "protein_g": 2.7,
+        "carbs_g": 11.8,
+        "fat_g": 20.9,
+        "fiber_g": 9.2,
+        "sugar_g": 0.4,
+        "sodium_mg": 10.9,
+        "saturated_fat_g": 2.9,
+        "potassium_mg": 689.5,
+        "calcium_mg": 17.7,
+        "iron_mg": 0.8,
+        "caffeine_mg": null
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber",
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171706/nutrients"
+  },
+  {
+    "name": "Olive oil",
+    "slug": "olive-oil",
+    "fdc_id": 171413,
+    "usda_description": "Oil, olive, salad or cooking",
+    "usda_category": "Fats and Oils",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "vegan",
+      "healthy_fats"
+    ],
+    "aliases": [
+      "olive oil",
+      "oil"
+    ],
+    "per_100g": {
+      "calories_kcal": 884.0,
+      "protein_g": 0.0,
+      "carbs_g": 0.0,
+      "fat_g": 100.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 2.0,
+      "saturated_fat_g": 13.8,
+      "potassium_mg": 1.0,
+      "calcium_mg": 1.0,
+      "iron_mg": 0.56,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 tablespoon",
+      "grams": 13.5,
+      "nutrients": {
+        "calories_kcal": 119.3,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 13.5,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 0.3,
+        "saturated_fat_g": 1.9,
+        "potassium_mg": 0.1,
+        "calcium_mg": 0.1,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "Mostly unsaturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171413/nutrients"
+  },
+  {
+    "name": "Butter (salted)",
+    "slug": "butter",
+    "fdc_id": 173410,
+    "usda_description": "Butter, salted",
+    "usda_category": "Dairy and Egg Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "limit"
+    ],
+    "aliases": [
+      "butter"
+    ],
+    "per_100g": {
+      "calories_kcal": 717.0,
+      "protein_g": 0.85,
+      "carbs_g": 0.06,
+      "fat_g": 81.1,
+      "fiber_g": 0.0,
+      "sugar_g": 0.06,
+      "sodium_mg": 643.0,
+      "saturated_fat_g": 51.4,
+      "potassium_mg": 24.0,
+      "calcium_mg": 24.0,
+      "iron_mg": 0.02,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 tbsp",
+      "grams": 14.2,
+      "nutrients": {
+        "calories_kcal": 101.8,
+        "protein_g": 0.1,
+        "carbs_g": 0.0,
+        "fat_g": 11.5,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 91.3,
+        "saturated_fat_g": 7.3,
+        "potassium_mg": 3.4,
+        "calcium_mg": 3.4,
+        "iron_mg": 0.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sodium",
+      "High saturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173410/nutrients"
+  },
+  {
+    "name": "Ghee",
+    "slug": "ghee",
+    "fdc_id": 171314,
+    "usda_description": "Butter, Clarified butter (ghee)",
+    "usda_category": "Dairy and Egg Products",
+    "group": "fats",
+    "fitbot_tags": [
+      "vegetarian",
+      "limit"
+    ],
+    "aliases": [
+      "ghee",
+      "clarified butter"
+    ],
+    "per_100g": {
+      "calories_kcal": 900.0,
+      "protein_g": 0.0,
+      "carbs_g": 0.0,
+      "fat_g": 100.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 0.0,
+      "saturated_fat_g": 60.0,
+      "potassium_mg": null,
+      "calcium_mg": 0.0,
+      "iron_mg": 0.0,
+      "caffeine_mg": null
+    },
+    "portion": null,
+    "highlights": [
+      "High saturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171314/nutrients"
+  },
+  {
+    "name": "Dark chocolate (70-85%)",
+    "slug": "dark-chocolate",
+    "fdc_id": 170273,
+    "usda_description": "Chocolate, dark, 70-85% cacao solids",
+    "usda_category": "Sweets",
+    "group": "treats",
+    "fitbot_tags": [
+      "vegetarian"
+    ],
+    "aliases": [
+      "dark chocolate"
+    ],
+    "per_100g": {
+      "calories_kcal": 598.0,
+      "protein_g": 7.79,
+      "carbs_g": 45.9,
+      "fat_g": 42.6,
+      "fiber_g": 10.9,
+      "sugar_g": 24.0,
+      "sodium_mg": 20.0,
+      "saturated_fat_g": 24.5,
+      "potassium_mg": 715.0,
+      "calcium_mg": 73.0,
+      "iron_mg": 11.9,
+      "caffeine_mg": 80.0
+    },
+    "portion": {
+      "description": "1 oz",
+      "grams": 28.35,
+      "nutrients": {
+        "calories_kcal": 169.5,
+        "protein_g": 2.2,
+        "carbs_g": 13.0,
+        "fat_g": 12.1,
+        "fiber_g": 3.1,
+        "sugar_g": 6.8,
+        "sodium_mg": 5.7,
+        "saturated_fat_g": 6.9,
+        "potassium_mg": 202.7,
+        "calcium_mg": 20.7,
+        "iron_mg": 3.4,
+        "caffeine_mg": 22.7
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High fiber",
+      "High sugar",
+      "High saturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170273/nutrients"
+  },
+  {
+    "name": "Water (tap)",
+    "slug": "water",
+    "fdc_id": 173647,
+    "usda_description": "Beverages, water, tap, drinking",
+    "usda_category": "Beverages",
+    "group": "beverages",
+    "fitbot_tags": [
+      "hydrating"
+    ],
+    "aliases": [
+      "water",
+      "tap water"
+    ],
+    "per_100g": {
+      "calories_kcal": 0.0,
+      "protein_g": 0.0,
+      "carbs_g": 0.0,
+      "fat_g": 0.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 4.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 0.0,
+      "calcium_mg": 3.0,
+      "iron_mg": 0.0,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 fl oz",
+      "grams": 29.6,
+      "nutrients": {
+        "calories_kcal": 0.0,
+        "protein_g": 0.0,
+        "carbs_g": 0.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 1.2,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 0.0,
+        "calcium_mg": 0.9,
+        "iron_mg": 0.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+  },
+  {
+    "name": "Coconut water (unsweetened)",
+    "slug": "coconut-water",
+    "fdc_id": 174831,
+    "usda_description": "Beverages, Coconut water, ready-to-drink, unsweetened",
+    "usda_category": "Beverages",
+    "group": "beverages",
+    "fitbot_tags": [
+      "hydrating"
+    ],
+    "aliases": [
+      "coconut water"
+    ],
+    "per_100g": {
+      "calories_kcal": 18.0,
+      "protein_g": 0.22,
+      "carbs_g": 4.24,
+      "fat_g": 0.0,
+      "fiber_g": 0.0,
+      "sugar_g": 3.92,
+      "sodium_mg": 26.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 165.0,
+      "calcium_mg": 7.0,
+      "iron_mg": 0.03,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 245.0,
+      "nutrients": {
+        "calories_kcal": 44.1,
+        "protein_g": 0.5,
+        "carbs_g": 10.4,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 9.6,
+        "sodium_mg": 63.7,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 404.2,
+        "calcium_mg": 17.1,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/174831/nutrients"
+  },
+  {
+    "name": "Black coffee (brewed)",
+    "slug": "black-coffee",
+    "fdc_id": 171890,
+    "usda_description": "Beverages, coffee, brewed, prepared with tap water",
+    "usda_category": "Beverages",
+    "group": "beverages",
+    "fitbot_tags": [
+      "pre_workout"
+    ],
+    "aliases": [
+      "coffee",
+      "black coffee"
+    ],
+    "per_100g": {
+      "calories_kcal": 1.0,
+      "protein_g": 0.12,
+      "carbs_g": 0.0,
+      "fat_g": 0.02,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 2.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 49.0,
+      "calcium_mg": 2.0,
+      "iron_mg": 0.01,
+      "caffeine_mg": 40.0
+    },
+    "portion": {
+      "description": "1 cup (8 fl oz)",
+      "grams": 237.0,
+      "nutrients": {
+        "calories_kcal": 2.4,
+        "protein_g": 0.3,
+        "carbs_g": 0.0,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 4.7,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 116.1,
+        "calcium_mg": 4.7,
+        "iron_mg": 0.0,
+        "caffeine_mg": 94.8
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171890/nutrients"
+  },
+  {
+    "name": "Black tea (brewed)",
+    "slug": "black-tea",
+    "fdc_id": 173227,
+    "usda_description": "Beverages, tea, black, brewed, prepared with tap water",
+    "usda_category": "Beverages",
+    "group": "beverages",
+    "fitbot_tags": [],
+    "aliases": [
+      "tea",
+      "black tea"
+    ],
+    "per_100g": {
+      "calories_kcal": 1.0,
+      "protein_g": 0.0,
+      "carbs_g": 0.3,
+      "fat_g": 0.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 3.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 37.0,
+      "calcium_mg": 0.0,
+      "iron_mg": 0.02,
+      "caffeine_mg": 20.0
+    },
+    "portion": {
+      "description": "1 cup (8 fl oz)",
+      "grams": 237.0,
+      "nutrients": {
+        "calories_kcal": 2.4,
+        "protein_g": 0.0,
+        "carbs_g": 0.7,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 7.1,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 87.7,
+        "calcium_mg": 0.0,
+        "iron_mg": 0.0,
+        "caffeine_mg": 47.4
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173227/nutrients"
+  },
+  {
+    "name": "Orange juice",
+    "slug": "orange-juice",
+    "fdc_id": 169098,
+    "usda_description": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "beverages",
+    "fitbot_tags": [
+      "limit_portion"
+    ],
+    "aliases": [
+      "orange juice",
+      "juice"
+    ],
+    "per_100g": {
+      "calories_kcal": 45.0,
+      "protein_g": 0.7,
+      "carbs_g": 10.4,
+      "fat_g": 0.2,
+      "fiber_g": 0.2,
+      "sugar_g": 8.4,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.02,
+      "potassium_mg": 200.0,
+      "calcium_mg": 11.0,
+      "iron_mg": 0.2,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 248.0,
+      "nutrients": {
+        "calories_kcal": 111.6,
+        "protein_g": 1.7,
+        "carbs_g": 25.8,
+        "fat_g": 0.5,
+        "fiber_g": 0.5,
+        "sugar_g": 20.8,
+        "sodium_mg": 2.5,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 496.0,
+        "calcium_mg": 27.3,
+        "iron_mg": 0.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169098/nutrients"
+  },
+  {
+    "name": "Apple juice (unsweetened)",
+    "slug": "apple-juice",
+    "fdc_id": 167771,
+    "usda_description": "Apple juice, canned or bottled, unsweetened, with added ascorbic acid",
+    "usda_category": "Fruits and Fruit Juices",
+    "group": "beverages",
+    "fitbot_tags": [
+      "limit_portion"
+    ],
+    "aliases": [
+      "apple juice"
+    ],
+    "per_100g": {
+      "calories_kcal": 46.0,
+      "protein_g": 0.1,
+      "carbs_g": 11.3,
+      "fat_g": 0.13,
+      "fiber_g": 0.2,
+      "sugar_g": 9.62,
+      "sodium_mg": 4.0,
+      "saturated_fat_g": 0.02,
+      "potassium_mg": 101.0,
+      "calcium_mg": 8.0,
+      "iron_mg": 0.12,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup",
+      "grams": 248.0,
+      "nutrients": {
+        "calories_kcal": 114.1,
+        "protein_g": 0.2,
+        "carbs_g": 28.0,
+        "fat_g": 0.3,
+        "fiber_g": 0.5,
+        "sugar_g": 23.9,
+        "sodium_mg": 9.9,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 250.5,
+        "calcium_mg": 19.8,
+        "iron_mg": 0.3,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/167771/nutrients"
+  },
+  {
+    "name": "Cola (regular)",
+    "slug": "cola",
+    "fdc_id": 174852,
+    "usda_description": "Beverages, carbonated, cola, regular",
+    "usda_category": "Beverages",
+    "group": "beverages",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "cola",
+      "coke",
+      "soda",
+      "soft drink",
+      "fizzy drink"
+    ],
+    "per_100g": {
+      "calories_kcal": 42.0,
+      "protein_g": 0.0,
+      "carbs_g": 10.4,
+      "fat_g": 0.25,
+      "fiber_g": 0.0,
+      "sugar_g": 9.94,
+      "sodium_mg": 3.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 5.0,
+      "calcium_mg": 1.0,
+      "iron_mg": 0.02,
+      "caffeine_mg": 9.0
+    },
+    "portion": {
+      "description": "1 can or bottle (12 fl oz)",
+      "grams": 370.0,
+      "nutrients": {
+        "calories_kcal": 155.4,
+        "protein_g": 0.0,
+        "carbs_g": 38.5,
+        "fat_g": 0.9,
+        "fiber_g": 0.0,
+        "sugar_g": 36.8,
+        "sodium_mg": 11.1,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 18.5,
+        "calcium_mg": 3.7,
+        "iron_mg": 0.1,
+        "caffeine_mg": 33.3
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/174852/nutrients"
+  },
+  {
+    "name": "Energy drink (Red Bull)",
+    "slug": "energy-drink",
+    "fdc_id": 173210,
+    "usda_description": "Beverages, Energy drink, RED BULL",
+    "usda_category": "Beverages",
+    "group": "beverages",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "energy drink",
+      "red bull"
+    ],
+    "per_100g": {
+      "calories_kcal": 43.0,
+      "protein_g": 0.46,
+      "carbs_g": 10.2,
+      "fat_g": 0.0,
+      "fiber_g": 0.0,
+      "sugar_g": 10.2,
+      "sodium_mg": 39.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 3.0,
+      "calcium_mg": 6.0,
+      "iron_mg": 0.06,
+      "caffeine_mg": 29.0
+    },
+    "portion": {
+      "description": "1 can 8.4 fl oz",
+      "grams": 258.0,
+      "nutrients": {
+        "calories_kcal": 110.9,
+        "protein_g": 1.2,
+        "carbs_g": 26.3,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 26.3,
+        "sodium_mg": 100.6,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 7.7,
+        "calcium_mg": 15.5,
+        "iron_mg": 0.2,
+        "caffeine_mg": 74.8
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173210/nutrients"
+  },
+  {
+    "name": "Fruit punch drink",
+    "slug": "fruit-punch-drink",
+    "fdc_id": 171914,
+    "usda_description": "Beverages, fruit punch drink, without added nutrients, canned",
+    "usda_category": "Beverages",
+    "group": "beverages",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "fruit punch",
+      "sugary drink"
+    ],
+    "per_100g": {
+      "calories_kcal": 48.0,
+      "protein_g": 0.0,
+      "carbs_g": 12.0,
+      "fat_g": 0.0,
+      "fiber_g": 0.0,
+      "sugar_g": 11.3,
+      "sodium_mg": 10.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 25.0,
+      "calcium_mg": 8.0,
+      "iron_mg": 0.09,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 cup (8 fl oz)",
+      "grams": 248.0,
+      "nutrients": {
+        "calories_kcal": 119.0,
+        "protein_g": 0.0,
+        "carbs_g": 29.8,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 28.0,
+        "sodium_mg": 24.8,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 62.0,
+        "calcium_mg": 19.8,
+        "iron_mg": 0.2,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/171914/nutrients"
+  },
+  {
+    "name": "Beer (regular)",
+    "slug": "beer",
+    "fdc_id": 168746,
+    "usda_description": "Alcoholic beverage, beer, regular, all",
+    "usda_category": "Beverages",
+    "group": "beverages",
+    "fitbot_tags": [
+      "limit",
+      "alcohol"
+    ],
+    "aliases": [
+      "beer"
+    ],
+    "per_100g": {
+      "calories_kcal": 43.0,
+      "protein_g": 0.46,
+      "carbs_g": 3.55,
+      "fat_g": 0.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.0,
+      "sodium_mg": 4.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 27.0,
+      "calcium_mg": 4.0,
+      "iron_mg": 0.02,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 can",
+      "grams": 356.0,
+      "nutrients": {
+        "calories_kcal": 153.1,
+        "protein_g": 1.6,
+        "carbs_g": 12.6,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 0.0,
+        "sodium_mg": 14.2,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 96.1,
+        "calcium_mg": 14.2,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/168746/nutrients"
+  },
+  {
+    "name": "Red wine",
+    "slug": "red-wine",
+    "fdc_id": 173190,
+    "usda_description": "Alcoholic beverage, wine, table, red",
+    "usda_category": "Beverages",
+    "group": "beverages",
+    "fitbot_tags": [
+      "limit",
+      "alcohol"
+    ],
+    "aliases": [
+      "wine",
+      "red wine"
+    ],
+    "per_100g": {
+      "calories_kcal": 85.0,
+      "protein_g": 0.07,
+      "carbs_g": 2.61,
+      "fat_g": 0.0,
+      "fiber_g": 0.0,
+      "sugar_g": 0.62,
+      "sodium_mg": 4.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 127.0,
+      "calcium_mg": 8.0,
+      "iron_mg": 0.46,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 fl oz",
+      "grams": 29.4,
+      "nutrients": {
+        "calories_kcal": 25.0,
+        "protein_g": 0.0,
+        "carbs_g": 0.8,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 0.2,
+        "sodium_mg": 1.2,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 37.3,
+        "calcium_mg": 2.4,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/173190/nutrients"
+  },
+  {
+    "name": "Potato chips (barbecue)",
+    "slug": "potato-chips",
+    "fdc_id": 167962,
+    "usda_description": "Snacks, potato chips, barbecue-flavor",
+    "usda_category": "Snacks",
+    "group": "treats",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "chips",
+      "crisps",
+      "potato chips"
+    ],
+    "per_100g": {
+      "calories_kcal": 487.0,
+      "protein_g": 6.51,
+      "carbs_g": 55.9,
+      "fat_g": 31.1,
+      "fiber_g": 3.8,
+      "sugar_g": 5.47,
+      "sodium_mg": 545.0,
+      "saturated_fat_g": 4.0,
+      "potassium_mg": 1190.0,
+      "calcium_mg": 32.0,
+      "iron_mg": 1.36,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 oz",
+      "grams": 28.35,
+      "nutrients": {
+        "calories_kcal": 138.1,
+        "protein_g": 1.8,
+        "carbs_g": 15.8,
+        "fat_g": 8.8,
+        "fiber_g": 1.1,
+        "sugar_g": 1.6,
+        "sodium_mg": 154.5,
+        "saturated_fat_g": 1.1,
+        "potassium_mg": 337.4,
+        "calcium_mg": 9.1,
+        "iron_mg": 0.4,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/167962/nutrients"
+  },
+  {
+    "name": "French fries (fast food)",
+    "slug": "french-fries",
+    "fdc_id": 170698,
+    "usda_description": "Fast foods, potato, french fried in vegetable oil",
+    "usda_category": "Fast Foods",
+    "group": "treats",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "french fries",
+      "fries",
+      "chips (fries)"
+    ],
+    "per_100g": {
+      "calories_kcal": 312.0,
+      "protein_g": 3.43,
+      "carbs_g": 41.4,
+      "fat_g": 14.7,
+      "fiber_g": 3.8,
+      "sugar_g": 0.3,
+      "sodium_mg": 210.0,
+      "saturated_fat_g": 2.34,
+      "potassium_mg": 579.0,
+      "calcium_mg": 18.0,
+      "iron_mg": 0.81,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 serving medium",
+      "grams": 117.0,
+      "nutrients": {
+        "calories_kcal": 365.0,
+        "protein_g": 4.0,
+        "carbs_g": 48.4,
+        "fat_g": 17.2,
+        "fiber_g": 4.4,
+        "sugar_g": 0.4,
+        "sodium_mg": 245.7,
+        "saturated_fat_g": 2.7,
+        "potassium_mg": 677.4,
+        "calcium_mg": 21.1,
+        "iron_mg": 0.9,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170698/nutrients"
+  },
+  {
+    "name": "Glazed doughnut",
+    "slug": "glazed-doughnut",
+    "fdc_id": 172758,
+    "usda_description": "Doughnuts, yeast-leavened, glazed, enriched (includes honey buns)",
+    "usda_category": "Baked Products",
+    "group": "treats",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "doughnut",
+      "donut"
+    ],
+    "per_100g": {
+      "calories_kcal": 421.0,
+      "protein_g": 6.14,
+      "carbs_g": 47.9,
+      "fat_g": 22.7,
+      "fiber_g": 2.1,
+      "sugar_g": 22.8,
+      "sodium_mg": 316.0,
+      "saturated_fat_g": 9.45,
+      "potassium_mg": 102.0,
+      "calcium_mg": 101.0,
+      "iron_mg": 2.38,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 doughnut medium (approx 3-3/4\" dia)",
+      "grams": 64.0,
+      "nutrients": {
+        "calories_kcal": 269.4,
+        "protein_g": 3.9,
+        "carbs_g": 30.7,
+        "fat_g": 14.5,
+        "fiber_g": 1.3,
+        "sugar_g": 14.6,
+        "sodium_mg": 202.2,
+        "saturated_fat_g": 6.0,
+        "potassium_mg": 65.3,
+        "calcium_mg": 64.6,
+        "iron_mg": 1.5,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar",
+      "High saturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172758/nutrients"
+  },
+  {
+    "name": "Chocolate chip cookies",
+    "slug": "chocolate-chip-cookies",
+    "fdc_id": 172716,
+    "usda_description": "Cookies, chocolate chip, commercially prepared, regular, higher fat, enriched",
+    "usda_category": "Baked Products",
+    "group": "treats",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "cookies",
+      "cookie",
+      "biscuits"
+    ],
+    "per_100g": {
+      "calories_kcal": 492.0,
+      "protein_g": 5.1,
+      "carbs_g": 65.4,
+      "fat_g": 24.7,
+      "fiber_g": 2.0,
+      "sugar_g": 32.9,
+      "sodium_mg": 311.0,
+      "saturated_fat_g": 8.09,
+      "potassium_mg": 171.0,
+      "calcium_mg": 21.0,
+      "iron_mg": 5.58,
+      "caffeine_mg": 11.0
+    },
+    "portion": {
+      "description": "1 cookie",
+      "grams": 12.9,
+      "nutrients": {
+        "calories_kcal": 63.5,
+        "protein_g": 0.7,
+        "carbs_g": 8.4,
+        "fat_g": 3.2,
+        "fiber_g": 0.3,
+        "sugar_g": 4.2,
+        "sodium_mg": 40.1,
+        "saturated_fat_g": 1.0,
+        "potassium_mg": 22.1,
+        "calcium_mg": 2.7,
+        "iron_mg": 0.7,
+        "caffeine_mg": 1.4
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/172716/nutrients"
+  },
+  {
+    "name": "Milk chocolate",
+    "slug": "milk-chocolate",
+    "fdc_id": 167587,
+    "usda_description": "Candies, milk chocolate",
+    "usda_category": "Sweets",
+    "group": "treats",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "milk chocolate",
+      "chocolate bar",
+      "candy"
+    ],
+    "per_100g": {
+      "calories_kcal": 535.0,
+      "protein_g": 7.65,
+      "carbs_g": 59.4,
+      "fat_g": 29.7,
+      "fiber_g": 3.4,
+      "sugar_g": 51.5,
+      "sodium_mg": 79.0,
+      "saturated_fat_g": 18.5,
+      "potassium_mg": 372.0,
+      "calcium_mg": 189.0,
+      "iron_mg": 2.35,
+      "caffeine_mg": 20.0
+    },
+    "portion": {
+      "description": "1 bar, miniature",
+      "grams": 7.0,
+      "nutrients": {
+        "calories_kcal": 37.5,
+        "protein_g": 0.5,
+        "carbs_g": 4.2,
+        "fat_g": 2.1,
+        "fiber_g": 0.2,
+        "sugar_g": 3.6,
+        "sodium_mg": 5.5,
+        "saturated_fat_g": 1.3,
+        "potassium_mg": 26.0,
+        "calcium_mg": 13.2,
+        "iron_mg": 0.2,
+        "caffeine_mg": 1.4
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar",
+      "High saturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/167587/nutrients"
+  },
+  {
+    "name": "Vanilla ice cream",
+    "slug": "vanilla-ice-cream",
+    "fdc_id": 167575,
+    "usda_description": "Ice creams, vanilla",
+    "usda_category": "Sweets",
+    "group": "treats",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "ice cream"
+    ],
+    "per_100g": {
+      "calories_kcal": 207.0,
+      "protein_g": 3.5,
+      "carbs_g": 23.6,
+      "fat_g": 11.0,
+      "fiber_g": 0.7,
+      "sugar_g": 21.2,
+      "sodium_mg": 80.0,
+      "saturated_fat_g": 6.79,
+      "potassium_mg": 199.0,
+      "calcium_mg": 128.0,
+      "iron_mg": 0.09,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 serving 1/2 cup",
+      "grams": 66.0,
+      "nutrients": {
+        "calories_kcal": 136.6,
+        "protein_g": 2.3,
+        "carbs_g": 15.6,
+        "fat_g": 7.3,
+        "fiber_g": 0.5,
+        "sugar_g": 14.0,
+        "sodium_mg": 52.8,
+        "saturated_fat_g": 4.5,
+        "potassium_mg": 131.3,
+        "calcium_mg": 84.5,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar",
+      "High saturated fat"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/167575/nutrients"
+  },
+  {
+    "name": "Cheese pizza (frozen, cooked)",
+    "slug": "cheese-pizza",
+    "fdc_id": 170317,
+    "usda_description": "Pizza, cheese topping, regular crust, frozen, cooked",
+    "usda_category": "Fast Foods",
+    "group": "treats",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "pizza"
+    ],
+    "per_100g": {
+      "calories_kcal": 268.0,
+      "protein_g": 10.4,
+      "carbs_g": 29.0,
+      "fat_g": 12.3,
+      "fiber_g": 2.2,
+      "sugar_g": 3.57,
+      "sodium_mg": 447.0,
+      "saturated_fat_g": 4.27,
+      "potassium_mg": 152.0,
+      "calcium_mg": 179.0,
+      "iron_mg": 2.27,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 serving 9 servings per 24 oz package",
+      "grams": 81.0,
+      "nutrients": {
+        "calories_kcal": 217.1,
+        "protein_g": 8.4,
+        "carbs_g": 23.5,
+        "fat_g": 10.0,
+        "fiber_g": 1.8,
+        "sugar_g": 2.9,
+        "sodium_mg": 362.1,
+        "saturated_fat_g": 3.5,
+        "potassium_mg": 123.1,
+        "calcium_mg": 145.0,
+        "iron_mg": 1.8,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/170317/nutrients"
+  },
+  {
+    "name": "Granulated sugar",
+    "slug": "granulated-sugar",
+    "fdc_id": 169655,
+    "usda_description": "Sugars, granulated",
+    "usda_category": "Sweets",
+    "group": "treats",
+    "fitbot_tags": [
+      "limit"
+    ],
+    "aliases": [
+      "sugar",
+      "table sugar"
+    ],
+    "per_100g": {
+      "calories_kcal": 387.0,
+      "protein_g": 0.0,
+      "carbs_g": 100.0,
+      "fat_g": 0.0,
+      "fiber_g": 0.0,
+      "sugar_g": 99.8,
+      "sodium_mg": 1.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 2.0,
+      "calcium_mg": 1.0,
+      "iron_mg": 0.05,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 tsp",
+      "grams": 4.2,
+      "nutrients": {
+        "calories_kcal": 16.3,
+        "protein_g": 0.0,
+        "carbs_g": 4.2,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 4.2,
+        "sodium_mg": 0.0,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 0.1,
+        "calcium_mg": 0.0,
+        "iron_mg": 0.0,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+  },
+  {
+    "name": "Honey",
+    "slug": "honey",
+    "fdc_id": 169640,
+    "usda_description": "Honey",
+    "usda_category": "Sweets",
+    "group": "treats",
+    "fitbot_tags": [
+      "limit_portion"
+    ],
+    "aliases": [
+      "honey"
+    ],
+    "per_100g": {
+      "calories_kcal": 304.0,
+      "protein_g": 0.3,
+      "carbs_g": 82.4,
+      "fat_g": 0.0,
+      "fiber_g": 0.2,
+      "sugar_g": 82.1,
+      "sodium_mg": 4.0,
+      "saturated_fat_g": 0.0,
+      "potassium_mg": 52.0,
+      "calcium_mg": 6.0,
+      "iron_mg": 0.42,
+      "caffeine_mg": 0.0
+    },
+    "portion": {
+      "description": "1 tbsp",
+      "grams": 21.0,
+      "nutrients": {
+        "calories_kcal": 63.8,
+        "protein_g": 0.1,
+        "carbs_g": 17.3,
+        "fat_g": 0.0,
+        "fiber_g": 0.0,
+        "sugar_g": 17.2,
+        "sodium_mg": 0.8,
+        "saturated_fat_g": 0.0,
+        "potassium_mg": 10.9,
+        "calcium_mg": 1.3,
+        "iron_mg": 0.1,
+        "caffeine_mg": 0.0
+      },
+      "note": "computed from USDA per-100 g values and USDA portion gram weight"
+    },
+    "highlights": [
+      "High sugar"
+    ],
+    "source": "USDA FoodData Central, SR Legacy (April 2018), CC0 1.0",
+    "source_url": "https://fdc.nal.usda.gov/food-details/169640/nutrients"
+  }
+]

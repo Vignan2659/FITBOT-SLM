@@ -1,0 +1,261 @@
+[
+ {
+  "q": "What exercises can I do for chest?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "bench",
+   "push",
+   "press",
+   "fly"
+  ],
+  "exercises_min": 3,
+  "group": "chest"
+ },
+ {
+  "q": "Best back exercises?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "row",
+   "pull",
+   "pulldown",
+   "deadlift"
+  ],
+  "exercises_min": 3,
+  "group": "back"
+ },
+ {
+  "q": "Give me some shoulder exercises",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "press",
+   "raise"
+  ],
+  "exercises_min": 3,
+  "group": "shoulders"
+ },
+ {
+  "q": "What leg exercises should I do?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "squat",
+   "lunge",
+   "leg"
+  ],
+  "exercises_min": 3,
+  "group": "legs"
+ },
+ {
+  "q": "Which exercises train the biceps and triceps?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "curl",
+   "tricep",
+   "dip",
+   "pushdown"
+  ],
+  "exercises_min": 3,
+  "group": "arms"
+ },
+ {
+  "q": "What are good core exercises?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "plank",
+   "crunch",
+   "core",
+   "leg raise"
+  ],
+  "exercises_min": 3,
+  "group": "core"
+ },
+ {
+  "q": "What cardio exercises can I do?",
+  "intents": [
+   "cardio",
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "walk",
+   "run",
+   "cycl",
+   "rope",
+   "row"
+  ],
+  "exercises_min": 3,
+  "group": "cardio"
+ },
+ {
+  "q": "Show me some stretches",
+  "intents": [
+   "stretching"
+  ],
+  "keywords_any": [
+   "stretch",
+   "hold"
+  ],
+  "exercises_min": 3,
+  "group": "stretching"
+ },
+ {
+  "q": "How do I do a deadlift?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "hip",
+   "back",
+   "bar"
+  ],
+  "exercises_min": 1
+ },
+ {
+  "q": "How do I perform a lat pulldown?",
+  "intents": [
+   "exercise_search",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "bar",
+   "chest",
+   "pull"
+  ],
+  "exercises_min": 1
+ },
+ {
+  "q": "What muscles does the bench press work?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "chest",
+   "tricep",
+   "shoulder"
+  ],
+  "exercises_min": 1
+ },
+ {
+  "q": "How do I do lunges correctly?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "knee",
+   "step",
+   "leg"
+  ],
+  "exercises_min": 1
+ },
+ {
+  "q": "Chest exercises for beginners?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "push",
+   "press"
+  ],
+  "exercises_min": 2,
+  "group": "chest",
+  "level": "Beginner"
+ },
+ {
+  "q": "Dumbbell exercises for back?",
+  "intents": [
+   "exercise_search",
+   "home_workout"
+  ],
+  "keywords_any": [
+   "row"
+  ],
+  "exercises_min": 1,
+  "group": "back"
+ },
+ {
+  "q": "Leg exercises I can do at home without equipment",
+  "intents": [
+   "home_workout",
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "squat",
+   "lunge",
+   "bridge"
+  ],
+  "exercises_min": 2,
+  "group": "legs"
+ },
+ {
+  "q": "What are the best ab exercises?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "plank",
+   "crunch",
+   "raise"
+  ],
+  "exercises_min": 3,
+  "group": "core"
+ },
+ {
+  "q": "How do I do a plank?",
+  "intents": [
+   "exercise_search"
+  ],
+  "keywords_any": [
+   "plank",
+   "straight",
+   "core"
+  ],
+  "exercises_min": 1
+ },
+ {
+  "q": "Give me a beginner 3-day gym workout",
+  "intents": [
+   "workout_plan",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "day"
+  ],
+  "plan": true,
+  "plan_days": 3
+ },
+ {
+  "q": "Make me a 4 day muscle building plan",
+  "intents": [
+   "workout_plan",
+   "muscle_gain"
+  ],
+  "keywords_any": [
+   "day"
+  ],
+  "plan": true,
+  "plan_days": 4
+ },
+ {
+  "q": "Give me a home workout plan with no equipment",
+  "intents": [
+   "home_workout",
+   "workout_plan"
+  ],
+  "keywords_any": [
+   "day",
+   "squat",
+   "push"
+  ],
+  "plan": true
+ }
+]

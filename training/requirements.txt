@@ -1,0 +1,10 @@
+# Training / evaluation (Colab installs these in the notebook's first cell)
+torch>=2.3
+transformers>=4.45
+peft>=0.12
+accelerate>=0.33
+datasets>=2.20
+evaluate>=0.4
+rouge-score>=0.1.2
+matplotlib>=3.8
+sentencepiece

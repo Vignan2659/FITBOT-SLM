@@ -1,0 +1,73 @@
+{
+  "cleaning": {
+    "raw_records": 927,
+    "removed_duplicate": 11,
+    "clean_records": 916
+  },
+  "split_sizes": {
+    "train": 726,
+    "validation": 93,
+    "test": 97
+  },
+  "groups": {
+    "train": 379,
+    "validation": 49,
+    "test": 49
+  },
+  "test_inputs_also_in_train_after_normalisation": 0,
+  "by_category": {
+    "food": 200,
+    "workout_exercises": 190,
+    "cardio_endurance": 49,
+    "home_workouts": 47,
+    "stretching_flexibility": 46,
+    "nutrition": 44,
+    "workout_planning": 41,
+    "out_of_domain": 41,
+    "medical_safety": 40,
+    "weight_loss": 36,
+    "muscle_building": 27,
+    "hydration": 27,
+    "recovery_sleep": 27,
+    "pre_post_workout": 26,
+    "gym_workouts": 21,
+    "fitness_equipment": 17,
+    "exercise_safety": 15,
+    "healthy_lifestyle": 13,
+    "greeting": 9
+  },
+  "by_intent": {
+    "food_search": 200,
+    "exercise_search": 182,
+    "nutrition_question": 73,
+    "home_workout": 59,
+    "stretching": 46,
+    "medical_safety": 41,
+    "out_of_domain": 41,
+    "workout_plan": 40,
+    "cardio": 37,
+    "weight_loss": 34,
+    "hydration": 27,
+    "muscle_gain": 25,
+    "general_fitness": 23,
+    "gym_workout": 21,
+    "equipment": 17,
+    "recovery": 16,
+    "exercise_safety": 14,
+    "sleep": 11,
+    "greeting": 9
+  },
+  "by_source": {
+    "seed": 329,
+    "exercise_db": 191,
+    "usda": 183,
+    "conversation": 85,
+    "planner": 48,
+    "safety": 40,
+    "ood": 40
+  },
+  "with_context": 632,
+  "with_history": 52,
+  "with_profile": 27,
+  "avg_response_words": 50.3
+}

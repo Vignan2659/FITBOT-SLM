@@ -1,0 +1,285 @@
+{
+  "train_size": 1861,
+  "validation_size": 213,
+  "test_size": 217,
+  "train_label_counts": {
+    "general_fitness": 345,
+    "exercise_search": 309,
+    "nutrition_question": 272,
+    "out_of_domain": 208,
+    "food_search": 168,
+    "workout_plan": 153,
+    "home_workout": 55,
+    "stretching": 47,
+    "medical_safety": 42,
+    "cardio": 42,
+    "hydration": 31,
+    "weight_loss": 31,
+    "muscle_gain": 28,
+    "gym_workout": 26,
+    "equipment": 25,
+    "recovery": 25,
+    "sleep": 20,
+    "exercise_safety": 17,
+    "greeting": 17
+  },
+  "validation": {
+    "accuracy": 0.831,
+    "macro_f1": 0.6622,
+    "per_class": {
+      "cardio": {
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.7692307692307693,
+        "support": 6.0
+      },
+      "equipment": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "exercise_safety": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 2.0
+      },
+      "exercise_search": {
+        "precision": 0.9459459459459459,
+        "recall": 0.8536585365853658,
+        "f1-score": 0.8974358974358975,
+        "support": 41.0
+      },
+      "food_search": {
+        "precision": 0.85,
+        "recall": 1.0,
+        "f1-score": 0.918918918918919,
+        "support": 17.0
+      },
+      "general_fitness": {
+        "precision": 0.9736842105263158,
+        "recall": 0.8809523809523809,
+        "f1-score": 0.925,
+        "support": 42.0
+      },
+      "gym_workout": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "home_workout": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1-score": 0.9090909090909091,
+        "support": 5.0
+      },
+      "hydration": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "medical_safety": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "muscle_gain": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "nutrition_question": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.8333333333333334,
+        "support": 30.0
+      },
+      "out_of_domain": {
+        "precision": 0.7692307692307693,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.8,
+        "support": 24.0
+      },
+      "recovery": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "sleep": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1-score": 0.75,
+        "support": 3.0
+      },
+      "stretching": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 4.0
+      },
+      "weight_loss": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.6666666666666666,
+        "support": 6.0
+      },
+      "workout_plan": {
+        "precision": 0.7142857142857143,
+        "recall": 0.9523809523809523,
+        "f1-score": 0.8163265306122449,
+        "support": 21.0
+      },
+      "accuracy": 0.8309859154929577,
+      "macro avg": {
+        "precision": 0.6704129085708033,
+        "recall": 0.6863143631436315,
+        "f1-score": 0.6621853532567817,
+        "support": 213.0
+      },
+      "weighted avg": {
+        "precision": 0.8177266355546563,
+        "recall": 0.8309859154929577,
+        "f1-score": 0.8182481520509689,
+        "support": 213.0
+      }
+    },
+    "ood_precision": 0.7692,
+    "ood_recall": 0.8333
+  },
+  "test": {
+    "accuracy": 0.8295,
+    "macro_f1": 0.732,
+    "per_class": {
+      "cardio": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1-score": 0.75,
+        "support": 3.0
+      },
+      "equipment": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "exercise_safety": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "exercise_search": {
+        "precision": 0.8974358974358975,
+        "recall": 0.8974358974358975,
+        "f1-score": 0.8974358974358975,
+        "support": 39.0
+      },
+      "food_search": {
+        "precision": 0.7857142857142857,
+        "recall": 0.9565217391304348,
+        "f1-score": 0.8627450980392157,
+        "support": 23.0
+      },
+      "general_fitness": {
+        "precision": 0.8717948717948718,
+        "recall": 0.8095238095238095,
+        "f1-score": 0.8395061728395061,
+        "support": 42.0
+      },
+      "gym_workout": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "home_workout": {
+        "precision": 0.7142857142857143,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.7142857142857143,
+        "support": 7.0
+      },
+      "hydration": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 3.0
+      },
+      "medical_safety": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.4,
+        "support": 6.0
+      },
+      "muscle_gain": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "nutrition_question": {
+        "precision": 0.896551724137931,
+        "recall": 0.7878787878787878,
+        "f1-score": 0.8387096774193549,
+        "support": 33.0
+      },
+      "out_of_domain": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.8333333333333334,
+        "support": 24.0
+      },
+      "recovery": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 3.0
+      },
+      "sleep": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "stretching": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1-score": 0.8571428571428571,
+        "support": 4.0
+      },
+      "weight_loss": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.7272727272727273,
+        "support": 5.0
+      },
+      "workout_plan": {
+        "precision": 0.75,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.7894736842105263,
+        "support": 18.0
+      },
+      "accuracy": 0.8294930875576036,
+      "macro avg": {
+        "precision": 0.7508768051871499,
+        "recall": 0.7342025526808136,
+        "f1-score": 0.7320317682580998,
+        "support": 217.0
+      },
+      "weighted avg": {
+        "precision": 0.8382781263442315,
+        "recall": 0.8294930875576036,
+        "f1-score": 0.8296710165117872,
+        "support": 217.0
+      }
+    },
+    "ood_precision": 0.8333,
+    "ood_recall": 0.8333
+  },
+  "test_fitbot_only_accuracy": 0.7629
+}

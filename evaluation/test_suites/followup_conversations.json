@@ -1,0 +1,618 @@
+[
+ {
+  "name": "chest_beginner_dumbbells",
+  "turns": [
+   {
+    "q": "What exercises can I do for chest?",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "chest",
+     "press",
+     "push"
+    ],
+    "exercises_min": 3,
+    "group": "chest"
+   },
+   {
+    "q": "I'm a beginner.",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "beginner",
+     "push",
+     "press"
+    ],
+    "exercises_min": 2,
+    "group": "chest",
+    "level": "Beginner",
+    "followup": true
+   },
+   {
+    "q": "I only have dumbbells.",
+    "intents": [
+     "exercise_search",
+     "home_workout"
+    ],
+    "keywords_any": [
+     "dumbbell",
+     "press"
+    ],
+    "plan": true,
+    "group": "chest",
+    "followup": true
+   },
+   {
+    "q": "What should I eat after this workout?",
+    "intents": [
+     "nutrition_question"
+    ],
+    "keywords_any": [
+     "protein",
+     "carb"
+    ],
+    "foods_min": 1
+   }
+  ]
+ },
+ {
+  "name": "weight_loss_beginner_dumbbells",
+  "turns": [
+   {
+    "q": "I want to lose weight.",
+    "intents": [
+     "weight_loss"
+    ],
+    "keywords_any": [
+     "calorie",
+     "deficit",
+     "activity"
+    ]
+   },
+   {
+    "q": "I'm a beginner.",
+    "intents": [
+     "weight_loss"
+    ],
+    "keywords_any": [
+     "beginner",
+     "walk",
+     "start"
+    ],
+    "followup": true
+   },
+   {
+    "q": "I only have dumbbells.",
+    "intents": [
+     "weight_loss",
+     "home_workout"
+    ],
+    "keywords_any": [
+     "dumbbell"
+    ],
+    "followup": true
+   }
+  ]
+ },
+ {
+  "name": "back_home",
+  "turns": [
+   {
+    "q": "Best back exercises?",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "row",
+     "pull"
+    ],
+    "exercises_min": 3,
+    "group": "back"
+   },
+   {
+    "q": "I'm working out at home with no equipment.",
+    "intents": [
+     "exercise_search",
+     "home_workout"
+    ],
+    "keywords_any": [
+     "superman",
+     "home",
+     "row"
+    ],
+    "group": "back",
+    "followup": true
+   }
+  ]
+ },
+ {
+  "name": "legs_level",
+  "turns": [
+   {
+    "q": "What leg exercises should I do?",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "squat",
+     "leg"
+    ],
+    "exercises_min": 3,
+    "group": "legs"
+   },
+   {
+    "q": "I'm a beginner",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "squat",
+     "beginner"
+    ],
+    "group": "legs",
+    "level": "Beginner",
+    "followup": true
+   }
+  ]
+ },
+ {
+  "name": "shoulders_dumbbells",
+  "turns": [
+   {
+    "q": "Give me shoulder exercises",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "press",
+     "raise"
+    ],
+    "exercises_min": 3,
+    "group": "shoulders"
+   },
+   {
+    "q": "I only have dumbbells",
+    "intents": [
+     "exercise_search",
+     "home_workout"
+    ],
+    "keywords_any": [
+     "press",
+     "raise",
+     "dumbbell"
+    ],
+    "group": "shoulders",
+    "followup": true
+   }
+  ]
+ },
+ {
+  "name": "arms_followup",
+  "turns": [
+   {
+    "q": "What exercises are good for arms?",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "curl",
+     "tricep"
+    ],
+    "exercises_min": 3,
+    "group": "arms"
+   },
+   {
+    "q": "What about legs?",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "squat",
+     "leg",
+     "lunge"
+    ],
+    "group": "legs",
+    "followup": true
+   }
+  ]
+ },
+ {
+  "name": "egg_then_chicken",
+  "turns": [
+   {
+    "q": "How much protein does an egg contain?",
+    "intents": [
+     "food_search",
+     "nutrition_question"
+    ],
+    "keywords_any": [
+     "protein"
+    ],
+    "foods_min": 1
+   },
+   {
+    "q": "What about chicken breast?",
+    "intents": [
+     "food_search",
+     "nutrition_question"
+    ],
+    "keywords_any": [
+     "protein",
+     "chicken"
+    ],
+    "foods_min": 1
+   }
+  ]
+ },
+ {
+  "name": "rice_white_brown",
+  "turns": [
+   {
+    "q": "Is rice good for a fitness diet?",
+    "intents": [
+     "food_search",
+     "nutrition_question"
+    ],
+    "keywords_any": [
+     "rice",
+     "carb"
+    ]
+   },
+   {
+    "q": "What about brown rice?",
+    "intents": [
+     "food_search",
+     "nutrition_question"
+    ],
+    "keywords_any": [
+     "brown",
+     "fiber",
+     "rice"
+    ],
+    "foods_min": 1
+   }
+  ]
+ },
+ {
+  "name": "plan_then_home",
+  "turns": [
+   {
+    "q": "Give me a beginner 3-day gym workout",
+    "intents": [
+     "workout_plan",
+     "gym_workout"
+    ],
+    "keywords_any": [
+     "day"
+    ],
+    "plan": true,
+    "plan_days": 3
+   },
+   {
+    "q": "Make it a home workout with no equipment",
+    "intents": [
+     "home_workout",
+     "workout_plan"
+    ],
+    "keywords_any": [
+     "home",
+     "day"
+    ],
+    "plan": true
+   }
+  ]
+ },
+ {
+  "name": "sleep_followup",
+  "turns": [
+   {
+    "q": "How much should I sleep?",
+    "intents": [
+     "sleep"
+    ],
+    "keywords_any": [
+     "7",
+     "hour"
+    ]
+   },
+   {
+    "q": "I only get 5 hours, is that bad?",
+    "intents": [
+     "sleep"
+    ],
+    "keywords_any": [
+     "sleep",
+     "less",
+     "recover"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "running_followup",
+  "turns": [
+   {
+    "q": "How do I start running?",
+    "intents": [
+     "cardio"
+    ],
+    "keywords_any": [
+     "walk",
+     "run"
+    ]
+   },
+   {
+    "q": "I hate running, any alternatives?",
+    "intents": [
+     "cardio"
+    ],
+    "keywords_any": [
+     "cycl",
+     "swim",
+     "walk",
+     "row"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "vegetarian_muscle",
+  "turns": [
+   {
+    "q": "I want to build muscle.",
+    "intents": [
+     "muscle_gain"
+    ],
+    "keywords_any": [
+     "protein",
+     "train",
+     "overload"
+    ]
+   },
+   {
+    "q": "I'm vegetarian. What should I eat for protein?",
+    "intents": [
+     "nutrition_question",
+     "muscle_gain"
+    ],
+    "keywords_any": [
+     "tofu",
+     "lentil",
+     "yogurt",
+     "bean"
+    ],
+    "foods_min": 1
+   }
+  ]
+ },
+ {
+  "name": "hydration_followup",
+  "turns": [
+   {
+    "q": "How much water should I drink?",
+    "intents": [
+     "hydration"
+    ],
+    "keywords_any": [
+     "litre",
+     "liter",
+     "water"
+    ]
+   },
+   {
+    "q": "What about during workouts?",
+    "intents": [
+     "hydration"
+    ],
+    "keywords_any": [
+     "water",
+     "electrolyte",
+     "sip",
+     "drink"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "core_bodyweight",
+  "turns": [
+   {
+    "q": "What are good core exercises?",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "plank",
+     "crunch"
+    ],
+    "exercises_min": 3,
+    "group": "core"
+   },
+   {
+    "q": "I don't have any equipment.",
+    "intents": [
+     "exercise_search",
+     "home_workout"
+    ],
+    "keywords_any": [
+     "plank",
+     "core"
+    ],
+    "group": "core",
+    "followup": true
+   }
+  ]
+ },
+ {
+  "name": "gym_first_time",
+  "turns": [
+   {
+    "q": "I'm going to the gym for the first time.",
+    "intents": [
+     "gym_workout",
+     "general_fitness"
+    ],
+    "keywords_any": [
+     "machine",
+     "light",
+     "warm"
+    ]
+   },
+   {
+    "q": "What machines should I use?",
+    "intents": [
+     "gym_workout"
+    ],
+    "keywords_any": [
+     "press",
+     "pulldown",
+     "row",
+     "leg"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "snacks_then_limit",
+  "turns": [
+   {
+    "q": "What are healthy snacks?",
+    "intents": [
+     "nutrition_question",
+     "food_search"
+    ],
+    "keywords_any": [
+     "yogurt",
+     "fruit",
+     "nut"
+    ],
+    "foods_min": 1
+   },
+   {
+    "q": "And which drinks should I avoid?",
+    "intents": [
+     "hydration",
+     "nutrition_question"
+    ],
+    "keywords_any": [
+     "soda",
+     "sugar",
+     "energy"
+    ],
+    "foods_min": 1
+   }
+  ]
+ },
+ {
+  "name": "soreness_followup",
+  "turns": [
+   {
+    "q": "My legs are really sore after leg day.",
+    "intents": [
+     "recovery"
+    ],
+    "keywords_any": [
+     "sore",
+     "rest",
+     "walk"
+    ]
+   },
+   {
+    "q": "Should I train legs again tomorrow?",
+    "intents": [
+     "recovery",
+     "workout_plan"
+    ],
+    "keywords_any": [
+     "48",
+     "rest",
+     "upper"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "chest_then_ood",
+  "turns": [
+   {
+    "q": "What exercises can I do for chest?",
+    "intents": [
+     "exercise_search"
+    ],
+    "keywords_any": [
+     "press",
+     "push"
+    ],
+    "exercises_min": 3,
+    "group": "chest"
+   },
+   {
+    "q": "Also, who is the president of France?",
+    "intents": [
+     "out_of_domain"
+    ],
+    "keywords_any": [
+     "focused on fitness"
+    ],
+    "ood": true
+   }
+  ]
+ },
+ {
+  "name": "plan_then_safety",
+  "turns": [
+   {
+    "q": "Make me a 3 day workout plan",
+    "intents": [
+     "workout_plan"
+    ],
+    "keywords_any": [
+     "day"
+    ],
+    "plan": true
+   },
+   {
+    "q": "My knee is swollen after squats, should I continue?",
+    "intents": [
+     "medical_safety"
+    ],
+    "keywords_any": [
+     "doctor",
+     "physiotherapist"
+    ],
+    "guardrail": true
+   }
+  ]
+ },
+ {
+  "name": "profile_style_endurance",
+  "turns": [
+   {
+    "q": "I want to improve my stamina.",
+    "intents": [
+     "cardio"
+    ],
+    "keywords_any": [
+     "aerobic",
+     "easy",
+     "gradual"
+    ]
+   },
+   {
+    "q": "I'm a beginner with no equipment.",
+    "intents": [
+     "cardio",
+     "home_workout"
+    ],
+    "keywords_any": [
+     "walk",
+     "minute",
+     "beginner"
+    ],
+    "followup": true
+   }
+  ]
+ }
+]

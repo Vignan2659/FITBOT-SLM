@@ -1,0 +1,80 @@
+[
+  {
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "params_m": 134.5,
+    "load_seconds": 24.9,
+    "device": "mps",
+    "answers": [
+      {
+        "q": "What exercises can I do for chest?",
+        "a": "For chest exercises, you can start with the following exercises:\n\n1. Chest Stretch: Stand with your feet hip-width apart, bend your knees, and place your hands on your chest. Lean forward and pull your chest towards your body, keeping your back straight. Hold for 30 seconds to 1 minute.\n\n2. Chest Extension: Stand with your feet hip-width apart, bend your knees, and place your hands on your chest. Lean forward and pull your chest towards your body, keeping your back straight. Hold for 30 seconds to 1 minute."
+      },
+      {
+        "q": "How much sleep do I need?",
+        "a": "The amount of sleep you need can vary greatly from person to person, and it's not always a fixed amount. However, most adults need 7-9 hours of sleep per night. If you're not getting enough sleep, it can affect your physical and mental health.\n\nIt's important to get enough sleep to feel rested and alert. If you're not getting enough sleep, you may feel tired, sluggish, or have trouble concentrating. If you're feeling tired, sleepy, or irritable, it may be a sign that you need more sleep.\n\nIt's also important to get"
+      },
+      {
+        "q": "What should I eat after a workout?",
+        "a": "After a workout, it's best to eat a balanced diet that includes protein, complex carbohydrates, and healthy fats. Here's a general guideline:\n\nProtein:\n\n* Protein-rich foods: lean meats, fish, eggs, dairy products, legumes, nuts, seeds, and soy products.\n* Carbohydrates: whole grains, fruits, vegetables, and legumes.\n* Healthy fats: avocados, nuts, seeds, olive oil, and fatty fish.\n\nComplex carbohydrates:\n\n* Whole grains: brown rice, quinoa, whole wheat bread, sweet potatoes, and brown rice"
+      },
+      {
+        "q": "What is the capital of France?",
+        "a": "The capital of France is Paris."
+      }
+    ],
+    "avg_latency_s": 0.89,
+    "tokens_per_s": 103.0
+  },
+  {
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "params_m": 361.8,
+    "load_seconds": 1.1,
+    "device": "mps",
+    "answers": [
+      {
+        "q": "What exercises can I do for chest?",
+        "a": "Sure, here are some exercises you can do for your chest:\n\n1. Push-ups: These are a great exercise for your chest. You can start with a few sets of 10-15 push-ups and gradually increase the number as you get stronger.\n\n2. Dumbbell rows: These are a great exercise for your chest. You can start with a few sets of 10-15 dumbbell rows and gradually increase the number as you get stronger.\n\n3. Dumbbell flyes: These are another great exercise for your chest. You can"
+      },
+      {
+        "q": "How much sleep do I need?",
+        "a": "Sleep is essential for your body to function properly. The amount of sleep you need can vary depending on your age, sex, and lifestyle. \n\nFor adults, the National Sleep Foundation recommends that adults get 7-9 hours of sleep each night. This can vary slightly depending on your age. For example, newborns need 14-17 hours of sleep, while older adults may need 7-9 hours.\n\nIt's also important to note that sleep is not just about the number of hours you get, but also the quality. If you're getting 7-9"
+      },
+      {
+        "q": "What should I eat after a workout?",
+        "a": "After a workout, it's important to refuel your body with the right nutrients to help your muscles recover and grow. Here are some general guidelines:\n\n1. **Carbohydrates**: Carbs are your body's primary source of energy. Try to consume complex carbs like whole grains, fruits, and vegetables. They provide sustained energy and help your body recover from the workout.\n\n2. **Protein**: Protein is essential for muscle recovery and growth. You can consume protein through foods like lean meats, fish, eggs, dairy, legumes, and nuts.\n\n3. **Healthy fats**: Healthy fats are"
+      },
+      {
+        "q": "What is the capital of France?",
+        "a": "The capital of France is Paris."
+      }
+    ],
+    "avg_latency_s": 1.14,
+    "tokens_per_s": 80.8
+  },
+  {
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "params_m": 494.0,
+    "load_seconds": 67.5,
+    "device": "mps",
+    "answers": [
+      {
+        "q": "What exercises can I do for chest?",
+        "a": "For the chest muscles, there are several effective exercises that can be done at home to improve strength and endurance. Here\u2019s a simple guide:\n\n1. **Push-ups**: These are great for building upper body strength. Start by doing one arm push-up and gradually increase the number of reps as you get stronger.\n\n2. **Dumbbell Chest Press**: This involves using dumbbells to lift weights from the chest. It targets the entire chest area effectively.\n\n3. **Bench Press**: This is similar to the bench press but uses a barbell instead of a bench. It helps develop the"
+      },
+      {
+        "q": "How much sleep do I need?",
+        "a": "The amount of sleep you need varies greatly from person to person based on factors such as age, sex, and overall health. Generally, adults should aim for 7-9 hours of sleep per night. However, this can depend on individual needs and circumstances.\n\nFor most people, getting enough sleep helps maintain good physical and mental health. It's important to note that too little sleep (less than 7 hours) has been linked to increased risk of obesity, diabetes, heart disease, and cognitive decline later in life. On the other hand, excessive sleep deprivation (more than 10 hours)"
+      },
+      {
+        "q": "What should I eat after a workout?",
+        "a": "After a workout, it's important to focus on replenishing your energy stores and ensuring proper recovery. Here\u2019s what you should aim to eat:\n\n1. **Protein**: Protein helps repair muscle tissue and aid in muscle recovery. It also supports the growth of new cells in your body.\n\n2. **Complex Carbohydrates**: These provide sustained energy throughout the day. Complex carbohydrates like whole grains, fruits, and vegetables are great choices.\n\n3. **Healthy Fats**: Healthy fats are essential for brain function and hormone production. They also help regulate blood sugar levels.\n\n4. **Hydration**:"
+      },
+      {
+        "q": "What is the capital of France?",
+        "a": "The capital of France is Paris."
+      }
+    ],
+    "avg_latency_s": 1.46,
+    "tokens_per_s": 63.1
+  }
+]

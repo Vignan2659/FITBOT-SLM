@@ -1,0 +1,778 @@
+[
+ {
+  "question": "Can working out improve my mood?",
+  "category": "healthy_lifestyle",
+  "intent": "general_fitness",
+  "reference": "Yes - regular physical activity can reduce feelings of stress and anxiety and improve mood and sleep. Walking outdoors, yoga, cycling, and strength training all help. If you're feeling persistently low or anxious, please also reach out to a healthcare professional.",
+  "base": "Working out can definitely boost your mood! Exercise releases chemicals called endorphins in your brain that act as natural painkillers and mood elevators. This means you'll feel happier and more relaxed after a workout. It's like having a little extra sunshine in your day!",
+  "fine_tuned": "Yes - regular physical activity boosts the production of feel-good chemicals like endorphins and serotonin, which can reduce stress and anxiety. It's especially helpful when combined with other activities that bring joy."
+ },
+ {
+  "question": "How many rest days do I need?",
+  "category": "recovery_sleep",
+  "intent": "recovery",
+  "reference": "Yes - muscles adapt and get stronger between sessions. Most people benefit from at least 1-2 rest days per week, and about 48 hours before training the same muscle group hard again. Rest days can include light activity like walking, stretching or easy cycling (active recovery).",
+  "base": "I'm sorry, but as a fitness and nutrition assistant, my main function is to provide guidance on how to maintain a healthy lifestyle through regular exercise and balanced eating habits. I don't have access to personal data such as rest days or weekly activity guidelines. It's best to consult with a healthcare provider or a certified trainer for personalized advice based on individual needs and goals.",
+  "fine_tuned": "Most people benefit from at least one full session of strength training per week, plus some light cardio - around 1-3 rest days per week works well. For example, if you train 3 times a week, add 2-4 rest days; if you train 6+ times a week, add 1-3 rest days. A good rule of thumb is 4-6 rest days per week, leaving enough time for active recovery like mobility, flexibility and sleep."
+ },
+ {
+  "question": "What exercises work the back?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "Effective back exercises include pull-ups, lat pulldowns, seated rows, dumbbell rows, bent-over rows and deadlifts. Combine vertical pulls (pull-ups, pulldowns) with horizontal pulls (rows) for a complete back.",
+  "base": "The back muscles, also known as the spinal erectors, include the rhomboids, trapezius, and latissimus dorsi. Here are some exercises that target these muscles:\n\n1. **Reverse Curl**: This exercise works the rhomboid muscles by curling your shoulders backward while keeping them straight. It's great for strengthening the upper back.\n\n2. **Seated Cable Raise**: Sit on a chair or bench with your feet flat on the floor. Hold onto a cable with both hands and raise your torso up until your arms are fully extended. Lower slowly to the starting position.\n\n3. **Desk Push-ups**: Place your elbows at shoulder width apart and lower your body down until your chest almost touches the desk. Keep your core engaged and avoid letting your hips sag.\n\n4. **Back Extension Machine**: This machine uses resistance bands attached to pulleys. Lie on the machine with your knees bent and feet flat on the ground. Pull your chest",
+  "fine_tuned": "Great back exercises include dead bugs (back extension), glute bridges, reverse flys, overhead dumbbell press-and-rotl, cable rows, lat pulldowns, rear delt flies and seated upper traps. Do 2-3 sets of 10-12 reps per set. Warm up first, focus on controlled reps, and add weight or reps gradually as the workout progresses."
+ },
+ {
+  "question": "Should I work out through sharp joint pain?",
+  "category": "medical_safety",
+  "intent": "medical_safety",
+  "reference": "No - don't push through sharp or joint pain. Stop the exercise that causes it and try pain-free alternatives for other body parts. If the pain persists, comes with swelling or instability, or affects daily life, see a doctor or physiotherapist for an assessment. FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.",
+  "base": "No, working out through sharp joint pain should be avoided as it could lead to further injury. It's best to consult a healthcare professional before starting any new workout routine. They will assess the severity of your condition and provide guidance based on your specific needs.",
+  "fine_tuned": "Pain from training doesn't mean you're doing something wrong - it's normal adaptation. If the pain persists after 2-4 weeks of training, stops improving over time, or worsens, see a trainer or physiotherapist."
+ },
+ {
+  "question": "Is bread unhealthy?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "Bread can fit into a healthy diet. Whole-grain or whole-wheat bread provides more fiber and keeps you fuller than white bread. Pair it with protein - eggs, hummus, chicken or peanut butter - and watch portions if you're managing weight.",
+  "base": "Yes, bread can be considered unhealthy if consumed excessively. Bread contains a significant amount of sugar, which can contribute to weight gain and other health problems when eaten in large amounts. Additionally, the high glycemic index of bread means that consuming too much can cause blood sugar levels to spike, leading to energy crashes later. It's also important to note that many breads contain refined grains, such as white flour, which may have been stripped of their nutrients during processing. However, whole grain breads made from whole wheat or rye flours tend to be healthier options due to their higher fiber content.",
+  "fine_tuned": "Yes, bread is considered one of the top sources of sugar in the UK diet according to the latest figures from the National Health Service. It's also high in refined flour, which raises blood sugar levels quickly. Whole grain bread has less sugar and more fibre than white bread, so it's worth choosing if you're watching your weight or want better heart health."
+ },
+ {
+  "question": "Can you diagnose my back injury?",
+  "category": "medical_safety",
+  "intent": "medical_safety",
+  "reference": "I can't diagnose injuries, but sudden pain, swelling, bruising, weakness or a popping sensation should be assessed by a doctor or physiotherapist. Until then, stop exercises that cause pain and protect the area. Once you've been assessed, a professional can guide a safe return to training. FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.",
+  "base": "I'm an AI designed to provide health advice, but I don't have the ability to diagnose any physical condition like a back injury. It's best to consult a healthcare professional for accurate diagnosis.",
+  "fine_tuned": "I'm focused on fitness, nutrition and wellness. Ask me something related to workouts, food, exercise, recovery or healthy lifestyle."
+ },
+ {
+  "question": "Can I burn fat just from my stomach?",
+  "category": "weight_loss",
+  "intent": "weight_loss",
+  "reference": "You can't choose where you lose fat - crunches strengthen your abs but don't specifically burn belly fat. Belly fat goes down as your overall body fat goes down, through a modest calorie deficit, regular activity, strength training, enough sleep and less alcohol and sugary drinks. Keep training your core for strength, but focus on the overall habits for fat loss.",
+  "base": "No, burning fat primarily occurs in the abdominal area due to muscle mass being more metabolically active than other parts of the body. However, there are some exercises that may help increase fat loss by targeting specific areas like the abs, such as crunches and planks. But overall, focusing solely on burning fat from the stomach won't be effective. It's important to maintain a balanced diet and regular physical activity to achieve optimal results.",
+  "fine_tuned": "I'm focused on fitness and nutrition - ask me something about workouts, food, strength or recovery."
+ },
+ {
+  "question": "Which foods have lots of fiber?",
+  "category": "nutrition",
+  "intent": "nutrition_question",
+  "reference": "Foods high in fiber include kidney beans, chickpeas, oats, whole-wheat tortilla and walnuts. For example, 1 cup of kidney beans (boiled) provides about 11.3 g of fiber (USDA). Increase fiber gradually and drink enough water.",
+  "base": "Foods that are high in fiber include:\n\n1. **Whole grain bread**: Made from wheat flour, water, and sometimes other ingredients like yeast, sugar, and salt. It's made from the bran layer of the grain, which contains more fiber than refined white bread.\n\n2. **Oats**: Made from the seed of the oat plant, oats contain a lot of dietary fiber. They're often used as breakfast food due to their high nutritional value.\n\n3. **Legumes**: Legumes such as peas, beans, lentils, chickpeas, and peanuts are rich in fiber. They're also low in calories and high in protein.\n\n4. **Nuts and seeds**: Nuts and seeds like almonds, chia seeds, flaxseeds, and sunflower seeds are packed with fiber. They're also high in healthy fats and protein.\n\n5. **Vegetables**: Leafy greens like spinach, broccoli, and kale are great sources of fiber. Other vegetables like carrots, sweet potatoes,",
+  "fine_tuned": "Good sources of fiber include kidney beans, chickpeas, oats, whole wheat tortilla, walnuts and most vegetables. Aim for at least 14 g of fiber per day according to the USDA values."
+ },
+ {
+  "question": "Is white rice bad for fitness?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "Yes, rice is fine in a fitness diet. It's an easy-to-digest carbohydrate that fuels training and refills energy afterwards. Brown rice has more fiber; white rice is gentler around workouts. Pair it with a protein source and vegetables, and adjust the portion to your goals - smaller if you're trying to lose weight, larger if you're very active or building muscle.",
+  "base": "No, white rice is not necessarily bad for fitness. It's a simple carb that provides quick energy when consumed in moderation. However, if you're looking to maintain muscle mass during intense workouts, it might be beneficial to limit your intake of refined carbs like white rice. \n\nAiming for whole grain options like brown rice, quinoa, or oatmeal instead of refined ones could potentially support muscle growth and recovery. But remember, these suggestions should be balanced with other aspects of a fitness diet, such as proteins, fats, vitamins, and minerals. Always consult with a fitness expert or nutritionist for personalized advice tailored to your specific needs and goals.",
+  "fine_tuned": "White rice is generally considered okay for most people - it's easily digestible and provides some carbs. It's worth noting that refined rice (like white rice) lacks fiber and nutrients compared to whole grain rice. For example, brown rice contains 10g of fiber per 100g, which is about half what refined rice has. A balanced mix of whole grains, fruits, vegetables and protein keeps you full and supports overall health."
+ },
+ {
+  "question": "Which foods have good fats?",
+  "category": "nutrition",
+  "intent": "nutrition_question",
+  "reference": "Foods with mostly healthy, unsaturated fats include cashews, salmon, almonds, peanut butter and sardines. For example, 1 oz of cashews (raw) provides about 5.2 g of protein and 156.8 kcal according to USDA data. Include a protein source at each meal.",
+  "base": "Yes, I can provide that information. Foods rich in monounsaturated and polyunsaturated fats include:\n\n1. Olive oil\n2. Avocado\n3. Fatty fish like salmon, tuna, mackerel, and sardines\n4. Nuts like almonds, walnuts, pecans, and hazelnuts\n5. Seeds like pumpkin, sunflower, and flaxseeds\n6. Fatty fish like halibut, cod, and swordfish\n7. Shrimp and other seafood\n8. Tuna and other oily fish\n9. Flaxseeds and chia seeds\n10. Walnuts and other nuts\n\nThese foods contain heart-healthy fats that can help lower bad cholesterol levels and support overall cardiovascular health. However, please note that the American Heart Association recommends limiting saturated and trans fats to less than 10% of total calories from these sources.",
+  "fine_tuned": "Good sources of heart-healthy fats include cashews, salmon, almonds, peanut butter, sardines and sardines. For example, cashews (raw), salmon (Atlantic, farmed, cooked), almonds and peanut butter (high fat) provide mostly unsaturated fat. Note that these values assume 100 grams of the food."
+ },
+ {
+  "question": "How much protein does lentils have?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, lentils (boiled), 1 cup (198 g), contains about 17.9 g of protein and 229.7 kcal. It's noted as high protein and high fiber based on the USDA values.",
+  "base": "Lentils contain approximately 17.9 grams of protein per cup (198 grams).",
+  "fine_tuned": "According to USDA FoodData Central, lentils (boiled), 1 cup (198 g), provides about 17.9 g of protein and 229.7 kcal. It's noted as high protein based on the USDA values."
+ },
+ {
+  "question": "Can you explain how to do Rear Delt Fly?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "A bent-over fly that targets the rear deltoids and upper back, supporting good posture. It mainly targets the shoulders. How to do it: To begin, lie down on an incline bench with the chest and stomach pressing against the incline Have the dumbbells in each hand with the palms facing each other (neutral grip). Safety tip: Keep a slight bend in the elbows, a flat back and use light weights.",
+  "base": "Sure! Here's a step-by-step guide on how to perform a Rear Delt Fly:\n\n1. **Find a Bench:** Start by finding a sturdy, flat surface like a yoga mat or a gym floor. Make sure it's at least 3 feet away from you.\n\n2. **Position Your Body:** Lie down on your back with your knees bent and your feet flat on the ground. Place your hands behind your head, with your fingers pointing towards your shoulders. \n\n3. **Hold the Dumbbells:** Hold one dumbbell in each hand with your palms facing up. Ensure your palms are facing each other.\n\n4. **Start the Motion:** Begin by extending your arms out to the sides, keeping them straight but not fully extended. This will create a slight bend in your elbows.\n\n5. **Push Back:** Push your body upwards as if you were trying to lift something off the ground. Keep your core engaged and your abs tightened",
+  "fine_tuned": "A bent-over fly that targets the rear deltoids and upper back, supporting good posture. It mainly targets the shoulders. How to do it: Lie down on an incline bench with the chest and stomach pressing against the incline. Have the dumbbells in each hand with the palms facing each other (neutral grip) And safety tip: Keep a slight bend in the elbows, a flat back and use light weights."
+ },
+ {
+  "question": "What are good core exercises for beginners?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "Good beginner-friendly core exercises are: Plank, Crunches, Leg Raises, Mountain Climbers and Dead Bug. For example, the Plank (beginner, bodyweight) targets the abdominals. As a beginner, start with light weights or easier variations, do 2-3 sets of 10-12 reps, and focus on controlled, full-range movement before adding load.",
+  "base": "Sure, here are some effective core exercises for beginners:\n\n1. Planks: This exercise works all of your core muscles, including your abs, obliques, and lower back. It's great for building strength and endurance.\n\n2. Russian Twists: These twists target your obliques (the sides of your abdomen) and also work your chest and upper back muscles.\n\n3. Russian Twists with Knee Lift: This variation adds an extra challenge by lifting your knee off the ground as you twist.\n\n4. Side Planks: This exercise targets both your obliques and your side muscles.\n\n5. Bird Dog: This exercise combines planks with push-ups and squats. It's a great full-body workout.\n\n6. Russian Twist with Knee Lift: This combination of exercises targets your obliques and upper back.\n\n7. Bicycle Crunches: This exercise targets your obliques and lower back.\n\n8. Seated Cable Curls: This exercise",
+  "fine_tuned": "Good beginner-friendly core exercises include the plank (beginner, bodyweight), crunches, leg raises, mountain climbers and dead bug. For example, the plank (beginner, bodyweight) targets abdominals. As a beginner, start with an easy variation like the plank and add weight or harder variations as the exercises feel easier."
+ },
+ {
+  "question": "Will crunches get rid of belly fat?",
+  "category": "weight_loss",
+  "intent": "weight_loss",
+  "reference": "You can't choose where you lose fat - crunches strengthen your abs but don't specifically burn belly fat. Belly fat goes down as your overall body fat goes down, through a modest calorie deficit, regular activity, strength training, enough sleep and less alcohol and sugary drinks. Keep training your core for strength, but focus on the overall habits for fat loss.",
+  "base": "Crunches may help reduce belly fat if done correctly, but they won't necessarily eliminate it completely. The best way to achieve this goal is by combining regular aerobic exercise with strength training exercises that target all major muscle groups, including the stomach area. This combination helps increase overall calorie burning and promotes fat loss throughout the body. However, some people might experience temporary relief from bloating after doing crunches due to water retention caused by the increased blood volume. It's essential to maintain a balanced diet and engage in other forms of physical activity to support long-term weight management.",
+  "fine_tuned": "Crunches don't directly target belly fat - they mainly build abdominal muscles. For belly fat, add cardio, strength training and good eating habits first. Spot reduction is unlikely; most people lose belly fat by adding overall calories below their current intake."
+ },
+ {
+  "question": "Chocolate milk as recovery drink?",
+  "category": "pre_post_workout",
+  "intent": "nutrition_question",
+  "reference": "Chocolate milk can be a convenient recovery drink because it combines protein and carbohydrates with fluid. It also contains added sugar, so it makes the most sense after longer or harder sessions. Plain milk with a banana is a similar option with less added sugar.",
+  "base": "While chocolate milk might be a popular choice for refueling after a workout, it's generally not recommended as a primary recovery drink due to its high sugar content and potential impact on blood sugar levels. Instead, consider consuming sports drinks or electrolyte-rich beverages like coconut water or sports gels during or immediately after a workout to replenish lost electrolytes and fluids.",
+  "fine_tuned": "Yes - chocolate milk provides protein and carbohydrates after training, which helps muscle repair and recovery. It's easy to add during workouts, especially if you're short on time."
+ },
+ {
+  "question": "What nutrients are in bagel?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, bagel (plain), 1 mini bagel (2-1/2\" dia) (26 g), contains 71.5 kcal, 2.7 g protein, 13.9 g carbohydrate, 0.4 g fat and 0.6 g fiber.",
+  "base": "Bagels typically contain the following nutrients:\n\n1. Protein: Approximately 2 grams of protein per serving.\n2. Carbohydrate: About 13.9 grams of carbohydrates per serving.\n3. Fat: Around 0.4 grams of fat per serving.\n4. Fiber: Some sources suggest that bagels may have around 0.6 grams of dietary fiber per serving.\n\nPlease note that these amounts can vary depending on factors like the type of bagel, how much sugar is added, and other ingredients used. Always check the nutritional label to get more specific information.",
+  "fine_tuned": "According to USDA FoodData Central, bagel (plain), 1 mini bagel (2-1/2\" dia) (26 g), contains 71.5 kcal, 2.7 g protein, 13.9 g carbohydrate and 0.4 g fat."
+ },
+ {
+  "question": "How do I lose belly fat?",
+  "category": "weight_loss",
+  "intent": "weight_loss",
+  "reference": "You can't choose where you lose fat - crunches strengthen your abs but don't specifically burn belly fat. Belly fat goes down as your overall body fat goes down, through a modest calorie deficit, regular activity, strength training, enough sleep and less alcohol and sugary drinks. Keep training your core for strength, but focus on the overall habits for fat loss.",
+  "base": "Losing belly fat requires a combination of diet, exercise, and lifestyle changes that focus on reducing overall body fat percentage while increasing muscle mass. Here's how to start:\n\n1. **Eat a balanced diet**: Focus on whole, nutrient-dense foods like fruits, vegetables, lean proteins, and whole grains. Limit processed foods, sugars, and saturated fats. Aim for 50% of daily calories from carbohydrates, 20% from proteins, and 30% from fats.\n\n2. **Increase fiber intake**: Fiber helps slow down digestion and absorption of sugar, which can lead to weight loss. Aim for at least 25 grams of fiber per day.\n\n3. **Stay hydrated**: Drink plenty of water throughout the day. Dehydration can cause bloating and make it harder to lose weight.\n\n4. **Exercise regularly**: Aim for at least 150 minutes of moderate aerobic activity or 75 minutes of vigorous activity each week. This could",
+  "fine_tuned": "For most people, losing belly fat requires a combination of regular physical activity and a calorie deficit. Aim to walk 150 minutes per week, lift weights 2-3 times a week, eat plenty of vegetables, fruits and whole grains, limit added sugars and saturated fats, drink water throughout the day, and track your progress."
+ },
+ {
+  "question": "How many minutes should I spend at the gym?",
+  "category": "gym_workouts",
+  "intent": "gym_workout",
+  "reference": "Most effective workouts take about 45-75 minutes including warm-up. Beginners can get great results in 30-45 minutes. The quality and consistency of your sets matter far more than total time spent in the gym.",
+  "base": "I'm sorry, but as a fitness and wellness AI, I don't have access to personal data such as time spent at the gym. My purpose is to provide general advice and guidance related to fitness and wellness. I suggest consulting a fitness expert or a health advisor for personalized advice based on individual needs and goals.",
+  "fine_tuned": "I'm focused on fitness and nutrition - please ask me something related to workouts, food, recovery or healthy lifestyle."
+ },
+ {
+  "question": "I think I tore something in my shoulder",
+  "category": "medical_safety",
+  "intent": "medical_safety",
+  "reference": "I can't diagnose injuries, but sudden pain, swelling, bruising, weakness or a popping sensation should be assessed by a doctor or physiotherapist. Until then, stop exercises that cause pain and protect the area. Once you've been assessed, a professional can guide a safe return to training. FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.",
+  "base": "Sorry to hear that you're experiencing pain in your shoulder. It's important to take some time to rest and possibly consult a healthcare provider if the pain persists. They will be able to assess whether there's an injury and provide guidance on how to treat it effectively.",
+  "fine_tuned": "Sorry to hear that - please rest the shoulder for at least 2-4 weeks, keep it loose and use an ice pack every 30 minutes, and consider strengthening the rotator cuff if possible. FitBot provides general fitness and wellness advice and is not a substitute for professional medical advice."
+ },
+ {
+  "question": "Plan a trip to Paris for me.",
+  "category": "out_of_domain",
+  "intent": "out_of_domain",
+  "reference": "That's not something I can help with - i'm focused on fitness, nutrition and wellness. Ask me something about workouts, exercise, food, recovery or healthy lifestyle.",
+  "base": "Sure, I'd be happy to help plan your trip to Paris! \n\nFirst, let's start by deciding how long you want the trip to be. A typical week-long trip would be ideal, but if you have more time, that's great too. We'll also need to consider what time of year you're planning to visit. The weather in Paris can vary greatly depending on the season, so spring (April to June) and autumn (September to November) tend to be mild and pleasant. Summer can get quite hot, while winters can be cold.\n\nNext, we should think about where you want to go. There are many famous landmarks like the Eiffel Tower, Notre Dame Cathedral, and the Louvre Museum. Some popular neighborhoods include Montmartre, Le Marais, and Saint-Germain-des-Pr\u00e9s. Each has its own character and charm.\n\nWe should also discuss transportation options. Paris has an excellent public transportation system, including metro",
+  "fine_tuned": "Paris has plenty of great options - the Eiffel Tower, Louvre, Notre Dame, Montmartre, Seine River cruises, museums like the Louvre and Orsay, and charming neighborhoods like Montmartre and Le Marais. For example, the 3-day Paris Museum Pass gives free entry to many attractions and lets you skip long lines. Plan at least one day in the city center, and consider a guided tour if you're new to sightseeing."
+ },
+ {
+  "question": "Recommend a good movie to watch tonight.",
+  "category": "out_of_domain",
+  "intent": "out_of_domain",
+  "reference": "I'm focused on fitness, nutrition and wellness. Ask me something about workouts, exercise, food, recovery or healthy lifestyle.",
+  "base": "I'm sorry, but as a fitness and wellness AI, I don't have the ability to suggest movies. However, if you're looking for something relaxing and enjoyable, there are many great options available. Some popular choices include \"The Notebook,\" \"The Pursuit of Happyness,\" \"La La Land,\" and \"The Secret Life of Walter Mitty.\" These films often feature strong characters, beautiful scenery, and uplifting themes that might be suitable for a movie night.",
+  "fine_tuned": "I'm focused on fitness and wellness right now. Ask me something about workouts, nutrition, recovery or healthy lifestyle instead."
+ },
+ {
+  "question": "How do I do superman?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "A floor exercise that strengthens the lower back and glutes without equipment. It mainly targets the lower back, glutes and hamstrings. How to do it: To begin, lie straight and face down on the floor or exercise mat Your arms should be fully extended in front of you. Safety tip: Lift slowly and only as high as is comfortable; avoid cranking your neck back.",
+  "base": "To perform a Superman exercise, follow these steps:\n\n1. Lie flat on your stomach on the ground. Make sure your body forms a straight line from head to heels.\n\n2. Extend your arms out to the sides at shoulder height. Keep them relaxed but not flared out.\n\n3. Bring one arm up towards your chest while keeping the other arm still. Try to keep your elbow close to your side.\n\n4. Slowly lift your arm up until your palm faces upwards. Be careful not to twist your upper body.\n\n5. Lower your arm back down to the starting position. Repeat this movement with the other arm.\n\n6. Continue alternating between both arms for 10 repetitions.\n\nRemember to breathe normally during the exercise and don't strain yourself. It's okay if you feel some discomfort - Superman exercises can be challenging!",
+  "fine_tuned": "A beginner-friendly floor exercise thatstrengthens the lower back and glutes without equipment. It mainly targets the lower back and glutes. How to do it: Lie straight and face down on the floor or exercise mat Your arms should be fully extended in front of you Safety tip: Lift slowly and only as high as is comfortable; avoid cranking your neck back."
+ },
+ {
+  "question": "Protein content of salmon?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, salmon (atlantic, farmed, cooked), 0.5 fillet (178 g), contains about 39.3 g of protein and 366.7 kcal. It's noted as high protein and mostly unsaturated fat based on the USDA values.",
+  "base": "The protein content of salmon varies depending on the type of salmon and how it's prepared. However, according to the USDA FoodData Central database, a 0.5-fillet serving of salmon (about 178 grams) typically contains around 39.3 grams of protein. This amount includes all essential amino acids, making it a good source of protein.",
+  "fine_tuned": "According to USDA FoodData Central, salmon (atlantic, farmed, cooked), 0.5 fillet (178 g), provides about 39.3 g of protein and 366.7 kcal. It's noted as high protein based on the USDA values."
+ },
+ {
+  "question": "How do I progress my workouts over time?",
+  "category": "workout_planning",
+  "intent": "workout_plan",
+  "reference": "Progressive overload means gradually making your training more challenging so your body keeps adapting. You can add a little weight, do an extra rep or set, slow the tempo, or reduce rest. A simple method: work in a rep range like 8-12, and once you hit 12 reps on all sets with good form, increase the weight slightly.",
+  "base": "Progress in workouts depends on several factors such as the intensity of your workout, how much weight you're lifting, and how long you're working out. Here's some guidance:\n\n1. **Increase Weight**: As you get stronger, you'll need more weight to lift. This means you'll have to increase the amount of weight you're lifting each session. Aim to increase the weight by no more than 5% every two weeks.\n\n2. **Increase Repetitions**: The number of times you perform an exercise also increases. For example, if you were doing squats once a week, try increasing them to twice a week.\n\n3. **Increase Sets**: The number of times you complete a set of exercises also increases. For instance, if you were doing 6 sets of squats once a week, try increasing that to 7 sets.\n\n4. **Increase Rest Time**: Your body needs rest between workouts. Try to allow at least one day off",
+  "fine_tuned": "Progression comes from adding weight, reps, sets or slower times each session. For example, if you train 4 weeks ago with 5 sets of 10 reps, aim for 6 sets of 12 reps next week. Add one rep or one minute every 4-6 weeks, and focus on the new movement patterns first."
+ },
+ {
+  "question": "What is HIIT?",
+  "category": "cardio_endurance",
+  "intent": "cardio",
+  "reference": "HIIT (high-intensity interval training) alternates short, hard efforts with recovery - for example 30 seconds fast cycling, 90 seconds easy, repeated. It's time-efficient and improves fitness. Steady-state cardio at a moderate pace is easier to recover from and great for beginners. Both work; a common approach is 1-2 HIIT sessions per week plus easier cardio.",
+  "base": "High-Intensity Interval Training (HIIT) is an intense workout that alternates between short bursts of high-intensity exercise and periods of rest. It's often used as a way to get more out of your workouts by increasing the intensity and duration of each session. This type of training involves quick, short bursts of activity followed by brief periods of rest or low-intensity activities. The goal is to challenge your body quickly, making it harder than usual to recover, which helps build strength, endurance, and overall fitness.",
+  "fine_tuned": "High-Intensity Interval Training (HIIT) uses short bursts of very hard effort followed by brief rest or active recovery. It's faster than steady-state cardio because the harder effort is interspersed with shorter easy intervals - 20 seconds of hard work plus 40 seconds of rest. For example, sprint 30 seconds of fast walking followed by 5 minutes of easy jogging. It mainly targets the heart and muscles, makes workouts feel more intense, and burns calories quickly."
+ },
+ {
+  "question": "Should I stop eating bread?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "Bread can fit into a healthy diet. Whole-grain or whole-wheat bread provides more fiber and keeps you fuller than white bread. Pair it with protein - eggs, hummus, chicken or peanut butter - and watch portions if you're managing weight.",
+  "base": "No, you shouldn't stop eating bread entirely. Bread is a nutritious food that provides essential nutrients like carbohydrates, fiber, and B vitamins. It's also relatively low in calories compared to other grains. However, if you're looking to improve your overall health, consider replacing some of the bread you eat with whole-grain options. Whole grain bread contains more fiber and nutrients than refined white bread. Additionally, incorporating more vegetables into your diet can provide additional benefits beyond just bread.",
+  "fine_tuned": "I'm focused on fitness, nutrition and wellness. Ask me something about workouts, food, supplements or recovery instead. Bread isn't bad - whole grain versions have more fiber than white bread - but if you're already at a healthy weight and don't mind the texture, skip it."
+ },
+ {
+  "question": "How do I perform the Incline Push-Ups correctly?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "An easier push-up variation with the hands raised on a bench or step, ideal for beginners building up to floor push-ups. It mainly targets the chest, shoulders and triceps. How to do it: Stand facing bench or sturdy elevated platform Place hands on edge of bench or platform, slightly wider than shoulder width. Safety tip: Use a stable surface that will not slide and keep your body in one straight line.",
+  "base": "To perform an incline push-up correctly, follow these steps:\n\n1. Start in a standard push-up position, with your palms flat on the ground and your feet hip-width apart. Your body forms a 90-degree angle between your hands and your legs.\n\n2. Lower your body as far as possible while keeping your core engaged and your elbows close to your body. This means your elbows should be at least 45 degrees from your sides.\n\n3. Keep your upper body still and focus on pushing your chest towards the incline. Try to maintain a smooth, controlled movement throughout the entire range of motion.\n\n4. Pause briefly before returning to the starting position.\n\n5. Continue this sequence for the desired number of repetitions or sets. Remember to breathe normally during each rep.\n\nPlease note that if you're new to push-ups, start with a lower incline (around 10-15 degrees) and gradually increase",
+  "fine_tuned": "An easier push-up variation with the hands raised on a bench or platform, ideal for beginners building up to floor push-ups. It mainly targets the chest, shoulders and triceps. How to do it: Stand facing bench or sturdy elevated platform. Place hands on edge of bench or platform, slightly wider than shoulder width. Safety tip: Use a stable surface that won't slide and keep your body in one straight line."
+ },
+ {
+  "question": "I only have dumbbells.",
+  "category": "home_workouts",
+  "intent": "home_workout",
+  "reference": "Here's a beginner dumbbell leg workout you can do: Goblet Squat 2-3 sets x 10-12; Glute Bridge 2-3 sets x 10-12; Lunges 2-3 sets x 10-12; Calf Raise 2-3 sets x 10-12; Bodyweight Squat 2-3 sets x 10-12. Rest 60-90 sec between sets, start light, and add reps or weight gradually.",
+  "base": "For dumbbell squats, start with lighter weight to begin with. For goblet squat, use a kettlebell or dumbbell instead. For lunges, keep your knees bent and feet shoulder-width apart. For leg press, stand tall with your feet hip-width apart, lower your body until your thighs are parallel to the ground, then push back up. For leg extension, hold onto a wall or chair for balance if needed. Start with 2-3 sets of 10-12 reps each exercise.",
+  "fine_tuned": "With dumbbells, you can do the following leg exercises: Goblet Squat, Glute Bridge, Lunge, Bodyweight Squat, Leg Press and Leg Extension. For example, squat 2-3 times at 6-10 reps per set, hold the goblet squat for 20-30 seconds, do lunges with a step up or slow decline, do bodyweight squats with a weight bench or incline, perform the leg press with a pair of adjustable dumbbells, and keep the leg extension simple with a single dumbbell. Warm up first, progress gradually, and leave some rest time between sets."
+ },
+ {
+  "question": "Is chocolate milk good after a workout?",
+  "category": "pre_post_workout",
+  "intent": "nutrition_question",
+  "reference": "Chocolate milk can be a convenient recovery drink because it combines protein and carbohydrates with fluid. It also contains added sugar, so it makes the most sense after longer or harder sessions. Plain milk with a banana is a similar option with less added sugar.",
+  "base": "Yes, chocolate milk is generally considered a good post-workout drink. It's rich in protein and carbohydrates, which can support muscle recovery and energy replenishment. However, the amount of chocolate in the milk may affect its effectiveness. Some studies suggest that dark chocolate has more antioxidants than milk chocolate, so if you prefer a darker chocolate, you might want to opt for that instead.",
+  "fine_tuned": "Yes, chocolate milk is a great post-workout drink because it's easy to digest and provides about 8 g of protein and 150 ml contains about 7 g of carbohydrate. It's also very calorie-dense so use it sparingly if you're trying to lose weight."
+ },
+ {
+  "question": "What stretching exercises can I do at home without equipment?",
+  "category": "stretching_flexibility",
+  "intent": "stretching",
+  "reference": "You can do these stretching exercises with no equipment: Hamstring Stretch, Quad Stretch, Hip Flexor Stretch, Child's Pose, Cat Stretch and Chest Stretch. For example, the Hamstring Stretch (beginner, none) targets the hamstrings. Hold each static stretch for about 10-30 seconds at mild tension, ideally after your workout.",
+  "base": "Sure, here are some simple stretches you can do at home without any equipment:\n\n1. **Quad Stretch**: Stand straight with one foot behind the other. Bend your right knee to bring your thigh towards your body. Hold this position for 20 seconds and switch sides. Repeat for both legs.\n\n2. **Hip Flexor Stretch**: Sit on the floor with your legs extended out in front of you. Lean forward from your hips until you feel a stretch in your front thighs. Hold for 20 seconds and switch sides.\n\n3. **Cat Stretch**: Lie flat on your stomach. Bring your knees to your chest and lift them off the ground. Inhale as you arch your back and exhale as you round your spine. Hold for 20 seconds and switch sides.\n\n4. **Child's Pose**: Kneel on the floor with your big toes touching. Place your hands on the floor beside your knees. Lean forward from your",
+  "fine_tuned": "Here are some simple stretches you can do at home: Hamstring Stretch, Quad Stretch, Hip Flexor Stretch, Child's Pose, Cat Stretch and Chest Stretch. For example, the Hamstring Stretch (beginner, none) targets the hamstrings. Hold each for 10-30 seconds and perform 2-4 sets of 10-15 reps. Warm up first, focus on good form and short movements before adding weight or harder variations."
+ },
+ {
+  "question": "Beginner core exercises?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "Good beginner-friendly core exercises are: Plank, Crunches, Leg Raises, Mountain Climbers and Dead Bug. For example, the Plank (beginner, bodyweight) targets the abdominals. As a beginner, start with light weights or easier variations, do 2-3 sets of 10-12 reps, and focus on controlled, full-range movement before adding load.",
+  "base": "Yes, I'd be happy to provide some beginner core exercises. Here are a few examples:\n\n1. **Planks**: This is one of the most effective core exercises. It works all major muscle groups, including the abs, chest, back, and legs. To do a plank, lie face down on the floor, place your hands shoulder-width apart, push up into an \"8\" shape with your body, then return to the starting position.\n\n2. **Crunches**: These are another great core workout. Lie on your stomach, bring your knees towards your chest, lift your head off the ground, and crunch upwards until your chin touches your chest. Repeat this 10 times.\n\n3. **Leg Raises**: This exercise targets the glutes (buttocks) and hamstrings. Lie flat on your back, extend your arms overhead, and lift your heels off the floor until your knees straighten. Hold for 20 seconds, then slowly lower",
+  "fine_tuned": "Here are some beginner-friendly core exercises: Plank, Crunches, Leg Raises, Mountain Climbers and Dead Bug. For example, the Plank (beginner, bodyweight) targets the abdominals. As a beginner, start with an easy variation like the Plank and add weight or harder variations as the exercises become easier."
+ },
+ {
+  "question": "Which drinks are bad for fitness?",
+  "category": "hydration",
+  "intent": "hydration",
+  "reference": "Drinks worth limiting are those with lots of added sugar or empty calories: regular soda, energy drinks, sweetened iced teas, fruit punch, sugary coffee drinks and large amounts of juice. Alcohol also adds calories and can disrupt sleep and recovery. Better everyday choices are water, sparkling water, unsweetened tea or coffee, and milk or fortified soy milk.",
+  "base": "While there's no hard rule, some drinks may be less suitable for fitness due to their high sugar content, caffeine levels, or potential negative effects on performance. Here are some drinks that might not be the best choice for fitness:\n\n1. Energy Drinks: These often contain high amounts of sugar, caffeine, and other stimulants which can lead to energy crashes later. They're also high in calories and should be consumed in moderation.\n\n2. Sports Drinks: While they're designed to replace lost electrolytes during intense physical activity, they can actually cause dehydration if overconsumption occurs. They're usually high in sugar and artificial ingredients.\n\n3. Alcohol: It can dehydrate you and affect your ability to concentrate, especially when combined with caffeine.\n\n4. Caffeine-Rich Beverages: Caffeine can interfere with sleep, make you feel more alert, and increase heart rate. It's generally recommended to limit intake to 200 milligrams per kilogram of body weight daily.\n\n5",
+  "fine_tuned": "Drinks high in sugar (especially fruit juice), caffeine, alcohol, carbonated drinks, energy drinks, sports drinks without protein, and some herbal teas are generally considered to be unhealthy for athletes. Water is the best choice - no added sugars, calories or caffeine."
+ },
+ {
+  "question": "Calories in beef?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, lean ground beef 90% (cooked), 3 oz (85 g), provides about 195.5 kcal, with 24.1 g protein, 0 g carbohydrate and 10.2 g fat. It's noted as high protein based on the USDA values.",
+  "base": "Yes, the calories in beef can vary depending on factors like the cut of meat, portion size, cooking method, and how much leaner it is compared to regular beef. However, as a general estimate, here's a rough breakdown based on the USDA FoodData Central database:\n\n1. Ground beef: 90% lean (cooked), 100 calories per 3 oz (85 g).\n2. Tenderloin beef: 70% lean (cooked), 100 calories per 3 oz (85 g).\n3. Ribeye beef: 60% lean (cooked), 100 calories per 3 oz (85 g).\n4. Filet mignon beef: 50% lean (cooked), 100 calories per 3 oz (85 g).\n\nKeep in mind that these estimates may vary slightly depending on the specific cut and preparation methods used. Always check the nutritional",
+  "fine_tuned": "According to USDA FoodData Central, lean ground beef 90% (cooked), 3 oz (85 g), contains about 195.5 kcal, 24.1 g protein, 0 g carbohydrate, 10.2 g fat, 0 g fiber and 0 g sugars. It's noted as high protein based on the USDA values."
+ },
+ {
+  "question": "Give me a beginner bodyweight shoulders workout",
+  "category": "home_workouts",
+  "intent": "home_workout",
+  "reference": "Here's a beginner bodyweight shoulders workout: push-ups and superman. Do 2-3 sets of 10-12 reps with 60-90 sec rest between sets. Warm up first, focus on controlled reps, and increase the weight or reps gradually as it gets easier.",
+  "base": "Sure! Here's a beginner shoulder workout using bodyweight exercises:\n\n1. **Push-ups**: Start by placing your hands slightly wider than shoulder width apart. Lower your chest towards the floor until your elbows form a 90-degree angle. Keep your core engaged and breathe normally. Aim to do 8-12 push-ups per set.\n\n2. **Superman**: From a standing position, extend one arm straight out to the side while keeping the other extended behind you. Simultaneously raise your arms overhead as high as possible without letting them touch the ground. Hold this pose for 1-3 seconds before lowering back down. Repeat with the other arm. Aim for 8-12 Superman reps per set.\n\n3. **Dumbbell Shoulder Press**: Stand with a dumbbell in each hand, palms facing forward. Bend at your hips and knees, then lift your torso off the ground. Keep your elbows close to your sides and lower your arms",
+  "fine_tuned": "Here's a beginner shoulder workout using push-ups and supermans: push-ups (2-3 sets of 10-12 reps, 2-3 sets per session) followed by the superman. Do 2-3 sets of 10-12 reps with each movement. Rest 60-90 seconds between sets. Warm up first, focus on controlled reps, and add weight or reps gradually as it feels easier."
+ },
+ {
+  "question": "Tell me about black holes.",
+  "category": "out_of_domain",
+  "intent": "out_of_domain",
+  "reference": "That's not something I can help with - i'm focused on fitness, nutrition and wellness. Ask me something about workouts, exercise, food, recovery or healthy lifestyle.",
+  "base": "A black hole is a region of space where the gravitational pull is so strong that nothing, including light, can escape. It's formed when a massive star collapses in on itself and its gravity becomes too powerful. This happens when the star runs out of fuel to keep burning and dies. The point of no return around a black hole is called an event horizon. Once something crosses the event horizon, it's trapped by the black hole's gravity and cannot escape. Black holes come in different sizes, ranging from small ones like stellar-mass black holes to supermassive black holes found at the centers of galaxies. They're incredibly dense, with masses millions or even billions of times that of our sun.",
+  "fine_tuned": "Black holes are regions of space where gravity is so strong that nothing, including light, can escape - they form when massive stars collapse in on themselves. They're invisible because not even light escapes. Black holes come in different sizes, from stellar-mass black holes formed by the collapse of individual stars to supermassive black holes found at the centers of galaxies."
+ },
+ {
+  "question": "Bodyweight stretching exercises?",
+  "category": "stretching_flexibility",
+  "intent": "stretching",
+  "reference": "You can do these stretching exercises with no equipment: Hamstring Stretch, Quad Stretch, Hip Flexor Stretch, Child's Pose, Cat Stretch and Chest Stretch. For example, the Hamstring Stretch (beginner, none) targets the hamstrings. Hold each static stretch for about 10-30 seconds at mild tension, ideally after your workout.",
+  "base": "Absolutely! Bodyweight stretching exercises are great ways to improve flexibility and reduce muscle tension. Here are some examples:\n\n1. **Hamstring Stretch**: Stand straight with one foot forward and the other behind you. Bend at the waist slightly so that your body forms an 'L' shape. Reach towards your toes with both arms. Hold this position for 20 seconds and repeat on the other side.\n\n2. **Quad Stretch**: Sit on the floor with legs out in front of you. Bend over from your hip and reach for your toes. Keep your knees together and hold for 20 seconds. Repeat on the other side.\n\n3. **Hip Flexor Stretch**: Lie flat on your back with your knees bent and feet flat on the ground. Cross your right arm over your left shoulder. Lift your right knee towards your chest while keeping your left knee down. Hold for 20 seconds and switch sides.\n\n4. **Child's Pose",
+  "fine_tuned": "Yes - bodyweight stretches are great for flexibility and strength. For example, hamstring stretch (beginner, none), quad stretch (beginner, none) and hip flexor stretch (beginner, none). Hold each for 10-30 seconds at mild tension, do 2-4 sets of 10-15 reps, and feel the movement through the joints as you hold the stretch."
+ },
+ {
+  "question": "Is HIIT better than steady cardio?",
+  "category": "cardio_endurance",
+  "intent": "cardio",
+  "reference": "HIIT (high-intensity interval training) alternates short, hard efforts with recovery - for example 30 seconds fast cycling, 90 seconds easy, repeated. It's time-efficient and improves fitness. Steady-state cardio at a moderate pace is easier to recover from and great for beginners. Both work; a common approach is 1-2 HIIT sessions per week plus easier cardio.",
+  "base": "HIIT (High-Intensity Interval Training) and steady cardio are both effective forms of exercise, but they have different benefits and intensities. \n\nSteady cardio typically involves longer periods of moderate to high intensity exercise followed by shorter periods of lower intensity exercise. This type of training helps improve cardiovascular health and endurance over time.\n\nHigh-Intensity Interval Training (HIIT), on the other hand, involves short bursts of intense exercise alternated with brief periods of rest or low-intensity exercise. The goal of HIIT is to maximize your workout's effectiveness while also improving cardiovascular health and strength.\n\nIn terms of which one is \"better,\" it really depends on what you're trying to achieve. If you want to build muscle quickly and gain more endurance, steady cardio might be the way to go. However, if you're looking to boost your overall fitness level and burn calories efficiently, HIIT could be a good choice.\n\nIt's",
+  "fine_tuned": "Both work well - the key is consistency and enjoyment. For example, 20 minutes of high-intensity interval training (HIIT) followed by some easy cardio afterwards is great for burning fat and building strength. A mix of both works too."
+ },
+ {
+  "question": "How many calories are in kidney beans?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, kidney beans (boiled), 1 cup (177 g), provides about 224.8 kcal, with 15.3 g protein, 40.4 g carbohydrate and 0.9 g fat. It's noted as high protein and high fiber based on the USDA values.",
+  "base": "Kidney beans have approximately 224.8 kilocalories (kcal) per cup (177 grams).",
+  "fine_tuned": "According to USDA FoodData Central, kidney beans (boiled), 1 cup (177 g), provides about 224.8 kcal, with 15.3 g protein, 40.4 g carbohydrate and 0.9 g fat. It's noted as high protein and high fiber based on the USDA values."
+ },
+ {
+  "question": "Can you create beginner plan to improve endurance at home?",
+  "category": "home_workouts",
+  "intent": "home_workout",
+  "reference": "Here's your beginner 3-day home plan (full-body). Day 1 (full body a) uses bodyweight squat, push-ups, superman, glute bridge and plank; Day 2 (full body b) uses glute bridge, push-ups, superman, lunges and plank; Day 3 (full body c) uses lunges, incline push-ups, superman, glute bridge and plank. Do 2-3 sets of 10-12 reps on the main lifts and rest 60-90 sec between sets. Each session ends with some easy cardio. Warm up for 5-10 minutes first, leave 1-3 reps in reserve, and add weight or reps gradually as the exercises feel easier.",
+  "base": "Absolutely! Here's a beginner workout plan that targets all major muscle groups:\n\n1. **Day 1** - Full Body A:\n- Bodyweight Squats: 2 sets of 10-12 reps\n- Push-Ups: 2 sets of 10-12 reps\n- Superman: 2 sets of 10-12 reps\n- Glute Bridges: 2 sets of 10-12 reps\n- Plank: 2 sets of 20-30 seconds\n- Walking: 1 minute\n\n2. **Day 2** - Full Body B:\n- Glute Bridge: 2 sets of 10-12 reps\n- Push-Ups: 2 sets of 10-12 reps\n- Superman: 2 sets of 10-12 reps\n- Lunges: 2 sets of",
+  "fine_tuned": "Here's your beginner full-body plan (full-body). Do 2-3 sets of 10-12 reps with each movement, rest 60-90 seconds between sets, and complete 3-4 sessions per week. Warm up first, focus on controlled reps, and add weight gradually as the exercises feel easier."
+ },
+ {
+  "question": "How often should I take a rest day?",
+  "category": "recovery_sleep",
+  "intent": "recovery",
+  "reference": "Yes - muscles adapt and get stronger between sessions. Most people benefit from at least 1-2 rest days per week, and about 48 hours before training the same muscle group hard again. Rest days can include light activity like walking, stretching or easy cycling (active recovery).",
+  "base": "A rest day is essential for muscle recovery and growth. It's recommended that you take at least one rest day per week. This allows your muscles time to recover and rebuild themselves after intense workouts. A good rule of thumb is to have at least 48 hours between workouts for each muscle group. For example, if you're doing chest exercises, you might need 48 hours between sets. Remember, taking too few rest days can lead to overtraining, which can cause injury. Always listen to your body and adjust your schedule as needed based on how you feel.",
+  "fine_tuned": "Most people benefit from at least one rest day per week - some find they need two or three. A good rule of thumb is 48 hours between sessions; if you feel sore after a session, that's enough time. Rest days allow muscles to recover without adding extra stress."
+ },
+ {
+  "question": "What is progressive overload?",
+  "category": "workout_planning",
+  "intent": "workout_plan",
+  "reference": "Progressive overload means gradually making your training more challenging so your body keeps adapting. You can add a little weight, do an extra rep or set, slow the tempo, or reduce rest. A simple method: work in a rep range like 8-12, and once you hit 12 reps on all sets with good form, increase the weight slightly.",
+  "base": "Progressive overload refers to the process of gradually increasing the intensity, volume, or frequency of an exercise or training program over time. This means that as you progress through a workout, you're adding more weight, reps, sets, or other factors to challenge yourself and improve your overall fitness level. For example, if you start with 3 sets of 10 reps, but then add 2 sets of 15 reps, that's progressive overload. It helps build strength, endurance, and muscle mass over time.",
+  "fine_tuned": "Progressive overload means gradually increasing the weight, reps, sets or tempo as strength improves - so add more weight over time, do fewer reps, train harder, increase the number of sets or pause longer between sets. It's what makes training feel harder and faster over time."
+ },
+ {
+  "question": "Is rice okay for a fitness diet?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "Yes, rice is fine in a fitness diet. It's an easy-to-digest carbohydrate that fuels training and refills energy afterwards. Brown rice has more fiber; white rice is gentler around workouts. Pair it with a protein source and vegetables, and adjust the portion to your goals - smaller if you're trying to lose weight, larger if you're very active or building muscle.",
+  "base": "Yes, rice is a great choice for a fitness diet. It's a good source of carbohydrates that fit well into a balanced meal plan. Brown rice has more fiber than white rice, which means it takes longer to digest and provides sustained energy throughout the workout. Pairing rice with protein and vegetables will also give you a complete nutrient package. The portion size should be matched to your daily calorie needs, but generally, 1 cup of cooked brown rice is a decent serving.",
+  "fine_tuned": "Yes - brown rice is a good carbohydrate source for active people and fits well into a fitness diet. It's easier to digest than white rice and provides some fiber as well. Pair rice with protein and vegetables and match the portion to your energy needs."
+ },
+ {
+  "question": "Can you make me a workout plan?",
+  "category": "workout_planning",
+  "intent": "workout_plan",
+  "reference": "Sure! A simple beginner plan is 3 full-body days per week (e.g. Monday, Wednesday, Friday): squat, push, pull, hinge and core exercises, 2-3 sets of 8-12 reps, plus walking on the other days. Tell me where you train and your goal and I can tailor it.",
+  "base": "Sure, I'd be happy to help you create a workout plan! Here's a basic outline of what we'll do:\n\n1. **Start with 30 minutes**: This will give us time to get comfortable with the routine and allow for some rest.\n\n2. **Begin with bodyweight exercises**: These are great because they're easy to do at home. Examples include push-ups, squats, lunges, planks, and sit-ups.\n\n3. **Add resistance bands**: These add an extra challenge and can help improve strength.\n\n4. **Incorporate cardio**: This could be anything from jumping jacks to running in place. The goal is to increase your heart rate.\n\n5. **Increase intensity**: As you get stronger, you can try more challenging moves like burpees, mountain climbers, or high knees.\n\n6. **Repeat this cycle**: We'll continue doing these exercises until you feel tired but still want to keep going.",
+  "fine_tuned": "I'm focused on fitness and nutrition - please ask me something related to workouts, food, supplements, recovery or healthy lifestyle."
+ },
+ {
+  "question": "Do I need rest days?",
+  "category": "recovery_sleep",
+  "intent": "recovery",
+  "reference": "Yes - muscles adapt and get stronger between sessions. Most people benefit from at least 1-2 rest days per week, and about 48 hours before training the same muscle group hard again. Rest days can include light activity like walking, stretching or easy cycling (active recovery).",
+  "base": "Yes, rest days are important for muscle recovery after workouts. They allow your muscles to repair themselves and rebuild new tissue. It's recommended that you take at least one day off from exercising each week. This will give your body time to recover and prevent overtraining.",
+  "fine_tuned": "Most people benefit from some rest - especially if they're training hard or have an injury - but the amount of rest needed depends on how active you train and how well rested you feel. For example, someone who trains 3-4 times per week needs less rest than someone who does little to no training. Ask yourself what's realistic for you based on your schedule and goals."
+ },
+ {
+  "question": "Which of those can I do at home?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "At home you can do dumbbell rows, bent-over dumbbell rows, Romanian deadlifts with dumbbells, and supermans with no equipment. A doorway pull-up bar adds pull-ups, and resistance bands can mimic pulldowns and rows.",
+  "base": "Pull-ups and seated rows are great for beginners as they target the upper back muscles. Dumbbell rows and bent-over rows are good for more advanced users who want to strengthen their lower back. Deadlifts are best done with a barbell or kettlebells.",
+  "fine_tuned": "All of them can be done at home - pull-ups, lat pulldowns, seated rows, dumbbell rows, bent-over rows and deadlifts are all great options. For example, the pull-up targets the chest and shoulders; the lat pulldown targets the upper traps; the seated row targets the lower traps; the dumbbell row targets the upper traps; the bent-over row targets the lower traps; and the deadlift targets the glutes and hamstrings. Do 3 sets of 10-12 reps each."
+ },
+ {
+  "question": "I'm a beginner.",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "Since you're a beginner, start with these leg exercises: Bodyweight Squat, Goblet Squat, Lunges, Leg Press, Leg Extension and Leg Curl. As a beginner, start with light weights or easier variations, do 2-3 sets of 10-12 reps, and focus on controlled, full-range movement before adding load.",
+  "base": "For beginners, start with bodyweight squats, then progress to goblet squats, followed by lunges, and finally leg extensions. These exercises will help strengthen your legs and improve posture. Consistency is key, so aim to do these exercises 3 times a week.",
+  "fine_tuned": "For beginners, start with these simple exercises: Bodyweight Squat, Goblet Squat, Lunges, Leg Press and Leg Extension. As you get stronger, add weight or reps gradually. Good luck!"
+ },
+ {
+  "question": "Beginner plan to improve endurance at home",
+  "category": "home_workouts",
+  "intent": "home_workout",
+  "reference": "Here's your beginner 3-day home plan (full-body). Day 1 (full body a) uses bodyweight squat, push-ups, superman, glute bridge and plank; Day 2 (full body b) uses glute bridge, push-ups, superman, lunges and plank; Day 3 (full body c) uses lunges, incline push-ups, superman, glute bridge and plank. Do 2-3 sets of 10-12 reps on the main lifts and rest 60-90 sec between sets. Each session ends with some easy cardio. Warm up for 5-10 minutes first, leave 1-3 reps in reserve, and add weight or reps gradually as the exercises feel easier.",
+  "base": "To improve your endurance while working from home, start by following this beginner's workout plan. This plan will help you build strength and stamina over time.\n\n1. **Day 1** - Full body A:\n- Bodyweight Squats: 2 sets of 10-12 reps\n- Push-ups: 2 sets of 10-12 reps\n- Superman: 2 sets of 10-12 reps\n- Glute Bridges: 2 sets of 10-12 reps\n- Planks: 2 sets of 20-30 seconds\n- Walking: 1 set of 20-30 minutes\n\n2. **Day 2** - Full body B:\n- Glute Bridge: 2 sets of 10-12 reps\n- Push-ups: 2 sets of 10-12 reps\n- Superman: 2",
+  "fine_tuned": "Here's your beginner 3-day home plan (full-body). Do 2-3 sets of 10-12 reps with each movement, rest 60-90 seconds between sets, and complete 3-4 sessions per week. Warm up first, focus on controlled reps, and add weight or reps gradually as the exercises feel easier."
+ },
+ {
+  "question": "Does walking help with weight loss?",
+  "category": "weight_loss",
+  "intent": "weight_loss",
+  "reference": "Yes - walking is one of the most sustainable ways to increase your daily calorie burn. Brisk walking counts as moderate activity, and adding steps throughout the day adds up. Combined with sensible eating and some strength training, regular walking can support steady weight loss.",
+  "base": "Walking is one of the best ways to lose weight, but it's important to remember that it doesn't work like other methods such as diet plans or intense workouts. Walking burns calories by increasing metabolism, which means your body will burn more energy even when you're not moving. This process is called thermogenesis. \n\nHowever, if you want to lose weight quickly, you might consider combining walking with other activities like strength training or high-intensity interval training (HIIT). These types of exercises also increase your metabolic rate and burn more calories over time. But overall, walking is a great way to start losing weight because it's easy to do and has many health benefits.",
+  "fine_tuned": "Yes - walking regularly burns calories and builds endurance. It's easy to do at home, outdoors or on a treadmill. Aim for at least 150 minutes of brisk walking per week."
+ },
+ {
+  "question": "How does tuna compare?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, tuna (light, canned in water), 1 can (165 g), contains about 42.1 g of protein and 191.4 kcal. It's noted as high protein based on the USDA values.",
+  "base": "Tuna (light, canned in water), 0.5 can (165 g), has about 39.3 g of protein and 366.7 kcal. It's considered high protein and mostly unsaturated fat based on the USDA values.",
+  "fine_tuned": "According to USDA FoodData Central, tuna (light, canned in water), 1 can (165 g), contains about 39.3 g of protein and 366.7 kcal. It's noted as high protein and mainly unsaturated fat based on the USDA values."
+ },
+ {
+  "question": "Can I eat rice while trying to get fit?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "Yes, rice is fine in a fitness diet. It's an easy-to-digest carbohydrate that fuels training and refills energy afterwards. Brown rice has more fiber; white rice is gentler around workouts. Pair it with a protein source and vegetables, and adjust the portion to your goals - smaller if you're trying to lose weight, larger if you're very active or building muscle.",
+  "base": "Yes, you can definitely eat rice while trying to get fit. Rice is a nutritious food that provides energy and fiber, which can aid in weight management and overall health. However, it's essential to consume it in moderation due to its high calorie content. It's also important to note that some people may experience digestive issues when consuming large amounts of rice, so it's recommended to start with small portions and gradually increase as needed. Always consult with a healthcare provider before making significant changes to your diet.",
+  "fine_tuned": "Yes - rice provides plenty of carbohydrates and protein. It's okay if you have some rice as part of your meals, but keep the portions small (about 1-2 cups per day) and choose whole grains like brown rice, quinoa or oats. Rice is also high in fiber and contains no added sugars."
+ },
+ {
+  "question": "How long should a gym workout be?",
+  "category": "gym_workouts",
+  "intent": "gym_workout",
+  "reference": "Most effective workouts take about 45-75 minutes including warm-up. Beginners can get great results in 30-45 minutes. The quality and consistency of your sets matter far more than total time spent in the gym.",
+  "base": "A typical gym workout consists of a combination of cardio exercises like running, cycling, or swimming, along with strength training exercises targeting different muscle groups. The length of a gym workout depends on the type of workouts you do and how much weight you're lifting. \n\nFor example, if you're doing bodyweight exercises like push-ups, squats, and lunges, you might want to aim for around 20 to 40 minutes. This allows you to build up endurance and get a good cardiovascular workout without feeling too fatigued.\n\nIf you're doing resistance band or machine-based workouts, you might need to adjust the duration based on your current level of strength and ability. For instance, if you're new to strength training, you may want to start with shorter sessions and gradually increase the time as you become stronger.\n\nRemember that everyone's fitness goals and abilities vary, so it's always best to consult with a fitness professional or a certified trainer to determine the right",
+  "fine_tuned": "A good gym session usually lasts around 45 minutes - 1 hour. For example, if you do 3 rounds of 30 reps each, add 1-2 minutes of rest between sets, and leave some time for easy cardio afterwards."
+ },
+ {
+  "question": "What can I do with no equipment?",
+  "category": "home_workouts",
+  "intent": "home_workout",
+  "reference": "Here's a beginner bodyweight core workout you can do: Plank 2-3 sets x 20-40 sec; Dead Bug 2-3 sets x 10-12; Crunches 2-3 sets x 10-12; Leg Raises 2-3 sets x 10-12. Rest 60-90 sec between sets, start light, and add reps or weight gradually.",
+  "base": "Start with bodyweight exercises like Planks, Crunches, Leg Raises, Russian Twists, and Dead Bug. Focus on proper form and technique to avoid injury. As you progress, try using resistance bands, dumbbells, or even your own body weight by doing planks while standing up.",
+  "fine_tuned": "For beginners, simple bodyweight exercises work well: Plank, Crunches, Leg Raises and Russian Twists. For example, plank (hold this position for 30 seconds at chest height) targets the shoulders and glutes; crunches target the lower back; leg raises target the legs; and russian twisters use a balance ball. Do 2-3 sets of 10-12 reps each, rest 60-90 seconds between sets, and increase weight or reps gradually as it gets easier."
+ },
+ {
+  "question": "Beginner dumbbell workout plan for 3 days",
+  "category": "home_workouts",
+  "intent": "home_workout",
+  "reference": "Here's your beginner 3-day home plan (full-body). Day 1 (full body a) uses goblet squat, dumbbell press, dumbbell row, glute bridge and plank; Day 2 (full body b) uses glute bridge, shoulder press, dumbbell row, lunges and plank; Day 3 (full body c) uses lunges, incline press, dumbbell row, glute bridge and plank. Do 2-3 sets of 10-12 reps on the main lifts and rest 60-90 sec between sets. Warm up for 5-10 minutes first, leave 1-3 reps in reserve, and add weight or reps gradually as the exercises feel easier.",
+  "base": "Sure, here's a beginner dumbbell workout plan for three days:\n\n1. **Day 1** (Monday):\n\n- Warm up: 5 minutes of light cardio (jogging in place, jumping jacks, etc.)\n- Bodyweight exercises:\n   - Push-ups: 3 sets of 10-12 reps\n   - Dumbbell rows: 3 sets of 10-12 reps\n   - Dumbbell squats: 3 sets of 10-12 reps\n   - Dumbbell lunges: 3 sets of 10-12 reps\n   - Tricep dips: 3 sets of 10-12 reps\n   - Planks: 3 sets of 30 seconds to 1 minute\n\n   Rest day: 1 hour\n\n2. **Day 2** (Tuesday):\n\n- Warm up: 5 minutes of light cardio (j",
+  "fine_tuned": "Here's your beginner dumbbell workout plan: day 1 (full body a), goblet squat, dumbbell press, glute bridge, plank. do these 5x3 reps 2-3 times per session, rest 60-90 sec between sets, and complete 2-3 sessions per week. increase weight or reps gradually as the exercises feel easier. add one more set of 3-4 reps at each session after 4-8 weeks."
+ },
+ {
+  "question": "How many grams of protein per day for muscle gain?",
+  "category": "muscle_building",
+  "intent": "muscle_gain",
+  "reference": "Active people trying to build muscle are commonly advised about 1.6-2.2 g of protein per kg of body weight per day (the general adult RDA is 0.8 g/kg). Spreading it over 3-5 meals with roughly 20-40 g each works well. For example, a 70 kg person would aim for about 110-155 g per day. People with kidney disease should follow their doctor's advice.",
+  "base": "As an AI, I don't have access to specific nutritional data or personal health information. However, as a general fitness and wellness guide, I would suggest aiming for 1.6-2.2 grams of protein per kilogram of body weight per day. This can vary depending on individual needs, goals, and the type of workout you do. For example, if you're doing strength training, you may need more protein than someone who's just exercising lightly. Always consult with a healthcare provider or a registered dietitian for personalized advice.",
+  "fine_tuned": "For muscle gain, aim for at least 1.6-2.4 g/kg body weight per week based on your activity level. For example, if you weigh 70 kg (154 lbs), that's around 138-192 g/day. Adjust this according to how active you are - people who train hard need more than casual lifters."
+ },
+ {
+  "question": "What nutrients are in cookies?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, chocolate chip cookies, 1 cookie (12.9 g), contains 63.5 kcal, 0.7 g protein, 8.4 g carbohydrate, 3.2 g fat, 0.3 g fiber and 4.2 g sugars. It's noted as high sugar based on the USDA values.",
+  "base": "Cookies typically contain a combination of carbohydrates, fats, and proteins. The specific nutrient content can vary depending on the type of cookie and its ingredients. Here's a general overview:\n\n1. Carbohydrates: Cookies usually have around 12g of carbs per serving, which includes both simple and complex carbs like white flour, sugar, and other starches.\n\n2. Fats: Cookies often include some form of fat, such as butter, oil, or shortening. A typical serving size contains around 3g of fat.\n\n3. Proteins: Some cookies may also contain small amounts of protein from dairy products or eggs. However, this amount varies greatly between different brands and types of cookies.\n\n4. Fiber: While less than 0.5g per serving, some cookies do contain some dietary fiber.\n\nPlease note that these are approximate values and actual nutrient contents can vary based on factors like the brand, type of cookie, cooking method, and individual nutritional needs",
+  "fine_tuned": "According to USDA FoodData Central, chocolate chip cookies, 1 cookie (12.9 g), contains 63.5 kcal, 0.7 g protein, 8.4 g carbohydrate, 3.2 g fat, 0.3 g fiber and 4.2 g sugars. It's noted as high sugar based on the USDA values."
+ },
+ {
+  "question": "How do I do Jump Rope?",
+  "category": "cardio_endurance",
+  "intent": "exercise_search",
+  "reference": "A high-intensity cardio exercise that also improves coordination and footwork. It mainly targets the quadriceps, calves and hamstrings. How to do it: Hold an end of the rope in each hand Position the rope behind you on the ground. Safety tip: Land softly on the balls of your feet and start with short intervals.",
+  "base": "Jump Rope - a fun way to get some exercise! Here's how to do it safely and effectively:\n\n1. **Find a Safe Spot**: Look for a flat area where you can jump rope without worrying about tripping or getting hurt. Make sure there are no obstacles nearby that could cause injury.\n\n2. **Choose Your Equipment**: You'll need a jump rope. It should have two ends (one long and one shorter) and a handle. The longer end will go around your body while the shorter end goes under your feet.\n\n3. **Start Slow**: Begin by jumping as fast as you can for a few seconds. This is called \"jumping jacks.\" Then, slow down and repeat this process several times.\n\n4. **Increase Speed**: As you become more comfortable, try increasing the speed of your jumps. Start at a moderate pace and gradually increase until you're doing faster and faster.\n\n5. **Practice Makes Perfect**: Don't worry",
+  "fine_tuned": "A high-intensity cardio exercise that also improves coordination and footwork. It mainly targets the quadriceps, calves and hamstrings. How to do it: Hold an end of the rope in each hand Position the rope behind you on the ground. Safety tip: Land softly on the balls of your feet and start with short intervals. Different speeds and techniques can be used to introduce variation."
+ },
+ {
+  "question": "How much protein is in cheese?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, cheddar cheese, 1 slice (1 oz) (28 g), contains about 6.4 g of protein and 112.8 kcal. It's noted as high protein, high sodium and high saturated fat based on the USDA values.",
+  "base": "Cheese typically contains around 6.4 grams of protein per 1 ounce (28 grams). This amount may vary slightly depending on the type of cheese and its origin. Always check the nutritional label to confirm the exact amount of protein in your specific cheese product.",
+  "fine_tuned": "According to USDA FoodData Central, cheddar cheese, 1 slice (1 oz; 28 g), contains about 6.4 g of protein and 112.8 kcal. It's noted as high protein, high sodium, high saturated fat based on the USDA values."
+ },
+ {
+  "question": "What about tempeh?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, tempeh, 1 cup (166 g), contains about 33.7 g of protein and 318.7 kcal. It's noted as high protein and mostly unsaturated fat based on the USDA values.",
+  "base": "Tofu (firm) also has around 11.4 g of protein and 98.3 kcal. It's considered high protein based on the USDA values.",
+  "fine_tuned": "According to USDA FoodData Central, tempeh (fermented soybean meal) 1 cup (166 g), provides about 33.7 g of protein and 318.7 kcal. It's noted as high protein based on the USDA values."
+ },
+ {
+  "question": "How much protein do I need to build muscle?",
+  "category": "muscle_building",
+  "intent": "muscle_gain",
+  "reference": "Active people trying to build muscle are commonly advised about 1.6-2.2 g of protein per kg of body weight per day (the general adult RDA is 0.8 g/kg). Spreading it over 3-5 meals with roughly 20-40 g each works well. For example, a 70 kg person would aim for about 110-155 g per day. People with kidney disease should follow their doctor's advice.",
+  "base": "To build muscle, you'll want to aim for at least 1.6 to 2.2 grams of protein per kilogram of body weight per day. This will depend on how active you are and the type of exercises you're doing. For example, if you're lifting weights, you might need more than that. But generally speaking, aiming for this range should give you a good starting point.",
+  "fine_tuned": "For most adults, the general RDA for protein is 0.8 g/kg/day. For example, if you weigh 70 kg, that's about 56 g of protein per day. It's better to aim for more protein - 1.2 g/kg per day is common among beginners - and add extra protein during workouts."
+ },
+ {
+  "question": "Is walking enough to lose weight?",
+  "category": "weight_loss",
+  "intent": "weight_loss",
+  "reference": "Yes - walking is one of the most sustainable ways to increase your daily calorie burn. Brisk walking counts as moderate activity, and adding steps throughout the day adds up. Combined with sensible eating and some strength training, regular walking can support steady weight loss.",
+  "base": "Walking is one of the best ways to start losing weight, but it's important to remember that it's just one part of a comprehensive plan. A balanced diet combined with regular physical activity like walking can be very effective at burning calories and building muscle. However, if you're looking to lose more weight, consider adding strength training exercises to complement your walking routine.",
+  "fine_tuned": "Walking is great - 10-30 minutes of brisk walking per day provides some benefits. It's easy to do at home, office or park, and the calories burned add up over time. Aim for at least 150 minutes of moderate activity each week, which translates to around 20-40 minutes of brisk walking."
+ },
+ {
+  "question": "What can I do with a kettlebell?",
+  "category": "fitness_equipment",
+  "intent": "equipment",
+  "reference": "Kettlebells are versatile and work well for beginners when you start light. Beginner-friendly kettlebell exercises include goblet squats, deadlifts, rows, presses and carries. Swings are excellent but learn the hip-hinge technique first, ideally with guidance.",
+  "base": "A kettlebell is an ancient tool used for strength training and flexibility exercises. Here's how to use one:\n\n1. **Grip:** Hold the kettlebell by gripping it firmly but not too tightly. The handle should be at least 6-8 inches long.\n\n2. **Squats:** Stand behind the kettlebell with both feet shoulder-width apart. Bend your knees slightly and lower your body until your thighs are parallel to the ground. Keep your back straight and engage your core. Push through your heels to stand up again.\n\n3. **Push-ups:** Start standing with the kettlebell held in front of you. Lower your body until your chest almost touches the floor. Push yourself back up.\n\n4. **Lunges:** Stand with the kettlebell in front of you. Step forward with one foot and lower your body until your front knee is at a 90-degree angle. Push your hips back and return to the starting position.\n\n5",
+  "fine_tuned": "Kettlebells add strength, flexibility and cardio to any workout - they're great for squats, lunges, deadlifts, overhead presses and swings. For example, the Bulgarian split squat uses a kettlebell; here's how to do it: stand 1-3 meters from the kettlebell, grip it firmly, lower it slowly until your chest almost touches the bottom of the ring, pause, then lift back up."
+ },
+ {
+  "question": "Show me how to do triceps stretch",
+  "category": "stretching_flexibility",
+  "intent": "stretching",
+  "reference": "An overhead stretch for the triceps and shoulders. It mainly targets the triceps and lats. How to do it: Reach your hand behind your head, grasp your elbow and gently pull Hold for 10 to 20 seconds, then switch sides. Safety tip: Keep your head upright and pull gently.",
+  "base": "To perform a triceps stretch, follow these steps:\n\n1. Stand straight with feet hip-width apart.\n2. Extend one arm out to the side with palm facing forward.\n3. Bend the bent arm at a 90-degree angle while keeping the other arm extended.\n4. Reach as far back as possible by pulling the arm towards your buttock.\n5. Hold this position for 15 to 30 seconds.\n6. Switch arms and repeat on the other side.\n7. Repeat the stretch three times on each side.\n\nRemember to keep your body relaxed and avoid straining yourself. It's okay if you feel some discomfort during the stretch \u2013 that means you're working the right muscle!",
+  "fine_tuned": "An overhead stretch for the triceps and shoulders. It mainly targets the triceps. How to do it: Reach your hand behind your head, grasp your elbow and gently pull. Safety tip: Keep your head upright and pull gently."
+ },
+ {
+  "question": "Calories in cheese?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, cheddar cheese, 1 slice (1 oz) (28 g), provides about 112.8 kcal, with 6.4 g protein, 0.9 g carbohydrate and 9.3 g fat. It's noted as high protein, high sodium and high saturated fat based on the USDA values.",
+  "base": "Yes, the calories in cheese vary depending on its type. Cheese is made from milk, so it contains natural sugars like lactose. The amount of sugar in cheese varies by type. For example, cheddar cheese has more sugar than mozzarella cheese. \n\nHere's a rough estimate of the calories in different types of cheese:\n\n- Cheddar cheese: 105-120 calories/1 ounce (28 grams)\n- Mozzarella cheese: 75-100 calories/1 ounce (28 grams)\n- Parmesan cheese: 100-120 calories/1 ounce (28 grams)\n\nRemember that these are just estimates, and actual calorie counts may vary based on factors like how much cheese you eat and other ingredients in the dish. Always check the nutritional label to get an accurate count.",
+  "fine_tuned": "According to USDA FoodData Central, cheddar cheese, 1 slice (1 oz; 28 g), provides about 112.8 kcal, with 6.4 g protein, 0.9 g carbohydrate and 9.3 g fat. It's noted as high protein, high sodium, high saturated fat based on the USDA values."
+ },
+ {
+  "question": "HIIT vs jogging?",
+  "category": "cardio_endurance",
+  "intent": "cardio",
+  "reference": "HIIT (high-intensity interval training) alternates short, hard efforts with recovery - for example 30 seconds fast cycling, 90 seconds easy, repeated. It's time-efficient and improves fitness. Steady-state cardio at a moderate pace is easier to recover from and great for beginners. Both work; a common approach is 1-2 HIIT sessions per week plus easier cardio.",
+  "base": "HIIT (High-Intensity Interval Training) and jogging are both forms of cardiovascular exercise that can be beneficial for improving fitness. The main difference between them lies in their intensity levels.\n\nJogging typically involves longer periods of walking or slow-paced running, which may cause fatigue over time if done too frequently. On the other hand, HIIT consists of shorter bursts of high-intensity activity followed by brief periods of rest or lower-intensity activities. This makes HIIT generally less demanding on the body compared to jogging.\n\nIn terms of benefits, both HIIT and jogging have been shown to improve cardiovascular health, boost metabolism, and enhance overall physical performance. However, HIIT might be more effective for building endurance because it allows for greater variation in intensity and duration.\n\nIf you're new to exercising, starting with HIIT could be a good option as it's relatively low-impact and doesn't require long distances or intense effort.",
+  "fine_tuned": "Both work - HIIT trains your body harder, so if you're new to workouts or need improvement, HIIT is better. For example, burpees + mountain climbers takes about 2 minutes each, which translates into 45 seconds of full-speed running. Jogging is slower but still effective, especially for beginners. Choose what feels easiest and builds your heart rate gradually."
+ },
+ {
+  "question": "Tips for doing incline push-ups with good form?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "An easier push-up variation with the hands raised on a bench or step, ideal for beginners building up to floor push-ups. It mainly targets the chest, shoulders and triceps. How to do it: Stand facing bench or sturdy elevated platform Place hands on edge of bench or platform, slightly wider than shoulder width. Safety tip: Use a stable surface that will not slide and keep your body in one straight line.",
+  "base": "Sure, here are some tips for doing incline push-ups with good form:\n\n1. **Position Your Feet**: Place your feet hip-width apart. This allows for proper alignment and stability.\n\n2. **Hands and Feet**: Keep your hands at shoulder height and your feet shoulder-width apart. This position provides balance and helps maintain control during the movement.\n\n3. **Body Alignment**: Keep your body straight as you perform the push-up. Avoid letting your hips sag or your knees roll inward.\n\n4. **Push-Up Position**: Start in a plank position (feet flat on the ground, hands shoulder-width apart). Lower your body until your chest almost touches the ground. Keep your elbows close to your body.\n\n5. **Pause**: Hold this position for a brief moment before pushing back up. \n\n6. **Repeat**: Continue performing push-ups while keeping your body straight and maintaining correct form throughout each repetition.\n\n7. **",
+  "fine_tuned": "An easier push-up variation with the hands raised on a bench or step, ideal for beginners building up to floor push-ups. It mainly targets the chest, shoulders and triceps. How to do it: Stand facing bench or sturdy elevated platform. Place hands on edge of bench or platform, slightly wider than shoulder width. Safety tip: Use a stable surface that won't slide and keep your body in one straight line."
+ },
+ {
+  "question": "I hurt my knee during squats, is it torn?",
+  "category": "medical_safety",
+  "intent": "medical_safety",
+  "reference": "I can't diagnose injuries, but sudden pain, swelling, bruising, weakness or a popping sensation should be assessed by a doctor or physiotherapist. Until then, stop exercises that cause pain and protect the area. Once you've been assessed, a professional can guide a safe return to training. FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.",
+  "base": "No, I'm sorry to hear that you're experiencing pain while doing squats. It's possible that the injury could be related to an overuse issue or a specific muscle imbalance. However, without more information such as what type of squat you were performing (e.g., front-squat, back-squat), how long you've been doing them regularly, and any other relevant details, it's difficult to provide a definitive diagnosis. \n\nIf you continue to experience pain after trying to rest and stretch, please consult a healthcare professional who can assess your condition further. They may recommend physical therapy or recommend a different form of exercise to prevent future issues.",
+  "fine_tuned": "It's possible - I'm focusing on workouts that don't put stress on the knee. Squats put some load on the knee joint, so if you have pain after training, stop doing them and see a doctor. If you're unsure, ask your doctor."
+ },
+ {
+  "question": "Tell me the macros of lentils",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, lentils (boiled), 1 cup (198 g), contains 229.7 kcal, 17.9 g protein, 39.8 g carbohydrate, 0.8 g fat, 15.6 g fiber and 3.6 g sugars. It's noted as high protein and high fiber based on the USDA values.",
+  "base": "Lentils have a high amount of nutrients, including protein, fiber, and iron. They also contain a good amount of carbohydrates and some fats. Here's how to calculate their macro values:\n\n1. Protein: 17.9 grams per cup (198g). This is approximately 4% of your daily recommended intake.\n\n2. Fiber: 15.6 grams per cup (198g). This is around 3% of your daily recommended intake.\n\n3. Fat: 0.8 grams per cup (198g). This is less than 1% of your daily recommended intake.\n\n4. Carbohydrates: 39.8 grams per cup (198g). This is approximately 10% of your daily recommended intake.\n\nRemember that these amounts may vary depending on the type of lentils you choose. For example, green lentils have more protein and fewer carbs compared to red lentils. Always consult",
+  "fine_tuned": "According to USDA FoodData Central, lentils (boiled), 1 cup (198 g), contains 229.7 kcal, 17.9 g protein, 39.8 g carbohydrate, 0.8 g fat, 15.6 g fiber and 3.6 g sugars. It's noted as high protein and high fiber based on the USDA values."
+ },
+ {
+  "question": "What muscles does the Dumbbell Tricep Extension work?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "The Dumbbell Tricep Extension mainly works the triceps. An overhead triceps extension with a dumbbell - a good option for home training. It's rated beginner and uses dumbbells. Safety tip: Start light and lower the dumbbell behind your head slowly.",
+  "base": "The Dumbbell Tricep Extension works several key muscle groups. It targets the triceps brachii muscle, which is located at the front of the upper arm. This muscle helps with extending the elbow joint, so when you perform this exercise, you're working to strengthen and develop the triceps. Additionally, the movement also engages the biceps brachii muscle, which is another important muscle involved in bending the wrist and forearm.",
+  "fine_tuned": "The Dumbbell Tricep Extension works the triceps. It mainly targets the upper triceps. A good option for home training. Safety tip: start light and lower the dumbbell behind your head slowly."
+ },
+ {
+  "question": "My lower back hurts after deadlifts.",
+  "category": "exercise_safety",
+  "intent": "exercise_safety",
+  "reference": "Mild muscle tiredness can happen, but back pain after deadlifts often means the weight was too heavy or the back rounded. Lower the weight, practise the hip hinge, and keep the bar close to your body.",
+  "base": "If you're experiencing pain after doing the deadlift, it's likely due to muscle strain or tension. To alleviate this discomfort, try warming up before starting your workout by doing some light cardio like jogging or jumping jacks. \n\nNext, focus on proper form during the deadlift. Ensure your grip is close to your shins, keep your knees slightly bent, and avoid locking your knees. This will help maintain control over your movement and reduce the risk of injury.\n\nAdditionally, consider using a foam roller or self-myofascial release techniques to target tight areas around your lower back. These methods can help relax any tense muscles and improve overall flexibility.\n\nLastly, if the pain persists or worsens, consult with a physical therapist who specializes in sports medicine. They can provide personalized guidance and treatment options tailored to your specific needs.",
+  "fine_tuned": "Lower back pain from deadlifts usually comes from the hips and glutes - try some hip hinge or glute bridges first. If it's severe, see a trainer or physiotherapist."
+ },
+ {
+  "question": "How much protein is in tofu?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, tofu (firm), 0.5 cup (126 g), contains about 11.4 g of protein and 98.3 kcal. It's noted as high protein based on the USDA values.",
+  "base": "Tofu has approximately 11.4 grams of protein per 0.5 cup (126g) serving.",
+  "fine_tuned": "According to USDA FoodData Central, tofu (firm), 0.5 cup (126 g), provides about 11.4 g of protein and 98.3 kcal. It's noted as high protein based on the USDA values."
+ },
+ {
+  "question": "What muscles does the lunges work?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "The Lunges mainly works the quadriceps, calves and glutes. A single-leg exercise that builds leg strength, balance and coordination. Can be done with or without dumbbells. It's rated beginner and uses bodyweight or dumbbells. Safety tip: Take a long enough step that your front knee stays roughly over your ankle, and start without weights.",
+  "base": "The lunges work several muscle groups, including:\n\n1. **Quadriceps**: The front of your thighs, which are involved in straightening your legs when you lunge.\n2. **Glutes**: The buttocks, which also contribute to the movement as they extend your hips during the lunge.\n3. **Calfs**: The lower part of your legs, specifically the gastrocnemius muscle (the calf muscle), which helps to stabilize your knees while performing the lunge.\n4. **Core**: Your abdominal muscles, which support your spine and help maintain stability during the movement.\n5. **Legs**: The entire length of your legs, from your hip to your toes, play a role in the overall movement.\n\nThese muscle groups work together to create a full-body workout, improving overall strength, balance, and coordination.",
+  "fine_tuned": "It mainly works the quadriceps, calves and glutes. A single-leg exercise that builds leg strength, balance and coordination. It's easy to do with or without dumbbells. Safety tip: Start with light weights or easier variations before adding more."
+ },
+ {
+  "question": "How do I do rear delt fly?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "A bent-over fly that targets the rear deltoids and upper back, supporting good posture. It mainly targets the shoulders. How to do it: To begin, lie down on an incline bench with the chest and stomach pressing against the incline Have the dumbbells in each hand with the palms facing each other (neutral grip). Safety tip: Keep a slight bend in the elbows, a flat back and use light weights.",
+  "base": "Rear Delts Fly - A Simple Exercise for Your Back Muscles!\n\nTo perform a Reversed Delt Fly, follow these steps:\n\n1. **Positioning**: Lie on your back with your knees bent and feet flat on the floor. Place your hands behind your head, with your palms facing up towards the ceiling. Ensure your shoulders are relaxed and your body is straight.\n\n2. **Starting Position**: Hold onto a pair of dumbbells at shoulder height. Make sure both hands have one dumbbell in each hand.\n\n3. **Pulling**: Slowly lift your right arm out to the side until your elbow forms a 90-degree angle. At this point, keep your left arm still.\n\n4. **Pulling**: Now, slowly pull your right arm back towards your body, keeping your elbow close to your body. Try to maintain a smooth movement without jerking your arm.\n\n5. **Releasing**: As you release your arm,",
+  "fine_tuned": "A bent-over fly that targets the rear deltoids and upper back, supporting good posture. It mainly targets the shoulders. How to do it: Lie down on an incline bench with the chest and stomach pressing against the incline. Have the dumbbells in each hand with the palms facing each other (neutral grip) And safety tip: Keep a slight bend in the elbows, a flat back and use light weights."
+ },
+ {
+  "question": "beginner dumbbell workout plan for 3 days, please",
+  "category": "home_workouts",
+  "intent": "home_workout",
+  "reference": "Here's your beginner 3-day home plan (full-body). Day 1 (full body a) uses goblet squat, dumbbell press, dumbbell row, glute bridge and plank; Day 2 (full body b) uses glute bridge, shoulder press, dumbbell row, lunges and plank; Day 3 (full body c) uses lunges, incline press, dumbbell row, glute bridge and plank. Do 2-3 sets of 10-12 reps on the main lifts and rest 60-90 sec between sets. Warm up for 5-10 minutes first, leave 1-3 reps in reserve, and add weight or reps gradually as the exercises feel easier.",
+  "base": "Sure, here's a beginner's dumbbell workout plan for 3 days:\n\nDay 1: Full Body A\n- Goblet Squat 2-3 times\n- Dumbbell Press 2-3 times\n- Dumbbell Row 2-3 times\n- Glute Bridge 2-3 times\n- Plank 2-3 times\n\nDay 2: Full Body B\n- Glute Bridge 2-3 times\n- Shoulder Press 2-3 times\n- Dumbbell Row 2-3 times\n- Lunges 2-3 times\n- Plank 2-3 times\n\nDay 3: Full Body C\n- Glute Bridge 2-3 times\n- Incline Press 2-3 times\n- Dumbbell Row 2-3 times\n- Lunges 2-3 times\n- Plank 2-3 times\n\nRemember to start slow and",
+  "fine_tuned": "Here's your beginner full-body plan (full-body). Do 2-3 sets of 10-12 reps per session, rest 60-90 seconds between sets, and complete 2-3 sessions per week. Warm up first, focus on controlled reps, and add weight or reps gradually as the exercises feel easier."
+ },
+ {
+  "question": "I train at home and want to lose weight.",
+  "category": "workout_planning",
+  "intent": "workout_plan",
+  "reference": "Here's a 3-day home plan for weight loss. Day 1: bodyweight squats 3x15, push-ups 3x8-12, glute bridges 3x15, plank 3x30s. Day 2: reverse lunges 3x10 per leg, superman 3x12, incline push-ups 3x12, mountain climbers 3x30s. Day 3: repeat Day 1 with one extra set. Rest 60 seconds between sets and walk 30 minutes on most days. Pair it with a modest calorie deficit.",
+  "base": "Great choice! Here's a basic plan for a 10-week program:\n\n1. **Week 1** - Start with 5 days of strength training (squat, push, pull, hinge), followed by 5 days of cardio (walking). Rest day.\n2. **Week 2** - Increase strength training to 6 days, then add 2 days of cardio. Rest day.\n3. **Week 3** - Add more strength training to 7 days, then reduce cardio to 4 days. Rest day.\n4. **Week 4** - Increase strength training to 8 days, then add 2 days of cardio. Rest day.\n5. **Week 5** - Reduce strength training to 9 days, then increase cardio to 5 days. Rest day.\n6. **Week 6** - Increase strength training to 10 days, then reduce cardio to 3 days. Rest day.",
+  "fine_tuned": "Here's a basic split: leg day (squat, push, hinge), chest/back (push, plank) and abs (plank, sit-up). Do 4-6 sets of 8-12 reps on the legs, 2-3 sets of 10-12 reps on the chest/back, 2-3 sets of 15-30 reps on the abs and leave some rest between sets. Warm up first, add weight or reps gradually as it feels easier, and drink plenty of water before training."
+ },
+ {
+  "question": "Tips for doing Lunges with good form?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "A single-leg exercise that builds leg strength, balance and coordination. Can be done with or without dumbbells. It mainly targets the quadriceps, calves and glutes. How to do it: Stand with your torso upright holding two dumbbells in your hands by your sides This will be your starting position. Safety tip: Take a long enough step that your front knee stays roughly over your ankle, and start without weights.",
+  "base": "Sure, here's some advice on lunges with good form:\n\n1. **Start Position**: Stand with your feet hip-width apart (about 20-30 cm). Place one foot forward of the other, so your big toes touch. Your body should form a straight line from head to heels.\n\n2. **Body Alignment**: Keep your back straight but not stiff. Your chest should be up and out, and your shoulders relaxed. Your weight should be evenly distributed between both feet.\n\n3. **Hip Width**: Ensure your knees don't extend past your toes. If they do, bend them slightly at the knee.\n\n4. **Step Forward**: Step forward with your front foot until your heel just touches the ground. Keep your back leg behind you.\n\n5. **Push Off**: Push off your front foot as you bring your back foot into place. Keep your core engaged and your glutes active.\n\n6. **Repeat**: Continue this",
+  "fine_tuned": "A single-leg exercise that builds leg strength, balance and coordination. It mainly targets the quadriceps, calves and glutes. With a bodyweight or dumbbells, it's a beginner-friendly option. How to do it: Stand with your torso upright holding two dumbbells by your sides This will be your starting position Safety tip: Take a long enough step that your front knee stays roughly over your ankle, and start without weights."
+ },
+ {
+  "question": "Are kettlebells good for beginners?",
+  "category": "fitness_equipment",
+  "intent": "equipment",
+  "reference": "Kettlebells are versatile and work well for beginners when you start light. Beginner-friendly kettlebell exercises include goblet squats, deadlifts, rows, presses and carries. Swings are excellent but learn the hip-hinge technique first, ideally with guidance.",
+  "base": "Kettlebells are great for beginners because they offer a combination of resistance training and flexibility exercises that work multiple muscle groups at once. They're also relatively easy to use and don't require any special equipment. However, like all new workout tools, they may take some getting used to if you're not familiar with using them. Always remember to warm up before starting with kettlebells and cool down afterwards.",
+  "fine_tuned": "Kettlebells are great for beginners - they're lightweight, easy to use and don't require any equipment. They work mainly the glutes, hips and core, so they build strength without adding bulk. Start with a light bag and focus on controlled movements first; as you get stronger, add more weight or reps."
+ },
+ {
+  "question": "Can you explain how to do jump rope?",
+  "category": "cardio_endurance",
+  "intent": "exercise_search",
+  "reference": "A high-intensity cardio exercise that also improves coordination and footwork. It mainly targets the quadriceps, calves and hamstrings. How to do it: Hold an end of the rope in each hand Position the rope behind you on the ground. Safety tip: Land softly on the balls of your feet and start with short intervals.",
+  "base": "Sure! Here's a simple step-by-step guide on how to do a jump rope:\n\n1. **Find a comfortable spot**: Stand near a wall or a fence if possible. This will make it easier to hold onto the rope while jumping.\n\n2. **Hold the rope correctly**: Hold the end of the rope with one hand at the bottom (the \"end\" of the rope) and the other hand above this point. The rope should hang straight down from your hands.\n\n3. **Start moving**: Begin by holding the rope in both hands and starting to move your hands back and forth. Keep your hands close together as you move them forward.\n\n4. **Jump over the rope**: As you move your hands forward, bring the rope over your head so that your palms face upwards. Then, jump up and land on your toes.\n\n5. **Repeat**: Continue jumping over the rope until you feel tired. Remember to keep your knees bent and your",
+  "fine_tuned": "A high-intensity cardio exercise that also improves coordination and footwork. It mainly targets quadriceps, calves and hamstrings. How to do it: Hold an end of the rope in each hand Position the rope behind you on the ground. Safety tip: Land softly on the balls of your feet and start with short intervals. Different speeds and techniques can be used to introduce variation."
+ },
+ {
+  "question": "Sources of healthy fats?",
+  "category": "nutrition",
+  "intent": "nutrition_question",
+  "reference": "Foods with mostly healthy, unsaturated fats include cashews, salmon, almonds, peanut butter and sardines. For example, 1 oz of cashews (raw) provides about 5.2 g of protein and 156.8 kcal according to USDA data. Include a protein source at each meal.",
+  "base": "Healthy sources of fats include avocados, nuts like almonds, walnuts, pecans, and hazelnuts, seeds like chia, flax, hemp, pumpkin, sunflower, and sesame seeds, as well as oily fish like salmon, mackerel, sardines, and tuna. These foods provide heart-healthy monounsaturated and polyunsaturated fats that support overall health.",
+  "fine_tuned": "Good sources of healthy fats include cashews, salmon, almonds, peanut butter, sardines and sardines. For example, 1 oz (28.35 g) of cashews provides about 5.2 g of fat and 156.8 kcal according to USDA data. Aim for foods high in monounsaturated and polyunsaturated fats like these."
+ },
+ {
+  "question": "Does exercise help with stress?",
+  "category": "healthy_lifestyle",
+  "intent": "general_fitness",
+  "reference": "Yes - regular physical activity can reduce feelings of stress and anxiety and improve mood and sleep. Walking outdoors, yoga, cycling, and strength training all help. If you're feeling persistently low or anxious, please also reach out to a healthcare professional.",
+  "base": "Yes, regular exercise can help alleviate stress. It's like giving your body a workout that makes you feel more relaxed and calm. Exercise releases endorphins, which are chemicals in the brain that act as natural painkillers and mood elevators. This can help reduce feelings of stress and anxiety.",
+  "fine_tuned": "Regular physical activity can help manage stress by reducing tension, improving mood and sleep, and boosting energy levels. It's best done at least 30 minutes most days, especially during stressful periods."
+ },
+ {
+  "question": "I'm just starting out.",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "Since you're a beginner, start with these core exercises: Plank, Crunches, Leg Raises, Mountain Climbers and Dead Bug. As a beginner, start with light weights or easier variations, do 2-3 sets of 10-12 reps, and focus on controlled, full-range movement before adding load.",
+  "base": "Start with Planks, which target the deepest core muscles. Then try Crunches, which work the abdominals more intensely. Next up, Leg Raises will strengthen the hips and thighs. Russian Twists are great for balancing the upper and lower torso. Mountain Climbers are excellent for building core stability. Finally, Dead Bug is a good option for targeting the entire core. Start with 2-3 sets of 8-10 reps each. Remember to breathe deeply during these exercises.",
+  "fine_tuned": "For beginners, start with these core exercises: Plank, Crunches, Leg Raises, Mountain Climbers and Dead Bug. As you progress, add weight or reps gradually - remember to keep the movement slow and controlled."
+ },
+ {
+  "question": "What drinks should I limit?",
+  "category": "hydration",
+  "intent": "hydration",
+  "reference": "Drinks worth limiting are those with lots of added sugar or empty calories: regular soda, energy drinks, sweetened iced teas, fruit punch, sugary coffee drinks and large amounts of juice. Alcohol also adds calories and can disrupt sleep and recovery. Better everyday choices are water, sparkling water, unsweetened tea or coffee, and milk or fortified soy milk.",
+  "base": "Yes, there are some drinks that you should limit when trying to maintain a healthy diet. Here are some suggestions:\n\n1. Sugary Drinks: These include soft drinks, sports drinks, flavored milkshakes, energy drinks, and sweetened teas and coffees. They contain high amounts of sugar and other unhealthy ingredients.\n\n2. Processed Foods: These often have high levels of sodium, saturated fats, and sugars. Try to eat more fresh foods instead.\n\n3. Refined Grains: These include white bread, pasta, rice, and pastries. They are usually high in carbohydrates but low in nutrients.\n\n4. Sugary Snacks: These include candy, cookies, cakes, and other sweet treats. They are high in calories and low in nutrients.\n\n5. Fast Food: This includes fast food restaurants like McDonald's, Burger King, and others. They are high in fat, salt, and sugar.\n\n6. Alcohol: While alcohol does provide some",
+  "fine_tuned": "Limit sugary drinks like soda, juice, sweetened tea and coffee, which add extra calories and empty sugars without filling you up. Water, unsweetened tea or coffee, milk and low-fat or non-fat yogurts are healthier alternatives."
+ },
+ {
+  "question": "What drinks should I avoid?",
+  "category": "hydration",
+  "intent": "hydration",
+  "reference": "Drinks worth limiting are those with lots of added sugar or empty calories: regular soda, energy drinks, sweetened iced teas, fruit punch, sugary coffee drinks and large amounts of juice. Alcohol also adds calories and can disrupt sleep and recovery. Better everyday choices are water, sparkling water, unsweetened tea or coffee, and milk or fortified soy milk.",
+  "base": "Yes, there are some drinks that you should try to avoid if you want to stay healthy. Here are some suggestions:\n\n1. Sugary Drinks: These include sodas, sports drinks, flavored milks, and fruit juices. They contain high amounts of sugar and other unhealthy ingredients.\n\n2. Alcoholic Drinks: While alcohol doesn't have the same negative effects as sugar, it's still important to be mindful of how much you consume. It can lead to weight gain, increase risk of heart disease, and affect your judgment.\n\n3. Processed Foods: These often contain high levels of sodium, sugar, and unhealthy fats. Try to eat more whole foods like fruits, vegetables, lean proteins, and whole grains.\n\n4. Refined Carbohydrates: These include white bread, pasta, rice, and sugary baked goods. They're high in sugar and low in fiber, which can cause spikes and crashes in blood sugar levels.\n\n5. Sugary Snacks: These",
+  "fine_tuned": "Sugar-sweetened beverages like soda, juice, flavored sparkling water and sweetened teas are high in added sugar and contribute to weight gain and other health problems. Water, unsweetened tea or coffee, milk and small amounts of wine are better choices."
+ },
+ {
+  "question": "Can you explain how to do dumbbell tricep extension?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "An overhead triceps extension with a dumbbell - a good option for home training. It mainly targets the triceps. How to do it: Grab a dumbbell and either sit on a military press bench or a utility bench that has a back support on it as you place the dumbbells upright on top of your thighs or stand up straight. Safety tip: Start light and lower the dumbbell behind your head slowly.",
+  "base": "Sure! Here's a step-by-step guide on how to perform a dumbbell tricep extension:\n\n1. **Position yourself**: Stand with your feet shoulder-width apart, toes pointing slightly outward. Hold one dumbbell in each hand at shoulder height.\n\n2. **Position your body**: Bend your elbows so they're almost touching your sides. Keep your upper arms close to your body.\n\n3. **Start lifting**: Slowly lift the dumbbells towards your shoulders, keeping them straight but not locked out. Aim to keep your elbows close to your body.\n\n4. **Control the movement**: As you lift, try to maintain control over the movement. Avoid letting the weight drop down too far.\n\n5. **Lower the weights**: Once you've reached the desired position (usually just above shoulder level), slowly lower the weights back down to the starting position.\n\n6. **Repeat**: Continue this motion until you reach your target repetition range. This could be",
+  "fine_tuned": "An overhead triceps extension with a dumbbell - a good option for home training. It mainly targets the triceps. How to do it: Grab a dumbbell and either sit on a military press bench or a utility bench that has a back support on it As you place the dumbbells upright on top of your thighs or stand up straight Safety tip: Start light and lower the dumbbell behind your head slowly."
+ },
+ {
+  "question": "Tell me the macros of coffee",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, black coffee (brewed), 1 cup (8 fl oz) (237 g), contains 2.4 kcal, 0.3 g protein, 0 g carbohydrate, 0 g fat, 0 g fiber and 0 g sugars.",
+  "base": "Coffee has a high amount of macronutrients, which include carbohydrates, proteins, and fats. Here's how much each one typically contains in a serving of coffee:\n\n1. Carbohydrates: Coffee contains around 5 grams of carbs per 1 ounce (28 grams) serving.\n\n2. Proteins: A typical serving of coffee usually contains around 0.3 grams of protein.\n\n3. Fats: Coffee also contains some fats, but they're relatively small amounts.\n\n4. Fiber: The average serving of coffee contains around 0.3 grams of dietary fiber.\n\nRemember that these values might vary slightly depending on the type of coffee bean, roast level, and brewing method used. Always consult a nutritionist or dietitian for personalized advice based on your specific needs and health goals.",
+  "fine_tuned": "According to USDA FoodData Central, black coffee (brewed), 1 cup (8 fl oz) (237 g), provides about 2.4 kcal, with 0.3 g protein, 0 g carbohydrate and 0 g fat. It's rated as 0 kcal according to the USDA values."
+ },
+ {
+  "question": "Tell me the macros of beef",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, lean ground beef 90% (cooked), 3 oz (85 g), contains 195.5 kcal, 24.1 g protein, 0 g carbohydrate, 10.2 g fat, 0 g fiber and 0 g sugars. It's noted as high protein based on the USDA values.",
+  "base": "Yes, beef has a high amount of macro nutrients like protein, carbohydrates, and fats. Here's how much each macronutrient contributes to an average serving size of lean ground beef:\n\n1. Protein: 24.1 grams\n2. Carbohydrates: 0 grams\n3. Fat: 10.2 grams\n\nSo, if you were to consume one serving of lean ground beef, you would get approximately 195.5 calories, 24.1 grams of protein, 0 grams of carbohydrates, and 10.2 grams of fat.",
+  "fine_tuned": "According to USDA FoodData Central, lean ground beef 90% (cooked), 3 oz (85 g), contains about 195.5 kcal, 24.1 g protein, 0 g carbohydrate, 10.2 g fat, 0 g fiber and 0 g sugars. It's noted as high protein based on the USDA values."
+ },
+ {
+  "question": "What muscles does the Triceps Stretch work?",
+  "category": "stretching_flexibility",
+  "intent": "stretching",
+  "reference": "The Triceps Stretch mainly works the triceps and lats. An overhead stretch for the triceps and shoulders. It's rated beginner and uses none. Safety tip: Keep your head upright and pull gently.",
+  "base": "The Triceps Stretch works the following muscles:\n\n1. Triceps brachii (Tb) - The main muscle being stretched.\n2. Latissimus dorsi (Ld) - The back of the shoulder that the stretched arm will reach out to touch.\n3. Deltoid (D) - The shoulder blade muscles that the stretched arm will flex at the shoulder joint.\n4. Biceps Brachii (Bb) - The forearm muscle that the stretched arm will extend from the elbow joint.\n5. Triceps (Tr) - The long, thin muscle running along the back of the upper arm.\n\nThis exercise targets all three of these muscles, which helps improve overall shoulder flexibility and strength.",
+  "fine_tuned": "The Triceps Stretch works the triceps, lats. It mainly targets the triceps. How to do it: reach your hand behind your head, grasp your elbow and gently pull. Safety tip: keep your head upright and pull gently."
+ },
+ {
+  "question": "What is Bitcoin?",
+  "category": "out_of_domain",
+  "intent": "out_of_domain",
+  "reference": "Sorry, that's outside what I can help with. I'm focused on fitness, nutrition and wellness. Ask me something about workouts, exercise, food, recovery or healthy lifestyle.",
+  "base": "Bitcoin is a type of digital currency that exists solely online. It's like a virtual money that people use to buy things from each other over the internet. You can't physically hold Bitcoin like you could with cash or physical money. \n\nIt's called \"digital\" because there's no physical piece of paper or coins involved. Instead, people send and receive Bitcoins electronically through computers and phones. This makes it easy for people to make transactions without needing a bank account or any kind of traditional payment system.\n\nHowever, just like real money, Bitcoin has its own rules and regulations. Some people might be worried about how much they have, where it's stored, or what happens if someone tries to steal it. But most people understand that Bitcoin is a new way of doing business, and it's still very new.",
+  "fine_tuned": "Bitcoin is an online currency that's widely used as a payment method. It's created by computers solving complex math problems to validate transactions - the more powerful the computer, the higher its reward. Transactions take minutes, but fees vary greatly depending on where you're using it and how much bandwidth you have available."
+ },
+ {
+  "question": "What nutrients are in salmon?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, salmon (atlantic, farmed, cooked), 0.5 fillet (178 g), contains 366.7 kcal, 39.3 g protein, 0 g carbohydrate, 22.1 g fat, 0 g fiber and 0 g sugars. It's noted as high protein and mostly unsaturated fat based on the USDA values.",
+  "base": "Salmon contains several essential nutrients that are important for overall health and well-being. Here's a brief overview of the nutrients found in salmon:\n\n1. Omega-3 fatty acids: These are polyunsaturated fats that play a crucial role in brain function, heart health, and inflammation reduction. They also have anti-inflammatory properties which may reduce the risk of chronic diseases such as arthritis, diabetes, and cardiovascular disease.\n\n2. Vitamin D: Salmon is rich in vitamin D, which helps maintain strong bones and immune system function. It also has antioxidant properties that protect cells from damage caused by free radicals.\n\n3. Selenium: This mineral plays a key role in thyroid function and immune system response. It also supports the growth and development of red blood cells.\n\n4. Potassium: This mineral helps regulate fluid balance in the body and aids in muscle contraction and relaxation.\n\n5. Calcium: Salmon is an excellent source of calcium, which is necessary for bone health and maintaining strong teeth and bones",
+  "fine_tuned": "According to USDA FoodData Central, salmon (atlantic, farmed, cooked), 0.5 fillet (178 g), provides 39.3 g of protein, 366.7 kcal, 22.1 g of Carbohydrate, 22.1 g of Fat and 0 g of Sugars. It's noted as high protein and mostly unsaturated fat based on the USDA values."
+ },
+ {
+  "question": "What are the nutrition facts for avocado?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, avocado, 1 fruit, without skin and seed (136 g), contains 227.1 kcal, 2.7 g protein, 11.8 g carbohydrate, 20.9 g fat, 9.2 g fiber and 0.4 g sugars. It's noted as high fiber and mostly unsaturated fat based on the USDA values.",
+  "base": "Avocados are an excellent source of nutrients, including vitamins A, C, E, K, B5, B6, and folate, as well as minerals like potassium, magnesium, and copper. They also contain healthy fats, particularly monounsaturated and polyunsaturated fats, which are beneficial for heart health.\n\nA medium-sized avocado contains approximately 227 calories, 136 grams of carbohydrates, 20.9 grams of protein, and 11.8 grams of fat. The calorie content varies slightly depending on whether the avocado has been peeled and seeded or unpeeled.\n\nThe nutritional profile of one avocado per serving size is as follows:\n\n- Calories: 227\n- Carbohydrates: 136 grams\n- Protein: 2.7 grams\n- Fat: 20.9 grams\n- Fiber: 9.2 grams\n- Sugars: 0.4 grams\n\nPlease note that",
+  "fine_tuned": "According to USDA FoodData Central, avocado, without skin and seed (136 g), contains 227.1 kcal, 2.7 g protein, 11.8 g carbohydrate, 20.9 g fat, 9.2 g fiber and 0.4 g sugars. It's noted as high fiber based on the USDA values."
+ },
+ {
+  "question": "Can you explain how to do Superman?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "A floor exercise that strengthens the lower back and glutes without equipment. It mainly targets the lower back, glutes and hamstrings. How to do it: To begin, lie straight and face down on the floor or exercise mat Your arms should be fully extended in front of you. Safety tip: Lift slowly and only as high as is comfortable; avoid cranking your neck back.",
+  "base": "Sure! Here's a simple step-by-step guide on how to perform Superman exercises:\n\n1. **Start:** Lie flat on your stomach with your arms stretched out in front of you. Make sure your hands are at shoulder height and your feet are hip-width apart.\n\n2. **Position:** Place one hand behind your head and the other hand under your chin. Keep your body straight and your back against the wall.\n\n3. **Push Up:** Push your hips up towards the ceiling until your upper body is almost parallel to the ground. Keep your knees slightly bent and your feet flat on the floor.\n\n4. **Lower Down:** Slowly lower yourself back down to the starting position. Try to keep your elbows close to your sides.\n\n5. **Repeat:** Do this exercise 8 times. Remember to breathe normally during each push-up and try to maintain good posture throughout.\n\nRemember, it's important to start slow and gradually increase the number of repetitions",
+  "fine_tuned": "A beginner version of this exercise uses bodyweight. It mainly targets the lower back, glutes and hamstrings. How to do it: Lie straight and face down on the floor or exercise mat Your arms should be fully extended in front of you. Safety tip: Lift slowly and only as high as is comfortable; avoid cranking your neck back."
+ },
+ {
+  "question": "It's a sharp pain going down my leg.",
+  "category": "exercise_safety",
+  "intent": "medical_safety",
+  "reference": "Sharp pain that travels down your leg is not normal soreness - it can involve a nerve. Please stop deadlifting and other exercises that trigger it, and see a doctor or physiotherapist for an assessment. Get urgent care if you notice numbness in the groin area, leg weakness or loss of bladder control. FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.",
+  "base": "The pain might be coming from the hamstring muscles, which run along the back of your thigh. Try stretching them out before you start lifting weights again.",
+  "fine_tuned": "A sharp leg pain that shoots down into the thigh usually means an overload - stop the movement if it hurts, take some rest, add weight gradually, and train lighter first."
+ },
+ {
+  "question": "Which exercises train my core?",
+  "category": "workout_exercises",
+  "intent": "exercise_search",
+  "reference": "Great core exercises include Plank, Crunches, Leg Raises, Russian Twists, Mountain Climbers and Dead Bug. Compound movements build the most overall strength; add one or two isolation exercises for extra focus. Aim for 2-4 sets of 8-12 reps.",
+  "base": "Your core training includes:\n\n1. Planks: This exercise works your entire core from head to toe, including your abs, obliques, and lower back. It's great for building strength and endurance.\n\n2. Crunches: These exercises target your abdominals, which are the muscles around your waistline. They're easy to do at home using any chair or bench.\n\n3. Leg Raises: This exercise targets your glutes (buttocks) and hamstrings. It's simple to do at home and can be done anywhere.\n\n4. Russian Twists: These exercises work your obliques, which are the muscles between your ribs and hips. They're good for improving posture and balance.\n\n5. Mountain Climbers: This exercise also targets your glutes and hamstrings. It's a bit more challenging than other core exercises but still relatively easy to do at home.\n\nRemember, consistency is key when working out your core. Aim to do these",
+  "fine_tuned": "Here are some effective core exercises: Plank, Crunches, Leg Raises, Russian Twists, Mountain Climbers and Dead Bug. For example, the Plank (beginner, bodyweight) targets the abdominals. Start with an easy variation and build from there. Aim for 2-3 sets of 10-12 reps per exercise."
+ },
+ {
+  "question": "How much protein is in kidney beans?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, kidney beans (boiled), 1 cup (177 g), contains about 15.3 g of protein and 224.8 kcal. It's noted as high protein and high fiber based on the USDA values.",
+  "base": "Kidney beans contain approximately 15.3 grams of protein per cup (177 grams).",
+  "fine_tuned": "According to USDA FoodData Central, kidney beans (boiled), 1 cup (177 g), contains about 15.3 g of protein and 224.8 kcal. It's noted as high protein based on the USDA values."
+ },
+ {
+  "question": "Protein content of bagel?",
+  "category": "food",
+  "intent": "food_search",
+  "reference": "According to USDA FoodData Central, bagel (plain), 1 mini bagel (2-1/2\" dia) (26 g), contains about 2.7 g of protein and 71.5 kcal.",
+  "base": "The protein content of a bagel varies depending on the type of bagel and how it's prepared. A standard mini bagel typically contains around 2 grams of protein per serving. However, if you're looking at a more substantial whole grain bagel, such as a whole wheat or rye bagel, the protein content might be slightly higher. It's always best to check the specific nutritional information from the USDA FoodData Central website for the most accurate data.",
+  "fine_tuned": "According to USDA FoodData Central, bagel (plain), 1 mini bagel (2.5 oz), contains about 2.7 g of protein and 71.5 kcal."
+ },
+ {
+  "question": "What foods contain healthy fats?",
+  "category": "nutrition",
+  "intent": "nutrition_question",
+  "reference": "Foods with mostly healthy, unsaturated fats include cashews, salmon, almonds, peanut butter and sardines. For example, 1 oz of cashews (raw) provides about 5.2 g of protein and 156.8 kcal according to USDA data. Include a protein source at each meal.",
+  "base": "Yes, I understand that you're asking about the types of food that contain healthy fats. Here's a list of some examples:\n\n1. Avocados: They are rich in monounsaturated fats, which are considered to be heart-healthy.\n\n2. Olive Oil: It contains monounsaturated fats, which are also known as \"good\" fats.\n\n3. Fatty Fish: These include salmon, tuna, mackerel, and sardines. They are high in omega-3 fatty acids, which are beneficial for heart health.\n\n4. Nuts and Seeds: Almonds, walnuts, flaxseeds, chia seeds, and sunflower seeds are all good sources of healthy fats.\n\n5. Avocado Oil: This is an extra virgin olive oil made by pressing the purest form of extra virgin olive oil. It has a higher concentration of monounsaturated fats than other oils.\n\n6. Coconut Oil: It is high in medium chain triglycerides (MCTs), which may have anti-inflammatory properties.",
+  "fine_tuned": "Good sources of healthy fats include cashews, salmon, almonds, peanut butter, sardines and sardines. For example, cashews (raw), salmon (Atlantic, farmed, cooked), almonds and peanut butter (high protein, mostly unsaturated fat) provide around 39.3 g of fat per 1 oz (28.35 g). Aim for these foods as part of a balanced diet."
+ },
+ {
+  "question": "What foods are high in fiber?",
+  "category": "nutrition",
+  "intent": "nutrition_question",
+  "reference": "Foods high in fiber include kidney beans, chickpeas, oats, whole-wheat tortilla and walnuts. For example, 1 cup of kidney beans (boiled) provides about 11.3 g of fiber (USDA). Increase fiber gradually and drink enough water.",
+  "base": "Foods that are high in fiber include:\n\n1. **Beans**: Kidney beans, chickpeas, black beans, pinto beans, and other legumes are all high in fiber.\n\n2. **Oats**: Whole-grain oats like oatmeal have a lot of fiber.\n\n3. **Chickpeas**: Also known as garbanzo beans, chickpeas are high in fiber.\n\n4. **Whole-wheat tortillas**: These contain a significant amount of fiber.\n\n5. **Legumes**: Lentils, black beans, kidney beans, and other legumes are high in fiber.\n\n6. **Nuts and seeds**: Almonds, walnuts, flaxseeds, chia seeds, and sunflower seeds are all high in fiber.\n\n7. **Vegetables**: Leafy greens like spinach, broccoli, and kale are high in fiber.\n\n8. **Fruit**: Apples, bananas, oranges, berries, and pears are all high in fiber.\n\n9. **Dried fruits**:",
+  "fine_tuned": "Foods high in fiber include kidney beans, chickpeas, oats, whole wheat tortilla, walnuts and most vegetables. Aim for at least 14 g of fiber per day according to the USDA values."
+ },
+ {
+  "question": "My knee hurts sharply when I squat, should I push through?",
+  "category": "medical_safety",
+  "intent": "medical_safety",
+  "reference": "No - don't push through sharp or joint pain. Stop the exercise that causes it and try pain-free alternatives for other body parts. If the pain persists, comes with swelling or instability, or affects daily life, see a doctor or physiotherapist for an assessment. FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.",
+  "base": "No, pushing through sharp pain like that shouldn't be necessary. It's better to rest the area and try some other exercises instead. Always listen to your body and take time to recover if needed.",
+  "fine_tuned": "Squats put significant stress on the knees - if pain persists after 2-3 sets of 8-12 reps without noticeable discomfort, stop, rest or modify the movement. A good rule of thumb is to do 4-6 sets of 10-12 reps at moderate effort; add weight or reps gradually as strength improves."
+ }
+]

@@ -1,0 +1,6 @@
+{
+  "note": "Throwaway account used for the local end-to-end acceptance test (localhost only). Not a real credential.",
+  "name": "Demo Athlete",
+  "email": "demo.athlete@example.com",
+  "password": "Demo-8oN4yBCXUpjV"
+}

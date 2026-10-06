@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Env / secrets
+.env
+backend/.env
+
+# Database
+*.db
+*.sqlite3
+
+# Models (large artifacts – download from Colab / Hugging Face)
+models/*
+!models/README.md
+
+# Raw downloads (re-creatable via scripts)
+data/raw/*
+!data/raw/README.md
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Colab upload package (re-create with scripts/package_for_colab.py)
+FitBot_colab_data.zip
+
+# Rendered marketing media (re-create with marketing/*.py)
+marketing/*.mp4
+marketing/*.png
+marketing/raw/
+marketing/explainer/
+marketing/build/
+
+# Local safety backups (not source)
+backups/

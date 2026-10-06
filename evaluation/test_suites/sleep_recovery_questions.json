@@ -1,0 +1,116 @@
+[
+ {
+  "q": "How much should I sleep?",
+  "intents": [
+   "sleep"
+  ],
+  "keywords_any": [
+   "7",
+   "hour"
+  ]
+ },
+ {
+  "q": "How can I sleep better?",
+  "intents": [
+   "sleep"
+  ],
+  "keywords_any": [
+   "schedule",
+   "dark",
+   "caffeine",
+   "screen"
+  ]
+ },
+ {
+  "q": "Does sleep affect muscle growth?",
+  "intents": [
+   "sleep",
+   "muscle_gain"
+  ],
+  "keywords_any": [
+   "recover",
+   "sleep",
+   "repair"
+  ]
+ },
+ {
+  "q": "Is it bad to exercise before bed?",
+  "intents": [
+   "sleep"
+  ],
+  "keywords_any": [
+   "sleep",
+   "evening",
+   "hour"
+  ]
+ },
+ {
+  "q": "How long should I rest between workouts?",
+  "intents": [
+   "recovery",
+   "gym_workout"
+  ],
+  "keywords_any": [
+   "48",
+   "rest",
+   "hour",
+   "day"
+  ]
+ },
+ {
+  "q": "My muscles are sore, what should I do?",
+  "intents": [
+   "recovery"
+  ],
+  "keywords_any": [
+   "sore",
+   "rest",
+   "gentle",
+   "sleep"
+  ]
+ },
+ {
+  "q": "What is active recovery?",
+  "intents": [
+   "recovery"
+  ],
+  "keywords_any": [
+   "light",
+   "walk",
+   "easy"
+  ]
+ },
+ {
+  "q": "How do I know if I'm overtraining?",
+  "intents": [
+   "recovery"
+  ],
+  "keywords_any": [
+   "fatigue",
+   "sleep",
+   "performance"
+  ]
+ },
+ {
+  "q": "Should I work out when I'm sore?",
+  "intents": [
+   "recovery"
+  ],
+  "keywords_any": [
+   "light",
+   "sore",
+   "rest"
+  ]
+ },
+ {
+  "q": "How many hours of sleep do teenagers need?",
+  "intents": [
+   "sleep"
+  ],
+  "keywords_any": [
+   "8",
+   "10",
+   "hour"
+  ]
+ }
+]

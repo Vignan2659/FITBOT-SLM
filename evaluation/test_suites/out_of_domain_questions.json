@@ -1,0 +1,102 @@
+[
+ {
+  "q": "What is the capital of Japan?",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ },
+ {
+  "q": "Write a poem about love",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ },
+ {
+  "q": "How do I fix my car engine?",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ },
+ {
+  "q": "Who won the 2022 World Cup?",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ },
+ {
+  "q": "Explain blockchain to me",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ },
+ {
+  "q": "What's the best programming language?",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ },
+ {
+  "q": "Can you do my math homework?",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ },
+ {
+  "q": "Recommend a TV series",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ },
+ {
+  "q": "How do I invest in stocks?",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ },
+ {
+  "q": "Tell me about the French Revolution",
+  "intents": [
+   "out_of_domain"
+  ],
+  "keywords_any": [
+   "focused on fitness"
+  ],
+  "ood": true
+ }
+]

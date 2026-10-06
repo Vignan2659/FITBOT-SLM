@@ -1,0 +1,18 @@
+[
+  {"q": "How many hours of sleep do adults need per night?", "must_match": "\\b7\\b|seven", "topic": "sleep"},
+  {"q": "How many minutes of moderate aerobic activity per week do adults need?", "must_match": "150", "topic": "cardio"},
+  {"q": "How many days per week should adults do muscle-strengthening activity?", "must_match": "\\b2\\b|two|twice", "topic": "strength"},
+  {"q": "What is the general protein RDA for adults in grams per kg?", "must_match": "0\\.8", "topic": "nutrition"},
+  {"q": "What is a safe rate of weight loss per week?", "must_match": "0\\.5|1 ?kg|1-2 (pounds|lb)|one to two", "topic": "weight_loss"},
+  {"q": "Can you burn belly fat by doing crunches?", "must_match": "can'?t|cannot|not|no\\b|spot", "topic": "weight_loss"},
+  {"q": "Should you stretch with static stretches or dynamic movements before a workout?", "must_match": "dynamic", "topic": "stretching"},
+  {"q": "How long should you hold a static stretch?", "must_match": "10|15|20|30", "topic": "stretching"},
+  {"q": "Which muscles does the bench press mainly work?", "must_match": "chest|pec", "topic": "exercise"},
+  {"q": "Which muscles do squats mainly work?", "must_match": "quad|glute|leg", "topic": "exercise"},
+  {"q": "Are dumbbell rows a chest exercise or a back exercise?", "must_match": "back", "topic": "exercise"},
+  {"q": "How long does delayed onset muscle soreness usually last?", "must_match": "24|48|72|day", "topic": "recovery"},
+  {"q": "How much caffeine per day is generally considered safe for healthy adults?", "must_match": "400", "topic": "nutrition"},
+  {"q": "Is water usually enough to drink during a workout under an hour?", "must_match": "yes|water is enough|enough", "topic": "hydration"},
+  {"q": "What should you do if you feel chest pain while exercising?", "must_match": "stop|doctor|medical|emergency", "topic": "safety"},
+  {"q": "How long should you rest between sets of heavy squats?", "must_match": "2|3|minute", "topic": "gym"}
+]
