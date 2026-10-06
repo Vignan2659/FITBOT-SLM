@@ -3,7 +3,7 @@ import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import PartnerBadge from "./PartnerBadge.jsx";
-import { IconChat, IconDumbbell, IconHome, IconLogout, IconMenu, IconPlus, IconTrash, IconUser, IconX } from "./Icons.jsx";
+import { IconActivity, IconChat, IconDumbbell, IconHome, IconLogout, IconMenu, IconPlus, IconTrash, IconUser, IconX } from "./Icons.jsx";
 
 export default function AppLayout() {
   const { user, logout } = useAuth();
@@ -65,6 +65,7 @@ export default function AppLayout() {
         <nav className="nav">
           <NavLink to="/dashboard"><IconHome /> Dashboard</NavLink>
           <NavLink to="/chat" end><IconChat /> Chat</NavLink>
+          <NavLink to="/workouts"><IconActivity /> My workouts</NavLink>
           <NavLink to="/profile"><IconUser /> Profile</NavLink>
         </nav>
         <div className="conv-heading">Previous conversations</div>

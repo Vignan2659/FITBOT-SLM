@@ -66,4 +66,18 @@ export const api = {
   chat: (message, conversationId) => request("/chat", { method: "POST", body: { message, conversation_id: conversationId ?? null } }),
   exercises: (params = {}) => request(`/exercises?${new URLSearchParams(params)}`, { auth: false }),
   health: () => request("/health", { auth: false }),
+  rateMessage: (id, rating) => request(`/messages/${id}/feedback`, { method: "PUT", body: { rating } }),
+  savePlan: (plan) => request("/plans", { method: "POST", body: { plan } }),
+  listPlans: () => request("/plans"),
+  deletePlan: (id) => request(`/plans/${id}`, { method: "DELETE" }),
+  logWorkouts: (entries) => request("/workouts", { method: "POST", body: entries }),
+  listWorkouts: (limit = 50) => request(`/workouts?limit=${limit}`),
+  deleteWorkout: (id) => request(`/workouts/${id}`, { method: "DELETE" }),
+  workoutStats: (today) => request(`/workouts/stats?${new URLSearchParams({ today, weeks: 8 })}`),
 };
+
+// Local calendar date as YYYY-MM-DD (not UTC, so late-evening workouts land on the right day).
+export function localDate(d = new Date()) {
+  const z = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${z(d.getMonth() + 1)}-${z(d.getDate())}`;
+}

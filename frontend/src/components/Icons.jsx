@@ -22,3 +22,11 @@ export const IconCalendar = (p) => <svg {...base} {...p}><rect x="3" y="4" width
 export const IconFlame = (p) => <svg {...base} {...p}><path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-5 5-5 8-1-1-2-2-2-4-2 2-2 5-2 8 0 4 3 7 7 7z" /></svg>;
 export const IconDrop = (p) => <svg {...base} {...p}><path d="M12 2.7 6.3 9a7.5 7.5 0 1 0 11.4 0z" /></svg>;
 export const IconChevron = (p) => <svg {...base} {...p}><path d="m6 9 6 6 6-6" /></svg>;
+export const IconActivity = (p) => <svg {...base} {...p}><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>;
+export const IconBookmark = (p) => <svg {...base} {...p}><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /></svg>;
+export const IconCheck = (p) => <svg {...base} {...p}><path d="M20 6 9 17l-5-5" /></svg>;
+export const IconThumbUp = (p) => <svg {...base} {...p}><path d="M7 10v11H3V10zM7 10l4-8a3 3 0 0 1 3 3v4h5.5a2 2 0 0 1 2 2.3l-1.4 8A2 2 0 0 1 18.1 21H7" /></svg>;
+export const IconThumbDown = (p) => <svg {...base} {...p}><path d="M17 14V3h4v11zM17 14l-4 8a3 3 0 0 1-3-3v-4H4.5a2 2 0 0 1-2-2.3l1.4-8A2 2 0 0 1 5.9 3H17" /></svg>;
+export const IconMic = (p) => <svg {...base} {...p}><rect x="9" y="2" width="6" height="12" rx="3" /><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8" /></svg>;
+export const IconSpeaker = (p) => <svg {...base} {...p}><path d="M11 5 6 9H2v6h4l5 4zM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14" /></svg>;
+export const IconStop = (p) => <svg {...base} {...p}><rect x="6" y="6" width="12" height="12" rx="1.5" /></svg>;

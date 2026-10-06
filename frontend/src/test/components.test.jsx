@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import ExerciseCard from "../components/ExerciseCard.jsx";
 import FoodCard from "../components/FoodCard.jsx";
 import Message from "../components/Message.jsx";
-import WorkoutPlan from "../components/WorkoutPlan.jsx";
+import WorkoutPlan, { planDayEntries } from "../components/WorkoutPlan.jsx";
 
 const bench = {
   name: "Bench Press", slug: "bench-press", muscle_group: "chest",
@@ -59,4 +59,21 @@ test("bot message renders answer text and structured cards", () => {
   expect(screen.getByText("Exercises")).toBeInTheDocument();
   expect(screen.getByText("Bench Press")).toBeInTheDocument();
   expect(screen.getByText("Egg (whole, hard-boiled)")).toBeInTheDocument();
+});
+
+test("plan day becomes log entries with the planned dose as a note", () => {
+  const day = { day: "Day 1", exercises: [{ name: "Goblet Squat", sets: "2-3", reps: "10-12" }, { name: "Plank", sets: "2-3", reps: "20-40 sec" }] };
+  expect(planDayEntries(day, "2026-10-06")).toEqual([
+    { day: "2026-10-06", exercise: "Goblet Squat", notes: "Day 1: 2-3 × 10-12" },
+    { day: "2026-10-06", exercise: "Plank", notes: "Day 1: 2-3 × 20-40 sec" },
+  ]);
+});
+
+test("plan action buttons appear only when enabled", () => {
+  const plan = { title: "P", days: [{ day: "Day 1", focus: "F", exercises: [] }] };
+  const { rerender } = render(<WorkoutPlan plan={plan} />);
+  expect(screen.queryByRole("button", { name: /save plan/i })).not.toBeInTheDocument();
+  rerender(<WorkoutPlan plan={plan} saveable onLogged={() => {}} />);
+  expect(screen.getByRole("button", { name: /save plan/i })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /log day 1 as done/i })).toBeInTheDocument();
 });

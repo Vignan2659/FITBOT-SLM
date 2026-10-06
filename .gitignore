@@ -45,3 +45,6 @@ marketing/build/
 
 # Local safety backups (not source)
 backups/
+
+# Exported user feedback (contains user questions)
+evaluation/feedback_export.jsonl

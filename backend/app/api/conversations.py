@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from app.api.schemas import ConversationCreate, ConversationDetail, ConversationOut, MessageOut
 from app.core.security import get_current_user
 from app.db.database import get_db
-from app.db.models import Conversation, User
+from app.db.models import Conversation, MessageFeedback, User
 
 router = APIRouter(prefix="/conversations", tags=["conversations"])
 
@@ -48,7 +48,12 @@ def list_conversations(user: User = Depends(get_current_user), db: Session = Dep
 def get_conversation(conv_id: int, user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     conv = owned_conversation(conv_id, user, db)
     base = summary(conv)
-    return ConversationDetail(**base.model_dump(), messages=[MessageOut.model_validate(m) for m in conv.messages])
+    ratings = dict(db.execute(select(MessageFeedback.message_id, MessageFeedback.rating)
+                              .where(MessageFeedback.user_id == user.id,
+                                     MessageFeedback.message_id.in_([m.id for m in conv.messages]))).all())
+    messages = [MessageOut.model_validate(m).model_copy(update={"feedback": ratings.get(m.id, 0)})
+                for m in conv.messages]
+    return ConversationDetail(**base.model_dump(), messages=messages)
 
 
 @router.delete("/{conv_id}", status_code=status.HTTP_204_NO_CONTENT)

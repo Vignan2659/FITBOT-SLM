@@ -1,7 +1,7 @@
 """Pydantic request/response schemas."""
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import date, datetime
 from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, EmailStr, Field, field_validator
@@ -61,6 +61,7 @@ class MessageOut(BaseModel):
     intent: str | None = None
     payload: dict[str, Any] | None = None
     created_at: datetime
+    feedback: int = 0          # this user's rating: 1, -1 or 0 (none)
 
 
 class ConversationOut(BaseModel):
@@ -106,3 +107,66 @@ class ChatOut(BaseModel):
     safety: dict[str, Any] | None = None
     disclaimer: str
     model: dict[str, Any] = {}
+
+
+class PlanIn(BaseModel):
+    title: str | None = Field(default=None, max_length=120)
+    plan: dict[str, Any]
+
+    @field_validator("plan")
+    @classmethod
+    def has_days(cls, v: dict) -> dict:
+        days = v.get("days")
+        if not isinstance(days, list) or not 1 <= len(days) <= 7:
+            raise ValueError("plan must contain 1-7 days")
+        return v
+
+
+class PlanOut(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    id: int
+    title: str
+    plan: dict[str, Any]
+    created_at: datetime
+
+
+class WorkoutIn(BaseModel):
+    day: date
+    exercise: str = Field(min_length=1, max_length=80)
+    sets: int | None = Field(default=None, ge=1, le=50)
+    reps: int | None = Field(default=None, ge=1, le=500)
+    weight_kg: float | None = Field(default=None, ge=0, le=1000)
+    minutes: int | None = Field(default=None, ge=1, le=1440)
+    notes: str | None = Field(default=None, max_length=200)
+
+    @field_validator("exercise")
+    @classmethod
+    def strip_name(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("exercise must not be empty")
+        return v
+
+
+class WorkoutOut(WorkoutIn):
+    model_config = ConfigDict(from_attributes=True)
+    id: int
+    created_at: datetime
+
+
+class WorkoutStats(BaseModel):
+    total_entries: int
+    active_days: int
+    current_streak: int
+    this_week: int
+    weeks: list[dict[str, Any]]
+    top_exercises: list[dict[str, Any]]
+
+
+class FeedbackIn(BaseModel):
+    rating: Literal[-1, 0, 1]
+
+
+class FeedbackOut(BaseModel):
+    message_id: int
+    rating: int

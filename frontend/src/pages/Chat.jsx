@@ -2,7 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate, useOutletContext, useParams } from "react-router-dom";
 import { api } from "../api/client.js";
 import Message from "../components/Message.jsx";
-import { IconDumbbell, IconSend } from "../components/Icons.jsx";
+import { IconDumbbell, IconMic, IconSend } from "../components/Icons.jsx";
+
+// Voice input via the browser's Web Speech API (Chrome, Edge, Safari); the button is hidden elsewhere.
+const SpeechRecognition = typeof window !== "undefined" && (window.SpeechRecognition || window.webkitSpeechRecognition);
 
 export const SUGGESTIONS = [
   "What exercises can I do for chest?",
@@ -28,6 +31,31 @@ export default function Chat() {
   const endRef = useRef(null);
   const textRef = useRef(null);
   const skipLoad = useRef(false);
+  const recognition = useRef(null);
+  const [listening, setListening] = useState(false);
+
+  useEffect(() => () => recognition.current?.abort(), []);
+
+  function toggleVoice() {
+    if (listening) {
+      recognition.current?.stop();
+      return;
+    }
+    const rec = new SpeechRecognition();
+    rec.lang = "en-US";
+    rec.interimResults = true;
+    const before = input ? `${input.trim()} ` : "";
+    rec.onresult = (e) => setInput(before + Array.from(e.results).map((r) => r[0].transcript).join(""));
+    rec.onerror = (e) => {
+      if (e.error === "not-allowed") setError("Microphone access was blocked. Allow it in the browser to use voice input.");
+      else if (e.error !== "no-speech" && e.error !== "aborted") setError("Voice input is not available right now.");
+    };
+    rec.onend = () => { setListening(false); textRef.current?.focus(); };
+    recognition.current = rec;
+    setError("");
+    setListening(true);
+    rec.start();
+  }
 
   // load an existing conversation
   useEffect(() => {
@@ -65,6 +93,7 @@ export default function Chat() {
   async function send(text) {
     const message = (text ?? input).trim();
     if (!message || sending) return;
+    recognition.current?.abort();
     setInput("");
     setError("");
     const tempId = `tmp-${Date.now()}`;
@@ -130,8 +159,14 @@ export default function Chat() {
       <div className="composer-wrap">
         {error && <div className="form-error" role="alert">{error}</div>}
         <form className="composer" onSubmit={(e) => { e.preventDefault(); send(); }}>
-          <textarea ref={textRef} rows={1} value={input} placeholder="Ask FitBot about workouts, food, sleep..."
+          <textarea ref={textRef} rows={1} value={input} placeholder={listening ? "Listening..." : "Ask FitBot about workouts, food, sleep..."}
                     onChange={(e) => setInput(e.target.value)} onKeyDown={onKey} maxLength={2000} aria-label="Message" />
+          {SpeechRecognition && (
+            <button type="button" className={`mic-btn ${listening ? "on" : ""}`} onClick={toggleVoice}
+                    aria-label={listening ? "Stop voice input" : "Voice input"} title={listening ? "Stop listening" : "Speak your question"}>
+              <IconMic />
+            </button>
+          )}
           <button className="send-btn" disabled={!input.trim() || sending} aria-label="Send message"><IconSend /></button>
         </form>
         <p className="disclaimer">FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.</p>

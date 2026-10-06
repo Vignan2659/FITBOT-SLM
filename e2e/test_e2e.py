@@ -113,3 +113,48 @@ def test_wrong_password_shows_error(page):
     page.locator(".auth-card input").nth(1).fill("wrong-password")
     page.get_by_role("button", name="Log in").click()
     expect(page.get_by_role("alert")).to_contain_text("Incorrect email or password")
+
+
+def test_save_plan_log_workouts_and_feedback(page):
+    email, pwd = f"e2e.{secrets.token_hex(4)}@example.com", "E2e-" + secrets.token_urlsafe(10)
+    page.goto(f"{BASE}/register")
+    inputs = page.locator(".auth-card input")
+    for i, v in enumerate(["Plan Tester", email, pwd, pwd]):
+        inputs.nth(i).fill(v)
+    page.get_by_role("button", name="Create account").click()
+    expect(page.locator(".profile-form")).to_be_visible()
+
+    # chat answer with a plan -> rate it and save the plan
+    page.get_by_role("button", name="New chat").first.click()
+    bot = ask(page, "Give me a beginner 3-day gym workout")
+    expect(bot.locator(".plan")).to_be_visible()
+    bot.get_by_role("button", name="Helpful", exact=True).click()
+    expect(bot.get_by_role("button", name="Helpful", exact=True)).to_have_attribute("aria-pressed", "true")
+    bot.get_by_role("button", name="Save plan").click()
+    expect(bot.get_by_text("Saved to My workouts")).to_be_visible()
+
+    # rating survives a reload
+    page.reload()
+    expect(page.locator(".msg-bot").last.get_by_role("button", name="Helpful", exact=True)).to_have_attribute("aria-pressed", "true")
+
+    # My workouts: saved plan, log a plan day, log an exercise manually
+    page.get_by_role("link", name="My workouts").click()
+    expect(page.locator(".saved-plan .plan")).to_have_count(1)
+    page.locator(".saved-plan").get_by_role("button", name="as done").click()
+    expect(page.locator(".saved-plan").get_by_text("Logged today")).to_be_visible()
+    page.get_by_label("Exercise", exact=True).fill("Running")
+    page.get_by_label("Minutes").fill("20")
+    page.get_by_role("button", name="Log exercise").click()
+    expect(page.get_by_text("Logged Running.")).to_be_visible()
+
+    stats = page.locator(".stats .stat strong")
+    expect(stats.nth(0)).to_have_text("1")   # active days this week
+    expect(stats.nth(1)).to_have_text("1")   # streak
+    entries = int(stats.nth(3).inner_text())
+    assert entries >= 4                       # plan day exercises + Running
+    expect(page.locator(".log-row").filter(has_text="Running")).to_contain_text("20 min")
+
+    # delete an entry
+    page.locator(".log-row").filter(has_text="Running").get_by_role("button").click()
+    expect(page.locator(".log-row").filter(has_text="Running")).to_have_count(0)
+    expect(stats.nth(3)).to_have_text(str(entries - 1))
