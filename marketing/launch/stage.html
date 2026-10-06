@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FitBot launch film stage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="build/data.js"></script>
+<style>
+:root { --teal: #2dd4bf; --teal2: #14b8a6; --cyan: #38bdf8; --navy: #061321; --ink: #e7efec; --muted: #94a59f;
+  --surface: #141d1b; --surface2: #1a2522; --border: #26332f; --protein: #2dd4bf; --carbs: #f59e0b; --fat: #8b5cf6; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased; color: var(--ink); }
+#stage { position: absolute; inset: 0; overflow: hidden; }
+#bg { position: absolute; inset: 0; }
+.layer { position: absolute; inset: 0; opacity: 0; perspective: 1900px; perspective-origin: 50% 46%; }
+.abs { position: absolute; }
+.center-x { left: 50%; transform: translateX(-50%); }
+.kicker { position: absolute; left: 120px; top: 92px; font-size: 15px; font-weight: 700; letter-spacing: .38em;
+  color: #5eead4; display: flex; align-items: center; gap: 16px; text-transform: uppercase; }
+.kicker::before { content: ""; width: 44px; height: 2px; background: linear-gradient(90deg, transparent, #5eead4); }
+.glass { background: linear-gradient(160deg, rgba(255,255,255,.085), rgba(255,255,255,.02) 60%);
+  border: 1px solid rgba(255,255,255,.13); border-radius: 22px;
+  box-shadow: 0 30px 90px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.08); }
+
+/* ---------------- intro / outro (light) ---------------- */
+#logoBig { position: absolute; left: 50%; top: 50%; width: 1060px; transform: translate(-50%, -50%); }
+#introLine { position: absolute; left: 50%; top: 668px; height: 2px; width: 760px; margin-left: -380px;
+  background: linear-gradient(90deg, transparent, #22a6d6, transparent); }
+#traces { position: absolute; inset: 0; }
+
+/* ---------------- problem ---------------- */
+.frag { position: absolute; width: 470px; padding: 26px 30px 30px; border-radius: 22px; transform-style: preserve-3d; }
+.frag h4 { font-size: 40px; font-weight: 800; letter-spacing: -.01em; margin: 10px 0 14px; }
+.frag .appbar { display: flex; align-items: center; gap: 12px; font-size: 18px; color: rgba(255,255,255,.6); font-weight: 600; }
+.frag .appdot { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; font-size: 21px; }
+.frag .rowx { display: flex; justify-content: space-between; padding: 13px 16px; border-radius: 12px; background: rgba(255,255,255,.05);
+  margin-top: 10px; font-size: 19px; color: rgba(255,255,255,.75); }
+.frag .rowx b { color: #fff; font-weight: 600; }
+#fragLines { position: absolute; inset: 0; }
+#core { position: absolute; left: 960px; top: 540px; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%;
+  background: radial-gradient(circle, #fff, #5eead4 40%, rgba(45,212,191,0) 70%); }
+
+/* ---------------- identity ---------------- */
+#mark { position: absolute; left: 50%; top: 250px; width: 170px; height: 170px; margin-left: -85px; border-radius: 44px;
+  background: linear-gradient(145deg, #34e0cb, #0f9e8e); display: grid; place-items: center;
+  box-shadow: 0 30px 80px rgba(20,184,166,.45), inset 0 2px 0 rgba(255,255,255,.35); }
+#mark svg { width: 104px; height: 104px; }
+.ring { position: absolute; left: 50%; top: 335px; border-radius: 50%; border: 1.5px solid rgba(94,234,212,.35); }
+#word { position: absolute; left: 0; right: 0; top: 470px; text-align: center; font-size: 150px; font-weight: 900;
+  letter-spacing: .26em; padding-left: .26em; line-height: 1; }
+#word span { display: inline-block; background: linear-gradient(180deg, #fff 30%, #a7f3e8); -webkit-background-clip: text; color: transparent; }
+#sub { position: absolute; left: 0; right: 0; top: 660px; text-align: center; font-size: 30px; font-weight: 400; color: #b9cbd6; letter-spacing: .01em; }
+#sub b { color: #5eead4; font-weight: 600; }
+#triad { position: absolute; left: 0; right: 0; top: 770px; display: flex; justify-content: center; gap: 70px; }
+#triad span { font-size: 54px; font-weight: 800; letter-spacing: -.01em; }
+
+/* ---------------- app window (shared by the demo scenes) ---------------- */
+#appLayer { position: absolute; inset: 0; perspective: 2000px; perspective-origin: 50% 45%; opacity: 0; }
+#win { position: absolute; left: 220px; top: 120px; width: 1480px; height: 850px; border-radius: 20px; overflow: hidden;
+  background: #0d1412; border: 1px solid #2b3a36; transform-style: preserve-3d;
+  box-shadow: 0 60px 140px rgba(0,0,0,.65), 0 0 0 1px rgba(45,212,191,.08), 0 0 120px rgba(45,212,191,.10); }
+.titlebar { height: 44px; background: #0a100f; border-bottom: 1px solid #1f2a27; display: flex; align-items: center; padding: 0 18px; gap: 8px; }
+.titlebar i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+.titlebar .url { margin: 0 auto; width: 380px; height: 26px; border-radius: 8px; background: #141d1b; color: #7f918c;
+  font-size: 13px; display: grid; place-items: center; font-weight: 500; }
+.app { position: absolute; top: 44px; left: 0; right: 0; bottom: 0; display: flex; }
+.side { width: 250px; background: #141d1b; border-right: 1px solid #26332f; padding: 18px 14px; display: flex; flex-direction: column; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; }
+.bm { width: 32px; height: 32px; border-radius: 9px; background: var(--teal); display: grid; place-items: center; }
+.bm svg { width: 20px; height: 20px; }
+.newchat { height: 40px; border-radius: 10px; background: var(--teal); color: #04201c; font-weight: 700; font-size: 14px; display: grid; place-items: center; }
+.nav div { padding: 9px 10px; border-radius: 9px; font-size: 14px; color: #c9d6d2; display: flex; gap: 10px; align-items: center; }
+.nav div.on { background: #12302c; color: #5eead4; font-weight: 600; }
+.convh { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; color: #7d8f8a; margin-top: 6px; }
+.conv { font-size: 13px; color: #c9d6d2; padding: 6px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-radius: 8px; }
+.conv.on { background: #12302c; }
+.sidefoot { margin-top: auto; display: grid; gap: 10px; }
+.vbadge { background: #fff; border-radius: 10px; padding: 7px 10px; display: flex; align-items: center; gap: 8px; justify-content: center; }
+.vbadge span { font-size: 8.5px; font-weight: 800; letter-spacing: .1em; color: #3b5b7c; }
+.vbadge img { height: 20px; }
+.uchip { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+.uchip .av { width: 30px; height: 30px; border-radius: 50%; background: #fb923c; display: grid; place-items: center; font-weight: 700; color: #fff; }
+.main { flex: 1; position: relative; display: flex; flex-direction: column; }
+.chead { height: 58px; border-bottom: 1px solid #1f2a27; display: flex; align-items: center; padding: 0 30px; font-weight: 600; font-size: 16px; }
+.thread { position: absolute; top: 58px; left: 0; right: 0; bottom: 96px; padding: 26px 46px 0; overflow: hidden; }
+.composer { position: absolute; left: 46px; right: 46px; bottom: 22px; height: 56px; border-radius: 14px; background: #0d1412;
+  border: 1px solid #2b3a36; display: flex; align-items: center; padding: 0 8px 0 20px; gap: 10px; font-size: 16px; }
+.composer .ph { color: #6f817c; flex: 1; white-space: nowrap; overflow: hidden; }
+.composer .typed { color: #e7efec; flex: 1; white-space: nowrap; }
+.composer .caret { display: inline-block; width: 2px; height: 20px; background: #5eead4; vertical-align: -4px; margin-left: 2px; }
+.sendb { width: 40px; height: 40px; border-radius: 10px; background: var(--teal); display: grid; place-items: center; }
+.ubub { margin-left: auto; width: fit-content; max-width: 70%; background: var(--teal); color: #04201c; padding: 13px 18px;
+  border-radius: 16px 16px 4px 16px; font-size: 16px; font-weight: 500; }
+.bot { display: flex; gap: 14px; margin-top: 22px; }
+.bav { width: 34px; height: 34px; border-radius: 10px; background: var(--teal); display: grid; place-items: center; flex-shrink: 0; }
+.bav svg { width: 18px; height: 18px; }
+.bcont { flex: 1; min-width: 0; }
+.tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .1em; color: #5eead4; background: #12302c; padding: 4px 9px; border-radius: 6px; margin-bottom: 9px; }
+.tag.soft { color: #c9d6d2; background: #1f2a27; margin-left: 6px; }
+.btext { background: #141d1b; border: 1px solid #26332f; border-radius: 4px 16px 16px 16px; padding: 14px 18px; font-size: 15.5px; line-height: 1.55; color: #dce6e3; }
+.btext span { transition: none; }
+.typing { display: flex; gap: 6px; padding: 16px 18px; background: #141d1b; border: 1px solid #26332f; border-radius: 4px 16px 16px 16px; width: fit-content; }
+.typing i { width: 8px; height: 8px; border-radius: 50%; background: #5eead4; display: block; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.ex { background: #141d1b; border: 1px solid #26332f; border-radius: 14px; overflow: hidden; position: relative; }
+.ex img { width: 100%; height: 150px; object-fit: cover; display: block; }
+.ex .lvl { position: absolute; top: 10px; left: 10px; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: #dcfce7; color: #166534; }
+.ex .exb { padding: 12px 14px 14px; }
+.ex h5 { font-size: 14px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 8px; }
+.ex .kv { display: grid; grid-template-columns: 76px 1fr; font-size: 12.5px; margin-top: 4px; color: #dce6e3; position: relative; }
+.ex .kv span:first-child { color: #8a9c97; }
+.hl { position: absolute; border: 2px solid #5eead4; border-radius: 9px; box-shadow: 0 0 22px rgba(94,234,212,.55); pointer-events: none; opacity: 0; }
+/* plan */
+.plan { background: #141d1b; border: 1px solid #26332f; border-radius: 16px; padding: 16px 18px; margin-top: 14px; }
+.plan h5 { font-size: 17px; font-weight: 700; }
+.plan .ps { font-size: 13px; color: #8a9c97; margin-top: 2px; text-transform: capitalize; }
+.ptabs { display: flex; gap: 7px; margin: 12px 0 10px; }
+.ptabs span { font-size: 13px; font-weight: 600; padding: 6px 13px; border-radius: 8px; border: 1px solid #26332f; background: #1a2522; }
+.ptabs span.on { background: var(--teal); color: #04201c; border-color: var(--teal); }
+.pfocus { color: #5eead4; font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+.prow { display: flex; align-items: center; gap: 14px; border: 1px solid #26332f; border-radius: 11px; padding: 7px 12px 7px 7px; margin-top: 7px; }
+.prow img { width: 58px; height: 44px; object-fit: cover; border-radius: 7px; }
+.prow .pn { flex: 1; } .prow .pn b { display: block; font-size: 15px; } .prow .pn span { font-size: 12.5px; color: #8a9c97; }
+.prow .pd { text-align: right; } .prow .pd b { display: block; font-size: 14px; } .prow .pd span { font-size: 12px; color: #8a9c97; }
+.prow .bdg { font-size: 11px; font-weight: 700; background: #e7efec; color: #13201d; padding: 3px 8px; border-radius: 999px; }
+/* food */
+.fcards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+.food { background: #141d1b; border: 1px solid #26332f; border-radius: 16px; padding: 16px 18px; }
+.food .fh { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; }
+.food .fh em { font-style: normal; font-size: 24px; }
+.food .basis { display: inline-block; font-size: 11.5px; font-weight: 600; color: #5eead4; border: 1px solid #2dd4bf; background: #12302c; border-radius: 999px; padding: 2px 9px; margin: 10px 0 8px; }
+.food .kcal { font-size: 13px; color: #8a9c97; } .food .kcal b { font-size: 36px; color: #e7efec; letter-spacing: -.02em; margin-right: 4px; }
+.mbar { display: flex; gap: 2px; height: 9px; border-radius: 999px; overflow: hidden; background: #1a2522; margin: 10px 0 12px; }
+.mbar i { display: block; height: 100%; }
+.frow { display: flex; justify-content: space-between; font-size: 14px; padding: 4px 0; color: #dce6e3; }
+.frow b { font-weight: 700; }
+.frow .d { width: 9px; height: 9px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+.ffoot { font-size: 11.5px; color: #7f918c; margin-top: 10px; text-decoration: underline; }
+/* floating chips */
+.chip3 { position: absolute; padding: 14px 22px 14px 16px; border-radius: 16px; font-size: 22px; font-weight: 700; display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+.chip3 em { font-style: normal; font-size: 28px; }
+/* context panel */
+#ctx { position: absolute; left: 1350px; top: 220px; width: 450px; padding: 28px 30px 30px; }
+#ctx h4 { font-size: 15px; letter-spacing: .3em; font-weight: 700; color: #5eead4; margin-bottom: 18px; }
+.crow { display: flex; align-items: center; gap: 16px; padding: 16px 16px; border-radius: 14px; background: rgba(255,255,255,.05); margin-top: 12px; border: 1px solid rgba(255,255,255,.08); }
+.crow em { font-style: normal; font-size: 30px; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 12px; background: rgba(45,212,191,.12); }
+.crow small { display: block; font-size: 13px; color: #94a59f; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.crow b { font-size: 23px; font-weight: 700; }
+#flow { position: absolute; inset: 0; }
+
+/* ---------------- architecture ---------------- */
+#arch { position: absolute; inset: 0; transform-style: preserve-3d; }
+.node { position: absolute; width: 236px; height: 220px; top: 400px; padding: 26px 20px; text-align: center; border-radius: 24px; }
+.node .ic { width: 74px; height: 74px; margin: 0 auto 18px; border-radius: 20px; display: grid; place-items: center; font-size: 36px;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); }
+.node b { font-size: 21px; font-weight: 700; line-height: 1.25; display: block; }
+.node.slm { width: 280px; height: 280px; top: 370px; }
+#archSvg { position: absolute; inset: 0; }
+
+/* ---------------- training ---------------- */
+#track { position: absolute; left: 150px; right: 150px; top: 860px; height: 80px; }
+.step { position: absolute; top: 0; width: 180px; margin-left: -90px; text-align: center; }
+.step i { display: block; width: 22px; height: 22px; border-radius: 50%; margin: 0 auto 14px; border: 2px solid #3b4b47; background: #0b1514; }
+.step span { font-size: 17px; font-weight: 600; color: #7d8f8a; }
+#trackLine, #trackFill { position: absolute; top: 10px; height: 2px; left: 0; background: #2b3a36; }
+#trackFill { background: linear-gradient(90deg, #14b8a6, #5eead4); box-shadow: 0 0 14px #2dd4bf; }
+.tpanel { position: absolute; left: 50%; top: 170px; transform: translateX(-50%); }
+#dataset { width: 1100px; height: 560px; }
+.sheet { position: absolute; width: 760px; padding: 22px 26px; border-radius: 18px; font-family: ui-monospace, Menlo, monospace; font-size: 16px; line-height: 1.7; color: #b9d0cb; }
+.sheet .k { color: #5eead4; } .sheet .s { color: #fcd34d; }
+#gpu { width: 1300px; height: 600px; }
+#chip { position: absolute; left: 40px; top: 60px; width: 440px; height: 440px; }
+#loss { position: absolute; right: 30px; top: 70px; width: 720px; height: 430px; padding: 26px 30px; }
+#loss h6 { font-size: 15px; letter-spacing: .25em; color: #5eead4; font-weight: 700; }
+.legend { display: flex; gap: 22px; font-size: 14px; color: #94a59f; margin-top: 8px; }
+.legend i { display: inline-block; width: 22px; height: 3px; vertical-align: middle; margin-right: 8px; border-radius: 2px; }
+#checks { width: 1000px; height: 560px; }
+.check { position: absolute; left: 160px; width: 680px; height: 112px; display: flex; align-items: center; gap: 24px; padding: 0 30px; }
+.check .cb { width: 56px; height: 56px; border-radius: 16px; border: 2px solid #2b3a36; display: grid; place-items: center; }
+.check b { font-size: 27px; font-weight: 700; display: block; } .check span { font-size: 17px; color: #94a59f; }
+#slmFinal { width: 1100px; height: 560px; }
+
+/* ---------------- experience ---------------- */
+#wall { position: absolute; inset: 0; transform-style: preserve-3d; }
+.shot { position: absolute; width: 1100px; height: 688px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 40px 100px rgba(0,0,0,.6); background: #0d1412; }
+.shot img { width: 100%; height: 100%; display: block; }
+#safe { position: absolute; left: 50%; top: 930px; transform: translateX(-50%); padding: 14px 26px; border-radius: 999px; font-size: 21px; font-weight: 600;
+  display: flex; gap: 12px; align-items: center; white-space: nowrap; }
+
+/* ---------------- outro ---------------- */
+#tagline { position: absolute; left: 0; right: 0; top: 250px; text-align: center; font-size: 50px; font-weight: 800; color: #0b2d4f; letter-spacing: -.01em; }
+#fbLock { position: absolute; left: 50%; top: 380px; display: flex; align-items: center; gap: 24px; transform: translateX(-50%); }
+#fbLock .bm2 { width: 92px; height: 92px; border-radius: 26px; background: linear-gradient(145deg, #34e0cb, #0f9e8e); display: grid; place-items: center; box-shadow: 0 20px 50px rgba(15,158,142,.35); }
+#fbLock .bm2 svg { width: 56px; height: 56px; }
+#fbLock b { font-size: 76px; font-weight: 900; letter-spacing: .14em; color: #0b2d4f; }
+#fbLock small { display: block; font-size: 19px; font-weight: 600; color: #1594c4; letter-spacing: .06em; margin-top: 2px; }
+#divider { position: absolute; left: 50%; top: 540px; width: 520px; margin-left: -260px; height: 1px; background: linear-gradient(90deg, transparent, #8fb6d6, transparent); }
+#presented { position: absolute; left: 0; right: 0; top: 566px; text-align: center; font-size: 16px; font-weight: 700; letter-spacing: .4em; color: #5b7a99; }
+#logoEnd { position: absolute; left: 50%; top: 610px; width: 860px; transform: translateX(-50%); }
+
+/* ---------------- global overlays ---------------- */
+#bug { position: absolute; right: 44px; bottom: 36px; background: #fff; border-radius: 12px; padding: 9px 14px; display: flex; align-items: center; opacity: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+#bug img { height: 26px; display: block; }
+#vig { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(0,0,0,.55) 100%); }
+#grain { position: absolute; inset: 0; opacity: .05; mix-blend-mode: overlay; pointer-events: none; }
+#fade { position: absolute; inset: 0; background: #000; opacity: 0; pointer-events: none; }
+#flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(167,243,232,.9), rgba(45,212,191,.25) 30%, transparent 60%); opacity: 0; pointer-events: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="bg" width="1920" height="1080"></canvas>
+
+  <!-- INTRO -->
+  <div class="layer" id="L_intro" style="perspective:none">
+    <svg id="traces" viewBox="0 0 1920 1080"></svg>
+    <img id="logoBig" src="assets/veltris_logo.png" alt="Veltris">
+    <div id="introLine"></div>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="layer" id="L_problem">
+    <svg id="fragLines" viewBox="0 0 1920 1080"></svg>
+    <div id="frags"></div>
+    <div id="core"></div>
+  </div>
+
+  <!-- IDENTITY -->
+  <div class="layer" id="L_identity">
+    <div class="ring" id="ring1"></div><div class="ring" id="ring2"></div><div class="ring" id="ring3"></div>
+    <div id="mark"></div>
+    <div id="word"></div>
+    <div id="sub">Fitness Intelligence Powered by a <b>Domain-Specific SLM</b></div>
+    <div id="triad"><span>Understand.</span><span>Personalize.</span><span>Recommend.</span></div>
+  </div>
+
+  <!-- APP (exercises / personal / nutrition) -->
+  <div id="appLayer">
+    <div class="kicker" id="appKicker">Understand</div>
+    <div id="win">
+      <div class="titlebar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><div class="url">FitBot</div></div>
+      <div class="app">
+        <div class="side" id="side"></div>
+        <div class="main">
+          <div class="chead" id="chead">New chat</div>
+          <div class="thread" id="th_ex"></div>
+          <div class="thread" id="th_plan"></div>
+          <div class="thread" id="th_food"></div>
+          <div class="composer"><span class="typed" id="typed"></span><div class="sendb" id="sendb"></div></div>
+        </div>
+      </div>
+    </div>
+    <svg id="flow" viewBox="0 0 1920 1080"></svg>
+    <div class="glass" id="ctx"><h4>YOUR CONTEXT</h4><div id="crows"></div></div>
+    <div id="chips"></div>
+  </div>
+
+  <!-- ARCHITECTURE -->
+  <div class="layer" id="L_architecture">
+    <div class="kicker">Domain-Specific AI</div>
+    <div id="arch"><svg id="archSvg" viewBox="0 0 1920 1080"></svg></div>
+  </div>
+
+  <!-- TRAINING -->
+  <div class="layer" id="L_training">
+    <div class="kicker">Trained for the fitness domain</div>
+    <div class="tpanel" id="dataset"></div>
+    <div class="tpanel" id="gpu"><svg id="chip" viewBox="0 0 440 440"></svg>
+      <div class="glass" id="loss"><h6>FINE-TUNING · LOSS</h6><div class="legend"><span><i style="background:#5eead4"></i>Training</span><span><i style="background:#f59e0b"></i>Validation</span></div><svg id="lossSvg" viewBox="0 0 660 320" style="width:660px;height:320px;margin-top:6px"></svg></div>
+    </div>
+    <div class="tpanel" id="checks"></div>
+    <div class="tpanel" id="slmFinal"></div>
+    <div id="track"><div id="trackLine" style="right:0"></div><div id="trackFill"></div></div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="layer" id="L_experience">
+    <div class="kicker">Built for real-world fitness experiences</div>
+    <div id="wall"></div>
+    <div class="glass" id="safe">🛡️ General fitness &amp; wellness information · not medical diagnosis</div>
+  </div>
+
+  <!-- OUTRO (light) -->
+  <div class="layer" id="L_outro" style="perspective:none">
+    <div id="tagline">Built for Real-World Fitness Experiences</div>
+    <div id="fbLock"><div class="bm2" id="bm2"></div><div><b>FITBOT</b><small>Fitness Small Language Model</small></div></div>
+    <div id="divider"></div>
+    <div id="presented">PRESENTED BY</div>
+    <img id="logoEnd" src="assets/veltris_logo.png" alt="Veltris">
+  </div>
+
+  <div id="flash"></div>
+  <div id="bug"><img src="assets/veltris_logo_tight.png" alt="Veltris"></div>
+  <div id="vig"></div>
+  <canvas id="grain" width="960" height="540" style="width:1920px;height:1080px"></canvas>
+  <div id="fade"></div>
+</div>
+
+<script>
+/* =====================================================================================================
+   Deterministic timeline: render(t) sets every element from the time t alone (no CSS animations), so the
+   film renders identically frame by frame.  DATA (real FitBot output) and TL (voice timings) come from
+   build/data.js.
+   ===================================================================================================== */
+const $ = (s) => document.querySelector(s);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, k) => a + (b - a) * k;
+const ease = {
+  out: (k) => 1 - Math.pow(1 - k, 3),
+  inOut: (k) => (k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2),
+  expo: (k) => (k >= 1 ? 1 : 1 - Math.pow(2, -10 * k)),
+  in: (k) => k * k * k,
+  back: (k) => { const c = 1.5; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); },
+};
+const P = (t, a, b, e = ease.out) => e(clamp((t - a) / (b - a)));
+function mulberry(a) { return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a);
+  t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+
+const S = Object.fromEntries(TL.scenes.map((s) => [s.id, s]));
+// time at which a word of a voice line is spoken (proportional to its character position)
+function W(scene, line, word) {
+  const l = S[scene].lines[line];
+  const i = word ? l.text.toLowerCase().indexOf(word.toLowerCase()) : 0;
+  const frac = i < 0 ? 0 : i / l.text.length;
+  return l.start + (l.end - l.start) * frac;
+}
+const L0 = (id, i = 0) => S[id].lines[i].start;
+const LE = (id, i) => S[id].lines[i].end;
+const DUMBBELL = '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9.5v5M21 9.5v5M6.5 12h11"/></svg>';
+const DUMBBELL_DARK = DUMBBELL.replace('#fff', '#04201c');
+
+function setT(el, tf) { el.style.transform = tf; }
+function op(el, v) { el.style.opacity = v; }
+function show(el, v) { el.style.opacity = v; el.style.visibility = v > 0.001 ? "visible" : "hidden"; }
+
+/* --------------------------------------------- build DOM from real data */
+const A = DATA.answers;
+function firstSentences(s, n = 1) { const m = s.match(/[^.!?]+[.!?]+/g) || [s]; return m.slice(0, n).join(" ").trim(); }
+function words(el, text) { el.innerHTML = text.split(" ").map((w) => `<span>${w} </span>`).join(""); return [...el.children]; }
+
+// sidebar
+$("#side").innerHTML = `<div class="brand"><span class="bm">${DUMBBELL_DARK}</span>FitBot</div>
+  <div class="newchat">+ New chat</div>
+  <div class="nav"><div>⌂ Dashboard</div><div class="on">💬 Chat</div><div>📈 My workouts</div><div>👤 Profile</div></div>
+  <div class="convh">PREVIOUS CONVERSATIONS</div>
+  <div class="conv" id="cv1">What exercises can I do for chest?</div>
+  <div class="conv" id="cv2">Give me a 3-day home workout plan…</div>
+  <div class="conv" id="cv3">What should I eat after working out?</div>
+  <div class="sidefoot"><div class="vbadge"><span>PREPARED FOR</span><img src="assets/veltris_logo_tight.png"></div>
+  <div class="uchip"><span class="av">J</span><div><b>Jordan Lee</b></div></div></div>`;
+$("#sendb").innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#04201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>';
+
+function botBlock(tag, text, extra = "", soft = "") {
+  return `<div class="bot"><div class="bav">${DUMBBELL_DARK}</div><div class="bcont">
+    <span class="tag">${tag}</span>${soft ? `<span class="tag soft">${soft}</span>` : ""}
+    <div class="typing"><i></i><i></i><i></i></div>
+    <div class="btext"></div>${extra}</div></div>`;
+}
+// exercise thread
+const exs = A.exercises.exercises.slice(0, 4);
+const exCards = exs.map((e) => `<div class="ex"><img src="${e.image_url}"><span class="lvl">${e.difficulty}</span><div class="exb">
+  <h5>${e.name}</h5><div class="kv kv-t"><span>Target</span><span>${[...e.target_muscles, ...e.secondary_muscles].slice(0, 3).join(" • ")}</span></div>
+  <div class="kv kv-e"><span>Equipment</span><span>${e.equipment}</span></div></div></div>`).join("");
+$("#th_ex").innerHTML = `<div class="ubub">${A.exercises.question}</div>` +
+  botBlock("EXERCISES", "", `<div class="cards">${exCards}</div>`) +
+  `<div class="hl" id="hl1"></div><div class="hl" id="hl2"></div><div class="hl" id="hl3"></div>`;
+const exText = words($("#th_ex .btext"), firstSentences(A.exercises.answer));
+
+// plan thread
+const plan = A.plan.workout_plan;
+function planRows(d) { return d.exercises.slice(0, 5).map((e) => `<div class="prow"><img src="${e.image_url}"><div class="pn"><b>${e.name}</b>
+  <span>${(e.target_muscles || []).join(", ")}</span></div><div class="pd"><b>${e.sets} × ${e.reps}</b><span>Rest ${e.rest}</span></div>
+  <span class="bdg">${e.difficulty}</span></div>`).join(""); }
+$("#th_plan").innerHTML = `<div class="ubub">${A.plan.question}</div>` + botBlock("HOME WORKOUT", "",
+  `<div class="plan"><h5>${plan.title}</h5><div class="ps">${[plan.level, plan.split, plan.equipment].filter(Boolean).join(" · ")}</div>
+   <div class="ptabs">${plan.days.map((d, i) => `<span data-i="${i}">${d.day}</span>`).join("")}</div>
+   <div class="pfocus"></div><div class="prows"></div></div>`);
+const planText = words($("#th_plan .btext"), firstSentences(A.plan.answer));
+
+// food thread
+const pickFoods = ["Chicken breast (roasted)", "Greek yogurt (plain, nonfat)", "White rice (cooked)"];
+const EMO = { "Chicken breast (roasted)": "🍗", "Greek yogurt (plain, nonfat)": "🥣", "White rice (cooked)": "🍚" };
+const foods = pickFoods.map((n) => A.nutrition.foods.find((f) => f.name === n)).filter(Boolean);
+const fmt = (v, u) => (v == null ? "—" : `${Math.round(v * 10) / 10}${u}`);
+$("#th_food").innerHTML = `<div class="ubub">${A.nutrition.question}</div>` + botBlock("NUTRITION", "",
+  `<div class="fcards">${foods.map((f, i) => { const n = f.nutrients; return `<div class="food" id="food${i}">
+    <div class="fh"><em>${EMO[f.name] || "🍽️"}</em>${f.name}</div>
+    <span class="basis">${f.portion ? `${f.portion.description} (${f.portion.grams} g)` : "per 100 g"}</span>
+    <div class="kcal"><b class="kc">0</b>kcal</div>
+    <div class="mbar"><i style="background:var(--protein)"></i><i style="background:var(--carbs)"></i><i style="background:var(--fat)"></i></div>
+    <div class="frow"><span><i class="d" style="background:var(--protein)"></i>Protein</span><b>${fmt(n.protein_g, " g")}</b></div>
+    <div class="frow"><span><i class="d" style="background:var(--carbs)"></i>Carbs</span><b>${fmt(n.carbs_g, " g")}</b></div>
+    <div class="frow"><span><i class="d" style="background:var(--fat)"></i>Fat</span><b>${fmt(n.fat_g, " g")}</b></div>
+    <div class="frow"><span><i class="d" style="background:#64748b"></i>Fiber</span><b>${fmt(n.fiber_g, " g")}</b></div>
+    <div class="ffoot">USDA FoodData Central #${f.fdc_id}</div></div>`; }).join("")}</div>`);
+const foodText = words($("#th_food .btext"), firstSentences(A.nutrition.answer));
+
+// context panel + floating chips
+const CTX = [["🌱", "Level", "Beginner", "beginner"], ["🎯", "Goal", "Muscle gain", "level"], ["🏋️", "Equipment", "Dumbbells", "dumbbells"], ["🏠", "Environment", "Home", "home"]];
+$("#crows").innerHTML = CTX.map(([e, k, v]) => `<div class="crow"><em>${e}</em><div><small>${k}</small><b>${v}</b></div></div>`).join("");
+const CHIPS = [
+  { s: "exercises", l: 1, w: "strength", e: "🏋️", txt: "Strength", x: 50, y: 300 },
+  { s: "exercises", l: 1, w: "cardio", e: "🏃", txt: "Cardio", x: 1690, y: 270 },
+  { s: "exercises", l: 1, w: "stretching", e: "🧘", txt: "Stretching", x: 1670, y: 700 },
+  { s: "exercises", l: 1, w: "at home", e: "🏠", txt: "Home", x: 40, y: 560 },
+  { s: "exercises", l: 1, w: "gym", e: "🏢", txt: "Gym", x: 80, y: 800 },
+  { s: "nutrition", l: 1, w: "hydration", e: "💧", txt: "Hydration", x: 40, y: 260 },
+  { s: "nutrition", l: 1, w: "sleep", e: "😴", txt: "Sleep", x: 1700, y: 250 },
+  { s: "nutrition", l: 1, w: "recovery", e: "🧘", txt: "Recovery", x: 60, y: 560 },
+  { s: "nutrition", l: 1, w: "cardio", e: "🏃", txt: "Cardio", x: 1700, y: 520 },
+  { s: "nutrition", l: 1, w: "weight loss", e: "⚖️", txt: "Weight loss", x: 1640, y: 800 },
+];
+$("#chips").innerHTML = CHIPS.map((c, i) => `<div class="chip3 glass" id="chip${i}" style="left:${c.x}px;top:${c.y}px"><em>${c.e}</em>${c.txt}</div>`).join("");
+
+// fragmented apps
+const FRAGS = [
+  { t: "Fitness", app: "Workout tracker", e: "🏋️", c: "#f97316", rows: [["Push day", "3 × 10"], ["Leg day", "4 × 8"]], x: 300, y: 170, z: -40, r: -9 },
+  { t: "Nutrition", app: "Calorie counter", e: "🥗", c: "#22c55e", rows: [["Breakfast", "? kcal"], ["Protein", "? g"]], x: 1150, y: 150, z: -160, r: 8 },
+  { t: "Recovery", app: "Sleep app", e: "😴", c: "#8b5cf6", rows: [["Bedtime", "11:30 pm"], ["Rest day", "?"]], x: 340, y: 590, z: -200, r: 7 },
+  { t: "Wellness", app: "Saved articles", e: "💧", c: "#38bdf8", rows: [["Hydration tips", "unread"], ["Stretching", "unread"]], x: 1120, y: 580, z: -20, r: -7 },
+];
+$("#frags").innerHTML = FRAGS.map((f, i) => `<div class="frag glass" id="frag${i}" style="left:${f.x}px;top:${f.y}px">
+  <div class="appbar"><span class="appdot" style="background:${f.c}33">${f.e}</span>${f.app}</div>
+  <h4 style="color:${f.c}">${f.t}</h4>${f.rows.map(([a, b]) => `<div class="rowx"><span>${a}</span><b>${b}</b></div>`).join("")}</div>`).join("");
+$("#fragLines").innerHTML = [[0, 1], [0, 2], [1, 3], [2, 3], [0, 3]].map(([a, b], i) => `<line id="fl${i}" stroke="rgba(148,163,184,.5)" stroke-width="2.5" stroke-dasharray="12 16"/>`).join("");
+
+// identity
+$("#mark").innerHTML = DUMBBELL.replace('stroke-width="2.2"', 'stroke-width="2"');
+$("#word").innerHTML = "FITBOT".split("").map((c) => `<span>${c}</span>`).join("");
+[["#ring1", 420], ["#ring2", 560], ["#ring3", 700]].forEach(([s, d]) => { const r = $(s); r.style.width = r.style.height = d + "px"; r.style.margin = `${-d / 2}px 0 0 ${-d / 2}px`; });
+$("#bm2").innerHTML = DUMBBELL;
+
+// intro traces (circuit lines that draw towards the logo)
+(function () {
+  const rnd = mulberry(11); let h = "";
+  for (let i = 0; i < 14; i++) {
+    const left = i % 2 === 0; const y = 140 + rnd() * 800; const x0 = left ? -20 : 1940; const x1 = left ? 330 + rnd() * 160 : 1590 - rnd() * 160;
+    const ym = 540 + (y - 540) * .35; const xm = left ? x1 - 120 : x1 + 120;
+    const d = `M${x0},${y} L${xm},${y} L${x1},${ym}`;
+    h += `<path id="tr${i}" d="${d}" fill="none" stroke="${i % 3 ? "#1d4f80" : "#22a6d6"}" stroke-opacity=".38" stroke-width="2"/><circle id="trd${i}" r="4.5" fill="#22a6d6"/>`;
+  }
+  $("#traces").innerHTML = h;
+})();
+
+// architecture nodes
+const NODES = [
+  { k: "user", t: "User", e: "🙋", at: () => L0("architecture") },
+  { k: "ui", t: "FitBot Interface", e: "💬", at: () => W("architecture", 0, "interface") },
+  { k: "intent", t: "Intent Understanding", e: "🧭", at: () => W("architecture", 0, "intent") },
+  { k: "know", t: "Fitness & Nutrition Knowledge", e: "📚", at: () => L0("architecture", 1) },
+  { k: "slm", t: "Domain-Specific SLM", e: "", at: () => W("architecture", 2, "domain") },
+  { k: "resp", t: "Personalized Response", e: "✨", at: () => W("architecture", 2, "personalized") },
+];
+const NX = [175, 455, 735, 1030, 1345, 1690];
+$("#arch").insertAdjacentHTML("beforeend", NODES.map((n, i) => `<div class="node glass ${n.k === "slm" ? "slm" : ""}" id="nd${i}" style="left:${NX[i] - (n.k === "slm" ? 140 : 118)}px">
+  <div class="ic">${n.k === "slm" ? '<svg id="nn" viewBox="0 0 120 80" width="120" height="80"></svg>' : n.e}</div><b>${n.t}</b></div>`).join(""));
+(function () {
+  let h = ""; for (let i = 0; i < 5; i++) h += `<path id="ap${i}" fill="none" stroke="#2b3a36" stroke-width="3"/><path id="apg${i}" fill="none" stroke="#5eead4" stroke-width="3" stroke-linecap="round"/>`;
+  for (let i = 0; i < 15; i++) h += `<circle id="pk${i}" r="6" fill="#a7f3e8"/>`;
+  $("#archSvg").innerHTML = h;
+  // neural net inside the SLM node
+  const L = [[20, [16, 40, 64]], [60, [10, 30, 50, 70]], [100, [24, 56]]]; let s = "";
+  L.forEach(([x, ys], li) => { if (li < 2) ys.forEach((y) => L[li + 1][1].forEach((y2) => { s += `<line class="nl" x1="${x}" y1="${y}" x2="${L[li + 1][0]}" y2="${y2}" stroke="#5eead4" stroke-opacity=".3" stroke-width="1.2"/>`; })); });
+  L.forEach(([x, ys]) => ys.forEach((y) => { s += `<circle class="nc" cx="${x}" cy="${y}" r="5" fill="#5eead4"/>`; }));
+  $("#nn").innerHTML = s;
+})();
+
+// training: dataset sheets (real training examples), GPU chip, loss curve, checks, final
+const SAMPLES = DATA.samples;
+$("#dataset").innerHTML = SAMPLES.slice(0, 3).map((s, i) => `<div class="sheet glass" id="sh${i}">
+  <div>{ <span class="k">"input"</span>: <span class="s">"${s.input}"</span>,</div>
+  <div>&nbsp;&nbsp;<span class="k">"intent"</span>: <span class="s">"${s.intent}"</span>,</div>
+  <div>&nbsp;&nbsp;<span class="k">"response"</span>: <span class="s">"${s.response.slice(0, 58)}…"</span> }</div></div>`).join("") +
+  `<div class="abs" id="prep" style="left:820px;top:220px;font-size:20px;font-weight:600;color:#94a59f;width:280px">
+   <div class="pp">✓ Grounded in exercise &amp; USDA data</div><div class="pp" style="margin-top:14px">✓ Train / validation / test split</div>
+   <div class="pp" style="margin-top:14px">✓ Safety &amp; out-of-scope examples</div></div>`;
+(function () {
+  let s = `<defs><radialGradient id="dieG"><stop offset="0" stop-color="#5eead4" stop-opacity=".9"/><stop offset="1" stop-color="#0f766e" stop-opacity=".15"/></radialGradient></defs>
+    <rect x="70" y="70" width="300" height="300" rx="26" fill="#0f1b19" stroke="#2dd4bf" stroke-opacity=".5" stroke-width="2"/>`;
+  for (let i = 0; i < 9; i++) { const p = 92 + i * 32;
+    s += `<rect x="${p}" y="40" width="10" height="30" rx="3" fill="#3b4b47"/><rect x="${p}" y="370" width="10" height="30" rx="3" fill="#3b4b47"/>
+          <rect x="40" y="${p}" width="30" height="10" rx="3" fill="#3b4b47"/><rect x="370" y="${p}" width="30" height="10" rx="3" fill="#3b4b47"/>`; }
+  for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) s += `<rect class="core" data-r="${r}" data-c="${c}" x="${102 + c * 30}" y="${102 + r * 30}" width="24" height="24" rx="4" fill="#5eead4"/>`;
+  s += `<text x="220" y="430" text-anchor="middle" font-size="20" font-weight="700" fill="#94a59f" letter-spacing="4" font-family="Inter">GPU</text>`;
+  $("#chip").innerHTML = s;
+  const tr = DATA.loss_curve.train, va = DATA.loss_curve.validation;
+  const maxS = Math.max(...tr.map((p) => p[0])), all = tr.concat(va).map((p) => p[1]);
+  const lo = Math.min(...all), hi = Math.max(...all);
+  const X = (st) => 20 + (st / maxS) * 620, Y = (v) => 20 + (1 - (v - lo) / (hi - lo)) * 270;
+  const path = (pts) => pts.map((p, i) => `${i ? "L" : "M"}${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(" ");
+  let g = ""; for (let i = 0; i < 5; i++) g += `<line x1="20" x2="640" y1="${20 + i * 67.5}" y2="${20 + i * 67.5}" stroke="#ffffff" stroke-opacity=".06"/>`;
+  $("#lossSvg").innerHTML = g + `<path id="lT" d="${path(tr)}" fill="none" stroke="#5eead4" stroke-width="3.5" stroke-linejoin="round"/>
+    <path id="lV" d="${path(va)}" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-dasharray="0" stroke-linejoin="round"/>` +
+    va.map((p, i) => `<circle class="vdot" cx="${X(p[0])}" cy="${Y(p[1])}" r="6" fill="#f59e0b"/>`).join("");
+})();
+const CHECKS = [["Validation", "Monitored on a held-out validation split"], ["Testing", "Evaluated on held-out test questions"], ["Application tests", "Safety, out-of-scope and end-to-end checks"]];
+$("#checks").innerHTML = CHECKS.map(([a, b], i) => `<div class="check glass" id="ck${i}" style="top:${60 + i * 150}px"><div class="cb" id="cb${i}"></div><div><b>${a}</b><span>${b}</span></div></div>`).join("");
+$("#slmFinal").innerHTML = `<div class="abs" id="slmMark" style="left:440px;top:120px;width:220px;height:220px;border-radius:56px;background:linear-gradient(145deg,#34e0cb,#0f9e8e);display:grid;place-items:center;box-shadow:0 30px 90px rgba(45,212,191,.45)">${DUMBBELL.replace('<svg ', '<svg width="130" height="130" ')}</div>
+  <div class="abs" id="slmLabel" style="left:0;right:0;top:380px;text-align:center;font-size:44px;font-weight:800">Fitness SLM <span style="color:#5eead4">→</span> Application</div>`;
+const STEPS = ["Dataset", "Data Preparation", "Fine-Tuning", "Validation", "Testing", "Fitness SLM", "Application"];
+$("#track").insertAdjacentHTML("beforeend", STEPS.map((s, i) => `<div class="step" id="st${i}" style="left:${(i / (STEPS.length - 1)) * 100}%"><i></i><span>${s}</span></div>`).join(""));
+
+// experience wall (real screenshots)
+const SHOTS = ["dashboard", "chat_exercises", "chat_plan", "chat_food", "workouts"];
+$("#wall").innerHTML = SHOTS.map((s, i) => `<div class="shot" id="sh_${i}"><img src="build/shots/${s}.png"></div>`).join("");
+
+/* --------------------------------------------- background canvas */
+const bg = $("#bg"), ctx = bg.getContext("2d");
+const PN = 140; const prnd = mulberry(5);
+const parts = Array.from({ length: PN }, () => ({ x: prnd() * 1920, y: prnd() * 1080, z: .3 + prnd() * .7, vx: (prnd() - .5) * 18, vy: (prnd() - .5) * 12, ph: prnd() * 6.28 }));
+const grain = $("#grain"), gctx = grain.getContext("2d"); const gimg = gctx.createImageData(960, 540);
+function drawGrain(t) {
+  const r = mulberry(Math.floor(t * 24) + 1); const d = gimg.data;
+  for (let i = 0; i < d.length; i += 4) { const v = r() * 255; d[i] = d[i + 1] = d[i + 2] = v; d[i + 3] = 255; }
+  gctx.putImageData(gimg, 0, 0);
+}
+function drawLight(t, alpha) {
+  const g = ctx.createRadialGradient(960, 520, 80, 960, 540, 1150);
+  g.addColorStop(0, "#f7fbfe"); g.addColorStop(.55, "#e9f2f9"); g.addColorStop(1, "#cfe0ee");
+  ctx.globalAlpha = alpha; ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080);
+  // soft moving light
+  const lx = 960 + Math.sin(t * .35) * 420, ly = 420 + Math.cos(t * .27) * 120;
+  const g2 = ctx.createRadialGradient(lx, ly, 0, lx, ly, 700); g2.addColorStop(0, "rgba(255,255,255,.75)"); g2.addColorStop(1, "rgba(255,255,255,0)");
+  ctx.fillStyle = g2; ctx.fillRect(0, 0, 1920, 1080);
+  ctx.globalAlpha = 1;
+}
+function drawDark(t, net, hue) {
+  const g = ctx.createRadialGradient(960, 470, 50, 960, 540, 1250);
+  g.addColorStop(0, "#0d2a33"); g.addColorStop(.45, "#081a24"); g.addColorStop(1, "#03080d");
+  ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080);
+  // aurora glows
+  [[480 + Math.sin(t * .2) * 200, 300, "rgba(45,212,191,.10)"], [1500 + Math.cos(t * .17) * 160, 760, "rgba(56,189,248,.09)"]].forEach(([x, y, c]) => {
+    const a = ctx.createRadialGradient(x, y, 0, x, y, 650); a.addColorStop(0, c); a.addColorStop(1, "rgba(0,0,0,0)"); ctx.fillStyle = a; ctx.fillRect(0, 0, 1920, 1080); });
+  // perspective grid floor
+  ctx.save(); ctx.globalAlpha = .55; ctx.strokeStyle = "rgba(94,234,212,.07)"; ctx.lineWidth = 1;
+  const hz = 640, off = (t * 40) % 60;
+  for (let i = 0; i < 14; i++) { const y = hz + Math.pow((i * 60 + off) / 840, 2) * 440; if (y > 1080) break; ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(1920, y); ctx.stroke(); }
+  for (let i = -16; i <= 16; i++) { ctx.beginPath(); ctx.moveTo(960 + i * 30, hz); ctx.lineTo(960 + i * 260, 1080); ctx.stroke(); }
+  ctx.restore();
+  // particle network
+  const pts = parts.map((p) => { let x = (p.x + p.vx * t) % 1920, y = (p.y + p.vy * t + Math.sin(t * .6 + p.ph) * 14) % 1080; if (x < 0) x += 1920; if (y < 0) y += 1080; return [x, y, p.z]; });
+  const maxD = 150 + net * 60;
+  for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+    const dx = pts[i][0] - pts[j][0], dy = pts[i][1] - pts[j][1], d = dx * dx + dy * dy;
+    if (d < maxD * maxD) { const a = (1 - Math.sqrt(d) / maxD) * (.10 + net * .22) * Math.min(pts[i][2], pts[j][2]);
+      ctx.strokeStyle = `rgba(94,234,212,${a})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(pts[i][0], pts[i][1]); ctx.lineTo(pts[j][0], pts[j][1]); ctx.stroke(); }
+  }
+  pts.forEach(([x, y, z], i) => { const tw = .5 + .5 * Math.sin(t * 2 + i); ctx.fillStyle = `rgba(167,243,232,${(.25 + net * .45) * z * (.6 + .4 * tw)})`;
+    ctx.beginPath(); ctx.arc(x, y, 1.2 + z * 1.6, 0, 6.29); ctx.fill(); });
+}
+function drawLightParticles(t, conv) {
+  // particles converging toward the logo (intro) / resting softly (outro)
+  const r = mulberry(21);
+  for (let i = 0; i < 90; i++) {
+    const a = r() * 6.283, rad0 = 500 + r() * 700, sp = .4 + r() * .6, size = 1 + r() * 2.4;
+    const k = clamp(conv * sp * 1.4);
+    const rad = lerp(rad0, 260 + r() * 260, ease.inOut(k));
+    const x = 960 + Math.cos(a + t * .05 * (r() - .5)) * rad * 1.6, y = 540 + Math.sin(a) * rad * .8;
+    ctx.fillStyle = i % 3 ? `rgba(29,79,128,${.25 * (1 - k * .4)})` : `rgba(34,166,214,${.45})`;
+    ctx.beginPath(); ctx.arc(x, y, size, 0, 6.29); ctx.fill();
+  }
+}
+
+/* --------------------------------------------- per-scene renderers */
+const IN = S.intro, OUT = S.outro;
+function irisRadius(t, at, dur = 1.0) { return P(t, at, at + dur, ease.inOut) * 1300; }
+
+function renderBg(t) {
+  const darkStart = S.problem.start - 0.55, lightStart = OUT.start - 0.5;
+  let net = 0.25;
+  if (t > S.architecture.start - 1 && t < S.training.end) net = 1;
+  else if (t > S.identity.start && t < S.identity.end) net = .55;
+  ctx.clearRect(0, 0, 1920, 1080);
+  if (t < darkStart) { drawLight(t, 1); drawLightParticles(t, P(t, 0, 3.0, ease.inOut)); return; }
+  if (t >= lightStart + 1.0) { drawLight(t, 1); drawLightParticles(t, 1); return; }
+  if (t < darkStart + 1.0) {      // iris: light -> dark
+    drawLight(t, 1); drawLightParticles(t, 1);
+    ctx.save(); ctx.beginPath(); ctx.arc(960, 540, irisRadius(t, darkStart), 0, 6.29); ctx.clip(); drawDark(t, net); ctx.restore(); return;
+  }
+  drawDark(t, net);
+  if (t >= lightStart) {           // iris: dark -> light
+    ctx.save(); ctx.beginPath(); ctx.arc(960, 540, irisRadius(t, lightStart), 0, 6.29); ctx.clip(); drawLight(t, 1); drawLightParticles(t, 1); ctx.restore();
+  }
+}
+
+function sceneAlpha(t, s, inDur = .6, outDur = .6, pre = .25) {
+  return P(t, s.start - pre, s.start - pre + inDur, ease.inOut) * (1 - P(t, s.end - outDur * .5, s.end + outDur * .5, ease.inOut));
+}
+
+function renderIntro(t) {
+  const L = $("#L_intro"); const a = 1 - P(t, IN.end - .6, IN.end + .2, ease.inOut); show(L, a);
+  if (a <= 0) return;
+  for (let i = 0; i < 14; i++) {
+    const p = $("#tr" + i), len = p.getTotalLength(); const k = P(t, .1 + i * .06, 1.6 + i * .06, ease.inOut);
+    p.style.strokeDasharray = len; p.style.strokeDashoffset = len * (1 - k);
+    const pt = p.getPointAtLength(len * k); const d = $("#trd" + i); d.setAttribute("cx", pt.x); d.setAttribute("cy", pt.y);
+    d.style.opacity = k > 0 && k < 1 ? 1 : 0;
+    p.style.opacity = 1 - P(t, 2.2, 3.4);
+  }
+  const lg = $("#logoBig"); const k = P(t, 1.25, 2.6, ease.out);
+  lg.style.opacity = k; lg.style.filter = `blur(${(1 - k) * 12}px)`;
+  const push = lerp(.965, 1.0, k) + P(t, 2.6, IN.end + .5, ease.inOut) * .035;
+  setT(lg, `translate(-50%, -50%) translateY(${(1 - k) * 18}px) scale(${push})`);
+  const ln = $("#introLine"); ln.style.transform = `scaleX(${P(t, 2.1, 3.3, ease.inOut)})`; ln.style.opacity = 1 - P(t, 3.6, 4.6);
+}
+
+function renderProblem(t) {
+  const s = S.problem, L = $("#L_problem"); const a = sceneAlpha(t, s, .7, .5, .3); show(L, a);
+  if (a <= 0) return;
+  const lt = t - s.start; const merge = P(t, s.end - 1.3, s.end - .15, ease.in);
+  const cam = lerp(0, 160, P(t, s.start, s.end, ease.inOut));
+  const centers = [];
+  FRAGS.forEach((f, i) => {
+    const el = $("#frag" + i); const enter = P(t, s.start + .1 + i * .28, s.start + 1.1 + i * .28, ease.out);
+    const fx = Math.sin(lt * .7 + i * 1.7) * 14, fy = Math.cos(lt * .6 + i) * 12;
+    const drift = (i % 2 ? 1 : -1) * lt * 6;       // they slowly drift apart
+    const cx = f.x + 235, cy = f.y + 140; const tx = (960 - cx) * merge, ty = (540 - cy) * merge;
+    const sc = lerp(1, .08, merge);
+    el.style.opacity = enter * (1 - P(merge, .75, 1));
+    setT(el, `translate3d(${fx + drift + tx}px, ${fy + (1 - enter) * 60 + ty}px, ${f.z + cam + (1 - enter) * -300}px) rotateY(${f.r * (1 - merge)}deg) rotateX(${4 * (1 - merge)}deg) scale(${sc})`);
+    const persp = 1900 / (1900 - (f.z + cam)); // approximate projected centre for the connector lines
+    centers.push([960 + (cx + fx + drift + tx - 960) * persp, 486 + (cy + fy + ty - 486) * persp]);
+  });
+  [[0, 1], [0, 2], [1, 3], [2, 3], [0, 3]].forEach(([p, q], i) => {
+    const ln = $("#fl" + i); ln.setAttribute("x1", centers[p][0]); ln.setAttribute("y1", centers[p][1]); ln.setAttribute("x2", centers[q][0]); ln.setAttribute("y2", centers[q][1]);
+    // broken links: flicker and fade - information that does not connect
+    const fl = .5 + .5 * Math.sin(lt * 5 + i * 2.1); ln.style.opacity = P(t, s.start + 1.2, s.start + 2.2) * (.25 + .5 * fl) * (1 - merge);
+    ln.style.strokeDashoffset = -lt * 20;
+  });
+  const core = $("#core"); const ck = P(t, s.end - .5, s.end + .1, ease.out);
+  core.style.opacity = merge; setT(core, `scale(${1 + ck * 9})`);
+}
+
+function renderIdentity(t) {
+  const s = S.identity, L = $("#L_identity"); const a = sceneAlpha(t, s, .4, .7, .1); show(L, a);
+  const flash = $("#flash"); flash.style.opacity = P(t, s.start - .2, s.start, ease.out) * (1 - P(t, s.start, s.start + .9, ease.out));
+  if (a <= 0) return;
+  const lt = t - s.start; const exitZ = P(t, s.end - .8, s.end + .3, ease.in);
+  const m = $("#mark"); const mk = P(t, s.start, s.start + 1.2, ease.back);
+  setT(m, `perspective(900px) rotateY(${lerp(-70, 0, P(t, s.start, s.start + 1.6, ease.out)) + Math.sin(lt * .8) * 6}deg) rotateX(${Math.sin(lt * .6) * 4}deg) scale(${mk * (1 + exitZ * .7)})`);
+  m.style.opacity = P(t, s.start, s.start + .5) * (1 - exitZ);
+  [["#ring1", 1], ["#ring2", -1], ["#ring3", 1]].forEach(([sel, dir], i) => {
+    const r = $(sel); r.style.opacity = P(t, s.start + .3 + i * .15, s.start + 1.3 + i * .15) * .9 * (1 - exitZ);
+    setT(r, `perspective(1200px) rotateX(${68 + i * 4}deg) rotateZ(${dir * lt * (18 + i * 6)}deg) scale(${lerp(.6, 1, P(t, s.start + .2, s.start + 1.6)) * (1 + exitZ)})`);
+    r.style.borderStyle = i === 1 ? "dashed" : "solid";
+  });
+  [...$("#word").children].forEach((c, i) => {
+    const k = P(t, s.start + .6 + i * .09, s.start + 1.4 + i * .09, ease.out);
+    c.style.opacity = k * (1 - exitZ); c.style.filter = `blur(${(1 - k) * 10}px)`;
+    setT(c, `translateY(${(1 - k) * 40}px) scale(${1 + exitZ * .4})`);
+  });
+  const sub = $("#sub"); const sk = P(t, s.start + 1.6, s.start + 2.6); sub.style.opacity = sk * (1 - exitZ); setT(sub, `translateY(${(1 - sk) * 20}px)`);
+  const words3 = ["understands", "personalizes", "recommends"];
+  [...$("#triad").children].forEach((c, i) => {
+    const at = W("identity", 1, words3[i]); const k = P(t, at - .15, at + .55, ease.out);
+    c.style.opacity = k * (1 - exitZ); setT(c, `translateY(${(1 - k) * 30}px) scale(${lerp(.9, 1, k)})`);
+    c.style.color = i === 0 ? "#e7efec" : i === 1 ? "#5eead4" : "#7dd3fc";
+  });
+}
+
+/* ---------- the shared app window: exercises -> personal -> nutrition ---------- */
+let layoutCache = null;
+function measure() {
+  const win = $("#win"), wr = win.getBoundingClientRect();
+  const rel = (el) => { const r = el.getBoundingClientRect(); return { x: r.left - wr.left, y: r.top - wr.top, w: r.width, h: r.height }; };
+  // reveal everything for measuring
+  ["#th_ex", "#th_plan", "#th_food"].forEach((s) => { $(s).style.opacity = 1; });
+  $$all(".typing").forEach((e) => e.style.display = "none");
+  const card = $("#th_ex .ex");
+  layoutCache = { card: rel(card), t: rel(card.querySelector(".kv-t")), e: rel(card.querySelector(".kv-e")), d: rel(card.querySelector(".lvl")), win: { x: wr.left, y: wr.top } };
+  $$all(".typing").forEach((e) => e.style.display = "");
+}
+function $$all(s) { return [...document.querySelectorAll(s)]; }
+
+function revealWords(list, t0, t1, t) { const n = list.length; list.forEach((w, i) => { const k = P(t, t0 + (t1 - t0) * i / n, t0 + (t1 - t0) * i / n + .25); w.style.opacity = k; }); }
+
+function renderThread(sel, t, tq0, tq1, ta0, ta1, wordsList, question) {
+  // tq0..tq1 typing in the composer; bubble pops at tq1; typing dots until ta0; answer words ta0..ta1
+  const th = $(sel); const bub = th.querySelector(".ubub"), typ = th.querySelector(".typing"), bt = th.querySelector(".btext"), tags = th.querySelectorAll(".tag"), av = th.querySelector(".bav");
+  const kb = P(t, tq1, tq1 + .45, ease.back); bub.style.opacity = P(t, tq1, tq1 + .2); setT(bub, `translateY(${(1 - kb) * 40}px) scale(${lerp(.85, 1, kb)})`);
+  const thinking = t >= tq1 + .25 && t < ta0; typ.style.display = thinking ? "flex" : "none";
+  [...typ.children].forEach((d, i) => { d.style.opacity = .35 + .65 * (.5 + .5 * Math.sin(t * 9 - i * 1.1)); setT(d, `translateY(${Math.sin(t * 9 - i * 1.1) * -3}px)`); });
+  bt.style.display = t >= ta0 ? "block" : "none"; tags.forEach((g) => { g.style.display = t >= ta0 ? "inline-block" : "none"; });
+  av.style.opacity = P(t, tq1 + .2, tq1 + .5);
+  revealWords(wordsList, ta0, ta1, t);
+  return t >= tq0 && t < tq1 ? question.slice(0, Math.floor(question.length * clamp((t - tq0) / (tq1 - tq0)))) : "";
+}
+
+function renderApp(t) {
+  const sE = S.exercises, sP = S.personal, sN = S.nutrition;
+  const layer = $("#appLayer");
+  const a = P(t, sE.start - .3, sE.start + .5, ease.inOut) * (1 - P(t, sN.end - .5, sN.end + .3, ease.inOut));
+  show(layer, a); if (a <= 0) return;
+  const win = $("#win");
+  // ----- threads visibility
+  const inEx = t < sP.start + .2, inPlan = t >= sP.start + .2 && t < sN.start + .2, inFood = t >= sN.start + .2;
+  const swap = (s0) => P(t, s0 - .1, s0 + .35);
+  op($("#th_ex"), inEx ? 1 : 1 - swap(sP.start + .2)); op($("#th_plan"), inPlan ? swap(sP.start + .2) : 0); op($("#th_food"), inFood ? swap(sN.start + .2) : 0);
+  $("#th_ex").style.visibility = inEx || t < sP.start + .6 ? "visible" : "hidden";
+  $("#cv1").classList.toggle("on", inEx); $("#cv2").classList.toggle("on", inPlan); $("#cv3").classList.toggle("on", inFood);
+  $("#chead").textContent = inEx ? (t > sE.start + 2 ? A.exercises.question : "New chat") : inPlan ? "Give me a 3-day home workout plan…" : A.nutrition.question;
+
+  // ----- exercises thread timing
+  let typed = "";
+  const q1a = sE.start + .3, q1b = Math.min(LE("exercises", 0) + .4, sE.start + 2.3);
+  typed = renderThread("#th_ex", t, q1a, q1b, q1b + 1.0, q1b + 2.2, exText, A.exercises.question) || typed;
+  $$all("#th_ex .ex").forEach((c, i) => { const at = q1b + 1.6 + i * .18; const k = P(t, at, at + .6, ease.out);
+    c.style.opacity = k; setT(c, `translateY(${(1 - k) * 60}px) rotateX(${(1 - k) * 25}deg)`); });
+  // ----- plan thread
+  const q2a = sP.start + .4, q2b = Math.min(sP.start + 2.6, LE("personal", 0) + 1.2);
+  if (inPlan) typed = renderThread("#th_plan", t, q2a, q2b, q2b + .9, q2b + 1.8, planText, A.plan.question) || typed;
+  const pl = $("#th_plan .plan"); const pk = P(t, q2b + 1.4, q2b + 2.0, ease.out); pl.style.opacity = pk; setT(pl, `translateY(${(1 - pk) * 50}px)`);
+  const dayIdx = t < W("personal", 1, "complete plan") + .3 ? 0 : t < W("personal", 1, "sets") ? 1 : 2;
+  $$all("#th_plan .ptabs span").forEach((sp, i) => sp.classList.toggle("on", i === dayIdx));
+  if (pl.dataset.day !== String(dayIdx)) { pl.dataset.day = dayIdx; pl.querySelector(".pfocus").textContent = plan.days[dayIdx].focus; pl.querySelector(".prows").innerHTML = planRows(plan.days[dayIdx]); }
+  const dayAt = dayIdx === 0 ? q2b + 1.6 : dayIdx === 1 ? W("personal", 1, "complete plan") + .3 : W("personal", 1, "sets");
+  $$all("#th_plan .prow").forEach((r, i) => { const k = P(t, dayAt + .1 + i * .08, dayAt + .5 + i * .08); r.style.opacity = k; setT(r, `translateX(${(1 - k) * 30}px)`); });
+  // ----- food thread
+  const q3a = sN.start + .3, q3b = sN.start + 2.0;
+  if (inFood) typed = renderThread("#th_food", t, q3a, q3b, q3b + .8, q3b + 2.0, foodText, A.nutrition.question) || typed;
+  foods.forEach((f, i) => {
+    const el = $("#food" + i); const at = q3b + 1.4 + i * .22; const k = P(t, at, at + .7, ease.out);
+    const pop = P(t, W("nutrition", 0, "calories") - .2, W("nutrition", 0, "calories") + .9, ease.inOut) * (1 - P(t, LE("nutrition", 0) + .1, LE("nutrition", 0) + 1.0, ease.inOut));
+    el.style.opacity = k;
+    setT(el, `translateY(${(1 - k) * 60}px) translateZ(${pop * (140 + i * 40)}px) rotateY(${pop * (i - 1) * -8}deg)`);
+    el.style.boxShadow = pop > 0 ? `0 ${30 * pop}px ${80 * pop}px rgba(0,0,0,${.5 * pop}), 0 0 ${40 * pop}px rgba(45,212,191,${.25 * pop})` : "none";
+    const n = f.nutrients; const ck = P(t, at + .2, at + 1.4, ease.out);
+    el.querySelector(".kc").textContent = Math.round(n.calories_kcal * ck * 10) / 10;
+    const cal = { p: (n.protein_g || 0) * 4, c: (n.carbs_g || 0) * 4, f: (n.fat_g || 0) * 9 }; const tot = cal.p + cal.c + cal.f || 1;
+    const bars = el.querySelectorAll(".mbar i"); [cal.p, cal.c, cal.f].forEach((v, j) => { bars[j].style.width = `${(v / tot) * 100 * ck}%`; });
+    el.querySelectorAll(".frow").forEach((r, j) => { r.style.opacity = P(t, at + .4 + j * .1, at + .8 + j * .1); });
+  });
+  $("#typed").innerHTML = typed ? `${typed}<span class="caret"></span>` : `<span style="color:#6f817c">Ask FitBot about workouts, food, sleep…</span>`;
+
+  // ----- camera
+  const lt = t - sE.start;
+  let rx = lerp(16, 5, P(t, sE.start, sE.start + 2.5, ease.out)), ry = lerp(-18, -5, P(t, sE.start, sE.start + 2.5, ease.out));
+  let tz = lerp(-420, 0, P(t, sE.start - .2, sE.start + 2.2, ease.out)), tx = 0, ty = 0, sc = 1;
+  // zoom onto the first exercise card while its fields are named
+  const z0 = W("exercises", 1, "real images") - .2, z1 = W("exercises", 1, "for strength");
+  const zk = P(t, z0, z0 + 1.1, ease.inOut) * (1 - P(t, z1 - .3, z1 + .8, ease.inOut));
+  if (layoutCache) {   // T = target - origin - s * (p - origin): puts the card centre at the target when zk = 1
+    const c = layoutCache.card; const px = 220 + c.x + c.w / 2, py = 120 + c.y + c.h / 2; const ox = 960, oy = 545;
+    sc = lerp(1, 1.75, zk); tx = zk * (900 - ox - sc * (px - ox)); ty = zk * (560 - oy - sc * (py - oy)); }
+  rx = lerp(rx, 0, zk); ry = lerp(ry, 0, zk);
+  // personal: window slides left for the context panel
+  const pk2 = P(t, sP.start - .2, sP.start + .9, ease.inOut) * (1 - P(t, sN.start - .3, sN.start + .7, ease.inOut));
+  tx += pk2 * -300; ry += pk2 * 9; sc *= lerp(1, .83, pk2);
+  // make room for the floating topic chips
+  const chipK = P(t, W("exercises", 1, "for strength") - .3, W("exercises", 1, "for strength") + .6, ease.inOut) * (1 - P(t, sE.end - .4, sE.end + .3, ease.inOut))
+    + P(t, W("nutrition", 1, "hydration") - .4, W("nutrition", 1, "hydration") + .5, ease.inOut) * (1 - P(t, sN.end - .5, sN.end + .3, ease.inOut));
+  sc *= lerp(1, .82, chipK);
+  // nutrition: slight push in
+  const nk = P(t, sN.start, sN.start + 1.2, ease.inOut);
+  ry = lerp(ry, 3, nk); rx = lerp(rx, 4, nk);
+  const drift = Math.sin(lt * .35) * 1.6;
+  setT(win, `translate3d(${tx}px, ${ty}px, ${tz}px) rotateX(${rx}deg) rotateY(${ry + drift}deg) scale(${sc})`);
+
+  // field highlights on the zoomed card
+  if (layoutCache) {
+    [["#hl1", "t", "target"], ["#hl2", "e", "equipment"], ["#hl3", "d", "difficulty"]].forEach(([sel, key, w]) => {
+      const h = $(sel), r = layoutCache[key];
+      const at = W("exercises", 1, w); const k = P(t, at - .1, at + .3) * (1 - P(t, at + 1.4, at + 1.9));
+      // the thread sits 250 px (sidebar) right and 102 px (title bar + header) below the window origin
+      h.style.left = r.x - 250 - 6 + "px"; h.style.top = r.y - 102 - 4 + "px"; h.style.width = r.w + 12 + "px"; h.style.height = r.h + 8 + "px";
+      h.style.opacity = k;
+    });
+  }
+  // kicker
+  const kick = $("#appKicker"); kick.textContent = t < sP.start ? "Understand" : t < sN.start ? "Personalize" : "Recommend";
+  const dip = (x) => P(t, x - .4, x - .1) * (1 - P(t, x + .1, x + .5));
+  kick.style.opacity = P(t, sE.start + .4, sE.start + 1.2) * (1 - dip(sP.start)) * (1 - dip(sN.start));
+  // context panel
+  const cx = $("#ctx"); const ck2 = P(t, sP.start + .3, sP.start + 1.2, ease.out) * (1 - P(t, sN.start - .4, sN.start + .3));
+  cx.style.opacity = ck2; setT(cx, `translateX(${(1 - ck2) * 120}px) rotateY(${(1 - ck2) * -25}deg)`);
+  const rowsAt = [W("personal", 1, "beginner"), W("personal", 1, "goal"), W("personal", 1, "dumbbells"), W("personal", 1, "home")];
+  $$all(".crow").forEach((r, i) => { const k = P(t, rowsAt[i] - .1, rowsAt[i] + .45, ease.back); r.style.opacity = k; setT(r, `translateX(${(1 - k) * 40}px) scale(${lerp(.9, 1, k)})`);
+    const glow = P(t, W("personal", 1, "your level") + i * .25, W("personal", 1, "your level") + i * .25 + .3) * (1 - P(t, W("personal", 1, "shape"), W("personal", 1, "shape") + .5));
+    r.style.borderColor = `rgba(94,234,212,${.08 + glow * .7})`; r.style.boxShadow = `0 0 ${glow * 26}px rgba(94,234,212,${glow * .35})`; });
+  // data flowing from the context panel into the app
+  const fl = $("#flow"); const fk = ck2 * P(t, W("personal", 1, "your level"), W("personal", 1, "your level") + .5);
+  if (fk > 0) {
+    let h = ""; for (let i = 0; i < 4; i++) { const y0 = 330 + i * 95, y1 = 420 + i * 70; const d = `M1350,${y0} C1290,${y0} 1290,${y1} 1230,${y1}`;
+      h += `<path d="${d}" fill="none" stroke="rgba(94,234,212,${.25 * fk})" stroke-width="2"/>`;
+      for (let j = 0; j < 3; j++) { const u = ((t * .9 + j / 3 + i * .17) % 1); const bx = (1 - u) ** 3 * 1350 + 3 * (1 - u) ** 2 * u * 1290 + 3 * (1 - u) * u * u * 1290 + u ** 3 * 1230;
+        const by = (1 - u) ** 3 * y0 + 3 * (1 - u) ** 2 * u * y0 + 3 * (1 - u) * u * u * y1 + u ** 3 * y1; h += `<circle cx="${bx}" cy="${by}" r="4.5" fill="rgba(167,243,232,${fk})"/>`; } }
+    fl.innerHTML = h;
+  } else fl.innerHTML = "";
+  // floating topic chips
+  CHIPS.forEach((c, i) => { const el = $("#chip" + i); const at = W(c.s, c.l, c.w); const end = c.s === "exercises" ? sE.end : sN.end;
+    const k = P(t, at - .15, at + .5, ease.back) * (1 - P(t, end - .6, end - .1)); el.style.opacity = k;
+    setT(el, `translateY(${(1 - k) * 30 + Math.sin(t * .9 + i) * 8}px) translateZ(${(1 - k) * -200}px) scale(${lerp(.8, 1, k)})`); });
+}
+
+function renderArchitecture(t) {
+  const s = S.architecture, L = $("#L_architecture"); const a = sceneAlpha(t, s, .7, .7, .3); show(L, a); if (a <= 0) return;
+  const lt = t - s.start;
+  setT($("#arch"), `rotateX(${lerp(22, 12, P(t, s.start, s.end, ease.inOut))}deg) translateY(${lerp(80, 0, P(t, s.start - .3, s.start + 1.2, ease.out))}px) translateZ(${lerp(-200, 40, P(t, s.start, s.end, ease.inOut))}px)`);
+  const on = NODES.map((n) => n.at());
+  NODES.forEach((n, i) => { const el = $("#nd" + i); const k = P(t, on[i] - .2, on[i] + .5, ease.back); const appear = P(t, s.start + i * .08, s.start + .6 + i * .08);
+    el.style.opacity = .25 * appear + .75 * k; setT(el, `translateY(${(1 - appear) * 40 + Math.sin(lt * 1.2 + i) * 5}px) scale(${lerp(.92, 1, k)})`);
+    el.style.borderColor = `rgba(94,234,212,${.13 + .6 * k})`; el.style.boxShadow = `0 30px 90px rgba(0,0,0,.5), 0 0 ${50 * k}px rgba(45,212,191,${.28 * k})`;
+    if (n.k === "slm") el.style.background = `linear-gradient(160deg, rgba(45,212,191,${.08 + .18 * k}), rgba(255,255,255,.02))`; });
+  for (let i = 0; i < 5; i++) {
+    const x0 = NX[i] + (i === 4 ? 140 : 118), x1 = NX[i + 1] - (i + 1 === 4 ? 140 : 118); const y = 510;
+    const d = `M${x0},${y} L${x1},${y}`; $("#ap" + i).setAttribute("d", d); const g = $("#apg" + i); g.setAttribute("d", d);
+    const k = P(t, on[i + 1] - .45, on[i + 1] + .05, ease.inOut); const len = x1 - x0; g.style.strokeDasharray = len; g.style.strokeDashoffset = len * (1 - k);
+    for (let j = 0; j < 3; j++) { const pk = $("#pk" + (i * 3 + j)); const u = ((lt * .7 + j / 3) % 1); pk.setAttribute("cx", x0 + len * u); pk.setAttribute("cy", y);
+      pk.style.opacity = k >= 1 ? Math.sin(u * Math.PI) : 0; }
+  }
+  // neural net pulse inside the SLM node
+  const sk = P(t, on[4] - .2, on[4] + .6); $$all("#nn .nc").forEach((c, i) => { c.setAttribute("r", 4 + 2 * sk * (.5 + .5 * Math.sin(t * 6 + i))); c.style.opacity = .4 + .6 * sk; });
+  $$all("#nn .nl").forEach((l, i) => { l.setAttribute("stroke-opacity", .15 + .55 * sk * (.5 + .5 * Math.sin(t * 5 + i * .7))); });
+}
+
+function renderTraining(t) {
+  const s = S.training, L = $("#L_training"); const a = sceneAlpha(t, s, .7, .7, .3); show(L, a); if (a <= 0) return;
+  const lt = t - s.start;
+  const times = [s.start + .2, W("training", 1, "prepared") - .3, W("training", 1, "trained"), W("training", 1, "validated"), W("training", 1, "tested"),
+    W("training", 1, "before reaching"), W("training", 1, "application")];
+  let cur = 0; times.forEach((tm, i) => { if (t >= tm) cur = i; });
+  STEPS.forEach((_, i) => { const st = $("#st" + i); const k = P(t, times[i] - .1, times[i] + .4);
+    const dot = st.querySelector("i"); dot.style.background = k > .5 ? "#2dd4bf" : "#0b1514"; dot.style.borderColor = k > .5 ? "#5eead4" : "#3b4b47";
+    dot.style.boxShadow = i === cur ? `0 0 ${18 + 8 * Math.sin(t * 6)}px #2dd4bf` : "none"; st.querySelector("span").style.color = i === cur ? "#fff" : k > .5 ? "#8fd9cf" : "#5f716c"; });
+  const fillTo = (cur + P(t, times[cur], (times[cur + 1] || s.end))) / (STEPS.length - 1); $("#trackFill").style.width = `${clamp(fillTo) * 100}%`;
+  $("#track").style.opacity = P(t, s.start, s.start + .8);
+  // panels
+  const panelK = (from, to) => P(t, from - .2, from + .5, ease.out) * (1 - P(t, to - .3, to + .2, ease.inOut));
+  const pD = panelK(times[0], times[2]), pG = panelK(times[2], times[3]), pC = panelK(times[3], times[5]), pF = panelK(times[5], s.end + 5);
+  [["#dataset", pD], ["#gpu", pG], ["#checks", pC], ["#slmFinal", pF]].forEach(([sel, k]) => { const el = $(sel); el.style.opacity = k;
+    setT(el, `translateX(-50%) translateY(${(1 - k) * 40}px) scale(${lerp(.94, 1, k)})`); el.style.visibility = k > 0 ? "visible" : "hidden"; });
+  // dataset sheets fan out; prep checklist appears at "prepared"
+  SAMPLES.slice(0, 3).forEach((_, i) => { const el = $("#sh" + i); const k = P(t, times[0] + i * .3, times[0] + .7 + i * .3, ease.out);
+    el.style.left = `${40 + i * 30}px`; el.style.top = `${40 + i * 150}px`; el.style.opacity = k; setT(el, `translateX(${(1 - k) * -60}px) rotateY(${(1 - k) * 15}deg)`); });
+  $$all("#prep .pp").forEach((p, i) => { const k = P(t, times[1] + i * .3, times[1] + .5 + i * .3); p.style.opacity = k; p.style.transform = `translateX(${(1 - k) * 30}px)`; });
+  // GPU: cores light up in waves; loss curve draws (real curve, no numbers)
+  $$all("#chip .core").forEach((c) => { const r = +c.dataset.r, cc = +c.dataset.c; const w = .5 + .5 * Math.sin(t * 7 - (r + cc) * .6);
+    c.setAttribute("fill-opacity", (.15 + .75 * w) * P(t, times[2], times[2] + .5)); });
+  const dk = P(t, times[2] + .2, times[3] - .2, ease.inOut); ["#lT", "#lV"].forEach((id) => { const p = $(id); const len = p.getTotalLength(); p.style.strokeDasharray = len; p.style.strokeDashoffset = len * (1 - dk); });
+  $$all(".vdot").forEach((d, i, arr) => { d.style.opacity = dk > (i + .5) / arr.length ? 1 : 0; });
+  // checks tick in
+  const ckAt = [times[3], times[4], times[4] + .9];
+  CHECKS.forEach((_, i) => { const k = P(t, ckAt[i] - .1, ckAt[i] + .4, ease.back); const el = $("#ck" + i); el.style.opacity = .3 + .7 * P(t, ckAt[i] - .2, ckAt[i] + .2);
+    const cb = $("#cb" + i); cb.innerHTML = k > .05 ? `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#04201c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="transform:scale(${k})"><path d="M20 6 9 17l-5-5"/></svg>` : "";
+    cb.style.background = k > .05 ? "#2dd4bf" : "transparent"; cb.style.borderColor = k > .05 ? "#2dd4bf" : "#2b3a36"; });
+  const fm = $("#slmMark"); const fk = P(t, times[5], times[5] + .8, ease.back);
+  setT(fm, `perspective(900px) rotateY(${(1 - fk) * 90 + Math.sin(lt) * 5}deg) scale(${lerp(.6, 1, fk)})`);
+}
+
+function renderExperience(t) {
+  const s = S.experience, L = $("#L_experience"); const a = sceneAlpha(t, s, .7, .8, .3); show(L, a); if (a <= 0) return;
+  // cover-flow across the real app screens: the focused screen is large and flat, neighbours angle away
+  const focus = lerp(-.3, SHOTS.length - .7, P(t, s.start - .2, s.end + .2, ease.inOut));
+  SHOTS.forEach((_, i) => { const el = $("#sh_" + i); const d = i - focus; const ad = Math.abs(d);
+    const enter = P(t, s.start - .3 + i * .1, s.start + .7 + i * .1, ease.out);
+    const x = 960 - 550 + Math.sign(d) * Math.min(ad, 1) * 560 + Math.sign(d) * Math.max(ad - 1, 0) * 300;
+    el.style.left = x + "px"; el.style.top = "200px";
+    el.style.opacity = enter * clamp(1.6 - ad * .45); el.style.zIndex = 100 - Math.round(ad * 10);
+    setT(el, `translateZ(${-Math.min(ad, 2) * 260 + (1 - enter) * -400}px) rotateY(${-clamp(d, -1, 1) * 38}deg) scale(1)`);
+    el.style.filter = `brightness(${1 - Math.min(ad, 1.5) * .35})`; });
+  setT($("#wall"), `translateY(${Math.sin((t - s.start) * .5) * 6}px)`);
+  const sf = $("#safe"); const k = P(t, L0("experience", 1) - .2, L0("experience", 1) + .5, ease.back); sf.style.opacity = k;
+  setT(sf, `translateX(-50%) translateY(${(1 - k) * 30}px) scale(${lerp(.9, 1, k)})`);
+  sf.style.background = "rgba(9,22,24,.86)"; sf.style.borderColor = "rgba(94,234,212,.35)";
+}
+
+function renderOutro(t) {
+  const s = OUT, L = $("#L_outro"); const a = P(t, s.start + .1, s.start + .9, ease.inOut); show(L, a); if (a <= 0) return;
+  const tg = $("#tagline"); const k1 = P(t, s.start + .4, s.start + 1.4, ease.out); tg.style.opacity = k1; tg.style.filter = `blur(${(1 - k1) * 8}px)`;
+  setT(tg, `translateY(${(1 - k1) * 24}px)`);
+  const lk = $("#fbLock"); const k2 = P(t, L0("outro") - .1, L0("outro") + .7, ease.out); lk.style.opacity = k2;
+  setT(lk, `translateX(-50%) translateY(${(1 - k2) * 26}px) scale(${lerp(.94, 1, k2)})`);
+  const vAt = L0("outro", 1) - .5;
+  $("#divider").style.transform = `scaleX(${P(t, vAt - .3, vAt + .7, ease.inOut)})`;
+  const pr = $("#presented"); pr.style.opacity = P(t, vAt, vAt + .6);
+  const lg = $("#logoEnd"); const k3 = P(t, vAt + .1, vAt + 1.2, ease.out); lg.style.opacity = k3; lg.style.filter = `blur(${(1 - k3) * 10}px)`;
+  setT(lg, `translateX(-50%) translateY(${(1 - k3) * 20}px) scale(${lerp(.97, 1, k3) + P(t, vAt + 1.2, TL.duration, ease.inOut) * .02})`);
+}
+
+function render(t) {
+  renderBg(t);
+  renderIntro(t); renderProblem(t); renderIdentity(t); renderApp(t); renderArchitecture(t); renderTraining(t); renderExperience(t); renderOutro(t);
+  // subtle Veltris badge during the dark middle section
+  const bug = $("#bug"); bug.style.opacity = .92 * P(t, S.problem.start + 1.5, S.problem.start + 2.5) * (1 - P(t, OUT.start - 1.2, OUT.start - .4));
+  drawGrain(t);
+  $("#vig").style.opacity = t < S.problem.start - .2 || t > OUT.start + .6 ? .35 : 1;
+  $("#fade").style.opacity = P(t, TL.duration - 1.6, TL.duration - .1, ease.inOut) + (1 - P(t, 0, .6));
+}
+window.render = render;
+
+/* --------------------------------------------- ready when fonts + all images are loaded */
+(async function () {
+  await document.fonts.ready;
+  await Promise.all([...document.images].map((im) => im.complete ? 0 : new Promise((r) => { im.onload = im.onerror = r; })));
+  // preload plan images for all days
+  await Promise.all(plan.days.flatMap((d) => d.exercises.map((e) => new Promise((r) => { const im = new Image(); im.onload = im.onerror = r; im.src = e.image_url; }))));
+  measure();
+  window.READY = true;
+})();
+</script>
+</body>
+</html>

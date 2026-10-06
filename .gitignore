@@ -48,3 +48,6 @@ backups/
 
 # Exported user feedback (contains user questions)
 evaluation/feedback_export.jsonl
+
+# Launch film render outputs (re-create with marketing/launch/*.py)
+marketing/launch/build/
