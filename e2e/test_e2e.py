@@ -142,19 +142,46 @@ def test_save_plan_log_workouts_and_feedback(page):
     expect(page.locator(".saved-plan .plan")).to_have_count(1)
     page.locator(".saved-plan").get_by_role("button", name="as done").click()
     expect(page.locator(".saved-plan").get_by_text("Logged today")).to_be_visible()
-    page.get_by_label("Exercise", exact=True).fill("Running")
-    page.get_by_label("Minutes").fill("20")
-    page.get_by_role("button", name="Log exercise").click()
-    expect(page.get_by_text("Logged Running.")).to_be_visible()
+    # several exercises in one go
+    page.get_by_label("Exercise 1", exact=True).fill("Running")
+    page.get_by_label("Minutes 1", exact=True).fill("20")
+    page.get_by_role("button", name="Add another exercise").click()
+    page.get_by_label("Exercise 2", exact=True).fill("Barbell Squat")
+    page.get_by_label("Sets 2", exact=True).fill("3")
+    page.get_by_label("Reps 2", exact=True).fill("8")
+    page.get_by_label("Weight 2", exact=True).fill("40")
+    page.get_by_role("button", name="Log 2 exercises").click()
+    expect(page.get_by_text("Logged 2 exercises!")).to_be_visible()
+    expect(page.locator(".log-row").filter(has_text="Barbell Squat")).to_contain_text("3 × 8 · 40 kg")
 
     stats = page.locator(".stats .stat strong")
     expect(stats.nth(0)).to_have_text("1")   # active days this week
-    expect(stats.nth(1)).to_have_text("1")   # streak
+    expect(stats.nth(1)).to_have_text("🔥1")  # streak
     entries = int(stats.nth(3).inner_text())
-    assert entries >= 4                       # plan day exercises + Running
+    assert entries >= 5                       # plan day exercises + Running + Squat
     expect(page.locator(".log-row").filter(has_text="Running")).to_contain_text("20 min")
 
     # delete an entry
     page.locator(".log-row").filter(has_text="Running").get_by_role("button").click()
     expect(page.locator(".log-row").filter(has_text="Running")).to_have_count(0)
     expect(stats.nth(3)).to_have_text(str(entries - 1))
+
+
+def test_dashboard_quick_start_sends_once(page):
+    email, pwd = f"e2e.{secrets.token_hex(4)}@example.com", "E2e-" + secrets.token_urlsafe(10)
+    page.goto(f"{BASE}/register")
+    inputs = page.locator(".auth-card input")
+    for i, v in enumerate(["Quick Tester", email, pwd, pwd]):
+        inputs.nth(i).fill(v)
+    page.get_by_role("button", name="Create account").click()
+    expect(page.locator(".profile-form")).to_be_visible()
+    page.get_by_role("link", name="Dashboard").click()
+    chats = []
+    page.on("request", lambda r: chats.append(r) if r.url.endswith("/api/chat") and r.method == "POST" else None)
+    page.get_by_role("button", name="Sleep & recovery").click()
+    expect(page.locator(".msg-bot")).to_have_count(1)
+    page.wait_for_timeout(2500)              # a duplicate request would have arrived by now
+    expect(page.locator(".msg-bot")).to_have_count(1)
+    expect(page.locator(".msg-user")).to_have_count(1)
+    expect(page.locator(".conv-item")).to_have_count(1)
+    assert len(chats) == 1

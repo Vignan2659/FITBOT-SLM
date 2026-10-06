@@ -2,10 +2,12 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api, localDate } from "../api/client.js";
 import WorkoutPlan from "../components/WorkoutPlan.jsx";
-import { IconChat, IconTrash } from "../components/Icons.jsx";
+import { IconChat, IconPlus, IconTrash, IconX } from "../components/Icons.jsx";
 
-const EMPTY = { day: localDate(), exercise: "", sets: "", reps: "", weight_kg: "", minutes: "", notes: "" };
 const NUMERIC = ["sets", "reps", "weight_kg", "minutes"];
+const MAX_ROWS = 30;
+let rowSeq = 0;
+const newRow = () => ({ key: ++rowSeq, exercise: "", sets: "", reps: "", weight_kg: "", minutes: "" });
 
 function shortDate(iso) {
   return new Date(`${iso}T00:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" });
@@ -41,13 +43,22 @@ function WeekChart({ weeks }) {
   );
 }
 
+function streakText(n) {
+  if (!n) return "log today to start one 🚀";
+  if (n === 1) return "day - keep it going!";
+  if (n < 7) return "days in a row - on fire!";
+  return "days in a row - unstoppable! 🏆";
+}
+
 export default function Workouts() {
   const navigate = useNavigate();
   const [stats, setStats] = useState(null);
   const [logs, setLogs] = useState([]);
   const [plans, setPlans] = useState([]);
   const [names, setNames] = useState([]);
-  const [form, setForm] = useState(EMPTY);
+  const [day, setDay] = useState(localDate());
+  const [rows, setRows] = useState(() => [newRow()]);
+  const [notes, setNotes] = useState("");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
   const [ok, setOk] = useState("");
@@ -68,19 +79,28 @@ export default function Workouts() {
     api.exercises().then((r) => setNames(r.exercises.map((e) => e.name))).catch(() => setNames([]));
   }, [refresh]);
 
-  const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+  const setRow = (key, field) => (e) =>
+    setRows((rs) => rs.map((r) => (r.key === key ? { ...r, [field]: e.target.value } : r)));
+  const addRow = () => setRows((rs) => (rs.length < MAX_ROWS ? [...rs, newRow()] : rs));
+  const removeRow = (key) => setRows((rs) => (rs.length > 1 ? rs.filter((r) => r.key !== key) : [newRow()]));
+  const filled = rows.filter((r) => r.exercise.trim());
 
   async function submit(e) {
     e.preventDefault();
     setError("");
     setOk("");
-    const entry = { day: form.day, exercise: form.exercise.trim(), notes: form.notes.trim() || null };
-    for (const k of NUMERIC) entry[k] = form[k] === "" ? null : Number(form[k]);
+    const entries = filled.map((r) => {
+      const entry = { day, exercise: r.exercise.trim(), notes: notes.trim() || null };
+      for (const k of NUMERIC) entry[k] = r[k] === "" ? null : Number(r[k]);
+      return entry;
+    });
+    if (!entries.length) return;
     setSaving(true);
     try {
-      await api.logWorkouts([entry]);
-      setOk(`Logged ${entry.exercise}.`);
-      setForm((f) => ({ ...EMPTY, day: f.day }));
+      await api.logWorkouts(entries);
+      setOk(entries.length === 1 ? `🎉 Logged ${entries[0].exercise}!` : `🎉 Logged ${entries.length} exercises!`);
+      setRows([newRow()]);
+      setNotes("");
       refresh();
     } catch (err) {
       setError(err.message);
@@ -119,40 +139,59 @@ export default function Workouts() {
       {error && <div className="form-error" role="alert">{error}</div>}
 
       <section className="stats">
-        <div className="stat"><span>This week</span><strong>{stats?.this_week ?? "—"}</strong><small>active days</small></div>
-        <div className="stat"><span>Current streak</span><strong>{stats?.current_streak ?? "—"}</strong><small>days in a row</small></div>
-        <div className="stat"><span>Active days</span><strong>{stats?.active_days ?? "—"}</strong><small>all time</small></div>
-        <div className="stat"><span>Exercises logged</span><strong>{stats?.total_entries ?? "—"}</strong><small>entries</small></div>
+        <div className="stat"><span>📅 This week</span><strong>{stats?.this_week ?? "—"}</strong><small>active days</small></div>
+        <div className={`stat streak ${stats?.current_streak ? "hot" : ""}`}>
+          <span>Current streak</span>
+          <strong><span className="flame" aria-hidden>🔥</span>{stats?.current_streak ?? "—"}</strong>
+          <small>{streakText(stats?.current_streak)}</small>
+        </div>
+        <div className="stat"><span>💪 Active days</span><strong>{stats?.active_days ?? "—"}</strong><small>all time</small></div>
+        <div className="stat"><span>🏋️ Exercises logged</span><strong>{stats?.total_entries ?? "—"}</strong><small>entries</small></div>
       </section>
 
       <div className="wk-grid">
         <section className="panel">
-          <h2 className="section-title">Log an exercise</h2>
+          <h2 className="section-title">✍️ Log your workout</h2>
           <form className="form log-form" onSubmit={submit}>
-            <label>Date<input type="date" value={form.day} max={localDate()} onChange={set("day")} required /></label>
-            <label className="span-2">Exercise
-              <input list="exercise-names" value={form.exercise} onChange={set("exercise")} maxLength={80} required
-                     placeholder="e.g. Barbell Squat or Running" />
-            </label>
+            <label className="log-date">Date<input type="date" value={day} max={localDate()} onChange={(e) => setDay(e.target.value)} required /></label>
             <datalist id="exercise-names">{names.map((n) => <option key={n} value={n} />)}</datalist>
-            <label>Sets<input type="number" min="1" max="50" value={form.sets} onChange={set("sets")} /></label>
-            <label>Reps<input type="number" min="1" max="500" value={form.reps} onChange={set("reps")} /></label>
-            <label>Weight (kg)<input type="number" min="0" max="1000" step="0.5" value={form.weight_kg} onChange={set("weight_kg")} /></label>
-            <label>Minutes<input type="number" min="1" max="1440" value={form.minutes} onChange={set("minutes")} /></label>
-            <label className="span-2">Notes<input value={form.notes} onChange={set("notes")} maxLength={200} placeholder="Optional" /></label>
-            <div className="span-2 log-submit">
-              <button className="btn btn-primary" disabled={saving || !form.exercise.trim()}>{saving ? "Saving..." : "Log exercise"}</button>
+            <div className="log-rows">
+              {rows.map((r, i) => (
+                <fieldset key={r.key} className="log-row-input">
+                  <legend>Exercise {i + 1}</legend>
+                  <label className="lr-name">Exercise
+                    <input list="exercise-names" value={r.exercise} onChange={setRow(r.key, "exercise")} maxLength={80}
+                           placeholder="e.g. Barbell Squat or Running" aria-label={`Exercise ${i + 1}`} />
+                  </label>
+                  <label>Sets<input type="number" min="1" max="50" value={r.sets} onChange={setRow(r.key, "sets")} aria-label={`Sets ${i + 1}`} /></label>
+                  <label>Reps<input type="number" min="1" max="500" value={r.reps} onChange={setRow(r.key, "reps")} aria-label={`Reps ${i + 1}`} /></label>
+                  <label>Kg<input type="number" min="0" max="1000" step="0.5" value={r.weight_kg} onChange={setRow(r.key, "weight_kg")} aria-label={`Weight ${i + 1}`} /></label>
+                  <label>Min<input type="number" min="1" max="1440" value={r.minutes} onChange={setRow(r.key, "minutes")} aria-label={`Minutes ${i + 1}`} /></label>
+                  <button type="button" className="icon-btn lr-del" onClick={() => removeRow(r.key)} aria-label={`Remove exercise ${i + 1}`}>
+                    <IconX width={16} height={16} />
+                  </button>
+                </fieldset>
+              ))}
+            </div>
+            <button type="button" className="btn btn-ghost btn-sm add-row" onClick={addRow} disabled={rows.length >= MAX_ROWS}>
+              <IconPlus width={15} height={15} /> Add another exercise
+            </button>
+            <label>Notes<input value={notes} onChange={(e) => setNotes(e.target.value)} maxLength={200} placeholder="Optional - e.g. felt strong today 💯" /></label>
+            <div className="log-submit">
+              <button className="btn btn-primary" disabled={saving || !filled.length}>
+                {saving ? "Saving..." : filled.length > 1 ? `Log ${filled.length} exercises` : "Log workout"}
+              </button>
               {ok && <span className="form-ok">{ok}</span>}
             </div>
           </form>
         </section>
 
         <section className="panel">
-          <h2 className="section-title">Active days per week</h2>
+          <h2 className="section-title">📈 Active days per week</h2>
           {stats ? <WeekChart weeks={stats.weeks} /> : <p className="muted">Loading...</p>}
           {stats?.top_exercises?.length > 0 && (
             <>
-              <h3 className="sub-title">Most logged</h3>
+              <h3 className="sub-title">🏆 Most logged</h3>
               <ul className="top-list">
                 {stats.top_exercises.map((t) => (
                   <li key={t.exercise}>
@@ -167,10 +206,10 @@ export default function Workouts() {
       </div>
 
       <section>
-        <h2 className="section-title">Saved plans</h2>
+        <h2 className="section-title">📋 Saved plans</h2>
         {plans.length === 0 ? (
           <div className="empty-panel">
-            <p className="muted">No saved plans yet. Ask FitBot for a plan in chat and press <b>Save plan</b>.</p>
+            <p className="muted">No saved plans yet 🗒️ Ask FitBot for a plan in chat and press <b>Save plan</b>.</p>
             <button className="btn btn-ghost" onClick={() => navigate("/chat", { state: { prompt: "Give me a beginner 3-day gym workout" } })}>
               <IconChat /> Get a 3-day plan
             </button>
@@ -191,9 +230,9 @@ export default function Workouts() {
       </section>
 
       <section>
-        <h2 className="section-title">Recent activity</h2>
+        <h2 className="section-title">🕒 Recent activity</h2>
         {logs.length === 0 ? (
-          <p className="muted">Nothing logged yet. Use the form above, or press <b>Log … as done</b> on a saved plan.</p>
+          <p className="muted">Nothing logged yet 🐣 Use the form above, or press <b>Log … as done</b> on a saved plan.</p>
         ) : (
           <div className="log-days">
             {Object.entries(byDay).map(([day, items]) => (

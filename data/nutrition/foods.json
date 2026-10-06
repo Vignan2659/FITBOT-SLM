@@ -28,7 +28,17 @@
       "potassium_mg": 126.0,
       "calcium_mg": 50.0,
       "iron_mg": 1.19,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 373.0,
+      "mono_fat_g": 4.08,
+      "poly_fat_g": 1.41,
+      "magnesium_mg": 10.0,
+      "zinc_mg": 1.05,
+      "vitamin_a_ug": 149.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 2.2,
+      "vitamin_b12_ug": 1.11,
+      "water_g": 74.6
     },
     "portion": {
       "description": "1 large",
@@ -45,7 +55,17 @@
         "potassium_mg": 63.0,
         "calcium_mg": 25.0,
         "iron_mg": 0.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 186.5,
+        "mono_fat_g": 2.0,
+        "poly_fat_g": 0.7,
+        "magnesium_mg": 5.0,
+        "zinc_mg": 0.5,
+        "vitamin_a_ug": 74.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 1.1,
+        "vitamin_b12_ug": 0.6,
+        "water_g": 37.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -82,7 +102,17 @@
       "potassium_mg": 138.0,
       "calcium_mg": 56.0,
       "iron_mg": 1.75,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 372.0,
+      "mono_fat_g": 3.66,
+      "poly_fat_g": 1.91,
+      "magnesium_mg": 12.0,
+      "zinc_mg": 1.29,
+      "vitamin_a_ug": 160.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 2.0,
+      "vitamin_b12_ug": 0.89,
+      "water_g": 76.2
     },
     "portion": {
       "description": "1 large",
@@ -99,7 +129,17 @@
         "potassium_mg": 69.0,
         "calcium_mg": 28.0,
         "iron_mg": 0.9,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 186.0,
+        "mono_fat_g": 1.8,
+        "poly_fat_g": 1.0,
+        "magnesium_mg": 6.0,
+        "zinc_mg": 0.6,
+        "vitamin_a_ug": 80.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 1.0,
+        "vitamin_b12_ug": 0.4,
+        "water_g": 38.1
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -136,7 +176,17 @@
       "potassium_mg": 163.0,
       "calcium_mg": 7.0,
       "iron_mg": 0.08,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 11.0,
+      "zinc_mg": 0.03,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.09,
+      "water_g": 87.6
     },
     "portion": {
       "description": "1 large",
@@ -153,7 +203,17 @@
         "potassium_mg": 53.8,
         "calcium_mg": 2.3,
         "iron_mg": 0.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 3.6,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 28.9
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -191,7 +251,17 @@
       "potassium_mg": 256.0,
       "calcium_mg": 15.0,
       "iron_mg": 1.04,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 85.0,
+      "mono_fat_g": 1.24,
+      "poly_fat_g": 0.77,
+      "magnesium_mg": 29.0,
+      "zinc_mg": 1.0,
+      "vitamin_a_ug": 6.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.1,
+      "vitamin_b12_ug": 0.34,
+      "water_g": 65.3
     },
     "portion": {
       "description": "0.5 breast, bone and skin removed",
@@ -208,7 +278,17 @@
         "potassium_mg": 220.2,
         "calcium_mg": 12.9,
         "iron_mg": 0.9,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 73.1,
+        "mono_fat_g": 1.1,
+        "poly_fat_g": 0.7,
+        "magnesium_mg": 24.9,
+        "zinc_mg": 0.9,
+        "vitamin_a_ug": 5.2,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.1,
+        "vitamin_b12_ug": 0.3,
+        "water_g": 56.2
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -241,7 +321,17 @@
       "potassium_mg": 269.0,
       "calcium_mg": 9.0,
       "iron_mg": 1.13,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 133.0,
+      "mono_fat_g": 3.36,
+      "poly_fat_g": 1.7,
+      "magnesium_mg": 24.0,
+      "zinc_mg": 1.92,
+      "vitamin_a_ug": 8.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.2,
+      "vitamin_b12_ug": 0.42,
+      "water_g": 67.0
     },
     "portion": {
       "description": "1 thigh without skin",
@@ -258,7 +348,17 @@
         "potassium_mg": 312.0,
         "calcium_mg": 10.4,
         "iron_mg": 1.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 154.3,
+        "mono_fat_g": 3.9,
+        "poly_fat_g": 2.0,
+        "magnesium_mg": 27.8,
+        "zinc_mg": 2.2,
+        "vitamin_a_ug": 9.3,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.2,
+        "vitamin_b12_ug": 0.5,
+        "water_g": 77.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -294,7 +394,17 @@
       "potassium_mg": 294.0,
       "calcium_mg": 28.0,
       "iron_mg": 1.52,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 93.0,
+      "mono_fat_g": 3.46,
+      "poly_fat_g": 2.92,
+      "magnesium_mg": 30.0,
+      "zinc_mg": 3.11,
+      "vitamin_a_ug": 24.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.2,
+      "vitamin_b12_ug": 1.34,
+      "water_g": 62.1
     },
     "portion": {
       "description": "3 oz",
@@ -311,7 +421,17 @@
         "potassium_mg": 249.9,
         "calcium_mg": 23.8,
         "iron_mg": 1.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 79.0,
+        "mono_fat_g": 2.9,
+        "poly_fat_g": 2.5,
+        "magnesium_mg": 25.5,
+        "zinc_mg": 2.6,
+        "vitamin_a_ug": 20.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.2,
+        "vitamin_b12_ug": 1.1,
+        "water_g": 52.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -346,7 +466,17 @@
       "potassium_mg": 433.0,
       "calcium_mg": 16.0,
       "iron_mg": 3.08,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 89.0,
+      "mono_fat_g": 5.03,
+      "poly_fat_g": 0.43,
+      "magnesium_mg": 27.0,
+      "zinc_mg": 6.84,
+      "vitamin_a_ug": 3.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 2.8,
+      "water_g": 58.6
     },
     "portion": {
       "description": "3 oz",
@@ -363,7 +493,17 @@
         "potassium_mg": 368.1,
         "calcium_mg": 13.6,
         "iron_mg": 2.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 75.7,
+        "mono_fat_g": 4.3,
+        "poly_fat_g": 0.4,
+        "magnesium_mg": 22.9,
+        "zinc_mg": 5.8,
+        "vitamin_a_ug": 2.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 2.4,
+        "water_g": 49.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -400,7 +540,17 @@
       "potassium_mg": 393.0,
       "calcium_mg": 20.0,
       "iron_mg": 1.96,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 82.0,
+      "mono_fat_g": 2.31,
+      "poly_fat_g": 0.21,
+      "magnesium_mg": 26.0,
+      "zinc_mg": 5.71,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.1,
+      "vitamin_b12_ug": 1.71,
+      "water_g": 63.0
     },
     "portion": {
       "description": "3 oz",
@@ -417,7 +567,17 @@
         "potassium_mg": 334.1,
         "calcium_mg": 17.0,
         "iron_mg": 1.7,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 69.7,
+        "mono_fat_g": 2.0,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 22.1,
+        "zinc_mg": 4.9,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.1,
+        "vitamin_b12_ug": 1.5,
+        "water_g": 53.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -452,7 +612,17 @@
       "potassium_mg": 421.0,
       "calcium_mg": 6.0,
       "iron_mg": 1.15,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 73.0,
+      "mono_fat_g": 1.33,
+      "poly_fat_g": 0.51,
+      "magnesium_mg": 29.0,
+      "zinc_mg": 2.42,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.2,
+      "vitamin_b12_ug": 0.57,
+      "water_g": 69.4
     },
     "portion": {
       "description": "3 oz",
@@ -469,7 +639,17 @@
         "potassium_mg": 357.9,
         "calcium_mg": 5.1,
         "iron_mg": 1.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 62.0,
+        "mono_fat_g": 1.1,
+        "poly_fat_g": 0.4,
+        "magnesium_mg": 24.6,
+        "zinc_mg": 2.1,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.2,
+        "vitamin_b12_ug": 0.5,
+        "water_g": 59.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -506,7 +686,17 @@
       "potassium_mg": 384.0,
       "calcium_mg": 15.0,
       "iron_mg": 0.34,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 63.0,
+      "mono_fat_g": 4.18,
+      "poly_fat_g": 4.55,
+      "magnesium_mg": 30.0,
+      "zinc_mg": 0.43,
+      "vitamin_a_ug": 69.0,
+      "vitamin_c_mg": 3.7,
+      "vitamin_d_ug": 13.1,
+      "vitamin_b12_ug": 2.8,
+      "water_g": 64.8
     },
     "portion": {
       "description": "0.5 fillet",
@@ -523,7 +713,17 @@
         "potassium_mg": 683.5,
         "calcium_mg": 26.7,
         "iron_mg": 0.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 112.1,
+        "mono_fat_g": 7.4,
+        "poly_fat_g": 8.1,
+        "magnesium_mg": 53.4,
+        "zinc_mg": 0.8,
+        "vitamin_a_ug": 122.8,
+        "vitamin_c_mg": 6.6,
+        "vitamin_d_ug": 23.3,
+        "vitamin_b12_ug": 5.0,
+        "water_g": 115.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -560,7 +760,17 @@
       "potassium_mg": 237.0,
       "calcium_mg": 11.0,
       "iron_mg": 1.53,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": 30.0,
+      "mono_fat_g": 0.16,
+      "poly_fat_g": 0.34,
+      "magnesium_mg": 27.0,
+      "zinc_mg": 0.77,
+      "vitamin_a_ug": null,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": null,
+      "vitamin_b12_ug": 2.99,
+      "water_g": 75.2
     },
     "portion": {
       "description": "1 can",
@@ -577,7 +787,17 @@
         "potassium_mg": 391.1,
         "calcium_mg": 18.1,
         "iron_mg": 2.5,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": 49.5,
+        "mono_fat_g": 0.3,
+        "poly_fat_g": 0.6,
+        "magnesium_mg": 44.5,
+        "zinc_mg": 1.3,
+        "vitamin_a_ug": null,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": null,
+        "vitamin_b12_ug": 4.9,
+        "water_g": 124.1
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -613,7 +833,17 @@
       "potassium_mg": 244.0,
       "calcium_mg": 14.0,
       "iron_mg": 0.49,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 55.0,
+      "mono_fat_g": 0.12,
+      "poly_fat_g": 0.29,
+      "magnesium_mg": 42.0,
+      "zinc_mg": 0.58,
+      "vitamin_a_ug": 14.0,
+      "vitamin_c_mg": 1.0,
+      "vitamin_d_ug": 1.2,
+      "vitamin_b12_ug": 1.05,
+      "water_g": 75.9
     },
     "portion": {
       "description": "1 fillet",
@@ -630,7 +860,17 @@
         "potassium_mg": 439.2,
         "calcium_mg": 25.2,
         "iron_mg": 0.9,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 99.0,
+        "mono_fat_g": 0.2,
+        "poly_fat_g": 0.5,
+        "magnesium_mg": 75.6,
+        "zinc_mg": 1.0,
+        "vitamin_a_ug": 25.2,
+        "vitamin_c_mg": 1.8,
+        "vitamin_d_ug": 2.2,
+        "vitamin_b12_ug": 1.9,
+        "water_g": 136.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -665,7 +905,17 @@
       "potassium_mg": 380.0,
       "calcium_mg": 14.0,
       "iron_mg": 0.69,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 57.0,
+      "mono_fat_g": 0.95,
+      "poly_fat_g": 0.6,
+      "magnesium_mg": 34.0,
+      "zinc_mg": 0.41,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 3.7,
+      "vitamin_b12_ug": 1.86,
+      "water_g": 71.6
     },
     "portion": {
       "description": "1 fillet",
@@ -682,7 +932,17 @@
         "potassium_mg": 330.6,
         "calcium_mg": 12.2,
         "iron_mg": 0.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 49.6,
+        "mono_fat_g": 0.8,
+        "poly_fat_g": 0.5,
+        "magnesium_mg": 29.6,
+        "zinc_mg": 0.4,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 3.2,
+        "vitamin_b12_ug": 1.6,
+        "water_g": 62.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -718,7 +978,17 @@
       "potassium_mg": 397.0,
       "calcium_mg": 382.0,
       "iron_mg": 2.92,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 142.0,
+      "mono_fat_g": 3.87,
+      "poly_fat_g": 5.15,
+      "magnesium_mg": 39.0,
+      "zinc_mg": 1.31,
+      "vitamin_a_ug": 32.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 4.8,
+      "vitamin_b12_ug": 8.94,
+      "water_g": 59.6
     },
     "portion": {
       "description": "1 can (3.75 oz)",
@@ -735,7 +1005,17 @@
         "potassium_mg": 365.2,
         "calcium_mg": 351.4,
         "iron_mg": 2.7,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 130.6,
+        "mono_fat_g": 3.6,
+        "poly_fat_g": 4.7,
+        "magnesium_mg": 35.9,
+        "zinc_mg": 1.2,
+        "vitamin_a_ug": 29.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 4.4,
+        "vitamin_b12_ug": 8.2,
+        "water_g": 54.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -772,7 +1052,17 @@
       "potassium_mg": 170.0,
       "calcium_mg": 91.0,
       "iron_mg": 0.32,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 211.0,
+      "mono_fat_g": 0.36,
+      "poly_fat_g": 0.59,
+      "magnesium_mg": 37.0,
+      "zinc_mg": 1.63,
+      "vitamin_a_ug": 90.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.1,
+      "vitamin_b12_ug": 1.66,
+      "water_g": 71.6
     },
     "portion": {
       "description": "3 oz",
@@ -789,7 +1079,17 @@
         "potassium_mg": 144.5,
         "calcium_mg": 77.3,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 179.3,
+        "mono_fat_g": 0.3,
+        "poly_fat_g": 0.5,
+        "magnesium_mg": 31.4,
+        "zinc_mg": 1.4,
+        "vitamin_a_ug": 76.5,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.1,
+        "vitamin_b12_ug": 1.4,
+        "water_g": 60.9
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -828,7 +1128,17 @@
       "potassium_mg": 500.0,
       "calcium_mg": 469.0,
       "iron_mg": 1.13,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 16.0,
+      "mono_fat_g": 0.16,
+      "poly_fat_g": 0.3,
+      "magnesium_mg": 195.0,
+      "zinc_mg": 6.18,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 2.45,
+      "water_g": 3.44
     },
     "portion": {
       "description": "0.33 cup",
@@ -845,7 +1155,17 @@
         "potassium_mg": 160.0,
         "calcium_mg": 150.1,
         "iron_mg": 0.4,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 5.1,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 62.4,
+        "zinc_mg": 2.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.8,
+        "water_g": 1.1
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -881,7 +1201,17 @@
       "potassium_mg": 148.0,
       "calcium_mg": 201.0,
       "iron_mg": 1.61,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 1.13,
+      "poly_fat_g": 1.65,
+      "magnesium_mg": 37.0,
+      "zinc_mg": 0.83,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.2,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 82.9
     },
     "portion": {
       "description": "0.5 cup",
@@ -898,7 +1228,17 @@
         "potassium_mg": 186.5,
         "calcium_mg": 253.3,
         "iron_mg": 2.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 1.4,
+        "poly_fat_g": 2.1,
+        "magnesium_mg": 46.6,
+        "zinc_mg": 1.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.3,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 104.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -934,7 +1274,17 @@
       "potassium_mg": 412.0,
       "calcium_mg": 111.0,
       "iron_mg": 2.7,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 3.2,
+      "poly_fat_g": 4.3,
+      "magnesium_mg": 81.0,
+      "zinc_mg": 1.14,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.08,
+      "water_g": 59.6
     },
     "portion": {
       "description": "1 cup",
@@ -951,7 +1301,17 @@
         "potassium_mg": 683.9,
         "calcium_mg": 184.3,
         "iron_mg": 4.5,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 5.3,
+        "poly_fat_g": 7.1,
+        "magnesium_mg": 134.5,
+        "zinc_mg": 1.9,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.1,
+        "water_g": 98.9
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -991,7 +1351,17 @@
       "potassium_mg": 369.0,
       "calcium_mg": 19.0,
       "iron_mg": 3.33,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.06,
+      "poly_fat_g": 0.17,
+      "magnesium_mg": 36.0,
+      "zinc_mg": 1.27,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 1.5,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 69.6
     },
     "portion": {
       "description": "1 cup",
@@ -1008,7 +1378,17 @@
         "potassium_mg": 730.6,
         "calcium_mg": 37.6,
         "iron_mg": 6.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.3,
+        "magnesium_mg": 71.3,
+        "zinc_mg": 2.5,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 3.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 137.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1048,7 +1428,17 @@
       "potassium_mg": 291.0,
       "calcium_mg": 49.0,
       "iron_mg": 2.89,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.58,
+      "poly_fat_g": 1.16,
+      "magnesium_mg": 48.0,
+      "zinc_mg": 1.53,
+      "vitamin_a_ug": 1.0,
+      "vitamin_c_mg": 1.3,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 60.2
     },
     "portion": {
       "description": "1 cup",
@@ -1065,7 +1455,17 @@
         "potassium_mg": 477.2,
         "calcium_mg": 80.4,
         "iron_mg": 4.7,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 1.0,
+        "poly_fat_g": 1.9,
+        "magnesium_mg": 78.7,
+        "zinc_mg": 2.5,
+        "vitamin_a_ug": 1.6,
+        "vitamin_c_mg": 2.1,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 98.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1104,7 +1504,17 @@
       "potassium_mg": 355.0,
       "calcium_mg": 27.0,
       "iron_mg": 2.1,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.05,
+      "poly_fat_g": 0.23,
+      "magnesium_mg": 70.0,
+      "zinc_mg": 1.12,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 65.7
     },
     "portion": {
       "description": "1 cup",
@@ -1121,7 +1531,17 @@
         "potassium_mg": 610.6,
         "calcium_mg": 46.4,
         "iron_mg": 3.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.4,
+        "magnesium_mg": 120.4,
+        "zinc_mg": 1.9,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 113.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1160,7 +1580,17 @@
       "potassium_mg": 405.0,
       "calcium_mg": 35.0,
       "iron_mg": 2.22,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.04,
+      "poly_fat_g": 0.28,
+      "magnesium_mg": 42.0,
+      "zinc_mg": 1.0,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 1.2,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 66.9
     },
     "portion": {
       "description": "1 cup",
@@ -1177,7 +1607,17 @@
         "potassium_mg": 716.9,
         "calcium_mg": 62.0,
         "iron_mg": 3.9,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.5,
+        "magnesium_mg": 74.3,
+        "zinc_mg": 1.8,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 2.1,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 118.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1215,7 +1655,17 @@
       "potassium_mg": 436.0,
       "calcium_mg": 46.0,
       "iron_mg": 2.09,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.13,
+      "poly_fat_g": 0.23,
+      "magnesium_mg": 50.0,
+      "zinc_mg": 0.98,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.8,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 63.0
     },
     "portion": {
       "description": "1 cup",
@@ -1232,7 +1682,17 @@
         "potassium_mg": 745.6,
         "calcium_mg": 78.7,
         "iron_mg": 3.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.2,
+        "poly_fat_g": 0.4,
+        "magnesium_mg": 85.5,
+        "zinc_mg": 1.7,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 1.4,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 107.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1270,7 +1730,17 @@
       "potassium_mg": 436.0,
       "calcium_mg": 63.0,
       "iron_mg": 2.27,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 1.28,
+      "poly_fat_g": 2.16,
+      "magnesium_mg": 64.0,
+      "zinc_mg": 1.37,
+      "vitamin_a_ug": 15.0,
+      "vitamin_c_mg": 6.1,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 72.8
     },
     "portion": {
       "description": "1 cup",
@@ -1287,7 +1757,17 @@
         "potassium_mg": 675.8,
         "calcium_mg": 97.7,
         "iron_mg": 3.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 2.0,
+        "poly_fat_g": 3.3,
+        "magnesium_mg": 99.2,
+        "zinc_mg": 2.1,
+        "vitamin_a_ug": 23.2,
+        "vitamin_c_mg": 9.5,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 112.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1324,7 +1804,17 @@
       "potassium_mg": 312.0,
       "calcium_mg": 47.0,
       "iron_mg": 2.54,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 5.34,
+      "poly_fat_g": 8.81,
+      "magnesium_mg": 75.0,
+      "zinc_mg": 1.44,
+      "vitamin_a_ug": 1.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 57.4
     },
     "portion": {
       "description": "1 tbsp",
@@ -1341,7 +1831,17 @@
         "potassium_mg": 46.8,
         "calcium_mg": 7.0,
         "iron_mg": 0.4,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.8,
+        "poly_fat_g": 1.3,
+        "magnesium_mg": 11.2,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 0.1,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 8.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1381,7 +1881,17 @@
       "potassium_mg": 141.0,
       "calcium_mg": 110.0,
       "iron_mg": 0.07,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 5.0,
+      "mono_fat_g": 0.05,
+      "poly_fat_g": 0.01,
+      "magnesium_mg": 11.0,
+      "zinc_mg": 0.52,
+      "vitamin_a_ug": 1.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.75,
+      "water_g": 85.1
     },
     "portion": {
       "description": "1 container",
@@ -1398,7 +1908,17 @@
         "potassium_mg": 239.7,
         "calcium_mg": 187.0,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 8.5,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 18.7,
+        "zinc_mg": 0.9,
+        "vitamin_a_ug": 1.7,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 1.3,
+        "water_g": 144.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1434,7 +1954,17 @@
       "potassium_mg": 141.0,
       "calcium_mg": 100.0,
       "iron_mg": 0.0,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 13.0,
+      "mono_fat_g": 2.14,
+      "poly_fat_g": 0.47,
+      "magnesium_mg": 11.0,
+      "zinc_mg": 0.52,
+      "vitamin_a_ug": 2.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.75,
+      "water_g": 81.3
     },
     "portion": null,
     "highlights": [
@@ -1471,7 +2001,17 @@
       "potassium_mg": 234.0,
       "calcium_mg": 183.0,
       "iron_mg": 0.08,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 6.0,
+      "mono_fat_g": 0.43,
+      "poly_fat_g": 0.04,
+      "magnesium_mg": 17.0,
+      "zinc_mg": 0.89,
+      "vitamin_a_ug": 14.0,
+      "vitamin_c_mg": 0.8,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.56,
+      "water_g": 85.1
     },
     "portion": {
       "description": "1 cup (8 fl oz)",
@@ -1488,7 +2028,17 @@
         "potassium_mg": 573.3,
         "calcium_mg": 448.4,
         "iron_mg": 0.2,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 14.7,
+        "mono_fat_g": 1.1,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 41.6,
+        "zinc_mg": 2.2,
+        "vitamin_a_ug": 34.3,
+        "vitamin_c_mg": 2.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 1.4,
+        "water_g": 208.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1525,7 +2075,17 @@
       "potassium_mg": 140.0,
       "calcium_mg": 120.0,
       "iron_mg": 0.02,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 8.0,
+      "mono_fat_g": 0.56,
+      "poly_fat_g": 0.07,
+      "magnesium_mg": 11.0,
+      "zinc_mg": 0.48,
+      "vitamin_a_ug": 55.0,
+      "vitamin_c_mg": 0.2,
+      "vitamin_d_ug": 1.2,
+      "vitamin_b12_ug": 0.53,
+      "water_g": 89.2
     },
     "portion": {
       "description": "1 cup",
@@ -1542,7 +2102,17 @@
         "potassium_mg": 341.6,
         "calcium_mg": 292.8,
         "iron_mg": 0.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 19.5,
+        "mono_fat_g": 1.4,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 26.8,
+        "zinc_mg": 1.2,
+        "vitamin_a_ug": 134.2,
+        "vitamin_c_mg": 0.5,
+        "vitamin_d_ug": 2.9,
+        "vitamin_b12_ug": 1.3,
+        "water_g": 217.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1576,7 +2146,17 @@
       "potassium_mg": 132.0,
       "calcium_mg": 113.0,
       "iron_mg": 0.03,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 10.0,
+      "mono_fat_g": 0.81,
+      "poly_fat_g": 0.2,
+      "magnesium_mg": 10.0,
+      "zinc_mg": 0.37,
+      "vitamin_a_ug": 46.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 1.3,
+      "vitamin_b12_ug": 0.45,
+      "water_g": 88.1
     },
     "portion": {
       "description": "1 cup",
@@ -1593,7 +2173,17 @@
         "potassium_mg": 322.1,
         "calcium_mg": 275.7,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 24.4,
+        "mono_fat_g": 2.0,
+        "poly_fat_g": 0.5,
+        "magnesium_mg": 24.4,
+        "zinc_mg": 0.9,
+        "vitamin_a_ug": 112.2,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 3.2,
+        "vitamin_b12_ug": 1.1,
+        "water_g": 215.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1628,7 +2218,17 @@
       "potassium_mg": 156.0,
       "calcium_mg": 122.0,
       "iron_mg": 0.03,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 2.0,
+      "mono_fat_g": 0.02,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 11.0,
+      "zinc_mg": 0.42,
+      "vitamin_a_ug": 61.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 1.2,
+      "vitamin_b12_ug": 0.5,
+      "water_g": 90.8
     },
     "portion": {
       "description": "1 cup",
@@ -1645,7 +2245,17 @@
         "potassium_mg": 382.2,
         "calcium_mg": 298.9,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 4.9,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 26.9,
+        "zinc_mg": 1.0,
+        "vitamin_a_ug": 149.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 2.9,
+        "vitamin_b12_ug": 1.2,
+        "water_g": 222.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1679,7 +2289,17 @@
       "potassium_mg": 172.0,
       "calcium_mg": 129.0,
       "iron_mg": 0.23,
-      "caffeine_mg": 1.0
+      "caffeine_mg": 1.0,
+      "cholesterol_mg": 5.0,
+      "mono_fat_g": 0.3,
+      "poly_fat_g": 0.05,
+      "magnesium_mg": 13.0,
+      "zinc_mg": 0.43,
+      "vitamin_a_ug": 52.0,
+      "vitamin_c_mg": 0.4,
+      "vitamin_d_ug": 1.1,
+      "vitamin_b12_ug": 0.23,
+      "water_g": 84.5
     },
     "portion": {
       "description": "1 cup",
@@ -1696,7 +2316,17 @@
         "potassium_mg": 430.0,
         "calcium_mg": 322.5,
         "iron_mg": 0.6,
-        "caffeine_mg": 2.5
+        "caffeine_mg": 2.5,
+        "cholesterol_mg": 12.5,
+        "mono_fat_g": 0.8,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 32.5,
+        "zinc_mg": 1.1,
+        "vitamin_a_ug": 130.0,
+        "vitamin_c_mg": 1.0,
+        "vitamin_d_ug": 2.8,
+        "vitamin_b12_ug": 0.6,
+        "water_g": 211.2
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1732,7 +2362,17 @@
       "potassium_mg": 125.0,
       "calcium_mg": 111.0,
       "iron_mg": 0.13,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 12.0,
+      "mono_fat_g": 0.52,
+      "poly_fat_g": 0.08,
+      "magnesium_mg": 9.0,
+      "zinc_mg": 0.51,
+      "vitamin_a_ug": 68.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.47,
+      "water_g": 81.2
     },
     "portion": {
       "description": "1 cup (not packed)",
@@ -1749,7 +2389,17 @@
         "potassium_mg": 282.5,
         "calcium_mg": 250.9,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 27.1,
+        "mono_fat_g": 1.2,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 20.3,
+        "zinc_mg": 1.2,
+        "vitamin_a_ug": 153.7,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 1.1,
+        "water_g": 183.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1785,7 +2435,17 @@
       "potassium_mg": 76.0,
       "calcium_mg": 710.0,
       "iron_mg": 0.14,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 99.0,
+      "mono_fat_g": 9.39,
+      "poly_fat_g": 0.94,
+      "magnesium_mg": 27.0,
+      "zinc_mg": 3.64,
+      "vitamin_a_ug": 337.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.6,
+      "vitamin_b12_ug": 1.1,
+      "water_g": 36.8
     },
     "portion": {
       "description": "1 slice (1 oz)",
@@ -1802,7 +2462,17 @@
         "potassium_mg": 21.3,
         "calcium_mg": 198.8,
         "iron_mg": 0.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 27.7,
+        "mono_fat_g": 2.6,
+        "poly_fat_g": 0.3,
+        "magnesium_mg": 7.6,
+        "zinc_mg": 1.0,
+        "vitamin_a_ug": 94.4,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.2,
+        "vitamin_b12_ug": 0.3,
+        "water_g": 10.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1839,7 +2509,17 @@
       "potassium_mg": 84.0,
       "calcium_mg": 782.0,
       "iron_mg": 0.22,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 64.0,
+      "mono_fat_g": 4.51,
+      "poly_fat_g": 0.47,
+      "magnesium_mg": 23.0,
+      "zinc_mg": 2.76,
+      "vitamin_a_ug": 127.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.3,
+      "vitamin_b12_ug": 0.82,
+      "water_g": 53.8
     },
     "portion": {
       "description": "1 oz",
@@ -1856,7 +2536,17 @@
         "potassium_mg": 23.8,
         "calcium_mg": 221.7,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 18.1,
+        "mono_fat_g": 1.3,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 6.5,
+        "zinc_mg": 0.8,
+        "vitamin_a_ug": 36.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.1,
+        "vitamin_b12_ug": 0.2,
+        "water_g": 15.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1895,7 +2585,17 @@
       "potassium_mg": 122.0,
       "calcium_mg": 123.0,
       "iron_mg": 0.42,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.38,
+      "poly_fat_g": 0.86,
+      "magnesium_mg": 15.0,
+      "zinc_mg": 0.26,
+      "vitamin_a_ug": 55.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 1.1,
+      "vitamin_b12_ug": 0.85,
+      "water_g": 90.4
     },
     "portion": {
       "description": "1 cup",
@@ -1912,7 +2612,17 @@
         "potassium_mg": 296.5,
         "calcium_mg": 298.9,
         "iron_mg": 1.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.9,
+        "poly_fat_g": 2.1,
+        "magnesium_mg": 36.5,
+        "zinc_mg": 0.6,
+        "vitamin_a_ug": 133.7,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 2.7,
+        "vitamin_b12_ug": 2.1,
+        "water_g": 219.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -1946,7 +2656,17 @@
       "potassium_mg": 67.0,
       "calcium_mg": 184.0,
       "iron_mg": 0.28,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.59,
+      "poly_fat_g": 0.24,
+      "magnesium_mg": 6.0,
+      "zinc_mg": 0.06,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 1.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 96.5
     },
     "portion": {
       "description": "1 cup",
@@ -1963,7 +2683,17 @@
         "potassium_mg": 175.5,
         "calcium_mg": 482.1,
         "iron_mg": 0.7,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 1.5,
+        "poly_fat_g": 0.6,
+        "magnesium_mg": 15.7,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 2.6,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 252.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2003,7 +2733,17 @@
       "potassium_mg": 429.0,
       "calcium_mg": 54.0,
       "iron_mg": 4.72,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 2.18,
+      "poly_fat_g": 2.54,
+      "magnesium_mg": 177.0,
+      "zinc_mg": 3.97,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 8.22
     },
     "portion": {
       "description": "1 cup",
@@ -2020,7 +2760,17 @@
         "potassium_mg": 669.2,
         "calcium_mg": 84.2,
         "iron_mg": 7.4,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 3.4,
+        "poly_fat_g": 4.0,
+        "magnesium_mg": 276.1,
+        "zinc_mg": 6.2,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 12.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2059,7 +2809,17 @@
       "potassium_mg": 35.0,
       "calcium_mg": 10.0,
       "iron_mg": 1.2,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.09,
+      "poly_fat_g": 0.08,
+      "magnesium_mg": 12.0,
+      "zinc_mg": 0.49,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 68.4
     },
     "portion": {
       "description": "1 cup",
@@ -2076,7 +2836,17 @@
         "potassium_mg": 55.3,
         "calcium_mg": 15.8,
         "iron_mg": 1.9,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 19.0,
+        "zinc_mg": 0.8,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 108.1
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2111,7 +2881,17 @@
       "potassium_mg": 86.0,
       "calcium_mg": 3.0,
       "iron_mg": 0.56,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.37,
+      "poly_fat_g": 0.37,
+      "magnesium_mg": 39.0,
+      "zinc_mg": 0.71,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 70.3
     },
     "portion": {
       "description": "1 cup",
@@ -2128,7 +2908,17 @@
         "potassium_mg": 173.7,
         "calcium_mg": 6.1,
         "iron_mg": 1.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.7,
+        "poly_fat_g": 0.7,
+        "magnesium_mg": 78.8,
+        "zinc_mg": 1.4,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 142.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2162,7 +2952,17 @@
       "potassium_mg": 172.0,
       "calcium_mg": 17.0,
       "iron_mg": 1.49,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.53,
+      "poly_fat_g": 1.08,
+      "magnesium_mg": 64.0,
+      "zinc_mg": 1.09,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 71.6
     },
     "portion": {
       "description": "1 cup",
@@ -2179,7 +2979,17 @@
         "potassium_mg": 318.2,
         "calcium_mg": 31.4,
         "iron_mg": 2.8,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 1.0,
+        "poly_fat_g": 2.0,
+        "magnesium_mg": 118.4,
+        "zinc_mg": 2.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 132.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2215,7 +3025,17 @@
       "potassium_mg": 254.0,
       "calcium_mg": 161.0,
       "iron_mg": 2.47,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.62,
+      "poly_fat_g": 1.59,
+      "magnesium_mg": 75.0,
+      "zinc_mg": 1.77,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 39.0
     },
     "portion": {
       "description": "1 slice",
@@ -2232,7 +3052,17 @@
         "potassium_mg": 81.3,
         "calcium_mg": 51.5,
         "iron_mg": 0.8,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.2,
+        "poly_fat_g": 0.5,
+        "magnesium_mg": 24.0,
+        "zinc_mg": 0.6,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 12.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2268,7 +3098,17 @@
       "potassium_mg": 126.0,
       "calcium_mg": 144.0,
       "iron_mg": 3.61,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.6,
+      "poly_fat_g": 1.6,
+      "magnesium_mg": 23.0,
+      "zinc_mg": 0.74,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 36.4
     },
     "portion": {
       "description": "1 slice",
@@ -2285,7 +3125,17 @@
         "potassium_mg": 36.5,
         "calcium_mg": 41.8,
         "iron_mg": 1.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.2,
+        "poly_fat_g": 0.5,
+        "magnesium_mg": 6.7,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 10.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2321,7 +3171,17 @@
       "potassium_mg": 44.0,
       "calcium_mg": 7.0,
       "iron_mg": 1.28,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.13,
+      "poly_fat_g": 0.33,
+      "magnesium_mg": 18.0,
+      "zinc_mg": 0.51,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 62.1
     },
     "portion": {
       "description": "1 cup spaghetti not packed",
@@ -2338,7 +3198,17 @@
         "potassium_mg": 54.6,
         "calcium_mg": 8.7,
         "iron_mg": 1.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.2,
+        "poly_fat_g": 0.4,
+        "magnesium_mg": 22.3,
+        "zinc_mg": 0.6,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 77.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2372,7 +3242,17 @@
       "potassium_mg": 58.0,
       "calcium_mg": 8.0,
       "iron_mg": 0.38,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.02,
+      "poly_fat_g": 0.06,
+      "magnesium_mg": 8.0,
+      "zinc_mg": 0.26,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 72.6
     },
     "portion": {
       "description": "1 cup, cooked",
@@ -2389,7 +3269,17 @@
         "potassium_mg": 91.1,
         "calcium_mg": 12.6,
         "iron_mg": 0.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 12.6,
+        "zinc_mg": 0.4,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 114.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2423,7 +3313,17 @@
       "potassium_mg": 101.0,
       "calcium_mg": 18.0,
       "iron_mg": 3.56,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.13,
+      "poly_fat_g": 0.7,
+      "magnesium_mg": 29.0,
+      "zinc_mg": 0.88,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": null,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 32.6
     },
     "portion": {
       "description": "1 mini bagel (2-1/2\" dia)",
@@ -2440,7 +3340,17 @@
         "potassium_mg": 26.3,
         "calcium_mg": 4.7,
         "iron_mg": 0.9,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 7.5,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": null,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 8.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2476,7 +3386,17 @@
       "potassium_mg": 262.0,
       "calcium_mg": 244.0,
       "iron_mg": 2.63,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 3.06,
+      "poly_fat_g": 0.99,
+      "magnesium_mg": 85.0,
+      "zinc_mg": 1.92,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 30.2
     },
     "portion": {
       "description": "1 tortilla 1 serving",
@@ -2493,7 +3413,17 @@
         "potassium_mg": 107.4,
         "calcium_mg": 100.0,
         "iron_mg": 1.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 1.3,
+        "poly_fat_g": 0.4,
+        "magnesium_mg": 34.9,
+        "zinc_mg": 0.8,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 12.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2533,7 +3463,17 @@
       "potassium_mg": 535.0,
       "calcium_mg": 15.0,
       "iron_mg": 1.08,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.06,
+      "magnesium_mg": 28.0,
+      "zinc_mg": 0.36,
+      "vitamin_a_ug": 1.0,
+      "vitamin_c_mg": 9.6,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 74.9
     },
     "portion": {
       "description": "1 potato medium",
@@ -2550,7 +3490,17 @@
         "potassium_mg": 925.5,
         "calcium_mg": 25.9,
         "iron_mg": 1.9,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 48.4,
+        "zinc_mg": 0.6,
+        "vitamin_a_ug": 1.7,
+        "vitamin_c_mg": 16.6,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 129.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2586,7 +3536,17 @@
       "potassium_mg": 475.0,
       "calcium_mg": 38.0,
       "iron_mg": 0.69,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.09,
+      "magnesium_mg": 27.0,
+      "zinc_mg": 0.32,
+      "vitamin_a_ug": 961.0,
+      "vitamin_c_mg": 19.6,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 75.8
     },
     "portion": {
       "description": "1 medium (2\" dia, 5\" long, raw)",
@@ -2603,7 +3563,17 @@
         "potassium_mg": 541.5,
         "calcium_mg": 43.3,
         "iron_mg": 0.8,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 30.8,
+        "zinc_mg": 0.4,
+        "vitamin_a_ug": 1095.5,
+        "vitamin_c_mg": 22.3,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 86.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2638,7 +3608,17 @@
       "potassium_mg": 218.0,
       "calcium_mg": 3.0,
       "iron_mg": 0.45,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.37,
+      "poly_fat_g": 0.6,
+      "magnesium_mg": 26.0,
+      "zinc_mg": 0.62,
+      "vitamin_a_ug": 13.0,
+      "vitamin_c_mg": 5.5,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 73.4
     },
     "portion": {
       "description": "1 cup cut",
@@ -2655,7 +3635,17 @@
         "potassium_mg": 324.8,
         "calcium_mg": 4.5,
         "iron_mg": 0.7,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.6,
+        "poly_fat_g": 0.9,
+        "magnesium_mg": 38.7,
+        "zinc_mg": 0.9,
+        "vitamin_a_ug": 19.4,
+        "vitamin_c_mg": 8.2,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 109.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2691,7 +3681,17 @@
       "potassium_mg": 329.0,
       "calcium_mg": 7.0,
       "iron_mg": 3.19,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.95,
+      "poly_fat_g": 2.32,
+      "magnesium_mg": 144.0,
+      "zinc_mg": 3.08,
+      "vitamin_a_ug": 10.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 3.32
     },
     "portion": {
       "description": "1 cup",
@@ -2708,7 +3708,17 @@
         "potassium_mg": 26.3,
         "calcium_mg": 0.6,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 11.5,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 0.8,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 0.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2747,7 +3757,17 @@
       "potassium_mg": 294.0,
       "calcium_mg": 21.0,
       "iron_mg": 1.96,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 1.16,
+      "poly_fat_g": 1.44,
+      "magnesium_mg": 137.0,
+      "zinc_mg": 2.53,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": null,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 6.3
     },
     "portion": {
       "description": "1 cake",
@@ -2764,7 +3784,17 @@
         "potassium_mg": 26.5,
         "calcium_mg": 1.9,
         "iron_mg": 0.2,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 12.3,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": null,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 0.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2801,7 +3831,17 @@
       "potassium_mg": 358.0,
       "calcium_mg": 5.0,
       "iron_mg": 0.26,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.03,
+      "poly_fat_g": 0.07,
+      "magnesium_mg": 27.0,
+      "zinc_mg": 0.15,
+      "vitamin_a_ug": 3.0,
+      "vitamin_c_mg": 8.7,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 74.9
     },
     "portion": {
       "description": "1 medium (7\" to 7-7/8\" long)",
@@ -2818,7 +3858,17 @@
         "potassium_mg": 422.4,
         "calcium_mg": 5.9,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 31.9,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 3.5,
+        "vitamin_c_mg": 10.3,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 88.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2854,7 +3904,17 @@
       "potassium_mg": 107.0,
       "calcium_mg": 6.0,
       "iron_mg": 0.12,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.05,
+      "magnesium_mg": 5.0,
+      "zinc_mg": 0.04,
+      "vitamin_a_ug": 3.0,
+      "vitamin_c_mg": 4.6,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 85.6
     },
     "portion": {
       "description": "1 medium (3\" dia)",
@@ -2871,7 +3931,17 @@
         "potassium_mg": 194.7,
         "calcium_mg": 10.9,
         "iron_mg": 0.2,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 9.1,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 5.5,
+        "vitamin_c_mg": 8.4,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 155.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2907,7 +3977,17 @@
       "potassium_mg": 181.0,
       "calcium_mg": 40.0,
       "iron_mg": 0.1,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.02,
+      "poly_fat_g": 0.03,
+      "magnesium_mg": 10.0,
+      "zinc_mg": 0.07,
+      "vitamin_a_ug": 11.0,
+      "vitamin_c_mg": 53.2,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 86.8
     },
     "portion": {
       "description": "1 fruit (2-5/8\" dia)",
@@ -2924,7 +4004,17 @@
         "potassium_mg": 237.1,
         "calcium_mg": 52.4,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 13.1,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 14.4,
+        "vitamin_c_mg": 69.7,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 113.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -2960,7 +4050,17 @@
       "potassium_mg": 77.0,
       "calcium_mg": 6.0,
       "iron_mg": 0.28,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.05,
+      "poly_fat_g": 0.15,
+      "magnesium_mg": 6.0,
+      "zinc_mg": 0.16,
+      "vitamin_a_ug": 3.0,
+      "vitamin_c_mg": 9.7,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 84.2
     },
     "portion": {
       "description": "1 cup",
@@ -2977,7 +4077,17 @@
         "potassium_mg": 114.0,
         "calcium_mg": 8.9,
         "iron_mg": 0.4,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 8.9,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 4.4,
+        "vitamin_c_mg": 14.4,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 124.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3012,7 +4122,17 @@
       "potassium_mg": 153.0,
       "calcium_mg": 16.0,
       "iron_mg": 0.41,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.04,
+      "poly_fat_g": 0.15,
+      "magnesium_mg": 13.0,
+      "zinc_mg": 0.14,
+      "vitamin_a_ug": 1.0,
+      "vitamin_c_mg": 58.8,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 91.0
     },
     "portion": {
       "description": "1 cup, halves",
@@ -3029,7 +4149,17 @@
         "potassium_mg": 232.6,
         "calcium_mg": 24.3,
         "iron_mg": 0.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 19.8,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 1.5,
+        "vitamin_c_mg": 89.4,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 138.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3064,7 +4194,17 @@
       "potassium_mg": 191.0,
       "calcium_mg": 10.0,
       "iron_mg": 0.36,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.05,
+      "magnesium_mg": 7.0,
+      "zinc_mg": 0.07,
+      "vitamin_a_ug": 3.0,
+      "vitamin_c_mg": 3.2,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 80.5
     },
     "portion": {
       "description": "1 cup",
@@ -3081,7 +4221,17 @@
         "potassium_mg": 288.4,
         "calcium_mg": 15.1,
         "iron_mg": 0.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 10.6,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 4.5,
+        "vitamin_c_mg": 4.8,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 121.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3116,7 +4266,17 @@
       "potassium_mg": 168.0,
       "calcium_mg": 11.0,
       "iron_mg": 0.16,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.14,
+      "poly_fat_g": 0.07,
+      "magnesium_mg": 10.0,
+      "zinc_mg": 0.09,
+      "vitamin_a_ug": 54.0,
+      "vitamin_c_mg": 36.4,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 83.5
     },
     "portion": {
       "description": "1 cup pieces",
@@ -3133,7 +4293,17 @@
         "potassium_mg": 277.2,
         "calcium_mg": 18.1,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.2,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 16.5,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 89.1,
+        "vitamin_c_mg": 60.1,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 137.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3167,7 +4337,17 @@
       "potassium_mg": 109.0,
       "calcium_mg": 13.0,
       "iron_mg": 0.29,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.04,
+      "magnesium_mg": 12.0,
+      "zinc_mg": 0.12,
+      "vitamin_a_ug": 3.0,
+      "vitamin_c_mg": 47.8,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 86.0
     },
     "portion": {
       "description": "1 cup, chunks",
@@ -3184,7 +4364,17 @@
         "potassium_mg": 179.8,
         "calcium_mg": 21.4,
         "iron_mg": 0.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 19.8,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 5.0,
+        "vitamin_c_mg": 78.9,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 141.9
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3219,7 +4409,17 @@
       "potassium_mg": 112.0,
       "calcium_mg": 7.0,
       "iron_mg": 0.24,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.04,
+      "poly_fat_g": 0.05,
+      "magnesium_mg": 10.0,
+      "zinc_mg": 0.1,
+      "vitamin_a_ug": 28.0,
+      "vitamin_c_mg": 8.1,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 91.4
     },
     "portion": {
       "description": "1 cup, balls",
@@ -3236,7 +4436,17 @@
         "potassium_mg": 172.5,
         "calcium_mg": 10.8,
         "iron_mg": 0.4,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 15.4,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 43.1,
+        "vitamin_c_mg": 12.5,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 140.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3272,7 +4482,17 @@
       "potassium_mg": 101.0,
       "calcium_mg": 9.0,
       "iron_mg": 0.19,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": null,
+      "mono_fat_g": null,
+      "poly_fat_g": null,
+      "magnesium_mg": 6.0,
+      "zinc_mg": 0.08,
+      "vitamin_a_ug": 1.0,
+      "vitamin_c_mg": 4.4,
+      "vitamin_d_ug": null,
+      "vitamin_b12_ug": null,
+      "water_g": 84.1
     },
     "portion": {
       "description": "1 medium",
@@ -3289,7 +4509,17 @@
         "potassium_mg": 178.8,
         "calcium_mg": 15.9,
         "iron_mg": 0.3,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": null,
+        "mono_fat_g": null,
+        "poly_fat_g": null,
+        "magnesium_mg": 10.6,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 1.8,
+        "vitamin_c_mg": 7.8,
+        "vitamin_d_ug": null,
+        "vitamin_b12_ug": null,
+        "water_g": 148.9
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3324,7 +4554,17 @@
       "potassium_mg": 312.0,
       "calcium_mg": 34.0,
       "iron_mg": 0.31,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.05,
+      "poly_fat_g": 0.29,
+      "magnesium_mg": 17.0,
+      "zinc_mg": 0.14,
+      "vitamin_a_ug": 4.0,
+      "vitamin_c_mg": 92.7,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 83.1
     },
     "portion": {
       "description": "1 fruit (2\" dia)",
@@ -3341,7 +4581,17 @@
         "potassium_mg": 215.3,
         "calcium_mg": 23.5,
         "iron_mg": 0.2,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 11.7,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 2.8,
+        "vitamin_c_mg": 64.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 57.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3375,7 +4625,17 @@
       "potassium_mg": 222.0,
       "calcium_mg": 13.0,
       "iron_mg": 0.36,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.05,
+      "poly_fat_g": 0.05,
+      "magnesium_mg": 11.0,
+      "zinc_mg": 0.07,
+      "vitamin_a_ug": 3.0,
+      "vitamin_c_mg": 7.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 82.2
     },
     "portion": {
       "description": "1 cup, with pits, yields",
@@ -3392,7 +4652,17 @@
         "potassium_mg": 306.4,
         "calcium_mg": 17.9,
         "iron_mg": 0.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 15.2,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 4.1,
+        "vitamin_c_mg": 9.7,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 113.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3428,7 +4698,17 @@
       "potassium_mg": 696.0,
       "calcium_mg": 64.0,
       "iron_mg": 0.9,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": null,
+      "mono_fat_g": null,
+      "poly_fat_g": null,
+      "magnesium_mg": 54.0,
+      "zinc_mg": 0.44,
+      "vitamin_a_ug": 7.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": null,
+      "water_g": 21.3
     },
     "portion": {
       "description": "1 date, pitted",
@@ -3445,7 +4725,17 @@
         "potassium_mg": 167.0,
         "calcium_mg": 15.4,
         "iron_mg": 0.2,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": null,
+        "mono_fat_g": null,
+        "poly_fat_g": null,
+        "magnesium_mg": 13.0,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 1.7,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": null,
+        "water_g": 5.1
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3483,7 +4773,17 @@
       "potassium_mg": 744.0,
       "calcium_mg": 62.0,
       "iron_mg": 1.79,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.02,
+      "poly_fat_g": 0.05,
+      "magnesium_mg": 36.0,
+      "zinc_mg": 0.36,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 2.3,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 15.5
     },
     "portion": {
       "description": "1 miniature box (.5 oz)",
@@ -3500,7 +4800,17 @@
         "potassium_mg": 104.2,
         "calcium_mg": 8.7,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 5.0,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.3,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 2.2
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3537,7 +4847,17 @@
       "potassium_mg": 293.0,
       "calcium_mg": 40.0,
       "iron_mg": 0.67,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.04,
+      "poly_fat_g": 0.17,
+      "magnesium_mg": 21.0,
+      "zinc_mg": 0.45,
+      "vitamin_a_ug": 77.0,
+      "vitamin_c_mg": 64.9,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 89.2
     },
     "portion": {
       "description": "0.5 cup, chopped",
@@ -3554,7 +4874,17 @@
         "potassium_mg": 228.5,
         "calcium_mg": 31.2,
         "iron_mg": 0.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 16.4,
+        "zinc_mg": 0.4,
+        "vitamin_a_ug": 60.1,
+        "vitamin_c_mg": 50.6,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 69.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3589,7 +4919,17 @@
       "potassium_mg": 558.0,
       "calcium_mg": 99.0,
       "iron_mg": 2.71,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.17,
+      "magnesium_mg": 79.0,
+      "zinc_mg": 0.53,
+      "vitamin_a_ug": 469.0,
+      "vitamin_c_mg": 28.1,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 91.4
     },
     "portion": {
       "description": "1 cup",
@@ -3606,7 +4946,17 @@
         "potassium_mg": 167.4,
         "calcium_mg": 29.7,
         "iron_mg": 0.8,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 23.7,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 140.7,
+        "vitamin_c_mg": 8.4,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 27.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3640,7 +4990,17 @@
       "potassium_mg": 348.0,
       "calcium_mg": 254.0,
       "iron_mg": 1.6,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.1,
+      "poly_fat_g": 0.67,
+      "magnesium_mg": 33.0,
+      "zinc_mg": 0.39,
+      "vitamin_a_ug": 241.0,
+      "vitamin_c_mg": 93.4,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 89.6
     },
     "portion": {
       "description": "1 cup",
@@ -3657,7 +5017,17 @@
         "potassium_mg": 73.1,
         "calcium_mg": 53.3,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 6.9,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 50.6,
+        "vitamin_c_mg": 19.6,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 18.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3693,7 +5063,17 @@
       "potassium_mg": 320.0,
       "calcium_mg": 33.0,
       "iron_mg": 0.3,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.1,
+      "magnesium_mg": 12.0,
+      "zinc_mg": 0.24,
+      "vitamin_a_ug": 835.0,
+      "vitamin_c_mg": 5.9,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 88.3
     },
     "portion": {
       "description": "1 medium",
@@ -3710,7 +5090,17 @@
         "potassium_mg": 195.2,
         "calcium_mg": 20.1,
         "iron_mg": 0.2,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 7.3,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 509.4,
+        "vitamin_c_mg": 3.6,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 53.9
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3745,7 +5135,17 @@
       "potassium_mg": 237.0,
       "calcium_mg": 10.0,
       "iron_mg": 0.27,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.03,
+      "poly_fat_g": 0.08,
+      "magnesium_mg": 11.0,
+      "zinc_mg": 0.17,
+      "vitamin_a_ug": 42.0,
+      "vitamin_c_mg": 13.7,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 94.5
     },
     "portion": {
       "description": "1 medium whole (2-3/5\" dia)",
@@ -3762,7 +5162,17 @@
         "potassium_mg": 291.5,
         "calcium_mg": 12.3,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 13.5,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 51.7,
+        "vitamin_c_mg": 16.9,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 116.2
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3797,7 +5207,17 @@
       "potassium_mg": 147.0,
       "calcium_mg": 16.0,
       "iron_mg": 0.28,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.03,
+      "magnesium_mg": 13.0,
+      "zinc_mg": 0.2,
+      "vitamin_a_ug": 5.0,
+      "vitamin_c_mg": 2.8,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 95.2
     },
     "portion": {
       "description": "0.5 cup slices",
@@ -3814,7 +5234,17 @@
         "potassium_mg": 76.4,
         "calcium_mg": 8.3,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 6.8,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 2.6,
+        "vitamin_c_mg": 1.5,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 49.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3850,7 +5280,17 @@
       "potassium_mg": 211.0,
       "calcium_mg": 7.0,
       "iron_mg": 0.43,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.16,
+      "magnesium_mg": 12.0,
+      "zinc_mg": 0.25,
+      "vitamin_a_ug": 157.0,
+      "vitamin_c_mg": 128.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 92.2
     },
     "portion": {
       "description": "1 medium (approx 2-3/4\" long, 2-1/2 dia.)",
@@ -3867,7 +5307,17 @@
         "potassium_mg": 251.1,
         "calcium_mg": 8.3,
         "iron_mg": 0.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 14.3,
+        "zinc_mg": 0.3,
+        "vitamin_a_ug": 186.8,
+        "vitamin_c_mg": 152.3,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 109.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3901,7 +5351,17 @@
       "potassium_mg": 299.0,
       "calcium_mg": 22.0,
       "iron_mg": 0.42,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.03,
+      "poly_fat_g": 0.03,
+      "magnesium_mg": 15.0,
+      "zinc_mg": 0.27,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 48.2,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 92.1
     },
     "portion": {
       "description": "1 cup chopped (1/2\" pieces)",
@@ -3918,7 +5378,17 @@
         "potassium_mg": 319.9,
         "calcium_mg": 23.5,
         "iron_mg": 0.4,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 16.1,
+        "zinc_mg": 0.3,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 51.6,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 98.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -3954,7 +5424,17 @@
       "potassium_mg": 271.0,
       "calcium_mg": 27.0,
       "iron_mg": 1.54,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.02,
+      "poly_fat_g": 0.1,
+      "magnesium_mg": 39.0,
+      "zinc_mg": 1.19,
+      "vitamin_a_ug": 40.0,
+      "vitamin_c_mg": 14.2,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 77.9
     },
     "portion": {
       "description": "1 cup",
@@ -3971,7 +5451,17 @@
         "potassium_mg": 433.6,
         "calcium_mg": 43.2,
         "iron_mg": 2.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.2,
+        "magnesium_mg": 62.4,
+        "zinc_mg": 1.9,
+        "vitamin_a_ug": 64.0,
+        "vitamin_c_mg": 22.7,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 124.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4008,7 +5498,17 @@
       "potassium_mg": 318.0,
       "calcium_mg": 3.0,
       "iron_mg": 0.5,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.16,
+      "magnesium_mg": 9.0,
+      "zinc_mg": 0.52,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 2.1,
+      "vitamin_d_ug": 0.2,
+      "vitamin_b12_ug": 0.04,
+      "water_g": 92.4
     },
     "portion": {
       "description": "1 cup, pieces or slices",
@@ -4025,7 +5525,17 @@
         "potassium_mg": 222.6,
         "calcium_mg": 2.1,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 6.3,
+        "zinc_mg": 0.4,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 1.5,
+        "vitamin_d_ug": 0.1,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 64.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4060,7 +5570,17 @@
       "potassium_mg": 247.0,
       "calcium_mg": 33.0,
       "iron_mg": 0.97,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.16,
+      "magnesium_mg": 14.0,
+      "zinc_mg": 0.23,
+      "vitamin_a_ug": 436.0,
+      "vitamin_c_mg": 4.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 94.6
     },
     "portion": {
       "description": "1 cup shredded",
@@ -4077,7 +5597,17 @@
         "potassium_mg": 116.1,
         "calcium_mg": 15.5,
         "iron_mg": 0.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 6.6,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 204.9,
+        "vitamin_c_mg": 1.9,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 44.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4112,7 +5642,17 @@
       "potassium_mg": 146.0,
       "calcium_mg": 23.0,
       "iron_mg": 0.21,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.02,
+      "magnesium_mg": 10.0,
+      "zinc_mg": 0.17,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 7.4,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 89.1
     },
     "portion": {
       "description": "1 medium (2-1/2\" dia)",
@@ -4129,7 +5669,17 @@
         "potassium_mg": 160.6,
         "calcium_mg": 25.3,
         "iron_mg": 0.2,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 11.0,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 8.1,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 98.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4166,7 +5716,17 @@
       "potassium_mg": 733.0,
       "calcium_mg": 269.0,
       "iron_mg": 3.71,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 31.6,
+      "poly_fat_g": 12.3,
+      "magnesium_mg": 270.0,
+      "zinc_mg": 3.12,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 4.41
     },
     "portion": {
       "description": "1 oz (23 whole kernels)",
@@ -4183,7 +5743,17 @@
         "potassium_mg": 207.8,
         "calcium_mg": 76.3,
         "iron_mg": 1.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 9.0,
+        "poly_fat_g": 3.5,
+        "magnesium_mg": 76.5,
+        "zinc_mg": 0.9,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 1.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4223,7 +5793,17 @@
       "potassium_mg": 441.0,
       "calcium_mg": 98.0,
       "iron_mg": 2.91,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 8.93,
+      "poly_fat_g": 47.2,
+      "magnesium_mg": 158.0,
+      "zinc_mg": 3.09,
+      "vitamin_a_ug": 1.0,
+      "vitamin_c_mg": 1.3,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 4.07
     },
     "portion": {
       "description": "1 oz (14 halves)",
@@ -4240,7 +5820,17 @@
         "potassium_mg": 125.0,
         "calcium_mg": 27.8,
         "iron_mg": 0.8,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 2.5,
+        "poly_fat_g": 13.4,
+        "magnesium_mg": 44.8,
+        "zinc_mg": 0.9,
+        "vitamin_a_ug": 0.3,
+        "vitamin_c_mg": 0.4,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 1.2
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4279,7 +5869,17 @@
       "potassium_mg": 660.0,
       "calcium_mg": 37.0,
       "iron_mg": 6.68,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 23.8,
+      "poly_fat_g": 7.84,
+      "magnesium_mg": 292.0,
+      "zinc_mg": 5.78,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.5,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 5.2
     },
     "portion": {
       "description": "1 oz",
@@ -4296,7 +5896,17 @@
         "potassium_mg": 187.1,
         "calcium_mg": 10.5,
         "iron_mg": 1.9,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 6.7,
+        "poly_fat_g": 2.2,
+        "magnesium_mg": 82.8,
+        "zinc_mg": 1.6,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.1,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 1.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4334,7 +5944,17 @@
       "potassium_mg": 634.0,
       "calcium_mg": 58.0,
       "iron_mg": 1.58,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 26.2,
+      "poly_fat_g": 9.77,
+      "magnesium_mg": 178.0,
+      "zinc_mg": 2.77,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 1.81
     },
     "portion": {
       "description": "1 oz",
@@ -4351,7 +5971,17 @@
         "potassium_mg": 179.7,
         "calcium_mg": 16.4,
         "iron_mg": 0.4,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 7.4,
+        "poly_fat_g": 2.8,
+        "magnesium_mg": 50.5,
+        "zinc_mg": 0.8,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 0.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4389,7 +6019,17 @@
       "potassium_mg": 558.0,
       "calcium_mg": 49.0,
       "iron_mg": 1.74,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 25.9,
+      "poly_fat_g": 12.5,
+      "magnesium_mg": 168.0,
+      "zinc_mg": 2.51,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 1.23
     },
     "portion": {
       "description": "2 tbsp",
@@ -4406,7 +6046,17 @@
         "potassium_mg": 178.6,
         "calcium_mg": 15.7,
         "iron_mg": 0.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 8.3,
+        "poly_fat_g": 4.0,
+        "magnesium_mg": 53.8,
+        "zinc_mg": 0.8,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 0.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4446,7 +6096,17 @@
       "potassium_mg": 407.0,
       "calcium_mg": 631.0,
       "iron_mg": 7.72,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 2.31,
+      "poly_fat_g": 23.7,
+      "magnesium_mg": 335.0,
+      "zinc_mg": 4.58,
+      "vitamin_a_ug": null,
+      "vitamin_c_mg": 1.6,
+      "vitamin_d_ug": null,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 5.8
     },
     "portion": {
       "description": "1 oz",
@@ -4463,7 +6123,17 @@
         "potassium_mg": 115.4,
         "calcium_mg": 178.9,
         "iron_mg": 2.2,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.7,
+        "poly_fat_g": 6.7,
+        "magnesium_mg": 95.0,
+        "zinc_mg": 1.3,
+        "vitamin_a_ug": null,
+        "vitamin_c_mg": 0.5,
+        "vitamin_d_ug": null,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 1.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4505,7 +6175,17 @@
       "potassium_mg": 813.0,
       "calcium_mg": 255.0,
       "iron_mg": 5.73,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 7.53,
+      "poly_fat_g": 28.7,
+      "magnesium_mg": 392.0,
+      "zinc_mg": 4.34,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.6,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 6.96
     },
     "portion": {
       "description": "1 tbsp, whole",
@@ -4522,7 +6202,17 @@
         "potassium_mg": 83.7,
         "calcium_mg": 26.3,
         "iron_mg": 0.6,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.8,
+        "poly_fat_g": 3.0,
+        "magnesium_mg": 40.4,
+        "zinc_mg": 0.4,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.1,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 0.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4561,7 +6251,17 @@
       "potassium_mg": 809.0,
       "calcium_mg": 46.0,
       "iron_mg": 8.82,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 16.2,
+      "poly_fat_g": 21.0,
+      "magnesium_mg": 592.0,
+      "zinc_mg": 7.81,
+      "vitamin_a_ug": 1.0,
+      "vitamin_c_mg": 1.9,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 5.23
     },
     "portion": {
       "description": "1 oz",
@@ -4578,7 +6278,17 @@
         "potassium_mg": 229.4,
         "calcium_mg": 13.0,
         "iron_mg": 2.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 4.6,
+        "poly_fat_g": 6.0,
+        "magnesium_mg": 167.8,
+        "zinc_mg": 2.2,
+        "vitamin_a_ug": 0.3,
+        "vitamin_c_mg": 0.5,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 1.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4617,7 +6327,17 @@
       "potassium_mg": 507.0,
       "calcium_mg": 13.0,
       "iron_mg": 0.61,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 9.8,
+      "poly_fat_g": 1.82,
+      "magnesium_mg": 29.0,
+      "zinc_mg": 0.68,
+      "vitamin_a_ug": 7.0,
+      "vitamin_c_mg": 8.8,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 72.3
     },
     "portion": {
       "description": "1 fruit, without skin and seed",
@@ -4634,7 +6354,17 @@
         "potassium_mg": 689.5,
         "calcium_mg": 17.7,
         "iron_mg": 0.8,
-        "caffeine_mg": null
+        "caffeine_mg": null,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 13.3,
+        "poly_fat_g": 2.5,
+        "magnesium_mg": 39.4,
+        "zinc_mg": 0.9,
+        "vitamin_a_ug": 9.5,
+        "vitamin_c_mg": 12.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 98.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4673,7 +6403,17 @@
       "potassium_mg": 1.0,
       "calcium_mg": 1.0,
       "iron_mg": 0.56,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 73.0,
+      "poly_fat_g": 10.5,
+      "magnesium_mg": 0.0,
+      "zinc_mg": 0.0,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 0.0
     },
     "portion": {
       "description": "1 tablespoon",
@@ -4690,7 +6430,17 @@
         "potassium_mg": 0.1,
         "calcium_mg": 0.1,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 9.9,
+        "poly_fat_g": 1.4,
+        "magnesium_mg": 0.0,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 0.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4726,7 +6476,17 @@
       "potassium_mg": 24.0,
       "calcium_mg": 24.0,
       "iron_mg": 0.02,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 215.0,
+      "mono_fat_g": 21.0,
+      "poly_fat_g": 3.04,
+      "magnesium_mg": 2.0,
+      "zinc_mg": 0.09,
+      "vitamin_a_ug": 684.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.17,
+      "water_g": 16.2
     },
     "portion": {
       "description": "1 tbsp",
@@ -4743,7 +6503,17 @@
         "potassium_mg": 3.4,
         "calcium_mg": 3.4,
         "iron_mg": 0.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 30.5,
+        "mono_fat_g": 3.0,
+        "poly_fat_g": 0.4,
+        "magnesium_mg": 0.3,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 97.1,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 2.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4781,7 +6551,17 @@
       "potassium_mg": null,
       "calcium_mg": 0.0,
       "iron_mg": 0.0,
-      "caffeine_mg": null
+      "caffeine_mg": null,
+      "cholesterol_mg": 300.0,
+      "mono_fat_g": null,
+      "poly_fat_g": 4.0,
+      "magnesium_mg": null,
+      "zinc_mg": null,
+      "vitamin_a_ug": null,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": null,
+      "vitamin_b12_ug": null,
+      "water_g": 0.5
     },
     "portion": null,
     "highlights": [
@@ -4815,7 +6595,17 @@
       "potassium_mg": 715.0,
       "calcium_mg": 73.0,
       "iron_mg": 11.9,
-      "caffeine_mg": 80.0
+      "caffeine_mg": 80.0,
+      "cholesterol_mg": 3.0,
+      "mono_fat_g": 12.8,
+      "poly_fat_g": 1.26,
+      "magnesium_mg": 228.0,
+      "zinc_mg": 3.31,
+      "vitamin_a_ug": 2.0,
+      "vitamin_c_mg": null,
+      "vitamin_d_ug": null,
+      "vitamin_b12_ug": 0.28,
+      "water_g": 1.37
     },
     "portion": {
       "description": "1 oz",
@@ -4832,7 +6622,17 @@
         "potassium_mg": 202.7,
         "calcium_mg": 20.7,
         "iron_mg": 3.4,
-        "caffeine_mg": 22.7
+        "caffeine_mg": 22.7,
+        "cholesterol_mg": 0.9,
+        "mono_fat_g": 3.6,
+        "poly_fat_g": 0.4,
+        "magnesium_mg": 64.6,
+        "zinc_mg": 0.9,
+        "vitamin_a_ug": 0.6,
+        "vitamin_c_mg": null,
+        "vitamin_d_ug": null,
+        "vitamin_b12_ug": 0.1,
+        "water_g": 0.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4870,7 +6670,17 @@
       "potassium_mg": 0.0,
       "calcium_mg": 3.0,
       "iron_mg": 0.0,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 1.0,
+      "zinc_mg": 0.01,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 99.9
     },
     "portion": {
       "description": "1 fl oz",
@@ -4887,7 +6697,17 @@
         "potassium_mg": 0.0,
         "calcium_mg": 0.9,
         "iron_mg": 0.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 0.3,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 29.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4920,7 +6740,17 @@
       "potassium_mg": 165.0,
       "calcium_mg": 7.0,
       "iron_mg": 0.03,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 6.0,
+      "zinc_mg": 0.02,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 9.9,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 95.0
     },
     "portion": {
       "description": "1 cup",
@@ -4937,7 +6767,17 @@
         "potassium_mg": 404.2,
         "calcium_mg": 17.1,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 14.7,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 24.3,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 232.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -4971,7 +6811,17 @@
       "potassium_mg": 49.0,
       "calcium_mg": 2.0,
       "iron_mg": 0.01,
-      "caffeine_mg": 40.0
+      "caffeine_mg": 40.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 3.0,
+      "zinc_mg": 0.02,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 99.4
     },
     "portion": {
       "description": "1 cup (8 fl oz)",
@@ -4988,7 +6838,17 @@
         "potassium_mg": 116.1,
         "calcium_mg": 4.7,
         "iron_mg": 0.0,
-        "caffeine_mg": 94.8
+        "caffeine_mg": 94.8,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 7.1,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 235.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5020,7 +6880,17 @@
       "potassium_mg": 37.0,
       "calcium_mg": 0.0,
       "iron_mg": 0.02,
-      "caffeine_mg": 20.0
+      "caffeine_mg": 20.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 3.0,
+      "zinc_mg": 0.02,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 99.7
     },
     "portion": {
       "description": "1 cup (8 fl oz)",
@@ -5037,7 +6907,17 @@
         "potassium_mg": 87.7,
         "calcium_mg": 0.0,
         "iron_mg": 0.0,
-        "caffeine_mg": 47.4
+        "caffeine_mg": 47.4,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 7.1,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 236.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5071,7 +6951,17 @@
       "potassium_mg": 200.0,
       "calcium_mg": 11.0,
       "iron_mg": 0.2,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.04,
+      "poly_fat_g": 0.04,
+      "magnesium_mg": 11.0,
+      "zinc_mg": 0.05,
+      "vitamin_a_ug": 10.0,
+      "vitamin_c_mg": 50.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 88.3
     },
     "portion": {
       "description": "1 cup",
@@ -5088,7 +6978,17 @@
         "potassium_mg": 496.0,
         "calcium_mg": 27.3,
         "iron_mg": 0.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.1,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 27.3,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 24.8,
+        "vitamin_c_mg": 124.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 219.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5123,7 +7023,17 @@
       "potassium_mg": 101.0,
       "calcium_mg": 8.0,
       "iron_mg": 0.12,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.01,
+      "poly_fat_g": 0.04,
+      "magnesium_mg": 5.0,
+      "zinc_mg": 0.02,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 38.5,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 88.2
     },
     "portion": {
       "description": "1 cup",
@@ -5140,7 +7050,17 @@
         "potassium_mg": 250.5,
         "calcium_mg": 19.8,
         "iron_mg": 0.3,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 12.4,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 95.5,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 218.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5179,7 +7099,17 @@
       "potassium_mg": 5.0,
       "calcium_mg": 1.0,
       "iron_mg": 0.02,
-      "caffeine_mg": 9.0
+      "caffeine_mg": 9.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 0.0,
+      "zinc_mg": 0.09,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 89.4
     },
     "portion": {
       "description": "1 can or bottle (12 fl oz)",
@@ -5196,7 +7126,17 @@
         "potassium_mg": 18.5,
         "calcium_mg": 3.7,
         "iron_mg": 0.1,
-        "caffeine_mg": 33.3
+        "caffeine_mg": 33.3,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 0.0,
+        "zinc_mg": 0.3,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 330.8
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5232,7 +7172,17 @@
       "potassium_mg": 3.0,
       "calcium_mg": 6.0,
       "iron_mg": 0.06,
-      "caffeine_mg": 29.0
+      "caffeine_mg": 29.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 19.0,
+      "zinc_mg": 0.01,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 1.97,
+      "water_g": 89.2
     },
     "portion": {
       "description": "1 can 8.4 fl oz",
@@ -5249,7 +7199,17 @@
         "potassium_mg": 7.7,
         "calcium_mg": 15.5,
         "iron_mg": 0.2,
-        "caffeine_mg": 74.8
+        "caffeine_mg": 74.8,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 49.0,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 5.1,
+        "water_g": 230.1
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5285,7 +7245,17 @@
       "potassium_mg": 25.0,
       "calcium_mg": 8.0,
       "iron_mg": 0.09,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 3.0,
+      "zinc_mg": 0.01,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.4,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 88.0
     },
     "portion": {
       "description": "1 cup (8 fl oz)",
@@ -5302,7 +7272,17 @@
         "potassium_mg": 62.0,
         "calcium_mg": 19.8,
         "iron_mg": 0.2,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 7.4,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 1.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 218.2
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5338,7 +7318,17 @@
       "potassium_mg": 27.0,
       "calcium_mg": 4.0,
       "iron_mg": 0.02,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 6.0,
+      "zinc_mg": 0.01,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.02,
+      "water_g": 92.0
     },
     "portion": {
       "description": "1 can",
@@ -5355,7 +7345,17 @@
         "potassium_mg": 96.1,
         "calcium_mg": 14.2,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 21.4,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.1,
+        "water_g": 327.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5390,7 +7390,17 @@
       "potassium_mg": 127.0,
       "calcium_mg": 8.0,
       "iron_mg": 0.46,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 12.0,
+      "zinc_mg": 0.14,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 86.5
     },
     "portion": {
       "description": "1 fl oz",
@@ -5407,7 +7417,17 @@
         "potassium_mg": 37.3,
         "calcium_mg": 2.4,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 3.5,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 25.4
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5442,7 +7462,17 @@
       "potassium_mg": 1190.0,
       "calcium_mg": 32.0,
       "iron_mg": 1.36,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 13.2,
+      "poly_fat_g": 12.2,
+      "magnesium_mg": 58.0,
+      "zinc_mg": 0.98,
+      "vitamin_a_ug": 20.0,
+      "vitamin_c_mg": 62.4,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 2.48
     },
     "portion": {
       "description": "1 oz",
@@ -5459,7 +7489,17 @@
         "potassium_mg": 337.4,
         "calcium_mg": 9.1,
         "iron_mg": 0.4,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 3.7,
+        "poly_fat_g": 3.5,
+        "magnesium_mg": 16.4,
+        "zinc_mg": 0.3,
+        "vitamin_a_ug": 5.7,
+        "vitamin_c_mg": 17.7,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 0.7
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5494,7 +7534,17 @@
       "potassium_mg": 579.0,
       "calcium_mg": 18.0,
       "iron_mg": 0.81,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 5.97,
+      "poly_fat_g": 5.4,
+      "magnesium_mg": 35.0,
+      "zinc_mg": 0.5,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 4.7,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 38.6
     },
     "portion": {
       "description": "1 serving medium",
@@ -5511,7 +7561,17 @@
         "potassium_mg": 677.4,
         "calcium_mg": 21.1,
         "iron_mg": 0.9,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 7.0,
+        "poly_fat_g": 6.3,
+        "magnesium_mg": 41.0,
+        "zinc_mg": 0.6,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 5.5,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 45.2
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5545,7 +7605,17 @@
       "potassium_mg": 102.0,
       "calcium_mg": 101.0,
       "iron_mg": 2.38,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 30.0,
+      "mono_fat_g": 7.25,
+      "poly_fat_g": 3.59,
+      "magnesium_mg": 17.0,
+      "zinc_mg": 0.61,
+      "vitamin_a_ug": 5.0,
+      "vitamin_c_mg": 1.2,
+      "vitamin_d_ug": 0.1,
+      "vitamin_b12_ug": 0.11,
+      "water_g": 22.0
     },
     "portion": {
       "description": "1 doughnut medium (approx 3-3/4\" dia)",
@@ -5562,7 +7632,17 @@
         "potassium_mg": 65.3,
         "calcium_mg": 64.6,
         "iron_mg": 1.5,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 19.2,
+        "mono_fat_g": 4.6,
+        "poly_fat_g": 2.3,
+        "magnesium_mg": 10.9,
+        "zinc_mg": 0.4,
+        "vitamin_a_ug": 3.2,
+        "vitamin_c_mg": 0.8,
+        "vitamin_d_ug": 0.1,
+        "vitamin_b12_ug": 0.1,
+        "water_g": 14.1
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5600,7 +7680,17 @@
       "potassium_mg": 171.0,
       "calcium_mg": 21.0,
       "iron_mg": 5.58,
-      "caffeine_mg": 11.0
+      "caffeine_mg": 11.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 6.27,
+      "poly_fat_g": 8.42,
+      "magnesium_mg": 41.0,
+      "zinc_mg": 0.72,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.03,
+      "water_g": 3.57
     },
     "portion": {
       "description": "1 cookie",
@@ -5617,7 +7707,17 @@
         "potassium_mg": 22.1,
         "calcium_mg": 2.7,
         "iron_mg": 0.7,
-        "caffeine_mg": 1.4
+        "caffeine_mg": 1.4,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.8,
+        "poly_fat_g": 1.1,
+        "magnesium_mg": 5.3,
+        "zinc_mg": 0.1,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 0.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5654,7 +7754,17 @@
       "potassium_mg": 372.0,
       "calcium_mg": 189.0,
       "iron_mg": 2.35,
-      "caffeine_mg": 20.0
+      "caffeine_mg": 20.0,
+      "cholesterol_mg": 23.0,
+      "mono_fat_g": 7.19,
+      "poly_fat_g": 1.38,
+      "magnesium_mg": 63.0,
+      "zinc_mg": 2.3,
+      "vitamin_a_ug": 59.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.75,
+      "water_g": 1.5
     },
     "portion": {
       "description": "1 bar, miniature",
@@ -5671,7 +7781,17 @@
         "potassium_mg": 26.0,
         "calcium_mg": 13.2,
         "iron_mg": 0.2,
-        "caffeine_mg": 1.4
+        "caffeine_mg": 1.4,
+        "cholesterol_mg": 1.6,
+        "mono_fat_g": 0.5,
+        "poly_fat_g": 0.1,
+        "magnesium_mg": 4.4,
+        "zinc_mg": 0.2,
+        "vitamin_a_ug": 4.1,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.1,
+        "water_g": 0.1
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5707,7 +7827,17 @@
       "potassium_mg": 199.0,
       "calcium_mg": 128.0,
       "iron_mg": 0.09,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 44.0,
+      "mono_fat_g": 2.97,
+      "poly_fat_g": 0.45,
+      "magnesium_mg": 14.0,
+      "zinc_mg": 0.69,
+      "vitamin_a_ug": 118.0,
+      "vitamin_c_mg": 0.6,
+      "vitamin_d_ug": 0.2,
+      "vitamin_b12_ug": 0.39,
+      "water_g": 61.0
     },
     "portion": {
       "description": "1 serving 1/2 cup",
@@ -5724,7 +7854,17 @@
         "potassium_mg": 131.3,
         "calcium_mg": 84.5,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 29.0,
+        "mono_fat_g": 2.0,
+        "poly_fat_g": 0.3,
+        "magnesium_mg": 9.2,
+        "zinc_mg": 0.5,
+        "vitamin_a_ug": 77.9,
+        "vitamin_c_mg": 0.4,
+        "vitamin_d_ug": 0.1,
+        "vitamin_b12_ug": 0.3,
+        "water_g": 40.3
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5760,7 +7900,17 @@
       "potassium_mg": 152.0,
       "calcium_mg": 179.0,
       "iron_mg": 2.27,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 14.0,
+      "mono_fat_g": 4.25,
+      "poly_fat_g": 1.9,
+      "magnesium_mg": 23.0,
+      "zinc_mg": 1.32,
+      "vitamin_a_ug": 66.0,
+      "vitamin_c_mg": 1.2,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.78,
+      "water_g": 46.3
     },
     "portion": {
       "description": "1 serving 9 servings per 24 oz package",
@@ -5777,7 +7927,17 @@
         "potassium_mg": 123.1,
         "calcium_mg": 145.0,
         "iron_mg": 1.8,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 11.3,
+        "mono_fat_g": 3.4,
+        "poly_fat_g": 1.5,
+        "magnesium_mg": 18.6,
+        "zinc_mg": 1.1,
+        "vitamin_a_ug": 53.5,
+        "vitamin_c_mg": 1.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.6,
+        "water_g": 37.5
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5811,7 +7971,17 @@
       "potassium_mg": 2.0,
       "calcium_mg": 1.0,
       "iron_mg": 0.05,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 0.0,
+      "zinc_mg": 0.01,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.0,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 0.02
     },
     "portion": {
       "description": "1 tsp",
@@ -5828,7 +7998,17 @@
         "potassium_mg": 0.1,
         "calcium_mg": 0.0,
         "iron_mg": 0.0,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 0.0,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.0,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 0.0
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },
@@ -5863,7 +8043,17 @@
       "potassium_mg": 52.0,
       "calcium_mg": 6.0,
       "iron_mg": 0.42,
-      "caffeine_mg": 0.0
+      "caffeine_mg": 0.0,
+      "cholesterol_mg": 0.0,
+      "mono_fat_g": 0.0,
+      "poly_fat_g": 0.0,
+      "magnesium_mg": 2.0,
+      "zinc_mg": 0.22,
+      "vitamin_a_ug": 0.0,
+      "vitamin_c_mg": 0.5,
+      "vitamin_d_ug": 0.0,
+      "vitamin_b12_ug": 0.0,
+      "water_g": 17.1
     },
     "portion": {
       "description": "1 tbsp",
@@ -5880,7 +8070,17 @@
         "potassium_mg": 10.9,
         "calcium_mg": 1.3,
         "iron_mg": 0.1,
-        "caffeine_mg": 0.0
+        "caffeine_mg": 0.0,
+        "cholesterol_mg": 0.0,
+        "mono_fat_g": 0.0,
+        "poly_fat_g": 0.0,
+        "magnesium_mg": 0.4,
+        "zinc_mg": 0.0,
+        "vitamin_a_ug": 0.0,
+        "vitamin_c_mg": 0.1,
+        "vitamin_d_ug": 0.0,
+        "vitamin_b12_ug": 0.0,
+        "water_g": 3.6
       },
       "note": "computed from USDA per-100 g values and USDA portion gram weight"
     },

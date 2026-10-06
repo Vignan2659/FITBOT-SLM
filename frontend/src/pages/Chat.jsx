@@ -31,6 +31,8 @@ export default function Chat() {
   const endRef = useRef(null);
   const textRef = useRef(null);
   const skipLoad = useRef(false);
+  const inFlight = useRef(false);
+  const handledPreset = useRef(null);   // location.key of the quick-start prompt already sent
   const recognition = useRef(null);
   const [listening, setListening] = useState(false);
 
@@ -61,8 +63,11 @@ export default function Chat() {
   useEffect(() => {
     setError("");
     if (!conversationId) {
-      setMessages([]);
-      setTitle("New chat");
+      // don't wipe a question that a dashboard quick-start has just sent (StrictMode re-runs this effect)
+      if (handledPreset.current !== location.key) {
+        setMessages([]);
+        setTitle("New chat");
+      }
       return;
     }
     if (skipLoad.current) {
@@ -76,10 +81,12 @@ export default function Chat() {
       .finally(() => setLoadingConv(false));
   }, [conversationId]);
 
-  // a prompt passed from the dashboard starts a new chat immediately
+  // a prompt passed from the dashboard starts a new chat immediately - exactly once per navigation
+  // (React StrictMode runs effects twice in development, which used to send the question twice)
   useEffect(() => {
     const preset = location.state?.prompt;
-    if (preset && !conversationId) {
+    if (preset && !conversationId && handledPreset.current !== location.key) {
+      handledPreset.current = location.key;
       navigate(location.pathname, { replace: true, state: {} });
       send(preset);
     }
@@ -92,7 +99,8 @@ export default function Chat() {
 
   async function send(text) {
     const message = (text ?? input).trim();
-    if (!message || sending) return;
+    if (!message || sending || inFlight.current) return;
+    inFlight.current = true;   // synchronous guard: state updates are async, a double Enter/click could slip through
     recognition.current?.abort();
     setInput("");
     setError("");
@@ -119,6 +127,7 @@ export default function Chat() {
       setInput(message);
     } finally {
       setSending(false);
+      inFlight.current = false;
       textRef.current?.focus();
     }
   }

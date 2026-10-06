@@ -14,7 +14,9 @@ authentication, and a safety layer.
 * **Exercise cards with real images** (58 curated exercises, 876 in the catalog) from the public-domain
   free-exercise-db: target muscles, equipment, difficulty, description, instructions, safety tip.
 * **Food / nutrition cards with USDA FoodData Central values** (111 foods, SR Legacy, CC0) – exact
-  values per 100 g and per USDA household portion; unknown foods are never estimated.
+  values per 100 g and per USDA household portion (switchable): macros with energy split, % Daily Value
+  (FDA, 2,000 kcal), protein per 100 kcal, cholesterol, fat breakdown, potassium, calcium, iron, magnesium,
+  zinc, vitamins A/C/D/B12, caffeine and water; unknown foods or missing nutrients are never estimated.
 * **Workout planner**: beginner→advanced, gym/home/dumbbell/bodyweight, 1–6 days, sets/reps/rest + images.
 * **Follow-up context and personalisation** ("I'm a beginner" → "I only have dumbbells"), optional profile
   (age, height, weight, level, goal, diet, equipment, location).
@@ -22,8 +24,8 @@ authentication, and a safety layer.
 * **Safety**: guardrails for emergencies, eating disorders, starvation, dehydration, PEDs, medication and
   injury diagnosis; referral + disclaimer for medical topics; output screening.
 * Accounts (bcrypt + JWT with server-side logout), private chat history, conversation management.
-* **My workouts**: save plans from chat, log a plan day in one click or any exercise manually, weekly
-  active-day chart, streak and most-logged exercises (with best weight).
+* **My workouts**: save plans from chat, log a plan day in one click or several exercises at once, weekly
+  active-day chart, 🔥 streak and most-logged exercises (with best weight).
 * 👍/👎 **feedback** on every answer (`scripts/export_feedback.py` exports ratings for review),
   **read aloud** and **voice input** (browser Web Speech API; the mic button appears only where supported).
 * **Installable app (PWA)**: manifest + icons; the production build adds an offline app shell (service worker,
@@ -129,7 +131,7 @@ cd frontend && npx vitest run                          # React component tests
 | Mean latency per answer (Apple M5, MPS) | 1.87 s | **0.97 s** |
 
 Full pipeline with the real model: **92 % of 163 checked turns pass** (nutrition, exercise, safety and
-out-of-domain suites 100 %). All automated tests pass (78 backend, 2 real-model, 6 frontend, 4 end-to-end browser).
+out-of-domain suites 100 %). All automated tests pass (78 backend, 2 real-model, 6 frontend, 5 end-to-end browser).
 Details and limitations: [docs/EVALUATION.md](docs/EVALUATION.md),
 [evaluation/evaluation_report.md](evaluation/evaluation_report.md).
 

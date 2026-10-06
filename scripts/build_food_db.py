@@ -31,6 +31,8 @@ NUTRIENTS = {
     "208": "calories_kcal", "203": "protein_g", "205": "carbs_g", "204": "fat_g",
     "291": "fiber_g", "269": "sugar_g", "307": "sodium_mg", "606": "saturated_fat_g",
     "306": "potassium_mg", "301": "calcium_mg", "303": "iron_mg", "262": "caffeine_mg",
+    "601": "cholesterol_mg", "645": "mono_fat_g", "646": "poly_fat_g", "304": "magnesium_mg", "309": "zinc_mg",
+    "320": "vitamin_a_ug", "401": "vitamin_c_mg", "328": "vitamin_d_ug", "418": "vitamin_b12_ug", "255": "water_g",
 }
 
 # (display name, fdcId, group, fitbot tags, aliases, preferred portion keyword)
