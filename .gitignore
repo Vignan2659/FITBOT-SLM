@@ -57,3 +57,6 @@ data/image_dataset/clean/
 data/image_dataset/duplicates/
 data/image_dataset/rejected/
 data/image_dataset/work/
+
+# Training kit for the GPU PC (re-create with scripts/package_for_gpu_pc.py)
+FitBot_4B_Training_Kit.zip

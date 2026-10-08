@@ -1,0 +1,125 @@
+{
+  "total_records": 5470,
+  "v1_records": 916,
+  "new_v2_records": 4554,
+  "cleaning_new": {
+    "raw_new": 4800,
+    "removed_duplicate": 246,
+    "clean_new": 4554
+  },
+  "split_sizes": {
+    "train": 4382,
+    "validation": 527,
+    "test": 561
+  },
+  "test_v1_records": 97,
+  "test_inputs_also_in_train_after_normalisation": 0,
+  "by_table_category": {
+    "exercises": 1587,
+    "form_safety": 534,
+    "plans": 450,
+    "beginner": 226,
+    "general_fitness": 624,
+    "nutrition": 826,
+    "lifestyle": 357,
+    "goals": 185,
+    "medical": 157,
+    "off_topic": 164,
+    "multi_turn": 360
+  },
+  "by_table_category_and_split": {
+    "exercises": {
+      "train": 1276,
+      "validation": 158,
+      "test": 153
+    },
+    "form_safety": {
+      "train": 423,
+      "validation": 54,
+      "test": 57
+    },
+    "plans": {
+      "train": 359,
+      "validation": 42,
+      "test": 49
+    },
+    "beginner": {
+      "train": 181,
+      "validation": 20,
+      "test": 25
+    },
+    "general_fitness": {
+      "train": 498,
+      "validation": 60,
+      "test": 66
+    },
+    "nutrition": {
+      "train": 663,
+      "validation": 77,
+      "test": 86
+    },
+    "lifestyle": {
+      "train": 294,
+      "validation": 26,
+      "test": 37
+    },
+    "goals": {
+      "train": 140,
+      "validation": 26,
+      "test": 19
+    },
+    "medical": {
+      "train": 126,
+      "validation": 16,
+      "test": 15
+    },
+    "off_topic": {
+      "train": 131,
+      "validation": 17,
+      "test": 16
+    },
+    "multi_turn": {
+      "train": 291,
+      "validation": 31,
+      "test": 38
+    }
+  },
+  "by_intent": {
+    "exercise_search": 1627,
+    "food_search": 766,
+    "general_fitness": 672,
+    "home_workout": 412,
+    "exercise_safety": 361,
+    "stretching": 303,
+    "nutrition_question": 199,
+    "workout_plan": 182,
+    "out_of_domain": 165,
+    "medical_safety": 158,
+    "cardio": 138,
+    "weight_loss": 100,
+    "muscle_gain": 97,
+    "gym_workout": 65,
+    "hydration": 62,
+    "recovery": 58,
+    "sleep": 46,
+    "equipment": 41,
+    "greeting": 18
+  },
+  "by_source": {
+    "exercise_db_v2": 1951,
+    "seed_v2": 1167,
+    "usda": 682,
+    "planner": 436,
+    "seed": 329,
+    "conversation_v2": 308,
+    "exercise_db": 191,
+    "ood": 164,
+    "safety": 157,
+    "conversation": 85
+  },
+  "exercises_covered": 871,
+  "with_context": 4349,
+  "with_history": 324,
+  "with_profile": 252,
+  "avg_response_words": 50.4
+}

@@ -135,6 +135,17 @@ out-of-domain suites 100 %). All automated tests pass (78 backend, 2 real-model,
 Details and limitations: [docs/EVALUATION.md](docs/EVALUATION.md),
 [evaluation/evaluation_report.md](evaluation/evaluation_report.md).
 
+## Dataset v2 and the 4B model (college GPU)
+
+* **Dataset v2** (`data/processed_v2/`, see its `README.md`): 5,470 conversations built from all **871** cleaned
+  exercises (was 58), USDA foods, the planner and new hand-written topics, balanced across 11 categories.
+  Rebuild: `.venv/bin/python scripts/build_exercise_catalog_v2.py && .venv/bin/python scripts/build_dataset_v2.py`.
+* **4B fine-tuning:** `training/FitBot_FineTuning_4B.ipynb` fine-tunes `Qwen/Qwen3-4B-Instruct-2507` with QLoRA on
+  a 12 GB NVIDIA GPU. Package everything for the GPU PC with `.venv/bin/python scripts/package_for_gpu_pc.py`
+  (→ `FitBot_4B_Training_Kit.zip`) and follow `training/COLLEGE_PC_GUIDE.md`.
+* The running app still uses the 360M model and the 58-exercise catalog until the 4B model has been trained
+  and evaluated.
+
 ## Documentation
 
 * [PROJECT_REPORT.md](PROJECT_REPORT.md) – full project report
