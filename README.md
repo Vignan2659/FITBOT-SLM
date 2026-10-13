@@ -17,10 +17,10 @@ with real exercise photos, real USDA nutrition numbers and a plan you can save.
 
 ## The film
 
-[![Watch the FitBot launch film](media/film_poster.jpg)](media/FitBot_Launch_Film_1080p.mp4)
+[![Watch the FitBot launch film](media/film_poster.jpg)](https://raw.githubusercontent.com/Vignan2659/FITBOT-SLM/main/media/FitBot_Launch_Film_1080p.mp4)
 
 A 2 minute 24 second walkthrough of the project in 1080p: the problem, the app, how the model was trained and the measured results.
-Click the picture to open it (GitHub plays it in the browser, or use the download button to save it).
+Click the picture to download the 1080p film (90 MB). It is also in the repo at [`media/FitBot_Launch_Film_1080p.mp4`](media/FitBot_Launch_Film_1080p.mp4).
 Everything shown on screen is real output from the app.
 
 ## What it does
@@ -77,7 +77,7 @@ More detail in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## The model
 
-| | |
+| Part | Details |
 |---|---|
 | Base model | [Qwen3 4B Instruct 2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), 4.0 billion parameters, Apache 2.0 license |
 | Training method | QLoRA: the base model loaded in 4 bit, with small LoRA adapters trained on top (33 million trainable parameters) |
