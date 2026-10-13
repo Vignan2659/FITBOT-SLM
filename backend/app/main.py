@@ -48,18 +48,35 @@ def build_engine(settings, generate=None) -> tuple[ChatEngine, dict]:
     return ChatEngine(catalog, nlu, retriever, generate, settings.fitbot_history_turns), info
 
 
+SPA_PREFIX = "/__spa"
+NOT_SPA = ("/api", "/docs", "/redoc", "/openapi.json", "/health", "/assets")
+
+
 class StripApiPrefix:
     """ASGI middleware: '/api/...' -> '/...'. The React app calls '/api/*' both behind the Vite dev proxy and
-    when FastAPI serves the built frontend itself (single-origin production deployment)."""
+    when FastAPI serves the built frontend itself (single-origin production deployment).
 
-    def __init__(self, app):
+    When the built frontend is served, a browser page load (GET that accepts text/html) of a client-side route
+    such as /workouts is sent to the web app, so it never collides with the API route of the same name."""
+
+    def __init__(self, app, serve_spa: bool = False):
         self.app = app
+        self.serve_spa = serve_spa
 
     async def __call__(self, scope, receive, send):
-        if scope["type"] == "http" and (scope["path"] == "/api" or scope["path"].startswith("/api/")):
-            scope = dict(scope)
-            scope["path"] = scope["path"][4:] or "/"
-            scope["raw_path"] = scope["path"].encode()
+        if scope["type"] == "http":
+            path = scope["path"]
+            if path == "/api" or path.startswith("/api/"):
+                scope = dict(scope)
+                scope["path"] = path[4:] or "/"
+                scope["raw_path"] = scope["path"].encode()
+            elif self.serve_spa and scope.get("method") == "GET" and path != "/" \
+                    and not any(path == p or path.startswith(p + "/") for p in NOT_SPA):
+                accept = dict(scope.get("headers") or []).get(b"accept", b"")
+                if b"text/html" in accept:
+                    scope = dict(scope)
+                    scope["path"] = SPA_PREFIX + path
+                    scope["raw_path"] = scope["path"].encode()
         await self.app(scope, receive, send)
 
 
@@ -102,12 +119,13 @@ def create_app() -> FastAPI:
 
         @app.get("/{full_path:path}", include_in_schema=False)
         def spa(full_path: str):
+            full_path = full_path.removeprefix(SPA_PREFIX.lstrip("/") + "/")
             f = (dist / full_path).resolve()
             if full_path and f.is_file() and dist.resolve() in f.parents:
                 return FileResponse(f)           # favicon.svg etc.
             return FileResponse(dist / "index.html")   # client-side routes: /login, /chat/3, ...
 
-    return StripApiPrefix(app)
+    return StripApiPrefix(app, serve_spa=(dist / "index.html").exists())
 
 
 app = create_app()
