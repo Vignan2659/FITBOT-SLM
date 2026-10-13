@@ -30,7 +30,7 @@ BASE_MODEL = os.environ.get("FITBOT_SETUP_BASE", "Qwen/Qwen3-4B-Instruct-2507")
 # Asset attached to the GitHub release (see README "Publishing a release"). Override with FITBOT_ADAPTER_URL.
 DEFAULT_ADAPTER_URL = os.environ.get(
     "FITBOT_ADAPTER_URL",
-    "https://github.com/vignankarthikeya/FitBot/releases/download/v1.0.0/fitbot-qwen3-4b-adapter.zip")
+    "https://github.com/Vignan2659/FITBOT-SLM/releases/download/v1.0.0/fitbot-qwen3-4b-adapter.zip")
 
 
 def download(url: str, dest: Path) -> None:

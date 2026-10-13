@@ -14,7 +14,7 @@ All product content on screen is real FitBot output (answers, exercise cards, wo
 * **0:08.1** Workouts live in one app, nutrition in another, and advice on sleep and recovery is scattered everywhere else.
 
 ## 0:15.1 – 0:29.9  FitBot identity
-* **0:15.7** Meet FitBot: a fitness assistant powered by a fine-tuned, four-billion-parameter language model that runs privately, right on your Mac.
+* **0:15.7** Meet FitBot: a fitness assistant powered by a fine tuned, four-billion-parameter language model that runs privately, right on your Mac.
 * **0:24.0** It understands your question, personalizes the answer, and recommends what to do next.
 
 ## 0:29.9 – 0:44.9  Demo: exercise cards (871 exercises)
@@ -34,19 +34,19 @@ All product content on screen is real FitBot output (answers, exercise cards, wo
 * **1:19.0** then to curated fitness and nutrition knowledge,
 * **1:21.9** and finally to the domain-tuned model, which writes a personalized response.
 
-## 1:27.0 – 1:43.6  Dataset → QLoRA fine-tuning → validation → testing
-* **1:27.5** The model is Qwen3 4B, fine-tuned for this domain.
-* **1:31.4** 5,470 conversations were prepared, trained with QLoRA on a GPU, then validated and tested on held-out questions before reaching the application.
+## 1:27.0 – 1:43.6  Dataset → QLoRA fine tuning → validation → testing
+* **1:27.5** The model is Qwen3 4B, fine tuned for this domain.
+* **1:31.4** 5,470 conversations were prepared, trained with QLoRA on a GPU, then validated and tested on held out questions before reaching the application.
 
 ## 1:43.6 – 2:00.9  Measured results
 * **1:44.1** And the results are measurable.
 * **1:45.9** Its answers match the reference answers nearly three times more closely than the base model.
-* **1:51.4** Across 163 real app checks, FitBot gets 93% right, and politely declines every off-topic question.
+* **1:51.4** Across 163 real app checks, FitBot gets 93% right, and politely declines every off topic question.
 
 ## 2:00.9 – 2:12.6  The complete experience
 * **2:01.4** From the first question to saved plans and progress tracking, FitBot delivers a complete experience,
 * **2:07.4** offering general fitness and wellness guidance, not medical diagnosis.
 
 ## 2:12.6 – 2:23.8  Closing: FitBot × Veltris
-* **2:13.2** FitBot. Domain-specific AI, built for real-world fitness experiences.
+* **2:13.2** FitBot. Domain specific AI, built for real world fitness experiences.
 * **2:18.2** Presented by Veltris.

@@ -29,7 +29,6 @@ data/raw/*
 !data/raw/README.md
 
 # Exercise image dataset: image folders + intermediate features are re-creatable (scripts/image_dataset/)
-data/image_dataset/clean/
 data/image_dataset/duplicates/
 data/image_dataset/rejected/
 data/image_dataset/work/

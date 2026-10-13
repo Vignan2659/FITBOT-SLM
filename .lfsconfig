@@ -1,0 +1,3 @@
+[lfs]
+	# the 129 MB film is skipped when cloning; watch it on GitHub or the releases page
+	fetchexclude = media/*.mp4

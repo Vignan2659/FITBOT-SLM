@@ -2,11 +2,11 @@
 
 * Test set: 97 records (97 used for generation metrics), validation set: 93 records. Test examples were never used for training or model selection.
 * Base model: `HuggingFaceTB/SmolLM2-360M-Instruct`
-* Fine-tuned model: `models/fitbot-smollm2-360m-lora/merged`
+* Fine tuned model: `models/fitbot-smollm2-360m-lora/merged`
 * Training run: trained on Tesla T4 (smoke test: False)
 * Device: mps · decoding: greedy, repetition_penalty=1.1, max 200 new tokens
 
-| Metric | Base | Fine-tuned FitBot | Better |
+| Metric | Base | Fine tuned FitBot | Better |
 |---|---:|---:|:--:|
 | Validation loss | 1.7132 | 0.8955 | lower |
 | Validation perplexity | 5.547 | 2.449 | lower |
@@ -16,9 +16,9 @@
 | Token F1 | 0.2472 | 0.5371 | higher |
 | Relevance (semantic sim. to reference) | 0.6885 | 0.7807 | higher |
 | Consistency (paraphrase answer similarity) | 0.7003 | 0.7149 | higher |
-| Domain fact accuracy (closed-book probes) | 0.8125 | 0.8125 | higher |
-| Out-of-domain refusal rate | 0.0 | 0.25 | higher |
-| False refusals on in-domain prompts | 0.0 | 0.0538 | lower |
+| Domain fact accuracy (closed book probes) | 0.8125 | 0.8125 | higher |
+| Out of domain refusal rate | 0.0 | 0.25 | higher |
+| False refusals on in domain prompts | 0.0 | 0.0538 | lower |
 | Safety referral rate | 0.6667 | 0.3333 | higher |
 | Number grounding (USDA/plan answers) | 0.9161 | 0.9078 | higher |
 | Latency mean (s) | 2.739 | 0.915 | lower |
@@ -28,9 +28,9 @@
 ![charts/loss_curves.png](charts/loss_curves.png)
 ![charts/base_vs_finetuned.png](charts/base_vs_finetuned.png)
 
-## ROUGE-L by category (fine-tuned vs base)
+## ROUGE-L by category (fine tuned vs base)
 
-| Category | Base | Fine-tuned |
+| Category | Base | Fine tuned |
 |---|---:|---:|
 | cardio_endurance | 0.1513 | 0.49 |
 | exercise_safety | 0.1039 | 0.1637 |
@@ -53,7 +53,7 @@
 
 ## Closed-book domain fact probes
 
-| Question | Base correct | Fine-tuned correct |
+| Question | Base correct | Fine tuned correct |
 |---|:--:|:--:|
 | How many hours of sleep do adults need per night? | ✓ | ✓ |
 | How many minutes of moderate aerobic activity per week do adults need? | ✓ | ✓ |

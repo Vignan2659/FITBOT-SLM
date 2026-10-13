@@ -46,7 +46,7 @@ jupyter notebook training/FitBot_FineTuning_4B.ipynb
 3. **CUDA out of memory:** in Section 0 uncomment `FITBOT_BATCH = "1"` and `FITBOT_MAX_LEN = "1024"`, restart and
    *Run All* (the effective batch stays 16).
 
-Time on an RTX 4070: model download 5-15 min, baseline evaluation 10-20 min, training 40-100 min, fine-tuned
+Time on an RTX 4070: model download 5-15 min, baseline evaluation 10-20 min, training 40-100 min, fine tuned
 evaluation 10-20 min, merge 5-15 min.
 
 The notebook is generated from `training/make_notebook_4b.py` (edit that file, then run it to regenerate).
@@ -62,7 +62,7 @@ The notebook is generated from `training/make_notebook_4b.py` (edit that file, t
 
 1. Zip the adapter the same way as the release asset (an `adapter/` folder plus `fitbot_model_card.json`).
 2. `.venv/bin/python scripts/setup_model.py --adapter path/to/your-adapter.zip --force`
-3. Copy the result files to `evaluation/training_run_4b/` and re-run `evaluation/run_test_suites.py`.
+3. Copy the result files to `evaluation/training_run_4b/` and re run `evaluation/run_test_suites.py`.
 
 ## Rebuilding the dataset
 

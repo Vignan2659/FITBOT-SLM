@@ -17,7 +17,7 @@
 └───────────────┬────────────────────────────────────────────────┘
                 │ loaded once at startup (FastAPI lifespan)
 ┌───────────────▼────────────────────────────────────────────────┐
-│ Fine-tuned Qwen3-4B (merged QLoRA)     · all-MiniLM-L6-v2       │
+│ Fine tuned Qwen3-4B (merged QLoRA)     · all-MiniLM-L6-v2       │
 │ intent classifier (TF-IDF+MiniLM → LR) · SQLite (fitbot.db)     │
 └────────────────────────────────────────────────────────────────┘
 ```
@@ -40,7 +40,7 @@ user message
  │     out_of_domain ──► fixed scope message ──► done
  │
  ├─3 Slots + dialogue state  (muscle group, level, equipment, location, goal, days, diet, foods, exercises)
- │     "I'm a beginner" / "I only have dumbbells" = constraint-only follow-up → keep previous intent/topic
+ │     "I'm a beginner" / "I only have dumbbells" = constraint-only follow up → keep previous intent/topic
  │     state is stored per conversation (conversations.state JSON); profile fills missing slots
  │
  ├─4 Retrieval
@@ -48,11 +48,11 @@ user message
  │                 · workout planner (multi-day plan or single-muscle workout)
  │     semantic:   knowledge-base passages via sentence-transformers (TF-IDF fallback)
  │
- ├─5 Prompt (ml/prompting.py — identical to training format)
+ ├─5 Prompt (ml/prompting.py, identical to training format)
  │     system prompt + user profile + "Reference information" lines + last exchange + question
  │
- ├─6 Fine-tuned SLM generation (ml/slm.py, greedy, repetition_penalty 1.1, ≤220 tokens)
- │     if the model emits its out-of-scope refusal for an in-domain question, regenerate once with the
+ ├─6 Fine tuned SLM generation (ml/slm.py, greedy, repetition_penalty 1.1, ≤220 tokens)
+ │     if the model emits its out of scope refusal for an in domain question, regenerate once with the
  │     refusal phrase blocked (bad_words_ids)
  │
  ├─7 Output safety: unsafe-advice patterns → safe fallback; medical intents → referral + disclaimer
@@ -66,7 +66,7 @@ Why this design:
 * **The SLM writes every normal answer.** Cards, plans and numbers come from structured data so
   that the model never needs to invent an exact nutrient value, an exercise image URL or a set/rep
   scheme – reducing hallucinations (the model was trained on the same context format).
-* **Guardrails are deterministic** for the small set of high-risk situations and for out-of-domain
+* **Guardrails are deterministic** for the small set of high-risk situations and for out of domain
   questions, so behaviour there does not depend on generation quality.
 * **One prompt builder** (`prompting.py`) is used by `scripts/build_dataset.py` and the backend, so
   training and inference prompts match token-for-token.
@@ -78,8 +78,8 @@ Why this design:
 | `data/exercises/exercises_v2.json` (871, used by the app), `exercises.json` (58 curated, v1) and `catalog.json` (876 raw) | `scripts/build_exercise_catalog_v2.py` / `scripts/build_exercise_db.py` from free-exercise-db (Unlicense) | exercise cards, planner, dataset grounding, `exercise_metadata` table |
 | `data/nutrition/foods.json` (111 foods) | `scripts/build_food_db.py` from USDA SR Legacy (CC0) | food cards, nutrition context, dataset grounding, `food_metadata` table |
 | `data/knowledge/knowledge_base.json` (76 passages) | written for the project, aligned with HHS/DGA/CDC/NASEM/ISSN/ACSM sources | semantic retrieval context |
-| `data/processed/*.jsonl` | `scripts/build_dataset.py` | SLM fine-tuning (train/val/test) |
-| `models/intent_classifier.joblib` | `scripts/train_intent_classifier.py` | intent + out-of-domain detection |
+| `data/processed/*.jsonl` | `scripts/build_dataset.py` | SLM fine tuning (train/val/test) |
+| `models/intent_classifier.joblib` | `scripts/train_intent_classifier.py` | intent + out of domain detection |
 
 ## 4. Database (SQLite + SQLAlchemy, `backend/app/db/models.py`)
 

@@ -1,6 +1,6 @@
 # FitBot test-suite results
 
-Model: `models/fitbot-qwen3-4b/merged` (fine-tuned: True, device: cuda)
+Model: `models/fitbot-qwen3-4b/merged` (fine tuned: True, device: cuda)
 
 | Suite | Questions | Pass rate | Avg latency (s) | Weakest check |
 |---|---:|---:|---:|---|

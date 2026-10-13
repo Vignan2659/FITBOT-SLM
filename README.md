@@ -1,195 +1,215 @@
-# FitBot – a local fitness assistant powered by a fine-tuned 4B language model
+<div align="center">
 
-FitBot is a chat assistant for workouts, exercises, nutrition, sleep and recovery. It runs **entirely on your
-own Mac**: a fine-tuned **Qwen3-4B** model answers questions, grounded in 871 real exercises (with photos) and
-USDA nutrition data, with a safety layer for medical topics. There are no cloud AI APIs and no accounts with
-third parties; your chats stay in a local SQLite database.
+<img src="media/preview.gif" alt="FitBot preview" width="760">
 
-> FitBot provides general fitness and wellness information and is not a substitute for professional medical advice.
+# FitBot
 
-<!-- Demo video: coming soon -->
+**A fitness assistant that runs on your own Mac, powered by a fine tuned 4 billion parameter language model.**
 
-## Features
+Ask about workouts, exercises, food, sleep or recovery and FitBot answers like a coach,
+with real exercise photos, real USDA nutrition numbers and a plan you can save.
 
-* **Chat about fitness**: workouts, exercises, weight loss, muscle gain, cardio, nutrition, hydration,
-  pre/post-workout food, sleep, recovery, stretching, equipment and lifestyle, with follow-up questions
-  ("I'm a beginner" → "I only have dumbbells").
-* **Exercise cards with real photos** for all **871 exercises** from the public-domain free-exercise-db: target
-  muscles, equipment, difficulty, step-by-step instructions and a safety tip.
-* **Food cards with USDA FoodData Central values** (111 foods): macros, % Daily Value, vitamins and minerals per
-  100 g or per household portion. Unknown values are never estimated.
-* **Workout planner**: beginner to advanced, gym / home / dumbbells / bodyweight, 1-6 days a week, with
-  sets, reps, rest and images.
-* **My workouts**: save plans from the chat, log workouts, weekly activity chart, streaks and personal bests.
-* **Safety guardrails** for emergencies, eating disorders, extreme diets, dehydration, PEDs, medication and injury
-  diagnosis, plus a refusal for off-topic questions.
-* Accounts with private chat history, optional profile (level, goal, diet, equipment) for personalised answers,
-  👍/👎 feedback, read-aloud and voice input, and an installable web app (PWA).
+[Watch the film](#the-film) &nbsp;·&nbsp; [See it in action](#screenshots) &nbsp;·&nbsp; [Run it yourself](#run-it-on-your-mac) &nbsp;·&nbsp; [Results](#results)
+
+</div>
+
+---
+
+## The film
+
+[![Watch the FitBot launch film](media/film_poster.jpg)](https://github.com/Vignan2659/FITBOT-SLM/releases/download/v1.0.0/FitBot_Launch_Film_1080p.mp4)
+
+A 2 minute 24 second walkthrough of the project in 1080p: the problem, the app, how the model was trained and the measured results.
+Click the picture to watch it, or open [`media/FitBot_Launch_Film_1080p.mp4`](media/FitBot_Launch_Film_1080p.mp4).
+Everything shown on screen is real output from the app.
+
+## What it does
+
+**Chat like you would with a trainer.** "What exercises can I do for chest?", "Give me a 3 day home plan, I'm a beginner with dumbbells", "What should I eat after working out?" FitBot remembers what you said earlier in the chat, so follow up questions just work.
+
+**Exercise cards with real photos.** 871 exercises from the public domain free exercise database, each with target muscles, equipment, difficulty, instructions and a safety tip.
+
+**Nutrition from USDA FoodData Central.** 111 foods with calories, macros, vitamins and minerals per 100 g or per portion. If a value is not in the USDA data, FitBot does not make one up.
+
+**Workout plans.** Beginner to advanced, gym or home, dumbbells or bodyweight, 1 to 6 days a week, with sets, reps and rest.
+
+**My workouts.** Save plans from the chat, log what you trained, and see your weekly activity and streaks.
+
+**Safety first.** Questions about injuries, medication, eating disorders or emergencies get a careful answer and a pointer to a professional. Questions that have nothing to do with fitness are politely declined.
+
+Everything runs locally. No cloud AI service is used and your chats stay in a small database on your own machine.
+
+> FitBot gives general fitness and wellness information. It is not a substitute for professional medical advice.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%"><img src="media/screenshots/chat_exercises.jpg" alt="Exercise cards in the chat"><br><sub><b>Exercise cards.</b> Real photos, target muscles and equipment for every exercise.</sub></td>
+    <td width="50%"><img src="media/screenshots/chat_plan.jpg" alt="Workout plan"><br><sub><b>Personal plans.</b> A 3 day home plan for a beginner with dumbbells.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="media/screenshots/chat_food.jpg" alt="USDA nutrition cards"><br><sub><b>Nutrition.</b> Values straight from USDA FoodData Central.</sub></td>
+    <td><img src="media/screenshots/dashboard.jpg" alt="Dashboard"><br><sub><b>Dashboard.</b> Quick start questions and the exercise explorer.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="media/screenshots/workouts.jpg" alt="My workouts"><br><sub><b>My workouts.</b> Log sessions, track streaks and your most trained exercises.</sub></td>
+    <td><img src="media/screenshots/login.jpg" alt="Login"><br><sub><b>Accounts.</b> Every user gets a private chat history.</sub></td>
+  </tr>
+</table>
 
 ## How it works
 
 ```mermaid
 flowchart LR
-    U[React web app] -->|/api/chat| B[FastAPI backend]
-    B --> S[Safety guardrails]
-    B --> I[Intent classifier<br/>TF-IDF + MiniLM]
-    B --> R[Retrieval<br/>exercises · USDA foods · guidance]
+    U[You] --> W[Web app<br/>React]
+    W --> B[Backend<br/>FastAPI]
+    B --> S[Safety checks]
+    B --> I[Topic detection]
+    B --> R[Exercise, food and<br/>guidance lookup]
     B --> P[Workout planner]
-    I & R & P --> M[Prompt builder]
-    M --> L[FitBot 4B<br/>Qwen3-4B + QLoRA<br/>Apple GPU]
-    L --> A[Answer + exercise / food cards / plan]
-    B --- D[(SQLite<br/>users · chats · workouts)]
+    I & R & P --> M[FitBot 4B model<br/>on the Mac GPU]
+    M --> A[Answer with cards<br/>and plans]
 ```
 
-The backend detects the intent, retrieves the facts the answer needs (exercise data, USDA numbers, plan) and puts
-them in the prompt, so the model writes the answer around real data instead of inventing it. The cards in the UI
-come straight from the data, not from the model. Details: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+When you ask something, the backend first works out the topic, then looks up the facts the answer needs (exercise details, USDA numbers or a generated plan) and gives them to the model together with your question. The model writes the answer around those facts instead of guessing, and the cards you see come straight from the data.
+More detail in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## The model
 
 | | |
 |---|---|
-| Base model | [`Qwen/Qwen3-4B-Instruct-2507`](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) (4.0 B parameters, Apache-2.0) |
-| Fine-tuning | QLoRA: 4-bit NF4 base, LoRA r = 16 on all attention + MLP layers (33 M trainable parameters), 2 epochs |
-| Data | FitBot dataset v2: 5,470 conversations (4,382 train / 527 validation / 561 test), built from 871 exercises, USDA foods, the planner and hand-written guidance; no external AI was used to write it |
-| Trained on | NVIDIA RTX 4070 (12 GB), 76 min of training |
-| Runs on | Apple Silicon Mac, float16 on the GPU (MPS); ~9-12 s per answer on an M5 with 16 GB |
+| Base model | [Qwen3 4B Instruct 2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), 4.0 billion parameters, Apache 2.0 license |
+| Training method | QLoRA: the base model loaded in 4 bit, with small LoRA adapters trained on top (33 million trainable parameters) |
+| Training data | 5,470 conversations written for this project from the exercise database, USDA foods, the planner and hand written guidance |
+| Training hardware | NVIDIA RTX 4070 with 12 GB, 76 minutes for 2 epochs |
+| Runs on | Any Apple Silicon Mac with 16 GB of memory, about 9 to 12 seconds per answer on an M5 |
 
-| | Base Qwen3-4B | **FitBot 4B** | FitBot 360M (v1) |
-|---|---:|---:|---:|
-| Test perplexity | 12.81 | **1.62** | 2.45 |
-| ROUGE-L, 97 v1 test questions | 0.228 | **0.604** | 0.488 |
-| ROUGE-L, 80 new v2 test questions | 0.225 | **0.676** | – |
-| Off-topic refusal rate | 0.00 | **1.00** | – |
-| Full app test suites (163 checks) | – | **93-94 %** | 92 % |
+<img src="evaluation/training_run_4b/loss_curves.png" alt="Training and validation loss" width="620">
 
-<img src="evaluation/training_run_4b/loss_curves.png" alt="Training and validation loss" width="560">
+## Results
 
-More: [docs/EVALUATION.md](docs/EVALUATION.md) · [docs/MODEL_SELECTION.md](docs/MODEL_SELECTION.md) ·
-[docs/TRAINING_GUIDE.md](docs/TRAINING_GUIDE.md).
+Tested on questions the model never saw during training.
 
-## Requirements
+| | Untrained Qwen3 4B | **FitBot 4B** | FitBot 360M (first version) |
+|---|:---:|:---:|:---:|
+| Test perplexity (lower is better) | 12.81 | **1.62** | 2.45 |
+| Answer similarity to reference answers, 97 original test questions | 0.23 | **0.60** | 0.49 |
+| Answer similarity, 80 new test questions | 0.23 | **0.68** | |
+| Off topic questions declined | 0% | **100%** | |
+| Full app test suite, 163 real questions and conversations | | **93%** | 92% |
 
-* A Mac with **Apple Silicon** (M1 or newer) and **16 GB of memory** or more (the model uses ~9-10 GB)
-* About **25 GB of free disk space** (the base model download plus the merged model)
-* **Python 3.12** ([python.org](https://www.python.org/downloads/) or `brew install python@3.12`)
-* **Node.js 18+** ([nodejs.org](https://nodejs.org) or `brew install node`), used once to build the web app
-* Internet for the first setup (~8.5 GB of downloads); after that FitBot runs offline
+Answer similarity is ROUGE L, on a scale from 0 to 1. Fine tuning made the answers almost three times closer to the reference answers than the untrained model.
+Full numbers in [docs/EVALUATION.md](docs/EVALUATION.md) and [evaluation/training_run_4b/results.json](evaluation/training_run_4b/results.json).
 
-## Quick start
+## Run it on your Mac
+
+**You need**
+
+* A Mac with Apple Silicon (M1 or newer) and at least 16 GB of memory
+* About 25 GB of free space
+* [Python 3.12](https://www.python.org/downloads/) and [Node.js](https://nodejs.org) (or `brew install python@3.12 node`)
+* Internet the first time, for about 8.5 GB of downloads
+
+**Install and start**
 
 ```bash
-git clone https://github.com/vignankarthikeya/FitBot.git
-cd FitBot
-bash setup.sh      # one time, ~20-40 min: Python packages, web app, model download + merge
-bash start.sh      # starts FitBot
+git clone https://github.com/Vignan2659/FITBOT-SLM.git
+cd FITBOT-SLM
+bash setup.sh
+bash start.sh
 ```
 
-Open **http://127.0.0.1:8000** when the terminal shows `Application startup complete` (the model loads in
-about 20-60 s), then create an account and start chatting.
+`setup.sh` only has to run once and takes 20 to 40 minutes. It installs the Python packages, builds the web app, downloads the FitBot adapter from the [releases page](https://github.com/Vignan2659/FITBOT-SLM/releases) and the base model from Hugging Face, and combines them into the final model. If it stops halfway, run it again and it picks up where it left off.
 
-`setup.sh` creates a Python environment in `.venv`, installs the exact package versions FitBot was tested with,
-writes `backend/.env` with a random secret, builds the web app, downloads the FitBot adapter (~120 MB) from the
-[latest release](../../releases/latest) and the base model from Hugging Face (~8 GB), and merges them into
-`models/fitbot-qwen3-4b/merged/`. Running it again skips finished steps.
+When the terminal says `Application startup complete`, open **http://127.0.0.1:8000**, create an account and start asking.
 
-**Next time** just run `bash start.sh`, or double-click **`FitBot.command`** in Finder (it opens the browser for
-you). Stop FitBot with **Ctrl + C** in its terminal, or close the terminal window.
+Next time, just run `bash start.sh` or double click **FitBot.command** in Finder. To stop FitBot press Ctrl + C in the terminal.
 
-Check that the right model is running at http://127.0.0.1:8000/health: it should show `"fine_tuned": true`,
-`"device": "mps"`, `"params_m": 4022.5` and `"exercises": 871`.
+<details>
+<summary><b>Something not working?</b></summary>
 
-## Configuration
+| Problem | Fix |
+|---|---|
+| `python3.12: command not found` | Install Python 3.12 from python.org, open a new terminal and run `bash setup.sh` again. |
+| Every message fails with "Request failed (500)" | Run `.venv/bin/pip install scikit-learn==1.9.1` and restart. |
+| The Mac gets very slow or says out of memory | Close other apps and browser tabs. The model needs about 10 GB free. Macs with 8 GB are too small. |
+| Answers look garbled | Add `FITBOT_DTYPE=bfloat16` to `backend/.env` and restart. |
+| `Address already in use` | An old FitBot is still running. `start.sh` stops it for you, or run `lsof -ti:8000 \| xargs kill`. |
+| The adapter download fails | Download `fitbot-qwen3-4b-adapter.zip` from the releases page and run `.venv/bin/python scripts/setup_model.py --adapter ~/Downloads/fitbot-qwen3-4b-adapter.zip` |
 
-Settings live in `backend/.env` (template: [`backend/.env.example`](backend/.env.example)). All are optional.
+You can check the model is loaded at http://127.0.0.1:8000/health. It should say `"fine_tuned": true` and `"device": "mps"`.
 
-| Variable | Default | Meaning |
+</details>
+
+<details>
+<summary><b>Settings</b></summary>
+
+Settings live in `backend/.env` (see [backend/.env.example](backend/.env.example)). All of them are optional.
+
+| Setting | Default | What it does |
 |---|---|---|
-| `FITBOT_MODEL_PATH` | `models/fitbot-qwen3-4b/merged` | Model folder (or a Hugging Face repo id) |
-| `FITBOT_DEVICE` | `auto` | `auto` picks the Apple GPU (`mps`); `cpu` also works, slowly |
-| `FITBOT_DTYPE` | `auto` | `float16` on the Mac GPU; try `bfloat16` if answers look garbled |
-| `FITBOT_EXERCISES_FILE` | `exercises/exercises_v2.json` | 871 exercises; `exercises/exercises.json` = 58 curated |
-| `FITBOT_MAX_NEW_TOKENS` | `220` | Maximum answer length |
-| `JWT_SECRET` | (generated) | Signs login tokens; keep it secret |
+| `FITBOT_MODEL_PATH` | `models/fitbot-qwen3-4b/merged` | Which model folder to load |
+| `FITBOT_DEVICE` | `auto` | `auto` uses the Mac GPU, `cpu` also works but is slow |
+| `FITBOT_DTYPE` | `auto` | Number format on the GPU, try `bfloat16` if answers look wrong |
+| `FITBOT_EXERCISES_FILE` | `exercises/exercises_v2.json` | All 871 exercises, or `exercises/exercises.json` for the 58 hand picked ones |
+| `FITBOT_MAX_NEW_TOKENS` | `220` | Longest answer the model writes |
 
-## Development
+</details>
+
+<details>
+<summary><b>For developers</b></summary>
+
+Run the backend and the web app separately with live reload:
 
 ```bash
-# backend with auto-reload (http://127.0.0.1:8000, API docs at /docs)
-cd backend && ../.venv/bin/uvicorn app.main:app --reload --port 8000
-# frontend dev server with hot reload (http://localhost:5173), in a second terminal
-cd frontend && npm run dev
+cd backend && ../.venv/bin/uvicorn app.main:app --reload --port 8000     # API docs at /docs
+cd frontend && npm run dev                                                # http://localhost:5173
 ```
 
 Tests:
 
 ```bash
-cd backend && ../.venv/bin/python -m pytest            # 78 API / pipeline / safety tests, no model needed (~20 s)
-cd backend && ../.venv/bin/python -m pytest -m slm     # end-to-end with the real model
-cd frontend && npm test                                # React component tests
-.venv/bin/python -m pytest e2e -q                      # browser tests (Playwright); needs the app running
+cd backend && ../.venv/bin/python -m pytest          # 81 backend tests, about 20 seconds
+cd frontend && npm test                              # web app tests
 .venv/bin/python evaluation/run_test_suites.py --out evaluation/my_results.json   # 163 checks with the real model
 ```
 
-**Re-training** the model needs an NVIDIA GPU (QLoRA does not run on a Mac): see
-[docs/TRAINING_GUIDE.md](docs/TRAINING_GUIDE.md).
+Training the model again needs an NVIDIA GPU, because 4 bit QLoRA does not run on a Mac. See [docs/TRAINING_GUIDE.md](docs/TRAINING_GUIDE.md).
+The film can be made again with `marketing/launch/make_film.command`.
 
-## Project structure
+</details>
+
+## What's in this repo
 
 ```
-FitBot/
-├── setup.sh · start.sh · FitBot.command   one-time setup, start, double-click launcher (macOS)
-├── backend/          FastAPI app: api/, core/, db/, ml/ (model, retrieval, intent, prompts), services/ + tests/
-├── frontend/         React + Vite web app (pages, components, tests)
+FITBOT-SLM/
+├── setup.sh, start.sh, FitBot.command   install, start, and a double click launcher
+├── backend/          FastAPI server: chat pipeline, model, search, safety, accounts, tests
+├── frontend/         React web app
 ├── data/
-│   ├── exercises/    exercises_v2.json (871) · exercises.json (58 curated) · catalog.json
-│   ├── nutrition/    foods.json (USDA SR Legacy subset)
-│   ├── knowledge/    knowledge_base.json (guidance passages for retrieval)
-│   ├── processed_v2/ dataset v2 used to train the 4B model
-│   ├── processed/    dataset v1 (its 97 test questions are the shared benchmark)
-│   └── image_dataset/ cleaned exercise-photo manifest
-├── models/           intent classifier (in git) + the 4B model (created by setup.sh)
-├── training/         4B QLoRA notebook, its generator and the executed run
-├── evaluation/       evaluation scripts, test suites, results for the 4B (training_run_4b) and 360M models
-├── scripts/          setup_model.py, dataset and catalog builders, intent classifier training
-├── docs/             architecture, dataset research, model selection, training, evaluation
-└── marketing/        scripts that render the promo / launch videos
+│   ├── exercises/    871 exercises (plus the 58 hand picked ones from version 1)
+│   ├── nutrition/    111 foods from USDA FoodData Central
+│   ├── knowledge/    guidance passages used when answering
+│   ├── processed_v2/ the 5,470 training conversations
+│   ├── processed/    the first dataset (its 97 test questions are used to compare both models)
+│   └── image_dataset/ 1,718 cleaned exercise photos split into train, validation and test
+├── training/         the QLoRA training notebook and the notebook from the actual run
+├── evaluation/       test suites, evaluation scripts and all results
+├── models/           topic classifier (the 4B model is downloaded by setup.sh)
+├── scripts/          model setup and the scripts that build the datasets
+├── docs/             architecture, datasets, model choice, training and evaluation
+├── marketing/        scripts that make the film
+└── media/            the film, preview and screenshots used on this page
 ```
 
-## Troubleshooting
+## Data and credits
 
-| Problem | Fix |
-|---|---|
-| `python3.12: command not found` | Install Python 3.12 from python.org, open a new terminal, run `bash setup.sh` again. |
-| Every chat message fails with "Request failed (500)" and the terminal mentions `multi_class` or `InconsistentVersionWarning` | The intent classifier needs scikit-learn 1.9.1: `.venv/bin/pip install scikit-learn==1.9.1` |
-| Very slow, the Mac freezes, or `MPS backend out of memory` | Close other apps and browser tabs; the model needs ~9-10 GB free. 8 GB Macs are too small. |
-| Answers are empty, garbled or `!!!!` | Add `FITBOT_DTYPE=bfloat16` to `backend/.env` and restart (or `float32`, slower, ~16 GB). |
-| `Address already in use` | An old server is still running; `start.sh` stops it, or run `lsof -ti:8000 \| xargs kill`. |
-| An operation "not implemented for MPS" | Start with `start.sh` (it sets `PYTORCH_ENABLE_MPS_FALLBACK=1`); last resort `FITBOT_DEVICE=cpu`. |
-| Adapter download fails | Download `fitbot-qwen3-4b-adapter.zip` from the release page and run `.venv/bin/python scripts/setup_model.py --adapter ~/Downloads/fitbot-qwen3-4b-adapter.zip` |
-| `/health` shows `"retriever": "tfidf"` | The search model couldn't download on first start; it still works. Restart once with internet. |
+* Exercises and photos: [free exercise db](https://github.com/yuhonas/free-exercise-db) by yuhonas, public domain (Unlicense)
+* Nutrition: USDA Agricultural Research Service, FoodData Central, SR Legacy 2018, CC0
+* Intent examples: [harshmakwana/fitness-intent](https://huggingface.co/datasets/harshmakwana/fitness-intent), MIT
+* Base model: [Qwen3 4B Instruct 2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), Apache 2.0
+* Search embeddings: [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), Apache 2.0
 
-## Publishing a release (maintainers)
-
-The model weights are too big for git, so the LoRA adapter is attached to a GitHub release:
-
-```bash
-mkdir -p release/stage && cp -R models/fitbot-qwen3-4b/adapter release/stage/ \
-  && cp models/fitbot-qwen3-4b/fitbot_model_card.json release/stage/ \
-  && (cd release/stage && zip -qr ../fitbot-qwen3-4b-adapter.zip .) && rm -rf release/stage
-gh release create v1.0.0 release/fitbot-qwen3-4b-adapter.zip --title "FitBot 4B v1.0.0"
-```
-
-`scripts/setup_model.py` downloads `releases/download/v1.0.0/fitbot-qwen3-4b-adapter.zip` by default
-(override with `FITBOT_ADAPTER_URL`).
-
-## Data, model licenses and attribution
-
-* Exercise data and images: [free-exercise-db](https://github.com/yuhonas/free-exercise-db) by yuhonas, Unlicense (public domain).
-* Nutrition data: U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, SR Legacy (2018). CC0 1.0.
-* Intent examples: [harshmakwana/fitness-intent](https://huggingface.co/datasets/harshmakwana/fitness-intent), MIT.
-* Base model: [Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), Apache-2.0.
-* Search embeddings: [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), Apache-2.0.
-
-Built as a college project. Technology: Python 3.12, FastAPI, SQLAlchemy, SQLite, PyTorch, Transformers, PEFT,
-Sentence Transformers, scikit-learn, React 18, Vite. Full write-up: [PROJECT_REPORT.md](PROJECT_REPORT.md).
+Built as a college project by [Vignan2659](https://github.com/Vignan2659), presented for Veltris.
+The full project report is in [PROJECT_REPORT.md](PROJECT_REPORT.md).

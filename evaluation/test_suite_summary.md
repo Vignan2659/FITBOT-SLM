@@ -1,6 +1,6 @@
 # FitBot test-suite results
 
-Model: `models/fitbot-smollm2-360m-lora/merged` (fine-tuned: True, device: mps)
+Model: `models/fitbot-smollm2-360m-lora/merged` (fine tuned: True, device: mps)
 
 | Suite | Questions | Pass rate | Avg latency (s) | Weakest check |
 |---|---:|---:|---:|---|
