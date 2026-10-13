@@ -21,7 +21,7 @@ from playwright.sync_api import sync_playwright
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 BUILD = HERE / "build"
-OUT = ROOT / "marketing" / "FitBot_Veltris_Launch.mp4"
+OUT = ROOT / "marketing" / "FitBot_v2_Launch.mp4"
 FPS = 30
 
 

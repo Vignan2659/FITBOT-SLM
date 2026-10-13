@@ -183,6 +183,29 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
 .check b { font-size: 27px; font-weight: 700; display: block; } .check span { font-size: 17px; color: #94a59f; }
 #slmFinal { width: 1100px; height: 560px; }
 
+/* ---------------- results ---------------- */
+#stats { position: absolute; left: 0; right: 0; top: 190px; display: flex; justify-content: center; gap: 34px; }
+.stat { width: 360px; padding: 30px 34px 32px; }
+.stat b { display: block; font-size: 76px; font-weight: 900; letter-spacing: -.02em; line-height: 1;
+  background: linear-gradient(180deg, #fff 35%, #a7f3e8); -webkit-background-clip: text; color: transparent; }
+.stat span { display: block; margin-top: 12px; font-size: 21px; font-weight: 600; color: #94a59f; }
+#bars { position: absolute; left: 150px; top: 470px; width: 980px; height: 440px; padding: 34px 42px; }
+#bars h6, #ringBox h6 { font-size: 15px; letter-spacing: .25em; color: #5eead4; font-weight: 700; }
+#bars .sub { font-size: 17px; color: #94a59f; margin-top: 8px; }
+.bar { position: absolute; left: 42px; right: 42px; height: 74px; }
+.bar label { position: absolute; left: 0; top: 0; width: 250px; height: 74px; font-size: 22px; font-weight: 700; line-height: 1.25;
+  display: flex; flex-direction: column; justify-content: center; }
+.bar label small { font-weight: 500; color: #94a59f; font-size: 16px; margin-top: 2px; }
+.bar .bt { position: absolute; left: 260px; right: 110px; top: 21px; height: 32px; border-radius: 10px; background: rgba(255,255,255,.06); overflow: hidden; }
+.bar .bf { height: 100%; width: 0; border-radius: 10px; }
+.bar em { position: absolute; right: 0; top: 0; line-height: 74px; font-style: normal; font-size: 30px; font-weight: 800; }
+#ringBox { position: absolute; left: 1170px; top: 470px; width: 600px; height: 440px; padding: 34px 42px; }
+#ring { position: absolute; left: 42px; top: 92px; width: 300px; height: 300px; }
+#ringNum { position: absolute; left: 42px; top: 92px; width: 300px; height: 300px; display: grid; place-items: center; text-align: center; }
+#ringNum b { font-size: 84px; font-weight: 900; line-height: 1; } #ringNum span { display: block; font-size: 17px; color: #94a59f; margin-top: 6px; font-weight: 600; }
+.rk { position: absolute; left: 370px; width: 200px; }
+.rk b { display: block; font-size: 44px; font-weight: 900; color: #5eead4; } .rk span { font-size: 17px; color: #94a59f; font-weight: 600; line-height: 1.35; display: block; }
+
 /* ---------------- experience ---------------- */
 #wall { position: absolute; inset: 0; transform-style: preserve-3d; }
 .shot { position: absolute; width: 1100px; height: 688px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.14);
@@ -235,7 +258,7 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
     <div class="ring" id="ring1"></div><div class="ring" id="ring2"></div><div class="ring" id="ring3"></div>
     <div id="mark"></div>
     <div id="word"></div>
-    <div id="sub">Fitness Intelligence Powered by a <b>Domain-Specific SLM</b></div>
+    <div id="sub">Fitness Intelligence Powered by a <b>Fine-Tuned 4B Language Model</b></div>
     <div id="triad"><span>Understand.</span><span>Personalize.</span><span>Recommend.</span></div>
   </div>
 
@@ -271,11 +294,26 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
     <div class="kicker">Trained for the fitness domain</div>
     <div class="tpanel" id="dataset"></div>
     <div class="tpanel" id="gpu"><svg id="chip" viewBox="0 0 440 440"></svg>
-      <div class="glass" id="loss"><h6>FINE-TUNING · LOSS</h6><div class="legend"><span><i style="background:#5eead4"></i>Training</span><span><i style="background:#f59e0b"></i>Validation</span></div><svg id="lossSvg" viewBox="0 0 660 320" style="width:660px;height:320px;margin-top:6px"></svg></div>
+      <div class="glass" id="loss"><h6>QWEN3-4B FINE-TUNING · LOSS</h6><div class="legend"><span><i style="background:#5eead4"></i>Training (smoothed)</span><span><i style="background:#f59e0b"></i>Validation</span></div><svg id="lossSvg" viewBox="0 0 660 320" style="width:660px;height:320px;margin-top:6px"></svg></div>
     </div>
     <div class="tpanel" id="checks"></div>
     <div class="tpanel" id="slmFinal"></div>
     <div id="track"><div id="trackLine" style="right:0"></div><div id="trackFill"></div></div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="layer" id="L_results">
+    <div class="kicker">Measured results</div>
+    <div id="stats"></div>
+    <div class="glass" id="bars"><h6>ANSWER QUALITY · ROUGE-L</h6><div class="sub">Similarity to reference answers on the 97 shared test questions</div></div>
+    <div class="glass" id="ringBox"><h6>FULL APP TEST SUITES</h6>
+      <svg id="ring" viewBox="0 0 300 300"><circle cx="150" cy="150" r="128" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="22"/>
+        <circle id="ringArc" cx="150" cy="150" r="128" fill="none" stroke="url(#rg)" stroke-width="22" stroke-linecap="round" transform="rotate(-90 150 150)"/>
+        <defs><linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#14b8a6"/><stop offset="1" stop-color="#a7f3e8"/></linearGradient></defs></svg>
+      <div id="ringNum"><div><b id="ringPct">0%</b><span>of 163 checks</span></div></div>
+      <div class="rk" id="rk0" style="top:120px"><b>100%</b><span>off-topic questions declined</span></div>
+      <div class="rk" id="rk1" style="top:250px"><b>96%</b><span>numbers grounded in real data</span></div>
+    </div>
   </div>
 
   <!-- EXPERIENCE -->
@@ -288,7 +326,7 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
   <!-- OUTRO (light) -->
   <div class="layer" id="L_outro" style="perspective:none">
     <div id="tagline">Built for Real-World Fitness Experiences</div>
-    <div id="fbLock"><div class="bm2" id="bm2"></div><div><b>FITBOT</b><small>Fitness Small Language Model</small></div></div>
+    <div id="fbLock"><div class="bm2" id="bm2"></div><div><b>FITBOT</b><small>Fine-tuned Qwen3-4B · runs on your Mac</small></div></div>
     <div id="divider"></div>
     <div id="presented">PRESENTED BY</div>
     <img id="logoEnd" src="assets/veltris_logo.png" alt="Veltris">
@@ -453,7 +491,7 @@ const NODES = [
   { k: "ui", t: "FitBot Interface", e: "💬", at: () => W("architecture", 0, "interface") },
   { k: "intent", t: "Intent Understanding", e: "🧭", at: () => W("architecture", 0, "intent") },
   { k: "know", t: "Fitness & Nutrition Knowledge", e: "📚", at: () => L0("architecture", 1) },
-  { k: "slm", t: "Domain-Specific SLM", e: "", at: () => W("architecture", 2, "domain") },
+  { k: "slm", t: "FitBot 4B Model", e: "", at: () => W("architecture", 2, "domain") },
   { k: "resp", t: "Personalized Response", e: "✨", at: () => W("architecture", 2, "personalized") },
 ];
 const NX = [175, 455, 735, 1030, 1345, 1690];
@@ -477,7 +515,7 @@ $("#dataset").innerHTML = SAMPLES.slice(0, 3).map((s, i) => `<div class="sheet g
   <div>&nbsp;&nbsp;<span class="k">"intent"</span>: <span class="s">"${s.intent}"</span>,</div>
   <div>&nbsp;&nbsp;<span class="k">"response"</span>: <span class="s">"${s.response.slice(0, 58)}…"</span> }</div></div>`).join("") +
   `<div class="abs" id="prep" style="left:820px;top:220px;font-size:20px;font-weight:600;color:#94a59f;width:280px">
-   <div class="pp">✓ Grounded in exercise &amp; USDA data</div><div class="pp" style="margin-top:14px">✓ Train / validation / test split</div>
+   <div class="pp">✓ 5,470 conversations · 871 exercises</div><div class="pp" style="margin-top:14px">✓ Grounded in exercise &amp; USDA data</div><div class="pp" style="margin-top:14px">✓ Train / validation / test split</div>
    <div class="pp" style="margin-top:14px">✓ Safety &amp; out-of-scope examples</div></div>`;
 (function () {
   let s = `<defs><radialGradient id="dieG"><stop offset="0" stop-color="#5eead4" stop-opacity=".9"/><stop offset="1" stop-color="#0f766e" stop-opacity=".15"/></radialGradient></defs>
@@ -486,9 +524,11 @@ $("#dataset").innerHTML = SAMPLES.slice(0, 3).map((s, i) => `<div class="sheet g
     s += `<rect x="${p}" y="40" width="10" height="30" rx="3" fill="#3b4b47"/><rect x="${p}" y="370" width="10" height="30" rx="3" fill="#3b4b47"/>
           <rect x="40" y="${p}" width="30" height="10" rx="3" fill="#3b4b47"/><rect x="370" y="${p}" width="30" height="10" rx="3" fill="#3b4b47"/>`; }
   for (let r = 0; r < 8; r++) for (let c = 0; c < 8; c++) s += `<rect class="core" data-r="${r}" data-c="${c}" x="${102 + c * 30}" y="${102 + r * 30}" width="24" height="24" rx="4" fill="#5eead4"/>`;
-  s += `<text x="220" y="430" text-anchor="middle" font-size="20" font-weight="700" fill="#94a59f" letter-spacing="4" font-family="Inter">GPU</text>`;
+  s += `<text x="220" y="430" text-anchor="middle" font-size="20" font-weight="700" fill="#94a59f" letter-spacing="4" font-family="Inter">RTX 4070 · QLoRA</text>`;
   $("#chip").innerHTML = s;
-  const tr = DATA.loss_curve.train, va = DATA.loss_curve.validation;
+  const raw = DATA.loss_curve.train, va = DATA.loss_curve.validation;
+  // display: centred moving average of the logged training loss (the raw log is noisy step to step)
+  const tr = raw.map((p, i) => { const w = raw.slice(Math.max(0, i - 3), i + 4); return [p[0], w.reduce((a, q) => a + q[1], 0) / w.length]; });
   const maxS = Math.max(...tr.map((p) => p[0])), all = tr.concat(va).map((p) => p[1]);
   const lo = Math.min(...all), hi = Math.max(...all);
   const X = (st) => 20 + (st / maxS) * 620, Y = (v) => 20 + (1 - (v - lo) / (hi - lo)) * 270;
@@ -501,9 +541,16 @@ $("#dataset").innerHTML = SAMPLES.slice(0, 3).map((s, i) => `<div class="sheet g
 const CHECKS = [["Validation", "Monitored on a held-out validation split"], ["Testing", "Evaluated on held-out test questions"], ["Application tests", "Safety, out-of-scope and end-to-end checks"]];
 $("#checks").innerHTML = CHECKS.map(([a, b], i) => `<div class="check glass" id="ck${i}" style="top:${60 + i * 150}px"><div class="cb" id="cb${i}"></div><div><b>${a}</b><span>${b}</span></div></div>`).join("");
 $("#slmFinal").innerHTML = `<div class="abs" id="slmMark" style="left:440px;top:120px;width:220px;height:220px;border-radius:56px;background:linear-gradient(145deg,#34e0cb,#0f9e8e);display:grid;place-items:center;box-shadow:0 30px 90px rgba(45,212,191,.45)">${DUMBBELL.replace('<svg ', '<svg width="130" height="130" ')}</div>
-  <div class="abs" id="slmLabel" style="left:0;right:0;top:380px;text-align:center;font-size:44px;font-weight:800">Fitness SLM <span style="color:#5eead4">→</span> Application</div>`;
-const STEPS = ["Dataset", "Data Preparation", "Fine-Tuning", "Validation", "Testing", "Fitness SLM", "Application"];
+  <div class="abs" id="slmLabel" style="left:0;right:0;top:380px;text-align:center;font-size:44px;font-weight:800">FitBot 4B <span style="color:#5eead4">→</span> Application</div>`;
+const STEPS = ["Dataset", "Data Preparation", "QLoRA Fine-Tuning", "Validation", "Testing", "FitBot 4B", "Application"];
 $("#track").insertAdjacentHTML("beforeend", STEPS.map((s, i) => `<div class="step" id="st${i}" style="left:${(i / (STEPS.length - 1)) * 100}%"><i></i><span>${s}</span></div>`).join(""));
+
+// results (measured: evaluation/training_run_4b/results.json, evaluation/test_suite_summary_4b.md)
+const STATS = [["4.0B", "model parameters"], ["871", "exercises with photos"], ["5,470", "training conversations"], ["1.62", "test perplexity (base: 12.8)"]];
+$("#stats").innerHTML = STATS.map(([v, l], i) => `<div class="stat glass" id="stt${i}"><b id="stv${i}">${v}</b><span>${l}</span></div>`).join("");
+const BARS = [["Base Qwen3-4B", "untrained", .228, "#64748b"], ["FitBot 360M", "previous version", .488, "#38bdf8"], ["FitBot 4B", "fine-tuned", .604, "#2dd4bf"]];
+$("#bars").insertAdjacentHTML("beforeend", BARS.map(([n, s, v, c], i) => `<div class="bar" id="br${i}" style="top:${130 + i * 96}px">
+  <label><span>${n}</span><small>${s}</small></label><div class="bt"><div class="bf" id="bf${i}" style="background:linear-gradient(90deg, ${c}88, ${c})"></div></div><em id="bv${i}" style="color:${c}">0.00</em></div>`).join(""));
 
 // experience wall (real screenshots)
 const SHOTS = ["dashboard", "chat_exercises", "chat_plan", "chat_food", "workouts"];
@@ -573,7 +620,7 @@ function irisRadius(t, at, dur = 1.0) { return P(t, at, at + dur, ease.inOut) * 
 function renderBg(t) {
   const darkStart = S.problem.start - 0.55, lightStart = OUT.start - 0.5;
   let net = 0.25;
-  if (t > S.architecture.start - 1 && t < S.training.end) net = 1;
+  if (t > S.architecture.start - 1 && t < S.results.end) net = 1;
   else if (t > S.identity.start && t < S.identity.end) net = .55;
   ctx.clearRect(0, 0, 1920, 1080);
   if (t < darkStart) { drawLight(t, 1); drawLightParticles(t, P(t, 0, 3.0, ease.inOut)); return; }
@@ -852,6 +899,30 @@ function renderTraining(t) {
   setT(fm, `perspective(900px) rotateY(${(1 - fk) * 90 + Math.sin(lt) * 5}deg) scale(${lerp(.6, 1, fk)})`);
 }
 
+function renderResults(t) {
+  const s = S.results, L = $("#L_results"); const a = sceneAlpha(t, s, .7, .7, .3); show(L, a); if (a <= 0) return;
+  const lt = t - s.start;
+  const fmt = (v, ref) => ref.includes(",") ? Math.round(v).toLocaleString("en-US") : ref.includes(".") ? v.toFixed(ref.split(".")[1].replace(/[^0-9]/g, "").length) + ref.replace(/[0-9.,]/g, "") : Math.round(v) + ref.replace(/[0-9.,]/g, "");
+  STATS.forEach(([v], i) => { const el = $("#stt" + i); const k = P(t, s.start + .1 + i * .18, s.start + .9 + i * .18, ease.back);
+    el.style.opacity = P(t, s.start + i * .18, s.start + .5 + i * .18); setT(el, `translateY(${(1 - k) * 50 + Math.sin(lt * 1.1 + i) * 4}px) scale(${lerp(.9, 1, k)})`);
+    const target = parseFloat(v.replace(/,/g, "")); const c = P(t, s.start + .2 + i * .18, s.start + 1.8 + i * .18, ease.expo);
+    $("#stv" + i).textContent = fmt(target * c, v); });
+  const barsIn = W("results", 1, "answers"); const bx = $("#bars"); const kb = P(t, barsIn - .6, barsIn + .2, ease.out);
+  bx.style.opacity = kb; setT(bx, `translateY(${(1 - kb) * 40}px)`);
+  BARS.forEach(([, , v], i) => { const k = P(t, barsIn + .1 + i * .55, barsIn + 1.3 + i * .55, ease.inOut);
+    $("#bf" + i).style.width = `${(v / .7) * 100 * k}%`; $("#bv" + i).textContent = (v * k).toFixed(2);
+    $("#br" + i).style.opacity = .35 + .65 * P(t, barsIn + i * .55, barsIn + .4 + i * .55); });
+  const glow = P(t, W("results", 1, "nearly three") - .2, W("results", 1, "nearly three") + .5, ease.back);
+  $("#bf2").style.boxShadow = `0 0 ${30 * glow}px rgba(45,212,191,${.7 * glow})`;
+  const ringIn = L0("results", 2); const rb = $("#ringBox"); const kr = P(t, ringIn - .6, ringIn + .2, ease.out);
+  rb.style.opacity = kr; setT(rb, `translateY(${(1 - kr) * 40}px)`);
+  const pk = P(t, W("results", 2, "FitBot") - .3, W("results", 2, "93%") + .3, ease.inOut); const C = 2 * Math.PI * 128;
+  const arc = $("#ringArc"); arc.style.strokeDasharray = C; arc.style.strokeDashoffset = C * (1 - .933 * pk);
+  $("#ringPct").textContent = Math.round(93 * pk) + "%";
+  [["#rk0", W("results", 2, "declines")], ["#rk1", W("results", 2, "declines") + .8]].forEach(([sel, at]) => { const el = $(sel); const k = P(t, at - .2, at + .5, ease.back);
+    el.style.opacity = k; setT(el, `translateX(${(1 - k) * 30}px)`); });
+}
+
 function renderExperience(t) {
   const s = S.experience, L = $("#L_experience"); const a = sceneAlpha(t, s, .7, .8, .3); show(L, a); if (a <= 0) return;
   // cover-flow across the real app screens: the focused screen is large and flat, neighbours angle away
@@ -884,7 +955,7 @@ function renderOutro(t) {
 
 function render(t) {
   renderBg(t);
-  renderIntro(t); renderProblem(t); renderIdentity(t); renderApp(t); renderArchitecture(t); renderTraining(t); renderExperience(t); renderOutro(t);
+  renderIntro(t); renderProblem(t); renderIdentity(t); renderApp(t); renderArchitecture(t); renderTraining(t); renderResults(t); renderExperience(t); renderOutro(t);
   // subtle Veltris badge during the dark middle section
   const bug = $("#bug"); bug.style.opacity = .92 * P(t, S.problem.start + 1.5, S.problem.start + 2.5) * (1 - P(t, OUT.start - 1.2, OUT.start - .4));
   drawGrain(t);

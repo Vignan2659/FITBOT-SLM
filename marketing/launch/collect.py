@@ -1,6 +1,6 @@
 """Collect REAL FitBot output for the launch film (nothing on screen is invented).
 
-Needs the app running (backend :8000, frontend :5173). Creates a fresh demo account, asks the real model,
+Needs the app running (bash start.sh -> http://127.0.0.1:8000). Creates a fresh demo account, asks the real model,
 and saves:
   build/data.json      chat answers, exercise cards, workout plan, USDA food cards, training-loss curve
   build/shots/*.png    screenshots of the real UI (dark theme, 2x resolution)
@@ -18,7 +18,7 @@ from playwright.sync_api import sync_playwright
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 BUILD = HERE / "build"
-API, UI = "http://127.0.0.1:8000", "http://127.0.0.1:5173"
+API = UI = "http://127.0.0.1:8000"   # the backend serves the built web app
 
 QUESTIONS = {
     "exercises": "What exercises can I do for chest?",
@@ -64,7 +64,7 @@ def main() -> None:
             log.append({"day": str(today - timedelta(days=back)), "exercise": e["name"], "notes": f"{day['day']}: {e['sets']} × {e['reps']}"})
     call("/workouts", log, tok)
 
-    hist = json.loads((ROOT / "evaluation" / "training_run" / "log_history.json").read_text())
+    hist = json.loads((ROOT / "evaluation" / "training_run_4b" / "log_history.json").read_text())
     curve = {"train": [[x["step"], x["loss"]] for x in hist if "loss" in x],
              "validation": [[x["step"], x["eval_loss"]] for x in hist if "eval_loss" in x]}
     (BUILD / "data.json").write_text(json.dumps({"answers": answers, "loss_curve": curve}, indent=1))

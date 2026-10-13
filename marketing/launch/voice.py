@@ -3,7 +3,8 @@
     .venv/bin/python marketing/launch/voice.py [--voice Samantha] [--rate 172]
 
 Writes build/vo/*.wav, build/voiceover.wav and build/timeline.json.
-`--voice` takes any voice from `say -v '?'` (e.g. "Ava (Premium)" once downloaded in System Settings).
+`--voice auto` (default) uses the Kokoro neural voice when marketing/launch/.venv-tts exists, else the best
+macOS voice. `--voice` also takes any voice from `say -v '?'` (e.g. "Ava (Premium)" once downloaded in System Settings).
 """
 from __future__ import annotations
 
@@ -27,11 +28,28 @@ def ffmpeg() -> str:
     return imageio_ffmpeg.get_ffmpeg_exe()
 
 
+KOKORO_PY = HERE / ".venv-tts" / "bin" / "python"
+
+
+def kokoro_batch(jobs: list[tuple[str, Path]]) -> bool:
+    """Render every line with the Kokoro neural voice in one process. False if it is not available / fails."""
+    if not KOKORO_PY.exists():
+        return False
+    spec = BUILD / "vo" / "kokoro_jobs.json"
+    spec.write_text(json.dumps([{"text": t, "out": str(o.with_suffix(".k24.wav"))} for t, o in jobs]))
+    r = subprocess.run([str(KOKORO_PY), str(HERE / "tts_kokoro.py"), str(spec)])
+    return r.returncode == 0 and all(o.with_suffix(".k24.wav").exists() for _, o in jobs)
+
+
 def tts(text: str, out: Path, voice: str, rate: int) -> np.ndarray:
-    aiff = out.with_suffix(".aiff")
-    subprocess.run(["say", "-v", voice, "-r", str(rate), "-o", str(aiff), text], check=True)
-    subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", str(aiff), "-ac", "1", "-ar", str(SR), str(out)], check=True)
-    aiff.unlink()
+    k24 = out.with_suffix(".k24.wav")
+    if voice == "kokoro" and k24.exists():
+        src = k24
+    else:
+        src = out.with_suffix(".aiff")
+        subprocess.run(["say", "-v", voice, "-r", str(rate), "-o", str(src), text], check=True)
+    subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-i", str(src), "-ac", "1", "-ar", str(SR), str(out)], check=True)
+    src.unlink()
     with wave.open(str(out)) as w:
         a = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32) / 32768
     # trim leading/trailing silence so timings are tight
@@ -39,12 +57,34 @@ def tts(text: str, out: Path, voice: str, rate: int) -> np.ndarray:
     return a[max(idx[0] - 240, 0): idx[-1] + 960] if len(idx) else a
 
 
+PREFERRED = ["Ava", "Zoe", "Evan", "Nathan", "Joelle", "Noelle", "Tom", "Allison", "Susan", "Samantha"]
+
+
+def best_voice() -> str:
+    """Most natural installed en_US voice: any Premium, then Enhanced, then Samantha."""
+    out = subprocess.run(["say", "-v", "?"], capture_output=True, text=True).stdout.splitlines()
+    names = [l.split("  ")[0].strip() for l in out if " en_US " in l or "en_US" in l.split("#")[0]]
+    for tier in ("(Premium)", "(Enhanced)"):
+        tiered = [n for n in names if n.endswith(tier)]
+        for pref in PREFERRED:
+            if f"{pref} {tier}" in tiered:
+                return f"{pref} {tier}"
+        if tiered:
+            return tiered[0]
+    return "Samantha"
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--voice", default="Samantha")
+    ap.add_argument("--voice", default="auto")
     ap.add_argument("--rate", type=int, default=172)
     args = ap.parse_args()
     (BUILD / "vo").mkdir(parents=True, exist_ok=True)
+    if args.voice in ("auto", "kokoro"):
+        jobs = [(spoken or caption, BUILD / "vo" / f"{sid}_{i}.wav")
+                for sid, _, lines, _ in SCENES for i, (caption, spoken) in enumerate(lines)]
+        args.voice = "kokoro" if kokoro_batch(jobs) else best_voice()
+    print("voice:", args.voice)
 
     t, track, scenes = 0.0, [], []
     for sid, lead, lines, tail in SCENES:

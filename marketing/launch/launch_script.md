@@ -1,45 +1,52 @@
-# FitBot × Veltris – launch film script
+# FitBot v2 – launch film script
 
-Duration: 2:03.1 · 1920×1080 · 30 fps · voice: Samantha (General American English)
+Duration: 2:23.8 · 1920×1080 · 30 fps · voice: Kokoro neural TTS (af_heart), with macOS voices as fallback
 
-All product content on screen is real FitBot output (answers, exercise cards, workout plan, USDA food values, training-loss curve, app screenshots). No customers, statistics, accuracy figures or medical claims.
+Output: `marketing/FitBot_v2_Launch.mp4` (1080p) and `marketing/FitBot_v2_Launch_small.mp4` (720p). Re-render with `marketing/launch/make_film.command` (about 15 minutes).
 
-## 0:00.0 – 0:05.4  Veltris logo reveal
+All product content on screen is real FitBot output (answers, exercise cards, workout plan, USDA food values, app screenshots). Every number is measured (`evaluation/training_run_4b/results.json`, `evaluation/test_suite_summary_4b.md`). No customers, testimonials or medical claims.
+
+## 0:00.0 – 0:05.3  Veltris logo reveal
 * **0:02.2** Veltris presents FitBot.
 
-## 0:05.4 – 0:15.2  The problem: fragmented fitness information
-* **0:05.9** Fitness information is fragmented.
-* **0:08.2** Workouts live in one app, nutrition in another, and advice on sleep and recovery is scattered everywhere else.
+## 0:05.3 – 0:15.1  The problem: fragmented fitness information
+* **0:05.8** Fitness information is fragmented.
+* **0:08.1** Workouts live in one app, nutrition in another, and advice on sleep and recovery is scattered everywhere else.
 
-## 0:15.2 – 0:28.6  FitBot identity
-* **0:15.8** Meet FitBot: an AI assistant powered by a small language model, built specifically for fitness and wellness.
-* **0:22.5** It understands your question, personalizes the answer, and recommends what to do next.
+## 0:15.1 – 0:29.9  FitBot identity
+* **0:15.7** Meet FitBot: a fitness assistant powered by a fine-tuned, four-billion-parameter language model that runs privately, right on your Mac.
+* **0:24.0** It understands your question, personalizes the answer, and recommends what to do next.
 
-## 0:28.6 – 0:42.9  Demo: exercise cards
-* **0:29.4** Just ask in plain language.
-* **0:31.4** FitBot responds with exercise cards: real images, target muscles, equipment, and difficulty, for strength, cardio, and stretching, at home or in the gym.
+## 0:29.9 – 0:44.9  Demo: exercise cards (871 exercises)
+* **0:30.7** Just ask in plain language.
+* **0:32.5** FitBot answers with exercise cards from a library of 871 exercises: real images, target muscles, equipment, and difficulty, at home or in the gym.
 
-## 0:42.9 – 0:56.1  Personalization
-* **0:43.4** And it adapts to you.
-* **0:44.8** Tell FitBot you're a beginner with dumbbells at home, and your level, goal, equipment, and environment shape a complete plan, with sets, reps, and rest for every day.
+## 0:44.9 – 0:57.4  Personalization: workout plan
+* **0:45.4** And it adapts to you.
+* **0:46.7** Tell FitBot you're a beginner with dumbbells at home, and your level, goal, equipment, and environment shape a complete plan, with sets, reps, and rest for every day.
 
-## 0:56.1 – 1:13.3  Nutrition (USDA)
-* **0:56.7** Nutrition answers use values from USDA FoodData Central: calories, protein, carbohydrates, fat, and fiber, instead of guesswork.
-* **1:06.6** The same assistant also covers hydration, sleep, recovery, cardio, and weight loss.
+## 0:57.4 – 1:13.6  Nutrition (USDA)
+* **0:58.0** Nutrition answers use values from USDA FoodData Central: calories, protein, carbohydrates, fat, and fiber, instead of guesswork.
+* **1:07.4** The same assistant also covers hydration, sleep, recovery, cardio, and weight loss.
 
-## 1:13.3 – 1:27.0  How it works
-* **1:13.9** Behind the scenes, every question moves from the interface to intent understanding,
-* **1:18.7** then to curated fitness and nutrition knowledge,
-* **1:21.5** and finally to the domain-specific model, which writes a personalized response.
+## 1:13.6 – 1:27.0  How it works
+* **1:14.2** Behind the scenes, every question moves from the interface to intent understanding,
+* **1:19.0** then to curated fitness and nutrition knowledge,
+* **1:21.9** and finally to the domain-tuned model, which writes a personalized response.
 
-## 1:27.0 – 1:40.2  Dataset → fine-tuning → validation → testing
-* **1:27.5** The model itself was fine-tuned for this domain.
-* **1:30.4** A curated fitness dataset was prepared, trained on a GPU, then validated and tested on held-out questions before reaching the application.
+## 1:27.0 – 1:43.6  Dataset → QLoRA fine-tuning → validation → testing
+* **1:27.5** The model is Qwen3 4B, fine-tuned for this domain.
+* **1:31.4** 5,470 conversations were prepared, trained with QLoRA on a GPU, then validated and tested on held-out questions before reaching the application.
 
-## 1:40.2 – 1:52.0  The complete experience
-* **1:40.7** From the first question to saved plans and progress tracking, FitBot delivers a complete experience,
-* **1:46.7** offering general fitness and wellness guidance, not medical diagnosis.
+## 1:43.6 – 2:00.9  Measured results
+* **1:44.1** And the results are measurable.
+* **1:45.9** Its answers match the reference answers nearly three times more closely than the base model.
+* **1:51.4** Across 163 real app checks, FitBot gets 93% right, and politely declines every off-topic question.
 
-## 1:52.0 – 2:03.1  Closing: FitBot × Veltris
-* **1:52.6** FitBot. Domain-specific AI, built for real-world fitness experiences.
-* **1:57.5** Presented by Veltris.
+## 2:00.9 – 2:12.6  The complete experience
+* **2:01.4** From the first question to saved plans and progress tracking, FitBot delivers a complete experience,
+* **2:07.4** offering general fitness and wellness guidance, not medical diagnosis.
+
+## 2:12.6 – 2:23.8  Closing: FitBot × Veltris
+* **2:13.2** FitBot. Domain-specific AI, built for real-world fitness experiences.
+* **2:18.2** Presented by Veltris.

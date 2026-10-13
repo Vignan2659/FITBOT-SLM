@@ -61,7 +61,7 @@ def main() -> None:
     t = np.arange(N) / SR
     sc = {s["id"]: s for s in tl["scenes"]}
     demo_in = sc["exercises"]["start"] - 0.4          # percussion + bass enter with the product demo
-    tech_in, tech_out = sc["architecture"]["start"], sc["training"]["end"]
+    tech_in, tech_out = sc["architecture"]["start"], sc["results"]["end"]
     outro_in = sc["outro"]["start"]
     end_hit = sc["outro"]["lines"][-1]["start"] - 0.2
 
