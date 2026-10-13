@@ -1,0 +1,183 @@
+{
+  "run_name": "fitbot-qwen3-4b-qlora",
+  "base_model": "Qwen/Qwen3-4B-Instruct-2507",
+  "config": {
+    "base_model": "Qwen/Qwen3-4B-Instruct-2507",
+    "max_seq_length": 1280,
+    "num_train_epochs": 2,
+    "learning_rate": 0.0001,
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.0,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lora_target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "load_in_4bit": true,
+    "quant_type": "nf4",
+    "double_quant": true,
+    "early_stopping_patience": 3,
+    "seed": 42,
+    "gen_max_new_tokens": 220,
+    "gen_eval_new_test": 80,
+    "precision": "bf16",
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 4070",
+    "trainable_params": 33030144
+  },
+  "train_seconds": 4559.6,
+  "train_runtime_metrics": {
+    "train_runtime": 4558.9765,
+    "train_samples_per_second": 1.922,
+    "train_steps_per_second": 0.12,
+    "total_flos": 6.279396230283264e+16,
+    "train_loss": 0.3838042325347009,
+    "epoch": 2.0
+  },
+  "best_checkpoint": "checkpoints/checkpoint-274",
+  "best_validation_loss": 0.5506919622421265,
+  "base": {
+    "validation": {
+      "loss": 2.5524,
+      "perplexity": 12.837,
+      "tokens": 38180
+    },
+    "test": {
+      "loss": 2.5501,
+      "perplexity": 12.808,
+      "tokens": 41010
+    },
+    "generation": {
+      "all": {
+        "n": 177,
+        "rougeL_f": 0.2271,
+        "token_f1": 0.3221,
+        "ood_refusal_rate": 0.0,
+        "in_domain_false_refusal_rate": 0.0,
+        "safety_referral_rate": 0.9231,
+        "number_grounding_rate": 0.9422,
+        "avg_latency_s": 1.4022,
+        "avg_answer_words": 126.0678
+      },
+      "v1_test": {
+        "n": 97,
+        "rougeL_f": 0.2284,
+        "token_f1": 0.3321,
+        "ood_refusal_rate": 0.0,
+        "in_domain_false_refusal_rate": 0.0,
+        "safety_referral_rate": 1.0,
+        "number_grounding_rate": 0.9465,
+        "avg_latency_s": 1.3127,
+        "avg_answer_words": 128.1959
+      },
+      "v2_new_test": {
+        "n": 80,
+        "rougeL_f": 0.2254,
+        "token_f1": 0.31,
+        "ood_refusal_rate": 0.0,
+        "in_domain_false_refusal_rate": 0.0,
+        "safety_referral_rate": 0.8571,
+        "number_grounding_rate": 0.9339,
+        "avg_latency_s": 1.5107,
+        "avg_answer_words": 123.4875
+      }
+    }
+  },
+  "fine_tuned": {
+    "validation": {
+      "loss": 0.4742,
+      "perplexity": 1.607,
+      "tokens": 38180
+    },
+    "test": {
+      "loss": 0.4821,
+      "perplexity": 1.619,
+      "tokens": 41010
+    },
+    "generation": {
+      "all": {
+        "n": 177,
+        "rougeL_f": 0.6362,
+        "token_f1": 0.6898,
+        "ood_refusal_rate": 1.0,
+        "in_domain_false_refusal_rate": 0.0,
+        "safety_referral_rate": 0.9231,
+        "number_grounding_rate": 0.9568,
+        "avg_latency_s": 2.0314,
+        "avg_answer_words": 52.0339
+      },
+      "v1_test": {
+        "n": 97,
+        "rougeL_f": 0.6037,
+        "token_f1": 0.6649,
+        "ood_refusal_rate": 1.0,
+        "in_domain_false_refusal_rate": 0.0,
+        "safety_referral_rate": 0.8333,
+        "number_grounding_rate": 0.9568,
+        "avg_latency_s": 1.8929,
+        "avg_answer_words": 51.3196
+      },
+      "v2_new_test": {
+        "n": 80,
+        "rougeL_f": 0.6757,
+        "token_f1": 0.7199,
+        "ood_refusal_rate": 1.0,
+        "in_domain_false_refusal_rate": 0.0,
+        "safety_referral_rate": 1.0,
+        "number_grounding_rate": 0.9568,
+        "avg_latency_s": 2.1992,
+        "avg_answer_words": 52.9
+      }
+    }
+  },
+  "fitbot_360m_v1_test_reference": {
+    "rougeL_f": 0.488,
+    "token_f1": 0.537,
+    "source": "FitBot 360M (Colab T4 run), 97 v1 test records"
+  },
+  "rougeL_by_category": {
+    "base": {
+      "beginner": 0.1906,
+      "exercises": 0.2551,
+      "form_safety": 0.3047,
+      "general_fitness": 0.1707,
+      "goals": 0.1739,
+      "lifestyle": 0.2067,
+      "medical": 0.1472,
+      "multi_turn": 0.3334,
+      "nutrition": 0.2779,
+      "off_topic": 0.0986,
+      "plans": 0.1908
+    },
+    "fine_tuned": {
+      "beginner": 0.5758,
+      "exercises": 0.7491,
+      "form_safety": 0.8798,
+      "general_fitness": 0.2466,
+      "goals": 0.2811,
+      "lifestyle": 0.4387,
+      "medical": 0.4396,
+      "multi_turn": 0.7539,
+      "nutrition": 0.7295,
+      "off_topic": 0.8779,
+      "plans": 0.8186
+    }
+  },
+  "dataset_sizes": {
+    "training": 4382,
+    "validation": 527,
+    "test": 561
+  },
+  "train_tokens_per_epoch": 1391336,
+  "smoke_test": false
+}

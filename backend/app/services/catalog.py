@@ -9,8 +9,15 @@ from app.services.planner import allowed, normalise_equipment
 
 
 class Catalog:
-    def __init__(self, data_dir: Path):
-        self.exercises: list[dict] = json.loads((data_dir / "exercises" / "exercises.json").read_text())
+    def __init__(self, data_dir: Path, exercises_file: str = "exercises/exercises.json"):
+        exercises = json.loads((data_dir / exercises_file).read_text(encoding="utf-8"))
+        # v2 lists all 871 exercises alphabetically; put the 58 hand-curated ones first, in their v1 order, so
+        # lists and cards lead with the well-known movements (v1 entries have no flag and keep their order)
+        v1_file = data_dir / "exercises" / "exercises.json"
+        v1_order = {e["name"]: i for i, e in enumerate(json.loads(v1_file.read_text(encoding="utf-8")))} \
+            if v1_file.exists() else {}
+        self.exercises: list[dict] = sorted(
+            exercises, key=lambda e: (not e.get("curated_v1", True), v1_order.get(e["name"], len(v1_order))))
         self.foods: list[dict] = json.loads((data_dir / "nutrition" / "foods.json").read_text())
         self.ex_by_slug = {e["slug"]: e for e in self.exercises}
         self.ex_by_name = {e["name"].lower(): e for e in self.exercises}
@@ -39,41 +46,7 @@ class Catalog:
             pool = sorted(pool, key=lambda e: {"Advanced": 0, "Intermediate": 1}.get(e["difficulty"], 2))
         return pool[:limit]
 
-    def search_exercises(self, q: str | None = None, muscle_group: str | None = None, difficulty: str | None = None,
-                         equipment: str | None = None) -> list[dict]:
-        out = self.exercises
-        if muscle_group:
-            out = [e for e in out if e["muscle_group"] == muscle_group.lower()]
-        if difficulty:
-            out = [e for e in out if e["difficulty"].lower() == difficulty.lower()]
-        if equipment:
-            out = [e for e in out if equipment.lower() in e["equipment"].lower() or equipment.lower() in e["equipment_raw"]]
-        if q:
-            ql = q.lower()
-            out = [e for e in out if ql in e["name"].lower() or any(ql in a for a in e["aliases"])
-                   or any(ql in m.lower() for m in e["target_muscles"])]
-        return out
-
     # ------------------------------------------------------------------ foods
-    def find_food(self, key: str) -> dict | None:
-        k = key.lower().strip()
-        for f in self.foods:
-            if k in (f["name"].lower(), f["slug"], f["name"].split(" (")[0].lower()) or k in [a.lower() for a in f["aliases"]]:
-                return f
-        return None
-
-    def search_foods(self, q: str | None = None, group: str | None = None, tag: str | None = None) -> list[dict]:
-        out = self.foods
-        if group:
-            out = [f for f in out if f["group"] == group]
-        if tag:
-            out = [f for f in out if tag in f["fitbot_tags"] or tag.lower() in [h.lower() for h in f["highlights"]]]
-        if q:
-            ql = q.lower()
-            out = [f for f in out if ql in f["name"].lower() or any(ql in a for a in f["aliases"])
-                   or ql in f["usda_description"].lower()]
-        return out
-
     TOPICS = [  # (pattern in question, predicate) - mirrors the dataset's food-list questions
         (r"vegetarian|vegan|plant[- ]based", lambda f: "vegetarian" in f["fitbot_tags"] and "High protein" in f["highlights"]),
         (r"protein", lambda f: "High protein" in f["highlights"] and f["group"] in ("protein", "plant_protein", "dairy")),

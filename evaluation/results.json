@@ -723,7 +723,7 @@
  },
  "fine_tuned": {
   "name": "fine_tuned",
-  "path": "/Users/vignankarthikeya/Downloads/FITBOT SLM/FitBot/models/fitbot-smollm2-360m-lora/merged",
+  "path": "models/fitbot-smollm2-360m-lora/merged",
   "device": "mps",
   "validation": {
    "loss": 0.8955,
@@ -1440,5 +1440,5 @@
    }
   ]
  },
- "training_log": "/Users/vignankarthikeya/Downloads/FITBOT SLM/FitBot/evaluation/training_run/log_history.json"
+ "training_log": "evaluation/training_run/log_history.json"
 }

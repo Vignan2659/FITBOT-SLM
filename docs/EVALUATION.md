@@ -1,5 +1,31 @@
 # FitBot – Evaluation
 
+## v2 – Qwen3-4B (current model)
+
+Evaluated by the training notebook on dataset v2 (`evaluation/training_run_4b/results.json`); generation metrics
+on the 97 original v1 test questions (same questions as the 360M model) and 80 new v2 test questions.
+
+| | Base Qwen3-4B | Fine-tuned FitBot 4B | FitBot 360M (v1) |
+|---|---:|---:|---:|
+| Validation loss / perplexity | 2.552 / 12.84 | **0.474 / 1.61** | 0.894 / 2.45 |
+| Test loss / perplexity | 2.550 / 12.81 | **0.482 / 1.62** | 0.897 / 2.45 |
+| v1 test (97): ROUGE-L / token F1 | 0.228 / 0.332 | **0.604 / 0.665** | 0.488 / 0.537 |
+| v2 new test (80): ROUGE-L / token F1 | 0.225 / 0.310 | **0.676 / 0.720** | – |
+| Out-of-domain refusal rate (raw model) | 0.00 | **1.00** | – |
+| Safety referral rate (all 177) | 0.92 | 0.92 | – |
+| Number grounding (USDA / plans) | 0.94 | **0.96** | – |
+| Avg answer length (words) | 126 | 52 | – |
+
+Loss is measured on different datasets for v1 and v2 (v1: 916 records, v2: 5,470), so compare the loss columns
+within a model; the 97 v1 test questions are identical for both.
+
+**Full application test suites** (163 checked turns, `evaluation/run_test_suites.py`): **152/163 (93 %)** in
+bfloat16 and **153/163 (94 %)** in float16, against 150/163 (92 %) for the 360M model. Details:
+`evaluation/test_suite_summary_4b.md`, `evaluation/test_suite_summary_4b_fp16.md`.
+
+The sections below are the original **v1 (SmolLM2-360M)** evaluation, kept for reference.
+
+
 ## 1. Methodology
 
 ### Train / validation / test split

@@ -1,0 +1,47 @@
+{
+  "validation": {
+    "loss": 2.5524,
+    "perplexity": 12.837,
+    "tokens": 38180
+  },
+  "test": {
+    "loss": 2.5501,
+    "perplexity": 12.808,
+    "tokens": 41010
+  },
+  "generation": {
+    "all": {
+      "n": 177,
+      "rougeL_f": 0.2271,
+      "token_f1": 0.3221,
+      "ood_refusal_rate": 0.0,
+      "in_domain_false_refusal_rate": 0.0,
+      "safety_referral_rate": 0.9231,
+      "number_grounding_rate": 0.9422,
+      "avg_latency_s": 1.4022,
+      "avg_answer_words": 126.0678
+    },
+    "v1_test": {
+      "n": 97,
+      "rougeL_f": 0.2284,
+      "token_f1": 0.3321,
+      "ood_refusal_rate": 0.0,
+      "in_domain_false_refusal_rate": 0.0,
+      "safety_referral_rate": 1.0,
+      "number_grounding_rate": 0.9465,
+      "avg_latency_s": 1.3127,
+      "avg_answer_words": 128.1959
+    },
+    "v2_new_test": {
+      "n": 80,
+      "rougeL_f": 0.2254,
+      "token_f1": 0.31,
+      "ood_refusal_rate": 0.0,
+      "in_domain_false_refusal_rate": 0.0,
+      "safety_referral_rate": 0.8571,
+      "number_grounding_rate": 0.9339,
+      "avg_latency_s": 1.5107,
+      "avg_answer_words": 123.4875
+    }
+  }
+}

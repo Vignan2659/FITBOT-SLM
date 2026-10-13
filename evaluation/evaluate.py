@@ -36,7 +36,8 @@ from app.ml.prompting import build_messages  # noqa: E402
 
 EVAL = ROOT / "evaluation"
 CHARTS = EVAL / "charts"
-BASE = "HuggingFaceTB/SmolLM2-360M-Instruct"
+REP_PENALTY = 1.05   # overwritten from backend settings in main()
+BASE = None   # default: FITBOT_BASE_MODEL from backend settings (Qwen/Qwen3-4B-Instruct-2507)
 REFUSAL = re.compile(r"focused on fitness|only help with|outside what i can help|can't help with that", re.I)
 REFERRAL = re.compile(r"doctor|healthcare|health professional|physiotherapist|dietitian|pharmacist|emergency|"
                       r"mental health|obstetric|surgeon", re.I)
@@ -79,7 +80,7 @@ class Model:
         text = self.tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         enc = self.tok(text, return_tensors="pt", add_special_tokens=False).to(self.dev)
         t0 = time.time()
-        out = self.model.generate(**enc, max_new_tokens=max_new_tokens, do_sample=False, repetition_penalty=1.1,
+        out = self.model.generate(**enc, max_new_tokens=max_new_tokens, do_sample=False, repetition_penalty=REP_PENALTY,
                                   pad_token_id=self.tok.pad_token_id)
         if self.dev == "mps":
             torch.mps.synchronize()
@@ -170,7 +171,7 @@ def evaluate_model(name: str, path: str, val: list, test: list, probes: list, em
 
 
 def find_log_history(ft_path: Path) -> Path | None:
-    for cand in (EVAL / "training_run" / "log_history.json", ft_path.parent / "log_history.json"):
+    for cand in (EVAL / "training_run_4b" / "log_history.json", ft_path.parent / "log_history.json"):
         if cand.exists():
             return cand
     return None
@@ -203,7 +204,7 @@ def charts(results: dict, log_path: Path | None) -> list[str]:
     f = [results["fine_tuned"]["generation"][k] or 0 for k, _ in keys]
     x = np.arange(len(keys))
     fig, ax = plt.subplots(figsize=(10, 4.5))
-    ax.bar(x - .2, b, .4, label="Base SmolLM2-360M-Instruct", color="#adb5bd")
+    ax.bar(x - .2, b, .4, label=f"Base {results['base']['path'].split('/')[-1]}", color="#adb5bd")
     ax.bar(x + .2, f, .4, label="Fine-tuned FitBot", color="#0f766e")
     ax.set_xticks(x, [l for _, l in keys], rotation=20); ax.set_ylim(0, 1.05); ax.set_ylabel("score (0-1, higher is better)")
     ax.set_title("Base vs fine-tuned on the held-out test set"); ax.legend(frameon=False)
@@ -232,7 +233,7 @@ def report(results: dict, made: list[str]) -> str:
           f"* Test set: {results['test_size']} records ({results['fine_tuned']['generation']['n']} used for generation metrics), "
           f"validation set: {results['validation_size']} records. Test examples were never used for training or model selection.",
           f"* Base model: `{b['path']}`", f"* Fine-tuned model: `{f['path']}`",
-          f"* Training run: {results.get('training_run', 'n/a')}", f"* Device: {f['device']} · decoding: greedy, repetition_penalty=1.1, max 200 new tokens\n",
+          f"* Training run: {results.get('training_run', 'n/a')}", f"* Device: {f['device']} · decoding: greedy, repetition_penalty={results.get('repetition_penalty')}, max 200 new tokens\n",
           "| Metric | Base | Fine-tuned FitBot | Better |", "|---|---:|---:|:--:|"]
     for lab, bv, fv, d in rows:
         md.append(f"| {lab} | {bv} | {fv} | {d} |")
@@ -253,18 +254,19 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--finetuned", default=None)
     ap.add_argument("--base", default=BASE)
+    ap.add_argument("--data", default="data/processed_v2", help="folder with validation.jsonl / test.jsonl")
     ap.add_argument("--limit", type=int, default=None, help="limit generation examples (default: all test records)")
     args = ap.parse_args()
     from app.core.config import get_settings
     s = get_settings()
     ft = Path(args.finetuned) if args.finetuned else s.resolve(s.fitbot_model_path)
     if not (ft / "config.json").exists():
-        sys.exit(f"Fine-tuned model not found at {ft}. Run the Colab notebook and scripts/install_model.py first.")
+        sys.exit(f"Fine-tuned model not found at {ft}. Run scripts/setup_model.py first.")
     from rouge_score import rouge_scorer
     from sentence_transformers import SentenceTransformer
     embed = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cpu")
     rouge = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
-    data = ROOT / "data" / "processed"
+    data = ROOT / args.data
     val, test = read_jsonl(data / "validation.jsonl"), read_jsonl(data / "test.jsonl")
     probes = json.loads((EVAL / "fact_probes.json").read_text())
     results = {"test_size": len(test), "validation_size": len(val)}
@@ -272,7 +274,10 @@ def main() -> None:
     if card.exists():
         c = json.loads(card.read_text())
         results["training_run"] = f"trained on {c.get('trained_on')} (smoke test: {c.get('smoke_test')})"
-    results["base"] = evaluate_model("base", args.base, val, test, probes, embed, rouge, args.limit)
+    global REP_PENALTY
+    REP_PENALTY = s.fitbot_repetition_penalty
+    results["repetition_penalty"] = REP_PENALTY
+    results["base"] = evaluate_model("base", args.base or s.fitbot_base_model, val, test, probes, embed, rouge, args.limit)
     results["fine_tuned"] = evaluate_model("fine_tuned", str(ft), val, test, probes, embed, rouge, args.limit)
     log_path = find_log_history(ft)
     made = charts(results, log_path)

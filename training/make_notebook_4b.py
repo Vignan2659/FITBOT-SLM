@@ -1,7 +1,7 @@
 """Generates training/FitBot_FineTuning_4B.ipynb  (run: .venv/bin/python training/make_notebook_4b.py)
 
 Fine-tunes Qwen/Qwen3-4B-Instruct-2507 (4.0B parameters) on FitBot dataset v2 with QLoRA on a single local
-NVIDIA GPU (written for the college PC: RTX 4070 12 GB, 32 GB RAM, Windows or WSL2/Linux).
+NVIDIA GPU (trained on an RTX 4070 12 GB; any NVIDIA GPU with >= 12 GB works, e.g. Linux, WSL2 or Colab).
 Smoke test anywhere (CPU / Apple MPS, tiny model, a few steps):
     FITBOT_SMOKE=1 FITBOT_BASE_MODEL=HuggingFaceTB/SmolLM2-135M-Instruct jupyter nbconvert --execute ...
 """
@@ -21,7 +21,7 @@ def code(s: str) -> None:
 
 
 md("""
-# FitBot 4B – Fine-tuning Qwen3-4B-Instruct-2507 with QLoRA (college GPU PC)
+# FitBot 4B – Fine-tuning Qwen3-4B-Instruct-2507 with QLoRA
 
 Fine-tunes **`Qwen/Qwen3-4B-Instruct-2507`** (4.0 B parameters, Apache-2.0) on **FitBot dataset v2**
 (5,470 conversations: 4,382 train / 527 validation / 561 test, built from 871 exercises, USDA foods and
@@ -29,8 +29,8 @@ hand-written fitness topics) with **QLoRA** (4-bit base model + LoRA adapters), 
 fine-tuned** model, compares with the current FitBot 360M model on the original v1 test questions, and saves
 the adapter (+ optional merged model) for the FitBot app.
 
-**Target machine:** NVIDIA RTX 4070 (12 GB) · 32 GB RAM · Windows 10/11 (native or WSL2) or Linux.
-See `COLLEGE_PC_GUIDE.md` for setup. **Run the smoke test first (Section 0), then the full run.**
+**Target machine:** an NVIDIA GPU with at least 12 GB (trained on an RTX 4070 12 GB, 32 GB RAM). QLoRA needs CUDA, so it does not run on a Mac.
+See `training/README.md` for setup. **Run the smoke test first (Section 0), then the full run.**
 
 | Section | What happens | Typical time on RTX 4070 |
 |---|---|---|
@@ -70,7 +70,7 @@ import importlib
 need = ["torch", "transformers", "peft", "accelerate", "datasets", "rouge_score", "matplotlib"]
 missing = [m for m in need if importlib.util.find_spec(m) is None]
 if missing:
-    raise SystemExit(f"Missing packages: {missing}. Install them first - see COLLEGE_PC_GUIDE.md")
+    raise SystemExit(f"Missing packages: {missing}. Install them first - see training/README.md")
 import numpy as np, torch, transformers, peft, datasets
 print("python", sys.version.split()[0], "|", platform.system(), "| torch", torch.__version__,
       "| transformers", transformers.__version__, "| peft", peft.__version__)
@@ -98,7 +98,7 @@ elif torch.backends.mps.is_available():
 else:
     DEVICE, GPU_NAME, GPU_MEM_GB, USE_BF16, USE_FP16 = "cpu", "none", 0.0, False, False
 if DEVICE != "cuda" and not SMOKE:
-    raise SystemExit("No NVIDIA GPU detected - check the driver / CUDA build of PyTorch (COLLEGE_PC_GUIDE.md).")
+    raise SystemExit("No NVIDIA GPU detected - check the driver / CUDA build of PyTorch (training/README.md).")
 LOAD_4BIT = DEVICE == "cuda" and HAS_BNB
 if DEVICE == "cuda" and not HAS_BNB:
     raise SystemExit("bitsandbytes is required for 4-bit loading on the GPU: pip install bitsandbytes")
@@ -398,7 +398,7 @@ args = TrainingArguments(
     bf16=USE_BF16, fp16=USE_FP16,
     gradient_checkpointing=False,           # already enabled on the model in section 8
     report_to="none", seed=CONFIG["seed"], remove_unused_columns=False,
-    dataloader_num_workers=0,               # safest on Windows
+    dataloader_num_workers=0,               # safest across platforms
     dataloader_pin_memory=DEVICE == "cuda",
 )
 trainer = Trainer(model=model, args=args, train_dataset=tok["training"], eval_dataset=tok["validation"],
@@ -541,7 +541,7 @@ md("""
 1. Copy **`fitbot-qwen3-4b-qlora-adapter.zip`** (~130 MB) to your laptop (USB / Google Drive / OneDrive).
 2. In the FitBot folder, unzip it into `models/` and point the backend at it. The app's model loader accepts a
    merged model folder or a Hugging Face id; for the adapter the base model is downloaded once and the adapter
-   applied (see `COLLEGE_PC_GUIDE.md`, "After training").
+   applied (see `training/README.md`).
 3. Re-run the FitBot evaluations (`evaluation/evaluate.py`, `evaluation/run_test_suites.py`) and keep the 4B model
    only if it scores better than the current 360M model - the 360M model stays as the fallback.
 """)

@@ -2,7 +2,7 @@
 
 * Test set: 97 records (97 used for generation metrics), validation set: 93 records. Test examples were never used for training or model selection.
 * Base model: `HuggingFaceTB/SmolLM2-360M-Instruct`
-* Fine-tuned model: `/Users/vignankarthikeya/Downloads/FITBOT SLM/FitBot/models/fitbot-smollm2-360m-lora/merged`
+* Fine-tuned model: `models/fitbot-smollm2-360m-lora/merged`
 * Training run: trained on Tesla T4 (smoke test: False)
 * Device: mps · decoding: greedy, repetition_penalty=1.1, max 200 new tokens
 

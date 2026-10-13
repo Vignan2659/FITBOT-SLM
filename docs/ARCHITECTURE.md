@@ -17,12 +17,12 @@
 └───────────────┬────────────────────────────────────────────────┘
                 │ loaded once at startup (FastAPI lifespan)
 ┌───────────────▼────────────────────────────────────────────────┐
-│ Fine-tuned SmolLM2-360M (merged LoRA)  · all-MiniLM-L6-v2       │
+│ Fine-tuned Qwen3-4B (merged QLoRA)     · all-MiniLM-L6-v2       │
 │ intent classifier (TF-IDF+MiniLM → LR) · SQLite (fitbot.db)     │
 └────────────────────────────────────────────────────────────────┘
 ```
 
-Training happens **off-machine on Google Colab** (see [TRAINING_GUIDE.md](TRAINING_GUIDE.md)); the
+Training happens **off-machine on an NVIDIA GPU** (see [TRAINING_GUIDE.md](TRAINING_GUIDE.md)); the
 exported model is installed into `models/` and loaded by the backend.
 
 ## 2. Chat pipeline (`backend/app/services/chat_engine.py`)
@@ -75,7 +75,7 @@ Why this design:
 
 | Store | Built by | Used for |
 |---|---|---|
-| `data/exercises/exercises.json` (58 curated) and `catalog.json` (876) | `scripts/build_exercise_db.py` from free-exercise-db (Unlicense) | exercise cards, planner, dataset grounding, `exercise_metadata` table |
+| `data/exercises/exercises_v2.json` (871, used by the app), `exercises.json` (58 curated, v1) and `catalog.json` (876 raw) | `scripts/build_exercise_catalog_v2.py` / `scripts/build_exercise_db.py` from free-exercise-db (Unlicense) | exercise cards, planner, dataset grounding, `exercise_metadata` table |
 | `data/nutrition/foods.json` (111 foods) | `scripts/build_food_db.py` from USDA SR Legacy (CC0) | food cards, nutrition context, dataset grounding, `food_metadata` table |
 | `data/knowledge/knowledge_base.json` (76 passages) | written for the project, aligned with HHS/DGA/CDC/NASEM/ISSN/ACSM sources | semantic retrieval context |
 | `data/processed/*.jsonl` | `scripts/build_dataset.py` | SLM fine-tuning (train/val/test) |

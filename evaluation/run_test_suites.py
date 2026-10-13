@@ -1,7 +1,7 @@
 """Run the FitBot test suites through the full pipeline with the REAL model.
 
     .venv/bin/python evaluation/run_test_suites.py                # model from backend settings
-    .venv/bin/python evaluation/run_test_suites.py --model base   # base SmolLM2 (no fine-tuning)
+    .venv/bin/python evaluation/run_test_suites.py --model base   # base Qwen3-4B (no fine-tuning)
 
 Checks per question (whichever apply): routed intent, exercise cards (count, muscle group, level),
 food cards, workout plan (days), guardrail / out-of-domain handling, disclaimer, follow-up detection,
@@ -80,7 +80,8 @@ def main() -> None:
         slm = FitBotSLM(Path("/nonexistent"), s.fitbot_base_model, s.fitbot_device, s.fitbot_max_new_tokens)
     else:
         path = Path(args.model) if args.model else s.resolve(s.fitbot_model_path)
-        slm = FitBotSLM(path, s.fitbot_base_model, s.fitbot_device, s.fitbot_max_new_tokens)
+        slm = FitBotSLM(path, s.fitbot_base_model, s.fitbot_device, s.fitbot_max_new_tokens,
+                        s.fitbot_repetition_penalty, s.fitbot_dtype)
     engine, info = build_engine(s, generate=slm.generate)
     print("model:", slm.info()["model"], "| fine-tuned:", slm.fine_tuned, "| device:", slm.device)
 

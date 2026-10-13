@@ -1,5 +1,12 @@
 # FitBot – A Fitness-Domain Small Language Model: Project Report
 
+> **Update (v2, October 2026):** FitBot now runs a fine-tuned **Qwen3-4B-Instruct-2507** (QLoRA, dataset v2 with
+> 5,470 conversations and all 871 exercises) instead of SmolLM2-360M. v2 results: test perplexity 1.62, ROUGE-L 0.604
+> on the v1 test questions (360M: 0.488), 93-94 % of the full application checks. See the [README](README.md),
+> [docs/EVALUATION.md](docs/EVALUATION.md) and [docs/TRAINING_GUIDE.md](docs/TRAINING_GUIDE.md). This report
+> describes the v1 system; the app architecture, data sources and safety layer are unchanged.
+
+
 ## 1. Problem statement
 
 General-purpose chatbots answer fitness questions inconsistently: they drift out of scope, invent

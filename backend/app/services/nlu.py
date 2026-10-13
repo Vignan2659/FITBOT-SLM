@@ -51,6 +51,7 @@ MUSCLE_GROUPS = {
     "core": ["core", "abs", "ab", "abdominal", "abdominals", "obliques", "stomach", "six pack"],
     "cardio": ["cardio", "aerobic"],
     "stretching": ["stretch", "stretches", "stretching", "flexibility", "mobility"],
+    "neck": ["neck"],   # only in the 871-exercise catalog (exercises_v2.json)
 }
 LEVELS = {"beginner": ["beginner", "beginners", "new to", "just starting", "starting out", "never worked out", "novice", "first time",
                        "out of shape", "newbie"],

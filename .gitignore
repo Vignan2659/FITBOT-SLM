@@ -5,52 +5,27 @@ __pycache__/
 .pytest_cache/
 *.egg-info/
 
-# Env / secrets
+# Env / secrets / local notes
 .env
 backend/.env
+demo_account*.txt
+*.log
 
-# Database
+# Database (accounts + chats, created on first start)
 *.db
 *.sqlite3
 
-# Models (large artifacts – download from Colab / Hugging Face)
+# Models: large files are downloaded/merged by scripts/setup_model.py
 models/*
 !models/README.md
+!models/intent_classifier.joblib
+
+# Release assets (built locally, uploaded to GitHub Releases)
+release/
 
 # Raw downloads (re-creatable via scripts)
 data/raw/*
 !data/raw/README.md
-
-# Node
-frontend/node_modules/
-frontend/dist/
-
-# OS / editors
-.DS_Store
-.vscode/
-.idea/
-
-# Notebook checkpoints
-.ipynb_checkpoints/
-
-# Colab upload package (re-create with scripts/package_for_colab.py)
-FitBot_colab_data.zip
-
-# Rendered marketing media (re-create with marketing/*.py)
-marketing/*.mp4
-marketing/*.png
-marketing/raw/
-marketing/explainer/
-marketing/build/
-
-# Local safety backups (not source)
-backups/
-
-# Exported user feedback (contains user questions)
-evaluation/feedback_export.jsonl
-
-# Launch film render outputs (re-create with marketing/launch/*.py)
-marketing/launch/build/
 
 # Exercise image dataset: image folders + intermediate features are re-creatable (scripts/image_dataset/)
 data/image_dataset/clean/
@@ -58,5 +33,27 @@ data/image_dataset/duplicates/
 data/image_dataset/rejected/
 data/image_dataset/work/
 
-# Training kit for the GPU PC (re-create with scripts/package_for_gpu_pc.py)
-FitBot_4B_Training_Kit.zip
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Rendered marketing media (re-create with marketing/*.py and marketing/launch/*.py)
+marketing/*.mp4
+marketing/*.png
+marketing/raw/
+marketing/explainer/
+marketing/build/
+marketing/launch/build/
+
+# Exported user feedback (contains user questions)
+evaluation/feedback_export.jsonl
+
+# Test artefacts
+e2e/screenshots/
+test-results/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+.ipynb_checkpoints/

@@ -1,0 +1,36 @@
+# FitBot test-suite results
+
+Model: `models/fitbot-qwen3-4b/merged` (fine-tuned: True, device: cuda)
+
+| Suite | Questions | Pass rate | Avg latency (s) | Weakest check |
+|---|---:|---:|---:|---|
+| fitness_questions | 50 | 80% | 3.03 | intent (80%) |
+| nutrition_questions | 20 | 100% | 4.6 | food_cards (100%) |
+| exercise_questions | 20 | 100% | 3.99 | exercise_cards (100%) |
+| sleep_recovery_questions | 10 | 100% | 2.77 | intent (100%) |
+| safety_questions | 10 | 100% | 0.66 | disclaimer_and_referral (100%) |
+| out_of_domain_questions | 10 | 100% | 0.14 | intent (100%) |
+| followup_conversations | 43 | 100% | 3.19 | exercise_cards (100%) |
+
+Per-check pass rates:
+
+* **fitness_questions**: intent 80%, no_false_refusal 100%, non_empty 100%, relevance_keyword 98%
+* **nutrition_questions**: food_cards 100%, intent 100%, no_false_refusal 100%, non_empty 100%, relevance_keyword 100%, usda_numbers_grounded 100%
+* **exercise_questions**: exercise_cards 100%, intent 100%, level 100%, muscle_group 100%, no_false_refusal 100%, non_empty 100%, plan_days 100%, relevance_keyword 100%, workout_plan 100%
+* **sleep_recovery_questions**: intent 100%, no_false_refusal 100%, non_empty 100%, relevance_keyword 100%
+* **safety_questions**: disclaimer_and_referral 100%, guardrail 100%, intent 100%, non_empty 100%, relevance_keyword 100%
+* **out_of_domain_questions**: intent 100%, non_empty 100%, ood_refusal 100%, relevance_keyword 100%
+* **followup_conversations**: exercise_cards 100%, followup_detected 100%, food_cards 100%, guardrail 100%, intent 100%, level 100%, muscle_group 100%, no_false_refusal 100%, non_empty 100%, ood_refusal 100%, plan_days 100%, relevance_keyword 100%, workout_plan 100%
+
+## Failed questions (10)
+
+* [fitness_questions] **What is progressive overload?** → intent `general_fitness`; failed: intent
+* [fitness_questions] **How much exercise do adults need per week?** → intent `workout_plan`; failed: intent
+* [fitness_questions] **Are machines safe for beginners?** → intent `equipment`; failed: intent
+* [fitness_questions] **How do I avoid shin splints when running?** → intent `medical_safety`; failed: intent, relevance_keyword
+* [fitness_questions] **Can I train abs every day?** → intent `workout_plan`; failed: intent
+* [fitness_questions] **Do I need a personal trainer?** → intent `equipment`; failed: intent
+* [fitness_questions] **Is it bad to skip leg day?** → intent `general_fitness`; failed: intent
+* [fitness_questions] **What are the benefits of strength training?** → intent `nutrition_question`; failed: intent
+* [fitness_questions] **How do I get fit fast?** → intent `medical_safety`; failed: intent
+* [fitness_questions] **Is swimming a good workout?** → intent `hydration`; failed: intent

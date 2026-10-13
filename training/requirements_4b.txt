@@ -1,5 +1,5 @@
-# FitBot 4B fine-tuning (college GPU PC). Install PyTorch with CUDA FIRST (see COLLEGE_PC_GUIDE.md), then:
-#   pip install -r requirements_4b.txt
+# FitBot 4B fine-tuning (needs an NVIDIA GPU with >= 12 GB; see training/README.md).
+# Install PyTorch with CUDA FIRST (https://pytorch.org), then:  pip install -r training/requirements_4b.txt
 transformers>=4.51
 peft>=0.13
 accelerate>=1.0

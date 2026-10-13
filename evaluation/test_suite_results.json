@@ -1,6 +1,6 @@
 {
  "model": {
-  "model": "/Users/vignankarthikeya/Downloads/FITBOT SLM/FitBot/models/fitbot-smollm2-360m-lora/merged",
+  "model": "models/fitbot-smollm2-360m-lora/merged",
   "fine_tuned": true,
   "device": "mps",
   "params_m": 361.8,

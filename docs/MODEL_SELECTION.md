@@ -1,5 +1,22 @@
 # FitBot – Model Selection
 
+## Current model (v2): `Qwen/Qwen3-4B-Instruct-2507` + QLoRA
+
+FitBot v2 runs a **4.0 B-parameter** model, as the project brief asked for a 3.5-4 B model:
+
+| Candidate | Size | Verdict |
+|---|---|---|
+| **Qwen3-4B-Instruct-2507** | 4.0 B | **Chosen.** Strong 4B instruction model, Apache-2.0, text-only, no "thinking" output, ChatML like v1, works with standard `transformers` + 4-bit QLoRA and fits a 12 GB GPU for training. |
+| Qwen3.5-4B | 4 B | Newer, but multimodal with a new architecture needing the latest `transformers` and extra kernels; 4-bit QLoRA not recommended for it. |
+| Phi-4-mini-instruct | 3.8 B | Good alternative (MIT); can be tried with `FITBOT_BASE_MODEL=microsoft/Phi-4-mini-instruct` and `target_modules="all-linear"`. |
+
+Fine-tuned with QLoRA (4-bit NF4 base, LoRA r = 16 on all attention + MLP projections, ~33 M trainable
+parameters) on dataset v2, see [TRAINING_GUIDE.md](TRAINING_GUIDE.md). On the Mac it runs in float16 on the
+Apple GPU (MPS), ~7.5 GB of weights, about 9-12 s per answer on an M5 with 16 GB.
+
+The rest of this document describes the selection of the **v1 model** (SmolLM2-360M), kept for reference.
+
+
 ## Selected model: `HuggingFaceTB/SmolLM2-360M-Instruct` + LoRA fine-tuning
 
 | Property | Value |

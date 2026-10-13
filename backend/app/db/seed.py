@@ -11,9 +11,9 @@ from app.db.database import Base
 from app.db.models import ExerciseMetadata, FoodMetadata
 
 
-def init_db(engine, data_dir: Path) -> dict:
+def init_db(engine, data_dir: Path, exercises_file: str = "exercises/exercises.json") -> dict:
     Base.metadata.create_all(engine)
-    exercises = json.loads((data_dir / "exercises" / "exercises.json").read_text())
+    exercises = json.loads((data_dir / exercises_file).read_text(encoding="utf-8"))
     foods = json.loads((data_dir / "nutrition" / "foods.json").read_text())
     with Session(engine) as db:
         # metadata tables are re-synced from data/ on every start (small, keeps DB == source files)

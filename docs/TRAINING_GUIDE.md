@@ -1,105 +1,76 @@
-# FitBot – Training Guide (Google Colab GPU)
+# FitBot – Training Guide (Qwen3-4B + QLoRA)
 
-The FitBot SLM is fine-tuned on a **Google Colab GPU**. The local machine is only used for
-dataset preparation, the backend/frontend, testing and local inference.
+You only need this guide to **re-train** the model. To *use* FitBot, the README's Quick start downloads the
+ready-made adapter.
 
-```
-Local project ──(FitBot_colab_data.zip)──► Google Drive ──► Colab GPU: FitBot_FineTuning.ipynb
-      ▲                                                            │ LoRA fine-tuning + evaluation
-      └──── scripts/install_model.py ◄── fitbot-smollm2-360m-lora-adapter.zip (~35 MB browser download; full merged zip on Drive)
-```
+**Model:** `Qwen/Qwen3-4B-Instruct-2507`: 4.0 B parameters, Apache-2.0, text-only, answers directly (no
+"thinking" output), ChatML chat format.
+**Method:** QLoRA. The base model is loaded in 4-bit NF4 with bitsandbytes and LoRA adapters are trained in bf16
+(r = 16, alpha = 32, dropout 0.05, all attention and MLP projections, about 33 M trainable parameters).
+**Data:** FitBot dataset v2 (`data/processed_v2/`): 5,470 conversations (4,382 train / 527 validation / 561 test).
+Each record has a ready-made `messages` field built by the app's own prompt builder, and the loss is on
+assistant tokens only.
 
-## 1. Prepare the data locally
+> QLoRA (bitsandbytes 4-bit) needs an **NVIDIA GPU with CUDA**, so training cannot run on a Mac.
+> Use a Linux/WSL2 PC with an NVIDIA GPU (≥ 12 GB VRAM) or a cloud GPU such as Google Colab (L4/A100).
 
-```bash
-.venv/bin/python scripts/build_exercise_db.py      # free-exercise-db -> data/exercises (verifies image URLs)
-.venv/bin/python scripts/build_food_db.py          # USDA SR Legacy  -> data/nutrition
-.venv/bin/python scripts/build_dataset.py          # -> data/processed/{training,validation,test}.jsonl
-.venv/bin/python scripts/package_for_colab.py      # -> FitBot_colab_data.zip (≈245 KB)
-```
+## Hyper-parameters (as used for the released model)
 
-`build_dataset.py` prints the cleaning statistics and verifies there is **no group-level or
-text-level overlap** between the training and test splits.
-
-## 2. Run the notebook in Colab
-
-1. Open <https://colab.research.google.com> → *File → Upload notebook* →
-   `training/FitBot_FineTuning.ipynb`.
-2. *Runtime → Change runtime type → **GPU*** (T4 is enough; L4/A100 are faster).
-3. In Google Drive create the folder `MyDrive/FitBot/` and upload `FitBot_colab_data.zip` into it
-   (or skip this – the data cell will show an upload button).
-4. *Runtime → Run all*. Approve the Google Drive permission prompt.
-
-The notebook never assumes a particular GPU. Cell 2 reads the device name, memory and compute
-capability, then picks:
-
-| Detected | Precision | Per-device batch × grad. accumulation |
-|---|---|---|
-| A100 / H100 (≥ 35 GB) | bf16 | 16 × 1 |
-| L4 / A10 (20-35 GB) | bf16 | 8 × 2 |
-| T4 / V100 and other GPUs < 20 GB | fp16 (AMP) | 4 × 4 + gradient checkpointing |
-| No GPU | fp32 (smoke test only) | 4 × 4 |
-
-## 3. What the notebook does
-
-| # | Step | Details |
-|---|---|---|
-| 1 | Install | `transformers`, `peft`, `accelerate`, `datasets`, `rouge-score`, `matplotlib` |
-| 2 | GPU check | device, memory, precision and batch size (table above) |
-| 3 | Config | all hyper-parameters in one `CONFIG` dict (saved to `training_config.json`) |
-| 4 | Data | mounts Drive, loads the three splits, asserts no train/test group overlap |
-| 5 | Model | `HuggingFaceTB/SmolLM2-360M-Instruct` + tokenizer |
-| 6 | Tokenize | ChatML via the tokenizer's chat template; **labels = -100 on the prompt**, loss on the answer only |
-| 7 | Baseline | base model validation/test loss + perplexity and generation metrics on the test set |
-| 8 | LoRA | r = 16, α = 32, dropout 0.05 on q/k/v/o/gate/up/down projections → 8.7 M trainable params (2.3 %) |
-| 9 | Train | cosine LR 2e-4, 5 % warm-up, 3 epochs, eval + checkpoint every half epoch, best-by-validation-loss restored, early stopping (patience 2), checkpoints on Drive (resumable) |
-| 10 | Curves | training vs validation loss chart (`loss_curves.png`) |
-| 11 | Evaluation | fine-tuned validation/test loss + perplexity; ROUGE-L, token-F1, OOD refusal, safety referral, number grounding, latency; base vs fine-tuned table; per-category ROUGE-L |
-| 12 | Save | `adapter/` (LoRA + tokenizer), `merged/` (stand-alone fp16 model + tokenizer), `training_config.json`, `results.json`, `log_history.json`, `test_predictions.json`, reload test |
-| 13 | Package | full `MyDrive/FitBot/fitbot-smollm2-360m-lora.zip` (merged + adapter) and small `…-adapter.zip` (auto-downloaded; merged locally by the installer) |
-
-Measured on a Colab Tesla T4: ~3 min baseline evaluation, 471 s (≈8 min) training, ~3 min fine-tuned evaluation,
-plus saving/packaging – about 15–20 minutes end to end.
-
-## 4. Install the trained model locally
-
-```bash
-.venv/bin/python scripts/install_model.py ~/Downloads/fitbot-smollm2-360m-lora-adapter.zip
-```
-
-This extracts to `models/fitbot-smollm2-360m-lora/` and copies the Colab results and charts to
-`evaluation/training_run/`. The backend loads `models/fitbot-smollm2-360m-lora/merged` (configurable with
-`FITBOT_MODEL_PATH` in `backend/.env`). Then re-run the local evaluation:
-
-```bash
-.venv/bin/python evaluation/evaluate.py
-.venv/bin/python evaluation/run_test_suites.py
-```
-
-## 5. Running the notebook locally (optional)
-
-The same notebook runs on a local machine (CUDA, Apple MPS or CPU). It was verified end-to-end
-this way:
-
-```bash
-cd training
-FITBOT_SMOKE=1 ../.venv/bin/jupyter nbconvert --to notebook --execute FitBot_FineTuning.ipynb --output /tmp/smoke.ipynb
-```
-
-`FITBOT_SMOKE=1` trains for 3 steps on a tiny subset (pipeline check only). Without it the full
-training runs; on Apple MPS set `FITBOT_GEN_EVAL_LIMIT=24` to cap the *generation* metrics
-(PyTorch MPS caches a graph for every new sequence shape during `generate()`, which makes long
-batched generation slow and memory-hungry; CUDA GPUs are not affected). `FITBOT_WORK=<dir>`
-controls where outputs are written.
-
-## 6. Troubleshooting
-
-| Problem | Fix |
+| Setting | Value |
 |---|---|
-| `No CUDA GPU detected` warning | Runtime → Change runtime type → GPU, then *Run all* again |
-| Session disconnected mid-training | Re-run all cells – training resumes from the last checkpoint in Drive |
-| `Dataset not found` | Upload `FitBot_colab_data.zip` to `MyDrive/FitBot/` or use the upload button |
-| CUDA out of memory | Restart runtime; the notebook will choose a smaller batch automatically on small GPUs. Otherwise set `PER_DEVICE_BS = 4` in cell 2 |
-| `ImportError: Found an incompatible version of torchao` | Fixed in the notebook (setup cell uninstalls Colab's old `torchao`, which FitBot does not use). With an older copy of the notebook run `!pip uninstall -y torchao` and re-run from the LoRA cell |
-| CUDA OOM right after a failed cell | A failed cell's traceback keeps GPU tensors alive: *Runtime → Restart session and run all* (data and checkpoints are on Drive) |
-| `TrainingArguments` errors | The notebook supports transformers 4.45+ and 5.x; if Colab ships an older version, the first cell upgrades it |
+| Epochs | 2 (early stopping, patience 3 evaluations; best checkpoint kept) |
+| Learning rate / schedule | 1e-4, cosine, 3 % warm-up |
+| Effective batch | 16 (micro-batch 2 × gradient accumulation 8) |
+| Max sequence length | 1,280 tokens |
+| Optimizer | `paged_adamw_8bit`, gradient checkpointing |
+| Evaluation | every half epoch on the validation set |
+
+The released run took **76 min** of training on an RTX 4070 (12 GB), peak GPU memory 9.8 GB. Validation loss per
+half epoch was 0.613 → **0.551** (best, end of epoch 1) → 0.600 → 0.592, so the epoch-1 checkpoint was kept.
+
+## Steps
+
+```bash
+# on the GPU machine, in the project folder
+python3 -m venv .venv && source .venv/bin/activate
+pip install torch --index-url https://download.pytorch.org/whl/cu128   # CUDA build - see pytorch.org
+pip install -r training/requirements_4b.txt
+nvidia-smi                                                            # the GPU must be listed
+jupyter notebook training/FitBot_FineTuning_4B.ipynb
+```
+
+1. **Smoke test:** Section 0 has `FITBOT_SMOKE = "1"`. *Run All*. It downloads the model (~8 GB), loads it in
+   4-bit, trains 4 steps, evaluates a few questions and saves a small adapter. It must finish without errors.
+2. **Full run:** set Section 0 to `os.environ.setdefault("FITBOT_SMOKE", "0")`, restart the kernel and *Run All*.
+   If it stops, run all again: training resumes from the last checkpoint in `outputs/fitbot-qwen3-4b-qlora/checkpoints/`.
+3. **CUDA out of memory:** in Section 0 uncomment `FITBOT_BATCH = "1"` and `FITBOT_MAX_LEN = "1024"`, restart and
+   *Run All* (the effective batch stays 16).
+
+Time on an RTX 4070: model download 5-15 min, baseline evaluation 10-20 min, training 40-100 min, fine-tuned
+evaluation 10-20 min, merge 5-15 min.
+
+The notebook is generated from `training/make_notebook_4b.py` (edit that file, then run it to regenerate).
+`training/runs/FitBot_FineTuning_4B_full_run.ipynb` is the executed notebook of the released run, with all outputs.
+
+## Outputs
+
+`outputs/fitbot-qwen3-4b-qlora/` contains `adapter/` (LoRA adapter + tokenizer), `merged/` (optional full
+16-bit model), `results.json`, `base_results.json`, `log_history.json`, `loss_curves.png`,
+`test_predictions.json` and `training_config.json`.
+
+## Using a new run in the app
+
+1. Zip the adapter the same way as the release asset (an `adapter/` folder plus `fitbot_model_card.json`).
+2. `.venv/bin/python scripts/setup_model.py --adapter path/to/your-adapter.zip --force`
+3. Copy the result files to `evaluation/training_run_4b/` and re-run `evaluation/run_test_suites.py`.
+
+## Rebuilding the dataset
+
+```bash
+.venv/bin/python scripts/build_exercise_catalog_v2.py    # 871 cleaned exercises
+.venv/bin/python scripts/build_dataset_v2.py             # data/processed_v2/*.jsonl
+```
+
+The previous model (SmolLM2-360M + LoRA, trained on Google Colab on dataset v1) is documented in
+[MODEL_SELECTION.md](MODEL_SELECTION.md) and [EVALUATION.md](EVALUATION.md); its results are in
+`evaluation/training_run_360m/`, and its notebook is in the git history.

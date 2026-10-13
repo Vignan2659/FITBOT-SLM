@@ -1,17 +1,11 @@
-# FitBot training (Google Colab)
+# FitBot training
 
 | File | Purpose |
 |---|---|
-| `FitBot_FineTuning.ipynb` | The Colab notebook: GPU detection → LoRA fine-tuning of SmolLM2-360M-Instruct → base vs fine-tuned evaluation → export |
-| `make_notebook.py` | Source of the notebook (edit this, then `python training/make_notebook.py` to regenerate) |
-| `requirements.txt` | Packages the notebook installs |
+| `FitBot_FineTuning_4B.ipynb` | QLoRA fine-tuning of Qwen3-4B-Instruct-2507 on dataset v2, base vs fine-tuned evaluation, export (NVIDIA GPU) |
+| `make_notebook_4b.py` | Source of the notebook (edit this, then run it to regenerate the notebook) |
+| `requirements_4b.txt` | Packages for training (install the CUDA build of PyTorch first) |
+| `runs/FitBot_FineTuning_4B_full_run.ipynb` | The executed notebook of the released model, with all outputs |
 
-## Quick start
-
-1. Locally: `.venv/bin/python scripts/package_for_colab.py` → creates `FitBot_colab_data.zip`.
-2. Upload the zip to Google Drive at **`MyDrive/FitBot/`**.
-3. Open `FitBot_FineTuning.ipynb` in Colab, choose **Runtime → Change runtime type → GPU**, then **Runtime → Run all**.
-4. When it finishes, download **`fitbot-smollm2-360m-lora-adapter.zip`** (automatic, ≈35 MB) - the full merged package is also saved in `MyDrive/FitBot/`.
-5. Locally: `.venv/bin/python scripts/install_model.py ~/Downloads/fitbot-smollm2-360m-lora-adapter.zip` and restart the backend.
-
-Full step-by-step instructions, hyper-parameters and troubleshooting: [`docs/TRAINING_GUIDE.md`](../docs/TRAINING_GUIDE.md).
+Step-by-step guide, hyper-parameters and troubleshooting: [`docs/TRAINING_GUIDE.md`](../docs/TRAINING_GUIDE.md).
+Training needs an NVIDIA GPU (≥ 12 GB). Running the trained model works on a Mac (see the main README).

@@ -29,7 +29,7 @@ log = logging.getLogger("fitbot")
 
 def build_engine(settings, generate=None) -> tuple[ChatEngine, dict]:
     data_dir = Path(settings.data_dir)
-    catalog = Catalog(data_dir)
+    catalog = Catalog(data_dir, settings.fitbot_exercises_file)
     retriever = KnowledgeRetriever(data_dir / "knowledge" / "knowledge_base.json", settings.fitbot_embed_model,
                                    use_embeddings=settings.fitbot_use_embeddings)
     nlu = NLU(Path(settings.models_dir) / "intent_classifier.joblib", catalog.exercises, catalog.foods,
@@ -39,7 +39,8 @@ def build_engine(settings, generate=None) -> tuple[ChatEngine, dict]:
     if generate is None:
         from app.ml.slm import FitBotSLM
         slm = FitBotSLM(settings.model_ref(), settings.fitbot_base_model,
-                        settings.fitbot_device, settings.fitbot_max_new_tokens)
+                        settings.fitbot_device, settings.fitbot_max_new_tokens,
+                        settings.fitbot_repetition_penalty, settings.fitbot_dtype)
         generate = slm.generate
         info["slm"] = slm.info()
     else:
@@ -67,7 +68,7 @@ async def lifespan(app: FastAPI):
     settings = get_settings()
     if settings.is_production and settings.jwt_secret in ("change-me-in-backend-.env", "change-me", ""):
         raise RuntimeError("Set a long random JWT_SECRET before running in production")
-    counts = init_db(engine, Path(settings.data_dir))
+    counts = init_db(engine, Path(settings.data_dir), settings.fitbot_exercises_file)
     log.info("Database ready: %s", counts)
     app.state.db_counts = counts
     if settings.fitbot_load_model and getattr(app.state, "chat_engine", None) is None:

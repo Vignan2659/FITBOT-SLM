@@ -3,7 +3,7 @@
 Keeping this in one module guarantees that the fine-tuned model sees prompts at
 inference time in exactly the format it was trained on. `scripts/build_dataset.py`
 imports this module to write the `messages` field of every JSONL record, and the
-Colab notebook trains directly on that field.
+training notebook trains directly on that field.
 """
 from __future__ import annotations
 
