@@ -17,10 +17,10 @@ with real exercise photos, real USDA nutrition numbers and a plan you can save.
 
 ## The film
 
-[![Watch the FitBot launch film](media/film_poster.jpg)](https://github.com/Vignan2659/FITBOT-SLM/releases/download/v1.0.0/FitBot_Launch_Film_1080p.mp4)
+[![Watch the FitBot launch film](media/film_poster.jpg)](media/FitBot_Launch_Film_1080p.mp4)
 
 A 2 minute 24 second walkthrough of the project in 1080p: the problem, the app, how the model was trained and the measured results.
-Click the picture to watch it, or open [`media/FitBot_Launch_Film_1080p.mp4`](media/FitBot_Launch_Film_1080p.mp4).
+Click the picture to open it (GitHub plays it in the browser, or use the download button to save it).
 Everything shown on screen is real output from the app.
 
 ## What it does
