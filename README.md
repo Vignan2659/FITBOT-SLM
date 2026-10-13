@@ -213,3 +213,8 @@ FITBOT-SLM/
 
 Built as a college project by [Vignan2659](https://github.com/Vignan2659), presented for Veltris.
 The full project report is in [PROJECT_REPORT.md](PROJECT_REPORT.md).
+
+## License
+
+The code and the FitBot data in this repo are released under the [MIT License](LICENSE), copyright 2026 Vignan Karthikeya.
+The third party data and models listed above keep their own licenses. The Veltris name and logo that appear in the film and screenshots belong to Veltris and are not covered by this license.
