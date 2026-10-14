@@ -19,7 +19,7 @@ with real exercise photos, real USDA nutrition numbers and a plan you can save.
 
 [![Watch the FitBot launch film](media/film_poster.jpg)](https://raw.githubusercontent.com/Vignan2659/FITBOT-SLM/main/media/FitBot_Launch_Film_1080p.mp4)
 
-A 2 minute 24 second walkthrough of the project in 1080p: the problem, the app, how the model was trained and the measured results.
+A 2 minute 29 second walkthrough of the project in 1080p: the problem, the app, how the model was trained and the measured results.
 Click the picture to download the 1080p film (90 MB). It is also in the repo at [`media/FitBot_Launch_Film_1080p.mp4`](media/FitBot_Launch_Film_1080p.mp4).
 Everything shown on screen is real output from the app.
 
