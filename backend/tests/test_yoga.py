@@ -108,7 +108,7 @@ def test_chat_yoga_questions(client, auth, q, mode):
     r = chat(client, auth["headers"], q)
     assert r["intent"] == "yoga"
     system = GENERATED[-1][0]["content"]
-    assert "Yoga" in system, "yoga facts are passed to the SLM as reference information"
+    assert "yoga" in system.lower(),"yoga facts are passed to the SLM as reference information"
     if mode == "routine":
         rt = r["yoga_routine"]
         assert rt and rt["steps"] and not r["yoga_poses"]

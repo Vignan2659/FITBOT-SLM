@@ -127,8 +127,10 @@ class ChatEngine:
             query = f"{last_user} {message}"
         if yq.mode == "detail":
             poses = yq.poses[:2]
+            # how-to guidance only (the model builds its answer around the first reference lines, and a summary line
+            # first made it describe the pose instead of explaining the steps)
             for p in poses:
-                context += [format_yoga_pose(p)] + format_yoga_detail(p)
+                context += format_yoga_detail(p)
         elif yq.mode == "routine":
             routine = self.yoga.routine(minutes=yq.minutes or 15, level=yq.level, goal=yq.goal, area=yq.area,
                                         time_of_day=yq.time_of_day, gentle=yq.gentle)
