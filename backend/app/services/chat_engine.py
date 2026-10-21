@@ -22,7 +22,7 @@ from app.services.catalog import Catalog, exercise_card, food_card
 from app.services.nlu import NLU, Slots
 from app.services.planner import Planner, plan_to_context
 from app.services.yoga import (YOGA_WORD_RE, YogaLibrary, YogaQuery, format_routine, format_yoga_detail,
-                               format_yoga_pose, yoga_card)
+                               format_yoga_pose, tidy_answer, yoga_card)
 
 OOD_MESSAGE = ("I'm focused on fitness, nutrition and wellness. Ask me something about workouts, exercise, food, "
                "recovery or healthy lifestyle.")
@@ -167,7 +167,7 @@ class ChatEngine:
                 extra_s = 0.0
             gen_seconds += extra_s
             refusal_retry = True
-        answer = answer.strip() or "Sorry, I couldn't generate an answer. Could you rephrase your question?"
+        answer = tidy_answer(answer) or "Sorry, I couldn't generate an answer. Could you rephrase your question?"
         flagged = safety.screen_output(answer)
         if flagged:
             answer = safety.SAFE_FALLBACK

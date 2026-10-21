@@ -160,3 +160,15 @@ def test_existing_behaviour_unchanged_for_non_yoga_questions(client, auth):
     assert chat(client, h, "What exercises can I do for chest?")["intent"] == "exercise_search"
     assert chat(client, h, "Is yoga safe during pregnancy?")["intent"] == "medical_safety"
     assert chat(client, h, "What is the capital of France?")["intent"] == "out_of_domain"
+
+
+def test_tidy_answer_removes_copied_labels_and_lists_steps():
+    from app.services.yoga import tidy_answer
+    raw = ("Guidance (How to do Tree Pose): To get into Tree Pose (Vrksasana), a beginner yoga pose: 1. Stand tall. "
+           "2. Shift your weight onto the left foot. 3. Place the right sole on the calf. Hold for 30 seconds.\n"
+           "- Guidance (Tree Pose: benefits): Improves balance.")
+    out = tidy_answer(raw)
+    assert "Guidance (" not in out
+    assert "\n1. Stand tall.\n2. Shift your weight onto the left foot.\n3. Place the right sole on the calf.\n" in out
+    assert out.endswith("Improves balance.")
+    assert tidy_answer("Tree Pose improves balance.") == "Tree Pose improves balance."

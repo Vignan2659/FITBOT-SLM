@@ -368,13 +368,39 @@ def format_yoga_detail(p: dict) -> list[str]:
     best; one long line of fields tends to be copied back verbatim)."""
     steps = " ".join(f"{i}. {s}" for i, s in enumerate(p["instructions"][:5], 1))
     return [
-        f"Guidance (How to do {p['name']}, {p['sanskrit']}, {p['difficulty'].lower()} yoga pose): {steps} "
-        f"Hold for {p['duration']}. Breathing: {p['breathing']}",
+        f"Guidance (How to do {p['name']}): To get into {p['name']} ({p['sanskrit']}), a {p['difficulty'].lower()} "
+        f"yoga pose: {steps} Hold for {p['duration']}. Breathing: {p['breathing']}",
         f"Guidance ({p['name']}: benefits): {' '.join(b.rstrip('.') + '.' for b in p['benefits'])} "
         f"Targets: {', '.join(p['target_areas']).lower()}.",
         f"Guidance ({p['name']}: easier version and safety): Easier version: {p['beginner_modification']} "
         f"{' '.join(p['safety_tips'][:2])} Skip or modify it with: {'; '.join(p['contraindications'][:2])}.",
     ]
+
+
+GUIDANCE_PREFIX_RE = re.compile(r"(^|\n)\s*(?:-\s*)?Guidance \([^)]*\):\s*")
+
+
+def tidy_answer(answer: str) -> str:
+    """Clean up a yoga answer: the small model sometimes repeats a reference line word for word, including its
+    'Guidance (...):' label. Drop those labels and put numbered steps on their own lines so the chat shows a list."""
+    text = GUIDANCE_PREFIX_RE.sub(lambda m: "\n\n" if m.group(1) else "", answer).strip()
+    m = re.search(r"(?<=[:.]) 1\. (?=[A-Z])", text)
+    if m and re.search(r" 2\. [A-Z]", text[m.end():]):
+        head, rest = text[:m.start()], text[m.end():]
+        after = ""
+        if "\n\n" in rest:          # only the paragraph that holds the steps is reformatted
+            rest, after = rest.split("\n\n", 1)
+            after = "\n\n" + after
+        rest = re.sub(r" (\d)\. (?=[A-Z])", r"\n\1. ", "1. " + rest)
+        lines = rest.split("\n")
+        last = lines[-1]
+        tail = re.search(r"(?<=\.) (?=(Hold|Breathing|Repeat|Rest|Keep breathing)\b)", last)
+        if tail:   # text after the last step becomes its own paragraph
+            lines[-1], extra = last[:tail.start()], last[tail.end():]
+            text = f"{head}\n\n" + "\n".join(lines) + f"\n\n{extra}" + after
+        else:
+            text = f"{head}\n\n" + "\n".join(lines) + after
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
 
 
 def format_routine(r: dict) -> str:
