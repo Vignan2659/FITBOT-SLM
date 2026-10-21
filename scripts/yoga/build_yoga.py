@@ -1,15 +1,14 @@
-"""Build the FitBot yoga dataset and its motion visuals.
+"""Build the FitBot yoga dataset.
 
     python3 scripts/yoga/build_yoga.py
 
-Reads the pose files in this folder (poses_beginner.py, poses_intermediate.py, poses_advanced.py) and writes:
+Reads the pose texts in this folder (poses_*.py) and the photo credits in data/yoga/photo_credits.json, and writes
+data/yoga/yoga_poses.json, the file the backend loads. Every pose has one or two real photos of people doing it,
+stored in frontend/public/yoga/photos/ (served at /yoga/photos/...). The photos come from Wikimedia Commons under free
+licences; each record carries the author, licence and source page so the app can credit them.
 
-    data/yoga/yoga_poses.json        structured pose records used by the backend, the API and the chat pipeline
-    frontend/public/yoga/<slug>.svg  animated motion figure (start -> transition -> final), served at /yoga/<slug>.svg
-    frontend/public/yoga/<slug>-<n>.svg  one still per key position, used for the "how it moves" strip
-
-Only the Python standard library is needed. The figures are original drawings generated from joint angles, so the
-whole module ships under the repository's MIT license with no third party image terms.
+To change the photos: edit data/yoga/photo_credits.json, put the new files in frontend/public/yoga/photos/
+(scripts/yoga/process_photos.py resizes downloaded originals), then run this script again.
 """
 from __future__ import annotations
 
@@ -23,8 +22,8 @@ sys.path.insert(0, str(HERE))
 
 import poses_advanced  # noqa: E402
 import poses_beginner  # noqa: E402
+import poses_extra  # noqa: E402
 import poses_intermediate  # noqa: E402
-from figure import motion_svgs  # noqa: E402
 
 GOAL_LABELS = {
     "flexibility": "Flexibility", "mobility": "Mobility", "strength": "Strength", "balance": "Balance", "core": "Core",
@@ -36,8 +35,8 @@ AREA_LABELS = {"back": "Back", "shoulders": "Shoulders", "hips": "Hips", "legs":
 PHASES = ["centering", "warmup", "standing", "balance", "core", "backbend", "seated", "inversion", "cooldown", "relaxation"]
 LEVELS = ["Beginner", "Intermediate", "Advanced"]
 REQUIRED = ["slug", "name", "sanskrit", "alt", "difficulty", "phase", "goals", "areas", "target", "benefits", "steps",
-            "breath", "hold", "reps", "easier", "harder", "mistakes", "safety", "avoid", "suitable", "keyframes"]
-IMAGE_LICENSE = "Original FitBot motion figure (MIT)"
+            "breath", "hold", "reps", "easier", "harder", "mistakes", "safety", "avoid", "suitable"]
+PHOTO_DIR = ROOT / "frontend" / "public" / "yoga" / "photos"
 
 
 def categories(p: dict) -> list[str]:
@@ -48,7 +47,7 @@ def categories(p: dict) -> list[str]:
     return list(dict.fromkeys(cats))
 
 
-def validate(poses: list[dict]) -> None:
+def validate(poses: list[dict], credits: dict) -> None:
     slugs = [p["slug"] for p in poses]
     dupes = {s for s in slugs if slugs.count(s) > 1}
     assert not dupes, f"duplicate slugs: {dupes}"
@@ -59,44 +58,22 @@ def validate(poses: list[dict]) -> None:
         assert p["phase"] in PHASES, p["slug"]
         assert set(p["goals"]) <= set(GOAL_LABELS), (p["slug"], p["goals"])
         assert set(p["areas"]) <= set(AREA_LABELS), (p["slug"], p["areas"])
-        assert 2 <= len(p["keyframes"]) <= 3, p["slug"]
-
-
-def photo_reference(name: str | None, catalog: dict) -> dict | None:
-    """A matching photo set from the existing exercise library (free-exercise-db, public domain), when there is one."""
-    if not name:
-        return None
-    e = catalog.get(name.lower())
-    if not e:
-        print(f"  ! photo reference '{name}' not found in the exercise library")
-        return None
-    return {"exercise": e["name"], "slug": e["slug"], "image_urls": e["image_urls"], "license": e["image_license"]}
+        photos = credits.get(p["slug"])
+        assert photos, f"{p['slug']}: no photo in photo_credits.json"
+        for ph in photos:
+            assert (PHOTO_DIR / ph["file"]).exists(), f"missing photo file {ph['file']}"
+            assert ph["license"] and ph["author"] and ph["source"], f"{ph['file']}: incomplete credit"
 
 
 def build() -> list[dict]:
-    poses = poses_beginner.POSES + poses_intermediate.POSES + poses_advanced.POSES
-    validate(poses)
+    poses = poses_beginner.POSES + poses_intermediate.POSES + poses_advanced.POSES + poses_extra.POSES
+    credits = json.loads((ROOT / "data" / "yoga" / "photo_credits.json").read_text(encoding="utf-8"))["photos"]
+    validate(poses, credits)
     known = {p["slug"] for p in poses}
-    catalog = {e["name"].lower(): e for e in
-               json.loads((ROOT / "data" / "exercises" / "exercises_v2.json").read_text(encoding="utf-8"))}
-    out_dir = ROOT / "frontend" / "public" / "yoga"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    for old in out_dir.glob("*.svg"):
-        old.unlink()
-
     records = []
     for p in poses:
-        anim, stills = motion_svgs(p["keyframes"], p["view"], p["anchor"], p["name"])
-        (out_dir / f"{p['slug']}.svg").write_text(anim, encoding="utf-8")
-        frames = []
-        for n, svg in enumerate(stills, 1):
-            (out_dir / f"{p['slug']}-{n}.svg").write_text(svg, encoding="utf-8")
-            frames.append(f"/yoga/{p['slug']}-{n}.svg")
-        dropped = [r for r in p["related"] if r not in known]
-        if dropped:
-            print(f"  - {p['slug']}: related poses not in the dataset, skipped: {dropped}")
-        labels = ["Start", "Transition", "Final"] if len(frames) == 3 else ["Exhale", "Inhale"] \
-            if p.get("kind") == "breathing" else ["Settle", "Rest"]
+        photos = [{"url": f"/yoga/photos/{ph['file']}", **{k: ph[k] for k in ("author", "license", "license_url", "source", "title")}}
+                  for ph in credits[p["slug"]]]
         records.append({
             # --- the fields of the requested yoga schema
             "name": p["name"],
@@ -116,10 +93,10 @@ def build() -> list[dict]:
             "contraindications": p["avoid"],
             "equipment": p["equipment"],
             "suitable_for": p["suitable"],
-            "image": frames[-1],
-            "motion_image": f"/yoga/{p['slug']}.svg",
+            "image": photos[0]["url"],
+            "image_urls": [ph["url"] for ph in photos],
             "tags": p["tags"],
-            # --- FitBot extensions (filters, routine builder, chat pipeline)
+            # --- FitBot extensions (filters, routine builder, chat pipeline, photo credits)
             "slug": p["slug"],
             "sanskrit": p["sanskrit"],
             "kind": p.get("kind", "pose"),
@@ -131,17 +108,13 @@ def build() -> list[dict]:
             "sides": p["sides"],
             "default_minutes": p["minutes"],
             "related": [r for r in p["related"] if r in known],
-            "frames": frames,
-            "frame_labels": labels,
-            "photo_reference": photo_reference(p["photo"], catalog),
-            "image_license": IMAGE_LICENSE,
+            "photos": photos,
         })
-    data_dir = ROOT / "data" / "yoga"
-    data_dir.mkdir(parents=True, exist_ok=True)
-    (data_dir / "yoga_poses.json").write_text(json.dumps(records, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    out = ROOT / "data" / "yoga" / "yoga_poses.json"
+    out.write_text(json.dumps(records, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     by = {lvl: sum(r["difficulty"] == lvl for r in records) for lvl in LEVELS}
-    size = sum(f.stat().st_size for f in out_dir.glob("*.svg"))
-    print(f"{len(records)} poses {by}; {len(list(out_dir.glob('*.svg')))} SVG files, {size / 1024:.0f} KB")
+    n_photos = sum(len(r["photos"]) for r in records)
+    print(f"{len(records)} poses {by}, {n_photos} photos")
     return records
 
 

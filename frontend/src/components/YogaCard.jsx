@@ -1,45 +1,36 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const LEVEL_CLASS = { Beginner: "lvl-beg", Intermediate: "lvl-int", Advanced: "lvl-adv" };
 
-// true when the visitor asked the system for less motion: show the final still instead of the animated figure
-export function useReducedMotion() {
-  const query = "(prefers-reduced-motion: reduce)";
-  const [reduced, setReduced] = useState(() => typeof window !== "undefined" && !!window.matchMedia?.(query).matches);
-  useEffect(() => {
-    const mq = window.matchMedia?.(query);
-    if (!mq) return undefined;
-    const on = () => setReduced(mq.matches);
-    mq.addEventListener?.("change", on);
-    return () => mq.removeEventListener?.("change", on);
-  }, []);
-  return reduced;
-}
-
-// The motion figure: animated SVG (start -> transition -> final) loaded lazily like the exercise photos.
-export function YogaMotion({ pose, className = "" }) {
-  const reduced = useReducedMotion();
-  const [broken, setBroken] = useState(false);
-  const src = reduced ? pose.image : pose.motion_image;
+// Credit line for a Wikimedia Commons photo: author, licence (linked) and source page.
+export function PhotoCredit({ photo }) {
+  if (!photo) return null;
   return (
-    <div className={`yoga-media ${className}`}>
-      {src && !broken ? (
-        <img src={src} alt={`${pose.name}: how the pose moves from start to final position`} loading="lazy"
-             decoding="async" width="320" height="240" onError={() => setBroken(true)} />
-      ) : (
-        <div className="ex-noimg">Visual unavailable</div>
-      )}
-    </div>
+    <span className="photo-credit">
+      Photo: {photo.author},{" "}
+      {photo.license_url ? <a href={photo.license_url} target="_blank" rel="noreferrer">{photo.license}</a> : photo.license},{" "}
+      <a href={photo.source} target="_blank" rel="noreferrer">Wikimedia Commons</a>
+    </span>
   );
 }
 
+// Real photo of the pose. Like the exercise cards, a second photo (another view) shows on hover.
 export default function YogaCard({ pose, compact = false }) {
+  const [frame, setFrame] = useState(0);
+  const [broken, setBroken] = useState(false);
+  const urls = pose.image_urls?.length ? pose.image_urls : [pose.image].filter(Boolean);
+  const thumbs = urls.map((u) => u.replace("/yoga/photos/", "/yoga/photos/thumb/"));
   const tags = (pose.category || []).slice(0, 3);
   return (
     <article className={`ex-card yoga-card ${compact ? "compact" : ""}`}>
-      <div className="ex-media yoga-card-media">
-        <YogaMotion pose={pose} />
+      <div className="ex-media yoga-card-media" onMouseEnter={() => setFrame(1)} onMouseLeave={() => setFrame(0)}>
+        {thumbs.length && !broken ? (
+          <img src={thumbs[Math.min(frame, thumbs.length - 1)]} alt={`${pose.name} demonstrated by a person`}
+               loading="lazy" decoding="async" onError={() => setBroken(true)} />
+        ) : (
+          <div className="ex-noimg">Image unavailable</div>
+        )}
         <span className={`badge ${LEVEL_CLASS[pose.difficulty] || ""}`}>{pose.difficulty}</span>
         {pose.sides && <span className="badge badge-right">Both sides</span>}
       </div>

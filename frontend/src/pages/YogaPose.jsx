@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { api } from "../api/client.js";
-import YogaCard, { YogaMotion } from "../components/YogaCard.jsx";
+import YogaCard, { PhotoCredit } from "../components/YogaCard.jsx";
 import { IconChat, IconChevron, IconShield } from "../components/Icons.jsx";
 
 const LEVEL_CLASS = { Beginner: "lvl-beg", Intermediate: "lvl-int", Advanced: "lvl-adv" };
@@ -22,10 +22,12 @@ export default function YogaPose() {
   const navigate = useNavigate();
   const [pose, setPose] = useState(null);
   const [error, setError] = useState("");
+  const [shown, setShown] = useState(0);
 
   useEffect(() => {
     setPose(null);
     setError("");
+    setShown(0);
     api.yogaPose(slug).then(setPose).catch((e) => setError(e.message));
     document.querySelector(".main .page")?.scrollTo?.(0, 0);
   }, [slug]);
@@ -46,7 +48,20 @@ export default function YogaPose() {
       <nav className="crumbs"><Link to="/yoga">Yoga</Link> <IconChevron width={14} height={14} className="rot-90" /> {pose.name}</nav>
 
       <section className="pose-hero">
-        <YogaMotion pose={pose} className="pose-motion" />
+        <figure className="pose-photo">
+          <img src={pose.photos[shown]?.url || pose.image} alt={`${pose.name} demonstrated by a person`} decoding="async" />
+          <figcaption><PhotoCredit photo={pose.photos[shown]} /></figcaption>
+          {pose.photos.length > 1 && (
+            <div className="photo-thumbs" role="tablist" aria-label="Photos of this pose">
+              {pose.photos.map((ph, i) => (
+                <button key={ph.url} role="tab" aria-selected={i === shown} className={i === shown ? "on" : ""}
+                        onClick={() => setShown(i)} aria-label={`Photo ${i + 1}`}>
+                  <img src={ph.url.replace("/yoga/photos/", "/yoga/photos/thumb/")} alt="" loading="lazy" decoding="async" />
+                </button>
+              ))}
+            </div>
+          )}
+        </figure>
         <div className="pose-head">
           <span className={`badge-sm ${LEVEL_CLASS[pose.difficulty]}`}>{pose.difficulty}</span>
           <h1 className="page-title">{pose.name}</h1>
@@ -60,18 +75,6 @@ export default function YogaPose() {
           </dl>
           <button className="btn btn-primary btn-sm" onClick={ask}><IconChat width={16} height={16} /> Ask FitBot about this pose</button>
         </div>
-      </section>
-
-      <section className="panel">
-        <h3>How it moves</h3>
-        <ol className="frame-strip">
-          {pose.frames.map((f, i) => (
-            <li key={f}>
-              <img src={f} alt={`${pose.name}, ${pose.frame_labels[i]?.toLowerCase()} position`} loading="lazy" decoding="async" width="320" height="240" />
-              <span>{i + 1}. {pose.frame_labels[i]}</span>
-            </li>
-          ))}
-        </ol>
       </section>
 
       <div className="pose-grid">
@@ -99,26 +102,13 @@ export default function YogaPose() {
         </section>
       </div>
 
-      {pose.photo_reference && (
-        <section className="panel">
-          <h3>Photo reference</h3>
-          <p className="muted small">The same movement in FitBot's exercise library: <b>{pose.photo_reference.exercise}</b></p>
-          <div className="photo-ref">
-            {pose.photo_reference.image_urls.slice(0, 2).map((u, i) => (
-              <img key={u} src={u} alt={`${pose.photo_reference.exercise}, photo ${i + 1}`} loading="lazy" decoding="async" />
-            ))}
-          </div>
-          <p className="img-credit">Photos: free-exercise-db (public domain)</p>
-        </section>
-      )}
-
       {pose.related_poses?.length > 0 && (
         <section>
           <h2 className="section-title">Related poses</h2>
           <div className="card-grid">{pose.related_poses.map((p) => <YogaCard key={p.slug} pose={p} compact />)}</div>
         </section>
       )}
-      <p className="img-credit">Motion figure: {pose.image_license}</p>
+      <p className="img-credit">Photos from Wikimedia Commons, used under their free licences (credited on each photo).</p>
     </div>
   );
 }

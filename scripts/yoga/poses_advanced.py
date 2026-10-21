@@ -1,6 +1,6 @@
 """Advanced yoga poses. Each one lists clear prerequisites and safety guidance; FitBot never suggests these to
 beginners in generated routines."""
-from common import ARMS_UP, DOG, STAND, SUPINE, SUPINE_KNEES, TABLE, k, pose
+from common import pose
 
 PREREQ = "Practise this only after the intermediate poses feel steady, ideally with a qualified teacher."
 
@@ -23,11 +23,7 @@ POSES = [
         safety=["Place a cushion in front of your face while learning."],
         avoid=["Wrist, elbow or shoulder injury", "Pregnancy"],
         suitable=["Strength building", "Arm balance practice"], tags=["arm balance", "core"],
-        related=["garland-pose", "plank-pose"], equipment="Yoga mat, block or cushion (optional)", anchor="r_wrist",
-        keyframes=[k(STAND, torso=150, neck=140, l_ua=8, r_ua=8, l_fa=0, r_fa=0, l_th=100, r_th=100, l_sh=-12, r_sh=-12),
-                   k(STAND, torso=108, neck=104, l_ua=6, r_ua=6, l_fa=0, r_fa=0, l_th=72, r_th=72, l_sh=-30, r_sh=-30, l_ft=40, r_ft=40),
-                   k(STAND, torso=78, neck=86, l_ua=4, r_ua=4, l_fa=-4, r_fa=-4, l_th=60, r_th=60, l_sh=-128, r_sh=-128,
-                     l_ft=-128, r_ft=-128)]),
+        related=["garland-pose", "plank-pose"], equipment="Yoga mat, block or cushion (optional)"),
     pose(
         slug="wheel-pose", name="Wheel Pose", sanskrit="Urdhva Dhanurasana", alt=["Urdhva Dhanurasana", "Upward Bow", "Full Wheel"],
         difficulty="Advanced", phase="backbend", minutes=0.5, time="morning", energy="energizing",
@@ -46,10 +42,7 @@ POSES = [
         safety=["Warm up well with Bridge, Camel and shoulder openers first.", "Come down slowly; never collapse onto the neck."],
         avoid=["Back, neck, wrist or shoulder injury", "High blood pressure or heart conditions", "Pregnancy"],
         suitable=["Experienced practitioners"], tags=["backbend", "advanced", "supine"],
-        related=["bridge-pose", "camel-pose", "bow-pose"], anchor="r_ankle",
-        keyframes=[k(SUPINE_KNEES, l_ua=200, r_ua=200, l_fa=-80, r_fa=-80),
-                   k(SUPINE_KNEES, torso=-72, neck=-50, l_th=110, r_th=110, l_sh=6, r_sh=6, l_ua=220, r_ua=220, l_fa=30, r_fa=30),
-                   k(SUPINE_KNEES, torso=-48, neck=-12, bend=-22, l_th=60, r_th=60, l_sh=-6, r_sh=-6, l_ua=338, r_ua=338, l_fa=340, r_fa=340)]),
+        related=["bridge-pose", "camel-pose", "bow-pose"]),
     pose(
         slug="supported-headstand", name="Supported Headstand", sanskrit="Salamba Sirsasana", alt=["Salamba Sirsasana", "Headstand"],
         difficulty="Advanced", phase="inversion", minutes=0.5, time="morning", energy="energizing",
@@ -69,10 +62,7 @@ POSES = [
         avoid=["Any neck or spine condition", "High blood pressure, heart conditions, glaucoma or eye problems", "Pregnancy",
                "Headache or migraine"],
         suitable=["Experienced practitioners"], tags=["inversion", "advanced", "balance"],
-        related=["dolphin-pose", "supported-shoulder-stand", "handstand"], anchor="r_wrist",
-        keyframes=[k(TABLE, torso=82, neck=90, l_ua=0, r_ua=0, l_fa=90, r_fa=90),
-                   k(TABLE, torso=14, neck=8, l_ua=28, r_ua=28, l_fa=-90, r_fa=-90, l_th=124, r_th=124, l_sh=-6, r_sh=-6, l_ft=60, r_ft=60),
-                   k(TABLE, torso=2, neck=2, l_ua=30, r_ua=30, l_fa=-90, r_fa=-90, l_th=180, r_th=180, l_sh=180, r_sh=180, l_ft=90, r_ft=90)]),
+        related=["dolphin-pose", "supported-shoulder-stand", "handstand"]),
     pose(
         slug="supported-shoulder-stand", name="Supported Shoulder Stand", sanskrit="Salamba Sarvangasana", alt=["Salamba Sarvangasana", "Shoulder Stand"],
         difficulty="Advanced", phase="inversion", minutes=1, time="evening", energy="calming",
@@ -91,10 +81,7 @@ POSES = [
         safety=["Use folded blankets under the shoulders to protect the neck.", "Never turn the head while inverted."],
         avoid=["Neck injury", "High blood pressure, glaucoma or eye problems", "Pregnancy", "Menstruation if uncomfortable"],
         suitable=["Experienced practitioners"], tags=["inversion", "advanced", "supine"],
-        related=["plow-pose", "fish-pose", "legs-up-the-wall"], equipment="Yoga mat, folded blankets", anchor="r_elbow",
-        keyframes=[k(SUPINE), k(SUPINE, torso=-40, neck=-90, l_th=200, r_th=200, l_sh=120, r_sh=120, l_ft=200, r_ft=200,
-                                  l_ua=80, r_ua=80, l_fa=150, r_fa=150),
-                   k(SUPINE, torso=-4, neck=-90, l_th=180, r_th=180, l_sh=180, r_sh=180, l_ft=270, r_ft=270, l_ua=80, r_ua=80, l_fa=176, r_fa=176)]),
+        related=["plow-pose", "fish-pose", "legs-up-the-wall"], equipment="Yoga mat, folded blankets"),
     pose(
         slug="plow-pose", name="Plow Pose", sanskrit="Halasana", alt=["Halasana"],
         difficulty="Advanced", phase="inversion", minutes=0.5, time="evening", energy="calming",
@@ -111,10 +98,7 @@ POSES = [
         mistakes=["Turning the head", "Collapsing weight onto the neck"], safety=["Use blankets under the shoulders."],
         avoid=["Neck or back injury", "High blood pressure", "Pregnancy"], suitable=["Experienced practitioners"],
         tags=["inversion", "advanced", "forward fold"], related=["supported-shoulder-stand", "fish-pose"],
-        equipment="Yoga mat, folded blankets", anchor="r_elbow",
-        keyframes=[k(SUPINE, torso=-4, neck=-90, l_th=180, r_th=180, l_sh=180, r_sh=180, l_ft=270, r_ft=270, l_ua=80, r_ua=80, l_fa=176, r_fa=176),
-                   k(SUPINE, torso=-2, neck=-90, l_th=250, r_th=250, l_sh=250, r_sh=250, l_ft=300, r_ft=300, l_ua=86, r_ua=86, l_fa=160, r_fa=160),
-                   k(SUPINE, torso=8, neck=-90, l_th=300, r_th=300, l_sh=304, r_sh=304, l_ft=360, r_ft=360, l_ua=90, r_ua=90, l_fa=90, r_fa=90)]),
+        equipment="Yoga mat, folded blankets"),
     pose(
         slug="handstand", name="Handstand (at a wall)", sanskrit="Adho Mukha Vrksasana", alt=["Adho Mukha Vrksasana", "Handstand"],
         difficulty="Advanced", phase="inversion", minutes=0.5, time="morning", energy="energizing",
@@ -133,10 +117,7 @@ POSES = [
         safety=["Always practise at a wall at first.", "Learn to cartwheel out safely."],
         avoid=["Wrist, shoulder or neck injury", "High blood pressure or eye conditions", "Pregnancy"],
         suitable=["Experienced practitioners"], tags=["inversion", "advanced", "arm balance"],
-        related=["downward-dog", "dolphin-pose", "supported-headstand"], equipment="Wall, yoga mat", anchor="r_wrist",
-        keyframes=[k(DOG, torso=30, neck=26, l_ua=28, r_ua=28, l_fa=28, r_fa=28, l_th=-20, r_th=-20, l_sh=-20, r_sh=-20),
-                   k(DOG, torso=10, neck=10, l_ua=8, r_ua=8, l_fa=8, r_fa=8, l_th=150, l_sh=150, r_th=-40, r_sh=20, r_ft=60),
-                   k(DOG, torso=0, neck=6, l_ua=0, r_ua=0, l_fa=0, r_fa=0, l_th=180, r_th=180, l_sh=180, r_sh=180, l_ft=180, r_ft=180)]),
+        related=["downward-dog", "dolphin-pose", "supported-headstand"], equipment="Wall, yoga mat"),
     pose(
         slug="full-splits", name="Front Splits", sanskrit="Hanumanasana", alt=["Hanumanasana", "Monkey Pose"],
         difficulty="Advanced", phase="cooldown", minutes=1, sides=True, time="evening", energy="neutral",
@@ -155,8 +136,5 @@ POSES = [
         safety=["Use blocks and stop well before pain.", "Progress over weeks, not in one session."],
         avoid=["Hamstring or groin injury", "Hip or knee injury"], suitable=["Experienced practitioners", "Dancers and martial artists"],
         tags=["flexibility", "advanced", "hamstrings"], related=["low-lunge", "pyramid-pose", "head-to-knee-pose"],
-        equipment="Yoga mat, blocks", anchor="hip",
-        keyframes=[k(STAND, l_ua=12, r_ua=16, l_fa=10, r_fa=14, r_th=80, r_sh=2, r_ft=90, l_th=-42, l_sh=-92, l_ft=-90),
-                   k(STAND, torso=120, neck=112, l_ua=40, r_ua=44, l_fa=40, r_fa=44, r_th=70, r_sh=70, r_ft=160, l_th=0, l_sh=-90, l_ft=-90),
-                   k(STAND, **ARMS_UP, r_th=90, r_sh=90, r_ft=170, l_th=-90, l_sh=-90, l_ft=-90)]),
+        equipment="Yoga mat, blocks"),
 ]

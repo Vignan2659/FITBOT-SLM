@@ -31,7 +31,7 @@ Everything shown on screen is real output from the app.
 
 **Nutrition from USDA FoodData Central.** 111 foods with calories, macros, vitamins and minerals per 100 g or per portion. If a value is not in the USDA data, FitBot does not make one up.
 
-**Yoga.** 63 poses and breathing practices, each with an animated figure that shows the movement from start to final position, step by step instructions, breathing cues, easier and harder versions, and safety notes. Filter by difficulty, goal or body area, open a pose page, or build a timed routine for your goal, level and time of day. In the chat, FitBot answers yoga questions from the same data ("Give me a 15 minute beginner yoga routine", "Which yoga poses target the hips?", "Explain how to perform Warrior II"). More in [docs/YOGA.md](docs/YOGA.md).
+**Yoga.** 61 poses and breathing practices, each shown in real photos of a person doing the pose (from Wikimedia Commons, credited on every photo), with step by step instructions, breathing cues, easier and harder versions, and safety notes. Filter by difficulty, goal or body area, open a pose page, or build a timed routine for your goal, level and time of day. In the chat, FitBot answers yoga questions from the same data ("Give me a 15 minute beginner yoga routine", "Which yoga poses target the hips?", "Explain how to perform Warrior II"). More in [docs/YOGA.md](docs/YOGA.md).
 
 **Workout plans.** Beginner to advanced, gym or home, dumbbells or bodyweight, 1 to 6 days a week, with sets, reps and rest.
 
@@ -55,8 +55,8 @@ Everything runs locally. No cloud AI service is used and your chats stay in a sm
     <td><img src="media/screenshots/dashboard.jpg" alt="Dashboard"><br><sub><b>Dashboard.</b> Quick start questions and the exercise explorer.</sub></td>
   </tr>
   <tr>
-    <td><img src="media/screenshots/yoga.jpg" alt="Yoga section"><br><sub><b>Yoga.</b> 63 poses with motion figures, filters for difficulty, goal and body area.</sub></td>
-    <td><img src="media/screenshots/yoga_pose.jpg" alt="Yoga pose page"><br><sub><b>Pose pages.</b> How the pose moves from start to final position, steps, breathing and safety.</sub></td>
+    <td><img src="media/screenshots/yoga.jpg" alt="Yoga section"><br><sub><b>Yoga.</b> 61 poses shown by real people, filters for difficulty, goal and body area.</sub></td>
+    <td><img src="media/screenshots/yoga_pose.jpg" alt="Yoga pose page"><br><sub><b>Pose pages.</b> Real photos with credits, steps, breathing and safety.</sub></td>
   </tr>
   <tr>
     <td><img src="media/screenshots/workouts.jpg" alt="My workouts"><br><sub><b>My workouts.</b> Log sessions, track streaks and your most trained exercises.</sub></td>
@@ -197,7 +197,7 @@ FITBOT-SLM/
 ├── data/
 │   ├── exercises/    871 exercises (plus the 58 hand picked ones from version 1)
 │   ├── nutrition/    111 foods from USDA FoodData Central
-│   ├── yoga/         63 yoga poses and practices, plus yoga guidance passages
+│   ├── yoga/         61 yoga poses with photo credits, plus yoga guidance passages
 │   ├── knowledge/    guidance passages used when answering
 │   ├── processed_v2/ the 5,470 training conversations
 │   ├── processed/    the first dataset (its 97 test questions are used to compare both models)
@@ -205,7 +205,7 @@ FITBOT-SLM/
 ├── training/         the QLoRA training notebook and the notebook from the actual run
 ├── evaluation/       test suites, evaluation scripts and all results
 ├── models/           topic classifier (the 4B model is downloaded by setup.sh)
-├── scripts/          model setup and the scripts that build the datasets (scripts/yoga builds the yoga data and figures)
+├── scripts/          model setup and the scripts that build the datasets (scripts/yoga builds the yoga data and resizes the photos)
 ├── docs/             architecture, datasets, model choice, training and evaluation
 ├── marketing/        scripts that make the film
 └── media/            the film, preview and screenshots used on this page
@@ -214,7 +214,8 @@ FITBOT-SLM/
 ## Data and credits
 
 * Exercises and photos: [free exercise db](https://github.com/yuhonas/free-exercise-db) by yuhonas, public domain (Unlicense)
-* Yoga poses, text and motion figures: written and drawn for this project (MIT)
+* Yoga pose texts: written for this project (MIT)
+* Yoga photos: Wikimedia Commons photographers (Kennguru, Joseph Renger, lululemon athletica, Mr. Yoga and others) under CC BY, CC BY-SA or public domain; full list in [data/yoga/PHOTO_CREDITS.md](data/yoga/PHOTO_CREDITS.md)
 * Nutrition: USDA Agricultural Research Service, FoodData Central, SR Legacy 2018, CC0
 * Intent examples: [harshmakwana/fitness-intent](https://huggingface.co/datasets/harshmakwana/fitness-intent), MIT
 * Base model: [Qwen3 4B Instruct 2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), Apache 2.0

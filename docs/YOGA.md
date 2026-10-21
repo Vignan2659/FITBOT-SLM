@@ -13,7 +13,7 @@ FitBot
      ├── Categories      16 categories, each opens the filtered pose list
      ├── Goals           poses or a routine for each goal
      ├── Routine builder time, level, goal, focus area, morning or evening
-     └── Pose page       motion figure, start → transition → final, steps, breathing, safety, related poses
+     └── Pose page       real photos of the pose, steps, breathing, safety, related poses
 ```
 
 ## Dataset
@@ -22,8 +22,9 @@ FitBot
 
 | | |
 |---|---|
-| Records | 63 (60 poses, 3 breathing and meditation practices) |
-| Difficulty | 35 beginner, 22 intermediate, 6 advanced |
+| Records | 61 (59 poses, 2 breathing practices), every one with real photos |
+| Photos | 102 photos of real people (1 or 2 per pose) |
+| Difficulty | 29 beginner, 26 intermediate, 6 advanced |
 | Goals | flexibility, mobility, strength, balance, core, stress relief, relaxation, recovery, weight management, posture, breathing, meditation |
 | Body areas | back, shoulders, hips, legs, core, full body, chest, neck |
 | Categories | Flexibility, Mobility, Strength, Balance, Core, Back, Shoulders, Hips, Hamstrings, Recovery, Relaxation, Stress relief, Breathing, Meditation (plus Posture and Weight management) |
@@ -32,10 +33,10 @@ Every record has the fields of the requested schema:
 
 `name, alternative_names, category, difficulty, target_areas, benefits, instructions, breathing, duration,
 recommended_repetitions, beginner_modification, advanced_variation, common_mistakes, safety_tips, contraindications,
-equipment, suitable_for, image, motion_image, tags`
+equipment, suitable_for, image, image_urls, tags`
 
 plus the fields FitBot needs for filtering, routines and the chat: `slug, sanskrit, kind, goals, body_areas, phase,
-time_of_day, energy, sides, default_minutes, related, frames, frame_labels, photo_reference, image_license`.
+time_of_day, energy, sides, default_minutes, related, photos` (each photo with its author, licence and source page).
 
 All text was written for this project. It describes general wellness and avoids medical claims: benefits are phrased
 as what a pose stretches or strengthens, every pose lists contraindications, and advanced poses tell the reader to learn
@@ -47,41 +48,54 @@ Rebuild after editing a pose file:
 python3 scripts/yoga/build_yoga.py
 ```
 
-## Motion visuals
+## Photos of real people
 
-The exercise library shows two photos per exercise (start and end position) and swaps them on hover. Yoga follows the
-same idea but goes one step further: each pose is described by two or three key positions (start, transition, final)
-as joint angles of a simple figure, and the builder turns them into
+Every pose is shown with real photos of a person doing it, the same idea as the exercise library (photos, with a
+second view on hover). There are no drawn or animated figures.
 
-* `frontend/public/yoga/<slug>.svg`: an animated figure that moves smoothly from start to final and back
-  (SVG with SMIL animation, so it works inside a normal `<img>` tag with no JavaScript),
-* `frontend/public/yoga/<slug>-1.svg` … `-3.svg`: one still per key position for the "How it moves" strip.
+### Where the photos come from
 
-Side views draw the far arm and leg lighter so depth reads clearly. A figure is 8 to 13 KB, the whole set (244 files) is
-about 0.9 MB, cards load them lazily, and the service worker caches them after first use. Visitors who ask their system
-for reduced motion get the final still instead of the animation.
+The photos come from Wikimedia Commons, where every file has an explicit free licence. Most come from four consistent
+studio series, so the cards look alike:
 
-### Which visual data, and why this choice
+| Series on Wikimedia Commons | Photos used | Licence | Look |
+|---|---|---|---|
+| Kennguru, "Yoga-Asana Nina-Mel" | 29 | CC BY 3.0 | white studio background |
+| Joseph Renger, asana series | 23 | CC BY-SA 3.0 | bright home studio |
+| lululemon athletica | 13 | CC BY 2.0 | white studio background |
+| Mr. Yoga | 11 | CC BY-SA 4.0 | light grey studio |
+| Other individual photographers | 26 | CC BY, CC BY-SA or public domain | various |
 
-| Option looked at | Verdict |
+Each photo was chosen by looking at it: one person, the whole body in frame, the pose clearly correct. The full list
+with authors, licences and source pages is in [data/yoga/PHOTO_CREDITS.md](../data/yoga/PHOTO_CREDITS.md), and the
+app shows the credit under every photo on the pose pages.
+
+### Other datasets looked at
+
+| Dataset | Why it is not used |
 |---|---|
-| Yoga-82 and similar research datasets | Lists of image links collected from the web; the images belong to their owners and are meant for research, so they cannot be shipped in this repository |
-| Yoga pose image sets on Kaggle | Mostly scraped from image search with unclear or non commercial licences; static photos only |
-| Wikimedia Commons yoga photos | Usable with attribution (often CC BY-SA), but one static photo per pose, mixed styles and backgrounds, and per image credit lines |
-| free-exercise-db (already in FitBot) | Public domain and already used for exercise photos, but it only covers a handful of yoga-like movements |
-| Original figures generated from joint angles | Consistent style, shows the movement (not just the final position), tiny files, and fully owned by the project |
+| [Yoga-82](https://sites.google.com/view/yoga-82/home) (28,000 images, 82 poses) | Only image links to third party websites, for non commercial research only; the photos cannot be shipped in this repository |
+| Kaggle yoga pose image sets | Scraped from image search, with no rights from the people who took the photos |
+| [Yoga Poses Dataset on GitHub](https://github.com/Manoj-2702/Yoga_Poses-Dataset) | Eight poses and no information about where the images come from |
+| [Roboflow yoga image dataset](https://universe.roboflow.com/yogaposedata/yoga-image-dataset) | Only two poses (down dog and goddess) |
 
-FitBot therefore uses its own generated figures for every pose, and where the existing public domain exercise library
-already has the same movement (Child's Pose, Cat Stretch, Bridge, Plank, Side Bridge, Locust, Pyramid, seated stretches)
-the pose page also shows those photos as a "Photo reference" instead of downloading duplicates.
+Those sets are built to train pose classifiers, not to show people how to do a pose. For FitBot, a smaller set of
+clear, correctly credited photos per pose is more useful.
 
-Mapping: pose record → `motion_image` and `frames` (generated figure) → optional `photo_reference` (existing exercise
-photos) → yoga card and pose page.
+### Files and performance
+
+* `frontend/public/yoga/photos/<slug>-<n>.jpg`: pose page size (longest side 800 px)
+* `frontend/public/yoga/photos/thumb/<slug>-<n>.jpg`: card size (longest side 420 px), about 25 KB each
+
+All 102 photos take 4.7 MB in total. Cards load only the small version and only when they scroll into view, and the
+service worker caches the photos after the first visit. `scripts/yoga/process_photos.py` makes both sizes from
+downloaded originals, and `data/yoga/photo_credits.json` lists which file belongs to which pose.
 
 ### Licences
 
-* Pose text, data and motion figures: original work for FitBot, MIT (see `LICENSE`).
-* Photo references: free-exercise-db by yuhonas, public domain (Unlicense), the same source as the exercise library.
+* Pose text and data: written for FitBot, MIT (see `LICENSE`).
+* Photos: each under its own licence (CC BY, CC BY-SA or public domain), credited per photo. Resizing does not change
+  the licence; anyone reusing the photos must keep the credit and, for CC BY-SA photos, the same licence.
 * General safety framing in the yoga guidance passages follows the US National Center for Complementary and
   Integrative Health page "Yoga: What You Need To Know" (US government work, public domain).
 
@@ -95,11 +109,11 @@ yoga_poses
 ├── id, slug, name, sanskrit
 ├── difficulty, kind, phase
 ├── category, goals, body_areas      (JSON)
-├── image_path, motion_asset_path
-└── details                          (JSON: the full pose record)
+├── image_path, image_urls          (main photo, all photos)
+└── details                          (JSON: the full pose record with photo credits)
 ```
 
-The table is created automatically; no migration step is needed. `/health` now reports `yoga_poses` in its database
+The table is rebuilt from the data file automatically on every start, so no migration step is needed. `/health` now reports `yoga_poses` in its database
 counts.
 
 ## API
@@ -154,7 +168,7 @@ done on each side show "1 min each side". Every step links to its pose page, and
 
 ## Tests
 
-* `backend/tests/test_yoga.py`: 23 tests for the dataset, visuals, API, routine builder, chat answers, follow ups,
+* `backend/tests/test_yoga.py`: 25 tests for the dataset, photos and credits, API, routine builder, chat answers, follow ups,
   safety and unchanged behaviour of non yoga questions.
 * `frontend/src/test/components.test.jsx`: yoga card, routine and chat message rendering.
 * `e2e/test_e2e.py`: a browser test of the Yoga section, filters, pose page, routine builder and yoga chat.

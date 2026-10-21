@@ -79,8 +79,8 @@ export default function Yoga() {
       <section className="hero-card yoga-hero">
         <div>
           <h1>Yoga</h1>
-          <p>{facets ? `${facets.total} poses and practices` : "Poses and practices"} with step by step motion guides,
-            safety notes and routines built for your goal and time.</p>
+          <p>{facets ? `${facets.total} poses and practices` : "Poses and practices"} shown by real people, with step
+            by step instructions, safety notes and routines built for your goal and time.</p>
         </div>
         <button className="btn btn-light" onClick={() => navigate("/chat", { state: { prompt: "Give me a 15 minute beginner yoga routine" } })}>
           <IconChat /> Ask FitBot
@@ -156,7 +156,7 @@ export default function Yoga() {
             const sample = poses.find((p) => p.category.includes(c));
             return (
               <button key={c} className="yoga-tile" onClick={() => { clear(); setCategory(c); setTab("poses", { category: c }); }}>
-                {sample && <img src={sample.image} alt="" loading="lazy" decoding="async" width="96" height="72" />}
+                {sample && <img src={sample.thumb || sample.image} alt="" loading="lazy" decoding="async" width="96" height="72" />}
                 <span><strong>{c}</strong><small>{count} poses</small></span>
               </button>
             );

@@ -275,7 +275,7 @@ class YogaLibrary:
             else:
                 pool.sort(key=lambda p: -score(p))
             if phase == "relaxation":
-                final = "body-scan-meditation" if calm and minutes >= 20 else "corpse-pose"
+                final = "corpse-pose"
                 pool = [self.by_slug[final]] + [p for p in pool if p["slug"] != final]
             spent = 0.0
             for p in pool:
@@ -312,7 +312,7 @@ class YogaLibrary:
             out_steps.append({"order": n, "slug": p["slug"], "name": p["name"], "sanskrit": p["sanskrit"],
                               "difficulty": p["difficulty"], "phase": PHASE_LABEL[s["phase"]], "minutes": mins,
                               "per_side": per_side, "duration": note, "breathing": p["breathing"],
-                              "motion_image": p["motion_image"], "image": p["image"],
+                              "image": thumb(p["image"]),
                               "cue": p["instructions"][min(2, len(p["instructions"]) - 1)]})
         title_bits = [f"{minutes}-Minute", level, "Yoga"]
         if time_of_day:
@@ -349,13 +349,19 @@ def _fmt(m: float | None) -> str:
 
 
 # ---------------------------------------------------------------------------------------------- formatting
+def thumb(url: str) -> str:
+    """Card sized version of a pose photo (/yoga/photos/x.jpg -> /yoga/photos/thumb/x.jpg)."""
+    return url.replace("/yoga/photos/", "/yoga/photos/thumb/", 1)
+
+
 def yoga_card(p: dict) -> dict:
     keys = ("slug", "name", "sanskrit", "alternative_names", "difficulty", "category", "goals", "body_areas",
             "target_areas", "benefits", "instructions", "breathing", "duration", "recommended_repetitions",
             "beginner_modification", "advanced_variation", "common_mistakes", "safety_tips", "contraindications",
-            "equipment", "suitable_for", "image", "motion_image", "frames", "frame_labels", "related", "kind", "sides",
-            "photo_reference", "image_license", "tags")
-    return {k: p[k] for k in keys}
+            "equipment", "suitable_for", "image", "image_urls", "photos", "related", "kind", "sides", "tags")
+    card = {k: p[k] for k in keys}
+    card["thumb"] = thumb(p["image"])
+    return card
 
 
 def format_yoga_pose(p: dict) -> str:

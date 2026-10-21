@@ -86,19 +86,19 @@ test("plan action buttons appear only when enabled", () => {
 const warrior = {
   slug: "warrior-ii", name: "Warrior II", sanskrit: "Virabhadrasana II", difficulty: "Beginner", sides: true,
   category: ["Strength", "Flexibility", "Weight management", "Mobility"], duration: "30 seconds to 1 minute each side",
-  image: "/yoga/warrior-ii-3.svg", motion_image: "/yoga/warrior-ii.svg",
+  image: "/yoga/photos/warrior-ii-1.jpg", image_urls: ["/yoga/photos/warrior-ii-1.jpg"],
 };
 const routine = {
   title: "15-Minute Beginner Yoga", minutes: 15, level: "Beginner", notes: ["Move slowly."],
   steps: [{ order: 1, slug: "mountain-pose", name: "Mountain Pose", phase: "Centre", duration: "1 min", difficulty: "Beginner",
-            image: "/yoga/mountain-pose-3.svg", cue: "Stand tall." },
+            image: "/yoga/photos/thumb/mountain-pose-1.jpg", cue: "Stand tall." },
           { order: 2, slug: "warrior-ii", name: "Warrior II", phase: "Standing", duration: "1 min each side", difficulty: "Beginner",
-            image: "/yoga/warrior-ii-3.svg", cue: "Bend the front knee." }],
+            image: "/yoga/photos/thumb/warrior-ii-1.jpg", cue: "Bend the front knee." }],
 };
 
-test("yoga card shows the motion figure, level, categories and links to the pose page", () => {
+test("yoga card shows a real photo, level, categories and links to the pose page", () => {
   render(<MemoryRouter><YogaCard pose={warrior} /></MemoryRouter>);
-  expect(screen.getByRole("img", { name: /warrior ii/i })).toHaveAttribute("src", "/yoga/warrior-ii.svg");
+  expect(screen.getByRole("img", { name: /warrior ii/i })).toHaveAttribute("src", "/yoga/photos/thumb/warrior-ii-1.jpg");
   expect(screen.getByText("Beginner")).toBeInTheDocument();
   expect(screen.getByText("Both sides")).toBeInTheDocument();
   expect(screen.getByText("Strength • Flexibility • Weight management")).toBeInTheDocument();

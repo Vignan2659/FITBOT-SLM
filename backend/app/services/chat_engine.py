@@ -150,7 +150,7 @@ class ChatEngine:
                 passages = [safety_p] + passages[:1]
         context += [format_passage(p) for p in passages]
         result["sources"] = [{"type": "guidance", "title": p["title"], "source": p["source"]} for p in passages]
-        result["sources"].append({"type": "yoga", "title": "FitBot yoga library", "source": "/yoga"})
+        result["sources"].append({"type": "yoga", "title": "FitBot yoga library (photos: Wikimedia Commons)", "source": "/yoga"})
 
         prompt_profile = {"fitness_level": (yq.level or "").lower() or None, "goal": (profile or {}).get("goal"),
                           "equipment": None, "location": None, "dietary_preference": None,

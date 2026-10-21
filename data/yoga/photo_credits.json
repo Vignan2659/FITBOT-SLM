@@ -1,0 +1,944 @@
+{
+ "description": "Real photos of people doing each yoga pose, from Wikimedia Commons under free licences. Every photo keeps its author, licence and source page; the app shows this credit with the photo.",
+ "source": "Wikimedia Commons (https://commons.wikimedia.org)",
+ "photos": {
+  "mountain-pose": [
+   {
+    "file": "mountain-pose-1.jpg",
+    "title": "Tadasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tadasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "mountain-pose-2.jpg",
+    "title": "Mr-yoga-mountain-pose-1.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-mountain-pose-1.jpg"
+   }
+  ],
+  "upward-salute": [
+   {
+    "file": "upward-salute-1.jpg",
+    "title": "Mr-yoga-upward salute 1.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-upward_salute_1.jpg"
+   },
+   {
+    "file": "upward-salute-2.jpg",
+    "title": "2Urdva Hastasana.JPG",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2Urdva_Hastasana.JPG"
+   }
+  ],
+  "standing-forward-fold": [
+   {
+    "file": "standing-forward-fold-1.jpg",
+    "title": "3Uttanasana.JPG",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:3Uttanasana.JPG"
+   },
+   {
+    "file": "standing-forward-fold-2.jpg",
+    "title": "Uttanasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Uttanasana.jpg"
+   }
+  ],
+  "tree-pose": [
+   {
+    "file": "tree-pose-1.jpg",
+    "title": "Vriksasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vriksasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "tree-pose-2.jpg",
+    "title": "Bhagaritasana.intro.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Bhagaritasana.intro.jpg"
+   }
+  ],
+  "warrior-i": [
+   {
+    "file": "warrior-i-1.jpg",
+    "title": "Rocket-yoga-01-1200px.jpg",
+    "author": "Lilianwhite",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rocket-yoga-01-1200px.jpg"
+   },
+   {
+    "file": "warrior-i-2.jpg",
+    "title": "Virabhadrasana I - Warrior Pose I.jpg",
+    "author": "OrenBochman",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Virabhadrasana_I_-_Warrior_Pose_I.jpg"
+   }
+  ],
+  "warrior-ii": [
+   {
+    "file": "warrior-ii-1.jpg",
+    "title": "Virabhadrasana II - Warrior II Pose.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Virabhadrasana_II_-_Warrior_II_Pose.jpg"
+   }
+  ],
+  "low-lunge": [
+   {
+    "file": "low-lunge-1.jpg",
+    "title": "Low Lunge.jpg",
+    "author": "BameSanah88",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Low_Lunge.jpg"
+   },
+   {
+    "file": "low-lunge-2.jpg",
+    "title": "Godhapitham (l‘iguane).jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Godhapitham_(l%E2%80%98iguane).jpg"
+   }
+  ],
+  "chair-pose": [
+   {
+    "file": "chair-pose-1.jpg",
+    "title": "Utkatasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Utkatasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "childs-pose": [
+   {
+    "file": "childs-pose-1.jpg",
+    "title": "Balasana.JPG",
+    "author": "Iveto",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Balasana.JPG"
+   },
+   {
+    "file": "childs-pose-2.jpg",
+    "title": "Hare-pose.JPG",
+    "author": "Satheesan.vn",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hare-pose.JPG"
+   }
+  ],
+  "cat-cow": [
+   {
+    "file": "cat-cow-1.jpg",
+    "title": "Yoga at Your Park - Bidalasana.jpg",
+    "author": "Mary O'Neill",
+    "license": "Public domain",
+    "license_url": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Yoga_at_Your_Park_-_Bidalasana.jpg"
+   }
+  ],
+  "downward-dog": [
+   {
+    "file": "downward-dog-1.jpg",
+    "title": "Flickr - Nicholas T - Up and Down.jpg",
+    "author": "Nicholas A. Tonelli from Pennsylvania, USA",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flickr_-_Nicholas_T_-_Up_and_Down.jpg"
+   },
+   {
+    "file": "downward-dog-2.jpg",
+    "title": "5adho mukha shvanasana.JPG",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:5adho_mukha_shvanasana.JPG"
+   }
+  ],
+  "cobra-pose": [
+   {
+    "file": "cobra-pose-1.jpg",
+    "title": "Bhujangasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bhujangasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "cobra-pose-2.jpg",
+    "title": "Bhujangasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Bhujangasana.jpg"
+   }
+  ],
+  "sphinx-pose": [
+   {
+    "file": "sphinx-pose-1.jpg",
+    "title": "IMG 0549 2 Sphinx.jpg",
+    "author": "Christy Collins, photographer",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:IMG_0549_2_Sphinx.jpg"
+   },
+   {
+    "file": "sphinx-pose-2.jpg",
+    "title": "A style of bhujangasana.JPG",
+    "author": "Thamizhpparithi Maari",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_style_of_bhujangasana.JPG"
+   }
+  ],
+  "bridge-pose": [
+   {
+    "file": "bridge-pose-1.jpg",
+    "title": "Dvipada pitham.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Dvipada_pitham.jpg"
+   },
+   {
+    "file": "bridge-pose-2.jpg",
+    "title": "Setubandhasana oblique view.JPG",
+    "author": "Biswarup Ganguly",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Setubandhasana_oblique_view.JPG"
+   }
+  ],
+  "easy-pose": [
+   {
+    "file": "easy-pose-1.jpg",
+    "title": "L2045152 retouch flattened2 preview.jpg",
+    "author": "L4Harrington",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:L2045152_retouch_flattened2_preview.jpg"
+   },
+   {
+    "file": "easy-pose-2.jpg",
+    "title": "Sukkasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Sukkasana.jpg"
+   }
+  ],
+  "staff-pose": [
+   {
+    "file": "staff-pose-1.jpg",
+    "title": "Dandasana yoga posture.jpg",
+    "author": "Jemasty",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dandasana_yoga_posture.jpg"
+   }
+  ],
+  "seated-forward-fold": [
+   {
+    "file": "seated-forward-fold-1.jpg",
+    "title": "Paschimottanasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Paschimottanasana.jpg"
+   },
+   {
+    "file": "seated-forward-fold-2.jpg",
+    "title": "Paschimotanasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Paschimotanasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "bound-angle-pose": [
+   {
+    "file": "bound-angle-pose-1.jpg",
+    "title": "Baddha Koṇāsana-bound angle.jpg",
+    "author": "Jfbongarçon",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Baddha_Ko%E1%B9%87%C4%81sana-bound_angle.jpg"
+   },
+   {
+    "file": "bound-angle-pose-2.jpg",
+    "title": "Baddha konasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Baddha_konasana.jpg"
+   }
+  ],
+  "standing-side-bend": [
+   {
+    "file": "standing-side-bend-1.jpg",
+    "title": "Mr-yoga-side bend.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-side_bend.jpg"
+   }
+  ],
+  "legs-up-the-wall": [
+   {
+    "file": "legs-up-the-wall-1.jpg",
+    "title": "Viparita-Karani Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Viparita-Karani_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "legs-up-the-wall-2.jpg",
+    "title": "Balancing bear-posture.jpg",
+    "author": "Satheesan.vn",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Balancing_bear-posture.jpg"
+   }
+  ],
+  "corpse-pose": [
+   {
+    "file": "corpse-pose-1.jpg",
+    "title": "Shavasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Shavasana.jpg"
+   },
+   {
+    "file": "corpse-pose-2.jpg",
+    "title": "Corpse posture.jpg",
+    "author": "Satheesan.vn",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Corpse_posture.jpg"
+   }
+  ],
+  "alternate-nostril-breathing": [
+   {
+    "file": "alternate-nostril-breathing-1.jpg",
+    "title": "A style of nadi suddhi 1.JPG",
+    "author": "Thamizhpparithi Maari",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_style_of_nadi_suddhi_1.JPG"
+   },
+   {
+    "file": "alternate-nostril-breathing-2.jpg",
+    "title": "A style of nadi suddhi.JPG",
+    "author": "Thamizhpparithi Maari",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_style_of_nadi_suddhi.JPG"
+   }
+  ],
+  "plank-pose": [
+   {
+    "file": "plank-pose-1.jpg",
+    "title": "Chaturanga-Dandasana high Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chaturanga-Dandasana_high_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "tabletop-balance": [
+   {
+    "file": "tabletop-balance-1.jpg",
+    "title": "Bird dog exercise.jpg",
+    "author": "PTPioneer",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bird_dog_exercise.jpg"
+   }
+  ],
+  "locust-pose": [
+   {
+    "file": "locust-pose-1.jpg",
+    "title": "Salabhasana (cropped).jpg",
+    "author": "Nikiwiki242",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Salabhasana_(cropped).jpg"
+   },
+   {
+    "file": "locust-pose-2.jpg",
+    "title": "Salabhasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Salabhasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "triangle-pose": [
+   {
+    "file": "triangle-pose-1.jpg",
+    "title": "Trikonasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Trikonasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "triangle-pose-2.jpg",
+    "title": "2012.07 eurotrip Innsbruck mountains 08.jpg",
+    "author": "Sigurdas",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2012.07_eurotrip_Innsbruck_mountains_08.jpg"
+   }
+  ],
+  "extended-side-angle": [
+   {
+    "file": "extended-side-angle-1.jpg",
+    "title": "Utthita-Parshvakonasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Utthita-Parshvakonasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "extended-side-angle-2.jpg",
+    "title": "Parsvakonasana Utthita B - Revolved Side Angle Pose B - with arm Support.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Parsvakonasana_Utthita_B_-_Revolved_Side_Angle_Pose_B_-_with_arm_Support.jpg"
+   }
+  ],
+  "warrior-iii": [
+   {
+    "file": "warrior-iii-1.jpg",
+    "title": "Tuladandasana - Virabhadrasana III.jpg",
+    "author": "Robert Lindermayr",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tuladandasana_-_Virabhadrasana_III.jpg"
+   },
+   {
+    "file": "warrior-iii-2.jpg",
+    "title": "Tuladandasana.jpg",
+    "author": "Drchirag patel",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tuladandasana.jpg"
+   }
+  ],
+  "half-moon-pose": [
+   {
+    "file": "half-moon-pose-1.jpg",
+    "title": "Ardha-Chandrasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ardha-Chandrasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "half-moon-pose-2.jpg",
+    "title": "Ardha Chandrasana (cropped).jpg",
+    "author": "Nikiwiki242",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ardha_Chandrasana_(cropped).jpg"
+   }
+  ],
+  "pyramid-pose": [
+   {
+    "file": "pyramid-pose-1.jpg",
+    "title": "Parshvottanasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Parshvottanasana.jpg"
+   }
+  ],
+  "garland-pose": [
+   {
+    "file": "garland-pose-1.jpg",
+    "title": "Upaveśāsana.jpg",
+    "author": "robzabelyoga.com",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Upave%C5%9B%C4%81sana.jpg"
+   }
+  ],
+  "boat-pose": [
+   {
+    "file": "boat-pose-1.jpg",
+    "title": "Paripurna-Navasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Paripurna-Navasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "boat-pose-2.jpg",
+    "title": "Mr-yoga-boat-pose2.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-boat-pose2.jpg"
+   }
+  ],
+  "side-plank": [
+   {
+    "file": "side-plank-1.jpg",
+    "title": "Yoga PLank.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yoga_PLank.jpg"
+   },
+   {
+    "file": "side-plank-2.jpg",
+    "title": "Mr-yoga-side-plank.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-side-plank.jpg"
+   }
+  ],
+  "upward-dog": [
+   {
+    "file": "upward-dog-1.jpg",
+    "title": "7urdhva mukha shvanasana.JPG",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:7urdhva_mukha_shvanasana.JPG"
+   },
+   {
+    "file": "upward-dog-2.jpg",
+    "title": "Urdva-muka-shvanasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Urdva-muka-shvanasana.jpg"
+   }
+  ],
+  "camel-pose": [
+   {
+    "file": "camel-pose-1.jpg",
+    "title": "Ustrasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ustrasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "camel-pose-2.jpg",
+    "title": "Ustrasana - Camel Pose.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ustrasana_-_Camel_Pose.jpg"
+   }
+  ],
+  "bow-pose": [
+   {
+    "file": "bow-pose-1.jpg",
+    "title": "Dhanurasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dhanurasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "bow-pose-2.jpg",
+    "title": "Dhanurasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Dhanurasana.jpg"
+   }
+  ],
+  "pigeon-pose": [
+   {
+    "file": "pigeon-pose-1.jpg",
+    "title": "Eka Pada Rajakapotasana - One Legged Royal Pigeon Pose.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Eka_Pada_Rajakapotasana_-_One_Legged_Royal_Pigeon_Pose.jpg"
+   },
+   {
+    "file": "pigeon-pose-2.jpg",
+    "title": "Mr-yoga-one-legged-king-pigeon-1- (2).jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-one-legged-king-pigeon-1-_(2).jpg"
+   }
+  ],
+  "head-to-knee-pose": [
+   {
+    "file": "head-to-knee-pose-1.jpg",
+    "title": "Janusirsasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Janusirsasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "seated-twist": [
+   {
+    "file": "seated-twist-1.jpg",
+    "title": "Ardha-Matsyendrasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ardha-Matsyendrasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "seated-twist-2.jpg",
+    "title": "Ardha Matsyendrasana - Half Lord of the Fishes Pose.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ardha_Matsyendrasana_-_Half_Lord_of_the_Fishes_Pose.jpg"
+   }
+  ],
+  "revolved-chair": [
+   {
+    "file": "revolved-chair-1.jpg",
+    "title": "Parivrtta-Utkatasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Parivrtta-Utkatasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "dancer-pose": [
+   {
+    "file": "dancer-pose-1.jpg",
+    "title": "Mr-yoga-lord of dance 1.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-lord_of_dance_1.jpg"
+   },
+   {
+    "file": "dancer-pose-2.jpg",
+    "title": "Natarajasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Natarajasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "fish-pose": [
+   {
+    "file": "fish-pose-1.jpg",
+    "title": "Matsyasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Matsyasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "fish-pose-2.jpg",
+    "title": "Mr-yoga-fish-pose.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-fish-pose.jpg"
+   }
+  ],
+  "reclined-bound-angle": [
+   {
+    "file": "reclined-bound-angle-1.jpg",
+    "title": "Mr-yoga-reclined-bound-angle.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-reclined-bound-angle.jpg"
+   }
+  ],
+  "crow-pose": [
+   {
+    "file": "crow-pose-1.jpg",
+    "title": "Kakasana Yoga-Asana Nina-Mel (cropped, light background).jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kakasana_Yoga-Asana_Nina-Mel_(cropped,_light_background).jpg"
+   },
+   {
+    "file": "crow-pose-2.jpg",
+    "title": "Cranse Pose 5.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cranse_Pose_5.jpg"
+   }
+  ],
+  "wheel-pose": [
+   {
+    "file": "wheel-pose-1.jpg",
+    "title": "Chakrasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chakrasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "wheel-pose-2.jpg",
+    "title": "Urdva Dhanurasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Urdva_Dhanurasana.jpg"
+   }
+  ],
+  "supported-headstand": [
+   {
+    "file": "supported-headstand-1.jpg",
+    "title": "Salamba Sirsasana - Supported Headstand.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Salamba_Sirsasana_-_Supported_Headstand.jpg"
+   },
+   {
+    "file": "supported-headstand-2.jpg",
+    "title": "Shirshasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Shirshasana.jpg"
+   }
+  ],
+  "supported-shoulder-stand": [
+   {
+    "file": "supported-shoulder-stand-1.jpg",
+    "title": "Sarvangasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarvangasana.jpg"
+   },
+   {
+    "file": "supported-shoulder-stand-2.jpg",
+    "title": "Mr-yoga-shouldertand.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-shouldertand.jpg"
+   }
+  ],
+  "plow-pose": [
+   {
+    "file": "plow-pose-1.jpg",
+    "title": "Halasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Halasana.jpg"
+   },
+   {
+    "file": "plow-pose-2.jpg",
+    "title": "Minimalism (14155793547).jpg",
+    "author": "Nicholas A. Tonelli from Northeast Pennsylvania, USA",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Minimalism_(14155793547).jpg"
+   }
+  ],
+  "handstand": [
+   {
+    "file": "handstand-1.jpg",
+    "title": "Handstand (119653409).jpeg",
+    "author": "Earl Mcgehee",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Handstand_(119653409).jpeg"
+   }
+  ],
+  "full-splits": [
+   {
+    "file": "full-splits-1.jpg",
+    "title": "Hanumanasana - Hanuman's Posture - in Diagonal View.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hanumanasana_-_Hanuman%27s_Posture_-_in_Diagonal_View.jpg"
+   },
+   {
+    "file": "full-splits-2.jpg",
+    "title": "Yoga Split 3.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yoga_Split_3.jpg"
+   }
+  ],
+  "eagle-pose": [
+   {
+    "file": "eagle-pose-1.jpg",
+    "title": "Garudasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Garudasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "eagle-pose-2.jpg",
+    "title": "Garuḍāsana - Eagle Pose 2 in side view.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Garu%E1%B8%8D%C4%81sana_-_Eagle_Pose_2_in_side_view.jpg"
+   }
+  ],
+  "cow-face-pose": [
+   {
+    "file": "cow-face-pose-1.jpg",
+    "title": "Gomukhasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gomukhasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "cow-face-pose-2.jpg",
+    "title": "Mr-yoga-cow-face-pose.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-cow-face-pose.jpg"
+   }
+  ],
+  "hero-pose": [
+   {
+    "file": "hero-pose-1.jpg",
+    "title": "Virasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Virasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "thunderbolt-pose": [
+   {
+    "file": "thunderbolt-pose-1.jpg",
+    "title": "Vajrasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Vajrasana.jpg"
+   }
+  ],
+  "revolved-triangle": [
+   {
+    "file": "revolved-triangle-1.jpg",
+    "title": "Parivrtta-Trikonasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Parivrtta-Trikonasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "extended-hand-to-big-toe": [
+   {
+    "file": "extended-hand-to-big-toe-1.jpg",
+    "title": "Utthita-Hasta-Padangusthasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Utthita-Hasta-Padangusthasana_Yoga-Asana_Nina-Mel.jpg"
+   },
+   {
+    "file": "extended-hand-to-big-toe-2.jpg",
+    "title": "Utthita Hasta Padangusthasana - Standing Big Toe Hold.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Utthita_Hasta_Padangusthasana_-_Standing_Big_Toe_Hold.jpg"
+   }
+  ],
+  "four-limbed-staff": [
+   {
+    "file": "four-limbed-staff-1.jpg",
+    "title": "Chaturanga-Dandasana low Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chaturanga-Dandasana_low_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "reverse-plank": [
+   {
+    "file": "reverse-plank-1.jpg",
+    "title": "Putvottanasana - Upward Plank Pose 1 - Diagonal View.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Putvottanasana_-_Upward_Plank_Pose_1_-_Diagonal_View.jpg"
+   },
+   {
+    "file": "reverse-plank-2.jpg",
+    "title": "Purvottanasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Purvottanasana.jpg"
+   }
+  ],
+  "wide-angle-seated-forward-bend": [
+   {
+    "file": "wide-angle-seated-forward-bend-1.jpg",
+    "title": "Upavisha-konasana.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Upavisha-konasana.jpg"
+   }
+  ],
+  "lion-pose": [
+   {
+    "file": "lion-pose-1.jpg",
+    "title": "Simhasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Simhasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ],
+  "reclined-hero": [
+   {
+    "file": "reclined-hero-1.jpg",
+    "title": "Supta-Virasana Yoga-Asana Nina-Mel.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Supta-Virasana_Yoga-Asana_Nina-Mel.jpg"
+   }
+  ]
+ }
+}

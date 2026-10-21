@@ -112,7 +112,8 @@ class FoodMetadata(Base):
 
 class YogaPose(Base):
     """Yoga pose library (data/yoga/yoga_poses.json, re-synced on every start like the exercise and food tables).
-    Filterable fields are columns; the full pose record (instructions, safety, visuals...) is kept in `details`."""
+    Filterable fields are columns; the full pose record (instructions, safety, photos and their credits) is kept in
+    `details`."""
     __tablename__ = "yoga_poses"
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     slug: Mapped[str] = mapped_column(String(80), unique=True, index=True)
@@ -124,8 +125,8 @@ class YogaPose(Base):
     category: Mapped[list] = mapped_column(JSON)
     goals: Mapped[list] = mapped_column(JSON)
     body_areas: Mapped[list] = mapped_column(JSON)
-    image_path: Mapped[str] = mapped_column(String(200))
-    motion_asset_path: Mapped[str] = mapped_column(String(200))
+    image_path: Mapped[str] = mapped_column(String(200))           # main photo
+    image_urls: Mapped[list] = mapped_column(JSON)                  # all photos of the pose
     details: Mapped[dict] = mapped_column(JSON)
 
 

@@ -234,12 +234,13 @@ def test_yoga_section_filters_detail_routine_and_chat(page):
     assert badges and all(b in ("Advanced", "Both sides") for b in badges)
     page.get_by_role("button", name="Clear filters").first.click()
     page.get_by_role("searchbox", name="Search yoga poses").fill("warrior")
-    expect(page.locator(".yoga-card")).to_have_count(4)   # Warrior I, II, III and Reverse Warrior
+    expect(page.locator(".yoga-card")).to_have_count(3)   # Warrior I, II and III
 
-    # pose page: motion figure, three key positions, safety
+    # pose page: real photo with its credit, steps, safety
     page.locator('.yoga-card a[href="/yoga/warrior-ii"]').click()
     expect(page.get_by_role("heading", name="Warrior II")).to_be_visible()
-    expect(page.locator(".frame-strip img")).to_have_count(3)
+    expect(page.locator(".pose-photo > img")).to_be_visible()
+    expect(page.locator(".pose-photo figcaption")).to_contain_text("Wikimedia Commons")
     expect(page.locator(".pose-safety")).to_be_visible()
 
     # routine builder

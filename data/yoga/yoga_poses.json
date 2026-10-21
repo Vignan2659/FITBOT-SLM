@@ -54,8 +54,11 @@
    "Office workers",
    "Warm up"
   ],
-  "image": "/yoga/mountain-pose-3.svg",
-  "motion_image": "/yoga/mountain-pose.svg",
+  "image": "/yoga/photos/mountain-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/mountain-pose-1.jpg",
+   "/yoga/photos/mountain-pose-2.jpg"
+  ],
   "tags": [
    "standing",
    "alignment",
@@ -84,18 +87,24 @@
    "tree-pose",
    "chair-pose"
   ],
-  "frames": [
-   "/yoga/mountain-pose-1.svg",
-   "/yoga/mountain-pose-2.svg",
-   "/yoga/mountain-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/mountain-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tadasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Tadasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/mountain-pose-2.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-mountain-pose-1.jpg",
+    "title": "Mr-yoga-mountain-pose-1.jpg"
+   }
+  ]
  },
  {
   "name": "Upward Salute",
@@ -149,8 +158,11 @@
    "Morning routine",
    "Office workers"
   ],
-  "image": "/yoga/upward-salute-3.svg",
-  "motion_image": "/yoga/upward-salute.svg",
+  "image": "/yoga/photos/upward-salute-1.jpg",
+  "image_urls": [
+   "/yoga/photos/upward-salute-1.jpg",
+   "/yoga/photos/upward-salute-2.jpg"
+  ],
   "tags": [
    "standing",
    "stretch",
@@ -179,18 +191,24 @@
    "standing-forward-fold",
    "standing-side-bend"
   ],
-  "frames": [
-   "/yoga/upward-salute-1.svg",
-   "/yoga/upward-salute-2.svg",
-   "/yoga/upward-salute-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/upward-salute-1.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-upward_salute_1.jpg",
+    "title": "Mr-yoga-upward salute 1.jpg"
+   },
+   {
+    "url": "/yoga/photos/upward-salute-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2Urdva_Hastasana.JPG",
+    "title": "2Urdva Hastasana.JPG"
+   }
+  ]
  },
  {
   "name": "Standing Forward Fold",
@@ -247,8 +265,11 @@
    "After running",
    "Evening routine"
   ],
-  "image": "/yoga/standing-forward-fold-3.svg",
-  "motion_image": "/yoga/standing-forward-fold.svg",
+  "image": "/yoga/photos/standing-forward-fold-1.jpg",
+  "image_urls": [
+   "/yoga/photos/standing-forward-fold-1.jpg",
+   "/yoga/photos/standing-forward-fold-2.jpg"
+  ],
   "tags": [
    "standing",
    "forward fold",
@@ -272,117 +293,27 @@
   "sides": false,
   "default_minutes": 1,
   "related": [
-   "half-forward-fold",
    "seated-forward-fold",
    "downward-dog"
   ],
-  "frames": [
-   "/yoga/standing-forward-fold-1.svg",
-   "/yoga/standing-forward-fold-2.svg",
-   "/yoga/standing-forward-fold-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Standing Toe Touches",
-   "slug": "standing-toe-touches",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Toe_Touches/1.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Half Forward Fold",
-  "alternative_names": [
-   "Ardha Uttanasana",
-   "Halfway Lift"
-  ],
-  "category": [
-   "Flexibility",
-   "Posture",
-   "Back",
-   "Hamstrings"
-  ],
-  "difficulty": "Beginner",
-  "target_areas": [
-   "Hamstrings",
-   "Spine extensors"
-  ],
-  "benefits": [
-   "Teaches a long, neutral spine while hinging",
-   "Stretches the backs of the legs",
-   "Links forward folds smoothly in a flow"
-  ],
-  "instructions": [
-   "From Standing Forward Fold, place your hands on your shins or on blocks.",
-   "Breathe in and lift your chest forward until your back is long and flat.",
-   "Draw your shoulders away from your ears and look slightly ahead of your feet.",
-   "Breathe out and fold back down, or hold for a few breaths."
-  ],
-  "breathing": "Inhale to lengthen, exhale to fold.",
-  "duration": "2 to 5 breaths",
-  "recommended_repetitions": "3 to 5 repetitions in a flow",
-  "beginner_modification": "Bend the knees and place the hands higher on the thighs.",
-  "advanced_variation": "Keep the legs straight with the fingertips on the floor.",
-  "common_mistakes": [
-   "Rounding the back",
-   "Lifting the head too high and pinching the neck"
-  ],
-  "safety_tips": [
-   "Keep a micro bend in the knees."
-  ],
-  "contraindications": [
-   "Acute lower back pain"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Beginners",
-   "Flow sequences"
-  ],
-  "image": "/yoga/half-forward-fold-3.svg",
-  "motion_image": "/yoga/half-forward-fold.svg",
-  "tags": [
-   "standing",
-   "hamstrings",
-   "flow"
-  ],
-  "slug": "half-forward-fold",
-  "sanskrit": "Ardha Uttanasana",
-  "kind": "pose",
-  "goals": [
-   "flexibility",
-   "posture"
-  ],
-  "body_areas": [
-   "back",
-   "legs"
-  ],
-  "phase": "warmup",
-  "time_of_day": "any",
-  "energy": "neutral",
-  "sides": false,
-  "default_minutes": 0.5,
-  "related": [
-   "standing-forward-fold",
-   "mountain-pose"
-  ],
-  "frames": [
-   "/yoga/half-forward-fold-1.svg",
-   "/yoga/half-forward-fold-2.svg",
-   "/yoga/half-forward-fold-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/standing-forward-fold-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:3Uttanasana.JPG",
+    "title": "3Uttanasana.JPG"
+   },
+   {
+    "url": "/yoga/photos/standing-forward-fold-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Uttanasana.jpg",
+    "title": "Uttanasana.jpg"
+   }
+  ]
  },
  {
   "name": "Tree Pose",
@@ -441,8 +372,11 @@
    "Older adults with support",
    "Focus and concentration"
   ],
-  "image": "/yoga/tree-pose-3.svg",
-  "motion_image": "/yoga/tree-pose.svg",
+  "image": "/yoga/photos/tree-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/tree-pose-1.jpg",
+   "/yoga/photos/tree-pose-2.jpg"
+  ],
   "tags": [
    "balance",
    "standing",
@@ -472,18 +406,24 @@
    "warrior-iii",
    "half-moon-pose"
   ],
-  "frames": [
-   "/yoga/tree-pose-1.svg",
-   "/yoga/tree-pose-2.svg",
-   "/yoga/tree-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/tree-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vriksasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Vriksasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/tree-pose-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Bhagaritasana.intro.jpg",
+    "title": "Bhagaritasana.intro.jpg"
+   }
+  ]
  },
  {
   "name": "Warrior I",
@@ -542,8 +482,11 @@
    "Strength building",
    "Morning routine"
   ],
-  "image": "/yoga/warrior-i-3.svg",
-  "motion_image": "/yoga/warrior-i.svg",
+  "image": "/yoga/photos/warrior-i-1.jpg",
+  "image_urls": [
+   "/yoga/photos/warrior-i-1.jpg",
+   "/yoga/photos/warrior-i-2.jpg"
+  ],
   "tags": [
    "standing",
    "warrior",
@@ -570,21 +513,26 @@
   "default_minutes": 1,
   "related": [
    "warrior-ii",
-   "low-lunge",
-   "high-lunge"
+   "low-lunge"
   ],
-  "frames": [
-   "/yoga/warrior-i-1.svg",
-   "/yoga/warrior-i-2.svg",
-   "/yoga/warrior-i-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/warrior-i-1.jpg",
+    "author": "Lilianwhite",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rocket-yoga-01-1200px.jpg",
+    "title": "Rocket-yoga-01-1200px.jpg"
+   },
+   {
+    "url": "/yoga/photos/warrior-i-2.jpg",
+    "author": "OrenBochman",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Virabhadrasana_I_-_Warrior_Pose_I.jpg",
+    "title": "Virabhadrasana I - Warrior Pose I.jpg"
+   }
+  ]
  },
  {
   "name": "Warrior II",
@@ -641,8 +589,10 @@
    "Strength building",
    "Home workout"
   ],
-  "image": "/yoga/warrior-ii-3.svg",
-  "motion_image": "/yoga/warrior-ii.svg",
+  "image": "/yoga/photos/warrior-ii-1.jpg",
+  "image_urls": [
+   "/yoga/photos/warrior-ii-1.jpg"
+  ],
   "tags": [
    "standing",
    "warrior",
@@ -670,21 +620,18 @@
   "related": [
    "warrior-i",
    "triangle-pose",
-   "extended-side-angle",
-   "reverse-warrior"
+   "extended-side-angle"
   ],
-  "frames": [
-   "/yoga/warrior-ii-1.svg",
-   "/yoga/warrior-ii-2.svg",
-   "/yoga/warrior-ii-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/warrior-ii-1.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Virabhadrasana_II_-_Warrior_II_Pose.jpg",
+    "title": "Virabhadrasana II - Warrior II Pose.jpg"
+   }
+  ]
  },
  {
   "name": "Low Lunge",
@@ -739,8 +686,11 @@
    "Runners and cyclists",
    "Recovery days"
   ],
-  "image": "/yoga/low-lunge-3.svg",
-  "motion_image": "/yoga/low-lunge.svg",
+  "image": "/yoga/photos/low-lunge-1.jpg",
+  "image_urls": [
+   "/yoga/photos/low-lunge-1.jpg",
+   "/yoga/photos/low-lunge-2.jpg"
+  ],
   "tags": [
    "lunge",
    "hip flexors",
@@ -764,22 +714,27 @@
   "sides": true,
   "default_minutes": 1,
   "related": [
-   "high-lunge",
    "warrior-i",
    "pigeon-pose"
   ],
-  "frames": [
-   "/yoga/low-lunge-1.svg",
-   "/yoga/low-lunge-2.svg",
-   "/yoga/low-lunge-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/low-lunge-1.jpg",
+    "author": "BameSanah88",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Low_Lunge.jpg",
+    "title": "Low Lunge.jpg"
+   },
+   {
+    "url": "/yoga/photos/low-lunge-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Godhapitham_(l%E2%80%98iguane).jpg",
+    "title": "Godhapitham (l‘iguane).jpg"
+   }
+  ]
  },
  {
   "name": "Chair Pose",
@@ -837,8 +792,10 @@
    "Weight management",
    "Home workout"
   ],
-  "image": "/yoga/chair-pose-3.svg",
-  "motion_image": "/yoga/chair-pose.svg",
+  "image": "/yoga/photos/chair-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/chair-pose-1.jpg"
+  ],
   "tags": [
    "standing",
    "strength",
@@ -867,18 +824,16 @@
    "revolved-chair",
    "garland-pose"
   ],
-  "frames": [
-   "/yoga/chair-pose-1.svg",
-   "/yoga/chair-pose-2.svg",
-   "/yoga/chair-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/chair-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Utkatasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Utkatasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
  },
  {
   "name": "Child's Pose",
@@ -937,8 +892,11 @@
    "Stress relief",
    "Evening routine"
   ],
-  "image": "/yoga/childs-pose-3.svg",
-  "motion_image": "/yoga/childs-pose.svg",
+  "image": "/yoga/photos/childs-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/childs-pose-1.jpg",
+   "/yoga/photos/childs-pose-2.jpg"
+  ],
   "tags": [
    "resting",
    "kneeling",
@@ -963,30 +921,27 @@
   "sides": false,
   "default_minutes": 1.5,
   "related": [
-   "puppy-pose",
    "cat-cow",
    "downward-dog"
   ],
-  "frames": [
-   "/yoga/childs-pose-1.svg",
-   "/yoga/childs-pose-2.svg",
-   "/yoga/childs-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Child's Pose",
-   "slug": "child-s-pose",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Childs_Pose/0.jpg",
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Childs_Pose/1.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/childs-pose-1.jpg",
+    "author": "Iveto",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Balasana.JPG",
+    "title": "Balasana.JPG"
+   },
+   {
+    "url": "/yoga/photos/childs-pose-2.jpg",
+    "author": "Satheesan.vn",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hare-pose.JPG",
+    "title": "Hare-pose.JPG"
+   }
+  ]
  },
  {
   "name": "Cat-Cow",
@@ -1043,8 +998,10 @@
    "Morning stiffness",
    "Office workers"
   ],
-  "image": "/yoga/cat-cow-3.svg",
-  "motion_image": "/yoga/cat-cow.svg",
+  "image": "/yoga/photos/cat-cow-1.jpg",
+  "image_urls": [
+   "/yoga/photos/cat-cow-1.jpg"
+  ],
   "tags": [
    "spine",
    "warm up",
@@ -1071,28 +1028,18 @@
   "default_minutes": 1.5,
   "related": [
    "childs-pose",
-   "puppy-pose",
    "tabletop-balance"
   ],
-  "frames": [
-   "/yoga/cat-cow-1.svg",
-   "/yoga/cat-cow-2.svg",
-   "/yoga/cat-cow-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Cat Stretch",
-   "slug": "cat-stretch",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/1.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/cat-cow-1.jpg",
+    "author": "Mary O'Neill",
+    "license": "Public domain",
+    "license_url": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Yoga_at_Your_Park_-_Bidalasana.jpg",
+    "title": "Yoga at Your Park - Bidalasana.jpg"
+   }
+  ]
  },
  {
   "name": "Downward-Facing Dog",
@@ -1154,8 +1101,11 @@
    "Runners",
    "Full body stretch"
   ],
-  "image": "/yoga/downward-dog-3.svg",
-  "motion_image": "/yoga/downward-dog.svg",
+  "image": "/yoga/photos/downward-dog-1.jpg",
+  "image_urls": [
+   "/yoga/photos/downward-dog-1.jpg",
+   "/yoga/photos/downward-dog-2.jpg"
+  ],
   "tags": [
    "inversion light",
    "hamstrings",
@@ -1184,115 +1134,26 @@
   "related": [
    "cat-cow",
    "plank-pose",
-   "dolphin-pose",
    "standing-forward-fold"
   ],
-  "frames": [
-   "/yoga/downward-dog-1.svg",
-   "/yoga/downward-dog-2.svg",
-   "/yoga/downward-dog-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Puppy Pose",
-  "alternative_names": [
-   "Uttana Shishosana",
-   "Extended Puppy"
-  ],
-  "category": [
-   "Flexibility",
-   "Mobility",
-   "Stress relief",
-   "Shoulders",
-   "Back"
-  ],
-  "difficulty": "Beginner",
-  "target_areas": [
-   "Shoulders",
-   "Upper back",
-   "Chest"
-  ],
-  "benefits": [
-   "Opens the shoulders and upper back",
-   "A gentle alternative to Downward Dog",
-   "Releases tension from hunching over screens"
-  ],
-  "instructions": [
-   "Start on hands and knees with your hips over your knees.",
-   "Walk your hands forward, keeping the hips stacked over the knees.",
-   "Lower your chest and forehead toward the mat.",
-   "Keep the arms active and let the chest melt down. Breathe slowly."
-  ],
-  "breathing": "Breathe into the upper back and let the chest soften on the exhale.",
-  "duration": "30 seconds to 1 minute",
-  "recommended_repetitions": "1 to 2 rounds",
-  "beginner_modification": "Rest the forehead on a block and keep the arms wider.",
-  "advanced_variation": "Bring the palms together and bend the elbows behind the head.",
-  "common_mistakes": [
-   "Hips sinking back toward the heels",
-   "Over arching the lower back"
-  ],
-  "safety_tips": [
-   "Pad the knees.",
-   "Keep the stretch gentle in the shoulders."
-  ],
-  "contraindications": [
-   "Shoulder injury",
-   "Knee pain when kneeling"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Office workers",
-   "Evening routine"
-  ],
-  "image": "/yoga/puppy-pose-3.svg",
-  "motion_image": "/yoga/puppy-pose.svg",
-  "tags": [
-   "kneeling",
-   "shoulders",
-   "calming"
-  ],
-  "slug": "puppy-pose",
-  "sanskrit": "Uttana Shishosana",
-  "kind": "pose",
-  "goals": [
-   "flexibility",
-   "mobility",
-   "stress_relief"
-  ],
-  "body_areas": [
-   "shoulders",
-   "back"
-  ],
-  "phase": "cooldown",
-  "time_of_day": "evening",
-  "energy": "calming",
-  "sides": false,
-  "default_minutes": 1,
-  "related": [
-   "childs-pose",
-   "downward-dog",
-   "tabletop-balance"
-  ],
-  "frames": [
-   "/yoga/puppy-pose-1.svg",
-   "/yoga/puppy-pose-2.svg",
-   "/yoga/puppy-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/downward-dog-1.jpg",
+    "author": "Nicholas A. Tonelli from Pennsylvania, USA",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flickr_-_Nicholas_T_-_Up_and_Down.jpg",
+    "title": "Flickr - Nicholas T - Up and Down.jpg"
+   },
+   {
+    "url": "/yoga/photos/downward-dog-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:5adho_mukha_shvanasana.JPG",
+    "title": "5adho mukha shvanasana.JPG"
+   }
+  ]
  },
  {
   "name": "Cobra Pose",
@@ -1350,8 +1211,11 @@
    "Office workers",
    "Posture"
   ],
-  "image": "/yoga/cobra-pose-3.svg",
-  "motion_image": "/yoga/cobra-pose.svg",
+  "image": "/yoga/photos/cobra-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/cobra-pose-1.jpg",
+   "/yoga/photos/cobra-pose-2.jpg"
+  ],
   "tags": [
    "backbend",
    "prone",
@@ -1381,18 +1245,24 @@
    "upward-dog",
    "locust-pose"
   ],
-  "frames": [
-   "/yoga/cobra-pose-1.svg",
-   "/yoga/cobra-pose-2.svg",
-   "/yoga/cobra-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/cobra-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bhujangasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Bhujangasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/cobra-pose-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Bhujangasana.jpg",
+    "title": "Bhujangasana.jpg"
+   }
+  ]
  },
  {
   "name": "Sphinx Pose",
@@ -1444,8 +1314,11 @@
    "Beginners",
    "Office workers"
   ],
-  "image": "/yoga/sphinx-pose-3.svg",
-  "motion_image": "/yoga/sphinx-pose.svg",
+  "image": "/yoga/photos/sphinx-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/sphinx-pose-1.jpg",
+   "/yoga/photos/sphinx-pose-2.jpg"
+  ],
   "tags": [
    "backbend",
    "prone",
@@ -1472,18 +1345,24 @@
    "cobra-pose",
    "childs-pose"
   ],
-  "frames": [
-   "/yoga/sphinx-pose-1.svg",
-   "/yoga/sphinx-pose-2.svg",
-   "/yoga/sphinx-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/sphinx-pose-1.jpg",
+    "author": "Christy Collins, photographer",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:IMG_0549_2_Sphinx.jpg",
+    "title": "IMG 0549 2 Sphinx.jpg"
+   },
+   {
+    "url": "/yoga/photos/sphinx-pose-2.jpg",
+    "author": "Thamizhpparithi Maari",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_style_of_bhujangasana.JPG",
+    "title": "A style of bhujangasana.JPG"
+   }
+  ]
  },
  {
   "name": "Bridge Pose",
@@ -1542,8 +1421,11 @@
    "Glute strength",
    "Office workers"
   ],
-  "image": "/yoga/bridge-pose-3.svg",
-  "motion_image": "/yoga/bridge-pose.svg",
+  "image": "/yoga/photos/bridge-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/bridge-pose-1.jpg",
+   "/yoga/photos/bridge-pose-2.jpg"
+  ],
   "tags": [
    "backbend",
    "supine",
@@ -1570,29 +1452,26 @@
   "sides": false,
   "default_minutes": 1,
   "related": [
-   "wheel-pose",
-   "knees-to-chest"
+   "wheel-pose"
   ],
-  "frames": [
-   "/yoga/bridge-pose-1.svg",
-   "/yoga/bridge-pose-2.svg",
-   "/yoga/bridge-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Butt Lift (Bridge)",
-   "slug": "butt-lift-bridge",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/0.jpg",
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/1.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/bridge-pose-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Dvipada_pitham.jpg",
+    "title": "Dvipada pitham.jpg"
+   },
+   {
+    "url": "/yoga/photos/bridge-pose-2.jpg",
+    "author": "Biswarup Ganguly",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Setubandhasana_oblique_view.JPG",
+    "title": "Setubandhasana oblique view.JPG"
+   }
+  ]
  },
  {
   "name": "Easy Pose",
@@ -1648,8 +1527,11 @@
    "Meditation",
    "Breathing practice"
   ],
-  "image": "/yoga/easy-pose-2.svg",
-  "motion_image": "/yoga/easy-pose.svg",
+  "image": "/yoga/photos/easy-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/easy-pose-1.jpg",
+   "/yoga/photos/easy-pose-2.jpg"
+  ],
   "tags": [
    "seated",
    "meditation",
@@ -1675,20 +1557,26 @@
   "sides": false,
   "default_minutes": 1,
   "related": [
-   "belly-breathing",
-   "alternate-nostril-breathing",
-   "seated-side-bend"
+   "alternate-nostril-breathing"
   ],
-  "frames": [
-   "/yoga/easy-pose-1.svg",
-   "/yoga/easy-pose-2.svg"
-  ],
-  "frame_labels": [
-   "Settle",
-   "Rest"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/easy-pose-1.jpg",
+    "author": "L4Harrington",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:L2045152_retouch_flattened2_preview.jpg",
+    "title": "L2045152 retouch flattened2 preview.jpg"
+   },
+   {
+    "url": "/yoga/photos/easy-pose-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Sukkasana.jpg",
+    "title": "Sukkasana.jpg"
+   }
+  ]
  },
  {
   "name": "Staff Pose",
@@ -1740,8 +1628,10 @@
    "Beginners",
    "Posture"
   ],
-  "image": "/yoga/staff-pose-2.svg",
-  "motion_image": "/yoga/staff-pose.svg",
+  "image": "/yoga/photos/staff-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/staff-pose-1.jpg"
+  ],
   "tags": [
    "seated",
    "posture"
@@ -1769,16 +1659,16 @@
    "head-to-knee-pose",
    "boat-pose"
   ],
-  "frames": [
-   "/yoga/staff-pose-1.svg",
-   "/yoga/staff-pose-2.svg"
-  ],
-  "frame_labels": [
-   "Settle",
-   "Rest"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/staff-pose-1.jpg",
+    "author": "Jemasty",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dandasana_yoga_posture.jpg",
+    "title": "Dandasana yoga posture.jpg"
+   }
+  ]
  },
  {
   "name": "Seated Forward Fold",
@@ -1835,8 +1725,11 @@
    "Evening routine",
    "Recovery"
   ],
-  "image": "/yoga/seated-forward-fold-3.svg",
-  "motion_image": "/yoga/seated-forward-fold.svg",
+  "image": "/yoga/photos/seated-forward-fold-1.jpg",
+  "image_urls": [
+   "/yoga/photos/seated-forward-fold-1.jpg",
+   "/yoga/photos/seated-forward-fold-2.jpg"
+  ],
   "tags": [
    "seated",
    "forward fold",
@@ -1865,25 +1758,24 @@
    "staff-pose",
    "standing-forward-fold"
   ],
-  "frames": [
-   "/yoga/seated-forward-fold-1.svg",
-   "/yoga/seated-forward-fold-2.svg",
-   "/yoga/seated-forward-fold-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Seated Floor Hamstring Stretch",
-   "slug": "seated-floor-hamstring-stretch",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Floor_Hamstring_Stretch/0.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/seated-forward-fold-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Paschimottanasana.jpg",
+    "title": "Paschimottanasana.jpg"
+   },
+   {
+    "url": "/yoga/photos/seated-forward-fold-2.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Paschimotanasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Paschimotanasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
  },
  {
   "name": "Bound Angle Pose",
@@ -1937,8 +1829,11 @@
    "Desk workers",
    "Evening routine"
   ],
-  "image": "/yoga/bound-angle-pose-2.svg",
-  "motion_image": "/yoga/bound-angle-pose.svg",
+  "image": "/yoga/photos/bound-angle-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/bound-angle-pose-1.jpg",
+   "/yoga/photos/bound-angle-pose-2.jpg"
+  ],
   "tags": [
    "seated",
    "hips",
@@ -1965,110 +1860,24 @@
    "easy-pose",
    "garland-pose"
   ],
-  "frames": [
-   "/yoga/bound-angle-pose-1.svg",
-   "/yoga/bound-angle-pose-2.svg"
-  ],
-  "frame_labels": [
-   "Settle",
-   "Rest"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Seated Side Bend",
-  "alternative_names": [
-   "Parsva Sukhasana",
-   "Seated Side Stretch"
-  ],
-  "category": [
-   "Flexibility",
-   "Mobility",
-   "Breathing",
-   "Back",
-   "Shoulders",
-   "Core"
-  ],
-  "difficulty": "Beginner",
-  "target_areas": [
-   "Obliques",
-   "Latissimus dorsi",
-   "Intercostals"
-  ],
-  "benefits": [
-   "Stretches the sides of the waist and the ribs",
-   "Makes room for fuller breaths",
-   "A gentle warm up from a seated position"
-  ],
-  "instructions": [
-   "Sit in Easy Pose.",
-   "Place your left hand on the floor beside your left hip.",
-   "Breathe in and raise your right arm overhead.",
-   "Breathe out and lean to the left, reaching over with the right arm.",
-   "Keep both sit bones grounded. Return to centre and repeat on the other side."
-  ],
-  "breathing": "Inhale to reach up, exhale to bend.",
-  "duration": "3 to 5 breaths each side",
-  "recommended_repetitions": "2 to 3 rounds each side",
-  "beginner_modification": "Keep the raised hand on the back of the head.",
-  "advanced_variation": "Hold the bend for longer and add a slight twist.",
-  "common_mistakes": [
-   "Collapsing forward",
-   "Lifting the opposite hip"
-  ],
-  "safety_tips": [
-   "Move slowly and keep the neck relaxed."
-  ],
-  "contraindications": [
-   "Recent rib or shoulder injury"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Beginners",
-   "Office workers",
-   "Breathing practice"
-  ],
-  "image": "/yoga/seated-side-bend-3.svg",
-  "motion_image": "/yoga/seated-side-bend.svg",
-  "tags": [
-   "seated",
-   "side stretch"
-  ],
-  "slug": "seated-side-bend",
-  "sanskrit": "Parsva Sukhasana",
-  "kind": "pose",
-  "goals": [
-   "flexibility",
-   "mobility",
-   "breathing"
-  ],
-  "body_areas": [
-   "back",
-   "shoulders",
-   "core"
-  ],
-  "phase": "warmup",
-  "time_of_day": "any",
-  "energy": "neutral",
-  "sides": true,
-  "default_minutes": 1,
-  "related": [
-   "easy-pose",
-   "standing-side-bend"
-  ],
-  "frames": [
-   "/yoga/seated-side-bend-1.svg",
-   "/yoga/seated-side-bend-2.svg",
-   "/yoga/seated-side-bend-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/bound-angle-pose-1.jpg",
+    "author": "Jfbongarçon",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Baddha_Ko%E1%B9%87%C4%81sana-bound_angle.jpg",
+    "title": "Baddha Koṇāsana-bound angle.jpg"
+   },
+   {
+    "url": "/yoga/photos/bound-angle-pose-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Baddha_konasana.jpg",
+    "title": "Baddha konasana.jpg"
+   }
+  ]
  },
  {
   "name": "Standing Side Bend",
@@ -2121,8 +1930,10 @@
    "Morning routine",
    "Office workers"
   ],
-  "image": "/yoga/standing-side-bend-3.svg",
-  "motion_image": "/yoga/standing-side-bend.svg",
+  "image": "/yoga/photos/standing-side-bend-1.jpg",
+  "image_urls": [
+   "/yoga/photos/standing-side-bend-1.jpg"
+  ],
   "tags": [
    "standing",
    "side stretch"
@@ -2147,308 +1958,18 @@
   "default_minutes": 1,
   "related": [
    "upward-salute",
-   "seated-side-bend",
    "triangle-pose"
   ],
-  "frames": [
-   "/yoga/standing-side-bend-1.svg",
-   "/yoga/standing-side-bend-2.svg",
-   "/yoga/standing-side-bend-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Supine Spinal Twist",
-  "alternative_names": [
-   "Supta Matsyendrasana",
-   "Reclined Twist"
-  ],
-  "category": [
-   "Mobility",
-   "Relaxation",
-   "Recovery",
-   "Stress relief",
-   "Back",
-   "Hips"
-  ],
-  "difficulty": "Beginner",
-  "target_areas": [
-   "Lower back",
-   "Glutes",
-   "Chest"
-  ],
-  "benefits": [
-   "Gently rotates and releases the spine",
-   "Stretches the outer hips and glutes",
-   "Often used to wind down before relaxation"
-  ],
-  "instructions": [
-   "Lie on your back with your knees bent and feet flat.",
-   "Stretch your arms out to the sides at shoulder height.",
-   "Let both knees fall slowly to the right while the shoulders stay down.",
-   "Turn your head to the left if that is comfortable.",
-   "Breathe here, then bring the knees back through centre and repeat to the left."
-  ],
-  "breathing": "Long exhales help the twist soften.",
-  "duration": "1 to 2 minutes each side",
-  "recommended_repetitions": "1 round each side",
-  "beginner_modification": "Place a pillow under the knees.",
-  "advanced_variation": "Straighten the top leg and hold the foot.",
-  "common_mistakes": [
-   "Forcing the knees to the floor",
-   "Lifting the opposite shoulder high"
-  ],
-  "safety_tips": [
-   "Keep the twist gentle and pain free."
-  ],
-  "contraindications": [
-   "Recent back or disc injury",
-   "Late pregnancy"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Beginners",
-   "Recovery",
-   "Evening routine"
-  ],
-  "image": "/yoga/supine-twist-3.svg",
-  "motion_image": "/yoga/supine-twist.svg",
-  "tags": [
-   "twist",
-   "supine",
-   "calming"
-  ],
-  "slug": "supine-twist",
-  "sanskrit": "Supta Matsyendrasana",
-  "kind": "pose",
-  "goals": [
-   "mobility",
-   "relaxation",
-   "recovery",
-   "stress_relief"
-  ],
-  "body_areas": [
-   "back",
-   "hips"
-  ],
-  "phase": "cooldown",
-  "time_of_day": "evening",
-  "energy": "calming",
-  "sides": true,
-  "default_minutes": 1.5,
-  "related": [
-   "knees-to-chest",
-   "happy-baby",
-   "corpse-pose"
-  ],
-  "frames": [
-   "/yoga/supine-twist-1.svg",
-   "/yoga/supine-twist-2.svg",
-   "/yoga/supine-twist-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Knees to Chest",
-  "alternative_names": [
-   "Apanasana",
-   "Wind Relieving Pose"
-  ],
-  "category": [
-   "Recovery",
-   "Relaxation",
-   "Mobility",
-   "Back",
-   "Hips"
-  ],
-  "difficulty": "Beginner",
-  "target_areas": [
-   "Lower back",
-   "Glutes"
-  ],
-  "benefits": [
-   "Gently releases the lower back",
-   "A soothing pose after backbends",
-   "Easy to do even when tired"
-  ],
-  "instructions": [
-   "Lie on your back.",
-   "Draw both knees toward your chest and hold your shins or the backs of the thighs.",
-   "Let your lower back relax into the floor.",
-   "Rock gently side to side if it feels good."
-  ],
-  "breathing": "Breathe into the belly against the thighs.",
-  "duration": "30 seconds to 1 minute",
-  "recommended_repetitions": "1 to 2 rounds",
-  "beginner_modification": "Hug one knee at a time.",
-  "advanced_variation": "Lift the head toward the knees for a core curl.",
-  "common_mistakes": [
-   "Pulling the knees hard",
-   "Lifting the shoulders"
-  ],
-  "safety_tips": [
-   "Hold behind the thighs if the knees are sensitive."
-  ],
-  "contraindications": [
-   "Recent abdominal surgery",
-   "Pregnancy (keep the knees wide)"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Beginners",
-   "Recovery"
-  ],
-  "image": "/yoga/knees-to-chest-3.svg",
-  "motion_image": "/yoga/knees-to-chest.svg",
-  "tags": [
-   "supine",
-   "lower back",
-   "calming"
-  ],
-  "slug": "knees-to-chest",
-  "sanskrit": "Apanasana",
-  "kind": "pose",
-  "goals": [
-   "recovery",
-   "relaxation",
-   "mobility"
-  ],
-  "body_areas": [
-   "back",
-   "hips"
-  ],
-  "phase": "cooldown",
-  "time_of_day": "evening",
-  "energy": "calming",
-  "sides": false,
-  "default_minutes": 1,
-  "related": [
-   "happy-baby",
-   "supine-twist",
-   "bridge-pose"
-  ],
-  "frames": [
-   "/yoga/knees-to-chest-1.svg",
-   "/yoga/knees-to-chest-2.svg",
-   "/yoga/knees-to-chest-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Hug Knees To Chest",
-   "slug": "hug-knees-to-chest",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hug_Knees_To_Chest/1.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Happy Baby",
-  "alternative_names": [
-   "Ananda Balasana",
-   "Dead Bug Pose"
-  ],
-  "category": [
-   "Flexibility",
-   "Relaxation",
-   "Mobility",
-   "Hips",
-   "Back",
-   "Hamstrings"
-  ],
-  "difficulty": "Beginner",
-  "target_areas": [
-   "Inner thighs",
-   "Hamstrings",
-   "Lower back"
-  ],
-  "benefits": [
-   "Opens the hips and inner thighs",
-   "Releases the lower back",
-   "A playful, relaxing pose"
-  ],
-  "instructions": [
-   "Lie on your back and draw your knees toward your armpits.",
-   "Hold the outer edges of your feet, ankles or shins.",
-   "Stack the ankles over the knees with the soles facing the ceiling.",
-   "Gently pull the knees toward the floor and rock side to side if you like."
-  ],
-  "breathing": "Slow, easy breaths.",
-  "duration": "30 seconds to 1 minute",
-  "recommended_repetitions": "1 to 2 rounds",
-  "beginner_modification": "Hold the backs of the thighs or use a strap.",
-  "advanced_variation": "Straighten one leg at a time.",
-  "common_mistakes": [
-   "Lifting the tailbone and head off the floor"
-  ],
-  "safety_tips": [
-   "Keep the neck relaxed on the mat."
-  ],
-  "contraindications": [
-   "Knee injury",
-   "Pregnancy after the first trimester"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Beginners",
-   "Evening routine"
-  ],
-  "image": "/yoga/happy-baby-3.svg",
-  "motion_image": "/yoga/happy-baby.svg",
-  "tags": [
-   "supine",
-   "hips"
-  ],
-  "slug": "happy-baby",
-  "sanskrit": "Ananda Balasana",
-  "kind": "pose",
-  "goals": [
-   "flexibility",
-   "relaxation",
-   "mobility"
-  ],
-  "body_areas": [
-   "hips",
-   "back"
-  ],
-  "phase": "cooldown",
-  "time_of_day": "evening",
-  "energy": "calming",
-  "sides": false,
-  "default_minutes": 1,
-  "related": [
-   "knees-to-chest",
-   "reclined-bound-angle"
-  ],
-  "frames": [
-   "/yoga/happy-baby-1.svg",
-   "/yoga/happy-baby-2.svg",
-   "/yoga/happy-baby-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/standing-side-bend-1.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-side_bend.jpg",
+    "title": "Mr-yoga-side bend.jpg"
+   }
+  ]
  },
  {
   "name": "Legs Up the Wall",
@@ -2501,8 +2022,11 @@
    "Evening routine",
    "Runners"
   ],
-  "image": "/yoga/legs-up-the-wall-3.svg",
-  "motion_image": "/yoga/legs-up-the-wall.svg",
+  "image": "/yoga/photos/legs-up-the-wall-1.jpg",
+  "image_urls": [
+   "/yoga/photos/legs-up-the-wall-1.jpg",
+   "/yoga/photos/legs-up-the-wall-2.jpg"
+  ],
   "tags": [
    "restorative",
    "supine",
@@ -2529,18 +2053,24 @@
    "corpse-pose",
    "supported-shoulder-stand"
   ],
-  "frames": [
-   "/yoga/legs-up-the-wall-1.svg",
-   "/yoga/legs-up-the-wall-2.svg",
-   "/yoga/legs-up-the-wall-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/legs-up-the-wall-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Viparita-Karani_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Viparita-Karani Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/legs-up-the-wall-2.jpg",
+    "author": "Satheesan.vn",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Balancing_bear-posture.jpg",
+    "title": "Balancing bear-posture.jpg"
+   }
+  ]
  },
  {
   "name": "Corpse Pose",
@@ -2592,8 +2122,11 @@
    "Stress relief",
    "Sleep routine"
   ],
-  "image": "/yoga/corpse-pose-2.svg",
-  "motion_image": "/yoga/corpse-pose.svg",
+  "image": "/yoga/photos/corpse-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/corpse-pose-1.jpg",
+   "/yoga/photos/corpse-pose-2.jpg"
+  ],
   "tags": [
    "restorative",
    "relaxation",
@@ -2617,111 +2150,26 @@
   "sides": false,
   "default_minutes": 3,
   "related": [
-   "body-scan-meditation",
-   "legs-up-the-wall",
-   "belly-breathing"
+   "legs-up-the-wall"
   ],
-  "frames": [
-   "/yoga/corpse-pose-1.svg",
-   "/yoga/corpse-pose-2.svg"
-  ],
-  "frame_labels": [
-   "Settle",
-   "Rest"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Belly Breathing",
-  "alternative_names": [
-   "Diaphragmatic Breathing",
-   "Abdominal Breathing"
-  ],
-  "category": [
-   "Breathing",
-   "Stress relief",
-   "Relaxation",
-   "Meditation",
-   "Core"
-  ],
-  "difficulty": "Beginner",
-  "target_areas": [
-   "Diaphragm",
-   "Abdominals"
-  ],
-  "benefits": [
-   "Slows the breath, which many people find calming",
-   "Builds awareness of the diaphragm",
-   "Easy to use before sleep or after training"
-  ],
-  "instructions": [
-   "Lie on your back with your knees bent, or sit comfortably.",
-   "Place one hand on your chest and one on your belly.",
-   "Breathe in through the nose so the belly hand rises more than the chest hand.",
-   "Breathe out slowly through the nose or pursed lips and feel the belly fall.",
-   "Aim for a slightly longer exhale than inhale, for example in for 4, out for 6."
-  ],
-  "breathing": "In through the nose for about 4 counts, out for about 6 counts.",
-  "duration": "3 to 5 minutes",
-  "recommended_repetitions": "10 to 20 breaths",
-  "beginner_modification": "Breathe naturally without counting.",
-  "advanced_variation": "Extend the exhale gradually.",
-  "common_mistakes": [
-   "Forcing big breaths",
-   "Lifting the shoulders"
-  ],
-  "safety_tips": [
-   "Stop and breathe normally if you feel light headed."
-  ],
-  "contraindications": [
-   "None for most people; return to normal breathing if dizzy"
-  ],
-  "equipment": "None",
-  "suitable_for": [
-   "Everyone",
-   "Stress relief",
-   "Before sleep"
-  ],
-  "image": "/yoga/belly-breathing-2.svg",
-  "motion_image": "/yoga/belly-breathing.svg",
-  "tags": [
-   "breathing",
-   "pranayama",
-   "calming"
-  ],
-  "slug": "belly-breathing",
-  "sanskrit": "Diaphragmatic Breathing",
-  "kind": "breathing",
-  "goals": [
-   "breathing",
-   "stress_relief",
-   "relaxation",
-   "meditation"
-  ],
-  "body_areas": [
-   "core"
-  ],
-  "phase": "relaxation",
-  "time_of_day": "any",
-  "energy": "calming",
-  "sides": false,
-  "default_minutes": 3,
-  "related": [
-   "corpse-pose",
-   "alternate-nostril-breathing",
-   "easy-pose"
-  ],
-  "frames": [
-   "/yoga/belly-breathing-1.svg",
-   "/yoga/belly-breathing-2.svg"
-  ],
-  "frame_labels": [
-   "Exhale",
-   "Inhale"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/corpse-pose-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Shavasana.jpg",
+    "title": "Shavasana.jpg"
+   },
+   {
+    "url": "/yoga/photos/corpse-pose-2.jpg",
+    "author": "Satheesan.vn",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Corpse_posture.jpg",
+    "title": "Corpse posture.jpg"
+   }
+  ]
  },
  {
   "name": "Alternate Nostril Breathing",
@@ -2773,8 +2221,11 @@
    "Meditation",
    "Focus"
   ],
-  "image": "/yoga/alternate-nostril-breathing-2.svg",
-  "motion_image": "/yoga/alternate-nostril-breathing.svg",
+  "image": "/yoga/photos/alternate-nostril-breathing-1.jpg",
+  "image_urls": [
+   "/yoga/photos/alternate-nostril-breathing-1.jpg",
+   "/yoga/photos/alternate-nostril-breathing-2.jpg"
+  ],
   "tags": [
    "breathing",
    "pranayama",
@@ -2797,108 +2248,26 @@
   "sides": false,
   "default_minutes": 3,
   "related": [
-   "easy-pose",
-   "belly-breathing"
+   "easy-pose"
   ],
-  "frames": [
-   "/yoga/alternate-nostril-breathing-1.svg",
-   "/yoga/alternate-nostril-breathing-2.svg"
-  ],
-  "frame_labels": [
-   "Exhale",
-   "Inhale"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Body Scan Meditation",
-  "alternative_names": [
-   "Yoga Nidra",
-   "Body Scan"
-  ],
-  "category": [
-   "Meditation",
-   "Relaxation",
-   "Stress relief",
-   "Recovery"
-  ],
-  "difficulty": "Beginner",
-  "target_areas": [
-   "Attention",
-   "Whole body relaxation"
-  ],
-  "benefits": [
-   "Guides attention slowly through the body",
-   "Helps you notice and release tension",
-   "A gentle way to wind down in the evening"
-  ],
-  "instructions": [
-   "Lie in Corpse Pose and let the breath settle.",
-   "Bring your attention to your toes and notice any sensation without changing it.",
-   "Slowly move your attention up: feet, legs, hips, belly, chest, hands, arms, shoulders, neck, face.",
-   "When the mind wanders, gently return to the last body part you remember.",
-   "Finish with a few deeper breaths and move the fingers and toes before sitting up."
-  ],
-  "breathing": "Natural breathing.",
-  "duration": "5 to 15 minutes",
-  "recommended_repetitions": "1 session",
-  "beginner_modification": "Scan just the major areas in 3 minutes.",
-  "advanced_variation": "Scan both sides of the body separately and slowly.",
-  "common_mistakes": [
-   "Trying to force relaxation",
-   "Judging a wandering mind"
-  ],
-  "safety_tips": [
-   "Sit up slowly afterwards."
-  ],
-  "contraindications": [
-   "None for most people"
-  ],
-  "equipment": "Yoga mat or bed",
-  "suitable_for": [
-   "Everyone",
-   "Before sleep",
-   "Stress relief"
-  ],
-  "image": "/yoga/body-scan-meditation-2.svg",
-  "motion_image": "/yoga/body-scan-meditation.svg",
-  "tags": [
-   "meditation",
-   "relaxation",
-   "evening"
-  ],
-  "slug": "body-scan-meditation",
-  "sanskrit": "Yoga Nidra (simple)",
-  "kind": "meditation",
-  "goals": [
-   "meditation",
-   "relaxation",
-   "stress_relief",
-   "recovery"
-  ],
-  "body_areas": [
-   "full_body"
-  ],
-  "phase": "relaxation",
-  "time_of_day": "evening",
-  "energy": "calming",
-  "sides": false,
-  "default_minutes": 5,
-  "related": [
-   "corpse-pose",
-   "belly-breathing"
-  ],
-  "frames": [
-   "/yoga/body-scan-meditation-1.svg",
-   "/yoga/body-scan-meditation-2.svg"
-  ],
-  "frame_labels": [
-   "Settle",
-   "Rest"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/alternate-nostril-breathing-1.jpg",
+    "author": "Thamizhpparithi Maari",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_style_of_nadi_suddhi_1.JPG",
+    "title": "A style of nadi suddhi 1.JPG"
+   },
+   {
+    "url": "/yoga/photos/alternate-nostril-breathing-2.jpg",
+    "author": "Thamizhpparithi Maari",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_style_of_nadi_suddhi.JPG",
+    "title": "A style of nadi suddhi.JPG"
+   }
+  ]
  },
  {
   "name": "Plank Pose",
@@ -2955,8 +2324,10 @@
    "Core strength",
    "Home workout"
   ],
-  "image": "/yoga/plank-pose-3.svg",
-  "motion_image": "/yoga/plank-pose.svg",
+  "image": "/yoga/photos/plank-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/plank-pose-1.jpg"
+  ],
   "tags": [
    "core",
    "arm strength",
@@ -2984,29 +2355,18 @@
   "related": [
    "side-plank",
    "downward-dog",
-   "dolphin-pose",
    "upward-dog"
   ],
-  "frames": [
-   "/yoga/plank-pose-1.svg",
-   "/yoga/plank-pose-2.svg",
-   "/yoga/plank-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Plank",
-   "slug": "plank",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/0.jpg",
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/1.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/plank-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chaturanga-Dandasana_high_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Chaturanga-Dandasana high Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
  },
  {
   "name": "Tabletop Balance",
@@ -3062,8 +2422,10 @@
    "Back care",
    "Core strength"
   ],
-  "image": "/yoga/tabletop-balance-3.svg",
-  "motion_image": "/yoga/tabletop-balance.svg",
+  "image": "/yoga/photos/tabletop-balance-1.jpg",
+  "image_urls": [
+   "/yoga/photos/tabletop-balance-1.jpg"
+  ],
   "tags": [
    "core",
    "balance",
@@ -3092,18 +2454,16 @@
    "plank-pose",
    "locust-pose"
   ],
-  "frames": [
-   "/yoga/tabletop-balance-1.svg",
-   "/yoga/tabletop-balance-2.svg",
-   "/yoga/tabletop-balance-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/tabletop-balance-1.jpg",
+    "author": "PTPioneer",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bird_dog_exercise.jpg",
+    "title": "Bird dog exercise.jpg"
+   }
+  ]
  },
  {
   "name": "Locust Pose",
@@ -3161,8 +2521,11 @@
    "Back strength",
    "Office workers"
   ],
-  "image": "/yoga/locust-pose-3.svg",
-  "motion_image": "/yoga/locust-pose.svg",
+  "image": "/yoga/photos/locust-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/locust-pose-1.jpg",
+   "/yoga/photos/locust-pose-2.jpg"
+  ],
   "tags": [
    "backbend",
    "prone",
@@ -3191,25 +2554,24 @@
    "bow-pose",
    "tabletop-balance"
   ],
-  "frames": [
-   "/yoga/locust-pose-1.svg",
-   "/yoga/locust-pose-2.svg",
-   "/yoga/locust-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "One Half Locust",
-   "slug": "one-half-locust",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Half_Locust/1.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/locust-pose-1.jpg",
+    "author": "Nikiwiki242",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Salabhasana_(cropped).jpg",
+    "title": "Salabhasana (cropped).jpg"
+   },
+   {
+    "url": "/yoga/photos/locust-pose-2.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Salabhasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Salabhasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
  },
  {
   "name": "Triangle Pose",
@@ -3271,8 +2633,11 @@
    "Standing practice",
    "Morning routine"
   ],
-  "image": "/yoga/triangle-pose-3.svg",
-  "motion_image": "/yoga/triangle-pose.svg",
+  "image": "/yoga/photos/triangle-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/triangle-pose-1.jpg",
+   "/yoga/photos/triangle-pose-2.jpg"
+  ],
   "tags": [
    "standing",
    "hamstrings",
@@ -3304,18 +2669,24 @@
    "half-moon-pose",
    "pyramid-pose"
   ],
-  "frames": [
-   "/yoga/triangle-pose-1.svg",
-   "/yoga/triangle-pose-2.svg",
-   "/yoga/triangle-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/triangle-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Trikonasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Trikonasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/triangle-pose-2.jpg",
+    "author": "Sigurdas",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2012.07_eurotrip_Innsbruck_mountains_08.jpg",
+    "title": "2012.07 eurotrip Innsbruck mountains 08.jpg"
+   }
+  ]
  },
  {
   "name": "Extended Side Angle",
@@ -3372,8 +2743,11 @@
    "Strength building",
    "Standing practice"
   ],
-  "image": "/yoga/extended-side-angle-3.svg",
-  "motion_image": "/yoga/extended-side-angle.svg",
+  "image": "/yoga/photos/extended-side-angle-1.jpg",
+  "image_urls": [
+   "/yoga/photos/extended-side-angle-1.jpg",
+   "/yoga/photos/extended-side-angle-2.jpg"
+  ],
   "tags": [
    "standing",
    "legs",
@@ -3400,210 +2774,26 @@
   "default_minutes": 1,
   "related": [
    "warrior-ii",
-   "triangle-pose",
-   "reverse-warrior"
+   "triangle-pose"
   ],
-  "frames": [
-   "/yoga/extended-side-angle-1.svg",
-   "/yoga/extended-side-angle-2.svg",
-   "/yoga/extended-side-angle-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Reverse Warrior",
-  "alternative_names": [
-   "Viparita Virabhadrasana",
-   "Peaceful Warrior"
-  ],
-  "category": [
-   "Flexibility",
-   "Strength",
-   "Mobility",
-   "Hips",
-   "Core"
-  ],
-  "difficulty": "Intermediate",
-  "target_areas": [
-   "Side body",
-   "Quadriceps",
-   "Intercostals"
-  ],
-  "benefits": [
-   "Stretches the side of the body while the legs work",
-   "Adds a side bend to a standing flow",
-   "Opens the ribs for fuller breathing"
-  ],
-  "instructions": [
-   "From Warrior II with the right knee bent, turn the right palm up.",
-   "Breathe in and sweep the right arm up and back over your head.",
-   "Let the left hand slide lightly down the back leg.",
-   "Keep the front knee bent over the ankle.",
-   "Return to Warrior II and repeat on the other side."
-  ],
-  "breathing": "Inhale to reach up and back, exhale to return.",
-  "duration": "3 to 5 breaths",
-  "recommended_repetitions": "2 rounds each side",
-  "beginner_modification": "Keep the lean small.",
-  "advanced_variation": "Bend the front knee deeper.",
-  "common_mistakes": [
-   "Leaning the weight onto the back hand",
-   "Straightening the front leg"
-  ],
-  "safety_tips": [
-   "Keep the neck relaxed."
-  ],
-  "contraindications": [
-   "Knee or shoulder injury"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Standing flows"
-  ],
-  "image": "/yoga/reverse-warrior-3.svg",
-  "motion_image": "/yoga/reverse-warrior.svg",
-  "tags": [
-   "standing",
-   "side stretch",
-   "warrior"
-  ],
-  "slug": "reverse-warrior",
-  "sanskrit": "Viparita Virabhadrasana",
-  "kind": "pose",
-  "goals": [
-   "flexibility",
-   "strength",
-   "mobility"
-  ],
-  "body_areas": [
-   "legs",
-   "hips",
-   "core"
-  ],
-  "phase": "standing",
-  "time_of_day": "morning",
-  "energy": "energizing",
-  "sides": true,
-  "default_minutes": 0.5,
-  "related": [
-   "warrior-ii",
-   "extended-side-angle"
-  ],
-  "frames": [
-   "/yoga/reverse-warrior-1.svg",
-   "/yoga/reverse-warrior-2.svg",
-   "/yoga/reverse-warrior-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "High Lunge",
-  "alternative_names": [
-   "Crescent Lunge",
-   "Ashta Chandrasana"
-  ],
-  "category": [
-   "Strength",
-   "Balance",
-   "Weight management",
-   "Flexibility",
-   "Hips",
-   "Core"
-  ],
-  "difficulty": "Intermediate",
-  "target_areas": [
-   "Quadriceps",
-   "Glutes",
-   "Hip flexors",
-   "Core"
-  ],
-  "benefits": [
-   "Strengthens the legs and core",
-   "Stretches the hip flexors of the back leg",
-   "Builds balance in a narrow stance"
-  ],
-  "instructions": [
-   "From Downward Dog, step the right foot forward between the hands.",
-   "Keep the back heel lifted and the back leg straight and strong.",
-   "Bend the front knee over the ankle and rise up with the arms overhead.",
-   "Draw the belly in and lengthen the tailbone down.",
-   "Hold, then repeat on the other side."
-  ],
-  "breathing": "Steady breaths; reach up on each inhale.",
-  "duration": "20 to 45 seconds each side",
-  "recommended_repetitions": "1 to 2 rounds each side",
-  "beginner_modification": "Lower the back knee into Low Lunge.",
-  "advanced_variation": "Sink the hips lower while keeping the back leg straight.",
-  "common_mistakes": [
-   "Front knee past the toes",
-   "Leaning back with the ribs flaring"
-  ],
-  "safety_tips": [
-   "Widen the stance for balance."
-  ],
-  "contraindications": [
-   "Knee injury",
-   "Balance problems without support"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Strength building"
-  ],
-  "image": "/yoga/high-lunge-3.svg",
-  "motion_image": "/yoga/high-lunge.svg",
-  "tags": [
-   "standing",
-   "lunge",
-   "legs"
-  ],
-  "slug": "high-lunge",
-  "sanskrit": "Ashta Chandrasana",
-  "kind": "pose",
-  "goals": [
-   "strength",
-   "balance",
-   "weight_management",
-   "flexibility"
-  ],
-  "body_areas": [
-   "legs",
-   "hips",
-   "core"
-  ],
-  "phase": "standing",
-  "time_of_day": "morning",
-  "energy": "energizing",
-  "sides": true,
-  "default_minutes": 0.5,
-  "related": [
-   "low-lunge",
-   "warrior-i",
-   "warrior-iii"
-  ],
-  "frames": [
-   "/yoga/high-lunge-1.svg",
-   "/yoga/high-lunge-2.svg",
-   "/yoga/high-lunge-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/extended-side-angle-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Utthita-Parshvakonasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Utthita-Parshvakonasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/extended-side-angle-2.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Parsvakonasana_Utthita_B_-_Revolved_Side_Angle_Pose_B_-_with_arm_Support.jpg",
+    "title": "Parsvakonasana Utthita B - Revolved Side Angle Pose B - with arm Support.jpg"
+   }
+  ]
  },
  {
   "name": "Warrior III",
@@ -3659,8 +2849,11 @@
    "Balance training",
    "Athletes"
   ],
-  "image": "/yoga/warrior-iii-3.svg",
-  "motion_image": "/yoga/warrior-iii.svg",
+  "image": "/yoga/photos/warrior-iii-1.jpg",
+  "image_urls": [
+   "/yoga/photos/warrior-iii-1.jpg",
+   "/yoga/photos/warrior-iii-2.jpg"
+  ],
   "tags": [
    "balance",
    "standing",
@@ -3687,21 +2880,26 @@
   "default_minutes": 0.5,
   "related": [
    "tree-pose",
-   "half-moon-pose",
-   "high-lunge"
+   "half-moon-pose"
   ],
-  "frames": [
-   "/yoga/warrior-iii-1.svg",
-   "/yoga/warrior-iii-2.svg",
-   "/yoga/warrior-iii-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/warrior-iii-1.jpg",
+    "author": "Robert Lindermayr",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tuladandasana_-_Virabhadrasana_III.jpg",
+    "title": "Tuladandasana - Virabhadrasana III.jpg"
+   },
+   {
+    "url": "/yoga/photos/warrior-iii-2.jpg",
+    "author": "Drchirag patel",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tuladandasana.jpg",
+    "title": "Tuladandasana.jpg"
+   }
+  ]
  },
  {
   "name": "Half Moon Pose",
@@ -3756,8 +2954,11 @@
   "suitable_for": [
    "Balance training"
   ],
-  "image": "/yoga/half-moon-pose-3.svg",
-  "motion_image": "/yoga/half-moon-pose.svg",
+  "image": "/yoga/photos/half-moon-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/half-moon-pose-1.jpg",
+   "/yoga/photos/half-moon-pose-2.jpg"
+  ],
   "tags": [
    "balance",
    "standing",
@@ -3787,18 +2988,24 @@
    "warrior-iii",
    "tree-pose"
   ],
-  "frames": [
-   "/yoga/half-moon-pose-1.svg",
-   "/yoga/half-moon-pose-2.svg",
-   "/yoga/half-moon-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/half-moon-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ardha-Chandrasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Ardha-Chandrasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/half-moon-pose-2.jpg",
+    "author": "Nikiwiki242",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ardha_Chandrasana_(cropped).jpg",
+    "title": "Ardha Chandrasana (cropped).jpg"
+   }
+  ]
  },
  {
   "name": "Pyramid Pose",
@@ -3853,8 +3060,10 @@
    "Runners",
    "Flexibility"
   ],
-  "image": "/yoga/pyramid-pose-3.svg",
-  "motion_image": "/yoga/pyramid-pose.svg",
+  "image": "/yoga/photos/pyramid-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/pyramid-pose-1.jpg"
+  ],
   "tags": [
    "standing",
    "hamstrings",
@@ -3882,120 +3091,16 @@
    "standing-forward-fold",
    "head-to-knee-pose"
   ],
-  "frames": [
-   "/yoga/pyramid-pose-1.svg",
-   "/yoga/pyramid-pose-2.svg",
-   "/yoga/pyramid-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Pyramid",
-   "slug": "pyramid",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pyramid/0.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Goddess Pose",
-  "alternative_names": [
-   "Utkata Konasana",
-   "Horse Stance"
-  ],
-  "category": [
-   "Strength",
-   "Weight management",
-   "Mobility",
-   "Hips",
-   "Shoulders"
-  ],
-  "difficulty": "Intermediate",
-  "target_areas": [
-   "Quadriceps",
-   "Inner thighs",
-   "Glutes",
-   "Shoulders"
-  ],
-  "benefits": [
-   "Strengthens the legs and inner thighs",
-   "Opens the hips",
-   "Builds heat and stamina quickly"
-  ],
-  "instructions": [
-   "Stand with the feet wide and the toes turned out about 45 degrees.",
-   "Bend the knees, lowering the hips toward knee height.",
-   "Keep the knees pointing in the same direction as the toes.",
-   "Bend the elbows to 90 degrees with the palms forward (cactus arms).",
-   "Keep the spine upright and hold, then straighten the legs."
-  ],
-  "breathing": "Steady breaths; exhale as you sink.",
-  "duration": "15 to 45 seconds",
-  "recommended_repetitions": "2 to 3 rounds",
-  "beginner_modification": "Bend the knees less and rest the hands on the thighs.",
-  "advanced_variation": "Lift the heels while holding.",
-  "common_mistakes": [
-   "Knees collapsing inward",
-   "Leaning forward"
-  ],
-  "safety_tips": [
-   "Keep the knees over the toes."
-  ],
-  "contraindications": [
-   "Knee or groin injury"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Strength building",
-   "Home workout"
-  ],
-  "image": "/yoga/goddess-pose-3.svg",
-  "motion_image": "/yoga/goddess-pose.svg",
-  "tags": [
-   "standing",
-   "legs",
-   "squat"
-  ],
-  "slug": "goddess-pose",
-  "sanskrit": "Utkata Konasana",
-  "kind": "pose",
-  "goals": [
-   "strength",
-   "weight_management",
-   "mobility"
-  ],
-  "body_areas": [
-   "legs",
-   "hips",
-   "shoulders"
-  ],
-  "phase": "standing",
-  "time_of_day": "morning",
-  "energy": "energizing",
-  "sides": false,
-  "default_minutes": 0.5,
-  "related": [
-   "chair-pose",
-   "garland-pose",
-   "warrior-ii"
-  ],
-  "frames": [
-   "/yoga/goddess-pose-1.svg",
-   "/yoga/goddess-pose-2.svg",
-   "/yoga/goddess-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/pyramid-pose-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Parshvottanasana.jpg",
+    "title": "Parshvottanasana.jpg"
+   }
+  ]
  },
  {
   "name": "Garland Pose",
@@ -4049,8 +3154,10 @@
    "Mobility",
    "Desk workers"
   ],
-  "image": "/yoga/garland-pose-3.svg",
-  "motion_image": "/yoga/garland-pose.svg",
+  "image": "/yoga/photos/garland-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/garland-pose-1.jpg"
+  ],
   "tags": [
    "squat",
    "hips"
@@ -4073,22 +3180,19 @@
   "sides": false,
   "default_minutes": 1,
   "related": [
-   "goddess-pose",
    "bound-angle-pose",
    "crow-pose"
   ],
-  "frames": [
-   "/yoga/garland-pose-1.svg",
-   "/yoga/garland-pose-2.svg",
-   "/yoga/garland-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/garland-pose-1.jpg",
+    "author": "robzabelyoga.com",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Upave%C5%9B%C4%81sana.jpg",
+    "title": "Upaveśāsana.jpg"
+   }
+  ]
  },
  {
   "name": "Boat Pose",
@@ -4144,8 +3248,11 @@
   "suitable_for": [
    "Core strength"
   ],
-  "image": "/yoga/boat-pose-3.svg",
-  "motion_image": "/yoga/boat-pose.svg",
+  "image": "/yoga/photos/boat-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/boat-pose-1.jpg",
+   "/yoga/photos/boat-pose-2.jpg"
+  ],
   "tags": [
    "core",
    "seated",
@@ -4173,18 +3280,24 @@
    "staff-pose",
    "plank-pose"
   ],
-  "frames": [
-   "/yoga/boat-pose-1.svg",
-   "/yoga/boat-pose-2.svg",
-   "/yoga/boat-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/boat-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Paripurna-Navasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Paripurna-Navasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/boat-pose-2.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-boat-pose2.jpg",
+    "title": "Mr-yoga-boat-pose2.jpg"
+   }
+  ]
  },
  {
   "name": "Side Plank",
@@ -4234,8 +3347,11 @@
   "suitable_for": [
    "Core strength"
   ],
-  "image": "/yoga/side-plank-3.svg",
-  "motion_image": "/yoga/side-plank.svg",
+  "image": "/yoga/photos/side-plank-1.jpg",
+  "image_urls": [
+   "/yoga/photos/side-plank-1.jpg",
+   "/yoga/photos/side-plank-2.jpg"
+  ],
   "tags": [
    "core",
    "arm balance",
@@ -4262,120 +3378,24 @@
    "plank-pose",
    "downward-dog"
   ],
-  "frames": [
-   "/yoga/side-plank-1.svg",
-   "/yoga/side-plank-2.svg",
-   "/yoga/side-plank-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Side Bridge",
-   "slug": "side-bridge",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Bridge/0.jpg",
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Bridge/1.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Dolphin Pose",
-  "alternative_names": [
-   "Ardha Pincha Mayurasana",
-   "Forearm Dog"
-  ],
-  "category": [
-   "Strength",
-   "Flexibility",
-   "Core",
-   "Shoulders",
-   "Hamstrings"
-  ],
-  "difficulty": "Intermediate",
-  "target_areas": [
-   "Shoulders",
-   "Upper back",
-   "Hamstrings",
-   "Core"
-  ],
-  "benefits": [
-   "Builds shoulder strength without loading the wrists",
-   "Stretches the hamstrings and calves",
-   "Prepares for forearm balances"
-  ],
-  "instructions": [
-   "Start on hands and knees, then lower onto the forearms with the elbows under the shoulders.",
-   "Tuck the toes and lift the hips up and back.",
-   "Press the forearms down and lift the shoulders away from the floor.",
-   "Walk the feet in slightly and keep the knees bent if needed.",
-   "Hold, then lower the knees."
-  ],
-  "breathing": "Even breaths.",
-  "duration": "20 to 45 seconds",
-  "recommended_repetitions": "2 to 3 rounds",
-  "beginner_modification": "Keep the knees bent.",
-  "advanced_variation": "Walk the feet closer toward the elbows.",
-  "common_mistakes": [
-   "Shoulders collapsing toward the floor",
-   "Elbows sliding wide"
-  ],
-  "safety_tips": [
-   "Keep the forearms parallel."
-  ],
-  "contraindications": [
-   "Shoulder or neck injury",
-   "Uncontrolled high blood pressure"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Shoulder strength"
-  ],
-  "image": "/yoga/dolphin-pose-3.svg",
-  "motion_image": "/yoga/dolphin-pose.svg",
-  "tags": [
-   "shoulders",
-   "inversion light"
-  ],
-  "slug": "dolphin-pose",
-  "sanskrit": "Ardha Pincha Mayurasana",
-  "kind": "pose",
-  "goals": [
-   "strength",
-   "flexibility",
-   "core"
-  ],
-  "body_areas": [
-   "shoulders",
-   "core",
-   "legs"
-  ],
-  "phase": "standing",
-  "time_of_day": "any",
-  "energy": "neutral",
-  "sides": false,
-  "default_minutes": 0.5,
-  "related": [
-   "downward-dog",
-   "plank-pose",
-   "supported-headstand"
-  ],
-  "frames": [
-   "/yoga/dolphin-pose-1.svg",
-   "/yoga/dolphin-pose-2.svg",
-   "/yoga/dolphin-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/side-plank-1.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yoga_PLank.jpg",
+    "title": "Yoga PLank.jpg"
+   },
+   {
+    "url": "/yoga/photos/side-plank-2.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-side-plank.jpg",
+    "title": "Mr-yoga-side-plank.jpg"
+   }
+  ]
  },
  {
   "name": "Upward-Facing Dog",
@@ -4432,8 +3452,11 @@
    "Flows",
    "Back strength"
   ],
-  "image": "/yoga/upward-dog-3.svg",
-  "motion_image": "/yoga/upward-dog.svg",
+  "image": "/yoga/photos/upward-dog-1.jpg",
+  "image_urls": [
+   "/yoga/photos/upward-dog-1.jpg",
+   "/yoga/photos/upward-dog-2.jpg"
+  ],
   "tags": [
    "backbend",
    "prone",
@@ -4462,18 +3485,24 @@
    "downward-dog",
    "plank-pose"
   ],
-  "frames": [
-   "/yoga/upward-dog-1.svg",
-   "/yoga/upward-dog-2.svg",
-   "/yoga/upward-dog-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/upward-dog-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:7urdhva_mukha_shvanasana.JPG",
+    "title": "7urdhva mukha shvanasana.JPG"
+   },
+   {
+    "url": "/yoga/photos/upward-dog-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Urdva-muka-shvanasana.jpg",
+    "title": "Urdva-muka-shvanasana.jpg"
+   }
+  ]
  },
  {
   "name": "Camel Pose",
@@ -4530,8 +3559,11 @@
    "Posture",
    "Chest opening"
   ],
-  "image": "/yoga/camel-pose-3.svg",
-  "motion_image": "/yoga/camel-pose.svg",
+  "image": "/yoga/photos/camel-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/camel-pose-1.jpg",
+   "/yoga/photos/camel-pose-2.jpg"
+  ],
   "tags": [
    "backbend",
    "kneeling"
@@ -4560,18 +3592,24 @@
    "wheel-pose",
    "childs-pose"
   ],
-  "frames": [
-   "/yoga/camel-pose-1.svg",
-   "/yoga/camel-pose-2.svg",
-   "/yoga/camel-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/camel-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ustrasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Ustrasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/camel-pose-2.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ustrasana_-_Camel_Pose.jpg",
+    "title": "Ustrasana - Camel Pose.jpg"
+   }
+  ]
  },
  {
   "name": "Bow Pose",
@@ -4628,8 +3666,11 @@
    "Back strength",
    "Flexibility"
   ],
-  "image": "/yoga/bow-pose-3.svg",
-  "motion_image": "/yoga/bow-pose.svg",
+  "image": "/yoga/photos/bow-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/bow-pose-1.jpg",
+   "/yoga/photos/bow-pose-2.jpg"
+  ],
   "tags": [
    "backbend",
    "prone"
@@ -4658,18 +3699,24 @@
    "camel-pose",
    "cobra-pose"
   ],
-  "frames": [
-   "/yoga/bow-pose-1.svg",
-   "/yoga/bow-pose-2.svg",
-   "/yoga/bow-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/bow-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dhanurasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Dhanurasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/bow-pose-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Dhanurasana.jpg",
+    "title": "Dhanurasana.jpg"
+   }
+  ]
  },
  {
   "name": "Pigeon Pose",
@@ -4724,8 +3771,11 @@
    "Desk workers",
    "Recovery"
   ],
-  "image": "/yoga/pigeon-pose-3.svg",
-  "motion_image": "/yoga/pigeon-pose.svg",
+  "image": "/yoga/photos/pigeon-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/pigeon-pose-1.jpg",
+   "/yoga/photos/pigeon-pose-2.jpg"
+  ],
   "tags": [
    "hips",
    "glutes",
@@ -4750,114 +3800,27 @@
   "sides": true,
   "default_minutes": 1.5,
   "related": [
-   "reclined-pigeon",
    "low-lunge",
    "garland-pose"
   ],
-  "frames": [
-   "/yoga/pigeon-pose-1.svg",
-   "/yoga/pigeon-pose-2.svg",
-   "/yoga/pigeon-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
- },
- {
-  "name": "Reclined Pigeon",
-  "alternative_names": [
-   "Figure Four Stretch",
-   "Eye of the Needle"
-  ],
-  "category": [
-   "Flexibility",
-   "Recovery",
-   "Relaxation",
-   "Hips"
-  ],
-  "difficulty": "Beginner",
-  "target_areas": [
-   "Glutes",
-   "Piriformis",
-   "Outer hip"
-  ],
-  "benefits": [
-   "A gentle, controllable hip stretch",
-   "Kind to the knees compared with Pigeon",
-   "Good after running or sitting"
-  ],
-  "instructions": [
-   "Lie on your back with the knees bent and the feet flat.",
-   "Cross the right ankle over the left thigh, just below the knee.",
-   "Lift the left foot and hold behind the left thigh.",
-   "Draw the legs toward you until you feel a stretch in the right hip.",
-   "Hold, then switch sides."
-  ],
-  "breathing": "Relax the hip on each exhale.",
-  "duration": "30 seconds to 1 minute each side",
-  "recommended_repetitions": "1 round each side",
-  "beginner_modification": "Keep the bottom foot on the floor.",
-  "advanced_variation": "Hold the bottom shin instead of the thigh.",
-  "common_mistakes": [
-   "Lifting the head and shoulders",
-   "Pulling too hard"
-  ],
-  "safety_tips": [
-   "Keep the crossed foot flexed to protect the knee."
-  ],
-  "contraindications": [
-   "Knee injury"
-  ],
-  "equipment": "Yoga mat",
-  "suitable_for": [
-   "Everyone",
-   "Runners",
-   "Recovery"
-  ],
-  "image": "/yoga/reclined-pigeon-3.svg",
-  "motion_image": "/yoga/reclined-pigeon.svg",
-  "tags": [
-   "hips",
-   "supine",
-   "glutes"
-  ],
-  "slug": "reclined-pigeon",
-  "sanskrit": "Supta Kapotasana",
-  "kind": "pose",
-  "goals": [
-   "flexibility",
-   "recovery",
-   "relaxation"
-  ],
-  "body_areas": [
-   "hips"
-  ],
-  "phase": "cooldown",
-  "time_of_day": "evening",
-  "energy": "calming",
-  "sides": true,
-  "default_minutes": 1,
-  "related": [
-   "pigeon-pose",
-   "happy-baby",
-   "supine-twist"
-  ],
-  "frames": [
-   "/yoga/reclined-pigeon-1.svg",
-   "/yoga/reclined-pigeon-2.svg",
-   "/yoga/reclined-pigeon-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/pigeon-pose-1.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Eka_Pada_Rajakapotasana_-_One_Legged_Royal_Pigeon_Pose.jpg",
+    "title": "Eka Pada Rajakapotasana - One Legged Royal Pigeon Pose.jpg"
+   },
+   {
+    "url": "/yoga/photos/pigeon-pose-2.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-one-legged-king-pigeon-1-_(2).jpg",
+    "title": "Mr-yoga-one-legged-king-pigeon-1- (2).jpg"
+   }
+  ]
  },
  {
   "name": "Head-to-Knee Pose",
@@ -4912,8 +3875,10 @@
    "Flexibility",
    "Evening routine"
   ],
-  "image": "/yoga/head-to-knee-pose-3.svg",
-  "motion_image": "/yoga/head-to-knee-pose.svg",
+  "image": "/yoga/photos/head-to-knee-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/head-to-knee-pose-1.jpg"
+  ],
   "tags": [
    "seated",
    "forward fold",
@@ -4942,26 +3907,16 @@
    "bound-angle-pose",
    "pyramid-pose"
   ],
-  "frames": [
-   "/yoga/head-to-knee-pose-1.svg",
-   "/yoga/head-to-knee-pose-2.svg",
-   "/yoga/head-to-knee-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": {
-   "exercise": "Seated Hamstring",
-   "slug": "seated-hamstring",
-   "image_urls": [
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Hamstring/0.jpg",
-    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Hamstring/1.jpg"
-   ],
-   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
-  },
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/head-to-knee-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Janusirsasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Janusirsasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
  },
  {
   "name": "Seated Spinal Twist",
@@ -5016,8 +3971,11 @@
    "Office workers",
    "Mobility"
   ],
-  "image": "/yoga/seated-twist-3.svg",
-  "motion_image": "/yoga/seated-twist.svg",
+  "image": "/yoga/photos/seated-twist-1.jpg",
+  "image_urls": [
+   "/yoga/photos/seated-twist-1.jpg",
+   "/yoga/photos/seated-twist-2.jpg"
+  ],
   "tags": [
    "twist",
    "seated",
@@ -5041,21 +3999,26 @@
   "sides": true,
   "default_minutes": 1,
   "related": [
-   "supine-twist",
    "staff-pose"
   ],
-  "frames": [
-   "/yoga/seated-twist-1.svg",
-   "/yoga/seated-twist-2.svg",
-   "/yoga/seated-twist-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/seated-twist-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ardha-Matsyendrasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Ardha-Matsyendrasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/seated-twist-2.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ardha_Matsyendrasana_-_Half_Lord_of_the_Fishes_Pose.jpg",
+    "title": "Ardha Matsyendrasana - Half Lord of the Fishes Pose.jpg"
+   }
+  ]
  },
  {
   "name": "Revolved Chair",
@@ -5109,8 +4072,10 @@
   "suitable_for": [
    "Strength building"
   ],
-  "image": "/yoga/revolved-chair-3.svg",
-  "motion_image": "/yoga/revolved-chair.svg",
+  "image": "/yoga/photos/revolved-chair-1.jpg",
+  "image_urls": [
+   "/yoga/photos/revolved-chair-1.jpg"
+  ],
   "tags": [
    "standing",
    "twist",
@@ -5139,18 +4104,16 @@
    "chair-pose",
    "seated-twist"
   ],
-  "frames": [
-   "/yoga/revolved-chair-1.svg",
-   "/yoga/revolved-chair-2.svg",
-   "/yoga/revolved-chair-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/revolved-chair-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Parivrtta-Utkatasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Parivrtta-Utkatasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
  },
  {
   "name": "Dancer Pose",
@@ -5204,8 +4167,11 @@
   "suitable_for": [
    "Balance training"
   ],
-  "image": "/yoga/dancer-pose-3.svg",
-  "motion_image": "/yoga/dancer-pose.svg",
+  "image": "/yoga/photos/dancer-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/dancer-pose-1.jpg",
+   "/yoga/photos/dancer-pose-2.jpg"
+  ],
   "tags": [
    "balance",
    "standing",
@@ -5235,18 +4201,24 @@
    "warrior-iii",
    "bow-pose"
   ],
-  "frames": [
-   "/yoga/dancer-pose-1.svg",
-   "/yoga/dancer-pose-2.svg",
-   "/yoga/dancer-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/dancer-pose-1.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-lord_of_dance_1.jpg",
+    "title": "Mr-yoga-lord of dance 1.jpg"
+   },
+   {
+    "url": "/yoga/photos/dancer-pose-2.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Natarajasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Natarajasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
  },
  {
   "name": "Fish Pose",
@@ -5299,8 +4271,11 @@
    "Posture",
    "Breathing"
   ],
-  "image": "/yoga/fish-pose-3.svg",
-  "motion_image": "/yoga/fish-pose.svg",
+  "image": "/yoga/photos/fish-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/fish-pose-1.jpg",
+   "/yoga/photos/fish-pose-2.jpg"
+  ],
   "tags": [
    "backbend",
    "supine",
@@ -5328,18 +4303,24 @@
    "bridge-pose",
    "corpse-pose"
   ],
-  "frames": [
-   "/yoga/fish-pose-1.svg",
-   "/yoga/fish-pose-2.svg",
-   "/yoga/fish-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/fish-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Matsyasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Matsyasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/fish-pose-2.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-fish-pose.jpg",
+    "title": "Mr-yoga-fish-pose.jpg"
+   }
+  ]
  },
  {
   "name": "Reclined Bound Angle",
@@ -5390,8 +4371,10 @@
    "Everyone",
    "Evening routine"
   ],
-  "image": "/yoga/reclined-bound-angle-2.svg",
-  "motion_image": "/yoga/reclined-bound-angle.svg",
+  "image": "/yoga/photos/reclined-bound-angle-1.jpg",
+  "image_urls": [
+   "/yoga/photos/reclined-bound-angle-1.jpg"
+  ],
   "tags": [
    "restorative",
    "hips",
@@ -5416,19 +4399,18 @@
   "default_minutes": 2,
   "related": [
    "bound-angle-pose",
-   "corpse-pose",
-   "happy-baby"
+   "corpse-pose"
   ],
-  "frames": [
-   "/yoga/reclined-bound-angle-1.svg",
-   "/yoga/reclined-bound-angle-2.svg"
-  ],
-  "frame_labels": [
-   "Settle",
-   "Rest"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/reclined-bound-angle-1.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-reclined-bound-angle.jpg",
+    "title": "Mr-yoga-reclined-bound-angle.jpg"
+   }
+  ]
  },
  {
   "name": "Crow Pose",
@@ -5484,8 +4466,11 @@
    "Strength building",
    "Arm balance practice"
   ],
-  "image": "/yoga/crow-pose-3.svg",
-  "motion_image": "/yoga/crow-pose.svg",
+  "image": "/yoga/photos/crow-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/crow-pose-1.jpg",
+   "/yoga/photos/crow-pose-2.jpg"
+  ],
   "tags": [
    "arm balance",
    "core"
@@ -5511,18 +4496,24 @@
    "garland-pose",
    "plank-pose"
   ],
-  "frames": [
-   "/yoga/crow-pose-1.svg",
-   "/yoga/crow-pose-2.svg",
-   "/yoga/crow-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/crow-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kakasana_Yoga-Asana_Nina-Mel_(cropped,_light_background).jpg",
+    "title": "Kakasana Yoga-Asana Nina-Mel (cropped, light background).jpg"
+   },
+   {
+    "url": "/yoga/photos/crow-pose-2.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cranse_Pose_5.jpg",
+    "title": "Cranse Pose 5.jpg"
+   }
+  ]
  },
  {
   "name": "Wheel Pose",
@@ -5581,8 +4572,11 @@
   "suitable_for": [
    "Experienced practitioners"
   ],
-  "image": "/yoga/wheel-pose-3.svg",
-  "motion_image": "/yoga/wheel-pose.svg",
+  "image": "/yoga/photos/wheel-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/wheel-pose-1.jpg",
+   "/yoga/photos/wheel-pose-2.jpg"
+  ],
   "tags": [
    "backbend",
    "advanced",
@@ -5611,18 +4605,24 @@
    "camel-pose",
    "bow-pose"
   ],
-  "frames": [
-   "/yoga/wheel-pose-1.svg",
-   "/yoga/wheel-pose-2.svg",
-   "/yoga/wheel-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/wheel-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chakrasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Chakrasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/wheel-pose-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Urdva_Dhanurasana.jpg",
+    "title": "Urdva Dhanurasana.jpg"
+   }
+  ]
  },
  {
   "name": "Supported Headstand",
@@ -5680,8 +4680,11 @@
   "suitable_for": [
    "Experienced practitioners"
   ],
-  "image": "/yoga/supported-headstand-3.svg",
-  "motion_image": "/yoga/supported-headstand.svg",
+  "image": "/yoga/photos/supported-headstand-1.jpg",
+  "image_urls": [
+   "/yoga/photos/supported-headstand-1.jpg",
+   "/yoga/photos/supported-headstand-2.jpg"
+  ],
   "tags": [
    "inversion",
    "advanced",
@@ -5705,22 +4708,27 @@
   "sides": false,
   "default_minutes": 0.5,
   "related": [
-   "dolphin-pose",
    "supported-shoulder-stand",
    "handstand"
   ],
-  "frames": [
-   "/yoga/supported-headstand-1.svg",
-   "/yoga/supported-headstand-2.svg",
-   "/yoga/supported-headstand-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/supported-headstand-1.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Salamba_Sirsasana_-_Supported_Headstand.jpg",
+    "title": "Salamba Sirsasana - Supported Headstand.jpg"
+   },
+   {
+    "url": "/yoga/photos/supported-headstand-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Shirshasana.jpg",
+    "title": "Shirshasana.jpg"
+   }
+  ]
  },
  {
   "name": "Supported Shoulder Stand",
@@ -5777,8 +4785,11 @@
   "suitable_for": [
    "Experienced practitioners"
   ],
-  "image": "/yoga/supported-shoulder-stand-3.svg",
-  "motion_image": "/yoga/supported-shoulder-stand.svg",
+  "image": "/yoga/photos/supported-shoulder-stand-1.jpg",
+  "image_urls": [
+   "/yoga/photos/supported-shoulder-stand-1.jpg",
+   "/yoga/photos/supported-shoulder-stand-2.jpg"
+  ],
   "tags": [
    "inversion",
    "advanced",
@@ -5807,18 +4818,24 @@
    "fish-pose",
    "legs-up-the-wall"
   ],
-  "frames": [
-   "/yoga/supported-shoulder-stand-1.svg",
-   "/yoga/supported-shoulder-stand-2.svg",
-   "/yoga/supported-shoulder-stand-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/supported-shoulder-stand-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarvangasana.jpg",
+    "title": "Sarvangasana.jpg"
+   },
+   {
+    "url": "/yoga/photos/supported-shoulder-stand-2.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-shouldertand.jpg",
+    "title": "Mr-yoga-shouldertand.jpg"
+   }
+  ]
  },
  {
   "name": "Plow Pose",
@@ -5872,8 +4889,11 @@
   "suitable_for": [
    "Experienced practitioners"
   ],
-  "image": "/yoga/plow-pose-3.svg",
-  "motion_image": "/yoga/plow-pose.svg",
+  "image": "/yoga/photos/plow-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/plow-pose-1.jpg",
+   "/yoga/photos/plow-pose-2.jpg"
+  ],
   "tags": [
    "inversion",
    "advanced",
@@ -5901,18 +4921,24 @@
    "supported-shoulder-stand",
    "fish-pose"
   ],
-  "frames": [
-   "/yoga/plow-pose-1.svg",
-   "/yoga/plow-pose-2.svg",
-   "/yoga/plow-pose-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/plow-pose-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Halasana.jpg",
+    "title": "Halasana.jpg"
+   },
+   {
+    "url": "/yoga/photos/plow-pose-2.jpg",
+    "author": "Nicholas A. Tonelli from Northeast Pennsylvania, USA",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Minimalism_(14155793547).jpg",
+    "title": "Minimalism (14155793547).jpg"
+   }
+  ]
  },
  {
   "name": "Handstand (at a wall)",
@@ -5968,8 +4994,10 @@
   "suitable_for": [
    "Experienced practitioners"
   ],
-  "image": "/yoga/handstand-3.svg",
-  "motion_image": "/yoga/handstand.svg",
+  "image": "/yoga/photos/handstand-1.jpg",
+  "image_urls": [
+   "/yoga/photos/handstand-1.jpg"
+  ],
   "tags": [
    "inversion",
    "advanced",
@@ -5995,21 +5023,18 @@
   "default_minutes": 0.5,
   "related": [
    "downward-dog",
-   "dolphin-pose",
    "supported-headstand"
   ],
-  "frames": [
-   "/yoga/handstand-1.svg",
-   "/yoga/handstand-2.svg",
-   "/yoga/handstand-3.svg"
-  ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
-  ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "photos": [
+   {
+    "url": "/yoga/photos/handstand-1.jpg",
+    "author": "Earl Mcgehee",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Handstand_(119653409).jpeg",
+    "title": "Handstand (119653409).jpeg"
+   }
+  ]
  },
  {
   "name": "Front Splits",
@@ -6064,8 +5089,11 @@
    "Experienced practitioners",
    "Dancers and martial artists"
   ],
-  "image": "/yoga/full-splits-3.svg",
-  "motion_image": "/yoga/full-splits.svg",
+  "image": "/yoga/photos/full-splits-1.jpg",
+  "image_urls": [
+   "/yoga/photos/full-splits-1.jpg",
+   "/yoga/photos/full-splits-2.jpg"
+  ],
   "tags": [
    "flexibility",
    "advanced",
@@ -6092,17 +5120,1089 @@
    "pyramid-pose",
    "head-to-knee-pose"
   ],
-  "frames": [
-   "/yoga/full-splits-1.svg",
-   "/yoga/full-splits-2.svg",
-   "/yoga/full-splits-3.svg"
+  "photos": [
+   {
+    "url": "/yoga/photos/full-splits-1.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hanumanasana_-_Hanuman%27s_Posture_-_in_Diagonal_View.jpg",
+    "title": "Hanumanasana - Hanuman's Posture - in Diagonal View.jpg"
+   },
+   {
+    "url": "/yoga/photos/full-splits-2.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yoga_Split_3.jpg",
+    "title": "Yoga Split 3.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Eagle Pose",
+  "alternative_names": [
+   "Garudasana"
   ],
-  "frame_labels": [
-   "Start",
-   "Transition",
-   "Final"
+  "category": [
+   "Balance",
+   "Flexibility",
+   "Strength",
+   "Shoulders",
+   "Hips"
   ],
-  "photo_reference": null,
-  "image_license": "Original FitBot motion figure (MIT)"
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Standing leg",
+   "Outer hips",
+   "Upper back and shoulders"
+  ],
+  "benefits": [
+   "Trains balance and concentration",
+   "Stretches the upper back, shoulders and outer hips",
+   "Strengthens the standing leg"
+  ],
+  "instructions": [
+   "Stand in Mountain Pose and bend both knees slightly.",
+   "Lift the right leg and cross the right thigh over the left; hook the right foot behind the left calf if you can.",
+   "Stretch the arms forward, cross the left arm over the right at the elbows and bring the palms together.",
+   "Sit a little lower, lift the elbows to shoulder height and keep the chest upright.",
+   "Hold, unwind slowly and repeat on the other side."
+  ],
+  "breathing": "Slow breaths into the back of the ribs.",
+  "duration": "15 to 30 seconds each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Rest the toes of the crossed leg on the floor beside the standing foot, and hold opposite shoulders instead of wrapping the arms.",
+  "advanced_variation": "Sink lower and fold the chest toward the thighs while keeping the wrap.",
+  "common_mistakes": [
+   "Locking the standing knee",
+   "Leaning the chest far forward",
+   "Shrugging the shoulders"
+  ],
+  "safety_tips": [
+   "Practise near a wall for balance.",
+   "Skip the foot hook if the knee complains."
+  ],
+  "contraindications": [
+   "Knee injury",
+   "Shoulder injury (hold opposite shoulders instead)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Balance training",
+   "Office workers (shoulders)"
+  ],
+  "image": "/yoga/photos/eagle-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/eagle-pose-1.jpg",
+   "/yoga/photos/eagle-pose-2.jpg"
+  ],
+  "tags": [
+   "balance",
+   "standing",
+   "one leg"
+  ],
+  "slug": "eagle-pose",
+  "sanskrit": "Garudasana",
+  "kind": "pose",
+  "goals": [
+   "balance",
+   "flexibility",
+   "strength"
+  ],
+  "body_areas": [
+   "legs",
+   "shoulders",
+   "hips"
+  ],
+  "phase": "balance",
+  "time_of_day": "morning",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "tree-pose",
+   "chair-pose",
+   "cow-face-pose"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/eagle-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Garudasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Garudasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/eagle-pose-2.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Garu%E1%B8%8D%C4%81sana_-_Eagle_Pose_2_in_side_view.jpg",
+    "title": "Garuḍāsana - Eagle Pose 2 in side view.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Cow Face Pose",
+  "alternative_names": [
+   "Gomukhasana"
+  ],
+  "category": [
+   "Flexibility",
+   "Mobility",
+   "Posture",
+   "Shoulders",
+   "Hips"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Shoulders and triceps",
+   "Outer hips",
+   "Chest"
+  ],
+  "benefits": [
+   "Opens the shoulders and chest",
+   "Stretches the outer hips and thighs",
+   "Encourages an upright seated posture"
+  ],
+  "instructions": [
+   "Sit and stack the right knee over the left, with the feet beside the opposite hips.",
+   "Sit evenly on both sit bones, using a cushion if one hip lifts.",
+   "Reach the left arm up, bend the elbow and let the hand fall between the shoulder blades.",
+   "Bring the right hand behind the back from below and try to clasp the fingers, or hold a strap.",
+   "Sit tall, hold, then switch the legs and arms."
+  ],
+  "breathing": "Breathe into the side ribs and keep the neck relaxed.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Sit on a cushion with the bottom leg straight, and hold a strap or towel between the hands.",
+  "advanced_variation": "Fold forward over the stacked knees with the arms bound.",
+  "common_mistakes": [
+   "Rounding the back",
+   "Pushing the head forward",
+   "Forcing the hands to meet"
+  ],
+  "safety_tips": [
+   "Use a strap rather than straining the shoulders."
+  ],
+  "contraindications": [
+   "Shoulder injury",
+   "Knee or hip injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Desk workers",
+   "Shoulder mobility"
+  ],
+  "image": "/yoga/photos/cow-face-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/cow-face-pose-1.jpg",
+   "/yoga/photos/cow-face-pose-2.jpg"
+  ],
+  "tags": [
+   "seated",
+   "shoulders",
+   "hips"
+  ],
+  "slug": "cow-face-pose",
+  "sanskrit": "Gomukhasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "mobility",
+   "posture"
+  ],
+  "body_areas": [
+   "shoulders",
+   "hips"
+  ],
+  "phase": "seated",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "hero-pose",
+   "eagle-pose",
+   "seated-twist"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/cow-face-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gomukhasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Gomukhasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/cow-face-pose-2.jpg",
+    "author": "Mr. Yoga",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mr-yoga-cow-face-pose.jpg",
+    "title": "Mr-yoga-cow-face-pose.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Hero Pose",
+  "alternative_names": [
+   "Virasana"
+  ],
+  "category": [
+   "Posture",
+   "Flexibility",
+   "Meditation",
+   "Breathing",
+   "Back"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Quadriceps",
+   "Knees and ankles",
+   "Spine"
+  ],
+  "benefits": [
+   "A steady kneeling seat for breathing and meditation",
+   "Stretches the fronts of the thighs and ankles",
+   "Encourages a tall spine"
+  ],
+  "instructions": [
+   "Kneel with the knees together and the feet a little wider than the hips.",
+   "Turn the calves slightly out with your hands and sit down between the heels.",
+   "If the hips don't reach the floor, sit on a block or cushion.",
+   "Rest the hands on the thighs, lengthen the spine and relax the shoulders."
+  ],
+  "breathing": "Calm nasal breathing.",
+  "duration": "1 to 3 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Sit on a block or a thick cushion, and roll a towel under the ankles.",
+  "advanced_variation": "Lean back into Reclined Hero Pose.",
+  "common_mistakes": [
+   "Forcing the hips to the floor",
+   "Feet turning out to the sides"
+  ],
+  "safety_tips": [
+   "Come out if you feel any pain in the knees; use more height under the hips."
+  ],
+  "contraindications": [
+   "Knee injury or knee pain when kneeling",
+   "Ankle injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Meditation",
+   "Breathing practice"
+  ],
+  "image": "/yoga/photos/hero-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/hero-pose-1.jpg"
+  ],
+  "tags": [
+   "kneeling",
+   "seated",
+   "meditation"
+  ],
+  "slug": "hero-pose",
+  "sanskrit": "Virasana",
+  "kind": "pose",
+  "goals": [
+   "posture",
+   "flexibility",
+   "meditation",
+   "breathing"
+  ],
+  "body_areas": [
+   "legs",
+   "back"
+  ],
+  "phase": "centering",
+  "time_of_day": "any",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "thunderbolt-pose",
+   "reclined-hero",
+   "easy-pose"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/hero-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Virasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Virasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Thunderbolt Pose",
+  "alternative_names": [
+   "Vajrasana",
+   "Diamond Pose"
+  ],
+  "category": [
+   "Posture",
+   "Meditation",
+   "Breathing",
+   "Back"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Knees and ankles",
+   "Thighs",
+   "Spine"
+  ],
+  "benefits": [
+   "A simple kneeling seat for breathing practice",
+   "Gently stretches the ankles and thighs",
+   "Encourages an upright back"
+  ],
+  "instructions": [
+   "Kneel with the knees together and the tops of the feet on the mat.",
+   "Sit back on the heels with the big toes touching.",
+   "Place the hands on the thighs and lengthen the spine.",
+   "Relax the shoulders and soften the face."
+  ],
+  "breathing": "Slow breaths through the nose.",
+  "duration": "1 to 5 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Place a cushion between the hips and heels, or a folded blanket under the ankles.",
+  "advanced_variation": "Stay longer with a steady breath focus.",
+  "common_mistakes": [
+   "Slumping the back",
+   "Sitting with weight on one side"
+  ],
+  "safety_tips": [
+   "Shift onto hands and knees if the legs fall asleep."
+  ],
+  "contraindications": [
+   "Knee or ankle injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Everyone",
+   "Breathing practice"
+  ],
+  "image": "/yoga/photos/thunderbolt-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/thunderbolt-pose-1.jpg"
+  ],
+  "tags": [
+   "kneeling",
+   "meditation"
+  ],
+  "slug": "thunderbolt-pose",
+  "sanskrit": "Vajrasana",
+  "kind": "pose",
+  "goals": [
+   "posture",
+   "meditation",
+   "breathing"
+  ],
+  "body_areas": [
+   "legs",
+   "back"
+  ],
+  "phase": "centering",
+  "time_of_day": "any",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "hero-pose",
+   "childs-pose",
+   "alternate-nostril-breathing"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/thunderbolt-pose-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Vajrasana.jpg",
+    "title": "Vajrasana.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Revolved Triangle",
+  "alternative_names": [
+   "Parivrtta Trikonasana"
+  ],
+  "category": [
+   "Flexibility",
+   "Balance",
+   "Mobility",
+   "Back",
+   "Hips",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Hamstrings",
+   "Spine (rotation)",
+   "Outer hips"
+  ],
+  "benefits": [
+   "Combines a hamstring stretch with a spinal twist",
+   "Challenges balance in a narrow stance",
+   "Strengthens the legs"
+  ],
+  "instructions": [
+   "Stand with the left foot forward and the right foot back about one leg length, back foot angled.",
+   "Square the hips to the front and lengthen the spine.",
+   "Hinge forward and place the right hand on a block or the floor inside or outside the left foot.",
+   "Rotate the chest to the left and reach the left arm up.",
+   "Hold, come up with a long back and switch sides."
+  ],
+  "breathing": "Lengthen on the inhale, twist a little more on the exhale.",
+  "duration": "20 to 30 seconds each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Shorten the stance and use a tall block under the hand.",
+  "advanced_variation": "Bring the hand flat outside the front foot.",
+  "common_mistakes": [
+   "Rounding the back to reach the floor",
+   "Locking the front knee",
+   "Stance on one narrow line"
+  ],
+  "safety_tips": [
+   "Look down if balance or the neck is a problem."
+  ],
+  "contraindications": [
+   "Back or spinal disc injury",
+   "Low blood pressure"
+  ],
+  "equipment": "Yoga mat, block",
+  "suitable_for": [
+   "Standing practice"
+  ],
+  "image": "/yoga/photos/revolved-triangle-1.jpg",
+  "image_urls": [
+   "/yoga/photos/revolved-triangle-1.jpg"
+  ],
+  "tags": [
+   "standing",
+   "twist",
+   "hamstrings"
+  ],
+  "slug": "revolved-triangle",
+  "sanskrit": "Parivrtta Trikonasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "balance",
+   "mobility"
+  ],
+  "body_areas": [
+   "legs",
+   "back",
+   "hips"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "triangle-pose",
+   "pyramid-pose",
+   "revolved-chair"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/revolved-triangle-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Parivrtta-Trikonasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Parivrtta-Trikonasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Extended Hand-to-Big-Toe Pose",
+  "alternative_names": [
+   "Utthita Hasta Padangusthasana",
+   "Standing Big Toe Hold"
+  ],
+  "category": [
+   "Balance",
+   "Flexibility",
+   "Strength",
+   "Core",
+   "Hips",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Standing leg",
+   "Hamstrings of the lifted leg",
+   "Core"
+  ],
+  "benefits": [
+   "Builds balance and leg strength",
+   "Stretches the hamstrings of the lifted leg",
+   "Trains core control"
+  ],
+  "instructions": [
+   "Stand in Mountain Pose and shift your weight onto the left foot.",
+   "Bend the right knee up and hold the big toe with the first two fingers, or loop a strap around the foot.",
+   "Keep the left hand on the hip and stand tall.",
+   "Straighten the right leg forward only as far as you can keep the spine upright.",
+   "Hold, release with control and switch sides."
+  ],
+  "breathing": "Steady breaths; gaze at a still point.",
+  "duration": "15 to 30 seconds each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Keep the lifted knee bent, hold the knee, or rest the heel on a chair.",
+  "advanced_variation": "Open the leg out to the side and turn the head the other way.",
+  "common_mistakes": [
+   "Rounding the back to straighten the leg",
+   "Hip of the lifted leg hitching up"
+  ],
+  "safety_tips": [
+   "Practise beside a wall."
+  ],
+  "contraindications": [
+   "Hamstring injury",
+   "Ankle or knee injury on the standing leg"
+  ],
+  "equipment": "Yoga mat, strap (optional)",
+  "suitable_for": [
+   "Balance training"
+  ],
+  "image": "/yoga/photos/extended-hand-to-big-toe-1.jpg",
+  "image_urls": [
+   "/yoga/photos/extended-hand-to-big-toe-1.jpg",
+   "/yoga/photos/extended-hand-to-big-toe-2.jpg"
+  ],
+  "tags": [
+   "balance",
+   "standing",
+   "hamstrings"
+  ],
+  "slug": "extended-hand-to-big-toe",
+  "sanskrit": "Utthita Hasta Padangusthasana",
+  "kind": "pose",
+  "goals": [
+   "balance",
+   "flexibility",
+   "strength"
+  ],
+  "body_areas": [
+   "legs",
+   "core",
+   "hips"
+  ],
+  "phase": "balance",
+  "time_of_day": "morning",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "tree-pose",
+   "warrior-iii",
+   "dancer-pose"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/extended-hand-to-big-toe-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Utthita-Hasta-Padangusthasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Utthita-Hasta-Padangusthasana Yoga-Asana Nina-Mel.jpg"
+   },
+   {
+    "url": "/yoga/photos/extended-hand-to-big-toe-2.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Utthita_Hasta_Padangusthasana_-_Standing_Big_Toe_Hold.jpg",
+    "title": "Utthita Hasta Padangusthasana - Standing Big Toe Hold.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Four-Limbed Staff Pose",
+  "alternative_names": [
+   "Chaturanga Dandasana",
+   "Chaturanga",
+   "Low Plank"
+  ],
+  "category": [
+   "Strength",
+   "Core",
+   "Weight management",
+   "Shoulders"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Triceps and chest",
+   "Shoulders",
+   "Core"
+  ],
+  "benefits": [
+   "Builds arm, chest and core strength",
+   "A key transition in sun salutations",
+   "Teaches a strong straight body line"
+  ],
+  "instructions": [
+   "Start in Plank Pose with the shoulders over the wrists.",
+   "Shift forward slightly onto the balls of the feet.",
+   "Bend the elbows straight back, hugging them to the ribs, and lower until the upper arms are level with the body.",
+   "Keep the body in one line from head to heels and the shoulders at elbow height or higher.",
+   "Hold briefly, then lower to the floor or press into Upward-Facing Dog."
+  ],
+  "breathing": "Exhale as you lower.",
+  "duration": "1 to 3 breaths",
+  "recommended_repetitions": "3 to 5 times in a flow",
+  "beginner_modification": "Lower the knees to the mat first, or stop halfway down.",
+  "advanced_variation": "Hold for longer, or lift one foot.",
+  "common_mistakes": [
+   "Dipping the shoulders below the elbows",
+   "Elbows flaring out",
+   "Hips sagging"
+  ],
+  "safety_tips": [
+   "Lower only as far as you can keep the shoulders lifted."
+  ],
+  "contraindications": [
+   "Shoulder, elbow or wrist injury",
+   "Pregnancy"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Strength building",
+   "Flows"
+  ],
+  "image": "/yoga/photos/four-limbed-staff-1.jpg",
+  "image_urls": [
+   "/yoga/photos/four-limbed-staff-1.jpg"
+  ],
+  "tags": [
+   "arm strength",
+   "core",
+   "flow"
+  ],
+  "slug": "four-limbed-staff",
+  "sanskrit": "Chaturanga Dandasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "core",
+   "weight_management"
+  ],
+  "body_areas": [
+   "shoulders",
+   "core",
+   "full_body"
+  ],
+  "phase": "core",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "plank-pose",
+   "upward-dog",
+   "downward-dog"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/four-limbed-staff-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chaturanga-Dandasana_low_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Chaturanga-Dandasana low Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Reverse Plank",
+  "alternative_names": [
+   "Purvottanasana",
+   "Upward Plank"
+  ],
+  "category": [
+   "Strength",
+   "Flexibility",
+   "Posture",
+   "Shoulders",
+   "Core",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Glutes and hamstrings",
+   "Shoulders (stretch)",
+   "Chest"
+  ],
+  "benefits": [
+   "Strengthens the back of the body and the arms",
+   "Opens the chest and fronts of the shoulders",
+   "Counters forward folds and long sitting"
+  ],
+  "instructions": [
+   "Sit in Staff Pose with the hands a little behind the hips, fingers pointing toward the feet.",
+   "Press into the hands and heels and lift the hips until the body is in one line.",
+   "Point the toes toward the floor and squeeze the thighs.",
+   "Keep the neck long; let the head release back only if it feels comfortable.",
+   "Hold, then lower the hips slowly."
+  ],
+  "breathing": "Breathe into the chest.",
+  "duration": "10 to 30 seconds",
+  "recommended_repetitions": "2 to 3 rounds",
+  "beginner_modification": "Bend the knees with the feet flat (reverse tabletop).",
+  "advanced_variation": "Lift one leg for a few breaths.",
+  "common_mistakes": [
+   "Hips sagging",
+   "Shoulders hunched",
+   "Dropping the head back without control"
+  ],
+  "safety_tips": [
+   "Keep the head neutral if you have any neck sensitivity."
+  ],
+  "contraindications": [
+   "Wrist or shoulder injury",
+   "Neck injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Posture",
+   "Desk workers"
+  ],
+  "image": "/yoga/photos/reverse-plank-1.jpg",
+  "image_urls": [
+   "/yoga/photos/reverse-plank-1.jpg",
+   "/yoga/photos/reverse-plank-2.jpg"
+  ],
+  "tags": [
+   "backbend",
+   "arm strength"
+  ],
+  "slug": "reverse-plank",
+  "sanskrit": "Purvottanasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "flexibility",
+   "posture"
+  ],
+  "body_areas": [
+   "shoulders",
+   "chest",
+   "legs",
+   "core"
+  ],
+  "phase": "backbend",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "staff-pose",
+   "bridge-pose",
+   "plank-pose"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/reverse-plank-1.jpg",
+    "author": "lululemon athletica",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Putvottanasana_-_Upward_Plank_Pose_1_-_Diagonal_View.jpg",
+    "title": "Putvottanasana - Upward Plank Pose 1 - Diagonal View.jpg"
+   },
+   {
+    "url": "/yoga/photos/reverse-plank-2.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Purvottanasana.jpg",
+    "title": "Purvottanasana.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Wide-Angle Seated Forward Bend",
+  "alternative_names": [
+   "Upavistha Konasana",
+   "Seated Straddle"
+  ],
+  "category": [
+   "Flexibility",
+   "Relaxation",
+   "Hips",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Inner thighs",
+   "Hamstrings",
+   "Lower back"
+  ],
+  "benefits": [
+   "Stretches the inner thighs and hamstrings",
+   "A calming forward fold",
+   "Helps maintain hip flexibility"
+  ],
+  "instructions": [
+   "Sit and open the legs wide, kneecaps and toes pointing up.",
+   "Place the hands on the floor in front of you and sit tall.",
+   "Walk the hands forward and hinge from the hips, keeping the spine long.",
+   "Stop where you feel a good stretch and breathe."
+  ],
+  "breathing": "Relax the inner thighs on each exhale.",
+  "duration": "1 to 2 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Sit on a cushion and bend the knees slightly.",
+  "advanced_variation": "Fold the chest toward the floor.",
+  "common_mistakes": [
+   "Rolling the knees inward",
+   "Rounding to get lower"
+  ],
+  "safety_tips": [
+   "Never bounce in the stretch."
+  ],
+  "contraindications": [
+   "Groin or hamstring injury",
+   "Back injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Flexibility",
+   "Evening routine"
+  ],
+  "image": "/yoga/photos/wide-angle-seated-forward-bend-1.jpg",
+  "image_urls": [
+   "/yoga/photos/wide-angle-seated-forward-bend-1.jpg"
+  ],
+  "tags": [
+   "seated",
+   "forward fold",
+   "inner thighs"
+  ],
+  "slug": "wide-angle-seated-forward-bend",
+  "sanskrit": "Upavistha Konasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "relaxation"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "back"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "bound-angle-pose",
+   "seated-forward-fold",
+   "full-splits"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/wide-angle-seated-forward-bend-1.jpg",
+    "author": "Joseph RENGER",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Upavisha-konasana.jpg",
+    "title": "Upavisha-konasana.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Lion Pose",
+  "alternative_names": [
+   "Simhasana",
+   "Lion's Breath"
+  ],
+  "category": [
+   "Breathing",
+   "Stress relief",
+   "Relaxation"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Face and jaw",
+   "Throat",
+   "Breathing muscles"
+  ],
+  "benefits": [
+   "Releases tension in the face and jaw",
+   "A playful, energizing breath",
+   "Helps let go of stress"
+  ],
+  "instructions": [
+   "Kneel in Thunderbolt Pose or sit comfortably and press the palms on the knees.",
+   "Breathe in deeply through the nose.",
+   "Open the mouth wide, stretch the tongue out toward the chin and breathe out strongly with a 'haaa' sound.",
+   "Repeat a few times, then breathe normally."
+  ],
+  "breathing": "Deep inhale through the nose, strong exhale through the mouth.",
+  "duration": "3 to 5 breaths",
+  "recommended_repetitions": "3 to 5 breaths",
+  "beginner_modification": "Do it seated on a chair.",
+  "advanced_variation": "Lift the hands and spread the fingers like claws on each exhale.",
+  "common_mistakes": [
+   "Straining the neck",
+   "Rushing the breaths"
+  ],
+  "safety_tips": [
+   "Stop if you feel light headed."
+  ],
+  "contraindications": [
+   "Knee pain when kneeling (sit on a chair instead)"
+  ],
+  "equipment": "None",
+  "suitable_for": [
+   "Everyone",
+   "Stress relief"
+  ],
+  "image": "/yoga/photos/lion-pose-1.jpg",
+  "image_urls": [
+   "/yoga/photos/lion-pose-1.jpg"
+  ],
+  "tags": [
+   "breathing",
+   "kneeling",
+   "playful"
+  ],
+  "slug": "lion-pose",
+  "sanskrit": "Simhasana",
+  "kind": "breathing",
+  "goals": [
+   "breathing",
+   "stress_relief",
+   "relaxation"
+  ],
+  "body_areas": [
+   "neck",
+   "chest"
+  ],
+  "phase": "centering",
+  "time_of_day": "any",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "thunderbolt-pose",
+   "alternate-nostril-breathing"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/lion-pose-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Simhasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Simhasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
+ },
+ {
+  "name": "Reclined Hero Pose",
+  "alternative_names": [
+   "Supta Virasana"
+  ],
+  "category": [
+   "Flexibility",
+   "Recovery",
+   "Relaxation",
+   "Hips"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Quadriceps",
+   "Hip flexors",
+   "Ankles"
+  ],
+  "benefits": [
+   "Deeply stretches the fronts of the thighs and hip flexors",
+   "A restful pose after running or cycling",
+   "Opens the chest when lying back"
+  ],
+  "instructions": [
+   "Sit in Hero Pose between the heels.",
+   "Lean back onto the hands, then the forearms.",
+   "If comfortable, lower the back onto a bolster or the floor, keeping the knees on the mat.",
+   "Rest the arms beside you and breathe.",
+   "Come up the same way, using the forearms and hands."
+  ],
+  "breathing": "Long, slow breaths.",
+  "duration": "30 seconds to 2 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Lie back on a stack of cushions or a bolster, or stay on the forearms.",
+  "advanced_variation": "Lower all the way to the floor and take the arms overhead.",
+  "common_mistakes": [
+   "Knees lifting or splaying wide",
+   "Arching the lower back hard"
+  ],
+  "safety_tips": [
+   "Support the back so the knees stay comfortable."
+  ],
+  "contraindications": [
+   "Knee or ankle injury",
+   "Lower back pain"
+  ],
+  "equipment": "Yoga mat, bolster or cushions",
+  "suitable_for": [
+   "Runners and cyclists",
+   "Recovery"
+  ],
+  "image": "/yoga/photos/reclined-hero-1.jpg",
+  "image_urls": [
+   "/yoga/photos/reclined-hero-1.jpg"
+  ],
+  "tags": [
+   "kneeling",
+   "restorative",
+   "quads"
+  ],
+  "slug": "reclined-hero",
+  "sanskrit": "Supta Virasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "recovery",
+   "relaxation"
+  ],
+  "body_areas": [
+   "legs",
+   "hips"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "hero-pose",
+   "camel-pose",
+   "low-lunge"
+  ],
+  "photos": [
+   {
+    "url": "/yoga/photos/reclined-hero-1.jpg",
+    "author": "Kennguru",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Supta-Virasana_Yoga-Asana_Nina-Mel.jpg",
+    "title": "Supta-Virasana Yoga-Asana Nina-Mel.jpg"
+   }
+  ]
  }
 ]

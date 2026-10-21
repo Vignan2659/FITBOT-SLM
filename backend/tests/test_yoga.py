@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 POSES = json.loads((ROOT / "data" / "yoga" / "yoga_poses.json").read_text(encoding="utf-8"))
 SCHEMA = ["name", "alternative_names", "category", "difficulty", "target_areas", "benefits", "instructions", "breathing",
           "duration", "recommended_repetitions", "beginner_modification", "advanced_variation", "common_mistakes",
-          "safety_tips", "contraindications", "equipment", "suitable_for", "image", "motion_image", "tags"]
+          "safety_tips", "contraindications", "equipment", "suitable_for", "image", "image_urls", "tags"]
 
 
 def chat(client, h, message, cid=None):
@@ -20,6 +20,11 @@ def chat(client, h, message, cid=None):
 
 
 # ------------------------------------------------------------------ data and visuals
+def test_no_cartoon_figures_left():
+    assert not list((ROOT / "frontend" / "public" / "yoga").glob("*.svg"))
+    assert all("motion_image" not in p and "frames" not in p for p in POSES)
+
+
 def test_dataset_has_full_schema_and_visuals():
     assert len(POSES) >= 50
     levels = {p["difficulty"] for p in POSES}
@@ -32,11 +37,13 @@ def test_dataset_has_full_schema_and_visuals():
     for p in POSES:
         for key in SCHEMA:
             assert p[key] not in (None, "", []), (p["slug"], key)
-        motion = ROOT / "frontend" / "public" / p["motion_image"].lstrip("/")
-        assert motion.exists() and "<animate" in motion.read_text(), p["slug"]
-        assert len(p["frames"]) in (2, 3)
-        for f in p["frames"]:
-            assert (ROOT / "frontend" / "public" / f.lstrip("/")).exists()
+        assert 1 <= len(p["photos"]) <= 3 and p["image"] == p["photos"][0]["url"]
+        for ph in p["photos"]:
+            assert ph["url"].startswith("/yoga/photos/") and ph["url"].endswith(".jpg")
+            for path in (ph["url"], ph["url"].replace("/photos/", "/photos/thumb/")):
+                assert (ROOT / "frontend" / "public" / path.lstrip("/")).exists(), path
+            assert ph["author"] and ph["source"].startswith("https://commons.wikimedia.org/")
+            assert ph["license"].startswith(("CC BY", "CC0", "Public domain")), ph["license"]
         assert set(p["related"]) <= {q["slug"] for q in POSES}
 
 
@@ -51,7 +58,7 @@ def test_advanced_poses_carry_safety_guidance():
 def test_yoga_poses_list_filters_and_search(client):
     r = client.get("/yoga/poses").json()
     assert r["count"] == len(POSES)
-    assert {"slug", "name", "motion_image", "difficulty", "category"} <= set(r["poses"][0])
+    assert {"slug", "name", "image", "thumb", "photos", "difficulty", "category"} <= set(r["poses"][0])
     beg = client.get("/yoga/poses", params={"difficulty": "beginner"}).json()
     assert beg["count"] and all(p["difficulty"] == "Beginner" for p in beg["poses"])
     hips = client.get("/yoga/poses", params={"area": "hips", "goal": "flexibility"}).json()
@@ -63,7 +70,7 @@ def test_yoga_poses_list_filters_and_search(client):
 def test_yoga_pose_detail_related_and_404(client):
     p = client.get("/yoga/poses/warrior-ii").json()
     assert p["name"] == "Warrior II" and len(p["instructions"]) >= 4 and p["related_poses"]
-    assert p["frames"] and p["frame_labels"] == ["Start", "Transition", "Final"]
+    assert p["photos"][0]["author"] and p["photos"][0]["license"]
     assert client.get("/yoga/poses/downward dog").json()["slug"] == "downward-dog"
     assert client.get("/yoga/poses/not-a-pose").status_code == 404
 

@@ -29,12 +29,14 @@ def init_db(engine, data_dir: Path, exercises_file: str = "exercises/exercises.j
                                 usda_description=f["usda_description"], group=f["group"], tags=f["fitbot_tags"],
                                 aliases=f["aliases"], per_100g=f["per_100g"], portion=f["portion"],
                                 highlights=f["highlights"], source=f["source"], source_url=f["source_url"]))
-        db.execute(delete(YogaPose))
+        # derived data: rebuilt from the file on every start (also drops columns from older versions of the table)
+        YogaPose.__table__.drop(db.connection(), checkfirst=True)
+        YogaPose.__table__.create(db.connection())
         yoga_file = data_dir / "yoga" / "yoga_poses.json"
         for y in (json.loads(yoga_file.read_text(encoding="utf-8")) if yoga_file.exists() else []):
             db.add(YogaPose(slug=y["slug"], name=y["name"], sanskrit=y["sanskrit"], difficulty=y["difficulty"],
                             kind=y["kind"], phase=y["phase"], category=y["category"], goals=y["goals"],
-                            body_areas=y["body_areas"], image_path=y["image"], motion_asset_path=y["motion_image"],
+                            body_areas=y["body_areas"], image_path=y["image"], image_urls=y["image_urls"],
                             details=y))
         db.commit()
         return {"exercises": db.scalar(select(func.count()).select_from(ExerciseMetadata)),

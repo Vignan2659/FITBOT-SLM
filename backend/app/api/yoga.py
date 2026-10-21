@@ -7,12 +7,12 @@ from sqlalchemy.orm import Session
 
 from app.db.database import get_db
 from app.db.models import YogaPose
-from app.services.yoga import AREAS, GOALS, LEVELS, YogaLibrary, yoga_card
+from app.services.yoga import AREAS, GOALS, LEVELS, YogaLibrary, thumb, yoga_card
 
 router = APIRouter(prefix="/yoga", tags=["yoga"])
 
 LIST_FIELDS = ("slug", "name", "sanskrit", "difficulty", "kind", "category", "goals", "body_areas", "target_areas",
-               "image", "motion_image", "duration", "sides", "benefits")
+               "image", "image_urls", "duration", "sides", "benefits", "photos")
 
 
 def library(request: Request) -> YogaLibrary:
@@ -23,7 +23,9 @@ def library(request: Request) -> YogaLibrary:
 
 
 def summary(details: dict) -> dict:
-    return {k: details[k] for k in LIST_FIELDS}
+    out = {k: details[k] for k in LIST_FIELDS}
+    out["thumb"] = thumb(details["image"])
+    return out
 
 
 @router.get("/poses")
