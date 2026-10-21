@@ -117,7 +117,7 @@ def test_chat_yoga_questions(client, auth, q, mode):
         assert len(r["yoga_poses"]) >= 4 and r["yoga_routine"] is None
     else:
         assert r["yoga_poses"][0]["name"] == "Warrior II"
-        assert "how to:" in system
+        assert "How to do Warrior II" in system
 
 
 def test_chat_yoga_specifics(client, auth):

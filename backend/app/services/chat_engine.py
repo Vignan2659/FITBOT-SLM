@@ -21,7 +21,8 @@ from app.services import safety
 from app.services.catalog import Catalog, exercise_card, food_card
 from app.services.nlu import NLU, Slots
 from app.services.planner import Planner, plan_to_context
-from app.services.yoga import (YOGA_WORD_RE, YogaLibrary, YogaQuery, format_routine, format_yoga_pose, yoga_card)
+from app.services.yoga import (YOGA_WORD_RE, YogaLibrary, YogaQuery, format_routine, format_yoga_detail,
+                               format_yoga_pose, yoga_card)
 
 OOD_MESSAGE = ("I'm focused on fitness, nutrition and wellness. Ask me something about workouts, exercise, food, "
                "recovery or healthy lifestyle.")
@@ -126,7 +127,8 @@ class ChatEngine:
             query = f"{last_user} {message}"
         if yq.mode == "detail":
             poses = yq.poses[:2]
-            context += [format_yoga_pose(p, detail=True) for p in poses]
+            for p in poses:
+                context += [format_yoga_pose(p)] + format_yoga_detail(p)
         elif yq.mode == "routine":
             routine = self.yoga.routine(minutes=yq.minutes or 15, level=yq.level, goal=yq.goal, area=yq.area,
                                         time_of_day=yq.time_of_day, gentle=yq.gentle)

@@ -358,14 +358,20 @@ def yoga_card(p: dict) -> dict:
     return {k: p[k] for k in keys}
 
 
-def format_yoga_pose(p: dict, detail: bool = False) -> str:
-    line = (f"Yoga pose: {p['name']} ({p['sanskrit']}) | level: {p['difficulty']} | targets: {', '.join(p['target_areas'][:4])} | "
+def format_yoga_pose(p: dict) -> str:
+    return (f"Yoga pose: {p['name']} ({p['sanskrit']}) | level: {p['difficulty']} | targets: {', '.join(p['target_areas'][:4])} | "
             f"benefits: {'; '.join(p['benefits'][:2])} | hold: {p['duration']}")
-    if detail:
-        steps = " ".join(p["instructions"][:4])
-        line += (f" | how to: {steps} | breathing: {p['breathing']} | easier: {p['beginner_modification']}"
-                 f" | safety: {' '.join(p['safety_tips'][:2])} | avoid if: {'; '.join(p['contraindications'][:2])}")
-    return line
+
+
+def format_yoga_detail(p: dict) -> list[str]:
+    """Reference lines for "how do I do X" questions, written as guidance passages (the format the model paraphrases
+    best; one long line of fields tends to be copied back verbatim)."""
+    steps = " ".join(p["instructions"][:5])
+    return [
+        f"Guidance (How to do {p['name']}, {p['sanskrit']}): {steps} Hold for {p['duration']}. {p['breathing']}",
+        f"Guidance ({p['name']}: easier version and safety): Easier version: {p['beginner_modification']} "
+        f"{' '.join(p['safety_tips'][:2])} Skip or modify it with: {'; '.join(p['contraindications'][:2])}.",
+    ]
 
 
 def format_routine(r: dict) -> str:
