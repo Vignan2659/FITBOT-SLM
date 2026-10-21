@@ -391,12 +391,12 @@ def tidy_answer(answer: str) -> str:
         if "\n\n" in rest:          # only the paragraph that holds the steps is reformatted
             rest, after = rest.split("\n\n", 1)
             after = "\n\n" + after
-        rest = re.sub(r" (\d)\. (?=[A-Z])", r"\n\1. ", "1. " + rest)
+        rest = re.sub(r";? (\d{1,2})\. (?=[A-Z])", r"\n\1. ", "1. " + rest)
         lines = rest.split("\n")
         last = lines[-1]
-        tail = re.search(r"(?<=\.) (?=(Hold|Breathing|Repeat|Rest|Keep breathing)\b)", last)
+        tail = re.search(r"(?<=[.;]) (?=(Hold|Breathing|Repeat|Rest|Keep breathing|Note)\b)", last)
         if tail:   # text after the last step becomes its own paragraph
-            lines[-1], extra = last[:tail.start()], last[tail.end():]
+            lines[-1], extra = last[:tail.start()].rstrip(";"), last[tail.end():]
             text = f"{head}\n\n" + "\n".join(lines) + f"\n\n{extra}" + after
         else:
             text = f"{head}\n\n" + "\n".join(lines) + after
