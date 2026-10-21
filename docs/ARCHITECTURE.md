@@ -35,6 +35,9 @@ user message
  │     medication, injury diagnosis) ──► reviewed guardrail response + disclaimer ──► done
  │     soft risk (pregnancy, chronic condition) ──► flagged, continue
  │
+ ├─1b Yoga understanding (services/yoga.py): pose names, or "yoga" + routine / pose words
+ │     ──► yoga cards, pose details or a timed routine + yoga guidance, then the SLM answers (see docs/YOGA.md)
+ │
  ├─2 Intent detection (services/nlu.py)
  │     TF-IDF(word+char) ⊕ MiniLM embedding → logistic regression  ⊕  fitness-domain lexicon guardrail
  │     out_of_domain ──► fixed scope message ──► done
@@ -91,6 +94,7 @@ Why this design:
 | `messages` | id, conversation_id (FK, cascade), role, content, intent, payload (JSON cards/plan/sources), created_at |
 | `exercise_metadata` | name, slug, muscle_group, description, target/secondary muscles, equipment, difficulty, instructions, safety_tips, image_url(s), image_license |
 | `food_metadata` | name, fdc_id, usda_description, group, tags, aliases, per_100g (JSON), portion (JSON), highlights, source, source_url |
+| `yoga_poses` | slug, name, sanskrit, difficulty, kind, phase, category / goals / body_areas (JSON), image_path, motion_asset_path, details (JSON full pose record) |
 | `revoked_tokens` | jti, expires_at (server-side logout) |
 | `saved_plans` | id, user_id (FK, cascade), title, plan (JSON, as returned by `/chat`), created_at |
 | `workout_logs` | id, user_id (FK, cascade), day, exercise, sets, reps, weight_kg, minutes, notes, created_at |

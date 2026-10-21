@@ -14,6 +14,7 @@ export const SUGGESTIONS = [
   "How much protein does an egg contain?",
   "How much should I sleep?",
   "What drinks should I limit for weight loss?",
+  "Give me a 15 minute beginner yoga routine",
 ];
 
 export default function Chat() {
@@ -111,7 +112,8 @@ export default function Chat() {
       const r = await api.chat(message, conversationId);
       const bot = {
         id: r.message_id, role: "assistant", content: r.answer, intent: r.intent,
-        payload: { exercises: r.exercises, foods: r.foods, workout_plan: r.workout_plan, sources: r.sources,
+        payload: { exercises: r.exercises, foods: r.foods, workout_plan: r.workout_plan, yoga_poses: r.yoga_poses,
+                   yoga_routine: r.yoga_routine, sources: r.sources,
                    safety: r.safety, category: r.category, is_followup: r.is_followup, model: r.model },
       };
       setMessages((m) => [...m, bot]);

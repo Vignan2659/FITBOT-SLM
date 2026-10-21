@@ -1,0 +1,6108 @@
+[
+ {
+  "name": "Mountain Pose",
+  "alternative_names": [
+   "Tadasana",
+   "Samasthiti"
+  ],
+  "category": [
+   "Posture",
+   "Balance",
+   "Stress relief",
+   "Core"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Feet and ankles",
+   "Thighs",
+   "Core",
+   "Spine"
+  ],
+  "benefits": [
+   "Builds awareness of standing posture and alignment",
+   "Gently engages the legs and core",
+   "A calm starting point for every standing sequence"
+  ],
+  "instructions": [
+   "Stand with your feet hip width apart or big toes touching, weight spread evenly over both feet.",
+   "Lift and spread your toes, then place them down and press through the whole foot.",
+   "Gently firm your thighs and lengthen your tailbone toward the floor.",
+   "Lift your chest, relax your shoulders down and back, and let your arms hang with palms facing forward.",
+   "Keep your chin level and the crown of your head reaching up. Breathe slowly."
+  ],
+  "breathing": "Breathe in and out through the nose, letting each inhale lengthen the spine.",
+  "duration": "30 seconds to 1 minute",
+  "recommended_repetitions": "1 round, or between standing poses",
+  "beginner_modification": "Stand with your back against a wall to feel your alignment, feet a little wider apart.",
+  "advanced_variation": "Close your eyes to challenge balance, or raise your arms overhead into Upward Salute.",
+  "common_mistakes": [
+   "Locking the knees",
+   "Leaning back with the ribs flaring forward",
+   "Lifting the shoulders toward the ears"
+  ],
+  "safety_tips": [
+   "Keep a soft bend in the knees if they tend to hyperextend.",
+   "Hold onto a wall or chair if you feel unsteady."
+  ],
+  "contraindications": [
+   "Recent dizziness or low blood pressure when standing still for long periods"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Older adults",
+   "Office workers",
+   "Warm up"
+  ],
+  "image": "/yoga/mountain-pose-3.svg",
+  "motion_image": "/yoga/mountain-pose.svg",
+  "tags": [
+   "standing",
+   "alignment",
+   "morning"
+  ],
+  "slug": "mountain-pose",
+  "sanskrit": "Tadasana",
+  "kind": "pose",
+  "goals": [
+   "posture",
+   "balance",
+   "stress_relief"
+  ],
+  "body_areas": [
+   "full_body",
+   "legs",
+   "core"
+  ],
+  "phase": "centering",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "upward-salute",
+   "tree-pose",
+   "chair-pose"
+  ],
+  "frames": [
+   "/yoga/mountain-pose-1.svg",
+   "/yoga/mountain-pose-2.svg",
+   "/yoga/mountain-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Upward Salute",
+  "alternative_names": [
+   "Urdhva Hastasana",
+   "Raised Hands Pose"
+  ],
+  "category": [
+   "Posture",
+   "Mobility",
+   "Weight management",
+   "Shoulders",
+   "Back"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Shoulders",
+   "Sides of the body",
+   "Upper back"
+  ],
+  "benefits": [
+   "Stretches the sides of the body and the shoulders",
+   "Encourages an upright, open posture",
+   "A gentle energizing movement for the start of the day"
+  ],
+  "instructions": [
+   "Start in Mountain Pose with your arms by your sides.",
+   "As you breathe in, sweep your arms out to the sides and up overhead.",
+   "Keep your arms shoulder width apart or bring the palms together.",
+   "Lengthen up through the fingertips while keeping your shoulders away from your ears.",
+   "As you breathe out, lower your arms back down. Repeat with the breath."
+  ],
+  "breathing": "Inhale as the arms rise, exhale as they lower.",
+  "duration": "3 to 5 breaths at the top, or 6 to 10 slow repetitions",
+  "recommended_repetitions": "6 to 10 repetitions",
+  "beginner_modification": "Raise the arms only as high as your shoulders allow, or keep the palms apart.",
+  "advanced_variation": "Add a gentle side bend to each side at the top.",
+  "common_mistakes": [
+   "Arching the lower back to get the arms higher",
+   "Shrugging the shoulders"
+  ],
+  "safety_tips": [
+   "Keep the movement within a pain free range for the shoulders."
+  ],
+  "contraindications": [
+   "Recent shoulder injury or surgery (check with your physiotherapist)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Morning routine",
+   "Office workers"
+  ],
+  "image": "/yoga/upward-salute-3.svg",
+  "motion_image": "/yoga/upward-salute.svg",
+  "tags": [
+   "standing",
+   "stretch",
+   "morning"
+  ],
+  "slug": "upward-salute",
+  "sanskrit": "Urdhva Hastasana",
+  "kind": "pose",
+  "goals": [
+   "posture",
+   "mobility",
+   "weight_management"
+  ],
+  "body_areas": [
+   "shoulders",
+   "back",
+   "full_body"
+  ],
+  "phase": "warmup",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "mountain-pose",
+   "standing-forward-fold",
+   "standing-side-bend"
+  ],
+  "frames": [
+   "/yoga/upward-salute-1.svg",
+   "/yoga/upward-salute-2.svg",
+   "/yoga/upward-salute-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Standing Forward Fold",
+  "alternative_names": [
+   "Uttanasana",
+   "Forward Bend"
+  ],
+  "category": [
+   "Flexibility",
+   "Stress relief",
+   "Recovery",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Hamstrings",
+   "Calves",
+   "Lower back"
+  ],
+  "benefits": [
+   "Stretches the hamstrings and calves",
+   "Lets the spine and neck release downward",
+   "Often feels calming at the end of a standing sequence"
+  ],
+  "instructions": [
+   "Stand in Mountain Pose with your feet hip width apart.",
+   "Breathe in and lengthen your spine; breathe out and hinge forward from the hips.",
+   "Bend your knees as much as you need so your belly can rest toward your thighs.",
+   "Let your head and arms hang, or hold opposite elbows.",
+   "To come up, bend the knees, place the hands on the hips and rise slowly with a long back."
+  ],
+  "breathing": "Breathe out as you fold; let each exhale soften you a little deeper.",
+  "duration": "30 seconds to 1 minute",
+  "recommended_repetitions": "1 to 2 rounds",
+  "beginner_modification": "Keep the knees generously bent and rest the hands on blocks or your shins.",
+  "advanced_variation": "Straighten the legs gradually and bring the palms flat beside the feet.",
+  "common_mistakes": [
+   "Rounding from the upper back instead of hinging at the hips",
+   "Locking the knees",
+   "Coming up too quickly"
+  ],
+  "safety_tips": [
+   "Rise slowly to avoid dizziness.",
+   "Bend the knees if you feel strain in the lower back."
+  ],
+  "contraindications": [
+   "Recent back injury",
+   "Glaucoma or uncontrolled high blood pressure (head below heart)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "After running",
+   "Evening routine"
+  ],
+  "image": "/yoga/standing-forward-fold-3.svg",
+  "motion_image": "/yoga/standing-forward-fold.svg",
+  "tags": [
+   "standing",
+   "forward fold",
+   "hamstrings"
+  ],
+  "slug": "standing-forward-fold",
+  "sanskrit": "Uttanasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "stress_relief",
+   "recovery"
+  ],
+  "body_areas": [
+   "legs",
+   "back"
+  ],
+  "phase": "warmup",
+  "time_of_day": "any",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "half-forward-fold",
+   "seated-forward-fold",
+   "downward-dog"
+  ],
+  "frames": [
+   "/yoga/standing-forward-fold-1.svg",
+   "/yoga/standing-forward-fold-2.svg",
+   "/yoga/standing-forward-fold-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Standing Toe Touches",
+   "slug": "standing-toe-touches",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Toe_Touches/1.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Half Forward Fold",
+  "alternative_names": [
+   "Ardha Uttanasana",
+   "Halfway Lift"
+  ],
+  "category": [
+   "Flexibility",
+   "Posture",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Hamstrings",
+   "Spine extensors"
+  ],
+  "benefits": [
+   "Teaches a long, neutral spine while hinging",
+   "Stretches the backs of the legs",
+   "Links forward folds smoothly in a flow"
+  ],
+  "instructions": [
+   "From Standing Forward Fold, place your hands on your shins or on blocks.",
+   "Breathe in and lift your chest forward until your back is long and flat.",
+   "Draw your shoulders away from your ears and look slightly ahead of your feet.",
+   "Breathe out and fold back down, or hold for a few breaths."
+  ],
+  "breathing": "Inhale to lengthen, exhale to fold.",
+  "duration": "2 to 5 breaths",
+  "recommended_repetitions": "3 to 5 repetitions in a flow",
+  "beginner_modification": "Bend the knees and place the hands higher on the thighs.",
+  "advanced_variation": "Keep the legs straight with the fingertips on the floor.",
+  "common_mistakes": [
+   "Rounding the back",
+   "Lifting the head too high and pinching the neck"
+  ],
+  "safety_tips": [
+   "Keep a micro bend in the knees."
+  ],
+  "contraindications": [
+   "Acute lower back pain"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Flow sequences"
+  ],
+  "image": "/yoga/half-forward-fold-3.svg",
+  "motion_image": "/yoga/half-forward-fold.svg",
+  "tags": [
+   "standing",
+   "hamstrings",
+   "flow"
+  ],
+  "slug": "half-forward-fold",
+  "sanskrit": "Ardha Uttanasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "posture"
+  ],
+  "body_areas": [
+   "back",
+   "legs"
+  ],
+  "phase": "warmup",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "standing-forward-fold",
+   "mountain-pose"
+  ],
+  "frames": [
+   "/yoga/half-forward-fold-1.svg",
+   "/yoga/half-forward-fold-2.svg",
+   "/yoga/half-forward-fold-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Tree Pose",
+  "alternative_names": [
+   "Vrksasana",
+   "Vrikshasana"
+  ],
+  "category": [
+   "Balance",
+   "Strength",
+   "Posture",
+   "Stress relief",
+   "Hips",
+   "Core"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Standing leg ankle and calf",
+   "Inner thigh",
+   "Hips",
+   "Core"
+  ],
+  "benefits": [
+   "Improves balance and focus",
+   "Strengthens the standing leg and ankle",
+   "Opens the hip of the lifted leg"
+  ],
+  "instructions": [
+   "Stand in Mountain Pose and shift your weight onto your left foot.",
+   "Place the sole of your right foot on your left ankle, calf or inner thigh, not on the knee.",
+   "Press the foot and leg into each other and point the right knee out to the side.",
+   "Bring your palms together at your chest, or raise your arms overhead.",
+   "Fix your gaze on a still point and breathe. Repeat on the other side."
+  ],
+  "breathing": "Slow, even breaths; if you wobble, keep breathing rather than holding the breath.",
+  "duration": "20 to 60 seconds each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Keep the toes of the lifted foot on the floor with the heel against the ankle, or hold a wall.",
+  "advanced_variation": "Raise the arms overhead and slowly close your eyes.",
+  "common_mistakes": [
+   "Pressing the foot into the side of the knee",
+   "Hip of the standing leg jutting out to the side",
+   "Holding the breath"
+  ],
+  "safety_tips": [
+   "Practise near a wall or chair.",
+   "Never place the foot directly on the knee joint."
+  ],
+  "contraindications": [
+   "Recent ankle or knee injury on the standing leg",
+   "Vertigo or balance disorders without support"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Older adults with support",
+   "Focus and concentration"
+  ],
+  "image": "/yoga/tree-pose-3.svg",
+  "motion_image": "/yoga/tree-pose.svg",
+  "tags": [
+   "balance",
+   "standing",
+   "one leg"
+  ],
+  "slug": "tree-pose",
+  "sanskrit": "Vrksasana",
+  "kind": "pose",
+  "goals": [
+   "balance",
+   "strength",
+   "posture",
+   "stress_relief"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "core"
+  ],
+  "phase": "balance",
+  "time_of_day": "morning",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "mountain-pose",
+   "warrior-iii",
+   "half-moon-pose"
+  ],
+  "frames": [
+   "/yoga/tree-pose-1.svg",
+   "/yoga/tree-pose-2.svg",
+   "/yoga/tree-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Warrior I",
+  "alternative_names": [
+   "Virabhadrasana I",
+   "Warrior One"
+  ],
+  "category": [
+   "Strength",
+   "Flexibility",
+   "Weight management",
+   "Balance",
+   "Hips",
+   "Shoulders"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Quadriceps",
+   "Glutes",
+   "Hip flexors of the back leg",
+   "Shoulders"
+  ],
+  "benefits": [
+   "Strengthens the legs and glutes",
+   "Stretches the hip flexors of the back leg",
+   "Builds stamina and an open chest"
+  ],
+  "instructions": [
+   "From Mountain Pose, step your left foot back about one leg length.",
+   "Turn the back foot out about 45 degrees and press the outer edge down.",
+   "Bend the front knee until it is over the ankle; keep the back leg straight.",
+   "Square your hips toward the front as much as is comfortable.",
+   "Raise your arms overhead and lengthen up through the spine. Repeat on the other side."
+  ],
+  "breathing": "Inhale as the arms rise, then breathe steadily while holding.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Shorten the stance and keep the hands on the hips.",
+  "advanced_variation": "Bend the front knee to 90 degrees and bring the palms together overhead.",
+  "common_mistakes": [
+   "Front knee drifting past the toes or inward",
+   "Arching the lower back",
+   "Feet on one line (a tightrope stance)"
+  ],
+  "safety_tips": [
+   "Keep the front knee tracking over the second toe.",
+   "Widen the stance side to side for balance."
+  ],
+  "contraindications": [
+   "Recent knee or hip injury",
+   "Shoulder injury (keep the hands on the hips)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Strength building",
+   "Morning routine"
+  ],
+  "image": "/yoga/warrior-i-3.svg",
+  "motion_image": "/yoga/warrior-i.svg",
+  "tags": [
+   "standing",
+   "warrior",
+   "legs"
+  ],
+  "slug": "warrior-i",
+  "sanskrit": "Virabhadrasana I",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "flexibility",
+   "weight_management",
+   "balance"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "shoulders"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "warrior-ii",
+   "low-lunge",
+   "high-lunge"
+  ],
+  "frames": [
+   "/yoga/warrior-i-1.svg",
+   "/yoga/warrior-i-2.svg",
+   "/yoga/warrior-i-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Warrior II",
+  "alternative_names": [
+   "Virabhadrasana II",
+   "Warrior Two"
+  ],
+  "category": [
+   "Strength",
+   "Flexibility",
+   "Weight management",
+   "Mobility",
+   "Hips",
+   "Shoulders"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Quadriceps",
+   "Inner thighs",
+   "Glutes",
+   "Shoulders"
+  ],
+  "benefits": [
+   "Strengthens the legs and builds stamina",
+   "Opens the hips and inner thighs",
+   "Strengthens the shoulders and improves focus"
+  ],
+  "instructions": [
+   "Stand with your feet wide apart, about the length of one leg.",
+   "Turn your right foot out 90 degrees and your left foot in slightly.",
+   "Raise your arms to shoulder height, palms down.",
+   "Bend the right knee over the right ankle while the left leg stays straight.",
+   "Keep the torso upright, look over the right hand and breathe. Repeat on the other side."
+  ],
+  "breathing": "Steady, even breathing; lengthen the arms on each inhale.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Bend the front knee less and rest the hands on the hips.",
+  "advanced_variation": "Lower the front thigh until it is parallel to the floor.",
+  "common_mistakes": [
+   "Front knee collapsing inward",
+   "Leaning the torso over the front leg",
+   "Dropping the back arm"
+  ],
+  "safety_tips": [
+   "Keep the front knee over the ankle, not past the toes."
+  ],
+  "contraindications": [
+   "Recent knee, hip or groin injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Strength building",
+   "Home workout"
+  ],
+  "image": "/yoga/warrior-ii-3.svg",
+  "motion_image": "/yoga/warrior-ii.svg",
+  "tags": [
+   "standing",
+   "warrior",
+   "legs"
+  ],
+  "slug": "warrior-ii",
+  "sanskrit": "Virabhadrasana II",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "flexibility",
+   "weight_management",
+   "mobility"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "shoulders"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "warrior-i",
+   "triangle-pose",
+   "extended-side-angle",
+   "reverse-warrior"
+  ],
+  "frames": [
+   "/yoga/warrior-ii-1.svg",
+   "/yoga/warrior-ii-2.svg",
+   "/yoga/warrior-ii-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Low Lunge",
+  "alternative_names": [
+   "Anjaneyasana",
+   "Crescent Lunge with knee down"
+  ],
+  "category": [
+   "Flexibility",
+   "Mobility",
+   "Recovery",
+   "Hips"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Hip flexors",
+   "Quadriceps of the back leg",
+   "Glutes of the front leg"
+  ],
+  "benefits": [
+   "Stretches tight hip flexors from long sitting",
+   "Opens the front of the hips and thighs",
+   "Builds balance and steadiness close to the floor"
+  ],
+  "instructions": [
+   "From Downward Facing Dog or tabletop, step your right foot forward between your hands.",
+   "Lower your left knee to the mat and slide it back a little.",
+   "Stack the right knee over the right ankle.",
+   "Lift your chest and raise your arms, or rest your hands on your front thigh.",
+   "Gently move the hips forward until you feel a stretch at the front of the left hip. Repeat on the other side."
+  ],
+  "breathing": "Inhale to lift the chest, exhale to soften the hips forward.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Place a folded blanket under the back knee and keep the hands on blocks.",
+  "advanced_variation": "Reach the arms overhead and hold the back foot for a quad stretch.",
+  "common_mistakes": [
+   "Front knee travelling past the toes",
+   "Sinking into the lower back"
+  ],
+  "safety_tips": [
+   "Pad the back knee.",
+   "Keep the stretch moderate; it should not pinch the front of the hip."
+  ],
+  "contraindications": [
+   "Knee pain when kneeling",
+   "Recent hip injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Office workers",
+   "Runners and cyclists",
+   "Recovery days"
+  ],
+  "image": "/yoga/low-lunge-3.svg",
+  "motion_image": "/yoga/low-lunge.svg",
+  "tags": [
+   "lunge",
+   "hip flexors",
+   "kneeling"
+  ],
+  "slug": "low-lunge",
+  "sanskrit": "Anjaneyasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "mobility",
+   "recovery"
+  ],
+  "body_areas": [
+   "hips",
+   "legs"
+  ],
+  "phase": "standing",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "high-lunge",
+   "warrior-i",
+   "pigeon-pose"
+  ],
+  "frames": [
+   "/yoga/low-lunge-1.svg",
+   "/yoga/low-lunge-2.svg",
+   "/yoga/low-lunge-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Chair Pose",
+  "alternative_names": [
+   "Utkatasana",
+   "Fierce Pose",
+   "Awkward Chair"
+  ],
+  "category": [
+   "Strength",
+   "Weight management",
+   "Balance",
+   "Core",
+   "Shoulders"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Quadriceps",
+   "Glutes",
+   "Core",
+   "Shoulders"
+  ],
+  "benefits": [
+   "Builds strength in the thighs and glutes",
+   "Raises the heart rate in a short hold",
+   "Trains core control and posture"
+  ],
+  "instructions": [
+   "Stand in Mountain Pose with your feet together or hip width apart.",
+   "Breathe in and raise your arms overhead.",
+   "Breathe out and bend your knees as if sitting back into a chair.",
+   "Keep your weight in your heels and your knees behind your toes.",
+   "Lengthen the spine with the chest lifted; hold, then straighten the legs to come up."
+  ],
+  "breathing": "Keep breathing steadily; the hold should feel strong but not breathless.",
+  "duration": "15 to 45 seconds",
+  "recommended_repetitions": "2 to 3 rounds",
+  "beginner_modification": "Bend the knees less and keep the hands on the hips or in front of the chest.",
+  "advanced_variation": "Sit lower until the thighs approach parallel and add a twist.",
+  "common_mistakes": [
+   "Knees collapsing inward",
+   "Arching the lower back",
+   "Weight shifting to the toes"
+  ],
+  "safety_tips": [
+   "Keep the knees in line with the toes."
+  ],
+  "contraindications": [
+   "Knee pain",
+   "Low blood pressure (rise slowly)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Strength building",
+   "Weight management",
+   "Home workout"
+  ],
+  "image": "/yoga/chair-pose-3.svg",
+  "motion_image": "/yoga/chair-pose.svg",
+  "tags": [
+   "standing",
+   "strength",
+   "legs"
+  ],
+  "slug": "chair-pose",
+  "sanskrit": "Utkatasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "weight_management",
+   "balance"
+  ],
+  "body_areas": [
+   "legs",
+   "core",
+   "shoulders"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "mountain-pose",
+   "revolved-chair",
+   "garland-pose"
+  ],
+  "frames": [
+   "/yoga/chair-pose-1.svg",
+   "/yoga/chair-pose-2.svg",
+   "/yoga/chair-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Child's Pose",
+  "alternative_names": [
+   "Balasana",
+   "Child Pose"
+  ],
+  "category": [
+   "Relaxation",
+   "Stress relief",
+   "Recovery",
+   "Flexibility",
+   "Back",
+   "Hips"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Lower back",
+   "Hips",
+   "Thighs",
+   "Shoulders"
+  ],
+  "benefits": [
+   "Gently stretches the lower back, hips and thighs",
+   "A natural resting pose between harder poses",
+   "Slow breathing here often feels calming"
+  ],
+  "instructions": [
+   "Kneel on the mat with your big toes touching and your knees together or apart.",
+   "Sit your hips back toward your heels.",
+   "Walk your hands forward and lower your chest toward the floor.",
+   "Rest your forehead on the mat or on a block.",
+   "Keep the arms long in front of you or rest them alongside your body. Breathe into your back."
+  ],
+  "breathing": "Feel the back of the ribs expand on each inhale; relax a little more on each exhale.",
+  "duration": "1 to 3 minutes",
+  "recommended_repetitions": "As often as needed for rest",
+  "beginner_modification": "Place a cushion between your hips and heels, or under your chest.",
+  "advanced_variation": "Walk the hands to one side for a side body stretch.",
+  "common_mistakes": [
+   "Forcing the hips down",
+   "Holding tension in the shoulders"
+  ],
+  "safety_tips": [
+   "Widen the knees if the belly feels compressed.",
+   "Use padding under the knees if needed."
+  ],
+  "contraindications": [
+   "Knee injury or pain when kneeling",
+   "Late pregnancy (use wide knees and support, or skip)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Recovery",
+   "Stress relief",
+   "Evening routine"
+  ],
+  "image": "/yoga/childs-pose-3.svg",
+  "motion_image": "/yoga/childs-pose.svg",
+  "tags": [
+   "resting",
+   "kneeling",
+   "calming"
+  ],
+  "slug": "childs-pose",
+  "sanskrit": "Balasana",
+  "kind": "pose",
+  "goals": [
+   "relaxation",
+   "stress_relief",
+   "recovery",
+   "flexibility"
+  ],
+  "body_areas": [
+   "back",
+   "hips"
+  ],
+  "phase": "relaxation",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1.5,
+  "related": [
+   "puppy-pose",
+   "cat-cow",
+   "downward-dog"
+  ],
+  "frames": [
+   "/yoga/childs-pose-1.svg",
+   "/yoga/childs-pose-2.svg",
+   "/yoga/childs-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Child's Pose",
+   "slug": "child-s-pose",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Childs_Pose/0.jpg",
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Childs_Pose/1.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Cat-Cow",
+  "alternative_names": [
+   "Marjaryasana",
+   "Bitilasana",
+   "Cat Cow Stretch"
+  ],
+  "category": [
+   "Mobility",
+   "Flexibility",
+   "Recovery",
+   "Posture",
+   "Back",
+   "Core"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Whole spine",
+   "Neck",
+   "Abdominals"
+  ],
+  "benefits": [
+   "Moves the spine through flexion and extension",
+   "A gentle warm up for the back and neck",
+   "Links movement with the breath"
+  ],
+  "instructions": [
+   "Start on hands and knees: wrists under shoulders, knees under hips.",
+   "Breathe in for Cow: let the belly drop, lift the chest and tailbone, look slightly forward.",
+   "Breathe out for Cat: press the floor away, round the spine up and tuck the chin.",
+   "Move slowly between the two, one breath per movement."
+  ],
+  "breathing": "Inhale into Cow, exhale into Cat.",
+  "duration": "5 to 10 slow cycles",
+  "recommended_repetitions": "5 to 10 cycles",
+  "beginner_modification": "Do it seated in a chair with the hands on the knees.",
+  "advanced_variation": "Add hip circles or move each vertebra in sequence.",
+  "common_mistakes": [
+   "Moving only the neck",
+   "Rushing the movement",
+   "Locking the elbows"
+  ],
+  "safety_tips": [
+   "Keep the range small if the back is stiff.",
+   "Make fists or use a wedge if the wrists hurt."
+  ],
+  "contraindications": [
+   "Recent neck or back injury (keep the range very small or skip)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Morning stiffness",
+   "Office workers"
+  ],
+  "image": "/yoga/cat-cow-3.svg",
+  "motion_image": "/yoga/cat-cow.svg",
+  "tags": [
+   "spine",
+   "warm up",
+   "flow"
+  ],
+  "slug": "cat-cow",
+  "sanskrit": "Marjaryasana Bitilasana",
+  "kind": "pose",
+  "goals": [
+   "mobility",
+   "flexibility",
+   "recovery",
+   "posture"
+  ],
+  "body_areas": [
+   "back",
+   "core",
+   "neck"
+  ],
+  "phase": "warmup",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": false,
+  "default_minutes": 1.5,
+  "related": [
+   "childs-pose",
+   "puppy-pose",
+   "tabletop-balance"
+  ],
+  "frames": [
+   "/yoga/cat-cow-1.svg",
+   "/yoga/cat-cow-2.svg",
+   "/yoga/cat-cow-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Cat Stretch",
+   "slug": "cat-stretch",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/1.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Downward-Facing Dog",
+  "alternative_names": [
+   "Adho Mukha Svanasana",
+   "Downward Dog",
+   "Down Dog"
+  ],
+  "category": [
+   "Flexibility",
+   "Strength",
+   "Mobility",
+   "Weight management",
+   "Shoulders",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Hamstrings",
+   "Calves",
+   "Shoulders",
+   "Upper back"
+  ],
+  "benefits": [
+   "Stretches the hamstrings, calves and spine",
+   "Builds strength in the arms and shoulders",
+   "A key transition pose that links many sequences"
+  ],
+  "instructions": [
+   "Start on hands and knees with your hands slightly ahead of your shoulders.",
+   "Tuck your toes, breathe out and lift your knees off the floor.",
+   "Send your hips up and back so your body makes an upside down V.",
+   "Spread your fingers, press the floor away and let your head hang between your arms.",
+   "Keep the knees bent at first; straighten them gradually as the hamstrings allow."
+  ],
+  "breathing": "Long, slow breaths; press the floor away on each exhale.",
+  "duration": "30 seconds to 1 minute",
+  "recommended_repetitions": "2 to 3 rounds",
+  "beginner_modification": "Keep the knees bent and the heels lifted, or place the hands on a chair seat.",
+  "advanced_variation": "Lift one leg toward the ceiling (three legged dog).",
+  "common_mistakes": [
+   "Rounding the back to straighten the legs",
+   "Shoulders hunched toward the ears",
+   "Weight sinking into the wrists"
+  ],
+  "safety_tips": [
+   "Bend the knees freely.",
+   "Spread pressure through the whole hand to protect the wrists."
+  ],
+  "contraindications": [
+   "Wrist or shoulder injury",
+   "Uncontrolled high blood pressure or glaucoma (head below heart)",
+   "Late pregnancy without guidance"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Runners",
+   "Full body stretch"
+  ],
+  "image": "/yoga/downward-dog-3.svg",
+  "motion_image": "/yoga/downward-dog.svg",
+  "tags": [
+   "inversion light",
+   "hamstrings",
+   "shoulders"
+  ],
+  "slug": "downward-dog",
+  "sanskrit": "Adho Mukha Svanasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "strength",
+   "mobility",
+   "weight_management"
+  ],
+  "body_areas": [
+   "full_body",
+   "legs",
+   "shoulders",
+   "back"
+  ],
+  "phase": "standing",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "cat-cow",
+   "plank-pose",
+   "dolphin-pose",
+   "standing-forward-fold"
+  ],
+  "frames": [
+   "/yoga/downward-dog-1.svg",
+   "/yoga/downward-dog-2.svg",
+   "/yoga/downward-dog-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Puppy Pose",
+  "alternative_names": [
+   "Uttana Shishosana",
+   "Extended Puppy"
+  ],
+  "category": [
+   "Flexibility",
+   "Mobility",
+   "Stress relief",
+   "Shoulders",
+   "Back"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Shoulders",
+   "Upper back",
+   "Chest"
+  ],
+  "benefits": [
+   "Opens the shoulders and upper back",
+   "A gentle alternative to Downward Dog",
+   "Releases tension from hunching over screens"
+  ],
+  "instructions": [
+   "Start on hands and knees with your hips over your knees.",
+   "Walk your hands forward, keeping the hips stacked over the knees.",
+   "Lower your chest and forehead toward the mat.",
+   "Keep the arms active and let the chest melt down. Breathe slowly."
+  ],
+  "breathing": "Breathe into the upper back and let the chest soften on the exhale.",
+  "duration": "30 seconds to 1 minute",
+  "recommended_repetitions": "1 to 2 rounds",
+  "beginner_modification": "Rest the forehead on a block and keep the arms wider.",
+  "advanced_variation": "Bring the palms together and bend the elbows behind the head.",
+  "common_mistakes": [
+   "Hips sinking back toward the heels",
+   "Over arching the lower back"
+  ],
+  "safety_tips": [
+   "Pad the knees.",
+   "Keep the stretch gentle in the shoulders."
+  ],
+  "contraindications": [
+   "Shoulder injury",
+   "Knee pain when kneeling"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Office workers",
+   "Evening routine"
+  ],
+  "image": "/yoga/puppy-pose-3.svg",
+  "motion_image": "/yoga/puppy-pose.svg",
+  "tags": [
+   "kneeling",
+   "shoulders",
+   "calming"
+  ],
+  "slug": "puppy-pose",
+  "sanskrit": "Uttana Shishosana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "mobility",
+   "stress_relief"
+  ],
+  "body_areas": [
+   "shoulders",
+   "back"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "childs-pose",
+   "downward-dog",
+   "tabletop-balance"
+  ],
+  "frames": [
+   "/yoga/puppy-pose-1.svg",
+   "/yoga/puppy-pose-2.svg",
+   "/yoga/puppy-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Cobra Pose",
+  "alternative_names": [
+   "Bhujangasana",
+   "Baby Cobra"
+  ],
+  "category": [
+   "Flexibility",
+   "Posture",
+   "Strength",
+   "Mobility",
+   "Back",
+   "Shoulders"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Spine extensors",
+   "Chest",
+   "Abdominals (stretch)"
+  ],
+  "benefits": [
+   "Strengthens the muscles along the spine",
+   "Opens the chest and front of the body",
+   "Counters long periods of sitting and slouching"
+  ],
+  "instructions": [
+   "Lie on your front with your legs together and the tops of your feet on the mat.",
+   "Place your hands under your shoulders and hug the elbows in close to your body.",
+   "Press the tops of the feet and the pubic bone down.",
+   "Breathe in and lift your chest, using your back muscles more than your arms.",
+   "Keep the elbows bent and the neck long, then lower down as you breathe out."
+  ],
+  "breathing": "Inhale to lift, exhale to lower.",
+  "duration": "15 to 30 seconds, or 5 lifts",
+  "recommended_repetitions": "3 to 5 rounds",
+  "beginner_modification": "Stay low in Baby Cobra with the hands barely pressing, or try Sphinx Pose.",
+  "advanced_variation": "Lift the hands off the floor for a few breaths to build back strength.",
+  "common_mistakes": [
+   "Pushing up with straight arms and crunching the lower back",
+   "Shoulders lifting to the ears",
+   "Throwing the head back"
+  ],
+  "safety_tips": [
+   "Only lift as high as feels comfortable in the lower back."
+  ],
+  "contraindications": [
+   "Recent back injury",
+   "Pregnancy (lying on the belly)",
+   "Recent abdominal surgery"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Office workers",
+   "Posture"
+  ],
+  "image": "/yoga/cobra-pose-3.svg",
+  "motion_image": "/yoga/cobra-pose.svg",
+  "tags": [
+   "backbend",
+   "prone",
+   "spine"
+  ],
+  "slug": "cobra-pose",
+  "sanskrit": "Bhujangasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "posture",
+   "strength",
+   "mobility"
+  ],
+  "body_areas": [
+   "back",
+   "chest",
+   "shoulders"
+  ],
+  "phase": "backbend",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "sphinx-pose",
+   "upward-dog",
+   "locust-pose"
+  ],
+  "frames": [
+   "/yoga/cobra-pose-1.svg",
+   "/yoga/cobra-pose-2.svg",
+   "/yoga/cobra-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Sphinx Pose",
+  "alternative_names": [
+   "Salamba Bhujangasana",
+   "Supported Cobra"
+  ],
+  "category": [
+   "Posture",
+   "Mobility",
+   "Recovery",
+   "Back"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Lower and middle back",
+   "Chest",
+   "Abdominals (stretch)"
+  ],
+  "benefits": [
+   "A gentle, supported backbend",
+   "Encourages extension after long sitting",
+   "Easier to hold than Cobra"
+  ],
+  "instructions": [
+   "Lie on your front with your legs hip width apart.",
+   "Place your elbows under your shoulders with the forearms parallel.",
+   "Press the forearms down and lift the chest forward and up.",
+   "Relax the glutes and lengthen the tailbone toward the heels. Breathe."
+  ],
+  "breathing": "Calm breaths, feeling the belly press into the mat.",
+  "duration": "1 to 2 minutes",
+  "recommended_repetitions": "1 to 2 rounds",
+  "beginner_modification": "Slide the elbows further forward to reduce the backbend.",
+  "advanced_variation": "Move into Cobra Pose.",
+  "common_mistakes": [
+   "Collapsing between the shoulder blades",
+   "Clenching the glutes"
+  ],
+  "safety_tips": [
+   "Back off if you feel pinching in the lower back."
+  ],
+  "contraindications": [
+   "Pregnancy",
+   "Recent back injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Office workers"
+  ],
+  "image": "/yoga/sphinx-pose-3.svg",
+  "motion_image": "/yoga/sphinx-pose.svg",
+  "tags": [
+   "backbend",
+   "prone",
+   "gentle"
+  ],
+  "slug": "sphinx-pose",
+  "sanskrit": "Salamba Bhujangasana",
+  "kind": "pose",
+  "goals": [
+   "posture",
+   "mobility",
+   "recovery"
+  ],
+  "body_areas": [
+   "back",
+   "chest"
+  ],
+  "phase": "backbend",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "cobra-pose",
+   "childs-pose"
+  ],
+  "frames": [
+   "/yoga/sphinx-pose-1.svg",
+   "/yoga/sphinx-pose-2.svg",
+   "/yoga/sphinx-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Bridge Pose",
+  "alternative_names": [
+   "Setu Bandha Sarvangasana",
+   "Glute Bridge"
+  ],
+  "category": [
+   "Strength",
+   "Flexibility",
+   "Posture",
+   "Core",
+   "Back",
+   "Hips",
+   "Hamstrings"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Glutes",
+   "Hamstrings",
+   "Lower back",
+   "Hip flexors (stretch)"
+  ],
+  "benefits": [
+   "Strengthens the glutes, hamstrings and back",
+   "Stretches the front of the hips and chest",
+   "A beginner friendly backbend"
+  ],
+  "instructions": [
+   "Lie on your back with your knees bent and your feet flat, hip width apart, close to your hips.",
+   "Place your arms alongside your body, palms down.",
+   "Press into your feet and lift your hips toward the ceiling.",
+   "Keep the knees pointing forward and the weight on your shoulders, not your neck.",
+   "Hold, then roll down slowly one vertebra at a time."
+  ],
+  "breathing": "Inhale to lift, breathe steadily in the hold, exhale to roll down.",
+  "duration": "20 to 45 seconds",
+  "recommended_repetitions": "3 to 5 rounds",
+  "beginner_modification": "Place a block under the sacrum for a supported bridge.",
+  "advanced_variation": "Lift one leg toward the ceiling, or move toward Wheel Pose.",
+  "common_mistakes": [
+   "Knees falling outward",
+   "Turning the head while lifted",
+   "Pushing the hips up with the lower back"
+  ],
+  "safety_tips": [
+   "Keep the neck still and look straight up."
+  ],
+  "contraindications": [
+   "Neck injury",
+   "Recent knee injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Glute strength",
+   "Office workers"
+  ],
+  "image": "/yoga/bridge-pose-3.svg",
+  "motion_image": "/yoga/bridge-pose.svg",
+  "tags": [
+   "backbend",
+   "supine",
+   "glutes"
+  ],
+  "slug": "bridge-pose",
+  "sanskrit": "Setu Bandha Sarvangasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "flexibility",
+   "posture",
+   "core"
+  ],
+  "body_areas": [
+   "legs",
+   "back",
+   "hips",
+   "core"
+  ],
+  "phase": "backbend",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "wheel-pose",
+   "knees-to-chest"
+  ],
+  "frames": [
+   "/yoga/bridge-pose-1.svg",
+   "/yoga/bridge-pose-2.svg",
+   "/yoga/bridge-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Butt Lift (Bridge)",
+   "slug": "butt-lift-bridge",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/0.jpg",
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/1.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Easy Pose",
+  "alternative_names": [
+   "Sukhasana",
+   "Cross Legged Seat"
+  ],
+  "category": [
+   "Meditation",
+   "Breathing",
+   "Stress relief",
+   "Posture",
+   "Relaxation",
+   "Hips",
+   "Back"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Hips",
+   "Knees",
+   "Spine"
+  ],
+  "benefits": [
+   "A comfortable seat for breathing and meditation",
+   "Gently opens the hips",
+   "Encourages an upright, relaxed spine"
+  ],
+  "instructions": [
+   "Sit on the mat and cross your shins, with each foot under the opposite knee.",
+   "Sit on the edge of a folded blanket so your hips are higher than your knees.",
+   "Rest your hands on your knees or in your lap.",
+   "Lengthen your spine, relax your shoulders and close your eyes if you like.",
+   "Switch the cross of the legs halfway through."
+  ],
+  "breathing": "Breathe naturally through the nose, then let the breath slow down.",
+  "duration": "1 to 5 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Sit on a cushion or a chair with the feet flat.",
+  "advanced_variation": "Sit without props for longer meditation.",
+  "common_mistakes": [
+   "Slumping the lower back",
+   "Knees much higher than the hips"
+  ],
+  "safety_tips": [
+   "Use height under the hips if the knees or back complain."
+  ],
+  "contraindications": [
+   "Knee injury that dislikes deep bending (use a chair)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Everyone",
+   "Meditation",
+   "Breathing practice"
+  ],
+  "image": "/yoga/easy-pose-2.svg",
+  "motion_image": "/yoga/easy-pose.svg",
+  "tags": [
+   "seated",
+   "meditation",
+   "breathing"
+  ],
+  "slug": "easy-pose",
+  "sanskrit": "Sukhasana",
+  "kind": "pose",
+  "goals": [
+   "meditation",
+   "breathing",
+   "stress_relief",
+   "posture",
+   "relaxation"
+  ],
+  "body_areas": [
+   "hips",
+   "back"
+  ],
+  "phase": "centering",
+  "time_of_day": "any",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "belly-breathing",
+   "alternate-nostril-breathing",
+   "seated-side-bend"
+  ],
+  "frames": [
+   "/yoga/easy-pose-1.svg",
+   "/yoga/easy-pose-2.svg"
+  ],
+  "frame_labels": [
+   "Settle",
+   "Rest"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Staff Pose",
+  "alternative_names": [
+   "Dandasana",
+   "Seated Staff"
+  ],
+  "category": [
+   "Posture",
+   "Strength",
+   "Core",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Spine extensors",
+   "Core",
+   "Hamstrings"
+  ],
+  "benefits": [
+   "Teaches upright sitting posture",
+   "Gently activates the core and legs",
+   "The starting point for most seated poses"
+  ],
+  "instructions": [
+   "Sit with your legs straight out in front of you, feet together and toes pointing up.",
+   "Place your hands beside your hips and press the floor down.",
+   "Sit tall, lifting the chest and lengthening the spine.",
+   "Press the backs of the legs down and flex the feet."
+  ],
+  "breathing": "Even breaths, growing taller on each inhale.",
+  "duration": "30 seconds to 1 minute",
+  "recommended_repetitions": "1 to 2 rounds",
+  "beginner_modification": "Sit on a folded blanket and bend the knees slightly.",
+  "advanced_variation": "Lift the hands off the floor while keeping the spine tall.",
+  "common_mistakes": [
+   "Rounding the lower back",
+   "Leaning back on the hands"
+  ],
+  "safety_tips": [
+   "Sit on a blanket if your lower back rounds."
+  ],
+  "contraindications": [
+   "Acute lower back pain"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Posture"
+  ],
+  "image": "/yoga/staff-pose-2.svg",
+  "motion_image": "/yoga/staff-pose.svg",
+  "tags": [
+   "seated",
+   "posture"
+  ],
+  "slug": "staff-pose",
+  "sanskrit": "Dandasana",
+  "kind": "pose",
+  "goals": [
+   "posture",
+   "strength",
+   "core"
+  ],
+  "body_areas": [
+   "back",
+   "core",
+   "legs"
+  ],
+  "phase": "seated",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "seated-forward-fold",
+   "head-to-knee-pose",
+   "boat-pose"
+  ],
+  "frames": [
+   "/yoga/staff-pose-1.svg",
+   "/yoga/staff-pose-2.svg"
+  ],
+  "frame_labels": [
+   "Settle",
+   "Rest"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Seated Forward Fold",
+  "alternative_names": [
+   "Paschimottanasana",
+   "Seated Forward Bend"
+  ],
+  "category": [
+   "Flexibility",
+   "Relaxation",
+   "Stress relief",
+   "Recovery",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Hamstrings",
+   "Calves",
+   "Lower back"
+  ],
+  "benefits": [
+   "Stretches the whole back of the body",
+   "A calming pose for the end of practice",
+   "Helps maintain hamstring flexibility"
+  ],
+  "instructions": [
+   "Sit in Staff Pose with your legs straight in front of you.",
+   "Breathe in and raise your arms, lengthening your spine.",
+   "Breathe out and hinge forward from the hips, reaching toward your shins, ankles or feet.",
+   "Keep the spine long rather than pulling yourself down.",
+   "Relax the shoulders and breathe, folding a little more on each exhale."
+  ],
+  "breathing": "Lengthen on the inhale, fold slightly deeper on the exhale.",
+  "duration": "1 to 3 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Bend the knees, sit on a blanket or loop a strap around the feet.",
+  "advanced_variation": "Hold the outer edges of the feet with a long spine.",
+  "common_mistakes": [
+   "Rounding the upper back to reach further",
+   "Locking the knees",
+   "Holding the breath"
+  ],
+  "safety_tips": [
+   "Never bounce or force the stretch."
+  ],
+  "contraindications": [
+   "Back injury or disc problems (check with a professional)",
+   "Hamstring tear"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Evening routine",
+   "Recovery"
+  ],
+  "image": "/yoga/seated-forward-fold-3.svg",
+  "motion_image": "/yoga/seated-forward-fold.svg",
+  "tags": [
+   "seated",
+   "forward fold",
+   "hamstrings"
+  ],
+  "slug": "seated-forward-fold",
+  "sanskrit": "Paschimottanasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "relaxation",
+   "stress_relief",
+   "recovery"
+  ],
+  "body_areas": [
+   "legs",
+   "back"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1.5,
+  "related": [
+   "head-to-knee-pose",
+   "staff-pose",
+   "standing-forward-fold"
+  ],
+  "frames": [
+   "/yoga/seated-forward-fold-1.svg",
+   "/yoga/seated-forward-fold-2.svg",
+   "/yoga/seated-forward-fold-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Seated Floor Hamstring Stretch",
+   "slug": "seated-floor-hamstring-stretch",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Floor_Hamstring_Stretch/0.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Bound Angle Pose",
+  "alternative_names": [
+   "Baddha Konasana",
+   "Butterfly Pose",
+   "Cobbler's Pose"
+  ],
+  "category": [
+   "Flexibility",
+   "Mobility",
+   "Relaxation",
+   "Hips"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Inner thighs",
+   "Groin",
+   "Hips"
+  ],
+  "benefits": [
+   "Opens the hips and inner thighs",
+   "A comfortable seated stretch",
+   "Encourages an upright spine"
+  ],
+  "instructions": [
+   "Sit tall and bring the soles of your feet together, letting the knees fall out to the sides.",
+   "Hold your feet or ankles.",
+   "Draw your heels as close to your body as is comfortable.",
+   "Lengthen your spine; you may hinge forward slightly with a long back.",
+   "Let gravity, not force, lower the knees."
+  ],
+  "breathing": "Relax the inner thighs on each exhale.",
+  "duration": "1 to 3 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Sit on a cushion and place blocks under the knees.",
+  "advanced_variation": "Fold forward from the hips with a long spine.",
+  "common_mistakes": [
+   "Pushing the knees down with the hands",
+   "Rounding the back"
+  ],
+  "safety_tips": [
+   "Support the knees if there is any knee or groin discomfort."
+  ],
+  "contraindications": [
+   "Groin or knee injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Desk workers",
+   "Evening routine"
+  ],
+  "image": "/yoga/bound-angle-pose-2.svg",
+  "motion_image": "/yoga/bound-angle-pose.svg",
+  "tags": [
+   "seated",
+   "hips",
+   "inner thighs"
+  ],
+  "slug": "bound-angle-pose",
+  "sanskrit": "Baddha Konasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "mobility",
+   "relaxation"
+  ],
+  "body_areas": [
+   "hips"
+  ],
+  "phase": "seated",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1.5,
+  "related": [
+   "reclined-bound-angle",
+   "easy-pose",
+   "garland-pose"
+  ],
+  "frames": [
+   "/yoga/bound-angle-pose-1.svg",
+   "/yoga/bound-angle-pose-2.svg"
+  ],
+  "frame_labels": [
+   "Settle",
+   "Rest"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Seated Side Bend",
+  "alternative_names": [
+   "Parsva Sukhasana",
+   "Seated Side Stretch"
+  ],
+  "category": [
+   "Flexibility",
+   "Mobility",
+   "Breathing",
+   "Back",
+   "Shoulders",
+   "Core"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Obliques",
+   "Latissimus dorsi",
+   "Intercostals"
+  ],
+  "benefits": [
+   "Stretches the sides of the waist and the ribs",
+   "Makes room for fuller breaths",
+   "A gentle warm up from a seated position"
+  ],
+  "instructions": [
+   "Sit in Easy Pose.",
+   "Place your left hand on the floor beside your left hip.",
+   "Breathe in and raise your right arm overhead.",
+   "Breathe out and lean to the left, reaching over with the right arm.",
+   "Keep both sit bones grounded. Return to centre and repeat on the other side."
+  ],
+  "breathing": "Inhale to reach up, exhale to bend.",
+  "duration": "3 to 5 breaths each side",
+  "recommended_repetitions": "2 to 3 rounds each side",
+  "beginner_modification": "Keep the raised hand on the back of the head.",
+  "advanced_variation": "Hold the bend for longer and add a slight twist.",
+  "common_mistakes": [
+   "Collapsing forward",
+   "Lifting the opposite hip"
+  ],
+  "safety_tips": [
+   "Move slowly and keep the neck relaxed."
+  ],
+  "contraindications": [
+   "Recent rib or shoulder injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Office workers",
+   "Breathing practice"
+  ],
+  "image": "/yoga/seated-side-bend-3.svg",
+  "motion_image": "/yoga/seated-side-bend.svg",
+  "tags": [
+   "seated",
+   "side stretch"
+  ],
+  "slug": "seated-side-bend",
+  "sanskrit": "Parsva Sukhasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "mobility",
+   "breathing"
+  ],
+  "body_areas": [
+   "back",
+   "shoulders",
+   "core"
+  ],
+  "phase": "warmup",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "easy-pose",
+   "standing-side-bend"
+  ],
+  "frames": [
+   "/yoga/seated-side-bend-1.svg",
+   "/yoga/seated-side-bend-2.svg",
+   "/yoga/seated-side-bend-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Standing Side Bend",
+  "alternative_names": [
+   "Parsva Tadasana",
+   "Crescent Moon (standing)"
+  ],
+  "category": [
+   "Flexibility",
+   "Mobility",
+   "Posture",
+   "Back",
+   "Core",
+   "Shoulders"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Obliques",
+   "Latissimus dorsi"
+  ],
+  "benefits": [
+   "Stretches the sides of the body",
+   "Wakes up the spine in a new direction",
+   "Good after long sitting"
+  ],
+  "instructions": [
+   "Stand in Mountain Pose and raise both arms overhead.",
+   "Interlace the fingers or hold the left wrist with the right hand.",
+   "Breathe out and lean to the right, keeping the hips centred.",
+   "Hold for a few breaths, return through the centre and repeat on the other side."
+  ],
+  "breathing": "Inhale to lengthen, exhale to bend.",
+  "duration": "3 to 5 breaths each side",
+  "recommended_repetitions": "2 rounds each side",
+  "beginner_modification": "Keep one hand on the hip.",
+  "advanced_variation": "Stand with the feet together and hold longer.",
+  "common_mistakes": [
+   "Leaning forward instead of sideways",
+   "Pushing the hips out too far"
+  ],
+  "safety_tips": [
+   "Keep the bend gentle in the lower back."
+  ],
+  "contraindications": [
+   "Shoulder injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Morning routine",
+   "Office workers"
+  ],
+  "image": "/yoga/standing-side-bend-3.svg",
+  "motion_image": "/yoga/standing-side-bend.svg",
+  "tags": [
+   "standing",
+   "side stretch"
+  ],
+  "slug": "standing-side-bend",
+  "sanskrit": "Parsva Tadasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "mobility",
+   "posture"
+  ],
+  "body_areas": [
+   "back",
+   "core",
+   "shoulders"
+  ],
+  "phase": "warmup",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "upward-salute",
+   "seated-side-bend",
+   "triangle-pose"
+  ],
+  "frames": [
+   "/yoga/standing-side-bend-1.svg",
+   "/yoga/standing-side-bend-2.svg",
+   "/yoga/standing-side-bend-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Supine Spinal Twist",
+  "alternative_names": [
+   "Supta Matsyendrasana",
+   "Reclined Twist"
+  ],
+  "category": [
+   "Mobility",
+   "Relaxation",
+   "Recovery",
+   "Stress relief",
+   "Back",
+   "Hips"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Lower back",
+   "Glutes",
+   "Chest"
+  ],
+  "benefits": [
+   "Gently rotates and releases the spine",
+   "Stretches the outer hips and glutes",
+   "Often used to wind down before relaxation"
+  ],
+  "instructions": [
+   "Lie on your back with your knees bent and feet flat.",
+   "Stretch your arms out to the sides at shoulder height.",
+   "Let both knees fall slowly to the right while the shoulders stay down.",
+   "Turn your head to the left if that is comfortable.",
+   "Breathe here, then bring the knees back through centre and repeat to the left."
+  ],
+  "breathing": "Long exhales help the twist soften.",
+  "duration": "1 to 2 minutes each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Place a pillow under the knees.",
+  "advanced_variation": "Straighten the top leg and hold the foot.",
+  "common_mistakes": [
+   "Forcing the knees to the floor",
+   "Lifting the opposite shoulder high"
+  ],
+  "safety_tips": [
+   "Keep the twist gentle and pain free."
+  ],
+  "contraindications": [
+   "Recent back or disc injury",
+   "Late pregnancy"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Recovery",
+   "Evening routine"
+  ],
+  "image": "/yoga/supine-twist-3.svg",
+  "motion_image": "/yoga/supine-twist.svg",
+  "tags": [
+   "twist",
+   "supine",
+   "calming"
+  ],
+  "slug": "supine-twist",
+  "sanskrit": "Supta Matsyendrasana",
+  "kind": "pose",
+  "goals": [
+   "mobility",
+   "relaxation",
+   "recovery",
+   "stress_relief"
+  ],
+  "body_areas": [
+   "back",
+   "hips"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": true,
+  "default_minutes": 1.5,
+  "related": [
+   "knees-to-chest",
+   "happy-baby",
+   "corpse-pose"
+  ],
+  "frames": [
+   "/yoga/supine-twist-1.svg",
+   "/yoga/supine-twist-2.svg",
+   "/yoga/supine-twist-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Knees to Chest",
+  "alternative_names": [
+   "Apanasana",
+   "Wind Relieving Pose"
+  ],
+  "category": [
+   "Recovery",
+   "Relaxation",
+   "Mobility",
+   "Back",
+   "Hips"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Lower back",
+   "Glutes"
+  ],
+  "benefits": [
+   "Gently releases the lower back",
+   "A soothing pose after backbends",
+   "Easy to do even when tired"
+  ],
+  "instructions": [
+   "Lie on your back.",
+   "Draw both knees toward your chest and hold your shins or the backs of the thighs.",
+   "Let your lower back relax into the floor.",
+   "Rock gently side to side if it feels good."
+  ],
+  "breathing": "Breathe into the belly against the thighs.",
+  "duration": "30 seconds to 1 minute",
+  "recommended_repetitions": "1 to 2 rounds",
+  "beginner_modification": "Hug one knee at a time.",
+  "advanced_variation": "Lift the head toward the knees for a core curl.",
+  "common_mistakes": [
+   "Pulling the knees hard",
+   "Lifting the shoulders"
+  ],
+  "safety_tips": [
+   "Hold behind the thighs if the knees are sensitive."
+  ],
+  "contraindications": [
+   "Recent abdominal surgery",
+   "Pregnancy (keep the knees wide)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Recovery"
+  ],
+  "image": "/yoga/knees-to-chest-3.svg",
+  "motion_image": "/yoga/knees-to-chest.svg",
+  "tags": [
+   "supine",
+   "lower back",
+   "calming"
+  ],
+  "slug": "knees-to-chest",
+  "sanskrit": "Apanasana",
+  "kind": "pose",
+  "goals": [
+   "recovery",
+   "relaxation",
+   "mobility"
+  ],
+  "body_areas": [
+   "back",
+   "hips"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "happy-baby",
+   "supine-twist",
+   "bridge-pose"
+  ],
+  "frames": [
+   "/yoga/knees-to-chest-1.svg",
+   "/yoga/knees-to-chest-2.svg",
+   "/yoga/knees-to-chest-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Hug Knees To Chest",
+   "slug": "hug-knees-to-chest",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hug_Knees_To_Chest/1.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Happy Baby",
+  "alternative_names": [
+   "Ananda Balasana",
+   "Dead Bug Pose"
+  ],
+  "category": [
+   "Flexibility",
+   "Relaxation",
+   "Mobility",
+   "Hips",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Inner thighs",
+   "Hamstrings",
+   "Lower back"
+  ],
+  "benefits": [
+   "Opens the hips and inner thighs",
+   "Releases the lower back",
+   "A playful, relaxing pose"
+  ],
+  "instructions": [
+   "Lie on your back and draw your knees toward your armpits.",
+   "Hold the outer edges of your feet, ankles or shins.",
+   "Stack the ankles over the knees with the soles facing the ceiling.",
+   "Gently pull the knees toward the floor and rock side to side if you like."
+  ],
+  "breathing": "Slow, easy breaths.",
+  "duration": "30 seconds to 1 minute",
+  "recommended_repetitions": "1 to 2 rounds",
+  "beginner_modification": "Hold the backs of the thighs or use a strap.",
+  "advanced_variation": "Straighten one leg at a time.",
+  "common_mistakes": [
+   "Lifting the tailbone and head off the floor"
+  ],
+  "safety_tips": [
+   "Keep the neck relaxed on the mat."
+  ],
+  "contraindications": [
+   "Knee injury",
+   "Pregnancy after the first trimester"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Evening routine"
+  ],
+  "image": "/yoga/happy-baby-3.svg",
+  "motion_image": "/yoga/happy-baby.svg",
+  "tags": [
+   "supine",
+   "hips"
+  ],
+  "slug": "happy-baby",
+  "sanskrit": "Ananda Balasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "relaxation",
+   "mobility"
+  ],
+  "body_areas": [
+   "hips",
+   "back"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "knees-to-chest",
+   "reclined-bound-angle"
+  ],
+  "frames": [
+   "/yoga/happy-baby-1.svg",
+   "/yoga/happy-baby-2.svg",
+   "/yoga/happy-baby-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Legs Up the Wall",
+  "alternative_names": [
+   "Viparita Karani"
+  ],
+  "category": [
+   "Relaxation",
+   "Recovery",
+   "Stress relief",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Hamstrings",
+   "Lower back"
+  ],
+  "benefits": [
+   "A restful pose that many people find soothing",
+   "Lets the legs rest after standing or running",
+   "Gentle hamstring stretch"
+  ],
+  "instructions": [
+   "Sit sideways with one hip touching a wall.",
+   "Swing your legs up the wall as you lie back.",
+   "Shuffle your hips as close to the wall as is comfortable.",
+   "Rest your arms by your sides and close your eyes."
+  ],
+  "breathing": "Natural, slow breathing.",
+  "duration": "3 to 10 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Move the hips further from the wall and bend the knees.",
+  "advanced_variation": "Place a folded blanket under the hips.",
+  "common_mistakes": [
+   "Hips too close for your hamstrings"
+  ],
+  "safety_tips": [
+   "Come out slowly by bending the knees and rolling to the side."
+  ],
+  "contraindications": [
+   "Glaucoma",
+   "Uncontrolled high blood pressure",
+   "Late pregnancy"
+  ],
+  "equipment": "Wall, yoga mat",
+  "suitable_for": [
+   "Everyone",
+   "Recovery",
+   "Evening routine",
+   "Runners"
+  ],
+  "image": "/yoga/legs-up-the-wall-3.svg",
+  "motion_image": "/yoga/legs-up-the-wall.svg",
+  "tags": [
+   "restorative",
+   "supine",
+   "inversion light"
+  ],
+  "slug": "legs-up-the-wall",
+  "sanskrit": "Viparita Karani",
+  "kind": "pose",
+  "goals": [
+   "relaxation",
+   "recovery",
+   "stress_relief"
+  ],
+  "body_areas": [
+   "legs",
+   "back"
+  ],
+  "phase": "relaxation",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 3,
+  "related": [
+   "corpse-pose",
+   "supported-shoulder-stand"
+  ],
+  "frames": [
+   "/yoga/legs-up-the-wall-1.svg",
+   "/yoga/legs-up-the-wall-2.svg",
+   "/yoga/legs-up-the-wall-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Corpse Pose",
+  "alternative_names": [
+   "Savasana",
+   "Shavasana",
+   "Final Relaxation"
+  ],
+  "category": [
+   "Relaxation",
+   "Stress relief",
+   "Recovery",
+   "Meditation"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Whole body (rest)"
+  ],
+  "benefits": [
+   "Lets the body rest and absorb the practice",
+   "Practises full physical relaxation",
+   "A natural place for a body scan or breath awareness"
+  ],
+  "instructions": [
+   "Lie on your back with your legs slightly apart and the feet falling open.",
+   "Rest your arms a little away from your body with the palms facing up.",
+   "Close your eyes and let the body feel heavy.",
+   "Release control of the breath and let it be natural.",
+   "To finish, deepen the breath, roll to your right side and press up slowly."
+  ],
+  "breathing": "Natural breathing, with no effort.",
+  "duration": "3 to 10 minutes",
+  "recommended_repetitions": "End of every practice",
+  "beginner_modification": "Place a pillow under the knees and a folded blanket under the head.",
+  "advanced_variation": "Add a guided body scan.",
+  "common_mistakes": [
+   "Skipping it",
+   "Getting up too fast"
+  ],
+  "safety_tips": [
+   "Lie on your side with support if lying flat is uncomfortable."
+  ],
+  "contraindications": [
+   "Later pregnancy (rest on the left side instead)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Everyone",
+   "Stress relief",
+   "Sleep routine"
+  ],
+  "image": "/yoga/corpse-pose-2.svg",
+  "motion_image": "/yoga/corpse-pose.svg",
+  "tags": [
+   "restorative",
+   "relaxation",
+   "supine"
+  ],
+  "slug": "corpse-pose",
+  "sanskrit": "Savasana",
+  "kind": "pose",
+  "goals": [
+   "relaxation",
+   "stress_relief",
+   "recovery",
+   "meditation"
+  ],
+  "body_areas": [
+   "full_body"
+  ],
+  "phase": "relaxation",
+  "time_of_day": "any",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 3,
+  "related": [
+   "body-scan-meditation",
+   "legs-up-the-wall",
+   "belly-breathing"
+  ],
+  "frames": [
+   "/yoga/corpse-pose-1.svg",
+   "/yoga/corpse-pose-2.svg"
+  ],
+  "frame_labels": [
+   "Settle",
+   "Rest"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Belly Breathing",
+  "alternative_names": [
+   "Diaphragmatic Breathing",
+   "Abdominal Breathing"
+  ],
+  "category": [
+   "Breathing",
+   "Stress relief",
+   "Relaxation",
+   "Meditation",
+   "Core"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Diaphragm",
+   "Abdominals"
+  ],
+  "benefits": [
+   "Slows the breath, which many people find calming",
+   "Builds awareness of the diaphragm",
+   "Easy to use before sleep or after training"
+  ],
+  "instructions": [
+   "Lie on your back with your knees bent, or sit comfortably.",
+   "Place one hand on your chest and one on your belly.",
+   "Breathe in through the nose so the belly hand rises more than the chest hand.",
+   "Breathe out slowly through the nose or pursed lips and feel the belly fall.",
+   "Aim for a slightly longer exhale than inhale, for example in for 4, out for 6."
+  ],
+  "breathing": "In through the nose for about 4 counts, out for about 6 counts.",
+  "duration": "3 to 5 minutes",
+  "recommended_repetitions": "10 to 20 breaths",
+  "beginner_modification": "Breathe naturally without counting.",
+  "advanced_variation": "Extend the exhale gradually.",
+  "common_mistakes": [
+   "Forcing big breaths",
+   "Lifting the shoulders"
+  ],
+  "safety_tips": [
+   "Stop and breathe normally if you feel light headed."
+  ],
+  "contraindications": [
+   "None for most people; return to normal breathing if dizzy"
+  ],
+  "equipment": "None",
+  "suitable_for": [
+   "Everyone",
+   "Stress relief",
+   "Before sleep"
+  ],
+  "image": "/yoga/belly-breathing-2.svg",
+  "motion_image": "/yoga/belly-breathing.svg",
+  "tags": [
+   "breathing",
+   "pranayama",
+   "calming"
+  ],
+  "slug": "belly-breathing",
+  "sanskrit": "Diaphragmatic Breathing",
+  "kind": "breathing",
+  "goals": [
+   "breathing",
+   "stress_relief",
+   "relaxation",
+   "meditation"
+  ],
+  "body_areas": [
+   "core"
+  ],
+  "phase": "relaxation",
+  "time_of_day": "any",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 3,
+  "related": [
+   "corpse-pose",
+   "alternate-nostril-breathing",
+   "easy-pose"
+  ],
+  "frames": [
+   "/yoga/belly-breathing-1.svg",
+   "/yoga/belly-breathing-2.svg"
+  ],
+  "frame_labels": [
+   "Exhale",
+   "Inhale"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Alternate Nostril Breathing",
+  "alternative_names": [
+   "Nadi Shodhana",
+   "Anulom Vilom"
+  ],
+  "category": [
+   "Breathing",
+   "Stress relief",
+   "Meditation",
+   "Core"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Breathing muscles",
+   "Focus"
+  ],
+  "benefits": [
+   "A slow, structured breathing practice",
+   "Helps settle attention before meditation",
+   "Can be done anywhere while seated"
+  ],
+  "instructions": [
+   "Sit tall in Easy Pose or on a chair.",
+   "Rest the index and middle fingers of your right hand between the eyebrows.",
+   "Close the right nostril with the thumb and breathe in through the left.",
+   "Close the left nostril with the ring finger, release the thumb and breathe out through the right.",
+   "Breathe in through the right, switch, and breathe out through the left. That is one round."
+  ],
+  "breathing": "Slow and quiet; never strain or hold the breath.",
+  "duration": "3 to 5 minutes",
+  "recommended_repetitions": "5 to 10 rounds",
+  "beginner_modification": "Do it without the hand, just imagining the breath alternating.",
+  "advanced_variation": "Lengthen each breath evenly.",
+  "common_mistakes": [
+   "Breathing too forcefully",
+   "Slumping the posture"
+  ],
+  "safety_tips": [
+   "Breathe normally if you feel light headed or congested."
+  ],
+  "contraindications": [
+   "A blocked nose or cold (practise belly breathing instead)"
+  ],
+  "equipment": "None",
+  "suitable_for": [
+   "Everyone",
+   "Meditation",
+   "Focus"
+  ],
+  "image": "/yoga/alternate-nostril-breathing-2.svg",
+  "motion_image": "/yoga/alternate-nostril-breathing.svg",
+  "tags": [
+   "breathing",
+   "pranayama",
+   "seated"
+  ],
+  "slug": "alternate-nostril-breathing",
+  "sanskrit": "Nadi Shodhana",
+  "kind": "breathing",
+  "goals": [
+   "breathing",
+   "stress_relief",
+   "meditation"
+  ],
+  "body_areas": [
+   "core"
+  ],
+  "phase": "centering",
+  "time_of_day": "any",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 3,
+  "related": [
+   "easy-pose",
+   "belly-breathing"
+  ],
+  "frames": [
+   "/yoga/alternate-nostril-breathing-1.svg",
+   "/yoga/alternate-nostril-breathing-2.svg"
+  ],
+  "frame_labels": [
+   "Exhale",
+   "Inhale"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Body Scan Meditation",
+  "alternative_names": [
+   "Yoga Nidra",
+   "Body Scan"
+  ],
+  "category": [
+   "Meditation",
+   "Relaxation",
+   "Stress relief",
+   "Recovery"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Attention",
+   "Whole body relaxation"
+  ],
+  "benefits": [
+   "Guides attention slowly through the body",
+   "Helps you notice and release tension",
+   "A gentle way to wind down in the evening"
+  ],
+  "instructions": [
+   "Lie in Corpse Pose and let the breath settle.",
+   "Bring your attention to your toes and notice any sensation without changing it.",
+   "Slowly move your attention up: feet, legs, hips, belly, chest, hands, arms, shoulders, neck, face.",
+   "When the mind wanders, gently return to the last body part you remember.",
+   "Finish with a few deeper breaths and move the fingers and toes before sitting up."
+  ],
+  "breathing": "Natural breathing.",
+  "duration": "5 to 15 minutes",
+  "recommended_repetitions": "1 session",
+  "beginner_modification": "Scan just the major areas in 3 minutes.",
+  "advanced_variation": "Scan both sides of the body separately and slowly.",
+  "common_mistakes": [
+   "Trying to force relaxation",
+   "Judging a wandering mind"
+  ],
+  "safety_tips": [
+   "Sit up slowly afterwards."
+  ],
+  "contraindications": [
+   "None for most people"
+  ],
+  "equipment": "Yoga mat or bed",
+  "suitable_for": [
+   "Everyone",
+   "Before sleep",
+   "Stress relief"
+  ],
+  "image": "/yoga/body-scan-meditation-2.svg",
+  "motion_image": "/yoga/body-scan-meditation.svg",
+  "tags": [
+   "meditation",
+   "relaxation",
+   "evening"
+  ],
+  "slug": "body-scan-meditation",
+  "sanskrit": "Yoga Nidra (simple)",
+  "kind": "meditation",
+  "goals": [
+   "meditation",
+   "relaxation",
+   "stress_relief",
+   "recovery"
+  ],
+  "body_areas": [
+   "full_body"
+  ],
+  "phase": "relaxation",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 5,
+  "related": [
+   "corpse-pose",
+   "belly-breathing"
+  ],
+  "frames": [
+   "/yoga/body-scan-meditation-1.svg",
+   "/yoga/body-scan-meditation-2.svg"
+  ],
+  "frame_labels": [
+   "Settle",
+   "Rest"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Plank Pose",
+  "alternative_names": [
+   "Phalakasana",
+   "High Plank"
+  ],
+  "category": [
+   "Strength",
+   "Core",
+   "Weight management",
+   "Posture",
+   "Shoulders"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Abdominals",
+   "Shoulders",
+   "Glutes",
+   "Arms"
+  ],
+  "benefits": [
+   "Builds core and shoulder strength",
+   "Teaches a strong, straight body line",
+   "Prepares the body for arm balances"
+  ],
+  "instructions": [
+   "Start on hands and knees with the hands under the shoulders.",
+   "Step the feet back one at a time until the body is in one long line.",
+   "Press the floor away, keep the shoulders over the wrists and draw the belly in.",
+   "Keep the hips level with the shoulders and look slightly ahead of the hands.",
+   "Hold, then lower the knees to rest."
+  ],
+  "breathing": "Steady breathing; do not hold the breath.",
+  "duration": "15 to 45 seconds",
+  "recommended_repetitions": "2 to 4 rounds",
+  "beginner_modification": "Lower the knees to the mat, keeping a straight line from knees to head.",
+  "advanced_variation": "Lift one foot for a few breaths, or move slowly to Side Plank.",
+  "common_mistakes": [
+   "Hips sagging",
+   "Hips piking up",
+   "Shoulders drifting behind the wrists"
+  ],
+  "safety_tips": [
+   "Lower the knees as soon as your lower back starts to sag."
+  ],
+  "contraindications": [
+   "Wrist or shoulder injury",
+   "Late pregnancy"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Core strength",
+   "Home workout"
+  ],
+  "image": "/yoga/plank-pose-3.svg",
+  "motion_image": "/yoga/plank-pose.svg",
+  "tags": [
+   "core",
+   "arm strength",
+   "flow"
+  ],
+  "slug": "plank-pose",
+  "sanskrit": "Phalakasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "core",
+   "weight_management",
+   "posture"
+  ],
+  "body_areas": [
+   "core",
+   "shoulders",
+   "full_body"
+  ],
+  "phase": "core",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "side-plank",
+   "downward-dog",
+   "dolphin-pose",
+   "upward-dog"
+  ],
+  "frames": [
+   "/yoga/plank-pose-1.svg",
+   "/yoga/plank-pose-2.svg",
+   "/yoga/plank-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Plank",
+   "slug": "plank",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/0.jpg",
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/1.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Tabletop Balance",
+  "alternative_names": [
+   "Bird Dog",
+   "Balancing Table"
+  ],
+  "category": [
+   "Core",
+   "Balance",
+   "Posture",
+   "Strength",
+   "Back"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Deep core",
+   "Glutes",
+   "Back extensors",
+   "Shoulders"
+  ],
+  "benefits": [
+   "Trains core stability with a neutral spine",
+   "Strengthens the back and glutes",
+   "Gentle on the lower back"
+  ],
+  "instructions": [
+   "Start on hands and knees with a neutral spine.",
+   "Slide your right hand forward and your left leg back.",
+   "Lift them to hip and shoulder height, reaching long through the fingers and the heel.",
+   "Keep the hips level and the belly drawn in.",
+   "Hold for a few breaths, return, and switch sides."
+  ],
+  "breathing": "Breathe out as you extend, keep breathing in the hold.",
+  "duration": "3 to 5 breaths each side",
+  "recommended_repetitions": "4 to 6 per side",
+  "beginner_modification": "Lift only the leg or only the arm.",
+  "advanced_variation": "Draw the elbow and knee together under the body between holds.",
+  "common_mistakes": [
+   "Rotating the hips open",
+   "Arching the lower back",
+   "Lifting the leg too high"
+  ],
+  "safety_tips": [
+   "Move slowly and keep the hips square."
+  ],
+  "contraindications": [
+   "Knee pain when kneeling (use padding)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Beginners",
+   "Back care",
+   "Core strength"
+  ],
+  "image": "/yoga/tabletop-balance-3.svg",
+  "motion_image": "/yoga/tabletop-balance.svg",
+  "tags": [
+   "core",
+   "balance",
+   "kneeling"
+  ],
+  "slug": "tabletop-balance",
+  "sanskrit": "Dandayamana Bharmanasana",
+  "kind": "pose",
+  "goals": [
+   "core",
+   "balance",
+   "posture",
+   "strength"
+  ],
+  "body_areas": [
+   "core",
+   "back"
+  ],
+  "phase": "core",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "cat-cow",
+   "plank-pose",
+   "locust-pose"
+  ],
+  "frames": [
+   "/yoga/tabletop-balance-1.svg",
+   "/yoga/tabletop-balance-2.svg",
+   "/yoga/tabletop-balance-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Locust Pose",
+  "alternative_names": [
+   "Salabhasana",
+   "Grasshopper"
+  ],
+  "category": [
+   "Strength",
+   "Posture",
+   "Core",
+   "Back",
+   "Shoulders",
+   "Hamstrings"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Back extensors",
+   "Glutes",
+   "Hamstrings",
+   "Rear shoulders"
+  ],
+  "benefits": [
+   "Strengthens the whole back of the body",
+   "Supports good posture",
+   "A safe way to build backbend strength"
+  ],
+  "instructions": [
+   "Lie on your front with your arms alongside your body, palms down or up.",
+   "Rest your forehead on the mat and press the tops of the feet down.",
+   "Breathe in and lift your chest, arms and legs off the floor.",
+   "Reach back through the fingertips and toes, keeping the neck long.",
+   "Hold, then lower down and rest one cheek on the mat."
+  ],
+  "breathing": "Inhale to lift, steady breaths in the hold, exhale to lower.",
+  "duration": "15 to 30 seconds",
+  "recommended_repetitions": "3 rounds",
+  "beginner_modification": "Lift only the chest, or only one leg at a time (half locust).",
+  "advanced_variation": "Interlace the hands behind the back and lift them higher.",
+  "common_mistakes": [
+   "Cranking the neck up",
+   "Bending the knees",
+   "Squeezing the glutes hard"
+  ],
+  "safety_tips": [
+   "Keep the lift modest at first."
+  ],
+  "contraindications": [
+   "Pregnancy",
+   "Recent back or abdominal surgery"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Posture",
+   "Back strength",
+   "Office workers"
+  ],
+  "image": "/yoga/locust-pose-3.svg",
+  "motion_image": "/yoga/locust-pose.svg",
+  "tags": [
+   "backbend",
+   "prone",
+   "strength"
+  ],
+  "slug": "locust-pose",
+  "sanskrit": "Salabhasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "posture",
+   "core"
+  ],
+  "body_areas": [
+   "back",
+   "legs",
+   "shoulders"
+  ],
+  "phase": "backbend",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "cobra-pose",
+   "bow-pose",
+   "tabletop-balance"
+  ],
+  "frames": [
+   "/yoga/locust-pose-1.svg",
+   "/yoga/locust-pose-2.svg",
+   "/yoga/locust-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "One Half Locust",
+   "slug": "one-half-locust",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Half_Locust/1.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Triangle Pose",
+  "alternative_names": [
+   "Utthita Trikonasana",
+   "Extended Triangle"
+  ],
+  "category": [
+   "Flexibility",
+   "Strength",
+   "Balance",
+   "Mobility",
+   "Hips",
+   "Back",
+   "Core",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Hamstrings",
+   "Inner thighs",
+   "Obliques",
+   "Chest"
+  ],
+  "benefits": [
+   "Stretches the hamstrings, hips and sides of the waist",
+   "Strengthens the legs and core",
+   "Opens the chest and shoulders"
+  ],
+  "instructions": [
+   "Stand with the feet wide apart; turn the right foot out 90 degrees and the left foot in slightly.",
+   "Raise the arms to shoulder height.",
+   "Reach the torso out over the right leg, hinging from the hip, then tilt the right hand down.",
+   "Rest the right hand on the shin, a block or the floor; reach the left arm up.",
+   "Keep both legs straight but not locked and look up, forward or down. Repeat on the other side."
+  ],
+  "breathing": "Lengthen on the inhale; on the exhale, rotate the chest open a little more.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Rest the lower hand high on the shin or on a block; look down to ease the neck.",
+  "advanced_variation": "Bring the lower hand to the floor behind the front foot.",
+  "common_mistakes": [
+   "Collapsing the side of the waist",
+   "Locking the front knee",
+   "Leaning the chest toward the floor"
+  ],
+  "safety_tips": [
+   "Keep a micro bend in the front knee.",
+   "Look down if the neck feels strained."
+  ],
+  "contraindications": [
+   "Low blood pressure (look down)",
+   "Neck injury (keep the head neutral)",
+   "Recent hamstring injury"
+  ],
+  "equipment": "Yoga mat, block (optional)",
+  "suitable_for": [
+   "Flexibility",
+   "Standing practice",
+   "Morning routine"
+  ],
+  "image": "/yoga/triangle-pose-3.svg",
+  "motion_image": "/yoga/triangle-pose.svg",
+  "tags": [
+   "standing",
+   "hamstrings",
+   "side stretch"
+  ],
+  "slug": "triangle-pose",
+  "sanskrit": "Trikonasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "strength",
+   "balance",
+   "mobility"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "back",
+   "core"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "extended-side-angle",
+   "warrior-ii",
+   "half-moon-pose",
+   "pyramid-pose"
+  ],
+  "frames": [
+   "/yoga/triangle-pose-1.svg",
+   "/yoga/triangle-pose-2.svg",
+   "/yoga/triangle-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Extended Side Angle",
+  "alternative_names": [
+   "Utthita Parsvakonasana",
+   "Side Angle Pose"
+  ],
+  "category": [
+   "Strength",
+   "Flexibility",
+   "Weight management",
+   "Hips",
+   "Core",
+   "Shoulders"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Quadriceps",
+   "Glutes",
+   "Inner thighs",
+   "Side body"
+  ],
+  "benefits": [
+   "Strengthens the legs and glutes",
+   "Gives a long stretch from the back heel to the fingertips",
+   "Builds stamina in standing practice"
+  ],
+  "instructions": [
+   "Come into Warrior II with the right knee bent.",
+   "Hinge at the right hip and bring the right forearm to the right thigh, or the hand to a block.",
+   "Reach the left arm up and then over the ear, palm facing down.",
+   "Press into the outer edge of the back foot.",
+   "Keep the chest turning up toward the ceiling. Repeat on the other side."
+  ],
+  "breathing": "Breathe into the long side of the body.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Rest the forearm on the thigh instead of the hand on the floor.",
+  "advanced_variation": "Bring the lower hand to the floor outside the front foot.",
+  "common_mistakes": [
+   "Front knee falling inward",
+   "Leaning heavily on the forearm",
+   "Chest turning toward the floor"
+  ],
+  "safety_tips": [
+   "Keep the front knee over the ankle."
+  ],
+  "contraindications": [
+   "Knee or hip injury",
+   "Neck injury (look down)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Strength building",
+   "Standing practice"
+  ],
+  "image": "/yoga/extended-side-angle-3.svg",
+  "motion_image": "/yoga/extended-side-angle.svg",
+  "tags": [
+   "standing",
+   "legs",
+   "side stretch"
+  ],
+  "slug": "extended-side-angle",
+  "sanskrit": "Utthita Parsvakonasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "flexibility",
+   "weight_management"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "core",
+   "shoulders"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "warrior-ii",
+   "triangle-pose",
+   "reverse-warrior"
+  ],
+  "frames": [
+   "/yoga/extended-side-angle-1.svg",
+   "/yoga/extended-side-angle-2.svg",
+   "/yoga/extended-side-angle-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Reverse Warrior",
+  "alternative_names": [
+   "Viparita Virabhadrasana",
+   "Peaceful Warrior"
+  ],
+  "category": [
+   "Flexibility",
+   "Strength",
+   "Mobility",
+   "Hips",
+   "Core"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Side body",
+   "Quadriceps",
+   "Intercostals"
+  ],
+  "benefits": [
+   "Stretches the side of the body while the legs work",
+   "Adds a side bend to a standing flow",
+   "Opens the ribs for fuller breathing"
+  ],
+  "instructions": [
+   "From Warrior II with the right knee bent, turn the right palm up.",
+   "Breathe in and sweep the right arm up and back over your head.",
+   "Let the left hand slide lightly down the back leg.",
+   "Keep the front knee bent over the ankle.",
+   "Return to Warrior II and repeat on the other side."
+  ],
+  "breathing": "Inhale to reach up and back, exhale to return.",
+  "duration": "3 to 5 breaths",
+  "recommended_repetitions": "2 rounds each side",
+  "beginner_modification": "Keep the lean small.",
+  "advanced_variation": "Bend the front knee deeper.",
+  "common_mistakes": [
+   "Leaning the weight onto the back hand",
+   "Straightening the front leg"
+  ],
+  "safety_tips": [
+   "Keep the neck relaxed."
+  ],
+  "contraindications": [
+   "Knee or shoulder injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Standing flows"
+  ],
+  "image": "/yoga/reverse-warrior-3.svg",
+  "motion_image": "/yoga/reverse-warrior.svg",
+  "tags": [
+   "standing",
+   "side stretch",
+   "warrior"
+  ],
+  "slug": "reverse-warrior",
+  "sanskrit": "Viparita Virabhadrasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "strength",
+   "mobility"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "core"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "warrior-ii",
+   "extended-side-angle"
+  ],
+  "frames": [
+   "/yoga/reverse-warrior-1.svg",
+   "/yoga/reverse-warrior-2.svg",
+   "/yoga/reverse-warrior-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "High Lunge",
+  "alternative_names": [
+   "Crescent Lunge",
+   "Ashta Chandrasana"
+  ],
+  "category": [
+   "Strength",
+   "Balance",
+   "Weight management",
+   "Flexibility",
+   "Hips",
+   "Core"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Quadriceps",
+   "Glutes",
+   "Hip flexors",
+   "Core"
+  ],
+  "benefits": [
+   "Strengthens the legs and core",
+   "Stretches the hip flexors of the back leg",
+   "Builds balance in a narrow stance"
+  ],
+  "instructions": [
+   "From Downward Dog, step the right foot forward between the hands.",
+   "Keep the back heel lifted and the back leg straight and strong.",
+   "Bend the front knee over the ankle and rise up with the arms overhead.",
+   "Draw the belly in and lengthen the tailbone down.",
+   "Hold, then repeat on the other side."
+  ],
+  "breathing": "Steady breaths; reach up on each inhale.",
+  "duration": "20 to 45 seconds each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Lower the back knee into Low Lunge.",
+  "advanced_variation": "Sink the hips lower while keeping the back leg straight.",
+  "common_mistakes": [
+   "Front knee past the toes",
+   "Leaning back with the ribs flaring"
+  ],
+  "safety_tips": [
+   "Widen the stance for balance."
+  ],
+  "contraindications": [
+   "Knee injury",
+   "Balance problems without support"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Strength building"
+  ],
+  "image": "/yoga/high-lunge-3.svg",
+  "motion_image": "/yoga/high-lunge.svg",
+  "tags": [
+   "standing",
+   "lunge",
+   "legs"
+  ],
+  "slug": "high-lunge",
+  "sanskrit": "Ashta Chandrasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "balance",
+   "weight_management",
+   "flexibility"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "core"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "low-lunge",
+   "warrior-i",
+   "warrior-iii"
+  ],
+  "frames": [
+   "/yoga/high-lunge-1.svg",
+   "/yoga/high-lunge-2.svg",
+   "/yoga/high-lunge-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Warrior III",
+  "alternative_names": [
+   "Virabhadrasana III",
+   "Warrior Three"
+  ],
+  "category": [
+   "Balance",
+   "Strength",
+   "Core",
+   "Posture",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Standing leg hamstrings and glutes",
+   "Back extensors",
+   "Core"
+  ],
+  "benefits": [
+   "Builds balance and full body strength",
+   "Strengthens the standing leg and the back",
+   "Trains focus"
+  ],
+  "instructions": [
+   "Stand in Mountain Pose with the hands on the hips.",
+   "Shift your weight onto the right foot and hinge forward from the hips.",
+   "Lift the left leg behind you as the chest lowers, until body and leg are level.",
+   "Keep the hips square to the floor and the lifted foot flexed.",
+   "Reach the arms forward or keep them on the hips. Return slowly and switch sides."
+  ],
+  "breathing": "Smooth breathing; gaze at a still point on the floor.",
+  "duration": "15 to 30 seconds each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Hold the back of a chair or rest the fingertips on blocks.",
+  "advanced_variation": "Reach the arms forward alongside the ears.",
+  "common_mistakes": [
+   "Opening the hip of the lifted leg",
+   "Locking the standing knee",
+   "Dropping the chest below the hips"
+  ],
+  "safety_tips": [
+   "Practise near a wall or chair."
+  ],
+  "contraindications": [
+   "Ankle or knee injury on the standing leg",
+   "Balance disorders"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Balance training",
+   "Athletes"
+  ],
+  "image": "/yoga/warrior-iii-3.svg",
+  "motion_image": "/yoga/warrior-iii.svg",
+  "tags": [
+   "balance",
+   "standing",
+   "one leg"
+  ],
+  "slug": "warrior-iii",
+  "sanskrit": "Virabhadrasana III",
+  "kind": "pose",
+  "goals": [
+   "balance",
+   "strength",
+   "core",
+   "posture"
+  ],
+  "body_areas": [
+   "legs",
+   "core",
+   "back"
+  ],
+  "phase": "balance",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "tree-pose",
+   "half-moon-pose",
+   "high-lunge"
+  ],
+  "frames": [
+   "/yoga/warrior-iii-1.svg",
+   "/yoga/warrior-iii-2.svg",
+   "/yoga/warrior-iii-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Half Moon Pose",
+  "alternative_names": [
+   "Ardha Chandrasana"
+  ],
+  "category": [
+   "Balance",
+   "Strength",
+   "Flexibility",
+   "Core",
+   "Hips",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Standing leg",
+   "Glutes",
+   "Obliques",
+   "Hamstrings"
+  ],
+  "benefits": [
+   "Challenges balance and coordination",
+   "Strengthens the standing leg and hips",
+   "Opens the hips and chest"
+  ],
+  "instructions": [
+   "From Triangle Pose on the right side, bend the right knee and place the right hand on a block ahead of the foot.",
+   "Shift your weight into the right foot and lift the left leg until it is level with the hip.",
+   "Straighten the standing leg without locking it.",
+   "Stack the left hip over the right and reach the left arm up.",
+   "Look down or forward. Lower the leg with control and repeat on the other side."
+  ],
+  "breathing": "Slow breaths keep the balance steady.",
+  "duration": "15 to 30 seconds each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Practise with your back against a wall and the hand on a tall block.",
+  "advanced_variation": "Look up toward the top hand.",
+  "common_mistakes": [
+   "Locking the standing knee",
+   "Lifted leg drifting forward"
+  ],
+  "safety_tips": [
+   "Use a block under the lower hand.",
+   "Look down to stay steady."
+  ],
+  "contraindications": [
+   "Ankle or knee injury on the standing leg",
+   "Low blood pressure or vertigo"
+  ],
+  "equipment": "Yoga mat, block",
+  "suitable_for": [
+   "Balance training"
+  ],
+  "image": "/yoga/half-moon-pose-3.svg",
+  "motion_image": "/yoga/half-moon-pose.svg",
+  "tags": [
+   "balance",
+   "standing",
+   "one leg"
+  ],
+  "slug": "half-moon-pose",
+  "sanskrit": "Ardha Chandrasana",
+  "kind": "pose",
+  "goals": [
+   "balance",
+   "strength",
+   "flexibility",
+   "core"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "core"
+  ],
+  "phase": "balance",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "triangle-pose",
+   "warrior-iii",
+   "tree-pose"
+  ],
+  "frames": [
+   "/yoga/half-moon-pose-1.svg",
+   "/yoga/half-moon-pose-2.svg",
+   "/yoga/half-moon-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Pyramid Pose",
+  "alternative_names": [
+   "Parsvottanasana",
+   "Intense Side Stretch"
+  ],
+  "category": [
+   "Flexibility",
+   "Balance",
+   "Hips",
+   "Back",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Hamstrings of the front leg",
+   "Calves",
+   "Hips"
+  ],
+  "benefits": [
+   "Deeply stretches the front leg hamstring",
+   "Builds balance in a narrow stance",
+   "Calms the mind as you fold"
+  ],
+  "instructions": [
+   "Stand with the right foot forward and the left foot back about one leg length, back foot angled.",
+   "Square the hips toward the front.",
+   "Place the hands on the hips and lengthen the spine.",
+   "Hinge forward over the front leg with a long back.",
+   "Bring the hands to blocks or the shin and breathe. Repeat on the other side."
+  ],
+  "breathing": "Lengthen on the inhale, fold on the exhale.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Bend the front knee and use blocks under the hands.",
+  "advanced_variation": "Bring the hands into reverse prayer behind the back.",
+  "common_mistakes": [
+   "Rounding the back to reach the floor",
+   "Stance too narrow"
+  ],
+  "safety_tips": [
+   "Keep a micro bend in the front knee."
+  ],
+  "contraindications": [
+   "Hamstring injury",
+   "Back injury",
+   "High blood pressure (keep the head higher)"
+  ],
+  "equipment": "Yoga mat, blocks (optional)",
+  "suitable_for": [
+   "Runners",
+   "Flexibility"
+  ],
+  "image": "/yoga/pyramid-pose-3.svg",
+  "motion_image": "/yoga/pyramid-pose.svg",
+  "tags": [
+   "standing",
+   "hamstrings",
+   "forward fold"
+  ],
+  "slug": "pyramid-pose",
+  "sanskrit": "Parsvottanasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "balance"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "back"
+  ],
+  "phase": "standing",
+  "time_of_day": "any",
+  "energy": "calming",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "triangle-pose",
+   "standing-forward-fold",
+   "head-to-knee-pose"
+  ],
+  "frames": [
+   "/yoga/pyramid-pose-1.svg",
+   "/yoga/pyramid-pose-2.svg",
+   "/yoga/pyramid-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Pyramid",
+   "slug": "pyramid",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pyramid/0.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Goddess Pose",
+  "alternative_names": [
+   "Utkata Konasana",
+   "Horse Stance"
+  ],
+  "category": [
+   "Strength",
+   "Weight management",
+   "Mobility",
+   "Hips",
+   "Shoulders"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Quadriceps",
+   "Inner thighs",
+   "Glutes",
+   "Shoulders"
+  ],
+  "benefits": [
+   "Strengthens the legs and inner thighs",
+   "Opens the hips",
+   "Builds heat and stamina quickly"
+  ],
+  "instructions": [
+   "Stand with the feet wide and the toes turned out about 45 degrees.",
+   "Bend the knees, lowering the hips toward knee height.",
+   "Keep the knees pointing in the same direction as the toes.",
+   "Bend the elbows to 90 degrees with the palms forward (cactus arms).",
+   "Keep the spine upright and hold, then straighten the legs."
+  ],
+  "breathing": "Steady breaths; exhale as you sink.",
+  "duration": "15 to 45 seconds",
+  "recommended_repetitions": "2 to 3 rounds",
+  "beginner_modification": "Bend the knees less and rest the hands on the thighs.",
+  "advanced_variation": "Lift the heels while holding.",
+  "common_mistakes": [
+   "Knees collapsing inward",
+   "Leaning forward"
+  ],
+  "safety_tips": [
+   "Keep the knees over the toes."
+  ],
+  "contraindications": [
+   "Knee or groin injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Strength building",
+   "Home workout"
+  ],
+  "image": "/yoga/goddess-pose-3.svg",
+  "motion_image": "/yoga/goddess-pose.svg",
+  "tags": [
+   "standing",
+   "legs",
+   "squat"
+  ],
+  "slug": "goddess-pose",
+  "sanskrit": "Utkata Konasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "weight_management",
+   "mobility"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "shoulders"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "chair-pose",
+   "garland-pose",
+   "warrior-ii"
+  ],
+  "frames": [
+   "/yoga/goddess-pose-1.svg",
+   "/yoga/goddess-pose-2.svg",
+   "/yoga/goddess-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Garland Pose",
+  "alternative_names": [
+   "Malasana",
+   "Yogi Squat"
+  ],
+  "category": [
+   "Mobility",
+   "Flexibility",
+   "Hips",
+   "Back"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Hips",
+   "Groin",
+   "Ankles",
+   "Lower back"
+  ],
+  "benefits": [
+   "Opens the hips and groin",
+   "Improves ankle mobility",
+   "A comfortable resting squat once mobile"
+  ],
+  "instructions": [
+   "Stand with the feet a little wider than the hips, toes turned out.",
+   "Bend the knees and lower the hips toward the floor.",
+   "Bring the palms together at the chest with the elbows inside the knees.",
+   "Gently press the knees out with the elbows and lift the chest.",
+   "Hold, then press up slowly."
+  ],
+  "breathing": "Breathe into the back of the body.",
+  "duration": "30 seconds to 1 minute",
+  "recommended_repetitions": "1 to 2 rounds",
+  "beginner_modification": "Sit on a block or place a rolled blanket under the heels.",
+  "advanced_variation": "Bring the feet closer together.",
+  "common_mistakes": [
+   "Heels lifting with the back rounded",
+   "Knees collapsing in"
+  ],
+  "safety_tips": [
+   "Use support under the hips or heels."
+  ],
+  "contraindications": [
+   "Knee injury",
+   "Ankle injury"
+  ],
+  "equipment": "Yoga mat, block (optional)",
+  "suitable_for": [
+   "Mobility",
+   "Desk workers"
+  ],
+  "image": "/yoga/garland-pose-3.svg",
+  "motion_image": "/yoga/garland-pose.svg",
+  "tags": [
+   "squat",
+   "hips"
+  ],
+  "slug": "garland-pose",
+  "sanskrit": "Malasana",
+  "kind": "pose",
+  "goals": [
+   "mobility",
+   "flexibility"
+  ],
+  "body_areas": [
+   "hips",
+   "legs",
+   "back"
+  ],
+  "phase": "seated",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "goddess-pose",
+   "bound-angle-pose",
+   "crow-pose"
+  ],
+  "frames": [
+   "/yoga/garland-pose-1.svg",
+   "/yoga/garland-pose-2.svg",
+   "/yoga/garland-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Boat Pose",
+  "alternative_names": [
+   "Navasana",
+   "Paripurna Navasana",
+   "V Sit"
+  ],
+  "category": [
+   "Core",
+   "Strength",
+   "Balance",
+   "Weight management",
+   "Hips"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Abdominals",
+   "Hip flexors",
+   "Back extensors"
+  ],
+  "benefits": [
+   "Builds core strength",
+   "Strengthens the hip flexors and back",
+   "Improves balance on the sit bones"
+  ],
+  "instructions": [
+   "Sit with the knees bent and the feet flat; hold the backs of the thighs.",
+   "Lean back slightly with a long spine and lift the feet so the shins are level.",
+   "Reach the arms forward, palms facing each other.",
+   "If comfortable, straighten the legs to make a V shape.",
+   "Keep the chest lifted and hold, then lower the feet."
+  ],
+  "breathing": "Keep breathing; holding the breath makes it harder.",
+  "duration": "10 to 30 seconds",
+  "recommended_repetitions": "3 to 5 rounds",
+  "beginner_modification": "Keep the knees bent and hold the thighs.",
+  "advanced_variation": "Lower toward the floor and lift again (boat crunches).",
+  "common_mistakes": [
+   "Rounding the lower back",
+   "Holding the breath",
+   "Collapsing the chest"
+  ],
+  "safety_tips": [
+   "Keep the spine long; bend the knees if the back rounds."
+  ],
+  "contraindications": [
+   "Pregnancy",
+   "Lower back injury",
+   "Recent abdominal surgery"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Core strength"
+  ],
+  "image": "/yoga/boat-pose-3.svg",
+  "motion_image": "/yoga/boat-pose.svg",
+  "tags": [
+   "core",
+   "seated",
+   "balance"
+  ],
+  "slug": "boat-pose",
+  "sanskrit": "Navasana",
+  "kind": "pose",
+  "goals": [
+   "core",
+   "strength",
+   "balance",
+   "weight_management"
+  ],
+  "body_areas": [
+   "core",
+   "hips"
+  ],
+  "phase": "core",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "staff-pose",
+   "plank-pose"
+  ],
+  "frames": [
+   "/yoga/boat-pose-1.svg",
+   "/yoga/boat-pose-2.svg",
+   "/yoga/boat-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Side Plank",
+  "alternative_names": [
+   "Vasisthasana"
+  ],
+  "category": [
+   "Core",
+   "Strength",
+   "Balance",
+   "Shoulders"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Obliques",
+   "Shoulders",
+   "Glutes"
+  ],
+  "benefits": [
+   "Strengthens the sides of the waist and the shoulders",
+   "Builds balance and stability",
+   "Supports a strong, upright posture"
+  ],
+  "instructions": [
+   "Start in Plank Pose.",
+   "Shift onto the outer edge of the right foot and stack the left foot on top.",
+   "Roll the body open to the left with the right hand under the shoulder.",
+   "Lift the hips so the body is one straight line and reach the left arm up.",
+   "Hold, return to Plank and switch sides."
+  ],
+  "breathing": "Steady breathing.",
+  "duration": "10 to 30 seconds each side",
+  "recommended_repetitions": "2 rounds each side",
+  "beginner_modification": "Lower the bottom knee to the mat, or stagger the feet.",
+  "advanced_variation": "Lift the top leg.",
+  "common_mistakes": [
+   "Hips sagging",
+   "Hand too far from the shoulder"
+  ],
+  "safety_tips": [
+   "Spread the fingers and press through the whole hand."
+  ],
+  "contraindications": [
+   "Wrist or shoulder injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Core strength"
+  ],
+  "image": "/yoga/side-plank-3.svg",
+  "motion_image": "/yoga/side-plank.svg",
+  "tags": [
+   "core",
+   "arm balance",
+   "side"
+  ],
+  "slug": "side-plank",
+  "sanskrit": "Vasisthasana",
+  "kind": "pose",
+  "goals": [
+   "core",
+   "strength",
+   "balance"
+  ],
+  "body_areas": [
+   "core",
+   "shoulders"
+  ],
+  "phase": "core",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "plank-pose",
+   "downward-dog"
+  ],
+  "frames": [
+   "/yoga/side-plank-1.svg",
+   "/yoga/side-plank-2.svg",
+   "/yoga/side-plank-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Side Bridge",
+   "slug": "side-bridge",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Bridge/0.jpg",
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Bridge/1.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Dolphin Pose",
+  "alternative_names": [
+   "Ardha Pincha Mayurasana",
+   "Forearm Dog"
+  ],
+  "category": [
+   "Strength",
+   "Flexibility",
+   "Core",
+   "Shoulders",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Shoulders",
+   "Upper back",
+   "Hamstrings",
+   "Core"
+  ],
+  "benefits": [
+   "Builds shoulder strength without loading the wrists",
+   "Stretches the hamstrings and calves",
+   "Prepares for forearm balances"
+  ],
+  "instructions": [
+   "Start on hands and knees, then lower onto the forearms with the elbows under the shoulders.",
+   "Tuck the toes and lift the hips up and back.",
+   "Press the forearms down and lift the shoulders away from the floor.",
+   "Walk the feet in slightly and keep the knees bent if needed.",
+   "Hold, then lower the knees."
+  ],
+  "breathing": "Even breaths.",
+  "duration": "20 to 45 seconds",
+  "recommended_repetitions": "2 to 3 rounds",
+  "beginner_modification": "Keep the knees bent.",
+  "advanced_variation": "Walk the feet closer toward the elbows.",
+  "common_mistakes": [
+   "Shoulders collapsing toward the floor",
+   "Elbows sliding wide"
+  ],
+  "safety_tips": [
+   "Keep the forearms parallel."
+  ],
+  "contraindications": [
+   "Shoulder or neck injury",
+   "Uncontrolled high blood pressure"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Shoulder strength"
+  ],
+  "image": "/yoga/dolphin-pose-3.svg",
+  "motion_image": "/yoga/dolphin-pose.svg",
+  "tags": [
+   "shoulders",
+   "inversion light"
+  ],
+  "slug": "dolphin-pose",
+  "sanskrit": "Ardha Pincha Mayurasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "flexibility",
+   "core"
+  ],
+  "body_areas": [
+   "shoulders",
+   "core",
+   "legs"
+  ],
+  "phase": "standing",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "downward-dog",
+   "plank-pose",
+   "supported-headstand"
+  ],
+  "frames": [
+   "/yoga/dolphin-pose-1.svg",
+   "/yoga/dolphin-pose-2.svg",
+   "/yoga/dolphin-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Upward-Facing Dog",
+  "alternative_names": [
+   "Urdhva Mukha Svanasana",
+   "Up Dog"
+  ],
+  "category": [
+   "Strength",
+   "Flexibility",
+   "Posture",
+   "Back",
+   "Shoulders"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Spine extensors",
+   "Chest",
+   "Arms",
+   "Hip flexors (stretch)"
+  ],
+  "benefits": [
+   "Strengthens the arms and back",
+   "Opens the chest and the front of the hips",
+   "Part of the classic sun salutation"
+  ],
+  "instructions": [
+   "Lie on your front with the hands beside the lower ribs.",
+   "Press the tops of the feet down and straighten the arms, lifting the chest.",
+   "Lift the thighs off the floor if you can, so only the hands and feet touch the mat.",
+   "Draw the shoulders back and down and keep the neck long.",
+   "Hold for a breath or two, then lower or press back to Downward Dog."
+  ],
+  "breathing": "Inhale into the pose.",
+  "duration": "1 to 5 breaths",
+  "recommended_repetitions": "3 to 5 times in a flow",
+  "beginner_modification": "Keep the thighs down, or practise Cobra instead.",
+  "advanced_variation": "Hold longer with the legs strongly engaged.",
+  "common_mistakes": [
+   "Shoulders hunched to the ears",
+   "Sinking into the lower back",
+   "Hands too far forward"
+  ],
+  "safety_tips": [
+   "Keep the elbows soft if they hyperextend."
+  ],
+  "contraindications": [
+   "Back injury",
+   "Wrist injury",
+   "Pregnancy"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Flows",
+   "Back strength"
+  ],
+  "image": "/yoga/upward-dog-3.svg",
+  "motion_image": "/yoga/upward-dog.svg",
+  "tags": [
+   "backbend",
+   "prone",
+   "flow"
+  ],
+  "slug": "upward-dog",
+  "sanskrit": "Urdhva Mukha Svanasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "flexibility",
+   "posture"
+  ],
+  "body_areas": [
+   "back",
+   "chest",
+   "shoulders"
+  ],
+  "phase": "backbend",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "cobra-pose",
+   "downward-dog",
+   "plank-pose"
+  ],
+  "frames": [
+   "/yoga/upward-dog-1.svg",
+   "/yoga/upward-dog-2.svg",
+   "/yoga/upward-dog-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Camel Pose",
+  "alternative_names": [
+   "Ustrasana"
+  ],
+  "category": [
+   "Flexibility",
+   "Posture",
+   "Mobility",
+   "Back",
+   "Hips",
+   "Shoulders"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Chest",
+   "Hip flexors",
+   "Quadriceps",
+   "Spine"
+  ],
+  "benefits": [
+   "Opens the chest and front of the body",
+   "Stretches the hip flexors and thighs",
+   "Strengthens the back"
+  ],
+  "instructions": [
+   "Kneel with the knees hip width apart and the thighs vertical.",
+   "Place your hands on your lower back, fingers pointing down.",
+   "Lift the chest and gently lean back, keeping the hips over the knees.",
+   "If comfortable, reach the hands to the heels one at a time.",
+   "Keep the neck long or let the head release back only if comfortable. Come up slowly with the hands on the back."
+  ],
+  "breathing": "Breathe into the chest; avoid holding the breath.",
+  "duration": "15 to 30 seconds",
+  "recommended_repetitions": "2 rounds",
+  "beginner_modification": "Keep the hands on the lower back, or tuck the toes to lift the heels higher.",
+  "advanced_variation": "Reach both hands to the heels with the feet flat.",
+  "common_mistakes": [
+   "Hips drifting back behind the knees",
+   "Crunching the lower back",
+   "Dropping the head without control"
+  ],
+  "safety_tips": [
+   "Come out slowly and rest in Child's Pose."
+  ],
+  "contraindications": [
+   "Back or neck injury",
+   "High or low blood pressure",
+   "Migraine"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Posture",
+   "Chest opening"
+  ],
+  "image": "/yoga/camel-pose-3.svg",
+  "motion_image": "/yoga/camel-pose.svg",
+  "tags": [
+   "backbend",
+   "kneeling"
+  ],
+  "slug": "camel-pose",
+  "sanskrit": "Ustrasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "posture",
+   "mobility"
+  ],
+  "body_areas": [
+   "back",
+   "chest",
+   "hips",
+   "shoulders"
+  ],
+  "phase": "backbend",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "bow-pose",
+   "wheel-pose",
+   "childs-pose"
+  ],
+  "frames": [
+   "/yoga/camel-pose-1.svg",
+   "/yoga/camel-pose-2.svg",
+   "/yoga/camel-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Bow Pose",
+  "alternative_names": [
+   "Dhanurasana"
+  ],
+  "category": [
+   "Flexibility",
+   "Strength",
+   "Posture",
+   "Back",
+   "Hips",
+   "Shoulders"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Back extensors",
+   "Quadriceps",
+   "Chest",
+   "Shoulders"
+  ],
+  "benefits": [
+   "Strengthens the back",
+   "Stretches the front of the body from the knees to the chest",
+   "Opens the shoulders"
+  ],
+  "instructions": [
+   "Lie on your front and bend your knees, bringing the heels toward your hips.",
+   "Reach back and hold the outsides of the ankles.",
+   "Breathe in and kick the feet into the hands, lifting the chest and thighs.",
+   "Keep the knees about hip width apart and the neck long.",
+   "Hold, then release slowly."
+  ],
+  "breathing": "Breathe steadily; the belly may rock with the breath.",
+  "duration": "15 to 30 seconds",
+  "recommended_repetitions": "2 to 3 rounds",
+  "beginner_modification": "Hold one ankle at a time (half bow) or use a strap.",
+  "advanced_variation": "Lift higher by pressing the feet into the hands.",
+  "common_mistakes": [
+   "Knees splaying wide",
+   "Pulling with the arms instead of pressing with the legs"
+  ],
+  "safety_tips": [
+   "Keep the lift moderate at first."
+  ],
+  "contraindications": [
+   "Back injury",
+   "Pregnancy",
+   "Recent abdominal surgery",
+   "High blood pressure"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Back strength",
+   "Flexibility"
+  ],
+  "image": "/yoga/bow-pose-3.svg",
+  "motion_image": "/yoga/bow-pose.svg",
+  "tags": [
+   "backbend",
+   "prone"
+  ],
+  "slug": "bow-pose",
+  "sanskrit": "Dhanurasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "strength",
+   "posture"
+  ],
+  "body_areas": [
+   "back",
+   "chest",
+   "hips",
+   "shoulders"
+  ],
+  "phase": "backbend",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "locust-pose",
+   "camel-pose",
+   "cobra-pose"
+  ],
+  "frames": [
+   "/yoga/bow-pose-1.svg",
+   "/yoga/bow-pose-2.svg",
+   "/yoga/bow-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Pigeon Pose",
+  "alternative_names": [
+   "Eka Pada Rajakapotasana",
+   "Sleeping Pigeon"
+  ],
+  "category": [
+   "Flexibility",
+   "Mobility",
+   "Recovery",
+   "Relaxation",
+   "Hips"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Outer hip and glutes of the front leg",
+   "Hip flexors of the back leg"
+  ],
+  "benefits": [
+   "Deeply stretches the outer hip and glutes",
+   "Stretches the hip flexors of the back leg",
+   "Folding forward can feel calming"
+  ],
+  "instructions": [
+   "From Downward Dog or tabletop, bring the right knee forward behind the right wrist.",
+   "Angle the right shin across the mat; the closer to parallel with the front edge, the deeper it is.",
+   "Slide the left leg straight back with the top of the foot down.",
+   "Keep the hips level, using a blanket under the right hip if needed.",
+   "Stay upright on the hands or fold forward onto the forearms. Repeat on the other side."
+  ],
+  "breathing": "Long exhales help the hip release.",
+  "duration": "1 to 2 minutes each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Practise Reclined Pigeon (figure four) on your back instead.",
+  "advanced_variation": "Fold all the way down with the arms extended.",
+  "common_mistakes": [
+   "Front hip tilting high",
+   "Sinking all the weight onto one side",
+   "Forcing the shin parallel"
+  ],
+  "safety_tips": [
+   "Back off if you feel any pain in the front knee."
+  ],
+  "contraindications": [
+   "Knee injury",
+   "Sacroiliac or hip injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Runners",
+   "Desk workers",
+   "Recovery"
+  ],
+  "image": "/yoga/pigeon-pose-3.svg",
+  "motion_image": "/yoga/pigeon-pose.svg",
+  "tags": [
+   "hips",
+   "glutes",
+   "deep stretch"
+  ],
+  "slug": "pigeon-pose",
+  "sanskrit": "Eka Pada Rajakapotasana (prep)",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "mobility",
+   "recovery",
+   "relaxation"
+  ],
+  "body_areas": [
+   "hips",
+   "legs"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": true,
+  "default_minutes": 1.5,
+  "related": [
+   "reclined-pigeon",
+   "low-lunge",
+   "garland-pose"
+  ],
+  "frames": [
+   "/yoga/pigeon-pose-1.svg",
+   "/yoga/pigeon-pose-2.svg",
+   "/yoga/pigeon-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Reclined Pigeon",
+  "alternative_names": [
+   "Figure Four Stretch",
+   "Eye of the Needle"
+  ],
+  "category": [
+   "Flexibility",
+   "Recovery",
+   "Relaxation",
+   "Hips"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Glutes",
+   "Piriformis",
+   "Outer hip"
+  ],
+  "benefits": [
+   "A gentle, controllable hip stretch",
+   "Kind to the knees compared with Pigeon",
+   "Good after running or sitting"
+  ],
+  "instructions": [
+   "Lie on your back with the knees bent and the feet flat.",
+   "Cross the right ankle over the left thigh, just below the knee.",
+   "Lift the left foot and hold behind the left thigh.",
+   "Draw the legs toward you until you feel a stretch in the right hip.",
+   "Hold, then switch sides."
+  ],
+  "breathing": "Relax the hip on each exhale.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Keep the bottom foot on the floor.",
+  "advanced_variation": "Hold the bottom shin instead of the thigh.",
+  "common_mistakes": [
+   "Lifting the head and shoulders",
+   "Pulling too hard"
+  ],
+  "safety_tips": [
+   "Keep the crossed foot flexed to protect the knee."
+  ],
+  "contraindications": [
+   "Knee injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Everyone",
+   "Runners",
+   "Recovery"
+  ],
+  "image": "/yoga/reclined-pigeon-3.svg",
+  "motion_image": "/yoga/reclined-pigeon.svg",
+  "tags": [
+   "hips",
+   "supine",
+   "glutes"
+  ],
+  "slug": "reclined-pigeon",
+  "sanskrit": "Supta Kapotasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "recovery",
+   "relaxation"
+  ],
+  "body_areas": [
+   "hips"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "pigeon-pose",
+   "happy-baby",
+   "supine-twist"
+  ],
+  "frames": [
+   "/yoga/reclined-pigeon-1.svg",
+   "/yoga/reclined-pigeon-2.svg",
+   "/yoga/reclined-pigeon-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Head-to-Knee Pose",
+  "alternative_names": [
+   "Janu Sirsasana",
+   "Head to Knee Forward Bend"
+  ],
+  "category": [
+   "Flexibility",
+   "Relaxation",
+   "Stress relief",
+   "Back",
+   "Hips",
+   "Hamstrings"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Hamstrings",
+   "Lower back",
+   "Inner thigh of the bent leg"
+  ],
+  "benefits": [
+   "Stretches one hamstring at a time",
+   "Gently rotates and lengthens the spine",
+   "A quiet, calming forward fold"
+  ],
+  "instructions": [
+   "Sit with the legs straight, then bend the left knee and place the left sole against the inner right thigh.",
+   "Turn the chest slightly toward the right leg.",
+   "Breathe in and lengthen the spine with the arms up.",
+   "Breathe out and fold over the right leg, holding the shin, ankle or foot.",
+   "Hold, then switch sides."
+  ],
+  "breathing": "Fold a little deeper on each exhale.",
+  "duration": "1 to 2 minutes each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Sit on a blanket, bend the straight knee or use a strap.",
+  "advanced_variation": "Hold the foot with both hands.",
+  "common_mistakes": [
+   "Rounding the upper back to reach",
+   "Locking the straight knee"
+  ],
+  "safety_tips": [
+   "Never force the fold."
+  ],
+  "contraindications": [
+   "Knee injury of the bent leg",
+   "Back injury"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Flexibility",
+   "Evening routine"
+  ],
+  "image": "/yoga/head-to-knee-pose-3.svg",
+  "motion_image": "/yoga/head-to-knee-pose.svg",
+  "tags": [
+   "seated",
+   "forward fold",
+   "hamstrings"
+  ],
+  "slug": "head-to-knee-pose",
+  "sanskrit": "Janu Sirsasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "relaxation",
+   "stress_relief"
+  ],
+  "body_areas": [
+   "legs",
+   "back",
+   "hips"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "seated-forward-fold",
+   "bound-angle-pose",
+   "pyramid-pose"
+  ],
+  "frames": [
+   "/yoga/head-to-knee-pose-1.svg",
+   "/yoga/head-to-knee-pose-2.svg",
+   "/yoga/head-to-knee-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": {
+   "exercise": "Seated Hamstring",
+   "slug": "seated-hamstring",
+   "image_urls": [
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Hamstring/0.jpg",
+    "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Hamstring/1.jpg"
+   ],
+   "license": "Unlicense (public domain) - yuhonas/free-exercise-db"
+  },
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Seated Spinal Twist",
+  "alternative_names": [
+   "Ardha Matsyendrasana",
+   "Half Lord of the Fishes"
+  ],
+  "category": [
+   "Mobility",
+   "Posture",
+   "Recovery",
+   "Back",
+   "Hips"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Spine",
+   "Obliques",
+   "Outer hips"
+  ],
+  "benefits": [
+   "Rotates the spine and improves its mobility",
+   "Stretches the outer hip and glutes",
+   "Encourages an upright seated posture"
+  ],
+  "instructions": [
+   "Sit tall with the legs straight.",
+   "Bend the right knee and place the right foot outside the left thigh.",
+   "Bend the left leg so the left heel rests near the right hip, or keep it straight.",
+   "Breathe in and lengthen the spine; breathe out and twist to the right, hooking the left elbow outside the right knee.",
+   "Place the right hand behind you. Lengthen on each inhale, twist gently on each exhale. Switch sides."
+  ],
+  "breathing": "Grow taller on the inhale, twist on the exhale.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Keep the bottom leg straight and hug the knee with the arm.",
+  "advanced_variation": "Bind the hands behind the back.",
+  "common_mistakes": [
+   "Rounding the back",
+   "Twisting only from the neck",
+   "Leaning back on the hand"
+  ],
+  "safety_tips": [
+   "Twist only as far as you can while keeping the spine long."
+  ],
+  "contraindications": [
+   "Spinal disc injury",
+   "Pregnancy (twist gently and open)"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Office workers",
+   "Mobility"
+  ],
+  "image": "/yoga/seated-twist-3.svg",
+  "motion_image": "/yoga/seated-twist.svg",
+  "tags": [
+   "twist",
+   "seated",
+   "spine"
+  ],
+  "slug": "seated-twist",
+  "sanskrit": "Ardha Matsyendrasana",
+  "kind": "pose",
+  "goals": [
+   "mobility",
+   "posture",
+   "recovery"
+  ],
+  "body_areas": [
+   "back",
+   "hips"
+  ],
+  "phase": "seated",
+  "time_of_day": "any",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "supine-twist",
+   "staff-pose"
+  ],
+  "frames": [
+   "/yoga/seated-twist-1.svg",
+   "/yoga/seated-twist-2.svg",
+   "/yoga/seated-twist-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Revolved Chair",
+  "alternative_names": [
+   "Parivrtta Utkatasana",
+   "Twisted Chair"
+  ],
+  "category": [
+   "Strength",
+   "Mobility",
+   "Core",
+   "Weight management",
+   "Back"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Quadriceps",
+   "Glutes",
+   "Obliques",
+   "Spine"
+  ],
+  "benefits": [
+   "Combines leg strength with a spinal twist",
+   "Works the obliques",
+   "Builds heat and focus"
+  ],
+  "instructions": [
+   "Come into Chair Pose with the feet together.",
+   "Bring the palms together at the chest.",
+   "Breathe out and twist to the right, hooking the left elbow outside the right thigh.",
+   "Keep the knees level and the hips square.",
+   "Hold, return to centre and twist to the left."
+  ],
+  "breathing": "Lengthen on the inhale, twist on the exhale.",
+  "duration": "15 to 30 seconds each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Keep the hands in prayer without hooking the elbow, or sit higher.",
+  "advanced_variation": "Open the arms with one hand to the floor.",
+  "common_mistakes": [
+   "Knees shifting out of line",
+   "Rounding the back"
+  ],
+  "safety_tips": [
+   "Twist from the ribs, not by forcing with the arm."
+  ],
+  "contraindications": [
+   "Knee or back injury",
+   "Pregnancy"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Strength building"
+  ],
+  "image": "/yoga/revolved-chair-3.svg",
+  "motion_image": "/yoga/revolved-chair.svg",
+  "tags": [
+   "standing",
+   "twist",
+   "legs"
+  ],
+  "slug": "revolved-chair",
+  "sanskrit": "Parivrtta Utkatasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "mobility",
+   "core",
+   "weight_management"
+  ],
+  "body_areas": [
+   "legs",
+   "core",
+   "back"
+  ],
+  "phase": "standing",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "chair-pose",
+   "seated-twist"
+  ],
+  "frames": [
+   "/yoga/revolved-chair-1.svg",
+   "/yoga/revolved-chair-2.svg",
+   "/yoga/revolved-chair-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Dancer Pose",
+  "alternative_names": [
+   "Natarajasana",
+   "Lord of the Dance"
+  ],
+  "category": [
+   "Balance",
+   "Flexibility",
+   "Strength",
+   "Hips",
+   "Shoulders",
+   "Back"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Standing leg",
+   "Quadriceps and hip flexors of the lifted leg",
+   "Chest and shoulders"
+  ],
+  "benefits": [
+   "Challenges balance and focus",
+   "Stretches the front of the lifted thigh and hip",
+   "Opens the chest and shoulders"
+  ],
+  "instructions": [
+   "Stand in Mountain Pose and shift onto the right foot.",
+   "Bend the left knee and hold the inside of the left ankle with the left hand.",
+   "Reach the right arm forward and up.",
+   "Kick the left foot into the hand and slowly tip the chest forward as the leg lifts behind you.",
+   "Keep the hips square and gaze forward. Return slowly and switch sides."
+  ],
+  "breathing": "Calm breaths; use the exhale to steady yourself.",
+  "duration": "15 to 30 seconds each side",
+  "recommended_repetitions": "1 to 2 rounds each side",
+  "beginner_modification": "Hold a wall with the front hand and keep the knee lower.",
+  "advanced_variation": "Lift the back foot higher.",
+  "common_mistakes": [
+   "Back knee swinging out to the side",
+   "Collapsing into the lower back"
+  ],
+  "safety_tips": [
+   "Use a wall for support."
+  ],
+  "contraindications": [
+   "Ankle or knee injury",
+   "Balance disorders"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Balance training"
+  ],
+  "image": "/yoga/dancer-pose-3.svg",
+  "motion_image": "/yoga/dancer-pose.svg",
+  "tags": [
+   "balance",
+   "standing",
+   "backbend"
+  ],
+  "slug": "dancer-pose",
+  "sanskrit": "Natarajasana",
+  "kind": "pose",
+  "goals": [
+   "balance",
+   "flexibility",
+   "strength"
+  ],
+  "body_areas": [
+   "legs",
+   "hips",
+   "shoulders",
+   "back"
+  ],
+  "phase": "balance",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": true,
+  "default_minutes": 0.5,
+  "related": [
+   "tree-pose",
+   "warrior-iii",
+   "bow-pose"
+  ],
+  "frames": [
+   "/yoga/dancer-pose-1.svg",
+   "/yoga/dancer-pose-2.svg",
+   "/yoga/dancer-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Fish Pose",
+  "alternative_names": [
+   "Matsyasana"
+  ],
+  "category": [
+   "Flexibility",
+   "Posture",
+   "Breathing",
+   "Back"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Chest",
+   "Throat",
+   "Upper back"
+  ],
+  "benefits": [
+   "Opens the chest and the front of the neck",
+   "Counters a hunched posture",
+   "Makes room for fuller breaths"
+  ],
+  "instructions": [
+   "Lie on your back with the legs straight.",
+   "Slide the hands under the hips, palms down, and draw the elbows in.",
+   "Press into the forearms and lift the chest.",
+   "Let the head tilt back gently, only resting the crown on the floor if comfortable.",
+   "Hold, then lift the head, lower the chest and rest."
+  ],
+  "breathing": "Breathe into the upper chest.",
+  "duration": "15 to 30 seconds",
+  "recommended_repetitions": "1 to 2 rounds",
+  "beginner_modification": "Lie back over a rolled blanket or block between the shoulder blades.",
+  "advanced_variation": "Lift the legs a few inches.",
+  "common_mistakes": [
+   "Putting weight on the head",
+   "Straining the neck"
+  ],
+  "safety_tips": [
+   "Keep the weight in the forearms, not the head."
+  ],
+  "contraindications": [
+   "Neck injury",
+   "Migraine",
+   "High or low blood pressure"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Posture",
+   "Breathing"
+  ],
+  "image": "/yoga/fish-pose-3.svg",
+  "motion_image": "/yoga/fish-pose.svg",
+  "tags": [
+   "backbend",
+   "supine",
+   "chest"
+  ],
+  "slug": "fish-pose",
+  "sanskrit": "Matsyasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "posture",
+   "breathing"
+  ],
+  "body_areas": [
+   "chest",
+   "neck",
+   "back"
+  ],
+  "phase": "backbend",
+  "time_of_day": "any",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "bridge-pose",
+   "corpse-pose"
+  ],
+  "frames": [
+   "/yoga/fish-pose-1.svg",
+   "/yoga/fish-pose-2.svg",
+   "/yoga/fish-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Reclined Bound Angle",
+  "alternative_names": [
+   "Supta Baddha Konasana",
+   "Reclining Butterfly"
+  ],
+  "category": [
+   "Relaxation",
+   "Stress relief",
+   "Flexibility",
+   "Recovery",
+   "Hips"
+  ],
+  "difficulty": "Beginner",
+  "target_areas": [
+   "Inner thighs",
+   "Groin",
+   "Chest"
+  ],
+  "benefits": [
+   "A restful hip opener",
+   "Opens the chest with the arms relaxed",
+   "Good for winding down before sleep"
+  ],
+  "instructions": [
+   "Lie on your back and bring the soles of your feet together, letting the knees fall open.",
+   "Place cushions or blocks under the knees for support.",
+   "Rest the arms out to the sides or one hand on the belly and one on the chest.",
+   "Close your eyes and relax."
+  ],
+  "breathing": "Slow belly breathing.",
+  "duration": "2 to 5 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Support each knee and lie on a bolster.",
+  "advanced_variation": "Remove the support under the knees.",
+  "common_mistakes": [
+   "Forcing the knees down"
+  ],
+  "safety_tips": [
+   "Support the knees if the inner thighs strain."
+  ],
+  "contraindications": [
+   "Groin or knee injury (use support)"
+  ],
+  "equipment": "Yoga mat, cushions (optional)",
+  "suitable_for": [
+   "Everyone",
+   "Evening routine"
+  ],
+  "image": "/yoga/reclined-bound-angle-2.svg",
+  "motion_image": "/yoga/reclined-bound-angle.svg",
+  "tags": [
+   "restorative",
+   "hips",
+   "supine"
+  ],
+  "slug": "reclined-bound-angle",
+  "sanskrit": "Supta Baddha Konasana",
+  "kind": "pose",
+  "goals": [
+   "relaxation",
+   "stress_relief",
+   "flexibility",
+   "recovery"
+  ],
+  "body_areas": [
+   "hips"
+  ],
+  "phase": "relaxation",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 2,
+  "related": [
+   "bound-angle-pose",
+   "corpse-pose",
+   "happy-baby"
+  ],
+  "frames": [
+   "/yoga/reclined-bound-angle-1.svg",
+   "/yoga/reclined-bound-angle-2.svg"
+  ],
+  "frame_labels": [
+   "Settle",
+   "Rest"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Crow Pose",
+  "alternative_names": [
+   "Bakasana",
+   "Crane Pose",
+   "Kakasana"
+  ],
+  "category": [
+   "Strength",
+   "Balance",
+   "Core",
+   "Shoulders"
+  ],
+  "difficulty": "Intermediate",
+  "target_areas": [
+   "Arms and wrists",
+   "Shoulders",
+   "Core",
+   "Hip flexors"
+  ],
+  "benefits": [
+   "Builds arm, wrist and core strength",
+   "Teaches balance on the hands",
+   "A confidence building first arm balance"
+  ],
+  "instructions": [
+   "Squat with the feet together and the knees wide; place the hands shoulder width apart on the mat.",
+   "Bend the elbows back and place the knees high on the backs of the upper arms.",
+   "Lean forward, shifting the weight into the hands, and look slightly ahead.",
+   "Lift one foot, then the other, drawing the heels toward the hips.",
+   "Hold, then lower the feet with control."
+  ],
+  "breathing": "Keep breathing; exhale as you lean forward.",
+  "duration": "5 to 20 seconds",
+  "recommended_repetitions": "3 to 5 attempts",
+  "beginner_modification": "Keep the toes on a block and lift one foot at a time.",
+  "advanced_variation": "Straighten the arms (crane).",
+  "common_mistakes": [
+   "Looking straight down and tipping forward",
+   "Elbows splaying out",
+   "Jumping into the pose"
+  ],
+  "safety_tips": [
+   "Place a cushion in front of your face while learning."
+  ],
+  "contraindications": [
+   "Wrist, elbow or shoulder injury",
+   "Pregnancy"
+  ],
+  "equipment": "Yoga mat, block or cushion (optional)",
+  "suitable_for": [
+   "Strength building",
+   "Arm balance practice"
+  ],
+  "image": "/yoga/crow-pose-3.svg",
+  "motion_image": "/yoga/crow-pose.svg",
+  "tags": [
+   "arm balance",
+   "core"
+  ],
+  "slug": "crow-pose",
+  "sanskrit": "Bakasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "balance",
+   "core"
+  ],
+  "body_areas": [
+   "shoulders",
+   "core"
+  ],
+  "phase": "core",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "garland-pose",
+   "plank-pose"
+  ],
+  "frames": [
+   "/yoga/crow-pose-1.svg",
+   "/yoga/crow-pose-2.svg",
+   "/yoga/crow-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Wheel Pose",
+  "alternative_names": [
+   "Urdhva Dhanurasana",
+   "Upward Bow",
+   "Full Wheel"
+  ],
+  "category": [
+   "Flexibility",
+   "Strength",
+   "Back",
+   "Shoulders",
+   "Hips"
+  ],
+  "difficulty": "Advanced",
+  "target_areas": [
+   "Spine",
+   "Shoulders",
+   "Hip flexors",
+   "Arms and legs"
+  ],
+  "benefits": [
+   "A deep backbend that opens the shoulders, chest and hips",
+   "Strengthens the arms, legs and back",
+   "Builds on Bridge Pose"
+  ],
+  "instructions": [
+   "Practise this only after the intermediate poses feel steady, ideally with a qualified teacher.",
+   "Lie on your back with the knees bent and the feet hip width apart, close to the hips.",
+   "Place the hands beside the ears with the fingers pointing toward the shoulders.",
+   "Press into the hands and feet and lift onto the crown of the head, keeping the elbows in.",
+   "Straighten the arms and lift the head, pressing the chest toward the wall behind you.",
+   "Lower slowly by tucking the chin and placing the upper back down first. Rest with the knees hugged."
+  ],
+  "breathing": "Keep breathing; avoid holding the breath.",
+  "duration": "5 to 15 seconds",
+  "recommended_repetitions": "1 to 3 rounds",
+  "beginner_modification": "Stay in Bridge Pose or use two blocks against a wall under the hands.",
+  "advanced_variation": "Walk the hands and feet closer.",
+  "common_mistakes": [
+   "Elbows and knees splaying out",
+   "Dumping all the bend into the lower back",
+   "Lowering onto the head"
+  ],
+  "safety_tips": [
+   "Warm up well with Bridge, Camel and shoulder openers first.",
+   "Come down slowly; never collapse onto the neck."
+  ],
+  "contraindications": [
+   "Back, neck, wrist or shoulder injury",
+   "High blood pressure or heart conditions",
+   "Pregnancy"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Experienced practitioners"
+  ],
+  "image": "/yoga/wheel-pose-3.svg",
+  "motion_image": "/yoga/wheel-pose.svg",
+  "tags": [
+   "backbend",
+   "advanced",
+   "supine"
+  ],
+  "slug": "wheel-pose",
+  "sanskrit": "Urdhva Dhanurasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "strength"
+  ],
+  "body_areas": [
+   "back",
+   "shoulders",
+   "chest",
+   "hips"
+  ],
+  "phase": "backbend",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "bridge-pose",
+   "camel-pose",
+   "bow-pose"
+  ],
+  "frames": [
+   "/yoga/wheel-pose-1.svg",
+   "/yoga/wheel-pose-2.svg",
+   "/yoga/wheel-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Supported Headstand",
+  "alternative_names": [
+   "Salamba Sirsasana",
+   "Headstand"
+  ],
+  "category": [
+   "Strength",
+   "Balance",
+   "Core",
+   "Shoulders"
+  ],
+  "difficulty": "Advanced",
+  "target_areas": [
+   "Shoulders",
+   "Upper back",
+   "Core"
+  ],
+  "benefits": [
+   "Builds shoulder and core strength",
+   "Trains balance and body awareness upside down",
+   "A classic inversion for experienced practitioners"
+  ],
+  "instructions": [
+   "Practise this only after the intermediate poses feel steady, ideally with a qualified teacher.",
+   "Kneel and place the forearms on the mat with the fingers interlaced and the elbows shoulder width apart.",
+   "Place the back of the head into the cupped hands, with the top of the head lightly on the mat.",
+   "Lift the knees and walk the feet in until the hips are over the shoulders.",
+   "Draw the knees in and lift the feet with control, then slowly straighten the legs up.",
+   "Press firmly through the forearms so very little weight is on the head. Come down the same way and rest in Child's Pose."
+  ],
+  "breathing": "Smooth breathing; come down if the breath becomes strained.",
+  "duration": "10 to 30 seconds",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Practise Dolphin Pose, or learn with your back to a wall and a teacher present.",
+  "advanced_variation": "Hold longer away from the wall.",
+  "common_mistakes": [
+   "Weight on the head and neck",
+   "Kicking up with momentum",
+   "Elbows sliding wide"
+  ],
+  "safety_tips": [
+   "Learn with a qualified teacher.",
+   "The forearms carry the weight, not the neck.",
+   "Never practise on a soft bed or hard floor without a mat."
+  ],
+  "contraindications": [
+   "Any neck or spine condition",
+   "High blood pressure, heart conditions, glaucoma or eye problems",
+   "Pregnancy",
+   "Headache or migraine"
+  ],
+  "equipment": "Yoga mat",
+  "suitable_for": [
+   "Experienced practitioners"
+  ],
+  "image": "/yoga/supported-headstand-3.svg",
+  "motion_image": "/yoga/supported-headstand.svg",
+  "tags": [
+   "inversion",
+   "advanced",
+   "balance"
+  ],
+  "slug": "supported-headstand",
+  "sanskrit": "Salamba Sirsasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "balance",
+   "core"
+  ],
+  "body_areas": [
+   "shoulders",
+   "core"
+  ],
+  "phase": "inversion",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "dolphin-pose",
+   "supported-shoulder-stand",
+   "handstand"
+  ],
+  "frames": [
+   "/yoga/supported-headstand-1.svg",
+   "/yoga/supported-headstand-2.svg",
+   "/yoga/supported-headstand-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Supported Shoulder Stand",
+  "alternative_names": [
+   "Salamba Sarvangasana",
+   "Shoulder Stand"
+  ],
+  "category": [
+   "Strength",
+   "Relaxation",
+   "Core",
+   "Shoulders"
+  ],
+  "difficulty": "Advanced",
+  "target_areas": [
+   "Shoulders",
+   "Core",
+   "Upper back"
+  ],
+  "benefits": [
+   "An inversion that many people find calming",
+   "Strengthens the shoulders and core",
+   "Usually paired with Plow and Fish"
+  ],
+  "instructions": [
+   "Practise this only after the intermediate poses feel steady, ideally with a qualified teacher.",
+   "Lie on your back with folded blankets under the shoulders and the head on the floor.",
+   "Bend the knees and lift the hips, supporting the back with the hands.",
+   "Walk the hands toward the shoulder blades and straighten the legs up.",
+   "Keep the weight on the shoulders and upper arms, never on the neck; do not turn the head.",
+   "Come down slowly by bending the knees and rolling down one vertebra at a time."
+  ],
+  "breathing": "Breathe gently; the throat feels compressed, so keep it soft.",
+  "duration": "30 seconds to 2 minutes",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Practise Legs Up the Wall instead.",
+  "advanced_variation": "Release the hands to the floor.",
+  "common_mistakes": [
+   "Turning the head",
+   "Weight on the neck",
+   "Elbows sliding wide"
+  ],
+  "safety_tips": [
+   "Use folded blankets under the shoulders to protect the neck.",
+   "Never turn the head while inverted."
+  ],
+  "contraindications": [
+   "Neck injury",
+   "High blood pressure, glaucoma or eye problems",
+   "Pregnancy",
+   "Menstruation if uncomfortable"
+  ],
+  "equipment": "Yoga mat, folded blankets",
+  "suitable_for": [
+   "Experienced practitioners"
+  ],
+  "image": "/yoga/supported-shoulder-stand-3.svg",
+  "motion_image": "/yoga/supported-shoulder-stand.svg",
+  "tags": [
+   "inversion",
+   "advanced",
+   "supine"
+  ],
+  "slug": "supported-shoulder-stand",
+  "sanskrit": "Salamba Sarvangasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "relaxation",
+   "core"
+  ],
+  "body_areas": [
+   "shoulders",
+   "core",
+   "neck"
+  ],
+  "phase": "inversion",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 1,
+  "related": [
+   "plow-pose",
+   "fish-pose",
+   "legs-up-the-wall"
+  ],
+  "frames": [
+   "/yoga/supported-shoulder-stand-1.svg",
+   "/yoga/supported-shoulder-stand-2.svg",
+   "/yoga/supported-shoulder-stand-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Plow Pose",
+  "alternative_names": [
+   "Halasana"
+  ],
+  "category": [
+   "Flexibility",
+   "Relaxation",
+   "Back",
+   "Shoulders",
+   "Hamstrings"
+  ],
+  "difficulty": "Advanced",
+  "target_areas": [
+   "Spine",
+   "Hamstrings",
+   "Shoulders"
+  ],
+  "benefits": [
+   "Stretches the whole back of the body",
+   "Often taught as a calming inversion",
+   "A counter stretch after backbends"
+  ],
+  "instructions": [
+   "Practise this only after the intermediate poses feel steady, ideally with a qualified teacher.",
+   "From Supported Shoulder Stand, slowly lower the feet over your head toward the floor.",
+   "Keep the toes tucked and the legs straight, or rest the feet on a chair or blocks.",
+   "Keep supporting the back with the hands or interlace them on the floor.",
+   "Keep the neck still and the throat soft.",
+   "Roll down slowly with control."
+  ],
+  "breathing": "Gentle breaths.",
+  "duration": "15 to 60 seconds",
+  "recommended_repetitions": "1 round",
+  "beginner_modification": "Rest the feet on a chair seat behind your head.",
+  "advanced_variation": "Bend the knees toward the ears (ear pressure pose).",
+  "common_mistakes": [
+   "Turning the head",
+   "Collapsing weight onto the neck"
+  ],
+  "safety_tips": [
+   "Use blankets under the shoulders."
+  ],
+  "contraindications": [
+   "Neck or back injury",
+   "High blood pressure",
+   "Pregnancy"
+  ],
+  "equipment": "Yoga mat, folded blankets",
+  "suitable_for": [
+   "Experienced practitioners"
+  ],
+  "image": "/yoga/plow-pose-3.svg",
+  "motion_image": "/yoga/plow-pose.svg",
+  "tags": [
+   "inversion",
+   "advanced",
+   "forward fold"
+  ],
+  "slug": "plow-pose",
+  "sanskrit": "Halasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "relaxation"
+  ],
+  "body_areas": [
+   "back",
+   "legs",
+   "shoulders",
+   "neck"
+  ],
+  "phase": "inversion",
+  "time_of_day": "evening",
+  "energy": "calming",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "supported-shoulder-stand",
+   "fish-pose"
+  ],
+  "frames": [
+   "/yoga/plow-pose-1.svg",
+   "/yoga/plow-pose-2.svg",
+   "/yoga/plow-pose-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Handstand (at a wall)",
+  "alternative_names": [
+   "Adho Mukha Vrksasana",
+   "Handstand"
+  ],
+  "category": [
+   "Strength",
+   "Balance",
+   "Core",
+   "Shoulders"
+  ],
+  "difficulty": "Advanced",
+  "target_areas": [
+   "Shoulders",
+   "Arms and wrists",
+   "Core"
+  ],
+  "benefits": [
+   "Builds strong shoulders, arms and core",
+   "Trains balance upside down",
+   "Progressive and measurable practice"
+  ],
+  "instructions": [
+   "Practise this only after the intermediate poses feel steady, ideally with a qualified teacher.",
+   "Place the hands shoulder width apart about a hand's length from a wall.",
+   "Come into a short Downward Dog and lift one leg.",
+   "Bend the standing knee and hop lightly, swinging the lifted leg up toward the wall.",
+   "Bring both heels to the wall, press the floor away and draw the ribs in.",
+   "Come down one leg at a time and rest in Child's Pose."
+  ],
+  "breathing": "Steady breathing; come down if you feel strain.",
+  "duration": "10 to 30 seconds",
+  "recommended_repetitions": "3 to 5 attempts",
+  "beginner_modification": "Practise Dolphin and L shaped handstand with the feet on the wall.",
+  "advanced_variation": "Float the heels away from the wall.",
+  "common_mistakes": [
+   "Banana back with ribs flaring",
+   "Kicking up hard",
+   "Hands too far from the wall"
+  ],
+  "safety_tips": [
+   "Always practise at a wall at first.",
+   "Learn to cartwheel out safely."
+  ],
+  "contraindications": [
+   "Wrist, shoulder or neck injury",
+   "High blood pressure or eye conditions",
+   "Pregnancy"
+  ],
+  "equipment": "Wall, yoga mat",
+  "suitable_for": [
+   "Experienced practitioners"
+  ],
+  "image": "/yoga/handstand-3.svg",
+  "motion_image": "/yoga/handstand.svg",
+  "tags": [
+   "inversion",
+   "advanced",
+   "arm balance"
+  ],
+  "slug": "handstand",
+  "sanskrit": "Adho Mukha Vrksasana",
+  "kind": "pose",
+  "goals": [
+   "strength",
+   "balance",
+   "core"
+  ],
+  "body_areas": [
+   "shoulders",
+   "core",
+   "full_body"
+  ],
+  "phase": "inversion",
+  "time_of_day": "morning",
+  "energy": "energizing",
+  "sides": false,
+  "default_minutes": 0.5,
+  "related": [
+   "downward-dog",
+   "dolphin-pose",
+   "supported-headstand"
+  ],
+  "frames": [
+   "/yoga/handstand-1.svg",
+   "/yoga/handstand-2.svg",
+   "/yoga/handstand-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ },
+ {
+  "name": "Front Splits",
+  "alternative_names": [
+   "Hanumanasana",
+   "Monkey Pose"
+  ],
+  "category": [
+   "Flexibility",
+   "Mobility",
+   "Hips",
+   "Hamstrings"
+  ],
+  "difficulty": "Advanced",
+  "target_areas": [
+   "Hamstrings of the front leg",
+   "Hip flexors of the back leg"
+  ],
+  "benefits": [
+   "A long term flexibility goal for the hamstrings and hip flexors",
+   "Builds patience and body awareness",
+   "Measurable progress with blocks"
+  ],
+  "instructions": [
+   "Practise this only after the intermediate poses feel steady, ideally with a qualified teacher.",
+   "Warm up with Low Lunge and Half Splits (front leg straight, hips over the back knee).",
+   "From Low Lunge, place blocks under the hands and slowly slide the front heel forward.",
+   "Let the back leg slide back with the knee pointing down, keeping the hips square.",
+   "Stop where you feel a strong but comfortable stretch and support the hips with a block or bolster.",
+   "Come out slowly by bending the front knee. Repeat on the other side."
+  ],
+  "breathing": "Slow, long breaths; never force the stretch.",
+  "duration": "30 seconds to 1 minute each side",
+  "recommended_repetitions": "1 round each side",
+  "beginner_modification": "Stay in Half Splits, or support the hips on a bolster.",
+  "advanced_variation": "Lower fully and raise the arms.",
+  "common_mistakes": [
+   "Forcing down with bouncing",
+   "Twisting the hips open",
+   "Skipping the warm up"
+  ],
+  "safety_tips": [
+   "Use blocks and stop well before pain.",
+   "Progress over weeks, not in one session."
+  ],
+  "contraindications": [
+   "Hamstring or groin injury",
+   "Hip or knee injury"
+  ],
+  "equipment": "Yoga mat, blocks",
+  "suitable_for": [
+   "Experienced practitioners",
+   "Dancers and martial artists"
+  ],
+  "image": "/yoga/full-splits-3.svg",
+  "motion_image": "/yoga/full-splits.svg",
+  "tags": [
+   "flexibility",
+   "advanced",
+   "hamstrings"
+  ],
+  "slug": "full-splits",
+  "sanskrit": "Hanumanasana",
+  "kind": "pose",
+  "goals": [
+   "flexibility",
+   "mobility"
+  ],
+  "body_areas": [
+   "legs",
+   "hips"
+  ],
+  "phase": "cooldown",
+  "time_of_day": "evening",
+  "energy": "neutral",
+  "sides": true,
+  "default_minutes": 1,
+  "related": [
+   "low-lunge",
+   "pyramid-pose",
+   "head-to-knee-pose"
+  ],
+  "frames": [
+   "/yoga/full-splits-1.svg",
+   "/yoga/full-splits-2.svg",
+   "/yoga/full-splits-3.svg"
+  ],
+  "frame_labels": [
+   "Start",
+   "Transition",
+   "Final"
+  ],
+  "photo_reference": null,
+  "image_license": "Original FitBot motion figure (MIT)"
+ }
+]

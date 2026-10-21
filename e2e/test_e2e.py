@@ -211,3 +211,44 @@ def test_log_form_layout_fits_panel(browser, width):
     })()""")
     ctx.close()
     assert m["name"] >= 150 and m["spill"] == 0 and not m["overlap"], m
+
+
+def test_yoga_section_filters_detail_routine_and_chat(page):
+    email, pwd = f"e2e.{secrets.token_hex(4)}@example.com", "E2e-" + secrets.token_urlsafe(10)
+    page.goto(f"{BASE}/register")
+    inputs = page.locator(".auth-card input")
+    for i, v in enumerate(["Yoga Tester", email, pwd, pwd]):
+        inputs.nth(i).fill(v)
+    page.get_by_role("button", name="Create account").click()
+    expect(page.locator(".profile-form")).to_be_visible()
+
+    # Yoga section in the sidebar, below Dashboard and Chat
+    nav = page.locator(".nav a").all_inner_texts()
+    assert nav.index("Yoga") == nav.index("Chat") + 1
+    page.get_by_role("link", name="Yoga").click()
+    expect(page.locator(".yoga-card img").first).to_be_visible()
+
+    # filters and search
+    page.get_by_role("button", name="Advanced").click()
+    badges = page.locator(".yoga-card .badge").all_inner_texts()
+    assert badges and all(b in ("Advanced", "Both sides") for b in badges)
+    page.get_by_role("button", name="Clear filters").first.click()
+    page.get_by_role("searchbox", name="Search yoga poses").fill("warrior")
+    expect(page.locator(".yoga-card")).to_have_count(4)   # Warrior I, II, III and Reverse Warrior
+
+    # pose page: motion figure, three key positions, safety
+    page.locator('.yoga-card a[href="/yoga/warrior-ii"]').click()
+    expect(page.get_by_role("heading", name="Warrior II")).to_be_visible()
+    expect(page.locator(".frame-strip img")).to_have_count(3)
+    expect(page.locator(".pose-safety")).to_be_visible()
+
+    # routine builder
+    page.goto(f"{BASE}/yoga?tab=routine")
+    expect(page.locator(".yoga-routine .yoga-step").first).to_be_visible()
+
+    # chat uses the yoga library
+    page.get_by_role("button", name="New chat").first.click()
+    bot = ask(page, "Give me a 15 minute beginner yoga routine")
+    expect(bot.locator(".yoga-routine")).to_be_visible()
+    bot = ask(page, "Which yoga poses target the hips?")
+    expect(bot.locator(".yoga-card").first).to_be_visible()

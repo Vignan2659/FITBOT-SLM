@@ -31,6 +31,8 @@ Everything shown on screen is real output from the app.
 
 **Nutrition from USDA FoodData Central.** 111 foods with calories, macros, vitamins and minerals per 100 g or per portion. If a value is not in the USDA data, FitBot does not make one up.
 
+**Yoga.** 63 poses and breathing practices, each with an animated figure that shows the movement from start to final position, step by step instructions, breathing cues, easier and harder versions, and safety notes. Filter by difficulty, goal or body area, open a pose page, or build a timed routine for your goal, level and time of day. In the chat, FitBot answers yoga questions from the same data ("Give me a 15 minute beginner yoga routine", "Which yoga poses target the hips?", "Explain how to perform Warrior II"). More in [docs/YOGA.md](docs/YOGA.md).
+
 **Workout plans.** Beginner to advanced, gym or home, dumbbells or bodyweight, 1 to 6 days a week, with sets, reps and rest.
 
 **My workouts.** Save plans from the chat, log what you trained, and see your weekly activity and streaks.
@@ -53,6 +55,10 @@ Everything runs locally. No cloud AI service is used and your chats stay in a sm
     <td><img src="media/screenshots/dashboard.jpg" alt="Dashboard"><br><sub><b>Dashboard.</b> Quick start questions and the exercise explorer.</sub></td>
   </tr>
   <tr>
+    <td><img src="media/screenshots/yoga.jpg" alt="Yoga section"><br><sub><b>Yoga.</b> 63 poses with motion figures, filters for difficulty, goal and body area.</sub></td>
+    <td><img src="media/screenshots/yoga_pose.jpg" alt="Yoga pose page"><br><sub><b>Pose pages.</b> How the pose moves from start to final position, steps, breathing and safety.</sub></td>
+  </tr>
+  <tr>
     <td><img src="media/screenshots/workouts.jpg" alt="My workouts"><br><sub><b>My workouts.</b> Log sessions, track streaks and your most trained exercises.</sub></td>
     <td><img src="media/screenshots/login.jpg" alt="Login"><br><sub><b>Accounts.</b> Every user gets a private chat history.</sub></td>
   </tr>
@@ -68,11 +74,12 @@ flowchart LR
     B --> I[Topic detection]
     B --> R[Exercise, food and<br/>guidance lookup]
     B --> P[Workout planner]
-    I & R & P --> M[FitBot 4B model<br/>on the Mac GPU]
+    B --> Y[Yoga library and<br/>routine builder]
+    I & R & P & Y --> M[FitBot 4B model<br/>on the Mac GPU]
     M --> A[Answer with cards<br/>and plans]
 ```
 
-When you ask something, the backend first works out the topic, then looks up the facts the answer needs (exercise details, USDA numbers or a generated plan) and gives them to the model together with your question. The model writes the answer around those facts instead of guessing, and the cards you see come straight from the data.
+When you ask something, the backend first works out the topic, then looks up the facts the answer needs (exercise details, USDA numbers, yoga poses or a generated plan or routine) and gives them to the model together with your question. The model writes the answer around those facts instead of guessing, and the cards you see come straight from the data.
 More detail in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## The model
@@ -170,7 +177,7 @@ cd frontend && npm run dev                                                # http
 Tests:
 
 ```bash
-cd backend && ../.venv/bin/python -m pytest          # 81 backend tests, about 20 seconds
+cd backend && ../.venv/bin/python -m pytest          # 104 backend tests, about 20 seconds
 cd frontend && npm test                              # web app tests
 .venv/bin/python evaluation/run_test_suites.py --out evaluation/my_results.json   # 163 checks with the real model
 ```
@@ -190,6 +197,7 @@ FITBOT-SLM/
 ├── data/
 │   ├── exercises/    871 exercises (plus the 58 hand picked ones from version 1)
 │   ├── nutrition/    111 foods from USDA FoodData Central
+│   ├── yoga/         63 yoga poses and practices, plus yoga guidance passages
 │   ├── knowledge/    guidance passages used when answering
 │   ├── processed_v2/ the 5,470 training conversations
 │   ├── processed/    the first dataset (its 97 test questions are used to compare both models)
@@ -197,7 +205,7 @@ FITBOT-SLM/
 ├── training/         the QLoRA training notebook and the notebook from the actual run
 ├── evaluation/       test suites, evaluation scripts and all results
 ├── models/           topic classifier (the 4B model is downloaded by setup.sh)
-├── scripts/          model setup and the scripts that build the datasets
+├── scripts/          model setup and the scripts that build the datasets (scripts/yoga builds the yoga data and figures)
 ├── docs/             architecture, datasets, model choice, training and evaluation
 ├── marketing/        scripts that make the film
 └── media/            the film, preview and screenshots used on this page
@@ -206,6 +214,7 @@ FITBOT-SLM/
 ## Data and credits
 
 * Exercises and photos: [free exercise db](https://github.com/yuhonas/free-exercise-db) by yuhonas, public domain (Unlicense)
+* Yoga poses, text and motion figures: written and drawn for this project (MIT)
 * Nutrition: USDA Agricultural Research Service, FoodData Central, SR Legacy 2018, CC0
 * Intent examples: [harshmakwana/fitness-intent](https://huggingface.co/datasets/harshmakwana/fitness-intent), MIT
 * Base model: [Qwen3 4B Instruct 2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), Apache 2.0

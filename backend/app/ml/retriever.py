@@ -38,6 +38,38 @@ class KnowledgeRetriever:
             from sklearn.feature_extraction.text import TfidfVectorizer
             self._vec = TfidfVectorizer(ngram_range=(1, 2), stop_words="english", sublinear_tf=True)
             self._tfidf = self._vec.fit_transform(self.texts)
+        self.collections: dict[str, dict] = {}
+
+    def add_collection(self, name: str, passages: list[dict]) -> None:
+        """A separate searchable set of passages (e.g. the yoga library) that shares the same embedding model.
+        Kept apart from the main knowledge base so adding documents never changes the main search results."""
+        texts = [f"{p['title']}. {p['text']}" for p in passages]
+        col = {"passages": passages}
+        if not passages:
+            col["passages"] = []
+        elif self._model is not None:
+            col["emb"] = self._model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
+        else:
+            from sklearn.feature_extraction.text import TfidfVectorizer
+            col["vec"] = TfidfVectorizer(ngram_range=(1, 2), stop_words="english", sublinear_tf=True)
+            col["tfidf"] = col["vec"].fit_transform(texts)
+        self.collections[name] = col
+
+    def search_collection(self, name: str, query: str, k: int = 3, topic: str | None = None,
+                          min_score: float | None = None) -> list[dict]:
+        col = self.collections.get(name)
+        if not col or not col["passages"]:
+            return []
+        if self._model is not None:
+            q = self._model.encode([query], normalize_embeddings=True, show_progress_bar=False)[0]
+            s = (col["emb"] @ q).astype(float)
+        else:
+            s = (col["tfidf"] @ col["vec"].transform([query]).T).toarray().ravel()
+        if topic:
+            s = s + np.array([0.05 if p.get("topic") == topic else 0.0 for p in col["passages"]])
+        threshold = min_score if min_score is not None else (0.25 if self.backend != "tfidf" else 0.04)
+        order = np.argsort(-s)[:k]
+        return [{**col["passages"][i], "score": round(float(s[i]), 3)} for i in order if s[i] >= threshold]
 
     def encode(self, texts: list[str]) -> np.ndarray:
         """Normalised sentence embeddings (shared with the intent classifier)."""

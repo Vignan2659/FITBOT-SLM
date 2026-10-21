@@ -30,3 +30,8 @@ export const IconThumbDown = (p) => <svg {...base} {...p}><path d="M17 14V3h4v11
 export const IconMic = (p) => <svg {...base} {...p}><rect x="9" y="2" width="6" height="12" rx="3" /><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8" /></svg>;
 export const IconSpeaker = (p) => <svg {...base} {...p}><path d="M11 5 6 9H2v6h4l5 4zM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14" /></svg>;
 export const IconStop = (p) => <svg {...base} {...p}><rect x="6" y="6" width="12" height="12" rx="1.5" /></svg>;
+export const IconLotus = (p) => (
+  <svg {...base} {...p}><path d="M12 20c-4 0-8-2-9-6 3 0 6 1 9 4 3-3 6-4 9-4-1 4-5 6-9 6z" /><path d="M12 18c-2-2-3-5-3-8 1-2 2-4 3-6 1 2 2 4 3 6 0 3-1 6-3 8z" /></svg>
+);
+export const IconSearch = (p) => <svg {...base} {...p}><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>;
+export const IconClock = (p) => <svg {...base} {...p}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>;

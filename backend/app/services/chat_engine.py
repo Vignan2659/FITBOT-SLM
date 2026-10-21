@@ -21,6 +21,7 @@ from app.services import safety
 from app.services.catalog import Catalog, exercise_card, food_card
 from app.services.nlu import NLU, Slots
 from app.services.planner import Planner, plan_to_context
+from app.services.yoga import (YOGA_WORD_RE, YogaLibrary, YogaQuery, format_routine, format_yoga_pose, yoga_card)
 
 OOD_MESSAGE = ("I'm focused on fitness, nutrition and wellness. Ask me something about workouts, exercise, food, "
                "recovery or healthy lifestyle.")
@@ -37,8 +38,9 @@ REFUSAL_PHRASES = ["I'm focused", " I'm focused", "focused on fitness", "Sorry, 
 
 class ChatEngine:
     def __init__(self, catalog: Catalog, nlu: NLU, retriever: KnowledgeRetriever, generate: GenerateFn,
-                 history_turns: int = 1):
+                 history_turns: int = 1, yoga: YogaLibrary | None = None):
         self.catalog, self.nlu, self.retriever, self.generate = catalog, nlu, retriever, generate
+        self.yoga = yoga if yoga is not None and yoga.poses else None
         self.planner = Planner(catalog.exercises)
         self.retriever_by_id = {p["id"]: p for p in retriever.passages}
         self.history_turns = history_turns
@@ -87,14 +89,111 @@ class ChatEngine:
             return prev, True
         return intent, False
 
+    # ------------------------------------------------------------------ yoga
+    def _yoga_query(self, message: str, slots: Slots, state: dict, profile: dict | None) -> tuple[YogaQuery | None, bool]:
+        level = (slots.level or "").capitalize() or None
+        yq = self.yoga.understand(message, level=level)
+        prev = state.get("yoga") if state.get("intent") == "yoga" else None
+        followup = False
+        if yq is None and prev:
+            # "make it 20 minutes", "I'm a beginner", "what about the hips?" after a yoga answer
+            probe = self.yoga.understand("yoga " + message, level=level)
+            short = len(message.split()) <= 9
+            if probe and short and not slots.foods and (probe.goal or probe.area or probe.minutes or probe.level
+                                                        or probe.time_of_day or probe.poses or FOLLOWUP_RE.match(message)):
+                yq, followup = probe, True
+                if not probe.poses:
+                    yq.mode = prev.get("mode", "routine") if prev.get("mode") != "detail" else "list"
+        if yq is None:
+            return None, False
+        if prev and followup:
+            for key in ("goal", "area", "minutes", "time_of_day", "level"):
+                if getattr(yq, key) is None and prev.get(key):
+                    setattr(yq, key, prev[key])
+        if yq.level is None:
+            fl = ((profile or {}).get("fitness_level") or state.get("level") or "")
+            yq.level = fl.capitalize() if fl.capitalize() in ("Beginner", "Intermediate", "Advanced") else None
+        return yq, followup
+
+    def _respond_yoga(self, message: str, yq: YogaQuery, is_followup: bool, history: list[dict], state: dict,
+                      profile: dict | None, result: dict, t0: float) -> tuple[dict, dict]:
+        context: list[str] = []
+        poses: list[dict] = []
+        routine = None
+        query = message
+        if is_followup and history:
+            last_user = next((h["content"] for h in reversed(history) if h["role"] == "user"), "")
+            query = f"{last_user} {message}"
+        if yq.mode == "detail":
+            poses = yq.poses[:2]
+            context += [format_yoga_pose(p, detail=True) for p in poses]
+        elif yq.mode == "routine":
+            routine = self.yoga.routine(minutes=yq.minutes or 15, level=yq.level, goal=yq.goal, area=yq.area,
+                                        time_of_day=yq.time_of_day, gentle=yq.gentle)
+            context.append(format_routine(routine))
+            poses = [self.yoga.get(s["slug"]) for s in routine["steps"]]
+            highlights = [p for p in poses if p["kind"] == "pose"][1:4]
+            context += [format_yoga_pose(p) for p in highlights]
+        else:
+            ranked = [p["slug"] for p in self.retriever.search_collection("yoga_poses", query, k=20, min_score=-1.0)]
+            poses = self.yoga.suggest(goal=yq.goal, area=yq.area, level=yq.level, ranked=ranked, gentle=yq.gentle)
+            context += [format_yoga_pose(p) for p in poses[:5]]
+        passages = self.retriever.search_collection("yoga", query, k=2 if yq.mode != "detail" else 1)
+        if yq.gentle or any(p["difficulty"] == "Advanced" for p in poses[:2]):
+            safety_p = next((p for p in self.retriever.collections.get("yoga", {}).get("passages", [])
+                             if p["id"] == ("yoga-not-treatment" if yq.gentle else "yoga-advanced")), None)
+            if safety_p and safety_p["id"] not in [p["id"] for p in passages]:
+                passages = [safety_p] + passages[:1]
+        context += [format_passage(p) for p in passages]
+        result["sources"] = [{"type": "guidance", "title": p["title"], "source": p["source"]} for p in passages]
+        result["sources"].append({"type": "yoga", "title": "FitBot yoga library", "source": "/yoga"})
+
+        prompt_profile = {"fitness_level": (yq.level or "").lower() or None, "goal": (profile or {}).get("goal"),
+                          "equipment": None, "location": None, "dietary_preference": None,
+                          "age": (profile or {}).get("age")}
+        window = history[-2 * self.history_turns:] if self.history_turns > 0 else []
+        recent = [{"role": h["role"], "content": h["content"][:700]} for h in window]
+        messages = build_messages(message, context, prompt_profile, recent)
+        answer, gen_seconds = self.generate(messages)
+        refusal_retry = False
+        if MODEL_REFUSAL_RE.search(answer):
+            try:
+                answer, extra_s = self.generate(messages, avoid=REFUSAL_PHRASES)
+            except TypeError:
+                extra_s = 0.0
+            gen_seconds += extra_s
+            refusal_retry = True
+        answer = answer.strip() or "Sorry, I couldn't generate an answer. Could you rephrase your question?"
+        flagged = safety.screen_output(answer)
+        if flagged:
+            answer = safety.SAFE_FALLBACK
+        advanced = any(p["difficulty"] == "Advanced" for p in poses[:2])
+        if yq.gentle or advanced or flagged:
+            if yq.gentle:
+                answer = safety.ensure_referral(answer)
+            answer = safety.with_disclaimer(answer)
+            result["safety"] = {"category": "yoga_gentle" if yq.gentle else "yoga_advanced" if advanced else "unsafe_output_replaced",
+                                "guardrail": bool(flagged), "output_flagged": flagged, "disclaimer": safety.DISCLAIMER}
+
+        cards = poses if yq.mode != "routine" else []
+        result.update(answer=answer, intent="yoga", category="yoga", is_followup=is_followup,
+                      yoga_poses=[yoga_card(p) for p in cards], yoga_routine=routine, context_used=context)
+        result["model"] = {"generated": True, "refusal_retry": refusal_retry, "generation_seconds": round(gen_seconds, 3),
+                           "total_seconds": round(time.time() - t0, 3)}
+        state["intent"] = "yoga"
+        state["muscle_group"] = None
+        state["yoga"] = {"mode": yq.mode, "goal": yq.goal, "area": yq.area, "minutes": yq.minutes,
+                         "time_of_day": yq.time_of_day, "level": yq.level}
+        return result, state
+
     # ------------------------------------------------------------------ main entry
     def respond(self, message: str, history: list[dict], state: dict | None, profile: dict | None) -> tuple[dict, dict]:
         t0 = time.time()
         state = dict(state or {})
         message = message.strip()
         result = {"answer": "", "category": "general_fitness", "intent": "general_fitness", "intent_confidence": 0.0,
-                  "exercises": [], "foods": [], "workout_plan": None, "sources": [], "safety": None,
-                  "is_followup": False, "model": {}}
+                  "exercises": [], "foods": [], "workout_plan": None, "yoga_poses": [], "yoga_routine": None,
+                  "sources": [], "safety": None, "is_followup": False, "model": {}}
 
         # 1. safety screening
         sres = safety.screen_input(message)
@@ -113,6 +212,11 @@ class ChatEngine:
         intent, is_followup = self._resolve_intent(message, intent, slots, state)
         if sres.category:  # soft medical flag (pregnancy, chronic condition)
             intent = "medical_safety"
+        elif self.yoga is not None:
+            yq, yoga_followup = self._yoga_query(message, slots, state, profile)
+            if yq is not None:
+                result.update(intent_confidence=round(conf, 3), intent_top=top)
+                return self._respond_yoga(message, yq, yoga_followup, history, state, profile, result, t0)
         result.update(intent=intent, category=intent, intent_confidence=round(conf, 3), is_followup=is_followup,
                       intent_top=top)
 
@@ -182,6 +286,8 @@ class ChatEngine:
                 last_user = next((h["content"] for h in reversed(history) if h["role"] == "user"), "")
                 query = f"{last_user} {message}"
             passages = self.retriever.search(query, k=2, topic=intent)
+            if self.yoga is not None and YOGA_WORD_RE.search(message):
+                passages += self.retriever.search_collection("yoga", query, k=1)   # e.g. "Is yoga enough exercise?"
             context += [format_passage(p) for p in passages]
             result["sources"] += [{"type": "guidance", "title": p["title"], "source": p["source"]} for p in passages]
         if foods:

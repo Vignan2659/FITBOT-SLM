@@ -1,8 +1,8 @@
 // FitBot service worker (registered only in production builds).
 // - /api/* is never cached: answers, accounts and logs always come from the server.
-// - Hashed build files (/assets/*) are cached on first use.
+// - Hashed build files (/assets/*) and yoga motion figures (/yoga/*.svg) are cached on first use.
 // - Page navigations go to the network first and fall back to the cached app shell when offline.
-const CACHE = "fitbot-shell-v1";
+const CACHE = "fitbot-shell-v2";
 const SHELL = ["/", "/manifest.json", "/favicon.svg", "/icon-192.png", "/veltris-logo.png"];
 
 self.addEventListener("install", (event) => {
@@ -33,7 +33,8 @@ self.addEventListener("fetch", (event) => {
     );
     return;
   }
-  if (url.pathname.startsWith("/assets/") || SHELL.includes(url.pathname)) {
+  if (url.pathname.startsWith("/assets/") || (url.pathname.startsWith("/yoga/") && url.pathname.endsWith(".svg"))
+      || SHELL.includes(url.pathname)) {
     event.respondWith(
       caches.match(req).then((hit) => hit || fetch(req).then((res) => {
         if (res.ok) {

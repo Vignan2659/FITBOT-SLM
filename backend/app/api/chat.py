@@ -73,7 +73,7 @@ def chat(body: ChatIn, request: Request, user: User = Depends(get_current_user),
     if conv.title == "New chat" and not conv.messages:
         conv.title = make_title(body.message)
     db.add(Message(conversation_id=conv.id, role="user", content=body.message, intent=result["intent"]))
-    payload = {k: result.get(k) for k in ("exercises", "foods", "workout_plan", "sources", "safety", "category",
+    payload = {k: result.get(k) for k in ("exercises", "foods", "workout_plan", "yoga_poses", "yoga_routine", "sources", "safety", "category",
                                           "intent_confidence", "is_followup", "model")}
     bot = Message(conversation_id=conv.id, role="assistant", content=result["answer"], intent=result["intent"],
                   payload=payload)
@@ -87,4 +87,5 @@ def chat(body: ChatIn, request: Request, user: User = Depends(get_current_user),
                    answer=result["answer"], category=result["category"], intent=result["intent"],
                    intent_confidence=result["intent_confidence"], is_followup=result["is_followup"],
                    exercises=result["exercises"], foods=result["foods"], workout_plan=result["workout_plan"],
+                   yoga_poses=result.get("yoga_poses") or [], yoga_routine=result.get("yoga_routine"),
                    sources=result["sources"], safety=result["safety"], disclaimer=DISCLAIMER, model=result["model"])

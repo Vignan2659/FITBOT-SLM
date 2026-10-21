@@ -3,6 +3,7 @@ import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { api } from "../api/client.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import ExerciseCard from "../components/ExerciseCard.jsx";
+import YogaCard from "../components/YogaCard.jsx";
 import { IconCalendar, IconChat, IconDrop, IconDumbbell, IconFlame, IconLeaf, IconMoon } from "../components/Icons.jsx";
 
 const QUICK = [
@@ -14,6 +15,7 @@ const QUICK = [
   { icon: IconMoon, label: "Sleep & recovery", prompt: "How much should I sleep?" },
 ];
 const GROUPS = ["chest", "back", "shoulders", "legs", "arms", "core", "cardio", "stretching"];
+const YOGA_PICKS = ["downward-dog", "warrior-ii", "tree-pose", "childs-pose"];
 const LABEL = { weight_loss: "Weight loss", muscle_gain: "Muscle gain", strength: "Strength", endurance: "Endurance", general_fitness: "General fitness" };
 
 export default function Dashboard() {
@@ -23,6 +25,7 @@ export default function Dashboard() {
   const [group, setGroup] = useState("chest");
   const [exercises, setExercises] = useState([]);
   const [health, setHealth] = useState(null);
+  const [yoga, setYoga] = useState([]);
   const profile = user?.profile || {};
 
   useEffect(() => {
@@ -30,6 +33,9 @@ export default function Dashboard() {
   }, [group]);
   useEffect(() => {
     api.health().then(setHealth).catch(() => setHealth(null));
+    api.yogaPoses({ difficulty: "Beginner", kind: "pose" })
+      .then((r) => setYoga(YOGA_PICKS.map((s) => r.poses.find((p) => p.slug === s)).filter(Boolean)))
+      .catch(() => setYoga([]));
   }, []);
 
   const start = (prompt) => navigate("/chat", { state: { prompt } });
@@ -84,6 +90,18 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="card-grid">{exercises.slice(0, 8).map((e) => <ExerciseCard key={e.slug} exercise={e} />)}</div>
+      </section>
+
+      <section>
+        <div className="section-row">
+          <h2 className="section-title">Yoga</h2>
+          <div className="seg">
+            <button onClick={() => navigate("/yoga")}>All poses</button>
+            <button onClick={() => navigate("/yoga?tab=routine")}>Build a routine</button>
+            <button onClick={() => start("Give me a 15 minute beginner yoga routine")}>Ask FitBot</button>
+          </div>
+        </div>
+        <div className="card-grid">{yoga.map((p) => <YogaCard key={p.slug} pose={p} compact />)}</div>
       </section>
 
       {conversations.length > 0 && (

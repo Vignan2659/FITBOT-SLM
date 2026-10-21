@@ -5,6 +5,7 @@ The SLM, retriever and intent classifier are loaded ONCE in the lifespan handler
 """
 from __future__ import annotations
 
+import json
 import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -14,7 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.api import auth, catalog_routes, chat, conversations, tracking
+from app.api import auth, catalog_routes, chat, conversations, tracking, yoga
 from app.core.config import get_settings
 from app.db.database import engine
 from app.db.seed import init_db
@@ -22,9 +23,16 @@ from app.ml.retriever import KnowledgeRetriever
 from app.services.catalog import Catalog
 from app.services.chat_engine import ChatEngine
 from app.services.nlu import NLU
+from app.services.yoga import YogaLibrary, pose_passages
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 log = logging.getLogger("fitbot")
+
+
+def load_yoga(settings, catalog: Catalog | None = None) -> YogaLibrary:
+    data_dir = Path(settings.data_dir)
+    names = {e["name"] for e in catalog.exercises} | {a for e in catalog.exercises for a in e["aliases"]} if catalog else set()
+    return YogaLibrary(data_dir / "yoga" / "yoga_poses.json", names)
 
 
 def build_engine(settings, generate=None) -> tuple[ChatEngine, dict]:
@@ -32,9 +40,14 @@ def build_engine(settings, generate=None) -> tuple[ChatEngine, dict]:
     catalog = Catalog(data_dir, settings.fitbot_exercises_file)
     retriever = KnowledgeRetriever(data_dir / "knowledge" / "knowledge_base.json", settings.fitbot_embed_model,
                                    use_embeddings=settings.fitbot_use_embeddings)
+    # yoga: its own collections in the same retriever (same embedding model), so the main search is unchanged
+    yoga_lib = load_yoga(settings, catalog)
+    yoga_kb = data_dir / "yoga" / "yoga_knowledge.json"
+    retriever.add_collection("yoga", json.loads(yoga_kb.read_text(encoding="utf-8"))["passages"] if yoga_kb.exists() else [])
+    retriever.add_collection("yoga_poses", pose_passages(yoga_lib.poses))
     nlu = NLU(Path(settings.models_dir) / "intent_classifier.joblib", catalog.exercises, catalog.foods,
               encode=retriever.encode if retriever.backend != "tfidf" else None)
-    info = {"retriever": retriever.backend, "intent_classifier": nlu.clf is not None,
+    info = {"retriever": retriever.backend, "intent_classifier": nlu.clf is not None, "yoga_poses": len(yoga_lib.poses),
             "intent_embeddings": bool(getattr(nlu.clf, "uses_embeddings", False))}
     if generate is None:
         from app.ml.slm import FitBotSLM
@@ -45,11 +58,12 @@ def build_engine(settings, generate=None) -> tuple[ChatEngine, dict]:
         info["slm"] = slm.info()
     else:
         info["slm"] = {"model": "injected test generator", "fine_tuned": False}
-    return ChatEngine(catalog, nlu, retriever, generate, settings.fitbot_history_turns), info
+    return ChatEngine(catalog, nlu, retriever, generate, settings.fitbot_history_turns, yoga=yoga_lib), info
 
 
 SPA_PREFIX = "/__spa"
 NOT_SPA = ("/api", "/docs", "/redoc", "/openapi.json", "/health", "/assets")
+# note: /yoga/* image requests (not text/html) fall through to the built files; /yoga page loads go to the web app
 
 
 class StripApiPrefix:
@@ -88,6 +102,8 @@ async def lifespan(app: FastAPI):
     counts = init_db(engine, Path(settings.data_dir), settings.fitbot_exercises_file)
     log.info("Database ready: %s", counts)
     app.state.db_counts = counts
+    if getattr(app.state, "yoga", None) is None:
+        app.state.yoga = load_yoga(settings, Catalog(Path(settings.data_dir), settings.fitbot_exercises_file))
     if settings.fitbot_load_model and getattr(app.state, "chat_engine", None) is None:
         app.state.chat_engine, app.state.engine_info = build_engine(settings)
         log.info("FitBot engine ready: %s", {k: v for k, v in app.state.engine_info.items() if k != "slm"})
@@ -103,7 +119,7 @@ def create_app() -> FastAPI:
     app.add_middleware(CORSMiddleware, allow_origins=settings.cors_list, allow_credentials=True,
                        allow_methods=["*"], allow_headers=["*"])
     for r in (auth.router, conversations.router, chat.router, catalog_routes.router,
-              tracking.plans_router, tracking.workouts_router, tracking.feedback_router):
+              tracking.plans_router, tracking.workouts_router, tracking.feedback_router, yoga.router):
         app.include_router(r)
 
     @app.get("/health", tags=["health"])

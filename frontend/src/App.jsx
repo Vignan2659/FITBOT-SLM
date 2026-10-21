@@ -7,6 +7,8 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Chat from "./pages/Chat.jsx";
 import Profile from "./pages/Profile.jsx";
 import Workouts from "./pages/Workouts.jsx";
+import Yoga from "./pages/Yoga.jsx";
+import YogaPose from "./pages/YogaPose.jsx";
 
 function Protected({ children }) {
   const { user, loading } = useAuth();
@@ -29,6 +31,8 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/chat/:id" element={<Chat />} />
+        <Route path="/yoga" element={<Yoga />} />
+        <Route path="/yoga/:slug" element={<YogaPose />} />
         <Route path="/workouts" element={<Workouts />} />
         <Route path="/profile" element={<Profile />} />
       </Route>

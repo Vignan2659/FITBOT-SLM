@@ -3,6 +3,9 @@ import ExerciseCard from "../components/ExerciseCard.jsx";
 import FoodCard from "../components/FoodCard.jsx";
 import Message from "../components/Message.jsx";
 import WorkoutPlan, { planDayEntries } from "../components/WorkoutPlan.jsx";
+import { MemoryRouter } from "react-router-dom";
+import YogaCard from "../components/YogaCard.jsx";
+import YogaRoutine from "../components/YogaRoutine.jsx";
 
 const bench = {
   name: "Bench Press", slug: "bench-press", muscle_group: "chest",
@@ -76,4 +79,45 @@ test("plan action buttons appear only when enabled", () => {
   rerender(<WorkoutPlan plan={plan} saveable onLogged={() => {}} />);
   expect(screen.getByRole("button", { name: /save plan/i })).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /log day 1 as done/i })).toBeInTheDocument();
+});
+
+// ------------------------------------------------------------------ yoga
+
+const warrior = {
+  slug: "warrior-ii", name: "Warrior II", sanskrit: "Virabhadrasana II", difficulty: "Beginner", sides: true,
+  category: ["Strength", "Flexibility", "Weight management", "Mobility"], duration: "30 seconds to 1 minute each side",
+  image: "/yoga/warrior-ii-3.svg", motion_image: "/yoga/warrior-ii.svg",
+};
+const routine = {
+  title: "15-Minute Beginner Yoga", minutes: 15, level: "Beginner", notes: ["Move slowly."],
+  steps: [{ order: 1, slug: "mountain-pose", name: "Mountain Pose", phase: "Centre", duration: "1 min", difficulty: "Beginner",
+            image: "/yoga/mountain-pose-3.svg", cue: "Stand tall." },
+          { order: 2, slug: "warrior-ii", name: "Warrior II", phase: "Standing", duration: "1 min each side", difficulty: "Beginner",
+            image: "/yoga/warrior-ii-3.svg", cue: "Bend the front knee." }],
+};
+
+test("yoga card shows the motion figure, level, categories and links to the pose page", () => {
+  render(<MemoryRouter><YogaCard pose={warrior} /></MemoryRouter>);
+  expect(screen.getByRole("img", { name: /warrior ii/i })).toHaveAttribute("src", "/yoga/warrior-ii.svg");
+  expect(screen.getByText("Beginner")).toBeInTheDocument();
+  expect(screen.getByText("Both sides")).toBeInTheDocument();
+  expect(screen.getByText("Strength • Flexibility • Weight management")).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /view pose/i })).toHaveAttribute("href", "/yoga/warrior-ii");
+});
+
+test("yoga routine lists timed steps linking to each pose", () => {
+  render(<MemoryRouter><YogaRoutine routine={routine} /></MemoryRouter>);
+  expect(screen.getByText("15-Minute Beginner Yoga")).toBeInTheDocument();
+  expect(screen.getByText("1 min each side")).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /2\. Warrior II/ })).toHaveAttribute("href", "/yoga/warrior-ii");
+  expect(screen.getByRole("button", { name: /log as done/i })).toBeInTheDocument();
+});
+
+test("chat message renders yoga cards and a yoga routine from the payload", () => {
+  const msg = { id: 9, role: "assistant", content: "Here you go.", intent: "yoga",
+                payload: { yoga_poses: [warrior], yoga_routine: routine, sources: [] } };
+  render(<MemoryRouter><Message msg={msg} /></MemoryRouter>);
+  expect(screen.getByText("Yoga")).toBeInTheDocument();
+  expect(screen.getByText("15-Minute Beginner Yoga")).toBeInTheDocument();
+  expect(screen.getAllByText("Warrior II").length).toBeGreaterThan(0);
 });

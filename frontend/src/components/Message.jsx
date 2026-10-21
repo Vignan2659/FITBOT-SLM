@@ -1,6 +1,8 @@
 import ExerciseCard from "./ExerciseCard.jsx";
 import FoodCard from "./FoodCard.jsx";
 import WorkoutPlan from "./WorkoutPlan.jsx";
+import YogaCard from "./YogaCard.jsx";
+import YogaRoutine from "./YogaRoutine.jsx";
 import { useEffect, useState } from "react";
 import { api } from "../api/client.js";
 import { IconDumbbell, IconShield, IconSpeaker, IconStop, IconThumbDown, IconThumbUp } from "./Icons.jsx";
@@ -68,7 +70,7 @@ const INTENT_LABEL = {
   weight_loss: "Weight loss", muscle_gain: "Muscle gain", cardio: "Cardio", hydration: "Hydration", sleep: "Sleep",
   recovery: "Recovery", stretching: "Stretching", home_workout: "Home workout", gym_workout: "Gym workout",
   equipment: "Equipment", exercise_safety: "Exercise safety", general_fitness: "General fitness",
-  medical_safety: "Health & safety", greeting: "Hello", out_of_domain: "Out of scope",
+  medical_safety: "Health & safety", greeting: "Hello", out_of_domain: "Out of scope", yoga: "Yoga",
 };
 
 // Renders plain text with paragraphs and simple numbered / bulleted lines.
@@ -110,6 +112,10 @@ export default function Message({ msg }) {
             <summary>Exercise details ({exercises.length})</summary>
             <div className="card-grid">{exercises.map((e) => <ExerciseCard key={e.slug || e.name} exercise={e} />)}</div>
           </details>
+        )}
+        {p.yoga_routine && <YogaRoutine routine={p.yoga_routine} />}
+        {p.yoga_poses?.length > 0 && (
+          <div className="card-grid">{p.yoga_poses.map((y) => <YogaCard key={y.slug} pose={y} />)}</div>
         )}
         {foods.length > 0 && (
           <div className="card-grid food-grid">{foods.map((f) => <FoodCard key={f.fdc_id} food={f} />)}</div>

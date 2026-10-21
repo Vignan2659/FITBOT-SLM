@@ -103,6 +103,8 @@ class ChatOut(BaseModel):
     exercises: list[dict[str, Any]] = []
     foods: list[dict[str, Any]] = []
     workout_plan: dict[str, Any] | None = None
+    yoga_poses: list[dict[str, Any]] = []
+    yoga_routine: dict[str, Any] | None = None
     sources: list[dict[str, Any]] = []
     safety: dict[str, Any] | None = None
     disclaimer: str

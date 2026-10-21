@@ -1,5 +1,5 @@
 """Database tables: users, user_profiles, conversations, messages, exercise_metadata,
-food_metadata, revoked_tokens, saved_plans, workout_logs, message_feedback."""
+food_metadata, yoga_poses, revoked_tokens, saved_plans, workout_logs, message_feedback."""
 from __future__ import annotations
 
 from datetime import date, datetime, timezone
@@ -108,6 +108,25 @@ class FoodMetadata(Base):
     highlights: Mapped[list] = mapped_column(JSON)
     source: Mapped[str] = mapped_column(String(120))
     source_url: Mapped[str] = mapped_column(String(200))
+
+
+class YogaPose(Base):
+    """Yoga pose library (data/yoga/yoga_poses.json, re-synced on every start like the exercise and food tables).
+    Filterable fields are columns; the full pose record (instructions, safety, visuals...) is kept in `details`."""
+    __tablename__ = "yoga_poses"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    slug: Mapped[str] = mapped_column(String(80), unique=True, index=True)
+    name: Mapped[str] = mapped_column(String(80), unique=True, index=True)
+    sanskrit: Mapped[str] = mapped_column(String(80))
+    difficulty: Mapped[str] = mapped_column(String(20), index=True)
+    kind: Mapped[str] = mapped_column(String(20))                 # pose | breathing | meditation
+    phase: Mapped[str] = mapped_column(String(20))                # where it sits in a routine
+    category: Mapped[list] = mapped_column(JSON)
+    goals: Mapped[list] = mapped_column(JSON)
+    body_areas: Mapped[list] = mapped_column(JSON)
+    image_path: Mapped[str] = mapped_column(String(200))
+    motion_asset_path: Mapped[str] = mapped_column(String(200))
+    details: Mapped[dict] = mapped_column(JSON)
 
 
 class RevokedToken(Base):

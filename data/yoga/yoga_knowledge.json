@@ -1,0 +1,35 @@
+{
+  "description": "General yoga guidance used by FitBot's retrieval (yoga collection). Written for FitBot as general wellness information; it is not medical advice and makes no treatment claims.",
+  "sources": {
+    "FitBot": "Written for this project (MIT)",
+    "NCCIH": "US National Center for Complementary and Integrative Health, 'Yoga: What You Need To Know' (US government, public domain) - used for general safety framing"
+  },
+  "passages": [
+    {"id": "yoga-what", "topic": "yoga", "title": "What yoga practice includes", "source": "FitBot",
+     "text": "Most yoga classes combine physical poses (asanas), breathing practices and a period of relaxation or meditation. Styles range from slow and restorative to fast, flowing sequences. Gentle styles mainly build flexibility, balance and calm; more dynamic flows also build strength and raise the heart rate."},
+    {"id": "yoga-safety", "topic": "yoga", "title": "Practising yoga safely", "source": "NCCIH",
+     "text": "Yoga is generally considered safe for healthy people when it is practised properly, ideally with a qualified teacher. Injuries can happen, most often strains and sprains, so move within a comfortable range, use props and modifications, and never force a pose. People who are pregnant, older, or living with a health condition should talk with a healthcare provider and tell the teacher before starting."},
+    {"id": "yoga-not-treatment", "topic": "yoga", "title": "Yoga and health conditions", "source": "NCCIH",
+     "text": "Yoga can be part of a healthy lifestyle, but it is not a replacement for medical care. If you have pain, an injury or a medical condition, ask a doctor or physiotherapist which movements are suitable for you. Stop any pose that causes sharp pain, numbness, dizziness or breathlessness."},
+    {"id": "yoga-beginners", "topic": "yoga", "title": "Starting yoga as a beginner", "source": "FitBot",
+     "text": "Beginners do well with short, regular sessions of 10 to 20 minutes, two to four times a week. Start with foundational poses such as Mountain Pose, Cat-Cow, Child's Pose, Downward-Facing Dog, Low Lunge, Warrior II, Bridge Pose and Corpse Pose. Bend the knees freely, use blocks or a cushion, and focus on smooth breathing rather than how deep a pose looks."},
+    {"id": "yoga-breathing", "topic": "yoga", "title": "Breathing in yoga", "source": "FitBot",
+     "text": "Breathe in and out through the nose when you can, keeping the breath smooth and unforced. A common cue is to inhale on movements that open or lengthen the body and exhale on movements that fold, twist or lower. Slow breathing with a slightly longer exhale is often used to help the body settle. If you feel light headed, return to normal breathing."},
+    {"id": "yoga-flexibility", "topic": "yoga", "title": "Yoga for flexibility", "source": "FitBot",
+     "text": "Flexibility improves gradually with regular practice. Hold stretches such as forward folds, lunges and hip openers for 30 seconds to 2 minutes, breathing slowly. Warm up first with gentle movement, ease into each stretch without bouncing, and expect progress over weeks rather than in a single session."},
+    {"id": "yoga-strength", "topic": "yoga", "title": "Yoga for strength and weight management", "source": "FitBot",
+     "text": "Standing and balance poses such as Chair Pose, Warrior poses, Plank and Boat Pose build strength in the legs, core and shoulders. Faster flowing sessions raise the heart rate more than slow or restorative yoga. For weight management, yoga works best alongside regular aerobic activity, strength training and a balanced diet; gentle yoga on its own burns a modest amount of energy."},
+    {"id": "yoga-recovery", "topic": "yoga", "title": "Yoga for recovery after workouts", "source": "FitBot",
+     "text": "After training or on rest days, slow yoga with gentle stretches, supported poses and relaxed breathing can help you cool down and feel less stiff. Choose poses such as Child's Pose, Low Lunge, Reclined Pigeon, Supine Twist, Legs Up the Wall and Corpse Pose, and keep the effort easy."},
+    {"id": "yoga-stress", "topic": "yoga", "title": "Yoga for stress and relaxation", "source": "NCCIH",
+     "text": "Some studies suggest yoga can help people manage stress and improve sleep quality, likely through the combination of gentle movement, slow breathing and relaxation. Calming practices include Child's Pose, forward folds, Legs Up the Wall, belly breathing and a body scan in Corpse Pose. If stress, anxiety or low mood persist, speak with a healthcare professional."},
+    {"id": "yoga-time-of-day", "topic": "yoga", "title": "Morning versus evening yoga", "source": "FitBot",
+     "text": "Morning practice often uses energising movements such as Sun Salutation style flows, standing poses and gentle backbends to wake the body up. Evening practice usually favours slower floor poses, forward folds, twists and relaxation to help you wind down. Avoid strong backbends and inversions close to bedtime if they leave you feeling wired."},
+    {"id": "yoga-advanced", "topic": "yoga", "title": "Advanced poses and inversions", "source": "FitBot",
+     "text": "Advanced poses such as Headstand, Shoulder Stand, Handstand, Wheel and the Splits need a solid foundation of strength, flexibility and technique, and are best learned with a qualified teacher. Inversions are not recommended for people with neck problems, high blood pressure, glaucoma or other eye conditions, or during pregnancy. Never put your body weight on your neck."},
+    {"id": "yoga-equipment", "topic": "yoga", "title": "Yoga equipment", "source": "FitBot",
+     "text": "A non slip mat is the main piece of equipment. Blocks, a strap, a folded blanket and a cushion make poses more accessible by bringing the floor closer, supporting the hips or knees, or extending your reach. A wall or sturdy chair helps with balance poses."},
+    {"id": "yoga-routine-structure", "topic": "yoga", "title": "How a yoga routine is structured", "source": "FitBot",
+     "text": "A balanced yoga session usually starts with a minute of settling and breathing, moves through a warm up such as Cat-Cow, then standing, balance or strength poses, then seated stretches and a cool down, and ends with a few minutes of relaxation in Corpse Pose. Poses done on one side are repeated on the other side."}
+  ]
+}
