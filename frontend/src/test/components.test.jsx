@@ -88,7 +88,7 @@ test("plan action buttons appear only when enabled", () => {
 const warrior = {
   slug: "warrior-ii", name: "Warrior II", sanskrit: "Virabhadrasana II", difficulty: "Beginner", sides: true,
   category: ["Strength", "Flexibility", "Weight management", "Mobility"], duration: "30 seconds to 1 minute each side",
-  image: "/yoga/photos/warrior-ii-1.jpg", image_urls: ["/yoga/photos/warrior-ii-1.jpg"],
+  image: "/yoga/photos/warrior-ii-2.jpg", image_urls: ["/yoga/photos/warrior-ii-1.jpg", "/yoga/photos/warrior-ii-2.jpg"],
 };
 const routine = {
   title: "15-Minute Beginner Yoga", minutes: 15, level: "Beginner", notes: ["Move slowly."],
@@ -99,10 +99,17 @@ const routine = {
 };
 
 test("yoga card shows a real photo, level, categories and links to the pose page", () => {
-  render(<MemoryRouter><YogaCard pose={warrior} /></MemoryRouter>);
-  expect(screen.getByRole("img", { name: /warrior ii/i })).toHaveAttribute("src", "/yoga/photos/thumb/warrior-ii-1.jpg");
+  render(<MemoryRouter><YogaCard pose={warrior} mine /></MemoryRouter>);
+  // rests on the finished pose; with the cursor on it the photos play from the start position
+  const img = screen.getByRole("img", { name: /warrior ii/i });
+  expect(img).toHaveAttribute("src", "/yoga/photos/thumb/warrior-ii-2.jpg");
+  fireEvent.mouseEnter(img.parentElement);
+  expect(img).toHaveAttribute("src", "/yoga/photos/thumb/warrior-ii-1.jpg");
+  fireEvent.mouseLeave(img.parentElement);
+  expect(img).toHaveAttribute("src", "/yoga/photos/thumb/warrior-ii-2.jpg");
   expect(screen.getByText("Beginner")).toBeInTheDocument();
-  expect(screen.getByText("Both sides")).toBeInTheDocument();
+  expect(screen.getByText("Your level")).toBeInTheDocument();
+  expect(screen.getByText(/each side \(both sides\)/)).toBeInTheDocument();
   expect(screen.getByText("Strength • Flexibility • Weight management")).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /view pose/i })).toHaveAttribute("href", "/yoga/warrior-ii");
 });
