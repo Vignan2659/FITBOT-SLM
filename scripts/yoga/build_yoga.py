@@ -3,9 +3,11 @@
     python3 scripts/yoga/build_yoga.py
 
 Reads the pose texts in this folder (poses_*.py) and the photo credits in data/yoga/photo_credits.json, and writes
-data/yoga/yoga_poses.json, the file the backend loads. Every pose has one or two real photos of people doing it,
-stored in frontend/public/yoga/photos/ (served at /yoga/photos/...). The photos come from Wikimedia Commons under free
-licences; each record carries the author, licence and source page so the app can credit them.
+data/yoga/yoga_poses.json, the file the backend loads. Only poses that have photos are published. The photos of a pose
+are listed in motion order (starting position first, the finished pose last), so the app can play them as a short
+motion when the cursor is on the picture. They are stored in frontend/public/yoga/photos/ (served at /yoga/photos/...).
+Studio photos are by Margaret Young on Unsplash; gym photos come from the public domain free-exercise-db set. Each record
+carries the author, licence and source page so the app can credit them.
 
 To change the photos: edit data/yoga/photo_credits.json, put the new files in frontend/public/yoga/photos/
 (scripts/yoga/process_photos.py resizes downloaded originals), then run this script again.
@@ -58,21 +60,23 @@ def validate(poses: list[dict], credits: dict) -> None:
         assert p["phase"] in PHASES, p["slug"]
         assert set(p["goals"]) <= set(GOAL_LABELS), (p["slug"], p["goals"])
         assert set(p["areas"]) <= set(AREA_LABELS), (p["slug"], p["areas"])
-        photos = credits.get(p["slug"])
-        assert photos, f"{p['slug']}: no photo in photo_credits.json"
-        for ph in photos:
+        for ph in credits[p["slug"]]:
             assert (PHOTO_DIR / ph["file"]).exists(), f"missing photo file {ph['file']}"
             assert ph["license"] and ph["author"] and ph["source"], f"{ph['file']}: incomplete credit"
 
 
 def build() -> list[dict]:
-    poses = poses_beginner.POSES + poses_intermediate.POSES + poses_advanced.POSES + poses_extra.POSES
+    written = poses_beginner.POSES + poses_intermediate.POSES + poses_advanced.POSES + poses_extra.POSES
     credits = json.loads((ROOT / "data" / "yoga" / "photo_credits.json").read_text(encoding="utf-8"))["photos"]
+    missing = set(credits) - {p["slug"] for p in written}
+    assert not missing, f"photos without a pose text: {missing}"
+    poses = [p for p in written if p["slug"] in credits]      # poses without a good photo are left out
     validate(poses, credits)
     known = {p["slug"] for p in poses}
     records = []
     for p in poses:
-        photos = [{"url": f"/yoga/photos/{ph['file']}", **{k: ph[k] for k in ("author", "license", "license_url", "source", "title")}}
+        photos = [{"url": f"/yoga/photos/{ph['file']}",
+                   **{k: ph[k] for k in ("author", "author_url", "license", "license_url", "source", "source_name", "title")}}
                   for ph in credits[p["slug"]]]
         records.append({
             # --- the fields of the requested yoga schema
@@ -93,8 +97,8 @@ def build() -> list[dict]:
             "contraindications": p["avoid"],
             "equipment": p["equipment"],
             "suitable_for": p["suitable"],
-            "image": photos[0]["url"],
-            "image_urls": [ph["url"] for ph in photos],
+            "image": photos[-1]["url"],                     # the finished pose
+            "image_urls": [ph["url"] for ph in photos],       # motion order: start position ... finished pose
             "tags": p["tags"],
             # --- FitBot extensions (filters, routine builder, chat pipeline, photo credits)
             "slug": p["slug"],

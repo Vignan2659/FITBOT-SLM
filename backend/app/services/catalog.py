@@ -5,7 +5,49 @@ import json
 import re
 from pathlib import Path
 
-from app.services.planner import allowed, normalise_equipment
+from app.services.planner import LEVEL_RANK, allowed, normalise_equipment
+
+
+# Hand picked exercises per muscle group for trained people, shown first when the person's level is intermediate or
+# advanced (the public exercise set labels very few movements "Advanced", so the level label alone is not enough).
+LEVEL_PICKS: dict[str, dict[str, list[str]]] = {
+    "chest": {"intermediate": ["Bench Press", "Cable Crossover", "Wide-Grip Barbell Bench Press", "Clock Push-Up",
+                               "Bent-Arm Dumbbell Pullover"],
+              "advanced": ["Plyo Kettlebell Pushups", "Single-Arm Push-Up", "Wide-Grip Decline Barbell Bench Press",
+                           "Bench Press", "Cable Crossover"]},
+    "back": {"intermediate": ["Pull-Ups", "Bent-Over Dumbbell Row", "Reverse Grip Bent-Over Rows", "Rack Pulls",
+                              "Wide-Grip Rear Pull-Up"],
+             "advanced": ["Deadlift", "Mixed Grip Chin", "Alternating Renegade Row", "One Arm Chin-Up", "Deficit Deadlift"]},
+    "shoulders": {"intermediate": ["Arnold Press", "Barbell Shoulder Press", "Cuban Press", "Clean and Press",
+                                   "Seated Bent-Over Rear Delt Raise"],
+                  "advanced": ["Push Press", "Handstand Push-Ups", "Clean and Jerk", "One-Arm Kettlebell Snatch",
+                               "Barbell Shoulder Press"]},
+    "legs": {"intermediate": ["Squat", "Romanian Deadlift", "Barbell Lunge", "Front Squat (Clean Grip)",
+                              "Barbell Hip Thrust", "Freehand Jump Squat"],
+             "advanced": ["Front Barbell Squat", "Overhead Squat", "Kettlebell Pistol Squat", "Zercher Squats",
+                          "One Leg Barbell Squat", "Power Snatch"]},
+    "arms": {"intermediate": ["Dips", "Zottman Curl", "Drag Curl", "Lying Dumbbell Tricep Extension",
+                              "Push-Ups – Close Triceps Position", "Tate Press"],
+             "advanced": ["Bench Press with Chains", "Dips", "Tate Press", "Drag Curl", "Zottman Curl"]},
+    "core": {"intermediate": ["Russian Twists", "Decline Crunch", "Barbell Ab Rollout", "Frog Sit-Ups"],
+             "advanced": ["Hanging Leg Raise", "Hanging Pike", "Barbell Ab Rollout – On Knees", "Press Sit-Up",
+                          "Bent Press"]},
+}
+
+
+def order_for_level(pool: list[dict], level: str | None, group: str | None = None) -> list[dict]:
+    """Exercises that fit a person's level, best fit first.
+    beginner: beginner movements only; intermediate: intermediate first, then beginner, nothing advanced;
+    advanced: advanced first, then intermediate, then beginner. Unknown level: the list is returned unchanged."""
+    lvl = LEVEL_RANK.get((level or "").lower())
+    if lvl is None:
+        return pool
+    rank = lambda e: LEVEL_RANK.get(e["difficulty"].lower(), 0)
+    if lvl == 0:
+        return [e for e in pool if rank(e) == 0] or pool
+    pool = [e for e in pool if rank(e) <= lvl] or pool
+    picks = {n: i for i, n in enumerate(LEVEL_PICKS.get(group or "", {}).get(level.lower(), []))}
+    return sorted(pool, key=lambda e: (e["name"] not in picks, picks.get(e["name"], 0), lvl - rank(e)))
 
 
 class Catalog:
@@ -40,10 +82,7 @@ class Catalog:
         if equipment or location == "home":
             eq = normalise_equipment(equipment, location)
             pool = [e for e in pool if allowed(e, eq)]
-        if level == "beginner":
-            pool = [e for e in pool if e["difficulty"] == "Beginner"] or pool
-        elif level == "advanced":
-            pool = sorted(pool, key=lambda e: {"Advanced": 0, "Intermediate": 1}.get(e["difficulty"], 2))
+        pool = order_for_level(pool, level, group)
         return pool[:limit]
 
     # ------------------------------------------------------------------ foods

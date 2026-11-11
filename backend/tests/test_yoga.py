@@ -26,25 +26,32 @@ def test_no_cartoon_figures_left():
 
 
 def test_dataset_has_full_schema_and_visuals():
-    assert len(POSES) >= 50
+    assert len(POSES) >= 30
     levels = {p["difficulty"] for p in POSES}
     assert levels == {"Beginner", "Intermediate", "Advanced"}
     required = {"Mountain Pose", "Child's Pose", "Cat-Cow", "Cobra Pose", "Downward-Facing Dog", "Easy Pose",
-                "Standing Forward Fold", "Bridge Pose", "Tree Pose", "Warrior I", "Warrior II", "Triangle Pose",
-                "Extended Side Angle", "Half Moon Pose", "Chair Pose", "Boat Pose", "Camel Pose", "Bow Pose",
-                "Pigeon Pose", "Crow Pose", "Head-to-Knee Pose"}
+                "Standing Forward Fold", "Bridge Pose", "Tree Pose", "Warrior II", "Triangle Pose", "Boat Pose",
+                "Camel Pose", "Crow Pose", "Wheel Pose", "Plank Pose", "Corpse Pose", "Seated Forward Fold"}
     assert required <= {p["name"] for p in POSES}
     for p in POSES:
         for key in SCHEMA:
             assert p[key] not in (None, "", []), (p["slug"], key)
-        assert 1 <= len(p["photos"]) <= 3 and p["image"] == p["photos"][0]["url"]
+        # photos are in motion order: the start position first, the finished pose (the main image) last
+        assert 1 <= len(p["photos"]) <= 3 and p["image"] == p["photos"][-1]["url"]
+        assert p["image_urls"] == [ph["url"] for ph in p["photos"]]
         for ph in p["photos"]:
             assert ph["url"].startswith("/yoga/photos/") and ph["url"].endswith(".jpg")
             for path in (ph["url"], ph["url"].replace("/photos/", "/photos/thumb/")):
                 assert (ROOT / "frontend" / "public" / path.lstrip("/")).exists(), path
-            assert ph["author"] and ph["source"].startswith("https://commons.wikimedia.org/")
-            assert ph["license"].startswith(("CC BY", "CC0", "Public domain")), ph["license"]
+            assert ph["author"] and ph["source"].startswith(("https://unsplash.com/photos/", "https://github.com/yuhonas/"))
+            assert ph["license"] in ("Unsplash License", "Public domain (Unlicense)") and ph["license_url"]
         assert set(p["related"]) <= {q["slug"] for q in POSES}
+
+
+def test_most_poses_have_a_motion_sequence():
+    """Two or more photos per pose let the cards play the move (start position, then the pose) on hover."""
+    with_motion = [p for p in POSES if len(p["photos"]) >= 2]
+    assert len(with_motion) >= len(POSES) - 4
 
 
 def test_advanced_poses_carry_safety_guidance():
@@ -63,7 +70,7 @@ def test_yoga_poses_list_filters_and_search(client):
     assert beg["count"] and all(p["difficulty"] == "Beginner" for p in beg["poses"])
     hips = client.get("/yoga/poses", params={"area": "hips", "goal": "flexibility"}).json()
     assert hips["count"] and all("hips" in p["body_areas"] and "flexibility" in p["goals"] for p in hips["poses"])
-    assert client.get("/yoga/poses", params={"q": "virabhadrasana"}).json()["count"] >= 3
+    assert client.get("/yoga/poses", params={"q": "virabhadrasana"}).json()["count"] >= 2
     assert client.get("/yoga/poses", params={"goal": "flying"}).status_code == 422
 
 
@@ -155,8 +162,8 @@ def test_chat_yoga_pain_is_gentle_with_referral(client, auth):
 
 
 def test_chat_advanced_pose_adds_safety(client, auth):
-    r = chat(client, auth["headers"], "how do I do a headstand in yoga?")
-    assert r["yoga_poses"][0]["slug"] == "supported-headstand" and r["safety"]
+    r = chat(client, auth["headers"], "how do I do wheel pose in yoga?")
+    assert r["yoga_poses"][0]["slug"] == "wheel-pose" and r["safety"]
 
 
 def test_existing_behaviour_unchanged_for_non_yoga_questions(client, auth):

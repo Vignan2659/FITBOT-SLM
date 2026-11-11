@@ -31,9 +31,11 @@ Everything shown on screen is real output from the app.
 
 **Nutrition from USDA FoodData Central.** 111 foods with calories, macros, vitamins and minerals per 100 g or per portion. If a value is not in the USDA data, FitBot does not make one up.
 
-**Yoga.** 61 poses and breathing practices, each shown in real photos of a person doing the pose (from Wikimedia Commons, credited on every photo), with step by step instructions, breathing cues, easier and harder versions, and safety notes. Filter by difficulty, goal or body area, open a pose page, or build a timed routine for your goal, level and time of day. In the chat, FitBot answers yoga questions from the same data ("Give me a 15 minute beginner yoga routine", "Which yoga poses target the hips?", "Explain how to perform Warrior II"). More in [docs/YOGA.md](docs/YOGA.md).
+**Yoga.** 34 poses, each shown in real studio and gym photos of a person doing the pose. Put the cursor on a picture and the photos play as a short motion from the start position into the pose, just like the exercise cards. Every pose has step by step instructions, breathing cues, easier and harder versions, and safety notes. Filter by difficulty, goal or body area, open a pose page, or build a timed routine for your goal, level and time of day. In the chat, FitBot answers yoga questions from the same data ("Give me a 15 minute beginner yoga routine", "Which yoga poses target the hips?", "Explain how to perform Warrior II"). More in [docs/YOGA.md](docs/YOGA.md).
 
-**Workout plans.** Beginner to advanced, gym or home, dumbbells or bodyweight, 1 to 6 days a week, with sets, reps and rest.
+**Workout plans for your level.** Set beginner, intermediate or advanced in your profile and everything follows it: beginners get simple, stable movements; intermediate lifters get free weight compound lifts and harder bodyweight variations; advanced lifters get heavy compound lifts (deadlift, front squat, push press, chin ups) with more sets. Exercise lists, plans and yoga routines never go above your level. Gym or home, dumbbells or bodyweight, 1 to 6 days a week.
+
+**Fitness bands.** Bring in steps, heart rate, sleep, stress, HRV and workouts from Apple Watch, Samsung Galaxy Watch, Google Pixel Watch and Fitbit, Huawei, OnePlus, Noise, WHOOP and others by importing the export file of the band's phone app. The Bands page shows your days and trends, live heart rate works over Bluetooth in Chrome for bands that broadcast it, and FitBot answers "How did I sleep last night?" or "Am I recovered enough to train today?" with your own numbers. More in [docs/BANDS.md](docs/BANDS.md).
 
 **My workouts.** Save plans from the chat, log what you trained, and see your weekly activity and streaks.
 
@@ -55,7 +57,7 @@ Everything runs locally. No cloud AI service is used and your chats stay in a sm
     <td><img src="media/screenshots/dashboard.jpg" alt="Dashboard"><br><sub><b>Dashboard.</b> Quick start questions and the exercise explorer.</sub></td>
   </tr>
   <tr>
-    <td><img src="media/screenshots/yoga.jpg" alt="Yoga section"><br><sub><b>Yoga.</b> 61 poses shown by real people, filters for difficulty, goal and body area.</sub></td>
+    <td><img src="media/screenshots/yoga.jpg" alt="Yoga section"><br><sub><b>Yoga.</b> 34 poses shown by real people, with a hover motion and filters for difficulty, goal and body area.</sub></td>
     <td><img src="media/screenshots/yoga_pose.jpg" alt="Yoga pose page"><br><sub><b>Pose pages.</b> Real photos with credits, steps, breathing and safety.</sub></td>
   </tr>
   <tr>
@@ -197,7 +199,7 @@ FITBOT-SLM/
 ├── data/
 │   ├── exercises/    871 exercises (plus the 58 hand picked ones from version 1)
 │   ├── nutrition/    111 foods from USDA FoodData Central
-│   ├── yoga/         61 yoga poses with photo credits, plus yoga guidance passages
+│   ├── yoga/         34 yoga poses with photo credits, plus yoga guidance passages
 │   ├── knowledge/    guidance passages used when answering
 │   ├── processed_v2/ the 5,470 training conversations
 │   ├── processed/    the first dataset (its 97 test questions are used to compare both models)
@@ -215,7 +217,7 @@ FITBOT-SLM/
 
 * Exercises and photos: [free exercise db](https://github.com/yuhonas/free-exercise-db) by yuhonas, public domain (Unlicense)
 * Yoga pose texts: written for this project (MIT)
-* Yoga photos: Wikimedia Commons photographers (Kennguru, Joseph Renger, lululemon athletica, Mr. Yoga and others) under CC BY, CC BY-SA or public domain; full list in [data/yoga/PHOTO_CREDITS.md](data/yoga/PHOTO_CREDITS.md)
+* Yoga photos: [Margaret Young](https://unsplash.com/@wildsoulmagsyogi) on Unsplash (Unsplash License) and the public domain free exercise db; full list in [data/yoga/PHOTO_CREDITS.md](data/yoga/PHOTO_CREDITS.md)
 * Nutrition: USDA Agricultural Research Service, FoodData Central, SR Legacy 2018, CC0
 * Intent examples: [harshmakwana/fitness-intent](https://huggingface.co/datasets/harshmakwana/fitness-intent), MIT
 * Base model: [Qwen3 4B Instruct 2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), Apache 2.0

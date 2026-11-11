@@ -7,7 +7,7 @@ PREREQ = "Practise this only after the intermediate poses feel steady, ideally w
 POSES = [
     pose(
         slug="crow-pose", name="Crow Pose", sanskrit="Bakasana", alt=["Bakasana", "Crane Pose", "Kakasana"],
-        difficulty="Intermediate", phase="core", minutes=0.5, time="morning", energy="energizing",
+        difficulty="Advanced", phase="core", minutes=0.5, time="morning", energy="energizing",
         goals=["strength", "balance", "core"], areas=["shoulders", "core"],
         target=["Arms and wrists", "Shoulders", "Core", "Hip flexors"],
         benefits=["Builds arm, wrist and core strength", "Teaches balance on the hands",
@@ -20,7 +20,7 @@ POSES = [
         breath="Keep breathing; exhale as you lean forward.", hold="5 to 20 seconds", reps="3 to 5 attempts",
         easier="Keep the toes on a block and lift one foot at a time.", harder="Straighten the arms (crane).",
         mistakes=["Looking straight down and tipping forward", "Elbows splaying out", "Jumping into the pose"],
-        safety=["Place a cushion in front of your face while learning."],
+        safety=["Learn this arm balance with a teacher if you can, and practise over a folded blanket.", "Place a cushion in front of your face while learning."],
         avoid=["Wrist, elbow or shoulder injury", "Pregnancy"],
         suitable=["Strength building", "Arm balance practice"], tags=["arm balance", "core"],
         related=["garland-pose", "plank-pose"], equipment="Yoga mat, block or cushion (optional)"),

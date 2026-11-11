@@ -403,7 +403,6 @@ img { max-width: 100%; }
 .yoga-hero { background: linear-gradient(135deg, #0f766e, #0e5a63); }
 .yoga-hero p { max-width: 62ch; margin-bottom: 0; }
 .yoga-tabs { margin-top: -.75rem; }
-.yoga-card-media { aspect-ratio: 4 / 3; }
 .badge-right { left: auto; right: .5rem; background: var(--primary-50); color: var(--primary); }
 @media (prefers-color-scheme: dark) { .badge-right { background: #e6f4f2; color: #0f766e; } }
 .yoga-sanskrit { margin: -.2rem 0 0; color: var(--muted); font-size: .8rem; font-style: italic; }
@@ -481,14 +480,85 @@ button.yoga-tile:hover { border-color: var(--primary); box-shadow: var(--shadow)
   .yoga-filters .chip-toggle { flex-shrink: 0; }
 }
 
-/* yoga photos */
-.yoga-card-media { overflow: hidden; }
-.yoga-card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fff; }
+/* yoga photos: every photo shares one 3:2 canvas, so the frames line up when they play as a motion */
+.yoga-card-media { overflow: hidden; aspect-ratio: 3 / 2; cursor: pointer; }
+.yoga-card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #f1efec; }
+.motion-hint { position: absolute; right: .5rem; bottom: .5rem; font-size: .68rem; font-weight: 700; padding: .15rem .5rem;
+  border-radius: 999px; background: rgba(15, 23, 42, .62); color: #fff; pointer-events: none; letter-spacing: .01em; }
+.ex-media.playing .motion-hint, .pose-stage.playing .motion-hint { background: var(--primary); }
+.badge-mine { background: #0f766e; color: #fff; }
+@media (prefers-color-scheme: dark) { .badge-mine { background: #0f766e; color: #fff; } }
 .pose-photo { margin: 0; display: grid; gap: .5rem; }
-.pose-photo > img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; border: 1px solid var(--border); border-radius: 14px; }
+.pose-stage { position: relative; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #f1efec; }
+.pose-stage > img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .pose-photo figcaption { font-size: .72rem; color: var(--muted); }
 .photo-credit a { color: var(--muted); }
-.photo-thumbs { display: flex; gap: .5rem; }
-.photo-thumbs button { padding: 0; border: 2px solid var(--border); border-radius: 10px; background: #fff; overflow: hidden; width: 76px; height: 57px; }
-.photo-thumbs button.on { border-color: var(--primary); }
-.photo-thumbs img { width: 100%; height: 100%; object-fit: contain; }
+.photo-thumbs { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+.photo-thumbs button[role="tab"] { position: relative; padding: 0; border: 2px solid var(--border); border-radius: 10px; background: #fff; overflow: hidden; width: 84px; height: 56px; }
+.photo-thumbs button[role="tab"].on { border-color: var(--primary); }
+.photo-thumbs button[role="tab"] span { position: absolute; left: 0; right: 0; bottom: 0; font-size: .6rem; font-weight: 700; color: #fff; background: rgba(15, 23, 42, .55); padding: 1px 0; }
+.photo-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+.motion-btn { margin-left: .25rem; }
+
+/* level customisation */
+.level-seg { margin-right: auto; margin-left: .75rem; }
+.level-tip { margin: -.25rem 0 .6rem; }
+@media (max-width: 720px) { .level-seg { margin-left: 0; } }
+
+/* ===================== Fitness bands ===================== */
+.bands-hero h1 { display: flex; align-items: center; gap: .5rem; }
+.band-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: .55rem; }
+.band-tiles.big { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: .75rem; }
+.band-tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: .65rem .8rem; display: grid; gap: .1rem; min-width: 0; }
+.band-tile span { color: var(--muted); font-size: .74rem; }
+.band-tile strong { font-size: 1.15rem; letter-spacing: -.01em; }
+.band-tiles.big .band-tile { padding: 1rem; border-radius: var(--radius); }
+.band-tiles.big .band-tile strong { font-size: 1.55rem; }
+.band-tile small { color: var(--muted); font-size: .72rem; }
+.band-tile.band-hr strong { color: #e11d48; }
+.band-tile.band-stress strong { color: var(--accent); }
+.band-tile.band-sleep strong { color: #6366f1; }
+.band-tile.band-steps strong { color: var(--primary); }
+@media (prefers-color-scheme: dark) { .band-tile.band-sleep strong { color: #a5b4fc; } .band-tile.band-hr strong { color: #fb7185; } }
+.band-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-2); padding: .75rem .85rem .6rem; display: grid; gap: .55rem; }
+.band-card header { display: flex; justify-content: space-between; align-items: center; gap: .75rem; flex-wrap: wrap; }
+.band-card-title { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; font-size: .85rem; }
+.band-card-link { font-size: .78rem; color: var(--primary); font-weight: 600; }
+.band-note { margin: 0; font-size: .72rem; color: var(--muted); }
+.tag-band { background: var(--primary-50); color: var(--primary); }
+.band-insights { margin: .9rem 0 .5rem; padding-left: 1.1rem; display: grid; gap: .3rem; font-size: .92rem; }
+.band-chart { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: .3rem; align-items: end; height: 170px; margin-bottom: .4rem; }
+.band-col { display: grid; grid-template-rows: 1fr auto; height: 100%; gap: .3rem; text-align: center; min-width: 0; }
+.band-bar { background: var(--surface-2); border-radius: 6px; display: flex; align-items: flex-end; overflow: hidden; }
+.band-bar div { width: 100%; background: var(--primary); opacity: .55; border-radius: 6px 6px 0 0; }
+.band-bar div.now { opacity: 1; }
+.band-lbl { font-size: .66rem; color: var(--muted); }
+.band-workouts { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; font-size: .9rem; }
+.band-workouts li { display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap; border-bottom: 1px solid var(--border); padding-bottom: .45rem; }
+.band-workouts li:last-child { border-bottom: none; padding-bottom: 0; }
+.brand-seg { margin: .6rem 0 .8rem; }
+.brand-seg button { text-transform: none; }
+.brand-app { margin: 0 0 .3rem; font-size: .92rem; }
+.brand-steps { margin: 0 0 .6rem; padding-left: 1.2rem; display: grid; gap: .3rem; font-size: .9rem; }
+.band-upload { margin-top: .8rem; gap: .7rem; }
+.band-upload .btn { justify-self: start; }
+.import-note { color: var(--muted); }
+.band-manual > summary { cursor: pointer; font-weight: 700; }
+.band-day-form { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); display: grid; gap: .7rem; margin-top: .9rem; }
+.band-day-form .log-submit { grid-column: 1 / -1; }
+.live-panel .section-title, .panel .section-title { display: flex; align-items: center; gap: .4rem; }
+.live-box { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: center; margin-top: .4rem; }
+.live-bpm { width: 132px; height: 132px; border-radius: 50%; border: 6px solid var(--border); display: grid; place-content: center; text-align: center; line-height: 1.05; }
+.live-bpm strong { font-size: 2.6rem; letter-spacing: -.03em; }
+.live-bpm span { font-size: .75rem; color: var(--muted); }
+.live-bpm em { font-style: normal; font-size: .68rem; font-weight: 700; }
+.live-bpm.z1 { border-color: #94a3b8; } .live-bpm.z2 { border-color: #38bdf8; } .live-bpm.z3 { border-color: #22c55e; }
+.live-bpm.z4 { border-color: #f59e0b; } .live-bpm.z5 { border-color: #e11d48; }
+.live-side { display: grid; gap: .55rem; min-width: 0; }
+.live-stats { display: flex; gap: 1rem; flex-wrap: wrap; font-size: .85rem; color: var(--muted); }
+.live-stats b { color: var(--text); font-size: 1.05rem; margin-left: .2rem; }
+.live-line { width: 100%; height: 60px; }
+.live-line polyline { fill: none; stroke: #e11d48; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.live-actions { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+.live-actions select { padding: .35rem .5rem; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); }
+@media (max-width: 520px) { .live-box { grid-template-columns: 1fr; justify-items: center; } }

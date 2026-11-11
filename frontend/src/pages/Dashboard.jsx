@@ -4,6 +4,7 @@ import { api } from "../api/client.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import ExerciseCard from "../components/ExerciseCard.jsx";
 import YogaCard from "../components/YogaCard.jsx";
+import BandCard from "../components/BandCard.jsx";
 import { IconCalendar, IconChat, IconDrop, IconDumbbell, IconFlame, IconLeaf, IconMoon } from "../components/Icons.jsx";
 
 const QUICK = [
@@ -15,7 +16,13 @@ const QUICK = [
   { icon: IconMoon, label: "Sleep & recovery", prompt: "How much should I sleep?" },
 ];
 const GROUPS = ["chest", "back", "shoulders", "legs", "arms", "core", "cardio", "stretching"];
-const YOGA_PICKS = ["downward-dog", "warrior-ii", "tree-pose", "childs-pose"];
+// yoga poses shown on the dashboard for each fitness level
+const YOGA_PICKS = {
+  beginner: ["downward-dog", "warrior-ii", "tree-pose", "childs-pose"],
+  intermediate: ["triangle-pose", "boat-pose", "camel-pose", "three-legged-dog"],
+  advanced: ["crow-pose", "wheel-pose", "wild-thing", "reverse-plank"],
+};
+const cap = (s) => (s ? s[0].toUpperCase() + s.slice(1) : "");
 const LABEL = { weight_loss: "Weight loss", muscle_gain: "Muscle gain", strength: "Strength", endurance: "Endurance", general_fitness: "General fitness" };
 
 export default function Dashboard() {
@@ -26,16 +33,27 @@ export default function Dashboard() {
   const [exercises, setExercises] = useState([]);
   const [health, setHealth] = useState(null);
   const [yoga, setYoga] = useState([]);
+  const [band, setBand] = useState(null);
   const profile = user?.profile || {};
+  const level = profile.fitness_level || "";
+  const [mine, setMine] = useState(true);       // show exercises picked for the person's level
 
   useEffect(() => {
-    api.exercises({ muscle_group: group }).then((r) => setExercises(r.exercises)).catch(() => setExercises([]));
-  }, [group]);
+    // with a level, the server puts that level's exercises first and leaves out anything above it
+    const params = { muscle_group: group, ...(level && mine ? { level } : {}) };
+    api.exercises(params).then((r) => setExercises(r.exercises)).catch(() => setExercises([]));
+  }, [group, level, mine]);
   useEffect(() => {
     api.health().then(setHealth).catch(() => setHealth(null));
-    api.yogaPoses({ difficulty: "Beginner", kind: "pose" })
-      .then((r) => setYoga(YOGA_PICKS.map((s) => r.poses.find((p) => p.slug === s)).filter(Boolean)))
+  }, []);
+  useEffect(() => {
+    api.yogaPoses({ kind: "pose" })
+      .then((r) => setYoga((YOGA_PICKS[level] || YOGA_PICKS.beginner).map((s) => r.poses.find((p) => p.slug === s)).filter(Boolean)))
       .catch(() => setYoga([]));
+  }, [level]);
+
+  useEffect(() => {
+    api.bandSummary().then(setBand).catch(() => setBand(null));
   }, []);
 
   const start = (prompt) => navigate("/chat", { state: { prompt } });
@@ -69,6 +87,21 @@ export default function Dashboard() {
         </div>
       </section>
 
+      <section>
+        <div className="section-row">
+          <h2 className="section-title">Your band</h2>
+          <div className="seg">
+            <button onClick={() => navigate("/bands")}>{band?.connected ? "Open Bands" : "Connect a band"}</button>
+            {band?.connected && <button onClick={() => start("How did I do today? Look at my steps, sleep and stress.")}>Ask FitBot</button>}
+          </div>
+        </div>
+        {band?.latest ? (
+          <BandCard band={{ ...band.latest, is_today: band.latest.day === band.today }} title="Latest" />
+        ) : (
+          <p className="muted small level-tip">Apple Watch, Samsung, Google or Fitbit, Huawei, OnePlus, Noise, WHOOP and others: import your steps, heart rate, sleep and stress on the Bands page.</p>
+        )}
+      </section>
+
       <section className="stats">
         <div className="stat"><span>Conversations</span><strong>{conversations.length}</strong></div>
         <div className="stat"><span>Exercise library</span><strong>{health?.database?.exercises ?? "—"}</strong></div>
@@ -83,13 +116,22 @@ export default function Dashboard() {
       <section>
         <div className="section-row">
           <h2 className="section-title">Exercise explorer</h2>
+          {level && (
+            <div className="seg level-seg" role="group" aria-label="Exercise level">
+              <button className={mine ? "active" : ""} aria-pressed={mine} onClick={() => setMine(true)}>For my level ({cap(level)})</button>
+              <button className={!mine ? "active" : ""} aria-pressed={!mine} onClick={() => setMine(false)}>All levels</button>
+            </div>
+          )}
           <div className="seg" role="tablist">
             {GROUPS.map((g) => (
               <button key={g} role="tab" aria-selected={g === group} className={g === group ? "active" : ""} onClick={() => setGroup(g)}>{g}</button>
             ))}
           </div>
         </div>
-        <div className="card-grid">{exercises.slice(0, 8).map((e) => <ExerciseCard key={e.slug} exercise={e} />)}</div>
+        {!level && <p className="muted small level-tip">Set your fitness level in <Link to="/profile">your profile</Link> to see exercises picked for it.</p>}
+        <div className="card-grid">
+          {exercises.slice(0, 8).map((e) => <ExerciseCard key={e.slug} exercise={e} mine={Boolean(level) && e.difficulty === cap(level)} />)}
+        </div>
       </section>
 
       <section>
@@ -98,10 +140,10 @@ export default function Dashboard() {
           <div className="seg">
             <button onClick={() => navigate("/yoga")}>All poses</button>
             <button onClick={() => navigate("/yoga?tab=routine")}>Build a routine</button>
-            <button onClick={() => start("Give me a 15 minute beginner yoga routine")}>Ask FitBot</button>
+            <button onClick={() => start(`Give me a 15 minute ${level || "beginner"} yoga routine`)}>Ask FitBot</button>
           </div>
         </div>
-        <div className="card-grid">{yoga.map((p) => <YogaCard key={p.slug} pose={p} compact />)}</div>
+        <div className="card-grid">{yoga.map((p) => <YogaCard key={p.slug} pose={p} compact mine={Boolean(level) && p.difficulty === cap(level)} />)}</div>
       </section>
 
       {conversations.length > 0 && (

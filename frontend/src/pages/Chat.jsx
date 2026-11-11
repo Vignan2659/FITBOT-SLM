@@ -113,7 +113,7 @@ export default function Chat() {
       const bot = {
         id: r.message_id, role: "assistant", content: r.answer, intent: r.intent,
         payload: { exercises: r.exercises, foods: r.foods, workout_plan: r.workout_plan, yoga_poses: r.yoga_poses,
-                   yoga_routine: r.yoga_routine, sources: r.sources,
+                   yoga_routine: r.yoga_routine, band: r.band, sources: r.sources,
                    safety: r.safety, category: r.category, is_followup: r.is_followup, model: r.model },
       };
       setMessages((m) => [...m, bot]);

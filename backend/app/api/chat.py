@@ -16,6 +16,7 @@ from app.core.security import get_current_user
 from app.db.database import get_db
 from app.db.models import Conversation, Message, User
 from app.services.safety import DISCLAIMER
+from app.services.wearables import BAND_QUESTION_RE, HEALTH_RE
 
 router = APIRouter(tags=["chat"])
 
@@ -68,12 +69,16 @@ def chat(body: ChatIn, request: Request, user: User = Depends(get_current_user),
         db.flush()
 
     history = [{"role": m.role, "content": m.content} for m in conv.messages]
-    result, new_state = engine.respond(body.message, history, conv.state or {}, profile_dict(user))
+    band = None
+    if HEALTH_RE.search(body.message) or BAND_QUESTION_RE.search(body.message):        # a question about the person's own steps, heart rate, sleep, stress ...
+        from app.api.wearables import user_summary
+        band = user_summary(user.id, db)
+    result, new_state = engine.respond(body.message, history, conv.state or {}, profile_dict(user), band=band)
 
     if conv.title == "New chat" and not conv.messages:
         conv.title = make_title(body.message)
     db.add(Message(conversation_id=conv.id, role="user", content=body.message, intent=result["intent"]))
-    payload = {k: result.get(k) for k in ("exercises", "foods", "workout_plan", "yoga_poses", "yoga_routine", "sources", "safety", "category",
+    payload = {k: result.get(k) for k in ("exercises", "foods", "workout_plan", "yoga_poses", "yoga_routine", "band", "sources", "safety", "category",
                                           "intent_confidence", "is_followup", "model")}
     bot = Message(conversation_id=conv.id, role="assistant", content=result["answer"], intent=result["intent"],
                   payload=payload)
@@ -87,5 +92,5 @@ def chat(body: ChatIn, request: Request, user: User = Depends(get_current_user),
                    answer=result["answer"], category=result["category"], intent=result["intent"],
                    intent_confidence=result["intent_confidence"], is_followup=result["is_followup"],
                    exercises=result["exercises"], foods=result["foods"], workout_plan=result["workout_plan"],
-                   yoga_poses=result.get("yoga_poses") or [], yoga_routine=result.get("yoga_routine"),
+                   yoga_poses=result.get("yoga_poses") or [], yoga_routine=result.get("yoga_routine"), band=result.get("band"),
                    sources=result["sources"], safety=result["safety"], disclaimer=DISCLAIMER, model=result["model"])

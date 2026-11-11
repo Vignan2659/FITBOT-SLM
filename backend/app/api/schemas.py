@@ -105,6 +105,7 @@ class ChatOut(BaseModel):
     workout_plan: dict[str, Any] | None = None
     yoga_poses: list[dict[str, Any]] = []
     yoga_routine: dict[str, Any] | None = None
+    band: dict[str, Any] | None = None       # the person's own fitness band numbers used in the answer
     sources: list[dict[str, Any]] = []
     safety: dict[str, Any] | None = None
     disclaimer: str

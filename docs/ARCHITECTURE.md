@@ -35,6 +35,10 @@ user message
  │     medication, injury diagnosis) ──► reviewed guardrail response + disclaimer ──► done
  │     soft risk (pregnancy, chronic condition) ──► flagged, continue
  │
+ ├─1a Fitness band question (services/wearables.py): "how did I sleep last night", "my steps today"
+ │     ──► the person's own band numbers + one guidance passage, then the SLM answers; a band card is attached
+ │     (no band data yet ──► how to connect one; see docs/BANDS.md)
+ │
  ├─1b Yoga understanding (services/yoga.py): pose names, or "yoga" + routine / pose words
  │     ──► yoga cards, pose details or a timed routine + yoga guidance, then the SLM answers (see docs/YOGA.md)
  │
@@ -95,6 +99,9 @@ Why this design:
 | `exercise_metadata` | name, slug, muscle_group, description, target/secondary muscles, equipment, difficulty, instructions, safety_tips, image_url(s), image_license |
 | `food_metadata` | name, fdc_id, usda_description, group, tags, aliases, per_100g (JSON), portion (JSON), highlights, source, source_url |
 | `yoga_poses` | slug, name, sanskrit, difficulty, kind, phase, category / goals / body_areas (JSON), image_path, image_urls (JSON), details (JSON full pose record with photo credits) |
+| `wearable_daily` | user_id (FK, cascade), day, source, steps, distance_km, active_kcal, resting/avg/max/min heart rate, hrv_ms, stress, sleep_minutes, spo2 |
+| `wearable_workouts` | user_id (FK, cascade), source, start, activity, minutes, kcal, avg_hr, max_hr, distance_km, steps |
+| `wearable_imports` | user_id (FK, cascade), source, format, filename, days, workouts, first and last day |
 | `revoked_tokens` | jti, expires_at (server-side logout) |
 | `saved_plans` | id, user_id (FK, cascade), title, plan (JSON, as returned by `/chat`), created_at |
 | `workout_logs` | id, user_id (FK, cascade), day, exercise, sets, reps, weight_kg, minutes, notes, created_at |
@@ -137,6 +144,7 @@ deleting a user/conversation cascades to its messages.
 | DELETE | `/workouts/{id}` | ✓ | delete an entry |
 | GET | `/workouts/stats` | ✓ | active days per week (`weeks`), current streak, totals, most-logged exercises; `today` = browser's local date |
 | PUT | `/messages/{id}/feedback` | ✓ | `{rating: 1 / -1 / 0}` on an assistant answer (0 clears); returned as `feedback` in `/conversations/{id}` |
+| GET, POST, PUT, DELETE | `/wearables/...` | yes (brands and template public) | band export import, summary, typed days, live heart rate sessions (docs/BANDS.md) |
 | GET | `/health` | – | status, DB counts, loaded model info (`fine_tuned` flag) |
 
 Interactive docs: `http://localhost:8000/docs`.
@@ -166,7 +174,8 @@ Example `/chat` response (abridged):
 | Routing / auth guard | `App.jsx`, `context/AuthContext.jsx` (token in localStorage, auto-logout on 401) |
 | API | `api/client.js` |
 | Layout | `components/AppLayout.jsx` – sidebar: New chat, nav, previous conversations (delete), user, logout; mobile drawer |
-| Pages | `Login`, `Register`, `Dashboard` (quick-start prompts, stats, exercise explorer, recent chats), `Chat` (voice input), `Workouts` (log form, weekly chart, streak, saved plans, recent activity), `Profile` |
+| Pages | `Login`, `Register`, `Dashboard` (quick-start prompts, stats, exercise explorer, recent chats), `Chat` (voice input), `Workouts` (log form, weekly chart, streak, saved plans, recent activity), `Yoga`, `YogaPose`, `Bands` (band import, trends, live heart rate over Web Bluetooth), `Profile` |
+| Motion photos | `hooks/useMotion.js` plays the photos of an exercise or yoga pose in order while the cursor is on the picture |
 | Structured rendering | `Message.jsx`, `ExerciseCard.jsx` (image, target, equipment, difficulty, View instructions, safety tip), `FoodCard.jsx` (kcal, macro bar, fiber/sugar/sodium, USDA link), `WorkoutPlan.jsx` (day tabs, sets × reps, rest, difficulty, image, Save plan / Log day), answer actions (read aloud, 👍/👎) |
 | Branding / PWA | `PartnerBadge.jsx` (client logo on login and sidebar), `public/manifest.json`, icons, `public/sw.js` (registered in production builds only) |
 | Styling | `styles.css` – design tokens, light/dark, responsive (sidebar becomes a drawer < 820 px) |

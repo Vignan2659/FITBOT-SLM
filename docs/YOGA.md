@@ -13,7 +13,7 @@ FitBot
      ├── Categories      16 categories, each opens the filtered pose list
      ├── Goals           poses or a routine for each goal
      ├── Routine builder time, level, goal, focus area, morning or evening
-     └── Pose page       real photos of the pose, steps, breathing, safety, related poses
+     └── Pose page       real photos of the pose with the motion, steps, breathing, safety, related poses
 ```
 
 ## Dataset
@@ -22,9 +22,9 @@ FitBot
 
 | | |
 |---|---|
-| Records | 61 (59 poses, 2 breathing practices), every one with real photos |
-| Photos | 102 photos of real people (1 or 2 per pose) |
-| Difficulty | 29 beginner, 26 intermediate, 6 advanced |
+| Records | 34 poses, every one with real photos |
+| Photos | 69 photos of real people (1 to 3 per pose, in motion order) |
+| Difficulty | 22 beginner, 9 intermediate, 3 advanced |
 | Goals | flexibility, mobility, strength, balance, core, stress relief, relaxation, recovery, weight management, posture, breathing, meditation |
 | Body areas | back, shoulders, hips, legs, core, full body, chest, neck |
 | Categories | Flexibility, Mobility, Strength, Balance, Core, Back, Shoulders, Hips, Hamstrings, Recovery, Relaxation, Stress relief, Breathing, Meditation (plus Posture and Weight management) |
@@ -50,25 +50,36 @@ python3 scripts/yoga/build_yoga.py
 
 ## Photos of real people
 
-Every pose is shown with real photos of a person doing it, the same idea as the exercise library (photos, with a
-second view on hover). There are no drawn or animated figures.
+Every pose is shown with real photos of a person doing it, the same idea as the exercise library. There are no drawn
+or animated figures.
+
+### Motion on hover
+
+The photos of a pose are stored in motion order: the starting position first and the finished pose last (for example
+Warrior II, then Triangle; or standing, then the hands down, then Downward Dog). A card rests on the finished pose. When
+the cursor is on the picture (or it has keyboard focus, or it is tapped on a phone) the photos play one after another
+as a short loop, so you see how to move into the pose. The pose page plays the same motion, and the small pictures under
+it let you stop on one frame. The exercise cards use the same motion with their start and finish photos.
+
+All photos sit on one 3:2 canvas so the frames line up. Upright photos keep their full height and the wall and floor are
+continued sideways from the photo's own edges, so nobody is cropped.
 
 ### Where the photos come from
 
-The photos come from Wikimedia Commons, where every file has an explicit free licence. Most come from four consistent
-studio series, so the cards look alike:
-
-| Series on Wikimedia Commons | Photos used | Licence | Look |
+| Source | Photos | Licence | Look |
 |---|---|---|---|
-| Kennguru, "Yoga-Asana Nina-Mel" | 29 | CC BY 3.0 | white studio background |
-| Joseph Renger, asana series | 23 | CC BY-SA 3.0 | bright home studio |
-| lululemon athletica | 13 | CC BY 2.0 | white studio background |
-| Mr. Yoga | 11 | CC BY-SA 4.0 | light grey studio |
-| Other individual photographers | 26 | CC BY, CC BY-SA or public domain | various |
+| Margaret Young on Unsplash | 54 | Unsplash License (free to use, credit given anyway) | one teacher in a bright white studio, the same outfit in every photo |
+| free-exercise-db | 15 | Public domain (Unlicense) | the gym photos of the exercise section |
 
-Each photo was chosen by looking at it: one person, the whole body in frame, the pose clearly correct. The full list
-with authors, licences and source pages is in [data/yoga/PHOTO_CREDITS.md](../data/yoga/PHOTO_CREDITS.md), and the
-app shows the credit under every photo on the pose pages.
+The earlier version used single photos from many Wikimedia Commons photographers. They were correct but looked uneven
+(different people, rooms, cameras and colours on every card), so they were replaced. The studio series shows one person
+in one room for most poses, which makes the section look like one set. Poses without a clear photo in either set were
+left out rather than shown with a weak picture: the pose texts stay in `scripts/yoga/` and come back automatically when a
+photo is added to `data/yoga/photo_credits.json`.
+
+Each photo was chosen by looking at it: the whole body in frame and the pose clearly correct. The full list with
+authors, licences and source pages is in [data/yoga/PHOTO_CREDITS.md](../data/yoga/PHOTO_CREDITS.md), and the app shows
+the credit under every photo on the pose pages.
 
 ### Other datasets looked at
 
@@ -84,18 +95,19 @@ clear, correctly credited photos per pose is more useful.
 
 ### Files and performance
 
-* `frontend/public/yoga/photos/<slug>-<n>.jpg`: pose page size (longest side 800 px)
-* `frontend/public/yoga/photos/thumb/<slug>-<n>.jpg`: card size (longest side 420 px), about 25 KB each
+* `frontend/public/yoga/photos/<slug>-<n>.jpg`: pose page size (900 x 600)
+* `frontend/public/yoga/photos/thumb/<slug>-<n>.jpg`: card size (480 x 320)
 
-All 102 photos take 4.7 MB in total. Cards load only the small version and only when they scroll into view, and the
-service worker caches the photos after the first visit. `scripts/yoga/process_photos.py` makes both sizes from
-downloaded originals, and `data/yoga/photo_credits.json` lists which file belongs to which pose.
+All 69 photos take 3.8 MB in total. Cards load only the small version and only when they scroll into view, the
+other frames are fetched the first time the motion plays, and the service worker caches the photos after the first
+visit. `scripts/yoga/process_photos.py` makes both sizes from downloaded originals, and `data/yoga/photo_credits.json`
+lists which file belongs to which pose and in which order.
 
 ### Licences
 
 * Pose text and data: written for FitBot, MIT (see `LICENSE`).
-* Photos: each under its own licence (CC BY, CC BY-SA or public domain), credited per photo. Resizing does not change
-  the licence; anyone reusing the photos must keep the credit and, for CC BY-SA photos, the same licence.
+* Photos: the Unsplash License for the studio photos (free to use, but not to sell unaltered or to build a competing
+  photo service) and public domain for the gym photos; each photo is credited.
 * General safety framing in the yoga guidance passages follows the US National Center for Complementary and
   Integrative Health page "Yoga: What You Need To Know" (US government work, public domain).
 

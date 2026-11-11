@@ -3,6 +3,7 @@ import FoodCard from "./FoodCard.jsx";
 import WorkoutPlan from "./WorkoutPlan.jsx";
 import YogaCard from "./YogaCard.jsx";
 import YogaRoutine from "./YogaRoutine.jsx";
+import BandCard from "./BandCard.jsx";
 import { useEffect, useState } from "react";
 import { api } from "../api/client.js";
 import { IconDumbbell, IconShield, IconSpeaker, IconStop, IconThumbDown, IconThumbUp } from "./Icons.jsx";
@@ -70,7 +71,7 @@ const INTENT_LABEL = {
   weight_loss: "Weight loss", muscle_gain: "Muscle gain", cardio: "Cardio", hydration: "Hydration", sleep: "Sleep",
   recovery: "Recovery", stretching: "Stretching", home_workout: "Home workout", gym_workout: "Gym workout",
   equipment: "Equipment", exercise_safety: "Exercise safety", general_fitness: "General fitness",
-  medical_safety: "Health & safety", greeting: "Hello", out_of_domain: "Out of scope", yoga: "Yoga",
+  medical_safety: "Health & safety", greeting: "Hello", out_of_domain: "Out of scope", yoga: "Yoga", band: "Your band",
 };
 
 // Renders plain text with paragraphs and simple numbered / bulleted lines.
@@ -92,7 +93,7 @@ export default function Message({ msg }) {
   const p = msg.payload || {};
   const exercises = p.exercises || [];
   const foods = p.foods || [];
-  const intent = msg.intent || p.category;
+  const intent = p.category === "band" ? "band" : msg.intent || p.category;
   return (
     <div className="msg msg-bot">
       <div className="bot-avatar" aria-hidden><IconDumbbell width={16} height={16} /></div>
@@ -103,6 +104,7 @@ export default function Message({ msg }) {
           {p.safety && <span className="tag tag-safety"><IconShield width={12} height={12} /> Safety</span>}
         </div>
         <div className="bubble bubble-bot"><RichText text={msg.content} /></div>
+        {p.band && <BandCard band={p.band} />}
         {p.workout_plan && <WorkoutPlan plan={p.workout_plan} saveable />}
         {exercises.length > 0 && !p.workout_plan && (
           <div className="card-grid">{exercises.map((e) => <ExerciseCard key={e.slug || e.name} exercise={e} />)}</div>

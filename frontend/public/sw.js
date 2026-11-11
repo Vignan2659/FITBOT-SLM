@@ -2,7 +2,7 @@
 // - /api/* is never cached: answers, accounts and logs always come from the server.
 // - Hashed build files (/assets/*) and yoga photos (/yoga/photos/*) are cached on first use.
 // - Page navigations go to the network first and fall back to the cached app shell when offline.
-const CACHE = "fitbot-shell-v3";
+const CACHE = "fitbot-shell-v5";
 const SHELL = ["/", "/manifest.json", "/favicon.svg", "/icon-192.png", "/veltris-logo.png"];
 
 self.addEventListener("install", (event) => {

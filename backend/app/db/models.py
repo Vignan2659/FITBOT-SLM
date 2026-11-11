@@ -1,5 +1,6 @@
 """Database tables: users, user_profiles, conversations, messages, exercise_metadata,
-food_metadata, yoga_poses, revoked_tokens, saved_plans, workout_logs, message_feedback."""
+food_metadata, yoga_poses, revoked_tokens, saved_plans, workout_logs, message_feedback,
+wearable_daily, wearable_workouts, wearable_imports."""
 from __future__ import annotations
 
 from datetime import date, datetime, timezone
@@ -171,3 +172,58 @@ class MessageFeedback(Base):
     message_id: Mapped[int] = mapped_column(ForeignKey("messages.id", ondelete="CASCADE"), index=True)
     rating: Mapped[int] = mapped_column(Integer)      # +1 helpful, -1 not helpful
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class WearableDaily(Base):
+    """One day of fitness band data from one source (an imported export, manual entry). Several sources can cover
+    the same day; they are merged when read (app.services.wearables.merge_sources)."""
+    __tablename__ = "wearable_daily"
+    __table_args__ = (UniqueConstraint("user_id", "day", "source"),)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    day: Mapped[date] = mapped_column(Date, index=True)
+    source: Mapped[str] = mapped_column(String(20))               # apple, samsung, google, huawei, ..., manual
+    steps: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    distance_km: Mapped[float | None] = mapped_column(Float, nullable=True)
+    active_kcal: Mapped[float | None] = mapped_column(Float, nullable=True)
+    resting_hr: Mapped[float | None] = mapped_column(Float, nullable=True)
+    avg_hr: Mapped[float | None] = mapped_column(Float, nullable=True)
+    max_hr: Mapped[float | None] = mapped_column(Float, nullable=True)
+    min_hr: Mapped[float | None] = mapped_column(Float, nullable=True)
+    hrv_ms: Mapped[float | None] = mapped_column(Float, nullable=True)
+    stress: Mapped[float | None] = mapped_column(Float, nullable=True)      # 0-100, higher = more stress
+    sleep_minutes: Mapped[float | None] = mapped_column(Float, nullable=True)
+    spo2: Mapped[float | None] = mapped_column(Float, nullable=True)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class WearableWorkout(Base):
+    """A workout recorded by a band (imported) or by a live heart rate session in the browser."""
+    __tablename__ = "wearable_workouts"
+    __table_args__ = (UniqueConstraint("user_id", "start", "activity", "source"),)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    source: Mapped[str] = mapped_column(String(20))
+    start: Mapped[datetime] = mapped_column(DateTime, index=True)            # local wall clock time
+    activity: Mapped[str] = mapped_column(String(60))
+    minutes: Mapped[float] = mapped_column(Float)
+    kcal: Mapped[float | None] = mapped_column(Float, nullable=True)
+    avg_hr: Mapped[float | None] = mapped_column(Float, nullable=True)
+    max_hr: Mapped[float | None] = mapped_column(Float, nullable=True)
+    distance_km: Mapped[float | None] = mapped_column(Float, nullable=True)
+    steps: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+
+class WearableImport(Base):
+    """Log of imported export files (shown on the Bands page)."""
+    __tablename__ = "wearable_imports"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    source: Mapped[str] = mapped_column(String(20))
+    format: Mapped[str] = mapped_column(String(40))
+    filename: Mapped[str] = mapped_column(String(160))
+    days: Mapped[int] = mapped_column(Integer)
+    workouts: Mapped[int] = mapped_column(Integer)
+    first_day: Mapped[date | None] = mapped_column(Date, nullable=True)
+    last_day: Mapped[date | None] = mapped_column(Date, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)

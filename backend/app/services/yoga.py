@@ -40,6 +40,7 @@ MINUTES_RE = re.compile(r"\b(\d{1,2})\s*-?\s*(min|mins|minute|minutes)\b", re.I)
 # foundational poses preferred when a routine has no specific goal
 STAPLES = {"mountain-pose", "cat-cow", "downward-dog", "low-lunge", "warrior-ii", "childs-pose", "bridge-pose",
            "seated-forward-fold", "corpse-pose", "easy-pose", "tree-pose", "supine-twist"}
+MAIN_PHASES = {"standing", "balance", "core", "backbend", "seated"}
 GENTLE_RE = re.compile(r"\b(pain|painful|hurts?|injur\w*|stiff|arthritis|condition|older|senior|elderly|"
                        r"recovering|rehab)\b", re.I)
 GOAL_WORDS = [
@@ -207,6 +208,7 @@ class YogaLibrary:
         if gentle:
             pool = [p for p in pool if not _unsuitable(p, area)] or pool
         rank = {s: i for i, s in enumerate(ranked or [])}
+        own = LEVELS.index(level) if level in LEVELS and not gentle else None
 
         def score(p):
             s = 0.0
@@ -216,7 +218,11 @@ class YogaLibrary:
                 s += 3 + (1 if p["body_areas"][0] == area else 0)
             if p["slug"] in rank:
                 s += 2.0 * (1 - rank[p["slug"]] / max(len(rank), 1))
-            s -= 0.3 * LEVELS.index(p["difficulty"])
+            idx = LEVELS.index(p["difficulty"])
+            if own is None:
+                s -= 0.3 * idx
+            else:                       # the person's own level first, easier poses after it
+                s += 1.5 if idx == own else -0.6 * (own - idx)
             return -s
         return sorted(pool, key=score)[:limit]
 
@@ -261,7 +267,11 @@ class YogaLibrary:
                 s += 1.5
             if gentle and _unsuitable(p, area):
                 s -= 10
-            s -= .4 * LEVELS.index(p["difficulty"])
+            idx, own = LEVELS.index(p["difficulty"]), LEVELS.index(level)
+            if own and p["phase"] in MAIN_PHASES:      # the working part of the routine matches the person's level
+                s += 4.0 - 2.5 * (own - idx)     # own level first (ahead of the staple poses), then one below
+            else:                                      # warm up, cool down and beginners: the gentlest fit
+                s -= .4 * idx
             return s
 
         used: set[str] = set()

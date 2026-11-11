@@ -6,6 +6,8 @@ import WorkoutPlan, { planDayEntries } from "../components/WorkoutPlan.jsx";
 import { MemoryRouter } from "react-router-dom";
 import YogaCard from "../components/YogaCard.jsx";
 import YogaRoutine from "../components/YogaRoutine.jsx";
+import BandCard, { bandTiles } from "../components/BandCard.jsx";
+import { parseHeartRate, sessionStats } from "../hooks/useHeartRate.js";
 
 const bench = {
   name: "Bench Press", slug: "bench-press", muscle_group: "chest",
@@ -120,4 +122,35 @@ test("chat message renders yoga cards and a yoga routine from the payload", () =
   expect(screen.getByText("Yoga")).toBeInTheDocument();
   expect(screen.getByText("15-Minute Beginner Yoga")).toBeInTheDocument();
   expect(screen.getAllByText("Warrior II").length).toBeGreaterThan(0);
+});
+
+test("band card shows the day's numbers and links to the Bands page", () => {
+  const band = { day: "2026-11-10", is_today: false, steps: 9321, distance_km: 6.4, resting_hr: 58, avg_hr: 74, sleep_minutes: 388,
+    stress: 72, stress_estimated: true, hrv_ms: 51 };
+  render(<MemoryRouter><BandCard band={band} /></MemoryRouter>);
+  expect(screen.getByText("9,321")).toBeInTheDocument();
+  expect(screen.getByText("6.4 km")).toBeInTheDocument();
+  expect(screen.getByText("58 bpm")).toBeInTheDocument();
+  expect(screen.getByText("6 h 28 min")).toBeInTheDocument();
+  expect(screen.getByText("under 7 hours")).toBeInTheDocument();
+  expect(screen.getByText("72 / 100")).toBeInTheDocument();
+  expect(screen.getByText("high · estimated")).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /open bands/i })).toHaveAttribute("href", "/bands");
+  expect(bandTiles({ day: "2026-11-10" })).toEqual([]);
+});
+
+test("bot message shows the band card when the answer used band data", () => {
+  const msg = { id: 9, role: "assistant", intent: "sleep", content: "You slept 6 hours 28 minutes.",
+    payload: { category: "band", band: { day: "2026-11-10", is_today: true, steps: 4000, sleep_minutes: 388 }, sources: [{ title: "Your fitness band data" }] } };
+  render(<MemoryRouter><Message msg={msg} /></MemoryRouter>);
+  expect(screen.getByText("Your band")).toBeInTheDocument();
+  expect(screen.getByText("4,000")).toBeInTheDocument();
+  expect(screen.getByText(/From your band · Today/)).toBeInTheDocument();
+});
+
+test("heart rate measurement is read in both 8 and 16 bit form", () => {
+  expect(parseHeartRate(new DataView(new Uint8Array([0x00, 72]).buffer))).toBe(72);
+  expect(parseHeartRate(new DataView(new Uint8Array([0x01, 0x2c, 0x01]).buffer))).toBe(300);
+  expect(sessionStats([{ bpm: 100 }, { bpm: 140 }, { bpm: 120 }])).toEqual({ avg: 120, max: 140, min: 100 });
+  expect(sessionStats([])).toEqual({ avg: null, max: null, min: null });
 });

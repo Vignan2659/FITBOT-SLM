@@ -32,6 +32,56 @@ ROLES: dict[str, list[str]] = {
     "cardio": ["Walking", "Cycling", "Running", "Rowing", "Jump Rope", "Elliptical"],
 }
 
+# Level tracks: for intermediate and advanced lifters these candidates come before the general list above, so the
+# plan and the single-muscle workouts use movements of that level (heavier compound lifts, harder bodyweight
+# variations) instead of the beginner staples. Names that the catalog does not have are simply skipped.
+LEVEL_ROLES: dict[str, dict[str, list[str]]] = {
+    "intermediate": {
+        "squat": ["Squat", "Front Squat (Clean Grip)", "Dumbbell Squat To A Bench", "Freehand Jump Squat"],
+        "lunge": ["Barbell Lunge", "Dumbbell Rear Lunge", "Lunges"],
+        "hinge": ["Romanian Deadlift", "Sumo Deadlift", "Stiff-Legged Dumbbell Deadlift", "Floor Glute-Ham Raise"],
+        "hams": ["Romanian Deadlift", "Good Morning", "Stiff-Legged Dumbbell Deadlift", "Floor Glute-Ham Raise"],
+        "calves": ["Standing Dumbbell Calf Raise", "Calf Raise"],
+        "push_h": ["Bench Press", "Wide-Grip Barbell Bench Press", "Dumbbell Floor Press", "Clock Push-Up"],
+        "push_inc": ["Incline Press", "Clock Push-Up", "Push-Ups – Close Triceps Position"],
+        "chest_iso": ["Cable Crossover", "Bent-Arm Dumbbell Pullover", "Chest Fly"],
+        "pull_v": ["Pull-Ups", "Wide-Grip Rear Pull-Up", "Lat Pulldown"],
+        "pull_h": ["Bent-Over Dumbbell Row", "Reverse Grip Bent-Over Rows", "Seated Row"],
+        "push_v": ["Arnold Press", "Barbell Shoulder Press", "Dumbbell One-Arm Shoulder Press"],
+        "delts": ["Cuban Press", "Lateral Raise", "Seated Bent-Over Rear Delt Raise"],
+        "rear_delts": ["Seated Bent-Over Rear Delt Raise", "Rear Delt Fly"],
+        "biceps": ["Zottman Curl", "Drag Curl", "Hammer Curl"],
+        "triceps": ["Dips", "Lying Dumbbell Tricep Extension", "Push-Ups – Close Triceps Position", "Tate Press"],
+        "core": ["Russian Twists", "Decline Crunch", "Frog Sit-Ups", "Plank"],
+        "cardio": ["Running", "Rowing", "Jump Rope"],
+    },
+    "advanced": {
+        "squat": ["Front Barbell Squat", "Overhead Squat", "Kettlebell Pistol Squat", "Squat", "Freehand Jump Squat"],
+        "lunge": ["One Leg Barbell Squat", "Barbell Lunge", "Dumbbell Rear Lunge"],
+        "hinge": ["Deadlift", "Deficit Deadlift", "Romanian Deadlift", "Stiff-Legged Dumbbell Deadlift", "Natural Glute Ham Raise"],
+        "hams": ["Natural Glute Ham Raise", "Good Morning", "Romanian Deadlift", "Floor Glute-Ham Raise"],
+        "calves": ["Standing Dumbbell Calf Raise", "Calf Raise"],
+        "push_h": ["Bench Press", "Plyo Kettlebell Pushups", "Wide-Grip Decline Barbell Bench Press", "Single-Arm Push-Up"],
+        "push_inc": ["Wide-Grip Barbell Bench Press", "Single-Arm Push-Up", "Clock Push-Up", "Incline Press"],
+        "chest_iso": ["Cable Crossover", "Straight-Arm Dumbbell Pullover", "Chest Fly"],
+        "pull_v": ["Mixed Grip Chin", "Wide-Grip Rear Pull-Up", "Pull-Ups"],
+        "pull_h": ["Alternating Renegade Row", "Reverse Grip Bent-Over Rows", "Bent-Over Dumbbell Row"],
+        "push_v": ["Push Press", "Handstand Push-Ups", "Barbell Shoulder Press", "Arnold Press"],
+        "delts": ["Cuban Press", "See-Saw Press (Alternating Side Press)", "Lateral Raise"],
+        "rear_delts": ["Seated Bent-Over Rear Delt Raise", "Rear Delt Fly"],
+        "biceps": ["Drag Curl", "Zottman Curl", "Hammer Curl"],
+        "triceps": ["Dips", "Tate Press", "Lying Dumbbell Tricep Extension", "Push-Ups – Close Triceps Position"],
+        "core": ["Hanging Leg Raise", "Hanging Pike", "Barbell Ab Rollout", "Russian Twists", "Decline Crunch"],
+        "cardio": ["Running", "Rowing", "Jump Rope"],
+    },
+}
+LEVEL_NOTES = {
+    "beginner": "Beginner level: simple, stable movements. Learn the technique with light weights before adding load.",
+    "intermediate": "Intermediate level: free weight compound lifts and harder bodyweight variations than the beginner plan.",
+    "advanced": "Advanced level: heavy compound lifts and demanding variations. Use a spotter or safety pins on heavy "
+                "sets and keep your technique strict.",
+}
+
 # Day templates per split: (focus label, roles)
 FULL_BODY = [
     ("Full body A", ["squat", "push_h", "pull_h", "hinge", "core"]),
@@ -62,6 +112,7 @@ TIMED = {"Plank": "20-40 sec", "Mountain Climbers": "30 sec", "Superman": "10-12
          "Jump Rope": "5 x 1 min", "Elliptical": "20-30 min"}
 BODYWEIGHT_OK = {"Lunges", "Step-Ups", "Calf Raise", "Bodyweight Squat"}
 LEVEL_RANK = {"beginner": 0, "intermediate": 1, "advanced": 2}
+MAIN_ROLES = {"squat", "hinge", "push_h", "pull_v", "push_v"}     # the big compound lifts of a session
 EQUIP_ALIASES = {
     "none": "bodyweight", "no equipment": "bodyweight", "bodyweight": "bodyweight", "body weight": "bodyweight",
     "dumbbell": "dumbbells", "dumbbells": "dumbbells", "kettlebell": "kettlebells", "kettlebells": "kettlebells",
@@ -87,8 +138,8 @@ def allowed(ex: dict, equipment: set[str]) -> bool:
         return True
     if raw == "dumbbell" and "dumbbells" in equipment:
         return True
-    if raw == "kettlebells" and ({"kettlebells", "dumbbells"} & equipment):
-        return True  # goblet squat works with either
+    if raw == "kettlebells" and ("kettlebells" in equipment or ("dumbbells" in equipment and ex["name"] == "Goblet Squat")):
+        return True  # a goblet squat works with a dumbbell too
     if raw == "bands" and "bands" in equipment:
         return True
     if ex.get("muscle_group") == "cardio" and ex.get("home_friendly"):
@@ -97,18 +148,30 @@ def allowed(ex: dict, equipment: set[str]) -> bool:
 
 
 def level_ok(ex: dict, level: str) -> bool:
-    return LEVEL_RANK.get(ex["difficulty"].lower(), 1) <= LEVEL_RANK.get(level, 0) + (0 if level == "beginner" else 1)
+    """Beginners only get beginner movements, intermediates everything except advanced lifts, advanced everything."""
+    return LEVEL_RANK.get(ex["difficulty"].lower(), 1) <= max(LEVEL_RANK.get(level, 0), 0) + (0 if level != "advanced" else 1)
 
 
 def prescription(level: str, goal: str, main: bool) -> tuple[str, str, str]:
-    """(sets, reps, rest) following common guidance."""
+    """(sets, reps, rest) following common guidance; volume and load go up with the level."""
     if level == "beginner":
         return ("2-3", "10-12", "60-90 sec")
+    adv = level == "advanced"
     if goal == "strength":
+        if adv:
+            return ("5", "3-5", "3 min") if main else ("4", "6-8", "2 min")
         return ("4-5", "4-6", "2-3 min") if main else ("3", "8-10", "90 sec")
     if goal in ("weight_loss", "endurance"):
-        return ("3", "12-15", "45-60 sec")
+        return ("4", "12-15", "45 sec") if adv else ("3", "12-15", "45-60 sec")
+    if adv:
+        return ("4-5", "6-10", "90-120 sec") if main else ("3-4", "10-12", "60-90 sec")
     return ("3-4", "8-12", "60-120 sec") if main else ("3", "10-15", "60 sec")
+
+
+def candidates(role: str, level: str) -> list[str]:
+    """Exercise names for a movement role, the level's own track first."""
+    names = LEVEL_ROLES.get(level, {}).get(role, []) + ROLES[role]
+    return list(dict.fromkeys(names))
 
 
 class Planner:
@@ -116,16 +179,16 @@ class Planner:
         self.by_name = {e["name"]: e for e in exercises}
 
     def pick(self, role: str, level: str, equipment: set[str], used: set[str], offset: int = 0) -> dict | None:
-        cands = [self.by_name[n] for n in ROLES[role] if n in self.by_name]
+        cands = [self.by_name[n] for n in candidates(role, level) if n in self.by_name]
         ok = [e for e in cands if allowed(e, equipment) and level_ok(e, level) and e["name"] not in used]
         if not ok and level != "beginner":
             ok = [e for e in cands if allowed(e, equipment) and e["name"] not in used]
         if not ok:
             return None
-        if "gym" in equipment and level != "beginner":
-            # with full equipment, trained lifters get loaded movements over easy bodyweight ones
-            loaded = [e for e in ok if not (e["difficulty"] == "Beginner" and e["equipment_raw"] == "body only")]
-            ok = loaded or ok
+        if level != "beginner":
+            # trained lifters get loaded or harder movements over easy bodyweight ones whenever one is available
+            harder = [e for e in ok if not (e["difficulty"] == "Beginner" and e["equipment_raw"] == "body only")]
+            ok = harder or ok
         # rotate between the top two choices across days for variety
         return ok[offset % min(2, len(ok))] if level != "beginner" else ok[0]
 
@@ -166,7 +229,7 @@ class Planner:
                 ex = self.pick(role, level, eq, used, offset=i if j < 2 or role == "core" else 0)
                 if ex:
                     used.add(ex["name"])
-                    items.append(self._item(ex, level, goal, main=j < 2, equipment=eq))
+                    items.append(self._item(ex, level, goal, main=j < 2 or role in MAIN_ROLES, equipment=eq))
             if goal in ("weight_loss", "endurance", "general_fitness"):
                 cardio = self.pick("cardio", level, eq, used, offset=i)
                 if cardio:
@@ -182,11 +245,13 @@ class Planner:
                 "Warm up for 5-10 minutes before each session and cool down with light stretching.",
                 "Leave 1-3 reps in reserve on each set; add weight or reps gradually when sets feel easier.",
                 "Take at least one rest day between sessions that train the same muscles.",
+                LEVEL_NOTES[level],
             ],
         }
 
     def muscle_workout(self, group: str, level: str = "beginner", goal: str = "muscle_gain",
                        equipment: Iterable[str] | None = None, location: str | None = None) -> dict:
+        level = level if level in LEVEL_RANK else "beginner"
         eq = normalise_equipment(equipment, location)
         roles = MUSCLE_ROLES.get(group, MUSCLE_ROLES["chest"])
         used: set[str] = set()
@@ -199,6 +264,7 @@ class Planner:
                 # fall back to any allowed exercise from the same muscle group
                 pool = [e for e in self.by_name.values() if e["muscle_group"] == group
                         and allowed(e, eq) and level_ok(e, level) and e["name"] not in used]
+                pool.sort(key=lambda e: abs(LEVEL_RANK.get(e["difficulty"].lower(), 0) - LEVEL_RANK[level]))
                 ex = pool[0] if pool else None
             if ex:
                 used.add(ex["name"])
@@ -210,7 +276,7 @@ class Planner:
             "location": "home" if "gym" not in eq else "gym",
             "days": [{"day": "Workout", "focus": group.title(), "exercises": items}],
             "notes": ["Warm up first with light cardio and a lighter set of the first exercise.",
-                      "Increase reps or weight gradually as the workout gets easier."],
+                      "Increase reps or weight gradually as the workout gets easier.", LEVEL_NOTES[level]],
         }
 
 

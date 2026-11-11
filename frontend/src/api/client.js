@@ -52,6 +52,24 @@ async function request(path, { method = "GET", body, auth = true } = {}) {
   return data;
 }
 
+// Upload a file as the raw request body (band export files can be hundreds of megabytes, so nothing is re-encoded).
+async function upload(path, file) {
+  const token = getToken();
+  let res;
+  try {
+    res = await fetch(`${BASE}${path}`, { method: "POST", body: file,
+      headers: { "Content-Type": "application/octet-stream", ...(token ? { Authorization: `Bearer ${token}` } : {}) } });
+  } catch {
+    throw new ApiError(0, "Cannot reach the FitBot server. Is the backend running on port 8000?");
+  }
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    if (res.status === 401 && token) onUnauthorized();
+    throw new ApiError(res.status, typeof data.detail === "string" ? data.detail : `Upload failed (${res.status})`);
+  }
+  return data;
+}
+
 export const api = {
   register: (name, email, password) => request("/auth/register", { method: "POST", body: { name, email, password }, auth: false }),
   login: (email, password) => request("/auth/login", { method: "POST", body: { email, password }, auth: false }),
@@ -77,6 +95,12 @@ export const api = {
   logWorkouts: (entries) => request("/workouts", { method: "POST", body: entries }),
   listWorkouts: (limit = 50) => request(`/workouts?limit=${limit}`),
   deleteWorkout: (id) => request(`/workouts/${id}`, { method: "DELETE" }),
+  bandBrands: () => request("/wearables/brands", { auth: false }),
+  bandSummary: (days = 14) => request(`/wearables/summary?${new URLSearchParams({ days, today: localDate() })}`),
+  bandImport: (brand, file) => upload(`/wearables/import?${new URLSearchParams({ brand, filename: file.name })}`, file),
+  bandSaveDay: (day) => request("/wearables/day", { method: "PUT", body: day }),
+  bandSaveLive: (session) => request("/wearables/live", { method: "POST", body: session }),
+  bandDelete: (source) => request(`/wearables/data${source ? `?source=${encodeURIComponent(source)}` : ""}`, { method: "DELETE" }),
   workoutStats: (today) => request(`/workouts/stats?${new URLSearchParams({ today, weeks: 8 })}`),
 };
 

@@ -231,17 +231,36 @@ def test_yoga_section_filters_detail_routine_and_chat(page):
     # filters and search
     page.get_by_role("button", name="Advanced").click()
     badges = page.locator(".yoga-card .badge").all_inner_texts()
-    assert badges and all(b in ("Advanced", "Both sides") for b in badges)
+    assert badges and all(b in ("Advanced", "Your level") for b in badges)
     page.get_by_role("button", name="Clear filters").first.click()
     page.get_by_role("searchbox", name="Search yoga poses").fill("warrior")
-    expect(page.locator(".yoga-card")).to_have_count(3)   # Warrior I, II and III
+    expect(page.locator(".yoga-card")).to_have_count(2)   # Warrior II and Reverse Warrior
 
     # pose page: real photo with its credit, steps, safety
     page.locator('.yoga-card a[href="/yoga/warrior-ii"]').click()
     expect(page.get_by_role("heading", name="Warrior II")).to_be_visible()
-    expect(page.locator(".pose-photo > img")).to_be_visible()
-    expect(page.locator(".pose-photo figcaption")).to_contain_text("Wikimedia Commons")
+    expect(page.locator(".pose-stage > img")).to_be_visible()
+    expect(page.locator(".pose-photo figcaption")).to_contain_text("Unsplash")
+    first = page.locator(".pose-stage > img").get_attribute("src")
+    page.locator(".pose-stage").hover()                       # the photos play as a motion under the cursor
+    expect(page.locator(".pose-stage > img")).not_to_have_attribute("src", first, timeout=3000)
     expect(page.locator(".pose-safety")).to_be_visible()
+
+    # fitness bands page, below Yoga
+    nav = page.locator(".nav a").all_inner_texts()
+    assert nav.index("Bands") == nav.index("Yoga") + 1
+    page.goto(f"{BASE}/bands")
+    expect(page.get_by_role("heading", name="Fitness bands")).to_be_visible()
+    for brand in ("Apple Watch", "Samsung Galaxy Watch", "Huawei Watch / Band", "OnePlus Watch / Band", "Noise smartwatch", "WHOOP"):
+        expect(page.get_by_role("tab", name=brand)).to_be_visible()
+    page.locator("details.band-manual summary").click()
+    page.get_by_label("Steps").fill("9321")
+    page.get_by_label("Sleep (hours)").fill("6.5")
+    page.get_by_role("button", name="Save day").click()
+    expect(page.locator(".band-tiles.big")).to_contain_text("9,321")
+    page.get_by_role("button", name="New chat").first.click()
+    bot = ask(page, "How many steps did I do today?")
+    expect(bot.locator(".band-card")).to_contain_text("9,321")
 
     # routine builder
     page.goto(f"{BASE}/yoga?tab=routine")

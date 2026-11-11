@@ -21,6 +21,7 @@ from app.services import safety
 from app.services.catalog import Catalog, exercise_card, food_card
 from app.services.nlu import NLU, Slots
 from app.services.planner import Planner, plan_to_context
+from app.services.wearables import BAND_QUESTION_RE, NO_BAND_MESSAGE, health_card, health_context
 from app.services.yoga import (YOGA_WORD_RE, YogaLibrary, YogaQuery, format_routine, format_yoga_detail,
                                format_yoga_pose, tidy_answer, yoga_card)
 
@@ -150,7 +151,7 @@ class ChatEngine:
                 passages = [safety_p] + passages[:1]
         context += [format_passage(p) for p in passages]
         result["sources"] = [{"type": "guidance", "title": p["title"], "source": p["source"]} for p in passages]
-        result["sources"].append({"type": "yoga", "title": "FitBot yoga library (photos: Wikimedia Commons)", "source": "/yoga"})
+        result["sources"].append({"type": "yoga", "title": "FitBot yoga library (photos: Margaret Young on Unsplash, free-exercise-db)", "source": "/yoga"})
 
         prompt_profile = {"fitness_level": (yq.level or "").lower() or None, "goal": (profile or {}).get("goal"),
                           "equipment": None, "location": None, "dietary_preference": None,
@@ -190,14 +191,56 @@ class ChatEngine:
                          "time_of_day": yq.time_of_day, "level": yq.level}
         return result, state
 
+    # ------------------------------------------------------------------ fitness band
+    def _respond_band(self, message: str, band: dict, lines: list[str], history: list[dict], state: dict,
+                      profile: dict | None, result: dict, t0: float) -> tuple[dict, dict]:
+        """A question about the person's own steps, heart rate, sleep, stress or recovery: the answer is written
+        around the numbers their band recorded, plus one matching guidance passage."""
+        low = message.lower()
+        topic = "sleep" if re.search(r"sleep|slept|tired|nap", low) else \
+            "cardio" if re.search(r"step|walk|distance|calorie", low) else "recovery"
+        passages = self.retriever.search(message, k=1, topic=topic)
+        context = lines + [format_passage(p) for p in passages]
+        result["sources"] = [{"type": "band", "title": "Your fitness band data", "source": "/bands"}] + \
+                            [{"type": "guidance", "title": p["title"], "source": p["source"]} for p in passages]
+        prompt_profile = {"fitness_level": (profile or {}).get("fitness_level"), "goal": (profile or {}).get("goal"),
+                          "equipment": None, "location": None, "dietary_preference": None, "age": (profile or {}).get("age")}
+        window = history[-2 * self.history_turns:] if self.history_turns > 0 else []
+        recent = [{"role": h["role"], "content": h["content"][:700]} for h in window]
+        messages = build_messages(message, context, prompt_profile, recent)
+        answer, gen_seconds = self.generate(messages)
+        refusal_retry = False
+        if MODEL_REFUSAL_RE.search(answer):
+            try:
+                answer, extra_s = self.generate(messages, avoid=REFUSAL_PHRASES)
+            except TypeError:
+                extra_s = 0.0
+            gen_seconds += extra_s
+            refusal_retry = True
+        answer = tidy_answer(answer) or "Sorry, I couldn't generate an answer. Could you rephrase your question?"
+        flagged = safety.screen_output(answer)
+        if flagged:
+            answer = safety.SAFE_FALLBACK
+            result["safety"] = {"category": "unsafe_output_replaced", "guardrail": True, "output_flagged": True,
+                                "disclaimer": safety.DISCLAIMER}
+        result.update(answer=answer, intent=topic, category="band", band=health_card(band), context_used=context)
+        result["model"] = {"generated": True, "refusal_retry": refusal_retry, "generation_seconds": round(gen_seconds, 3),
+                           "total_seconds": round(time.time() - t0, 3)}
+        state["intent"] = topic
+        state["muscle_group"] = None
+        return result, state
+
     # ------------------------------------------------------------------ main entry
-    def respond(self, message: str, history: list[dict], state: dict | None, profile: dict | None) -> tuple[dict, dict]:
+    def respond(self, message: str, history: list[dict], state: dict | None, profile: dict | None,
+                band: dict | None = None) -> tuple[dict, dict]:
+        """`band` is the person's fitness band summary (app.services.wearables.build_summary); the API passes it
+        when the message asks about their own steps, heart rate, sleep, stress or recovery."""
         t0 = time.time()
         state = dict(state or {})
         message = message.strip()
         result = {"answer": "", "category": "general_fitness", "intent": "general_fitness", "intent_confidence": 0.0,
                   "exercises": [], "foods": [], "workout_plan": None, "yoga_poses": [], "yoga_routine": None,
-                  "sources": [], "safety": None, "is_followup": False, "model": {}}
+                  "band": None, "sources": [], "safety": None, "is_followup": False, "model": {}}
 
         # 1. safety screening
         sres = safety.screen_input(message)
@@ -214,8 +257,21 @@ class ChatEngine:
         self._ood_prob = self.nlu.ood_probability(message)
         slots = self.nlu.slots(message)
         intent, is_followup = self._resolve_intent(message, intent, slots, state)
+        band_lines = health_context(band)
+        band_only = bool(band_lines) and BAND_QUESTION_RE.search(message) and not (slots.muscle_group or slots.exercises or slots.foods or slots.days
+                                             or PLAN_RE.search(message) or YOGA_WORD_RE.search(message))
         if sres.category:  # soft medical flag (pregnancy, chronic condition)
             intent = "medical_safety"
+        elif band_only:
+            result.update(intent_confidence=round(conf, 3), intent_top=top)
+            return self._respond_band(message, band, band_lines, history, state, profile, result, t0)
+        elif band is not None and not band_lines and BAND_QUESTION_RE.search(message):
+            # asks for their own numbers, but no band data has been imported yet
+            result.update(answer=NO_BAND_MESSAGE, intent="recovery", category="band", intent_confidence=round(conf, 3))
+            result["sources"] = [{"type": "band", "title": "Connect a fitness band", "source": "/bands"}]
+            result["model"] = {"generated": False, "reason": "no band data", "total_seconds": round(time.time() - t0, 3)}
+            state["intent"] = "recovery"
+            return result, state
         elif self.yoga is not None:
             yq, yoga_followup = self._yoga_query(message, slots, state, profile)
             if yq is not None:
@@ -233,6 +289,9 @@ class ChatEngine:
 
         eff = self._effective(slots, state, profile, is_followup)
         context: list[str] = []
+        if band_lines:      # e.g. "plan my week around my sleep": their numbers are added after the main references
+            result["band"] = health_card(band)
+            result["sources"].append({"type": "band", "title": "Your fitness band data", "source": "/bands"})
         exercises: list[dict] = []
         foods: list[dict] = []
         plan = None
@@ -300,6 +359,8 @@ class ChatEngine:
         if exercises or plan:
             result["sources"].append({"type": "exercises", "title": "free-exercise-db (public domain)",
                                       "source": "https://github.com/yuhonas/free-exercise-db"})
+
+        context += band_lines
 
         # 5. generation with the fine-tuned SLM
         prompt_profile = {"fitness_level": eff["level"], "goal": eff["goal"], "equipment": eff["equipment"],

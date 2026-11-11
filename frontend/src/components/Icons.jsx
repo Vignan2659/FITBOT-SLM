@@ -35,3 +35,11 @@ export const IconLotus = (p) => (
 );
 export const IconSearch = (p) => <svg {...base} {...p}><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>;
 export const IconClock = (p) => <svg {...base} {...p}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>;
+export const IconWatch = (p) => (
+  <svg {...base} {...p}><rect x="6.5" y="6.5" width="11" height="11" rx="3" /><path d="M9 6.5 9.6 3h4.8l.6 3.5M9 17.5l.6 3.5h4.8l.6-3.5M12 10v2.2l1.4 1" /></svg>
+);
+export const IconHeart = (p) => (
+  <svg {...base} {...p}><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z" /></svg>
+);
+export const IconUpload = (p) => <svg {...base} {...p}><path d="M12 16V4M7 9l5-5 5 5M4 20h16" /></svg>;
+export const IconBluetooth = (p) => <svg {...base} {...p}><path d="m7 7 10 10-5 4V3l5 4L7 17" /></svg>;

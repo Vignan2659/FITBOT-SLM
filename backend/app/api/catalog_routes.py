@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.db.database import get_db
 from app.db.models import ExerciseMetadata, FoodMetadata
+from app.services.catalog import order_for_level
 
 router = APIRouter(tags=["catalog"])
 
@@ -27,7 +28,11 @@ def food_dict(f: FoodMetadata) -> dict:
 
 @router.get("/exercises")
 def list_exercises(muscle_group: str | None = None, difficulty: str | None = None, equipment: str | None = None,
-                   q: str | None = Query(default=None, max_length=80), db: Session = Depends(get_db)):
+                   q: str | None = Query(default=None, max_length=80),
+                   level: str | None = Query(default=None, pattern="^(beginner|intermediate|advanced)$"),
+                   db: Session = Depends(get_db)):
+    """`level` orders the result for a person of that fitness level (their own level first, nothing above it);
+    `difficulty` is a plain filter on the exercise's label."""
     stmt = select(ExerciseMetadata)
     if muscle_group:
         stmt = stmt.where(ExerciseMetadata.muscle_group == muscle_group.lower())
@@ -38,8 +43,10 @@ def list_exercises(muscle_group: str | None = None, difficulty: str | None = Non
     if q:
         stmt = stmt.where(or_(func.lower(ExerciseMetadata.name).contains(q.lower()),
                               func.lower(ExerciseMetadata.description).contains(q.lower())))
-    rows = db.scalars(stmt.order_by(ExerciseMetadata.muscle_group, ExerciseMetadata.id)).all()
-    return {"count": len(rows), "exercises": [ex_dict(e) for e in rows]}
+    rows = [ex_dict(e) for e in db.scalars(stmt.order_by(ExerciseMetadata.muscle_group, ExerciseMetadata.id)).all()]
+    if level:
+        rows = order_for_level(rows, level, muscle_group.lower() if muscle_group else None)
+    return {"count": len(rows), "level": level, "exercises": rows}
 
 
 @router.get("/exercises/{name}")

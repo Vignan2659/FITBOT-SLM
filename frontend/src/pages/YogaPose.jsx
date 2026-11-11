@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { api } from "../api/client.js";
-import YogaCard, { PhotoCredit } from "../components/YogaCard.jsx";
+import YogaCard, { PhotoCredit, toThumb } from "../components/YogaCard.jsx";
+import useMotion from "../hooks/useMotion.js";
 import { IconChat, IconChevron, IconShield } from "../components/Icons.jsx";
 
 const LEVEL_CLASS = { Beginner: "lvl-beg", Intermediate: "lvl-int", Advanced: "lvl-adv" };
+
+const frameLabel = (i, n) => (i === n - 1 ? "Pose" : i === 0 ? "Start" : `Step ${i + 1}`);
 
 function List({ title, items, ordered = false, className = "" }) {
   if (!items?.length) return null;
@@ -22,12 +25,14 @@ export default function YogaPose() {
   const navigate = useNavigate();
   const [pose, setPose] = useState(null);
   const [error, setError] = useState("");
-  const [shown, setShown] = useState(0);
+  const [picked, setPicked] = useState(null);     // a photo chosen by hand; null follows the motion
+  const urls = pose?.photos?.map((ph) => ph.url) || [];
+  const motion = useMotion(urls, { rest: urls.length - 1, interval: 900 });
 
   useEffect(() => {
     setPose(null);
     setError("");
-    setShown(0);
+    setPicked(null);
     api.yogaPose(slug).then(setPose).catch((e) => setError(e.message));
     document.querySelector(".main .page")?.scrollTo?.(0, 0);
   }, [slug]);
@@ -42,6 +47,8 @@ export default function YogaPose() {
   }
   if (!pose) return <div className="splash"><div className="spinner" aria-label="Loading" /></div>;
 
+  const many = pose.photos.length > 1;
+  const shown = picked ?? motion.index;
   const ask = () => navigate("/chat", { state: { prompt: `Explain how to perform ${pose.name}` } });
   return (
     <div className="page pose-page">
@@ -49,16 +56,24 @@ export default function YogaPose() {
 
       <section className="pose-hero">
         <figure className="pose-photo">
-          <img src={pose.photos[shown]?.url || pose.image} alt={`${pose.name} demonstrated by a person`} decoding="async" />
+          <div className={`pose-stage ${motion.playing ? "playing" : ""}`} onMouseEnter={() => { setPicked(null); motion.start(); }}
+               onMouseLeave={motion.stop}>
+            <img src={pose.photos[shown]?.url || pose.image} alt={`${pose.name} demonstrated by a person`} decoding="async" />
+            {many && <span className="motion-hint" aria-hidden="true">{motion.playing ? `${shown + 1} / ${pose.photos.length}` : "▶ Motion"}</span>}
+          </div>
           <figcaption><PhotoCredit photo={pose.photos[shown]} /></figcaption>
-          {pose.photos.length > 1 && (
-            <div className="photo-thumbs" role="tablist" aria-label="Photos of this pose">
+          {many && (
+            <div className="photo-thumbs" role="tablist" aria-label="Photos of this pose, from start to finish">
               {pose.photos.map((ph, i) => (
                 <button key={ph.url} role="tab" aria-selected={i === shown} className={i === shown ? "on" : ""}
-                        onClick={() => setShown(i)} aria-label={`Photo ${i + 1}`}>
-                  <img src={ph.url.replace("/yoga/photos/", "/yoga/photos/thumb/")} alt="" loading="lazy" decoding="async" />
+                        onClick={() => { motion.stop(); setPicked(i); }} aria-label={frameLabel(i, pose.photos.length)}>
+                  <img src={toThumb(ph.url)} alt="" loading="lazy" decoding="async" />
+                  <span>{frameLabel(i, pose.photos.length)}</span>
                 </button>
               ))}
+              <button className="btn btn-ghost btn-sm motion-btn" onClick={() => { setPicked(null); motion.toggle(); }}>
+                {motion.playing ? "Stop" : "Play motion"}
+              </button>
             </div>
           )}
         </figure>
@@ -108,7 +123,7 @@ export default function YogaPose() {
           <div className="card-grid">{pose.related_poses.map((p) => <YogaCard key={p.slug} pose={p} compact />)}</div>
         </section>
       )}
-      <p className="img-credit">Photos from Wikimedia Commons, used under their free licences (credited on each photo).</p>
+      <p className="img-credit">Photos are free to use and credited on each picture: studio photos by Margaret Young on Unsplash, gym photos from the public domain free-exercise-db.</p>
     </div>
   );
 }

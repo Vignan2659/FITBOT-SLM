@@ -15,7 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.api import auth, catalog_routes, chat, conversations, tracking, yoga
+from app.api import auth, catalog_routes, chat, conversations, tracking, wearables, yoga
 from app.core.config import get_settings
 from app.db.database import engine
 from app.db.seed import init_db
@@ -119,7 +119,7 @@ def create_app() -> FastAPI:
     app.add_middleware(CORSMiddleware, allow_origins=settings.cors_list, allow_credentials=True,
                        allow_methods=["*"], allow_headers=["*"])
     for r in (auth.router, conversations.router, chat.router, catalog_routes.router,
-              tracking.plans_router, tracking.workouts_router, tracking.feedback_router, yoga.router):
+              tracking.plans_router, tracking.workouts_router, tracking.feedback_router, yoga.router, wearables.router):
         app.include_router(r)
 
     @app.get("/health", tags=["health"])

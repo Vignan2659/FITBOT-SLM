@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { api } from "../api/client.js";
+import { useAuth } from "../context/AuthContext.jsx";
 import YogaCard from "../components/YogaCard.jsx";
 import YogaRoutine from "../components/YogaRoutine.jsx";
 import { IconChat, IconSearch } from "../components/Icons.jsx";
@@ -33,6 +34,8 @@ const PAGE = 12;
 
 export default function Yoga() {
   const navigate = useNavigate();
+  const { user } = useAuth() || {};
+  const mine = LEVELS.find((l) => l.toLowerCase() === user?.profile?.fitness_level) || "";   // the person's own level
   const [params, setParams] = useSearchParams();
   const tab = TABS.some((t) => t.id === params.get("tab")) ? params.get("tab") : "poses";
   const [poses, setPoses] = useState([]);
@@ -59,7 +62,10 @@ export default function Yoga() {
 
   const filtered = useMemo(() => {
     const words = q.toLowerCase().split(/\s+/).filter(Boolean);
-    return poses.filter((p) => {
+    // with no difficulty chosen, poses of the person's own level come first, then easier ones, then harder ones
+    const own = LEVELS.indexOf(mine);
+    const fit = (p) => { const d = LEVELS.indexOf(p.difficulty); return own < 0 || level ? 0 : d === own ? 0 : d < own ? 1 + own - d : 3 + d - own; };
+    return [...poses].sort((a, b) => fit(a) - fit(b)).filter((p) => {
       if (level && p.difficulty !== level) return false;
       if (goal && !p.goals.includes(goal)) return false;
       if (area && !(p.body_areas.includes(area) || (area === "full_body" && p.body_areas.length >= 3))) return false;
@@ -68,7 +74,7 @@ export default function Yoga() {
       const hay = `${p.name} ${p.sanskrit} ${p.category.join(" ")} ${p.target_areas.join(" ")}`.toLowerCase();
       return words.every((w) => hay.includes(w));
     });
-  }, [poses, q, level, goal, area, category]);
+  }, [poses, q, level, goal, area, category, mine]);
 
   useEffect(() => setShown(PAGE), [q, level, goal, area, category]);
   const clear = () => { setQ(""); setLevel(""); setGoal(""); setArea(""); setCategory(""); };
@@ -79,8 +85,9 @@ export default function Yoga() {
       <section className="hero-card yoga-hero">
         <div>
           <h1>Yoga</h1>
-          <p>{facets ? `${facets.total} poses and practices` : "Poses and practices"} shown by real people, with step
-            by step instructions, safety notes and routines built for your goal and time.</p>
+          <p>{facets ? `${facets.total} poses` : "Poses"} shown in real photos. Put the cursor on a picture to see the
+            move from the start position into the pose. Each pose has step by step instructions and safety notes, and
+            routines are built for your level, goal and time.</p>
         </div>
         <button className="btn btn-light" onClick={() => navigate("/chat", { state: { prompt: "Give me a 15 minute beginner yoga routine" } })}>
           <IconChat /> Ask FitBot
@@ -109,7 +116,7 @@ export default function Yoga() {
               <div className="chips">
                 {LEVELS.map((l) => (
                   <button key={l} className={`chip chip-toggle ${level === l ? "on" : ""}`} aria-pressed={level === l}
-                          onClick={() => setLevel(level === l ? "" : l)}>{l}</button>
+                          onClick={() => setLevel(level === l ? "" : l)}>{l}{l === mine ? " (your level)" : ""}</button>
                 ))}
               </div>
             </div>
@@ -140,7 +147,9 @@ export default function Yoga() {
           {!loading && filtered.length === 0 && (
             <div className="empty-panel"><p>No poses match these filters.</p><button className="btn btn-ghost btn-sm" onClick={clear}>Clear filters</button></div>
           )}
-          <div className="card-grid yoga-grid">{filtered.slice(0, shown).map((p) => <YogaCard key={p.slug} pose={p} />)}</div>
+          <div className="card-grid yoga-grid">
+            {filtered.slice(0, shown).map((p) => <YogaCard key={p.slug} pose={p} mine={Boolean(mine) && p.difficulty === mine} />)}
+          </div>
           {filtered.length > shown && (
             <button className="btn btn-ghost yoga-more" onClick={() => setShown((n) => n + PAGE)}>
               Show more ({filtered.length - shown} left)
@@ -178,7 +187,7 @@ export default function Yoga() {
         </section>
       )}
 
-      {tab === "routine" && <RoutineBuilder initialGoal={params.get("goal") || ""} goals={facets?.goals || []} areas={facets?.body_areas || []} />}
+      {tab === "routine" && <RoutineBuilder initialGoal={params.get("goal") || ""} initialLevel={mine || "Beginner"} goals={facets?.goals || []} areas={facets?.body_areas || []} />}
 
       <p className="disclaimer yoga-disclaimer">Yoga in FitBot is general fitness and wellness information, not a treatment for any
         medical condition. Move within a comfortable range and check with a doctor or physiotherapist if you have pain,
@@ -187,8 +196,8 @@ export default function Yoga() {
   );
 }
 
-function RoutineBuilder({ initialGoal, goals, areas }) {
-  const [form, setForm] = useState({ minutes: "15", level: "Beginner", goal: initialGoal, area: "", time_of_day: "" });
+function RoutineBuilder({ initialGoal, initialLevel = "Beginner", goals, areas }) {
+  const [form, setForm] = useState({ minutes: "15", level: initialLevel, goal: initialGoal, area: "", time_of_day: "" });
   const [routine, setRoutine] = useState(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
