@@ -1,0 +1,615 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>FitBot demo film</title>
+<style>
+:root { --bg:#0D2321; --deep:#071614; --mint:#2DD4BF; --mint2:#14b8a6; --ink:#F4F7F5; --soft:#B9D3CE; --card:#12302c; --line:#1F4A45;
+        --app:#0d1412; --surf:#141d1b; --surf2:#1a2522; --bd:#24302d; --orange:#f97316; --rose:#fb7185; --indigo:#a5b4fc; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; font-family: Inter, sans-serif; color: var(--ink); }
+#film { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(1400px 900px at 50% 45%, #10302c 0%, var(--bg) 45%, var(--deep) 100%); }
+.scene { position: absolute; inset: 0; visibility: hidden; transform-origin: 50% 50%; }
+.abs { position: absolute; }
+.center { left: 50%; top: 50%; }
+#grain { position: absolute; inset: 0; background: url(assets/grain.png); background-size: 960px 540px; opacity: .05; mix-blend-mode: overlay; pointer-events: none; z-index: 50; }
+#vignette { position: absolute; inset: 0; z-index: 49; pointer-events: none; background: radial-gradient(1300px 820px at 50% 50%, transparent 55%, rgba(0,0,0,.55) 100%); }
+#sweep { position: absolute; top: -200px; width: 380px; height: 1480px; z-index: 48; pointer-events: none; opacity: 0;
+         background: linear-gradient(90deg, transparent, rgba(255,255,255,.10), rgba(45,212,191,.12), transparent); transform: rotate(18deg); }
+#particles { position: absolute; inset: 0; z-index: 1; }
+.dot { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: var(--mint); }
+
+/* captions: the voice-over, word by word */
+#cap { position: absolute; left: 160px; right: 160px; bottom: 58px; text-align: center; z-index: 40; font-size: 36px; font-weight: 600;
+       line-height: 1.3; letter-spacing: -.01em; text-shadow: 0 2px 18px rgba(0,0,0,.85); }
+#cap span { display: inline-block; margin: 0 .14em; }
+
+/* kinetic headline */
+.kick { position: absolute; left: 0; right: 0; text-align: center; font-weight: 800; letter-spacing: -.03em; z-index: 30; }
+.kick span { display: inline-block; margin: 0 .12em; }
+.eyebrow { font-size: 22px; font-weight: 700; letter-spacing: .32em; color: var(--mint); text-transform: uppercase; }
+.mint { color: var(--mint); }
+
+/* logo */
+.logo { width: 220px; height: 220px; border-radius: 56px; background: linear-gradient(145deg, #3ee0cb, #14b8a6); display: grid; place-items: center;
+        box-shadow: 0 0 80px rgba(45,212,191,.55), 0 30px 60px rgba(0,0,0,.4); }
+.logo svg { width: 64%; }
+.word { font-size: 92px; font-weight: 800; letter-spacing: .32em; text-indent: .32em; text-align: center; }
+
+/* laptop */
+.laptop { position: absolute; left: 50%; top: 50%; width: 1300px; height: 880px; margin: -440px 0 0 -650px; transform-style: preserve-3d; }
+.lid { position: absolute; left: 10px; top: 0; width: 1280px; height: 820px; border-radius: 34px; background: #0b0f0e; border: 2px solid #2c3532;
+       box-shadow: 0 50px 120px rgba(0,0,0,.6), 0 0 0 1px #000 inset; padding: 22px 20px 23px; }
+.screen { position: relative; width: 1240px; height: 775px; border-radius: 8px; overflow: hidden; background: #000; }
+.screen .cam { position: absolute; left: 0; top: 0; width: 1240px; height: 775px; transform-origin: 0 0; }
+.screen img.shot { width: 1240px; height: 775px; display: block; }
+.screen .glare { position: absolute; inset: 0; background: linear-gradient(115deg, rgba(255,255,255,.07), transparent 40%); pointer-events: none; }
+.base { position: absolute; left: -40px; top: 818px; width: 1380px; height: 34px; border-radius: 4px 4px 26px 26px;
+        background: linear-gradient(#cfd6d4, #8d9693 60%, #5b6461); box-shadow: 0 30px 50px rgba(0,0,0,.5); }
+.base::after { content: ""; position: absolute; left: 50%; top: 0; width: 200px; height: 12px; margin-left: -100px; border-radius: 0 0 12px 12px; background: #9aa3a0; }
+
+/* app-like UI */
+.win { position: absolute; background: var(--app); border: 1px solid var(--bd); border-radius: 22px; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,.55); }
+.bubble-u { position: absolute; right: 50px; padding: 18px 26px; border-radius: 22px 22px 6px 22px; background: var(--mint); color: #062421; font-size: 26px; font-weight: 600; }
+.bot { position: absolute; left: 50px; right: 60px; display: flex; gap: 18px; }
+.bot .av { width: 52px; height: 52px; border-radius: 15px; background: var(--mint); flex: none; display: grid; place-items: center; }
+.bot .av svg { width: 70%; }
+.bot .txt { background: var(--surf); border: 1px solid var(--bd); border-radius: 6px 22px 22px 22px; padding: 20px 26px; font-size: 24px; line-height: 1.45; color: #dbe7e4; }
+.tag { display: inline-block; font-size: 15px; font-weight: 800; letter-spacing: .14em; color: var(--mint); background: rgba(45,212,191,.12);
+       border-radius: 8px; padding: 5px 10px; margin-bottom: 10px; }
+.exc { position: absolute; width: 330px; height: 390px; background: var(--surf); border: 1px solid var(--bd); border-radius: 18px; overflow: hidden; }
+.exc .ph { position: relative; height: 220px; background: #fff; overflow: hidden; }
+.exc .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.exc .lvl { position: absolute; left: 12px; top: 12px; font-size: 14px; font-weight: 800; padding: 5px 10px; border-radius: 8px; background: #fff3e6; color: #c2410c; }
+.exc .lvl.int { background: #fef3c7; color: #a16207; }
+.exc .mo { position: absolute; right: 10px; bottom: 10px; font-size: 13px; font-weight: 700; padding: 4px 9px; border-radius: 7px; background: rgba(0,0,0,.65); color: #fff; }
+.exc h4 { font-size: 20px; font-weight: 800; letter-spacing: .02em; text-transform: uppercase; padding: 16px 18px 6px; line-height: 1.2; }
+.exc p { font-size: 16px; color: #9fb3ae; padding: 0 18px; line-height: 1.5; }
+.cursor { position: absolute; width: 34px; height: 46px; z-index: 20; }
+
+.plan { position: absolute; left: 50%; top: 50%; width: 470px; height: 600px; margin: -300px 0 0 -235px; border-radius: 28px; background: var(--surf);
+        border: 1px solid var(--bd); box-shadow: 0 40px 90px rgba(0,0,0,.55); padding: 34px 34px; transform-origin: 50% 120%; }
+.plan .lv { font-size: 18px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+.plan h3 { font-size: 34px; font-weight: 800; margin: 8px 0 22px; letter-spacing: -.02em; }
+.plan .row { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--bd); font-size: 22px; }
+.plan .row b { font-weight: 700; }
+.plan .row i { font-style: normal; color: var(--mint); font-weight: 700; font-size: 20px; white-space: nowrap; margin-left: 12px; }
+.plan .meta { margin-top: 20px; color: #9fb3ae; font-size: 18px; }
+
+.food { position: absolute; width: 640px; padding: 34px 38px; border-radius: 28px; background: var(--surf); border: 1px solid var(--bd); box-shadow: 0 40px 90px rgba(0,0,0,.5); }
+.food h3 { font-size: 34px; font-weight: 800; letter-spacing: -.02em; }
+.food .por { color: #9fb3ae; font-size: 20px; margin-top: 4px; }
+.food .kcal { font-size: 108px; font-weight: 800; letter-spacing: -.04em; margin: 16px 0 4px; color: var(--ink); }
+.food .kcal small { font-size: 32px; color: #9fb3ae; font-weight: 600; margin-left: 10px; letter-spacing: 0; }
+.food .bar { display: flex; height: 22px; border-radius: 11px; overflow: hidden; background: #22302c; margin: 18px 0 16px; }
+.food .bar div { height: 100%; }
+.food .mac { display: flex; gap: 34px; font-size: 22px; color: #c9d8d4; }
+.food .mac b { font-size: 30px; display: block; color: var(--ink); }
+.usda { position: absolute; padding: 12px 20px; border-radius: 14px; background: rgba(45,212,191,.14); color: var(--mint); font-weight: 800; font-size: 22px; letter-spacing: .06em; border: 1px solid rgba(45,212,191,.4); }
+
+.photo { position: absolute; overflow: hidden; border-radius: 28px; box-shadow: 0 40px 100px rgba(0,0,0,.5); background: #f4f2ee; }
+.photo img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.step { position: absolute; left: 0; width: 760px; height: 58px; display: flex; align-items: center; gap: 18px; padding: 0 18px; border-radius: 14px;
+        background: var(--surf); border: 1px solid var(--bd); font-size: 22px; }
+.step img { width: 66px; height: 44px; object-fit: cover; border-radius: 8px; }
+.step .n { color: var(--mint); font-weight: 800; width: 34px; }
+.step b { flex: 1; font-weight: 700; }
+.step i { font-style: normal; color: #9fb3ae; font-size: 19px; }
+
+.tile { position: absolute; width: 390px; height: 190px; border-radius: 24px; background: var(--surf); border: 1px solid var(--bd); padding: 26px 28px; box-shadow: 0 30px 70px rgba(0,0,0,.45); }
+.tile span { color: #9fb3ae; font-size: 22px; font-weight: 600; }
+.tile strong { display: block; font-size: 60px; font-weight: 800; letter-spacing: -.03em; margin-top: 8px; }
+.tile small { color: #9fb3ae; font-size: 18px; }
+.watch { position: absolute; width: 230px; height: 270px; border-radius: 64px; background: linear-gradient(160deg, #2a3330, #0b0f0e); border: 3px solid #3b4643;
+         box-shadow: 0 40px 80px rgba(0,0,0,.6), inset 0 0 0 10px #050707; }
+.watch::before, .watch::after { content: ""; position: absolute; left: 40px; width: 150px; height: 170px; background: linear-gradient(#1c2522, #101615); border-radius: 30px; z-index: -1; }
+.watch::before { top: -140px; } .watch::after { bottom: -140px; }
+.watch .face { position: absolute; inset: 22px; border-radius: 46px; background: #000; display: grid; place-items: center; text-align: center; }
+.band { position: absolute; width: 120px; height: 330px; border-radius: 60px; background: linear-gradient(#173a35, #0c201d); border: 2px solid #2b5b54; box-shadow: 0 40px 80px rgba(0,0,0,.6); }
+.band .face { position: absolute; left: 22px; top: 95px; width: 76px; height: 140px; border-radius: 22px; background: #000; display: grid; place-items: center; text-align: center; }
+.ring { position: absolute; left: 50%; top: 50%; }
+.brands { position: absolute; left: 0; right: 0; text-align: center; font-size: 30px; font-weight: 700; color: var(--soft); letter-spacing: .02em; }
+.chart { position: absolute; display: flex; align-items: flex-end; gap: 16px; }
+.chart .c { width: 64px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.chart .c div { width: 64px; border-radius: 10px 10px 4px 4px; background: var(--mint); }
+.chart .c span { color: #8aa29c; font-size: 18px; }
+.shield { position: absolute; left: 50%; top: 50%; }
+.flash { position: absolute; width: 760px; padding: 24px 28px; border-radius: 22px; background: var(--surf); border: 1px solid var(--bd); box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+.flash .q { color: var(--mint); font-weight: 700; font-size: 22px; margin-bottom: 10px; }
+.flash .a { font-size: 22px; line-height: 1.45; color: #dbe7e4; }
+.mont { position: absolute; left: 50%; top: 50%; width: 1100px; height: 640px; margin: -320px 0 0 -550px; border-radius: 30px; overflow: hidden; background: var(--surf); box-shadow: 0 40px 100px rgba(0,0,0,.6); }
+.mont img { width: 100%; height: 100%; object-fit: cover; }
+</style></head>
+<body>
+<div id="film">
+  <div id="particles"></div>
+
+  <!-- 1 HOOK -->
+  <div class="scene" id="s_hook">
+    <svg id="ecg" class="abs" style="left:0;top:340px" width="1920" height="400" viewBox="0 0 1920 400">
+      <path id="ecgp" d="" fill="none" stroke="#2DD4BF" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+    </svg>
+    <div id="hlogo" class="abs center"><div class="logo"></div></div>
+    <div id="hword" class="abs word" style="left:0;right:0;top:700px">FITBOT</div>
+  </div>
+
+  <!-- 2 PROBLEM -->
+  <div class="scene" id="s_problem">
+    <div id="pfeed" class="abs" style="left:250px;top:150px;width:620px;height:780px;border-radius:40px;overflow:hidden;background:#0a0f0e;border:2px solid #26302d"></div>
+    <div id="pbot" class="win" style="left:1000px;top:200px;width:680px;height:640px;background:#16191a;border-color:#2a2f30">
+      <div style="padding:22px 28px;border-bottom:1px solid #2a2f30;color:#8c9593;font-size:22px;font-weight:700">Generic chatbot</div>
+      <div id="pq" class="abs" style="right:28px;top:110px;padding:16px 22px;border-radius:20px;background:#3a3f41;font-size:24px">How many calories in my lunch?</div>
+      <div id="pa" class="abs" style="left:28px;right:90px;top:220px;padding:18px 22px;border-radius:20px;background:#24282a;font-size:24px;line-height:1.45;color:#b8bfbd"></div>
+    </div>
+    <div id="pk" class="kick" style="top:52px;font-size:52px"></div>
+  </div>
+
+  <!-- 3 MEET -->
+  <div class="scene" id="s_meet" style="perspective:2200px">
+    <div id="mtitle" class="kick" style="top:60px"><div class="eyebrow">Meet</div><div style="font-size:96px;margin-top:6px">FitBot</div></div>
+    <div id="mlap" class="laptop"></div>
+    <div id="msub" class="kick" style="top:222px;font-size:34px;font-weight:700;color:var(--soft)">A fine tuned <span class="mint">4 billion parameter</span> model. Running privately on your Mac.</div>
+  </div>
+
+  <!-- 4 CHAT -->
+  <div class="scene" id="s_chat">
+    <div id="cwin" class="win" style="left:150px;top:90px;width:1620px;height:860px">
+      <div style="height:74px;border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:14px;padding:0 30px;font-size:24px;font-weight:800">
+        <span class="av-s" style="width:38px;height:38px;border-radius:11px;background:var(--mint);display:grid;place-items:center"></span>FitBot
+        <span style="margin-left:auto;font-size:17px;color:#7f948f;font-weight:600">Qwen3 4B · fine tuned · on this Mac</span></div>
+      <div id="cu" class="bubble-u" style="top:110px"></div>
+      <div id="cb" class="bot" style="top:200px"><div class="av"></div><div class="txt"><div class="tag">EXERCISES</div><div id="cbt"></div></div></div>
+      <div id="ccards"></div>
+    </div>
+    <svg id="cur" class="cursor" viewBox="0 0 34 46"><path d="M2 2v36l9-8 6 14 6-3-6-13h12z" fill="#fff" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    <div id="ck" class="kick" style="top:30px;font-size:44px"></div>
+  </div>
+
+  <!-- 5 LEVEL -->
+  <div class="scene" id="s_level" style="perspective:2000px">
+    <div id="lk" class="kick" style="top:70px;font-size:64px">Built for <span class="mint">your level.</span></div>
+    <div id="lcards"></div>
+  </div>
+
+  <!-- 6 FOOD -->
+  <div class="scene" id="s_food">
+    <div id="fq" class="bubble-u" style="top:90px;right:auto;left:50%;transform:translateX(-50%);white-space:nowrap"></div>
+    <div id="f0" class="food" style="left:220px;top:260px"></div>
+    <div id="f1" class="food" style="left:1060px;top:260px"></div>
+    <div id="fusda" class="usda" style="left:50%;top:880px;transform:translateX(-50%)">USDA FoodData Central</div>
+  </div>
+
+  <!-- 7 YOGA -->
+  <div class="scene" id="s_yoga" style="perspective:2200px">
+    <div id="yphoto" class="photo" style="left:0;top:0;width:1920px;height:1080px;border-radius:0">
+      <img id="ya" src="assets/yoga/triangle-pose-1.jpg"><img id="yb" src="assets/yoga/triangle-pose-2.jpg">
+    </div>
+    <div id="ylap" class="laptop"></div>
+    <div id="yroutine" class="abs" style="left:980px;top:170px;width:760px;height:800px"></div>
+    <div id="yrt" class="abs" style="left:980px;top:110px;font-size:30px;font-weight:800"></div>
+    <div id="yk" class="kick" style="top:440px;left:120px;right:auto;width:760px;text-align:left;font-size:62px;line-height:1.08"></div>
+  </div>
+
+  <!-- 8 BANDS -->
+  <div class="scene" id="s_bands" style="perspective:2200px">
+    <svg id="bstream" class="abs" style="left:0;top:0" width="1920" height="1080"></svg>
+    <div id="blap" class="laptop"></div>
+    <div id="bwatch" class="watch"><div class="face"><div><div style="color:#fb7185;font-size:40px">♥</div><div id="bwbpm" style="font-size:52px;font-weight:800">72</div><div style="font-size:16px;color:#9aa">BPM</div></div></div></div>
+    <div id="bband" class="band"><div class="face"><div><div id="bbsteps" style="font-size:22px;font-weight:800;color:var(--mint)">9,321</div><div style="font-size:12px;color:#9aa">steps</div></div></div></div>
+    <div id="btiles"></div>
+    <svg id="bring" class="ring" width="560" height="560" viewBox="0 0 560 560" style="margin:-280px 0 0 -280px">
+      <circle cx="280" cy="280" r="230" fill="none" stroke="#1f3a36" stroke-width="26"/>
+      <circle id="bringarc" cx="280" cy="280" r="230" fill="none" stroke="#fb7185" stroke-width="26" stroke-linecap="round" transform="rotate(-90 280 280)" stroke-dasharray="1445" stroke-dashoffset="500"/>
+      <text x="280" y="215" text-anchor="middle" font-size="64" fill="#fb7185" font-family="Inter">♥</text>
+      <text id="bringbpm" x="280" y="330" text-anchor="middle" font-size="150" font-weight="800" fill="#F4F7F5" font-family="Inter" letter-spacing="-6">122</text>
+      <text x="280" y="385" text-anchor="middle" font-size="30" font-weight="700" fill="#9fb3ae" font-family="Inter" letter-spacing="6">BPM · LIVE</text>
+    </svg>
+    <div id="bchart" class="chart" style="left:50%;top:300px;height:480px;margin-left:-552px"></div>
+    <div id="bct" class="abs" style="left:408px;top:190px;font-size:34px;font-weight:800">Steps · last 14 days</div>
+    <div id="bchat" class="abs" style="left:240px;top:250px;width:1440px;height:640px;transform-origin:50% 0"></div>
+    <div id="bbr" class="brands" style="top:110px">Apple Watch • Samsung • Fitbit • Huawei • OnePlus • Noise • WHOOP</div>
+  </div>
+
+  <!-- 9 SAFE -->
+  <div class="scene" id="s_safe">
+    <svg id="sshield" class="shield" width="900" height="1000" viewBox="0 0 900 1000" style="margin:-500px 0 0 -450px">
+      <path id="sshp" d="M450 60 L790 190 V470 C790 700 630 860 450 940 C270 860 110 700 110 470 V190 Z" fill="rgba(45,212,191,.06)" stroke="#2DD4BF" stroke-width="10" stroke-linejoin="round"/>
+    </svg>
+    <div id="sf0" class="flash" style="left:90px;top:250px;width:640px"></div>
+    <div id="sf1" class="flash" style="left:1190px;top:520px;width:640px"></div>
+    <svg id="slock" class="abs" width="220" height="260" viewBox="0 0 220 260" style="left:850px;top:380px">
+      <path id="slshackle" d="M55 120 V80 a55 55 0 0 1 110 0 V120" fill="none" stroke="#F4F7F5" stroke-width="22" stroke-linecap="round"/>
+      <rect x="25" y="115" width="170" height="135" rx="26" fill="#2DD4BF"/><circle cx="110" cy="172" r="16" fill="#0D2321"/><rect x="103" y="176" width="14" height="38" rx="6" fill="#0D2321"/>
+    </svg>
+    <div id="sk" class="kick" style="top:905px;font-size:70px"></div>
+  </div>
+
+  <!-- 10 WHY -->
+  <div class="scene" id="s_why">
+    <div id="wm" class="mont"></div>
+    <div id="wk" class="kick" style="top:70px;font-size:84px"></div>
+  </div>
+
+  <!-- 11 END -->
+  <div class="scene" id="s_end">
+    <div id="elogo" class="abs center"><div class="logo"></div></div>
+    <div id="eword" class="abs word" style="left:0;right:0;top:640px;font-size:84px">FITBOT</div>
+    <div id="etag" class="kick" style="top:760px;font-size:40px;font-weight:700;color:var(--soft)">Your AI fitness coach</div>
+    <div id="egh" class="kick" style="top:840px;font-size:26px;font-weight:600;color:#7fa39c;letter-spacing:.02em">github.com/Vignan2659/FITBOT-SLM</div>
+  </div>
+
+  <div id="sweep"></div>
+  <div id="capbg" class="abs" style="left:0;right:0;bottom:0;height:260px;z-index:39;background:linear-gradient(transparent,rgba(0,0,0,.55))"></div><div id="cap"></div>
+  <div id="vignette"></div>
+  <div id="grain"></div>
+  <div id="black" class="abs" style="inset:0;background:#000;z-index:60;opacity:0"></div>
+</div>
+
+<script src="data.js"></script>
+<script>
+const D = window.DATA, TL = window.TL;
+const $ = (s) => document.querySelector(s), $$ = (s) => [...document.querySelectorAll(s)];
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x)), lerp = (a, b, k) => a + (b - a) * k;
+const ease = { out: (k) => 1 - Math.pow(1 - k, 3), inOut: (k) => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2,
+  in: (k) => k * k * k, back: (k) => { const c = 1.7; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); }, lin: (k) => k };
+const P = (t, a, b, e = ease.out) => e(clamp((t - a) / (b - a), 0, 1));
+const SC = Object.fromEntries(TL.scenes.map((s) => [s.id, s]));
+const DUMB = '<svg viewBox="0 0 64 64"><path d="M14 27h6v10h-6zM44 27h6v10h-6zM20 23h5v18h-5zM39 23h5v18h-5zM25 30h14v4H25z" fill="#fff"/></svg>';
+const DUMBD = DUMB.replace('#fff', '#062421');
+$$(".logo").forEach((e) => e.innerHTML = DUMB);
+$$(".av, .av-s").forEach((e) => e.innerHTML = DUMBD);
+const fmt = (n) => Math.round(n).toLocaleString("en-US");
+const words = (el, text, cls = "") => { el.innerHTML = text.split(" ").map((w) => `<span class="${cls}">${w}</span>`).join(" "); return [...el.children]; };
+
+function laptop(el, src) {
+  el.innerHTML = `<div class="lid"><div class="screen"><div class="cam"><img class="shot" src="${src}"></div><div class="glare"></div></div></div><div class="base"></div>`;
+  return el.querySelector(".cam");
+}
+// zoom the laptop's camera to a region of the screenshot (fractions of the screen), k = 0 full view, 1 = region
+function camTo(cam, k, rx, ry, rw) {
+  const z = lerp(1, 1 / rw, k), x = lerp(0, rx, k) * 1240, y = lerp(0, ry, k) * 775;
+  cam.style.transform = `scale(${z}) translate(${-x}px, ${-y}px)`;
+}
+
+/* ------------------------------------------------ build once */
+// particles
+const rnd = (() => { let s = 7; return () => (s = (s * 16807) % 2147483647) / 2147483647; })();
+const PARTS = Array.from({ length: 70 }, () => ({ x: rnd() * 1920, y: rnd() * 1080, s: .4 + rnd() * 1.4, v: 8 + rnd() * 26, o: .08 + rnd() * .3 }));
+$("#particles").innerHTML = PARTS.map(() => '<div class="dot"></div>').join("");
+// ECG
+(function () {
+  let d = "M0 200", x = 0;
+  while (x < 1920) {
+    const beat = x > 700 && x < 1250;
+    if (beat) { d += ` L${x + 30} 200 L${x + 45} 170 L${x + 60} 200 L${x + 80} 200 L${x + 92} 60 L${x + 106} 330 L${x + 120} 200 L${x + 150} 200 L${x + 170} 165 L${x + 195} 200`; x += 210; }
+    else { d += ` L${x + 60} 200`; x += 60; }
+  }
+  $("#ecgp").setAttribute("d", d);
+})();
+const ECGLEN = (() => { const p = $("#ecgp"); return p.getTotalLength(); })();
+$("#ecgp").style.strokeDasharray = ECGLEN;
+// problem feed
+const FEED = ["10 MIN ABS THAT ACTUALLY WORK?!", "I tried 5 diets so you don't have to", "Burn fat FAST with this one trick", "Never do squats like this",
+  "What I eat in a day (bulk)", "Cardio is useless?? 🤯", "The ONLY workout you need", "Lose 10 kg in a week", "Pro athlete morning routine"];
+$("#pfeed").innerHTML = `<div id="pfs" class="abs" style="left:0;right:0;top:0">` + FEED.concat(FEED).map((t, i) =>
+  `<div style="margin:22px;height:300px;border-radius:24px;background:linear-gradient(135deg,hsl(${(i * 47) % 360},28%,${22 + (i % 3) * 6}%),#141818);position:relative">
+     <div style="position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:38px">▶</div>
+     <div style="position:absolute;left:24px;right:24px;bottom:22px;font-size:26px;font-weight:800">${t}</div></div>`).join("") + `</div>`;
+// chat cards
+const EX = D.chest.exercises;
+$("#ccards").innerHTML = EX.map((e, i) => `<div class="exc" style="left:${130 + i * 360}px;top:${430}px">
+  <div class="ph"><img src="assets/img/ex${i}_0.jpg"><img class="f2" src="assets/img/ex${i}_1.jpg" style="opacity:0"><span class="lvl ${e.difficulty === "Advanced" ? "" : "int"}">${e.difficulty}</span><span class="mo">▶ Motion</span></div>
+  <h4>${e.name}</h4><p>Target <b style="color:#dbe7e4">${(e.target_muscles || []).join(", ")}</b><br>Equipment <b style="color:#dbe7e4">${e.equipment}</b></p></div>`).join("");
+const CHAT_A = D.chest.answer.split(". ").slice(0, 1).join(". ") + ".";
+// level cards
+const LV = [["beginner", "Beginner", "#a7f3d0"], ["intermediate", "Intermediate", "#fde68a"], ["advanced", "Advanced", "#fdba74"]];
+$("#lcards").innerHTML = LV.map(([k, name, col]) => {
+  const d = D.plans[k].days[0];
+  return `<div class="plan" id="pl_${k}"><div class="lv" style="color:${col}">${name}</div><h3>Day 1 · ${d.day.replace(/^Day \d+:?\s*/, "") || "Full body"}</h3>` +
+    d.exercises.map((x) => `<div class="row"><b>${x.name}</b><i>${x.sets} × ${x.reps}</i></div>`).join("") +
+    `<div class="meta">Rest ${d.exercises[0].rest || ""}</div></div>`;
+}).join("");
+// food
+D.food.foods.forEach((f, i) => {
+  const n = f.nutrients, tot = n.protein_g * 4 + n.carbs_g * 4 + n.fat_g * 9 || 1;
+  $(`#f${i}`).innerHTML = `<h3>${f.name}</h3><div class="por">${f.portion.description} · ${f.portion.grams} g</div>
+    <div class="kcal"><span class="kn">0</span><small>kcal</small></div>
+    <div class="bar"><div style="width:${n.protein_g * 4 / tot * 100}%;background:#2DD4BF"></div><div style="width:${n.carbs_g * 4 / tot * 100}%;background:#f59e0b"></div><div style="width:${n.fat_g * 9 / tot * 100}%;background:#818cf8"></div></div>
+    <div class="mac"><div><b class="mp">0 g</b>protein</div><div><b class="mc">0 g</b>carbs</div><div><b class="mf">0 g</b>fat</div></div>`;
+});
+$("#fq").textContent = "How many calories and how much protein are in chicken breast and rice?";
+// yoga routine
+const RT = D.routine.steps;
+$("#yrt").innerHTML = `<span class="mint">15 min</span> · ${D.routine.title.replace(/^15-Minute /, "")}`;
+$("#yroutine").innerHTML = RT.map((s, i) => `<div class="step" style="top:${i * 66}px"><span class="n">${i + 1}</span><img src="assets/yoga/th-${s.slug}.jpg"><b>${s.name}</b><i>${s.duration}</i></div>`).join("");
+// bands
+const LAT = D.band.card;
+const TILES = [["Steps", LAT.steps, (v) => fmt(v), "", "var(--mint)"], ["Sleep", LAT.sleep_minutes, (v) => `${Math.floor(v / 60)} h ${String(Math.round(v % 60)).padStart(2, "0")} min`, "under 7 hours", "var(--indigo)"],
+  ["Resting heart rate", LAT.resting_hr, (v) => `${Math.round(v)} bpm`, "above your usual", "var(--rose)"], ["Stress", LAT.stress, (v) => `${Math.round(v)} / 100`, "high", "var(--orange)"]];
+$("#btiles").innerHTML = TILES.map(([l], i) => `<div class="tile" id="bt${i}" style="left:${120 + i * 430}px;top:390px"><span>${l}</span><strong></strong><small>${TILES[i][3]}</small></div>`).join("");
+const SER = D.band_summary.series.slice(-14);
+const smax = Math.max(...SER.map((d) => d.steps || 0));
+$("#bchart").innerHTML = SER.map((d, i) => `<div class="c"><div style="height:0px;${i === SER.length - 1 ? "" : "opacity:.6"}"></div><span>${+d.day.slice(8)}</span></div>`).join("");
+$("#bchat").innerHTML = `<div class="bubble-u" style="top:0;right:0">Am I recovered enough to train today?</div>
+  <div class="bot" style="top:110px;left:0;right:0"><div class="av">${DUMBD}</div><div class="txt" style="font-size:25px"><div class="tag">YOUR BAND</div><div>${D.band.answer.split(" - you")[0].replace("Based on your band data today", "Based on your band today")}…</div>
+  <div style="display:flex;gap:14px;margin-top:18px">${TILES.map(([l, v, f]) => `<div style="flex:1;background:var(--surf2);border:1px solid var(--bd);border-radius:14px;padding:12px 16px"><div style="font-size:16px;color:#9fb3ae">${l}</div><div style="font-size:28px;font-weight:800">${f(v)}</div></div>`).join("")}</div></div></div>`;
+// streams
+(function () {
+  let s = "";
+  for (let i = 0; i < 14; i++) s += `<circle class="sd" r="${3 + (i % 3)}" fill="#2DD4BF"/>`;
+  $("#bstream").innerHTML = s;
+})();
+// safety flashes
+const SF = D.safety;
+SF.forEach((x, i) => { $(`#sf${i}`).innerHTML = `<div class="q">${x.q}</div><div class="a">${x.a.split(". ")[0]}.</div>`; });
+
+const camMeet = laptop($("#mlap"), "assets/shots/dashboard.jpg");
+const camYoga = laptop($("#ylap"), "assets/shots/yoga_pose.jpg");
+const camBand = laptop($("#blap"), "assets/shots/bands.jpg");
+
+const MONT = [["shots/chat_chest.jpg", .22, .1, .62], ["img/ex2_1.jpg", 0, 0, 1], ["yoga/warrior-ii-2.jpg", 0, 0, 1], ["RING", 0, 0, 1], ["STREAK", 0, 0, 1]];
+
+/* ------------------------------------------------ per frame */
+function sceneEnv(t, id, inDur = .55, outDur = .5, outScale = 1.45) {
+  const s = SC[id], el = $(`#s_${id}`);
+  const vis = t >= s.start - .3 && t <= s.end + .02;
+  el.style.visibility = vis ? "visible" : "hidden";
+  if (!vis) return null;
+  const ki = P(t, s.start - .3, s.start - .3 + inDur), ko = P(t, s.end - outDur, s.end, ease.in);
+  el.style.opacity = ki * (1 - ko);
+  el.style.transform = `scale(${lerp(.82, 1, ki) * lerp(1, outScale, ko)})`;
+  return { s, lt: t - s.start, ki, ko };
+}
+
+function kinetic(el, text, t0, t, per = .12, html = null) {
+  if (el.dataset.txt !== text) { el.dataset.txt = text; if (html) el.innerHTML = html; else words(el, text); }
+  [...el.querySelectorAll(":scope > span")].forEach((w, i) => {
+    const k = P(t, t0 + i * per, t0 + i * per + .45, ease.back);
+    w.style.opacity = clamp(k, 0, 1); w.style.transform = `translateY(${(1 - k) * 40}px) scale(${lerp(.8, 1, clamp(k, 0, 1))})`;
+  });
+}
+
+function renderBg(t) {
+  $$("#particles .dot").forEach((d, i) => {
+    const p = PARTS[i], y = (p.y - t * p.v) % 1080;
+    d.style.transform = `translate(${p.x + Math.sin(t * .3 + i) * 20}px, ${y < 0 ? y + 1080 : y}px) scale(${p.s})`;
+    d.style.opacity = p.o;
+  });
+  // light sweeps at chosen moments
+  const sw = [[4.6, 1.2], [SC.meet.start + 2.2, 1.2], [SC.end.start + 1.2, 1.4]];
+  let sx = -600, so = 0;
+  for (const [a, d] of sw) if (t >= a && t <= a + d) { const k = P(t, a, a + d, ease.inOut); sx = lerp(-500, 2300, k); so = Math.sin(k * Math.PI); }
+  $("#sweep").style.left = sx + "px"; $("#sweep").style.opacity = so;
+}
+
+function renderCaptions(t) {
+  let line = null;
+  for (const s of TL.scenes) for (const l of s.lines) if (t >= l.start - .05 && t <= l.end + .35) line = l;
+  const cap = $("#cap");
+  if (!line) { cap.style.opacity = 0; $("#capbg").style.opacity = 0; return; }
+  if (cap.dataset.txt !== line.text) { cap.dataset.txt = line.text; words(cap, line.text); }
+  const ws = [...cap.children], dur = line.end - line.start;
+  cap.style.opacity = 1 - P(t, line.end + .15, line.end + .35, ease.lin); $("#capbg").style.opacity = cap.style.opacity;
+  ws.forEach((w, i) => { const at = line.start + dur * (i / ws.length) * .92; const k = P(t, at - .05, at + .2);
+    w.style.opacity = .25 + .75 * k; w.style.transform = `translateY(${(1 - k) * 8}px)`; });
+}
+
+function renderHook(t) {
+  const e = sceneEnv(t, "hook", .01, .5, 1.6); if (!e) return; const lt = e.lt;
+  const draw = P(lt, .2, 2.6, ease.inOut);
+  $("#ecgp").style.strokeDashoffset = ECGLEN * (1 - draw);
+  const snap = P(lt, 2.8, 3.4, ease.inOut);
+  $("#ecg").style.opacity = 1 - snap; $("#ecg").style.transform = `scaleY(${1 - snap * .9}) scaleX(${1 - snap * .7})`;
+  const lk = P(lt, 3.0, 3.7, ease.back), push = lerp(1, 1.12, P(lt, 3, 8, ease.lin));
+  $("#hlogo").style.transform = `translate(-50%, -62%) scale(${lk * push}) rotate(${(1 - lk) * -25}deg)`; $("#hlogo").style.opacity = clamp(lk, 0, 1);
+  const wk = P(lt, 3.6, 4.6);
+  $("#hword").style.opacity = wk; $("#hword").style.letterSpacing = `${lerp(.8, .32, wk)}em`; $("#hword").style.transform = `scale(${push})`;
+}
+
+function renderProblem(t) {
+  const e = sceneEnv(t, "problem", .55, .7, .2); if (!e) return; const lt = e.lt;
+  $("#pfs").style.transform = `translateY(${-((lt * 260) % (9 * 344))}px)`;
+  const ka = P(lt, .3, 1.1, ease.back), kb = P(lt, .6, 1.4, ease.back);
+  $("#pfeed").style.transform = `translateX(${(1 - ka) * -300}px) rotate(${-4 + Math.sin(lt) * 1}deg)`;
+  $("#pbot").style.transform = `translateX(${(1 - kb) * 300}px) rotate(${3 - Math.sin(lt) * 1}deg)`;
+  $("#pq").style.opacity = P(lt, 1.2, 1.6);
+  const ans = "It depends. Maybe 400 to 800 calories? Every body is different, so results may vary.";
+  $("#pa").textContent = ans.slice(0, Math.floor(ans.length * P(lt, 2.0, 4.8, ease.lin)));
+  $("#pa").style.opacity = P(lt, 1.9, 2.1);
+  const L = SC.problem.lines;
+  const txt = t < L[1].start - .2 ? "Generic answers." : t < L[1].start + 1.7 ? "Guessed calorie numbers." : "No idea what level you are.";
+  kinetic($("#pk"), txt, txt === "Generic answers." ? L[0].start : txt === "Guessed calorie numbers." ? L[1].start - .1 : L[1].start + 1.7, t, .09);
+}
+
+function renderMeet(t) {
+  const e = sceneEnv(t, "meet", .4, .9, 3.2); if (!e) return; const lt = e.lt;
+  const k = P(lt, 0, 2.2, ease.out);
+  const fly = P(lt, 7.6, 9.6, ease.in);
+  $("#mlap").style.transform = `translateY(${lerp(120, 95, k)}px) rotateY(${lerp(-62, 0, k) + Math.sin(lt * .7) * 4 * (1 - fly)}deg) rotateX(${lerp(18, 6, k)}deg) scale(${lerp(.45, .7, k) * lerp(1, 2.6, fly)})`;
+  camTo(camMeet, P(lt, 3.2, 6.8, ease.inOut) * (1 - fly) + fly, .1, .2, .5);
+  const tk = P(lt, .6, 1.6, ease.back);
+  $("#mtitle").style.opacity = clamp(tk, 0, 1) * (1 - fly); $("#mtitle").style.transform = `translateY(${(1 - tk) * -40}px)`;
+  const sk = P(lt, 2.4, 3.2);
+  $("#msub").style.opacity = sk * (1 - fly); $("#msub").style.transform = `translateY(${(1 - sk) * 30}px)`;
+}
+
+function renderChat(t) {
+  const e = sceneEnv(t, "chat", .5, .5, 1.5); if (!e) return; const lt = e.lt;
+  const q = D.chest.question;
+  $("#cu").textContent = q.slice(0, Math.ceil(q.length * P(lt, .3, 1.6, ease.lin))); $("#cu").style.opacity = P(lt, .2, .4);
+  $("#cb").style.opacity = P(lt, 1.9, 2.3);
+  const aw = CHAT_A.split(" "); $("#cbt").textContent = aw.slice(0, Math.ceil(aw.length * P(lt, 2.0, 3.6, ease.lin))).join(" ");
+  $$("#ccards .exc").forEach((c, i) => { const k = P(lt, 3.6 + i * .25, 4.4 + i * .25, ease.back);
+    c.style.opacity = clamp(k, 0, 1); c.style.transform = `translateY(${(1 - k) * 120}px)`; });
+  // camera: zoom into card 2 (index 1), cursor hovers, photo plays as motion, zoom back out
+  const zin = P(lt, 6.4, 7.6, ease.inOut), zout = P(lt, 10.6, 11.6, ease.inOut), z = zin * (1 - zout);
+  const PX = 150 + 130 + 360 + 165, PY = 90 + 430 + 195, sc = lerp(1, 2.0, z);   // card 2 centre on the page
+  const tx = lerp(PX, 960, z) - 150 - (PX - 150) * sc, ty = lerp(PY, 540, z) - 90 - (PY - 90) * sc;
+  $("#cwin").style.transformOrigin = "0 0";
+  $("#cwin").style.transform = `translate(${tx}px, ${ty}px) scale(${sc})`;
+  const ck = P(lt, 7.2, 8.0, ease.inOut), cx = lerp(1500, 990, ck), cy = lerp(980, 400, ck);
+  $("#cur").style.transform = `translate(${cx}px, ${cy}px)`; $("#cur").style.opacity = P(lt, 7.0, 7.3) * (1 - P(lt, 10.4, 10.7));
+  const hovering = lt > 8.0 && lt < 10.6;
+  $$("#ccards .exc").forEach((c, i) => { const f2 = c.querySelector(".f2");
+    const ph = hovering && i === 1 ? (Math.floor((lt - 8.0) / .7) % 2) : 0; f2.style.opacity = ph; });
+  kinetic($("#ck"), "871 exercises. Real photos. Real form.", SC.chat.start + 4.4, t, .1);
+  $("#ck").style.opacity = 1 - z;
+}
+
+function renderLevel(t) {
+  const e = sceneEnv(t, "level", .5, .55, .3); if (!e) return; const lt = e.lt;
+  const fan = P(lt, .2, 1.6, ease.back);
+  const focus = (i) => P(lt, 2.4 + i * 3, 3.0 + i * 3, ease.inOut) * (1 - P(lt, 4.8 + i * 3, 5.4 + i * 3, ease.inOut));
+  LV.forEach(([k], i) => {
+    const el = $(`#pl_${k}`), f = focus(i), others = [0, 1, 2].filter((j) => j !== i).reduce((a, j) => Math.max(a, focus(j)), 0);
+    const ang = (i - 1) * 14 * fan * (1 - f), x = (i - 1) * 520 * fan * (1 - f), y = lerp(300, 110, fan) + Math.abs(i - 1) * 40 * (1 - f) + f * 40;
+    el.style.transform = `translate(${x}px, ${y}px) rotate(${ang}deg) scale(${lerp(.7, .92, fan) * lerp(1, 1.16, f) * lerp(1, .9, others)})`;
+    el.style.opacity = clamp(fan, 0, 1) * lerp(1, .25, others); el.style.zIndex = f > .01 ? 5 : 1 + (i === 1);
+  });
+  $("#lk").style.opacity = P(lt, .8, 1.4); $("#lk").style.transform = `translateY(${(1 - P(lt, .8, 1.4)) * -30}px)`;
+}
+
+function renderFood(t) {
+  const e = sceneEnv(t, "food", .5, .5, 1.5); if (!e) return; const lt = e.lt;
+  const pull = P(lt, 0, 2.2, ease.out);
+  $("#s_food").style.transform += ` scale(${lerp(2.1, 1, pull)})`;
+  $("#s_food").style.transformOrigin = `${lerp(520, 960, pull)}px ${lerp(470, 540, pull)}px`;
+  $("#fq").style.opacity = P(lt, 1.2, 1.8);
+  D.food.foods.forEach((f, i) => {
+    const el = $(`#f${i}`), n = f.nutrients, k = P(lt, .2 + i * .9, 2.6 + i * .9, ease.out);
+    el.style.opacity = P(lt, i * .9, i * .9 + .4); el.style.transform = `translateY(${(1 - P(lt, i * .9, i * .9 + .8, ease.back)) * 60}px)`;
+    el.querySelector(".kn").textContent = fmt(n.calories_kcal * k);
+    el.querySelector(".mp").textContent = `${(n.protein_g * k).toFixed(1)} g`; el.querySelector(".mc").textContent = `${(n.carbs_g * k).toFixed(1)} g`;
+    el.querySelector(".mf").textContent = `${(n.fat_g * k).toFixed(1)} g`;
+    el.querySelector(".bar").style.clipPath = `inset(0 ${100 - k * 100}% 0 0)`;
+  });
+  const uk = P(lt, 3.2, 3.8, ease.back); $("#fusda").style.opacity = clamp(uk, 0, 1); $("#fusda").style.transform = `translateX(-50%) scale(${uk})`;
+}
+
+function renderYoga(t) {
+  const e = sceneEnv(t, "yoga", .6, .5, 1.5); if (!e) return; const lt = e.lt;
+  // 0-5.5 full photo: Warrior II -> Triangle, slow orbit; 5.5-7.5 pull back into the pose page; 7.5+ routine
+  const orb = lt * .9, f = Math.floor(lt / 1.4) % 2, mix = clamp(((lt % 1.4) - 1.1) / .3, 0, 1);
+  $("#yb").style.opacity = f === 0 ? mix : 1 - mix;
+  const pull = P(lt, 4.6, 7.0, ease.inOut);
+  const ph = $("#yphoto");
+  // photo shrinks into the laptop's photo panel (screen region ~ x .045 y .14 w .33 h .26 of 1240x775 screen)
+  const lapScale = .74, sx = 960 - 620 * lapScale + (.254 * 1240) * lapScale, sy = 540 - 387 * lapScale + (.1 * 775) * lapScale;
+  const tw = .3525 * 1240 * lapScale, th = tw / 1.5;
+  ph.style.left = lerp(0, sx, pull) + "px"; ph.style.top = lerp(0, sy, pull) + "px"; ph.style.width = lerp(1920, tw, pull) + "px"; ph.style.height = lerp(1080, th, pull) + "px";
+  ph.style.borderRadius = lerp(0, 10, pull) + "px";
+  const kb = 1.08 + .04 * Math.sin(orb * .5);
+  $$("#yphoto img").forEach((im) => im.style.transform = `scale(${kb * lerp(1, 1, pull)}) translateX(${Math.sin(orb * .35) * 18 * (1 - pull)}px)`);
+  ph.style.opacity = 1 - P(lt, 7.0, 7.4);
+  const lk = P(lt, 4.6, 6.6, ease.out), side = P(lt, 7.6, 9.0, ease.inOut);
+  $("#ylap").style.opacity = P(lt, 5.4, 6.4);
+  $("#ylap").style.transform = `translate(${lerp(0, -470, side)}px, ${lerp(0, -130, side)}px) rotateY(${lerp(0, 16, side)}deg) scale(${lerp(lapScale, .5, side)})`;
+  // routine builds itself as a timeline
+  $$("#yroutine .step").forEach((s, i) => { const k = P(lt, 8.6 + i * .32, 9.2 + i * .32, ease.back);
+    s.style.opacity = clamp(k, 0, 1); s.style.transform = `translateX(${(1 - k) * 80}px)`; });
+  $("#yrt").style.opacity = P(lt, 8.2, 8.8);
+  
+  const yk = $("#yk");
+  if (yk.dataset.txt !== "y") { yk.dataset.txt = "y"; yk.innerHTML = `<span>34 poses.</span> <span>Real people.</span> <span class="mint">Routines in seconds.</span>`; }
+  [...yk.children].forEach((w, i) => { const k = P(lt, 10.0 + i * .5, 10.6 + i * .5, ease.back); w.style.display = "block";
+    w.style.opacity = clamp(k, 0, 1); w.style.transform = `translateY(${(1 - k) * 40}px)`; });
+  yk.style.top = "735px";
+}
+
+function renderBands(t) {
+  const e = sceneEnv(t, "bands", .6, .5, 1.5); if (!e) return; const lt = e.lt;
+  // 0-4.5 devices + laptop with streams; 4.5-8.5 tiles count up; 8.5-11.5 heart ring; 11.5-14 chart; 14-18 chat answer
+  const a = P(lt, 0, 1.8, ease.out), outDev = P(lt, 4.2, 5.0, ease.in);
+  $("#blap").style.transform = `translateX(${lerp(120, 160, a)}px) rotateY(${lerp(-30, -14, a)}deg) scale(${.62 * (1 - outDev * .3)})`;
+  $("#blap").style.opacity = a * (1 - outDev);
+  camTo(camBand, P(lt, 1.6, 4.0, ease.inOut), .2, .1, .62);
+  const fl = Math.sin(lt * 1.3) * 14;
+  $("#bwatch").style.transform = `translate(${lerp(-300, 170, a)}px, ${330 + fl}px) rotateY(${lerp(50, 18, a)}deg) rotateZ(-8deg)`;
+  $("#bband").style.transform = `translate(${lerp(-200, 470, a)}px, ${470 - fl}px) rotateY(${lerp(40, 12, a)}deg) rotateZ(12deg)`;
+  $("#bwatch").style.opacity = $("#bband").style.opacity = a * (1 - outDev);
+  $("#bwbpm").textContent = 72 + Math.round(Math.sin(lt * 2) * 2);
+  // streams of light from devices into the laptop
+  $$("#bstream .sd").forEach((d, i) => { const ph = ((lt * .55 + i / 14) % 1), from = i % 2 ? [560, 640] : [300, 470];
+    const x = lerp(from[0], 1000, ph) , y = lerp(from[1], 520, ph) - Math.sin(ph * Math.PI) * 140;
+    d.setAttribute("cx", x); d.setAttribute("cy", y); d.style.opacity = Math.sin(ph * Math.PI) * a * (1 - outDev) * .9; });
+  $("#bbr").style.opacity = P(lt, .8, 1.6) * (1 - P(lt, 4.2, 4.8));
+  // tiles
+  TILES.forEach(([l, v, f], i) => { const el = $(`#bt${i}`), k = P(lt, 4.6 + i * .25, 5.4 + i * .25, ease.back), c = P(lt, 4.8 + i * .25, 6.6 + i * .25, ease.out);
+    const vis = 1 - P(lt, 8.2, 8.8, ease.in);
+    el.style.opacity = clamp(k, 0, 1) * vis; el.style.transform = `translateY(${(1 - k) * 80}px) scale(${lerp(1, 1.1, P(lt, 7.6, 8.8))})`;
+    const s = el.querySelector("strong"); s.textContent = f(v * c); s.style.color = TILES[i][4]; });
+  // heart ring pulses on the beat (120 BPM)
+  const rk = P(lt, 8.4, 9.2, ease.back) * (1 - P(lt, 11.3, 11.9, ease.in));
+  const beat = Math.exp(-((lt * 2) % 1) * 7);
+  $("#bring").style.opacity = clamp(rk, 0, 1);
+  $("#bring").style.transform = `scale(${rk * (1 + beat * .05) * lerp(1.6, 1, P(lt, 8.4, 9.4))})`;
+  $("#bringbpm").textContent = 120 + Math.round(Math.sin(lt * 1.7) * 3);
+  $("#bringarc").setAttribute("stroke-dashoffset", 1445 * (1 - .66 - .04 * beat));
+  // chart
+  const ch = P(lt, 11.4, 12.0) * (1 - P(lt, 13.8, 14.3, ease.in));
+  $("#bchart").style.opacity = ch; $("#bct").style.opacity = ch;
+  $("#bchart").style.transform = `scale(${lerp(1.5, 1, P(lt, 11.3, 12.3))})`;
+  $$("#bchart .c div").forEach((b, i) => { const k = P(lt, 11.6 + i * .1, 12.3 + i * .1, ease.back); b.style.height = `${(SER[i].steps || 0) / smax * 400 * k}px`; });
+  // chat answer with own numbers
+  const cc = P(lt, 14.0, 14.6, ease.out);
+  $("#bchat").style.opacity = cc; $("#bchat").style.transform = `translateY(${(1 - cc) * 60}px) scale(1.12)`;
+  const bb = $("#bchat .bot"); bb.style.opacity = P(lt, 14.8, 15.3);
+}
+
+function renderSafe(t) {
+  const e = sceneEnv(t, "safe", .5, .5, 1.5); if (!e) return; const lt = e.lt;
+  const sp = $("#sshp"), L = 2200; sp.style.strokeDasharray = L; sp.style.strokeDashoffset = L * (1 - P(lt, 0, 1.6, ease.inOut));
+  $("#sshield").style.transform = `scale(${lerp(.64, .72, P(lt, 0, 1.6))})`;
+  $("#sshield").style.filter = `drop-shadow(0 0 ${20 + 20 * Math.sin(lt * 3)}px rgba(45,212,191,.5))`;
+  [0, 1].forEach((i) => { const el = $(`#sf${i}`), a = 1.4 + i * 1.6, k = P(lt, a, a + .5, ease.back) * (1 - P(lt, 5.4, 5.9));
+    el.style.opacity = clamp(k, 0, 1); el.style.transform = `translateX(${(1 - k) * (i ? 80 : -80)}px) scale(${lerp(.9, 1, clamp(k, 0, 1))})`; });
+  const lk = P(lt, 5.8, 6.4, ease.back), snap = P(lt, 6.6, 6.9, ease.in);
+  $("#slock").style.opacity = clamp(lk, 0, 1); $("#slock").style.transform = `scale(${lk * (1 + .08 * Math.exp(-(lt - 6.9) * 8) * (lt > 6.9))})`;
+  $("#slshackle").setAttribute("transform", `translate(0 ${-34 * (1 - snap)})`);
+  const sk = $("#sk");
+  if (sk.dataset.txt !== "s") { sk.dataset.txt = "s"; sk.innerHTML = `<span>Private.</span> <span>Safe.</span> <span class="mint">Yours.</span>`; }
+  [...sk.children].forEach((w, i) => { const k = P(lt, 6.9 + i * .45, 7.4 + i * .45, ease.back); w.style.opacity = clamp(k, 0, 1); w.style.transform = `translateY(${(1 - k) * 40}px)`; });
+}
+
+function renderWhy(t) {
+  const e = sceneEnv(t, "why", .3, .5, 1.6); if (!e) return; const lt = e.lt;
+  const i = clamp(Math.floor(lt / 1.0), 0, MONT.length - 1), within = lt - i * 1.0;
+  const m = $("#wm");
+  if (m.dataset.i !== String(i)) {
+    m.dataset.i = String(i); const [src] = MONT[i];
+    m.innerHTML = src === "RING" ? `<div style="width:100%;height:100%;display:grid;place-items:center;background:var(--app)"><div style="text-align:center"><div style="font-size:90px;color:#fb7185">♥</div><div style="font-size:200px;font-weight:800;letter-spacing:-8px">122</div><div style="font-size:34px;color:#9fb3ae;letter-spacing:8px;font-weight:700">BPM · LIVE</div></div></div>`
+      : src === "STREAK" ? `<div style="width:100%;height:100%;display:grid;place-items:center;background:var(--app)"><div style="text-align:center"><div style="font-size:120px">🔥</div><div style="font-size:200px;font-weight:800;color:var(--mint);letter-spacing:-6px">5 days</div><div style="font-size:36px;color:#9fb3ae;font-weight:700">workout streak</div></div></div>`
+      : `<img src="assets/${src}" style="${src.startsWith("shots") ? "object-position:62% 12%;transform:scale(1.5);transform-origin:62% 12%" : ""}">`;
+  }
+  const snap = P(within, 0, .35, ease.back), out = P(within, .8, 1.0, ease.in);
+  m.style.transform = lt > MONT.length ? "scale(1)" : `scale(${lerp(.6, 1, clamp(snap, 0, 1.2)) * lerp(1, 1.25, out)}) rotate(${(i % 2 ? 1 : -1) * 2 * (1 - snap)}deg)`;
+  m.style.opacity = lt > MONT.length - .2 ? 1 - P(lt, MONT.length - .2, MONT.length + .4) : 1 - out * .6;
+  const wk = $("#wk");
+  if (wk.dataset.txt !== "w") { wk.dataset.txt = "w"; wk.innerHTML = `<span class="mint">Specialist.</span> <span>Not generalist.</span>`; }
+  [...wk.children].forEach((w, j) => { const k = P(lt, SC.why.lines[0].start - SC.why.start + j * 1.2 + .2, SC.why.lines[0].start - SC.why.start + j * 1.2 + .7, ease.back);
+    w.style.opacity = clamp(k, 0, 1); w.style.transform = `scale(${lerp(1.6, 1, clamp(k, 0, 1))})`; });
+  wk.style.top = lt > MONT.length - .2 ? `${lerp(70, 470, P(lt, MONT.length - .2, MONT.length + .6, ease.inOut))}px` : "70px";
+}
+
+function renderEnd(t) {
+  const e = sceneEnv(t, "end", .7, .01, 1); if (!e) return; const lt = e.lt;
+  const k = P(lt, 0, 1.2, ease.back);
+  $("#elogo").style.transform = `translate(-50%, -78%) scale(${lerp(3, 1, P(lt, 0, 1.2, ease.out)) * (1 + .03 * Math.sin(lt * 2))})`;
+  $("#elogo").style.opacity = P(lt, 0, .6);
+  const w = P(lt, .8, 1.8); $("#eword").style.opacity = w; $("#eword").style.letterSpacing = `${lerp(.7, .32, w)}em`;
+  $("#etag").style.opacity = P(lt, 1.6, 2.4); $("#etag").style.transform = `translateY(${(1 - P(lt, 1.6, 2.4)) * 20}px)`;
+  $("#egh").style.opacity = P(lt, 2.3, 3.0);
+  $("#black").style.opacity = P(t, TL.duration - 1.0, TL.duration, ease.lin);
+}
+
+window.render = function (t) {
+  renderBg(t);
+  renderHook(t); renderProblem(t); renderMeet(t); renderChat(t); renderLevel(t); renderFood(t);
+  renderYoga(t); renderBands(t); renderSafe(t); renderWhy(t); renderEnd(t);
+  renderCaptions(t);
+  $("#black").style.opacity = t < SC.end.start ? P(t, 0, .01, ease.lin) * 0 : $("#black").style.opacity;
+};
+
+(async () => {
+  await document.fonts.ready;
+  await Promise.all([...document.images].map((im) => im.complete ? 0 : new Promise((r) => { im.onload = im.onerror = r; })));
+  render(0); window.READY = true;
+})();
+</script></body></html>

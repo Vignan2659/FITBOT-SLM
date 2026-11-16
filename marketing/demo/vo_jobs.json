@@ -1,0 +1,78 @@
+[
+ {
+  "text": "What if your fitness coach lived right on your laptop?",
+  "out": "build/vo/hook_0.wav"
+ },
+ {
+  "text": "Most fitness advice is generic.",
+  "out": "build/vo/problem_0.wav"
+ },
+ {
+  "text": "Guessed calorie numbers, and no idea what level you're at.",
+  "out": "build/vo/problem_1.wav"
+ },
+ {
+  "text": "Meet FitBot.",
+  "out": "build/vo/meet_0.wav"
+ },
+ {
+  "text": "A fitness AI trained for one job, running privately on your own computer.",
+  "out": "build/vo/meet_1.wav"
+ },
+ {
+  "text": "Just ask.",
+  "out": "build/vo/chat_0.wav"
+ },
+ {
+  "text": "You get real exercises with real photos, and you can see every move in motion.",
+  "out": "build/vo/chat_1.wav"
+ },
+ {
+  "text": "Beginner, intermediate or advanced, every plan matches you.",
+  "out": "build/vo/level_0.wav"
+ },
+ {
+  "text": "Never too easy. Never too risky.",
+  "out": "build/vo/level_1.wav"
+ },
+ {
+  "text": "Nutrition answers come from real U.S.D.A. data, so there's no guessing.",
+  "out": "build/vo/food_0.wav"
+ },
+ {
+  "text": "There's yoga too.",
+  "out": "build/vo/yoga_0.wav"
+ },
+ {
+  "text": "Every pose is shown by real people, and FitBot builds a full routine for your time, your goal and your level.",
+  "out": "build/vo/yoga_1.wav"
+ },
+ {
+  "text": "Connect your fitness band,",
+  "out": "build/vo/bands_0.wav"
+ },
+ {
+  "text": "and FitBot coaches you with your own steps, heart rate, sleep and stress.",
+  "out": "build/vo/bands_1.wav"
+ },
+ {
+  "text": "Risky questions get careful, safe answers.",
+  "out": "build/vo/safe_0.wav"
+ },
+ {
+  "text": "And your data never leaves your Mac.",
+  "out": "build/vo/safe_1.wav"
+ },
+ {
+  "text": "It's not just another chatbot.",
+  "out": "build/vo/why_0.wav"
+ },
+ {
+  "text": "It's a specialist for your fitness.",
+  "out": "build/vo/why_1.wav"
+ },
+ {
+  "text": "FitBot. Train smarter.",
+  "out": "build/vo/end_0.wav"
+ }
+]
