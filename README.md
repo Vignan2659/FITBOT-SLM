@@ -189,6 +189,14 @@ The film can be made again with `marketing/launch/make_film.command`.
 
 </details>
 
+### Put FitBot online from your Mac
+
+`go_live.command` starts FitBot and an [ngrok](https://ngrok.com) tunnel, so anyone can open it at your free fixed
+ngrok address (for example `https://your-name.ngrok-free.dev`). One time setup: create a free ngrok account, install
+ngrok (`brew install ngrok`) and run the `ngrok config add-authtoken ...` line from your ngrok dashboard. Then
+double click `go_live.command`; it prints the public link after about a minute and keeps the Mac awake. FitBot stays
+online while that window is open and the Mac is on. The free ngrok plan allows 20,000 requests and 1 GB a month.
+
 ## What's in this repo
 
 ```
