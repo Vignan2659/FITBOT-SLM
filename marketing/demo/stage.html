@@ -116,18 +116,40 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
 .flash .a { font-size: 22px; line-height: 1.45; color: #dbe7e4; }
 .mont { position: absolute; left: 50%; top: 50%; width: 1100px; height: 640px; margin: -320px 0 0 -550px; border-radius: 30px; overflow: hidden; background: var(--surf); box-shadow: 0 40px 100px rgba(0,0,0,.6); }
 .mont img { width: 100%; height: 100%; object-fit: cover; }
+.ut { position: absolute; width: 380px; height: 250px; border-radius: 28px; background: var(--card); border: 2px solid var(--line); padding: 30px 32px; box-shadow: 0 30px 70px rgba(0,0,0,.4); }
+.ut .em { font-size: 70px; line-height: 1; }
+.ut b { display: block; font-size: 36px; font-weight: 800; margin-top: 18px; letter-spacing: -.02em; }
+.ut i { font-style: normal; color: var(--soft); font-size: 21px; }
+#vchip { position: absolute; right: 44px; top: 38px; z-index: 45; background: #f3f6f8; border-radius: 12px; padding: 9px 14px; opacity: 0; box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+#vchip img { height: 26px; display: block; }
+.stat { position: absolute; border-radius: 24px; background: var(--card); border: 1px solid var(--line); padding: 26px 30px; box-shadow: 0 30px 70px rgba(0,0,0,.4); }
+.stat strong { display: block; font-size: 72px; font-weight: 800; letter-spacing: -.03em; color: var(--mint); line-height: 1.05; }
+.stat span { color: var(--soft); font-size: 23px; font-weight: 600; }
+.node { position: absolute; width: 300px; height: 210px; border-radius: 26px; background: var(--card); border: 2px solid var(--line); text-align: center; padding-top: 34px; }
+.node .em { font-size: 62px; line-height: 1; }
+.node b { display: block; font-size: 27px; font-weight: 800; margin-top: 16px; line-height: 1.15; }
+.rbar { position: absolute; left: 0; height: 64px; }
+.rbar .lab { position: absolute; left: 0; top: 0; width: 330px; font-size: 28px; font-weight: 800; line-height: 64px; }
+.rbar .trk { position: absolute; left: 340px; top: 8px; width: 900px; height: 48px; border-radius: 24px; background: #17332f; overflow: hidden; }
+.rbar .trk div { height: 100%; border-radius: 24px; }
+.rbar .val { position: absolute; left: 1270px; top: 0; font-size: 44px; font-weight: 800; line-height: 64px; }
 </style></head>
 <body>
 <div id="film">
   <div id="particles"></div>
 
-  <!-- 1 HOOK -->
-  <div class="scene" id="s_hook">
+  <!-- 1 INTRO -->
+  <div class="scene" id="s_intro">
     <svg id="ecg" class="abs" style="left:0;top:340px" width="1920" height="400" viewBox="0 0 1920 400">
       <path id="ecgp" d="" fill="none" stroke="#2DD4BF" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
     </svg>
     <div id="hlogo" class="abs center"><div class="logo"></div></div>
-    <div id="hword" class="abs word" style="left:0;right:0;top:700px">FITBOT</div>
+    <div id="hword" class="abs word" style="left:0;right:0;top:640px">FITBOT</div>
+    <div id="htag" class="kick" style="top:790px;font-size:34px;font-weight:600;color:var(--soft)">Fitness intelligence, powered by a <span class="mint">fine tuned 4B language model</span></div>
+    <div id="vcard" class="abs" style="inset:0;background:radial-gradient(1200px 800px at 50% 45%,#ffffff,#e3ebf0)">
+      <img id="vlogo" class="abs" src="assets/veltris_logo.png" style="left:50%;top:50%;width:980px;margin:-150px 0 0 -490px">
+      <div id="vpres" class="abs" style="left:0;right:0;top:640px;text-align:center;font-size:30px;font-weight:700;letter-spacing:.5em;color:#31506b">PRESENTS</div>
+    </div>
   </div>
 
   <!-- 2 PROBLEM -->
@@ -148,6 +170,12 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
     <div id="msub" class="kick" style="top:222px;font-size:34px;font-weight:700;color:var(--soft)">A fine tuned <span class="mint">4 billion parameter</span> model. Running privately on your Mac.</div>
   </div>
 
+  <!-- USES -->
+  <div class="scene" id="s_uses">
+    <div id="uk" class="kick" style="top:100px;font-size:66px">One assistant. <span class="mint">Every part of your fitness.</span></div>
+    <div id="ugrid"></div>
+  </div>
+
   <!-- 4 CHAT -->
   <div class="scene" id="s_chat">
     <div id="cwin" class="win" style="left:150px;top:90px;width:1620px;height:860px">
@@ -164,7 +192,7 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
 
   <!-- 5 LEVEL -->
   <div class="scene" id="s_level" style="perspective:2000px">
-    <div id="lk" class="kick" style="top:70px;font-size:64px">Built for <span class="mint">your level.</span></div>
+    <div id="lk" class="kick" style="top:44px;font-size:60px">Built for <span class="mint">your level.</span></div>
     <div id="lcards"></div>
   </div>
 
@@ -173,7 +201,7 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
     <div id="fq" class="bubble-u" style="top:90px;right:auto;left:50%;transform:translateX(-50%);white-space:nowrap"></div>
     <div id="f0" class="food" style="left:220px;top:260px"></div>
     <div id="f1" class="food" style="left:1060px;top:260px"></div>
-    <div id="fusda" class="usda" style="left:50%;top:880px;transform:translateX(-50%)">USDA FoodData Central</div>
+    <div id="fusda" class="usda" style="left:50%;top:775px;transform:translateX(-50%)">USDA FoodData Central</div>
   </div>
 
   <!-- 7 YOGA -->
@@ -184,7 +212,7 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
     <div id="ylap" class="laptop"></div>
     <div id="yroutine" class="abs" style="left:980px;top:170px;width:760px;height:800px"></div>
     <div id="yrt" class="abs" style="left:980px;top:110px;font-size:30px;font-weight:800"></div>
-    <div id="yk" class="kick" style="top:440px;left:120px;right:auto;width:760px;text-align:left;font-size:62px;line-height:1.08"></div>
+    <div id="yk" class="kick" style="top:440px;left:120px;right:auto;width:760px;text-align:left;font-size:54px;line-height:1.1"></div>
   </div>
 
   <!-- 8 BANDS -->
@@ -207,6 +235,46 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
     <div id="bbr" class="brands" style="top:110px">Apple Watch • Samsung • Fitbit • Huawei • OnePlus • Noise • WHOOP</div>
   </div>
 
+  <!-- TRACK -->
+  <div class="scene" id="s_track" style="perspective:2200px">
+    <div id="tlap" class="laptop"></div>
+    <div id="tk" class="kick" style="top:80px;left:1010px;right:auto;width:800px;text-align:left;font-size:60px;line-height:1.1">Plans saved.<br>Workouts logged.<br><span class="mint">Progress you can see.</span></div>
+    <div id="tst0" class="stat" style="left:1010px;top:430px;width:370px"><strong>0</strong><span>day streak 🔥</span></div>
+    <div id="tst1" class="stat" style="left:1410px;top:430px;width:370px"><strong>0</strong><span>exercises logged</span></div>
+    <div id="tst2" class="stat" style="left:1010px;top:650px;width:770px;padding:22px 30px"><span style="color:var(--mint);font-weight:800">✓ Plan saved</span><div id="tplan" style="font-size:30px;font-weight:800;margin-top:6px"></div></div>
+  </div>
+
+  <!-- MODEL -->
+  <div class="scene" id="s_model">
+    <div id="ma" class="abs" style="inset:0">
+      <div class="kick" style="top:80px"><div class="eyebrow">Under the hood</div><div style="font-size:84px;margin-top:8px">Qwen3 4B, <span class="mint">fine tuned for fitness</span></div></div>
+      <svg id="mchip" class="abs" style="left:170px;top:330px" width="460" height="460" viewBox="0 0 460 460"></svg>
+      <div id="ms0" class="stat" style="left:720px;top:320px;width:500px"><strong>4.0B</strong><span>model parameters</span></div>
+      <div id="ms1" class="stat" style="left:1250px;top:320px;width:500px"><strong>0</strong><span>fitness conversations</span></div>
+      <div id="ms2" class="stat" style="left:720px;top:560px;width:1030px;height:300px;padding:22px 30px">
+        <span>Training loss · QLoRA, 4 bit, on an RTX 4070</span>
+        <svg id="mloss" width="970" height="210" viewBox="0 0 970 210" style="display:block;margin-top:10px"></svg></div>
+    </div>
+    <div id="mb" class="abs" style="inset:0">
+      <div class="kick" style="top:110px;font-size:66px">How every answer is <span class="mint">made</span></div>
+      <svg id="mwire" class="abs" style="left:0;top:0" width="1920" height="1080"><line x1="200" y1="545" x2="1720" y2="545" stroke="#1F4A45" stroke-width="6"/><circle id="mdot" r="13" cy="545" fill="#2DD4BF"/></svg>
+      <div id="mnodes"></div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="scene" id="s_results">
+    <div class="kick" style="top:90px"><div class="eyebrow">Measured results</div><div style="font-size:84px;margin-top:8px">Nearly <span class="mint">3×</span> closer to the right answer</div></div>
+    <div id="rbars" class="abs" style="left:230px;top:380px;width:1460px;height:200px">
+      <div style="position:absolute;left:0;top:-52px;font-size:22px;color:var(--soft);font-weight:600">Answer quality (ROUGE-L) on held out test questions</div>
+      <div class="rbar" style="top:10px"><div class="lab" style="color:var(--soft)">Base Qwen3 4B</div><div class="trk"><div id="rb0" style="background:#5b7a75;width:0"></div></div><div class="val" id="rv0" style="color:var(--soft)">0.00</div></div>
+      <div class="rbar" style="top:100px"><div class="lab">FitBot 4B</div><div class="trk"><div id="rb1" style="background:linear-gradient(90deg,#14b8a6,#2DD4BF);width:0"></div></div><div class="val mint" id="rv1">0.00</div></div>
+    </div>
+    <div id="rs0" class="stat" style="left:230px;top:650px;width:460px"><strong>93%</strong><span>of 163 real app checks passed</span></div>
+    <div id="rs1" class="stat" style="left:730px;top:650px;width:460px"><strong>1.62</strong><span>test perplexity (base: 12.8)</span></div>
+    <div id="rs2" class="stat" style="left:1230px;top:650px;width:460px"><strong>100%</strong><span>of off topic questions declined</span></div>
+  </div>
+
   <!-- 9 SAFE -->
   <div class="scene" id="s_safe">
     <svg id="sshield" class="shield" width="900" height="1000" viewBox="0 0 900 1000" style="margin:-500px 0 0 -450px">
@@ -218,7 +286,7 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
       <path id="slshackle" d="M55 120 V80 a55 55 0 0 1 110 0 V120" fill="none" stroke="#F4F7F5" stroke-width="22" stroke-linecap="round"/>
       <rect x="25" y="115" width="170" height="135" rx="26" fill="#2DD4BF"/><circle cx="110" cy="172" r="16" fill="#0D2321"/><rect x="103" y="176" width="14" height="38" rx="6" fill="#0D2321"/>
     </svg>
-    <div id="sk" class="kick" style="top:905px;font-size:70px"></div>
+    <div id="sk" class="kick" style="top:62px;font-size:70px"></div>
   </div>
 
   <!-- 10 WHY -->
@@ -229,12 +297,17 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; 
 
   <!-- 11 END -->
   <div class="scene" id="s_end">
-    <div id="elogo" class="abs center"><div class="logo"></div></div>
-    <div id="eword" class="abs word" style="left:0;right:0;top:640px;font-size:84px">FITBOT</div>
-    <div id="etag" class="kick" style="top:760px;font-size:40px;font-weight:700;color:var(--soft)">Your AI fitness coach</div>
-    <div id="egh" class="kick" style="top:840px;font-size:26px;font-weight:600;color:#7fa39c;letter-spacing:.02em">github.com/Vignan2659/FITBOT-SLM</div>
+    <div id="elogo" class="abs" style="left:50%;top:300px"><div class="logo" style="width:190px;height:190px;border-radius:48px"></div></div>
+    <div id="eword" class="abs word" style="left:0;right:0;top:430px;font-size:84px">FITBOT</div>
+    <div id="etag" class="kick" style="top:550px;font-size:40px;font-weight:700;color:var(--soft)">Your AI fitness coach. <span class="mint">Train smarter.</span></div>
+    <div id="epres" class="abs" style="left:50%;top:668px;width:520px;margin-left:-260px;text-align:center">
+      <div style="font-size:19px;font-weight:700;letter-spacing:.4em;color:#7fa39c;margin-bottom:14px">PRESENTED BY</div>
+      <div style="background:#f3f6f8;border-radius:18px;padding:20px 30px;box-shadow:0 20px 50px rgba(0,0,0,.4)"><img src="assets/veltris_logo.png" style="width:100%;display:block"></div>
+    </div>
+    <div id="egh" class="kick" style="top:900px;font-size:24px;font-weight:600;color:#7fa39c;letter-spacing:.02em">github.com/Vignan2659/FITBOT-SLM</div>
   </div>
 
+  <div id="vchip"><img src="assets/veltris_logo_tight.png"></div>
   <div id="sweep"></div>
   <div id="capbg" class="abs" style="left:0;right:0;bottom:0;height:260px;z-index:39;background:linear-gradient(transparent,rgba(0,0,0,.55))"></div><div id="cap"></div>
   <div id="vignette"></div>
@@ -340,6 +413,28 @@ $("#bchat").innerHTML = `<div class="bubble-u" style="top:0;right:0">Am I recove
 const SF = D.safety;
 SF.forEach((x, i) => { $(`#sf${i}`).innerHTML = `<div class="q">${x.q}</div><div class="a">${x.a.split(". ")[0]}.</div>`; });
 
+// uses grid
+const USES = [["🏋️", "Workouts", "plans for gym or home"], ["🥗", "Nutrition", "real USDA food data"], ["🧘", "Yoga", "poses and routines"], ["😴", "Sleep", "how much and how to improve"],
+  ["💧", "Hydration", "your daily water needs"], ["🔁", "Recovery", "rest, soreness, readiness"], ["📈", "Progress", "plans, logs and streaks"], ["⌚", "Fitness bands", "steps, heart rate, stress"]];
+$("#ugrid").innerHTML = USES.map(([e, n, d], i) => `<div class="ut" style="left:${140 + (i % 4) * 420}px;top:${290 + Math.floor(i / 4) * 290}px"><div class="em">${e}</div><b>${n}</b><i>${d}</i></div>`).join("");
+// model scene
+(function () {
+  let c = "";
+  for (let i = 0; i < 12; i++) for (const [x1, y1, x2, y2] of [[95 + i * 24, 20, 95 + i * 24, 70], [95 + i * 24, 390, 95 + i * 24, 440], [20, 95 + i * 24, 70, 95 + i * 24], [390, 95 + i * 24, 440, 95 + i * 24]])
+    c += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#2b5b54" stroke-width="6" stroke-linecap="round"/>`;
+  c += `<rect x="70" y="70" width="320" height="320" rx="34" fill="#0b1c1a" stroke="#2DD4BF" stroke-width="4"/>`;
+  for (let y = 0; y < 7; y++) for (let x = 0; x < 7; x++) c += `<rect class="cell" x="${98 + x * 39}" y="${98 + y * 39}" width="30" height="30" rx="6" fill="#2DD4BF"/>`;
+  $("#mchip").innerHTML = c;
+  const L = D.loss, xs = L.train.map((p) => p[0]), xmax = Math.max(...xs), ymax = 1.7, X = (v) => 10 + v / xmax * 950, Y = (v) => 200 - Math.min(v, ymax) / ymax * 190;
+  $("#mloss").innerHTML = `<polyline id="mlt" fill="none" stroke="#2DD4BF" stroke-width="5" stroke-linejoin="round" points="${L.train.map((p) => `${X(p[0])},${Y(p[1])}`).join(" ")}"/>` +
+    `<polyline id="mlv" fill="none" stroke="#f59e0b" stroke-width="4" points="${L.validation.map((p) => `${X(p[0])},${Y(p[1])}`).join(" ")}"/>` +
+    L.validation.map((p) => `<circle class="mlvd" cx="${X(p[0])}" cy="${Y(p[1])}" r="7" fill="#f59e0b"/>`).join("") +
+    `<text x="960" y="24" text-anchor="end" font-size="20" font-weight="700" font-family="Inter" fill="#9fb3ae"><tspan fill="#2DD4BF">— training</tspan>   <tspan fill="#f59e0b">— validation</tspan></text>`;
+  const NODES = [["🙋", "You ask"], ["🧭", "Intent<br>understanding"], ["📚", "Fitness knowledge<br>(RAG)"], ["🧠", "FitBot 4B<br>model"], ["✨", "Your answer"]];
+  $("#mnodes").innerHTML = NODES.map(([e, n], i) => `<div class="node" style="left:${110 + i * 350}px;top:440px"><div class="em">${e}</div><b>${n}</b></div>`).join("");
+})();
+$("#tplan").textContent = D.extra.plan_title || "3 day gym plan";
+const camTrack = laptop($("#tlap"), "assets/shots/workouts.jpg");
 const camMeet = laptop($("#mlap"), "assets/shots/dashboard.jpg");
 const camYoga = laptop($("#ylap"), "assets/shots/yoga_pose.jpg");
 const camBand = laptop($("#blap"), "assets/shots/bands.jpg");
@@ -347,15 +442,16 @@ const camBand = laptop($("#blap"), "assets/shots/bands.jpg");
 const MONT = [["shots/chat_chest.jpg", .22, .1, .62], ["img/ex2_1.jpg", 0, 0, 1], ["yoga/warrior-ii-2.jpg", 0, 0, 1], ["RING", 0, 0, 1], ["STREAK", 0, 0, 1]];
 
 /* ------------------------------------------------ per frame */
-function sceneEnv(t, id, inDur = .55, outDur = .5, outScale = 1.45) {
+// A scene lasts as long as its narration; lt is the scene's own clock stretched to the designed length of its animation.
+function sceneEnv(t, id, inDur = .45, outDur = .4, outScale = 1.45) {
   const s = SC[id], el = $(`#s_${id}`);
-  const vis = t >= s.start - .3 && t <= s.end + .02;
+  const vis = t >= s.start - .25 && t <= s.end + .02;
   el.style.visibility = vis ? "visible" : "hidden";
   if (!vis) return null;
-  const ki = P(t, s.start - .3, s.start - .3 + inDur), ko = P(t, s.end - outDur, s.end, ease.in);
+  const ki = P(t, s.start - .25, s.start - .25 + inDur), ko = P(t, s.end - outDur, s.end, ease.in);
   el.style.opacity = ki * (1 - ko);
   el.style.transform = `scale(${lerp(.82, 1, ki) * lerp(1, outScale, ko)})`;
-  return { s, lt: t - s.start, ki, ko };
+  return { s, lt: (t - s.start) * (s.design || (s.end - s.start)) / (s.end - s.start), rl: t - s.start, ki, ko };
 }
 
 function kinetic(el, text, t0, t, per = .12, html = null) {
@@ -373,7 +469,7 @@ function renderBg(t) {
     d.style.opacity = p.o;
   });
   // light sweeps at chosen moments
-  const sw = [[4.6, 1.2], [SC.meet.start + 2.2, 1.2], [SC.end.start + 1.2, 1.4]];
+  const sw = [[SC.intro.end - 1.9, 1.2], [SC.meet.start + 1.6, 1.2], [SC.results.start + 1.0, 1.2], [SC.end.start + 1.0, 1.4]];
   let sx = -600, so = 0;
   for (const [a, d] of sw) if (t >= a && t <= a + d) { const k = P(t, a, a + d, ease.inOut); sx = lerp(-500, 2300, k); so = Math.sin(k * Math.PI); }
   $("#sweep").style.left = sx + "px"; $("#sweep").style.opacity = so;
@@ -382,6 +478,7 @@ function renderBg(t) {
 function renderCaptions(t) {
   let line = null;
   for (const s of TL.scenes) for (const l of s.lines) if (t >= l.start - .05 && t <= l.end + .35) line = l;
+  if (t < SC.intro.start + 3.3 * (SC.intro.end - SC.intro.start) / SC.intro.design) line = null;      // no caption over the Veltris card
   const cap = $("#cap");
   if (!line) { cap.style.opacity = 0; $("#capbg").style.opacity = 0; return; }
   if (cap.dataset.txt !== line.text) { cap.dataset.txt = line.text; words(cap, line.text); }
@@ -391,16 +488,22 @@ function renderCaptions(t) {
     w.style.opacity = .25 + .75 * k; w.style.transform = `translateY(${(1 - k) * 8}px)`; });
 }
 
-function renderHook(t) {
-  const e = sceneEnv(t, "hook", .01, .5, 1.6); if (!e) return; const lt = e.lt;
-  const draw = P(lt, .2, 2.6, ease.inOut);
+function renderIntro(t) {
+  const e = sceneEnv(t, "intro", .01, .45, 1.6); if (!e) return; const lt = e.lt;
+  // Veltris card, then it opens like an iris onto the dark stage
+  const vk = P(lt, .1, 1.1, ease.out), open = P(lt, 2.5, 3.3, ease.inOut);
+  $("#vlogo").style.transform = `scale(${lerp(.86, 1, vk) * lerp(1, 1.08, P(lt, 0, 3.3, ease.lin))})`; $("#vlogo").style.opacity = vk;
+  $("#vpres").style.opacity = P(lt, 1.0, 1.6); $("#vpres").style.letterSpacing = `${lerp(.9, .5, P(lt, 1.0, 2.0))}em`;
+  $("#vcard").style.clipPath = `circle(${lerp(75, 0, open)}% at 50% 50%)`; $("#vcard").style.display = open >= 1 ? "none" : "block";
+  const draw = P(lt, 2.6, 4.0, ease.inOut);
   $("#ecgp").style.strokeDashoffset = ECGLEN * (1 - draw);
-  const snap = P(lt, 2.8, 3.4, ease.inOut);
+  const snap = P(lt, 4.0, 4.5, ease.inOut);
   $("#ecg").style.opacity = 1 - snap; $("#ecg").style.transform = `scaleY(${1 - snap * .9}) scaleX(${1 - snap * .7})`;
-  const lk = P(lt, 3.0, 3.7, ease.back), push = lerp(1, 1.12, P(lt, 3, 8, ease.lin));
-  $("#hlogo").style.transform = `translate(-50%, -62%) scale(${lk * push}) rotate(${(1 - lk) * -25}deg)`; $("#hlogo").style.opacity = clamp(lk, 0, 1);
-  const wk = P(lt, 3.6, 4.6);
+  const lk = P(lt, 4.2, 4.9, ease.back), push = lerp(1, 1.08, P(lt, 4.2, 7, ease.lin));
+  $("#hlogo").style.transform = `translate(-50%, -82%) scale(${lk * push}) rotate(${(1 - lk) * -25}deg)`; $("#hlogo").style.opacity = clamp(lk, 0, 1);
+  const wk = P(lt, 4.7, 5.5);
   $("#hword").style.opacity = wk; $("#hword").style.letterSpacing = `${lerp(.8, .32, wk)}em`; $("#hword").style.transform = `scale(${push})`;
+  const tk = P(lt, 5.3, 6.0); $("#htag").style.opacity = tk; $("#htag").style.transform = `translateY(${(1 - tk) * 24}px)`;
 }
 
 function renderProblem(t) {
@@ -414,14 +517,14 @@ function renderProblem(t) {
   $("#pa").textContent = ans.slice(0, Math.floor(ans.length * P(lt, 2.0, 4.8, ease.lin)));
   $("#pa").style.opacity = P(lt, 1.9, 2.1);
   const L = SC.problem.lines;
-  const txt = t < L[1].start - .2 ? "Generic answers." : t < L[1].start + 1.7 ? "Guessed calorie numbers." : "No idea what level you are.";
-  kinetic($("#pk"), txt, txt === "Generic answers." ? L[0].start : txt === "Guessed calorie numbers." ? L[1].start - .1 : L[1].start + 1.7, t, .09);
+  const txt = t < L[1].start - .2 ? "Generic answers." : t < L[1].start + 1.5 ? "Guessed calorie numbers." : "No idea what level you are.";
+  kinetic($("#pk"), txt, txt === "Generic answers." ? L[0].start + .9 : txt === "Guessed calorie numbers." ? L[1].start - .1 : L[1].start + 1.5, t, .09);
 }
 
 function renderMeet(t) {
   const e = sceneEnv(t, "meet", .4, .9, 3.2); if (!e) return; const lt = e.lt;
   const k = P(lt, 0, 2.2, ease.out);
-  const fly = P(lt, 7.6, 9.6, ease.in);
+  const fly = P(lt, 7.3, 9.0, ease.in);
   $("#mlap").style.transform = `translateY(${lerp(120, 95, k)}px) rotateY(${lerp(-62, 0, k) + Math.sin(lt * .7) * 4 * (1 - fly)}deg) rotateX(${lerp(18, 6, k)}deg) scale(${lerp(.45, .7, k) * lerp(1, 2.6, fly)})`;
   camTo(camMeet, P(lt, 3.2, 6.8, ease.inOut) * (1 - fly) + fly, .1, .2, .5);
   const tk = P(lt, .6, 1.6, ease.back);
@@ -449,7 +552,7 @@ function renderChat(t) {
   const hovering = lt > 8.0 && lt < 10.6;
   $$("#ccards .exc").forEach((c, i) => { const f2 = c.querySelector(".f2");
     const ph = hovering && i === 1 ? (Math.floor((lt - 8.0) / .7) % 2) : 0; f2.style.opacity = ph; });
-  kinetic($("#ck"), "871 exercises. Real photos. Real form.", SC.chat.start + 4.4, t, .1);
+  kinetic($("#ck"), "871 exercises. Real photos. Real form.", 4.4, lt, .1);
   $("#ck").style.opacity = 1 - z;
 }
 
@@ -459,8 +562,8 @@ function renderLevel(t) {
   const focus = (i) => P(lt, 2.4 + i * 3, 3.0 + i * 3, ease.inOut) * (1 - P(lt, 4.8 + i * 3, 5.4 + i * 3, ease.inOut));
   LV.forEach(([k], i) => {
     const el = $(`#pl_${k}`), f = focus(i), others = [0, 1, 2].filter((j) => j !== i).reduce((a, j) => Math.max(a, focus(j)), 0);
-    const ang = (i - 1) * 14 * fan * (1 - f), x = (i - 1) * 520 * fan * (1 - f), y = lerp(300, 110, fan) + Math.abs(i - 1) * 40 * (1 - f) + f * 40;
-    el.style.transform = `translate(${x}px, ${y}px) rotate(${ang}deg) scale(${lerp(.7, .92, fan) * lerp(1, 1.16, f) * lerp(1, .9, others)})`;
+    const ang = (i - 1) * 14 * fan * (1 - f), x = (i - 1) * 520 * fan * (1 - f), y = lerp(260, 20, fan) + Math.abs(i - 1) * 40 * (1 - f) + f * 10;
+    el.style.transform = `translate(${x}px, ${y}px) rotate(${ang}deg) scale(${lerp(.7, .92, fan) * lerp(1, 1.08, f) * lerp(1, .9, others)})`;
     el.style.opacity = clamp(fan, 0, 1) * lerp(1, .25, others); el.style.zIndex = f > .01 ? 5 : 1 + (i === 1);
   });
   $("#lk").style.opacity = P(lt, .8, 1.4); $("#lk").style.transform = `translateY(${(1 - P(lt, .8, 1.4)) * -30}px)`;
@@ -510,7 +613,7 @@ function renderYoga(t) {
   if (yk.dataset.txt !== "y") { yk.dataset.txt = "y"; yk.innerHTML = `<span>34 poses.</span> <span>Real people.</span> <span class="mint">Routines in seconds.</span>`; }
   [...yk.children].forEach((w, i) => { const k = P(lt, 10.0 + i * .5, 10.6 + i * .5, ease.back); w.style.display = "block";
     w.style.opacity = clamp(k, 0, 1); w.style.transform = `translateY(${(1 - k) * 40}px)`; });
-  yk.style.top = "735px";
+  yk.style.top = "690px";
 }
 
 function renderBands(t) {
@@ -529,7 +632,7 @@ function renderBands(t) {
   $$("#bstream .sd").forEach((d, i) => { const ph = ((lt * .55 + i / 14) % 1), from = i % 2 ? [560, 640] : [300, 470];
     const x = lerp(from[0], 1000, ph) , y = lerp(from[1], 520, ph) - Math.sin(ph * Math.PI) * 140;
     d.setAttribute("cx", x); d.setAttribute("cy", y); d.style.opacity = Math.sin(ph * Math.PI) * a * (1 - outDev) * .9; });
-  $("#bbr").style.opacity = P(lt, .8, 1.6) * (1 - P(lt, 4.2, 4.8));
+  $("#bbr").style.opacity = P(lt, .8, 1.6) * (1 - P(lt, 13.6, 14.1));
   // tiles
   TILES.forEach(([l, v, f], i) => { const el = $(`#bt${i}`), k = P(lt, 4.6 + i * .25, 5.4 + i * .25, ease.back), c = P(lt, 4.8 + i * .25, 6.6 + i * .25, ease.out);
     const vis = 1 - P(lt, 8.2, 8.8, ease.in);
@@ -551,6 +654,62 @@ function renderBands(t) {
   const cc = P(lt, 14.0, 14.6, ease.out);
   $("#bchat").style.opacity = cc; $("#bchat").style.transform = `translateY(${(1 - cc) * 60}px) scale(1.12)`;
   const bb = $("#bchat .bot"); bb.style.opacity = P(lt, 14.8, 15.3);
+}
+
+function renderUses(t) {
+  const e = sceneEnv(t, "uses", .45, .4, .25); if (!e) return; const lt = e.lt;
+  const hk = P(lt, 0, .8); $("#uk").style.opacity = hk; $("#uk").style.transform = `translateY(${(1 - hk) * -30}px)`;
+  const L2 = e.s.lines[1], span = (L2.end - L2.start) / 7;
+  $$("#ugrid .ut").forEach((u, i) => {
+    const k = P(lt, .5 + i * .16, 1.2 + i * .16, ease.back);
+    const at = i < 7 ? L2.start + span * i - e.s.start : L2.end - e.s.start;          // lights up as its word is spoken
+    const hot = P(e.rl, at - .1, at + .2) * (1 - P(e.rl, at + .55, at + .9)), seen = P(e.rl, at - .1, at + .2);
+    u.style.opacity = clamp(k, 0, 1) * lerp(.55, 1, seen); u.style.transform = `translateY(${(1 - k) * 90}px) scale(${1 + hot * .09})`;
+    u.style.borderColor = hot > .05 ? "#2DD4BF" : "#1F4A45"; u.style.boxShadow = `0 30px 70px rgba(0,0,0,.4), 0 0 ${hot * 60}px rgba(45,212,191,${hot * .6})`;
+    u.style.zIndex = hot > .05 ? 3 : 1;
+  });
+}
+
+function renderTrack(t) {
+  const e = sceneEnv(t, "track", .45, .4, 1.5); if (!e) return; const lt = e.lt;
+  const k = P(lt, 0, 1.6, ease.out);
+  $("#tlap").style.transform = `translate(${lerp(-700, -430, k)}px, 30px) rotateY(${lerp(40, 14, k) + Math.sin(lt * .8) * 2}deg) scale(.66)`;
+  $("#tlap").style.opacity = k;
+  camTo(camTrack, P(lt, 1.6, 4.6, ease.inOut), .16, .04, .6);
+  const kk = P(lt, .5, 1.3); $("#tk").style.opacity = kk; $("#tk").style.transform = `translateX(${(1 - kk) * 60}px)`;
+  const ST = D.extra.stats;
+  [[ST.current_streak, 2.0], [ST.total_entries, 2.4]].forEach(([v, a], i) => { const el = $(`#tst${i}`), p = P(lt, a, a + .6, ease.back);
+    el.style.opacity = clamp(p, 0, 1); el.style.transform = `translateY(${(1 - p) * 60}px)`; el.querySelector("strong").textContent = Math.round(v * P(lt, a + .1, a + 1.6, ease.out)); });
+  const p2 = P(lt, 3.2, 3.8, ease.back); $("#tst2").style.opacity = clamp(p2, 0, 1); $("#tst2").style.transform = `translateY(${(1 - p2) * 60}px)`;
+}
+
+function renderModel(t) {
+  const e = sceneEnv(t, "model", .45, .4, 1.5); if (!e) return; const lt = e.lt;
+  const sw = P(e.rl, e.s.lines[1].start - e.s.start - .5, e.s.lines[1].start - e.s.start + .1, ease.inOut);    // second half starts with its line
+  const A = $("#ma"), B = $("#mb");
+  A.style.opacity = 1 - sw; A.style.transform = `scale(${1 + sw * .5})`; A.style.display = sw >= 1 ? "none" : "block";
+  B.style.opacity = sw; B.style.transform = `scale(${lerp(.7, 1, sw)})`;
+  const ck = P(lt, .2, 1.2, ease.back); $("#mchip").style.opacity = clamp(ck, 0, 1); $("#mchip").style.transform = `scale(${ck}) rotate(${(1 - ck) * -20}deg)`;
+  $$("#mchip .cell").forEach((c, i) => { c.style.opacity = .18 + .82 * Math.pow(.5 + .5 * Math.sin(lt * 4 - (i % 7) * .7 - Math.floor(i / 7) * .45), 2) * P(lt, .8, 2.5); });
+  [0, 1, 2].forEach((i) => { const el = $(`#ms${i}`), p = P(lt, .8 + i * .35, 1.5 + i * .35, ease.back); el.style.opacity = clamp(p, 0, 1); el.style.transform = `translateY(${(1 - p) * 70}px)`; });
+  $("#ms1 strong").textContent = fmt(5470 * P(lt, 1.4, 3.6, ease.out));
+  const dr = P(lt, 2.2, 6.0, ease.inOut); $("#mlt").style.clipPath = `inset(0 ${100 - dr * 100}% 0 0)`; $("#mlv").style.clipPath = `inset(0 ${100 - dr * 100}% 0 0)`;
+  $$("#mloss .mlvd").forEach((d, i, all) => { d.style.opacity = dr > (i + 1) / (all.length + .5) ? 1 : 0; });
+  // pipeline: a pulse of light travels through the five stages while they light up in turn
+  const L2 = e.s.lines[1], b0 = L2.start - e.s.start, bd = Math.max(L2.end - L2.start, 1), ph = clamp((e.rl - b0 - .2) / (bd - .2), 0, 1);
+  $("#mdot").setAttribute("cx", 200 + ph * 1520); $("#mdot").style.opacity = sw;
+  $$("#mnodes .node").forEach((n, i) => { const k = P(e.rl, b0 - .3 + i * .12, b0 + .3 + i * .12, ease.back), hot = clamp((ph * 4.4 - i + .6) / .5, 0, 1), now = hot * clamp((i + 1.4 - ph * 4.4) / .5, 0, 1);
+    n.style.opacity = clamp(k, 0, 1); n.style.transform = `translateY(${(1 - k) * 80}px) scale(${1 + now * .1})`;
+    n.style.borderColor = hot > .1 ? "#2DD4BF" : "#1F4A45"; n.style.boxShadow = `0 0 ${now * 70}px rgba(45,212,191,${now * .7})`; n.style.background = hot > .1 ? "#143a35" : "#12302c"; });
+}
+
+function renderResults(t) {
+  const e = sceneEnv(t, "results", .45, .4, 1.5); if (!e) return; const lt = e.lt;
+  const b = P(lt, .2, .9); $("#rbars").style.opacity = b;
+  const g0 = P(lt, .8, 2.4, ease.out), g1 = P(lt, 1.6, 4.2, ease.out);
+  $("#rb0").style.width = `${.2271 * g0 * 100 / .7}%`; $("#rv0").textContent = (.2271 * g0).toFixed(2);
+  $("#rb1").style.width = `${.6362 * g1 * 100 / .7}%`; $("#rv1").textContent = (.6362 * g1).toFixed(2);
+  [0, 1, 2].forEach((i) => { const el = $(`#rs${i}`), p = P(lt, 3.6 + i * .4, 4.3 + i * .4, ease.back); el.style.opacity = clamp(p, 0, 1); el.style.transform = `translateY(${(1 - p) * 70}px) scale(${lerp(.9, 1, clamp(p, 0, 1))})`; });
 }
 
 function renderSafe(t) {
@@ -583,28 +742,29 @@ function renderWhy(t) {
   m.style.opacity = lt > MONT.length - .2 ? 1 - P(lt, MONT.length - .2, MONT.length + .4) : 1 - out * .6;
   const wk = $("#wk");
   if (wk.dataset.txt !== "w") { wk.dataset.txt = "w"; wk.innerHTML = `<span class="mint">Specialist.</span> <span>Not generalist.</span>`; }
-  [...wk.children].forEach((w, j) => { const k = P(lt, SC.why.lines[0].start - SC.why.start + j * 1.2 + .2, SC.why.lines[0].start - SC.why.start + j * 1.2 + .7, ease.back);
+  [...wk.children].forEach((w, j) => { const at = SC.why.lines[j].start - SC.why.start + .5, k = P(e.rl, at, at + .5, ease.back);
     w.style.opacity = clamp(k, 0, 1); w.style.transform = `scale(${lerp(1.6, 1, clamp(k, 0, 1))})`; });
   wk.style.top = lt > MONT.length - .2 ? `${lerp(70, 470, P(lt, MONT.length - .2, MONT.length + .6, ease.inOut))}px` : "70px";
 }
 
 function renderEnd(t) {
-  const e = sceneEnv(t, "end", .7, .01, 1); if (!e) return; const lt = e.lt;
-  const k = P(lt, 0, 1.2, ease.back);
-  $("#elogo").style.transform = `translate(-50%, -78%) scale(${lerp(3, 1, P(lt, 0, 1.2, ease.out)) * (1 + .03 * Math.sin(lt * 2))})`;
+  const e = sceneEnv(t, "end", .6, .01, 1); if (!e) return; const lt = e.lt;
+  $("#elogo").style.transform = `translate(-50%, -50%) scale(${lerp(3, 1, P(lt, 0, 1.1, ease.out)) * (1 + .03 * Math.sin(lt * 2))})`;
   $("#elogo").style.opacity = P(lt, 0, .6);
-  const w = P(lt, .8, 1.8); $("#eword").style.opacity = w; $("#eword").style.letterSpacing = `${lerp(.7, .32, w)}em`;
-  $("#etag").style.opacity = P(lt, 1.6, 2.4); $("#etag").style.transform = `translateY(${(1 - P(lt, 1.6, 2.4)) * 20}px)`;
-  $("#egh").style.opacity = P(lt, 2.3, 3.0);
-  $("#black").style.opacity = P(t, TL.duration - 1.0, TL.duration, ease.lin);
+  const w = P(lt, .7, 1.6); $("#eword").style.opacity = w; $("#eword").style.letterSpacing = `${lerp(.7, .32, w)}em`;
+  $("#etag").style.opacity = P(lt, 1.3, 2.0); $("#etag").style.transform = `translateY(${(1 - P(lt, 1.3, 2.0)) * 20}px)`;
+  const at = e.s.lines[1].start - e.s.start - .3, pk = P(e.rl, at, at + .7, ease.back);       // Veltris arrives with "Presented by Veltris"
+  $("#epres").style.opacity = clamp(pk, 0, 1); $("#epres").style.transform = `translateY(${(1 - pk) * 40}px) scale(${lerp(.9, 1, clamp(pk, 0, 1))})`;
+  $("#egh").style.opacity = P(e.rl, at + .8, at + 1.5);
 }
 
 window.render = function (t) {
   renderBg(t);
-  renderHook(t); renderProblem(t); renderMeet(t); renderChat(t); renderLevel(t); renderFood(t);
-  renderYoga(t); renderBands(t); renderSafe(t); renderWhy(t); renderEnd(t);
+  renderIntro(t); renderProblem(t); renderMeet(t); renderUses(t); renderChat(t); renderLevel(t); renderFood(t);
+  renderYoga(t); renderBands(t); renderTrack(t); renderModel(t); renderResults(t); renderSafe(t); renderWhy(t); renderEnd(t);
   renderCaptions(t);
-  $("#black").style.opacity = t < SC.end.start ? P(t, 0, .01, ease.lin) * 0 : $("#black").style.opacity;
+  $("#vchip").style.opacity = P(t, SC.problem.start, SC.problem.start + .6) * (1 - P(t, SC.end.start - .4, SC.end.start)) * .92;
+  $("#black").style.opacity = P(t, TL.duration - .9, TL.duration, ease.lin);
 };
 
 (async () => {

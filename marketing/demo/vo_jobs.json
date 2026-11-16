@@ -1,78 +1,106 @@
 [
  {
-  "text": "What if your fitness coach lived right on your laptop?",
-  "out": "build/vo/hook_0.wav"
+  "text": "Veltris presents FitBot.",
+  "out": "build/vo/intro_0.wav"
  },
  {
-  "text": "Most fitness advice is generic.",
+  "text": "Fitness advice is everywhere, but it's generic.",
   "out": "build/vo/problem_0.wav"
  },
  {
-  "text": "Guessed calorie numbers, and no idea what level you're at.",
+  "text": "The numbers are guessed, and nobody knows your level.",
   "out": "build/vo/problem_1.wav"
  },
  {
-  "text": "Meet FitBot.",
+  "text": "Meet FitBot: an AI fitness coach, powered by a fine tuned, four billion parameter language model,",
   "out": "build/vo/meet_0.wav"
  },
  {
-  "text": "A fitness AI trained for one job, running privately on your own computer.",
+  "text": "running privately on your own Mac.",
   "out": "build/vo/meet_1.wav"
  },
  {
-  "text": "Just ask.",
+  "text": "One assistant for every part of your fitness:",
+  "out": "build/vo/uses_0.wav"
+ },
+ {
+  "text": "workouts, nutrition, yoga, sleep, hydration, recovery, and progress tracking.",
+  "out": "build/vo/uses_1.wav"
+ },
+ {
+  "text": "Just ask, in plain language.",
   "out": "build/vo/chat_0.wav"
  },
  {
-  "text": "You get real exercises with real photos, and you can see every move in motion.",
+  "text": "FitBot answers with real exercises from a library of eight hundred and seventy-one, and the photos play every move in motion.",
   "out": "build/vo/chat_1.wav"
  },
  {
-  "text": "Beginner, intermediate or advanced, every plan matches you.",
+  "text": "It trains at your level.",
   "out": "build/vo/level_0.wav"
  },
  {
-  "text": "Never too easy. Never too risky.",
+  "text": "Beginners get simple, stable movements. Advanced lifters get heavy compound lifts, with sets, reps and rest for every day.",
   "out": "build/vo/level_1.wav"
  },
  {
-  "text": "Nutrition answers come from real U.S.D.A. data, so there's no guessing.",
+  "text": "Nutrition answers use real U.S.D.A. data: calories, protein, carbs and fat, with no guessing.",
   "out": "build/vo/food_0.wav"
  },
  {
-  "text": "There's yoga too.",
+  "text": "There's a full yoga studio, too.",
   "out": "build/vo/yoga_0.wav"
  },
  {
-  "text": "Every pose is shown by real people, and FitBot builds a full routine for your time, your goal and your level.",
+  "text": "Thirty-four poses shown by real people, and complete routines built for your time, your goal and your level.",
   "out": "build/vo/yoga_1.wav"
  },
  {
-  "text": "Connect your fitness band,",
+  "text": "Connect your fitness band: Apple Watch, Samsung, Fitbit, Huawei, OnePlus, Noise, or Whoop.",
   "out": "build/vo/bands_0.wav"
  },
  {
-  "text": "and FitBot coaches you with your own steps, heart rate, sleep and stress.",
+  "text": "FitBot reads your steps, heart rate, sleep and stress, and coaches you with your own numbers.",
   "out": "build/vo/bands_1.wav"
  },
  {
-  "text": "Risky questions get careful, safe answers.",
-  "out": "build/vo/safe_0.wav"
+  "text": "Save your plans, log your workouts, and watch your streak grow.",
+  "out": "build/vo/track_0.wav"
  },
  {
-  "text": "And your data never leaves your Mac.",
-  "out": "build/vo/safe_1.wav"
+  "text": "Under the hood is Qwen 3, four B, fine tuned with Q-LoRA on five thousand, four hundred and seventy fitness conversations.",
+  "out": "build/vo/model_0.wav"
+ },
+ {
+  "text": "Every question flows from intent understanding, to curated fitness knowledge, to the model, which writes your answer.",
+  "out": "build/vo/model_1.wav"
+ },
+ {
+  "text": "And it's measured.",
+  "out": "build/vo/results_0.wav"
+ },
+ {
+  "text": "FitBot's answers match the reference answers nearly three times more closely than the base model.",
+  "out": "build/vo/results_1.wav"
+ },
+ {
+  "text": "Risky questions get careful, safe answers, and your data never leaves your Mac.",
+  "out": "build/vo/safe_0.wav"
  },
  {
   "text": "It's not just another chatbot.",
   "out": "build/vo/why_0.wav"
  },
  {
-  "text": "It's a specialist for your fitness.",
+  "text": "It's a specialist, built for your fitness.",
   "out": "build/vo/why_1.wav"
  },
  {
   "text": "FitBot. Train smarter.",
   "out": "build/vo/end_0.wav"
+ },
+ {
+  "text": "Presented by Veltris.",
+  "out": "build/vo/end_1.wav"
  }
 ]

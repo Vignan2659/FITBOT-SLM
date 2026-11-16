@@ -15,15 +15,15 @@ def load(p):
     return a[max(idx[0] - 200, 0): idx[-1] + 1600]
 
 t, track, scenes = 0.0, [], []
-for sid, plan, lead, lines in SCENES:
+for sid, design, lead, lines, tail in SCENES:
     start = t; cur = t + lead; out = []
     for i, (cap, _) in enumerate(lines):
         a = load(VO / f"{sid}_{i}.wav")
         out.append({"text": cap, "start": round(cur, 3), "end": round(cur + len(a) / SR, 3)})
         track.append((cur, a)); cur += len(a) / SR + LINE_GAP
-    end = max(start + plan, cur - LINE_GAP + 0.7)
-    scenes.append({"id": sid, "start": round(start, 3), "end": round(end, 3), "lines": out}); t = end
-    print(f"{sid:8s} {start:6.2f} -> {end:6.2f}  vo ends {cur - LINE_GAP:6.2f}")
+    end = cur - LINE_GAP + tail
+    scenes.append({"id": sid, "start": round(start, 3), "end": round(end, 3), "design": design, "lines": out}); t = end
+    print(f"{sid:8s} {start:6.2f} -> {end:6.2f}  ({end - start:5.2f}s for a {design}s animation)")
 mix = np.zeros(int(t * SR) + SR, np.float32)
 for st, a in track:
     i = int(st * SR); mix[i:i + len(a)] += a
